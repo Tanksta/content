@@ -1,0 +1,24 @@
+{
+  "member": "prayerglow.dat",
+  "palette": [
+    0,
+    13283953,
+    12034925,
+    11311981,
+    9800301
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/prayerglow/000.png",
+      "canvasWidth": 34,
+      "canvasHeight": 34,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 34,
+      "height": 34,
+      "encoding": 1
+    }
+  ]
+}

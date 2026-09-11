@@ -1,0 +1,943 @@
+[vodka]
+desc=A strong spirit.
+cost=5
+iop1=Drink
+members=yes
+model=obj_vodka
+2dyof=-1
+2dzoom=970
+2dyan=1888
+2dxan=104
+name=Vodka
+weight=1kg
+category=alcoholic_drinks
+param=gnome_cocktail_ingredient,^true
+
+[whisky]
+desc=A bottle of Draynor Malt.
+cost=5
+iop1=Drink
+members=yes
+model=obj_khali_brew
+2dyof=-1
+2dzoom=970
+2dyan=1888
+2dxan=104
+name=Whisky
+weight=1kg
+category=alcoholic_drinks
+param=gnome_cocktail_ingredient,^true
+
+[gin]
+desc=A strong spirit.
+cost=5
+iop1=Drink
+members=yes
+model=obj_khali_brew
+2dyof=-1
+2dzoom=970
+2dyan=1888
+2dxan=104
+recol1s=1942
+recol1d=22422
+name=Gin
+weight=1kg
+category=alcoholic_drinks
+param=gnome_cocktail_ingredient,^true
+
+[brandy]
+desc=A strong spirit.
+cost=5
+iop1=Drink
+members=yes
+model=obj_murderbottle
+2dzoom=1030
+2dyan=1808
+2dxan=76
+name=Brandy
+weight=1kg
+category=alcoholic_drinks
+param=gnome_cocktail_ingredient,^true
+
+[cocktail_guide]
+desc=A book on tree gnome cocktails.
+cost=2
+iop1=Read
+members=yes
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+recol1s=5018
+recol1d=12694
+name=Cocktail guide
+weight=18oz
+
+[cocktail_shaker]
+desc=Used for mixing cocktails.
+cost=2
+members=yes
+model=obj_cocktail_shaker
+2dyof=-1
+2dzoom=1000
+2dyan=116
+2dxan=92
+iop1=Inspect
+name=Cocktail shaker
+weight=150g
+tradeable=no
+
+[cocktail_glass_empty]
+desc=For sipping cocktails.
+model=obj_cocktail_glass_empty
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+cost=1
+members=yes
+name=Cocktail glass
+weight=100g
+
+[premade_blurberry_special]
+desc=Looks good... smells strong.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=7104
+name=Blurberry special
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_choc_saturday]
+desc=A warm creamy alcoholic beverage.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7075
+name=Choc saturday
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_drunk_dragon]
+desc=A warm creamy alcoholic beverage.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+name=Drunk dragon
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_fruit_blast]
+desc=A cool refreshing fruit mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=8128
+recol2s=21733
+recol2d=10716
+recol3s=22464
+recol3d=10176
+name=Fruit blast
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_pineapple_punch]
+desc=A fresh healthy fruit mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=10184
+recol2s=21733
+recol2d=7104
+recol3s=22464
+recol3d=6080
+name=Pineapple punch
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_sgg]
+desc=A Short Green Guy... looks good.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=18384
+name=Short green guy
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[premade_wizard_blizzard]
+desc=This looks like a strange mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=15589
+name=Wizard blizzard
+category=gnome_cocktail
+weight=450g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_pineapple_punch1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=10184
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_pineapple_punch2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=10184
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_pineapple_punch3]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=10184
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[pineapple_punch]
+desc=A fresh healthy fruit mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=10184
+recol2s=21733
+recol2d=7104
+recol3s=22464
+recol3d=6080
+name=Pineapple punch
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_wizard_blizzard1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=15589
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_wizard_blizzard2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=15589
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[wizard_blizzard]
+desc=This looks like a strange mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=15589
+name=Wizard blizzard
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_blurberry_special1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_blurberry_special2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=7104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_blurberry_special3]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=7104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_blurberry_special4]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=7104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[blurberry_special]
+desc=Looks good... smells strong.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=7104
+name=Blurberry special
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_chocolate_saturday1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=4560
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_chocolate_saturday2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7075
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_chocolate_saturday3]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7075
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_chocolate_saturday4]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7075
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[chocolate_saturday]
+desc=A warm creamy alcoholic beverage.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=7075
+name=Choc saturday
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_sgg1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=18384
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_sgg2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=18384
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[sgg]
+desc=A Short Green Guy... looks good.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=18384
+name=Short green guy
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_fruit_blast1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=8128
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[fruit_blast]
+desc=A cool refreshing fruit mix.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=8128
+recol2s=21733
+recol2d=10716
+recol3s=22464
+recol3d=10176
+name=Fruit blast
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_drunk_dragon1]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_drunk_dragon2]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=37811
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[unfinished_drunk_dragon3]
+desc=This cocktail is just missing those little finishing touches.
+cost=2
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+name=Unfinished cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[drunk_dragon]
+desc=A warm creamy alcoholic beverage.
+cost=30
+iop1=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+name=Drunk dragon
+category=gnome_cocktail
+weight=500g
+param=next_obj_stage,cocktail_glass_empty
+
+[spoilt_cocktail]
+desc=I'm not completely sure what this contains.
+cost=2
+iop1=Empty
+iop3=Drink
+members=yes
+model=obj_unfinished_pineapple_punch1
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=66
+name=Odd cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[spoilt_cocktail_fruity]
+desc=I'm not completely sure what this contains.
+cost=2
+iop1=Empty
+iop3=Drink
+members=yes
+model=obj_unfinished_pineapple_punch2
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=66
+name=Odd cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[spoilt_cocktail_creamy]
+desc=I'm not completely sure what this contains.
+cost=2
+iop1=Empty
+iop3=Drink
+members=yes
+model=obj_premade_choc_saturday
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=37811
+recol1d=66
+name=Odd cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[spoilt_cocktail_slice]
+desc=I'm not completely sure what this contains.
+cost=2
+iop1=Empty
+iop3=Drink
+members=yes
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+recol1s=11200
+recol1d=66
+recol2s=21733
+recol2d=74
+recol3s=22464
+recol3d=61
+name=Odd cocktail
+weight=400g
+category=gnome_unf_odd_cocktail
+param=next_obj_stage,cocktail_glass_empty
+
+[lemon]
+desc=A fresh lemon.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon
+2dzoom=1080
+2dyan=716
+2dxan=700
+name=Lemon
+category=category_120
+weight=100g
+param=gnome_cocktail_ingredient,^true
+
+[lemon_chunks]
+desc=Fresh chunks of lemon.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon_chunks
+2dxof=1
+2dyof=96
+2dzoom=870
+2dyan=2004
+2dzan=36
+2dxan=244
+recol1s=6080
+recol1d=11222
+name=Lemon chunks
+category=category_120
+weight=80g
+param=gnome_topping,^true
+
+[lemon_slices]
+desc=Fresh lemon slices.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon_slices
+2dzoom=1090
+2dyan=336
+2dxan=284
+recol1s=6080
+recol1d=8128
+recol2s=10473
+recol2d=8425
+name=Lemon slices
+category=category_120
+weight=80g
+param=gnome_topping,^true
+
+[orange]
+desc=A fresh orange.
+cost=2
+iop1=Eat
+members=yes
+model=obj_orange
+2dzoom=910
+2dyan=120
+2dxan=308
+name=Orange
+category=category_120
+weight=110g
+param=gnome_cocktail_ingredient,^true
+
+[orange_chunks]
+desc=Fresh chunks of orange.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon_chunks
+2dxof=1
+2dyof=96
+2dzoom=870
+2dyan=2004
+2dzan=36
+2dxan=244
+name=Orange chunks
+category=category_120
+weight=90g
+param=gnome_topping,^true
+
+[orange_slices]
+desc=Fresh orange slices.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon_slices
+2dzoom=1090
+2dyan=336
+2dxan=284
+recol1s=10473
+recol1d=7124
+name=Orange slices
+category=category_120
+weight=90g
+param=gnome_topping,^true
+
+[pineapple]
+desc=It can be cut up into something more manageable with a knife.
+cost=1
+iop1=Eat
+members=yes
+model=obj_tentipineapple
+2dyof=1
+2dzoom=1290
+2dyan=100
+2dxan=172
+name=Pineapple
+category=category_120
+weight=150g
+param=gnome_cocktail_ingredient,^true
+
+[pineapple_chunks]
+desc=Fresh chunks of pineapple.
+cost=1
+iop1=Eat
+members=yes
+model=obj_lemon_chunks
+2dxof=1
+2dyof=96
+2dzoom=870
+2dyan=2004
+2dzan=36
+2dxan=244
+recol1s=6080
+recol1d=8136
+name=Pineapple chunks
+category=category_120
+weight=120g
+param=gnome_topping,^true
+
+[pineapple_ring]
+desc=Exotic fruit.
+cost=1
+iop1=Eat
+members=yes
+model=obj_pineapple_ring
+2dxof=1
+2dzoom=650
+2dyan=416
+2dxan=248
+name=Pineapple ring
+category=category_120
+weight=30g
+param=pizza_topping_struct,pineapple_topping
+
+[lime]
+desc=A fresh lime.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lime
+2dzoom=1160
+2dyan=744
+2dxan=596
+name=Lime
+category=category_120
+weight=100g
+param=gnome_cocktail_ingredient,^true
+
+[lime_chunks]
+desc=Fresh chunks of lime.
+cost=1
+iop1=Eat
+members=yes
+model=obj_lemon_chunks
+2dxof=1
+2dyof=96
+2dzoom=870
+2dyan=2004
+2dzan=36
+2dxan=244
+recol1s=6080
+recol1d=18663
+name=Lime chunks
+category=category_120
+weight=80g
+param=gnome_topping,^true
+
+[lime_slices]
+desc=Fresh lime slices.
+cost=2
+iop1=Eat
+members=yes
+model=obj_lemon_slices
+2dzoom=1090
+2dyan=336
+2dxan=284
+recol1s=10473
+recol1d=22757
+recol2s=6080
+recol2d=22435
+name=Lime slices
+category=category_120
+weight=80g
+param=gnome_topping,^true

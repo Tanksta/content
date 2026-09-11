@@ -1,0 +1,38 @@
+[swampbubbles]
+anim=swampbubs
+model=floor_swampbubbles
+name=Swamp bubbles
+desc=The noxious liquid bubbles horribly.
+
+[swampbubbles_swamp]
+anim=swampbubs
+recol1s=18192
+recol1d=31514
+model=floor_swampbubbles
+name=Swamp bubbles
+desc=The noxious liquid bubbles horribly.
+
+[rantzogrecaveentrance]
+width=3
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=The entrance to Rantz's cave
+
+[rantzogrecaveexitr]
+sharelight=yes
+hillskew=yes
+op1=Walk through
+model=cavewall_door1r
+name=Cave exit
+desc=Exit this way for fresh air and daylight.
+
+[rantzogrecaveexitl]
+sharelight=yes
+hillskew=yes
+mirror=yes
+op1=Walk through
+model=cavewall_door1r
+name=Cave exit
+desc=Exit this way for fresh air and daylight.

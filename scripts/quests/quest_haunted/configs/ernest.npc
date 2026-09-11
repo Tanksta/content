@@ -1,0 +1,32 @@
+[ernest]
+vislevel=hide
+desc=A former chicken.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+recol1s=25238
+recol1d=5652
+recol2s=8741
+recol2d=45
+recol3s=43072
+recol3d=4550
+name=Ernest
+model1=obj_viking_helmet_manwear
+model2=idk_man_jaw_none
+model3=obj_priest_gown_manwear
+model4=obj_doctor_gown_manwear2
+model5=obj_cert_drill_top_manwear3
+model6=obj_macro_mime_legs_manwear
+model7=idk_42
+model8=idk_man_torso_jacket
+head1=obj_pickpocket_guide_man
+
+[questchicken]
+vislevel=hide
+name=Ernest
+desc=Yep, definitely a chicken.
+walkanim=chicken_walk
+readyanim=chicken_ready
+model1=npc_chicken
+head1=obj_pickpocket_guide_man
+param=death_anim,chicken_death
+param=death_sound,chicken_death

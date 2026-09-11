@@ -1,0 +1,250 @@
+// guessed name
+
+[guamvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Guam potion.
+cost=3
+model=obj_guamvial
+recol1s=61
+recol1d=32980
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[marrentillvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Marentill potion.
+cost=5
+model=obj_guamvial
+recol1s=61
+recol1d=54484
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[tarrominvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Tarromin potion.
+cost=11
+model=obj_guamvial
+recol1s=61
+recol1d=10452
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[harralandervial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Harralander potion.
+cost=20
+model=obj_guamvial
+recol1s=61
+recol1d=212
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[ranarrvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Ranarr potion.
+cost=25
+model=obj_guamvial
+recol1s=61
+recol1d=21716
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[iritvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Irit potion.
+cost=40
+model=obj_guamvial
+recol1s=61
+recol1d=43105
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[avantoevial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Avantoe potion.
+cost=48
+model=obj_guamvial
+recol1s=61
+recol1d=78
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[kwuarmvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Kwuarm potion.
+cost=54
+model=obj_guamvial
+recol1s=61
+recol1d=90
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[cadantinevial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Cadantine potion.
+cost=65
+model=obj_guamvial
+recol1s=61
+recol1d=4316
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[dwarfweedvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Dwarf Weed potion.
+cost=70
+model=obj_guamvial
+recol1s=61
+recol1d=39132
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[torstolvial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Torstol potion.
+cost=25
+model=obj_guamvial
+recol1s=61
+recol1d=4321
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+// guessed name
+
+[lantadymevial]
+name=Unfinished potion
+desc=I need another ingredient to finish this Lantadyme potion.
+cost=68
+model=obj_guamvial
+recol1s=61
+recol1d=4316
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+weight=2oz
+category=category_69
+members=yes
+iop4=Empty
+param=next_obj_stage,vial_empty
+
+[toadflaxvial]
+name=Unfinished potion
+recol1s=61
+recol1d=10411
+desc=I need another ingredient to finish this Toadflax potion.
+cost=48
+model=obj_guamvial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+category=category_69
+iop4=Empty
+param=next_obj_stage,vial_empty
+weight=2oz
+
+[snapdragonvial]
+name=Unfinished potion
+recol1s=61
+recol1d=6835
+desc=I need another ingredient to finish this Snapdragon potion.
+cost=59
+model=obj_guamvial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+category=category_69
+iop4=Empty
+param=next_obj_stage,vial_empty
+weight=2oz

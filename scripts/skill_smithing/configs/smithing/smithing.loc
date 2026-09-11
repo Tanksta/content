@@ -1,0 +1,21 @@
+[anvil]
+model=experimental_anvil
+name=Anvil
+desc=Used for fashioning metal items.
+category=anvil
+
+[doric_anvil]
+forceapproach=14
+model=experimental_anvil
+name=Anvil
+desc=It says "Property of Doric the dwarf." on the side.
+category=anvil
+
+[viking_anvil]
+blockrange=no
+recol1s=28
+recol1d=5272
+model=experimental_anvil
+name=Anvil
+desc=Used for fashioning metal items.
+category=anvil

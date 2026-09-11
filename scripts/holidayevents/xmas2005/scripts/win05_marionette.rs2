@@ -1,0 +1,21 @@
+[opheld1,win05_marionette_complete_blue_alive] @diango_marionette_emote(human_marionette_jump, win05_marionette_jump_blue);
+[opheld2,win05_marionette_complete_blue_alive] @diango_marionette_emote(human_marionette_walk, win05_marionette_walk_blue);
+[opheld3,win05_marionette_complete_blue_alive] @diango_marionette_emote(human_marionette_bow, win05_marionette_bow_blue);
+[opheld4,win05_marionette_complete_blue_alive] @diango_marionette_emote(human_marionette_dance, win05_marionette_dance_blue);
+[opheld1,win05_marionette_complete_green_alive] @diango_marionette_emote(human_marionette_jump, win05_marionette_jump_green);
+[opheld2,win05_marionette_complete_green_alive] @diango_marionette_emote(human_marionette_walk, win05_marionette_walk_green);
+[opheld3,win05_marionette_complete_green_alive] @diango_marionette_emote(human_marionette_bow, win05_marionette_bow_green);
+[opheld4,win05_marionette_complete_green_alive] @diango_marionette_emote(human_marionette_dance, win05_marionette_dance_green);
+[opheld1,win05_marionette_complete_red_alive] @diango_marionette_emote(human_marionette_jump, win05_marionette_jump_red);
+[opheld2,win05_marionette_complete_red_alive] @diango_marionette_emote(human_marionette_walk, win05_marionette_walk_red);
+[opheld3,win05_marionette_complete_red_alive] @diango_marionette_emote(human_marionette_bow, win05_marionette_bow_red);
+[opheld4,win05_marionette_complete_red_alive] @diango_marionette_emote(human_marionette_dance, win05_marionette_dance_red);
+
+[label,diango_marionette_emote](seq $player_anim, spotanim $spotanim)
+if (%action_delay > map_clock) {
+    return;
+}
+p_stopaction;
+%action_delay = add(map_clock, ~seqlength20ms($player_anim));
+anim($player_anim, 20);
+spotanim_pl($spotanim, 0, 0);

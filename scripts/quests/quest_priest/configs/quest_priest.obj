@@ -1,0 +1,34 @@
+[amulet_of_ghostspeak]
+desc=It lets me talk to ghosts.
+cost=35
+model=obj_amulet_of_ghostspeak
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_ghostspeak_manwear,0
+womanwear=obj_amulet_of_ghostspeak_womanwear,0
+recol1s=28
+recol1d=4032
+recol2s=61
+recol2d=4032
+name=Ghostspeak amulet
+wearpos=front
+weight=10g
+tradeable=no
+
+[ghostskull]
+desc=Ooooh spooky!
+model=obj_ghostskull
+2dxof=-1
+2dyof=-10
+2dzoom=530
+2dyan=64
+2dzan=1996
+2dxan=160
+name=Skull
+weight=80g
+param=no_alchemy,1
+tradeable=no

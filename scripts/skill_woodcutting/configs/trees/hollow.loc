@@ -1,0 +1,31 @@
+[hollow_tree]
+name=Hollow tree
+desc=It's hollow...
+model=tree_hollow
+recol1s=7056
+recol1d=13592
+recol2s=6674
+recol2d=10512
+mapscene=0
+ambient=25
+op1=Chop down
+op3=hidden
+category=tree
+param=next_loc_stage,hollow_tree_stump
+
+[hollow_tree_big]
+name=Hollow tree
+desc=It's hollow...
+model=eadgar_aviary_parrott_perch_mid_8
+recol1s=7056
+recol1d=13592
+recol2s=6674
+recol2d=10512
+width=2
+length=2
+mapscene=0
+ambient=25
+op1=Chop down
+op3=hidden
+category=tree
+param=next_loc_stage,hollow_tree_stump_big

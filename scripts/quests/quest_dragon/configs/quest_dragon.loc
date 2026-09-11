@@ -1,0 +1,277 @@
+[oraclechestshut]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[oraclechestopen]
+op1=Search
+op2=Close
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=It's open.
+
+[shiphole]
+active=yes
+op1=Repair
+sharelight=yes
+recol1s=12579
+recol1d=5553
+recol2s=12574
+recol2d=5553
+recol3s=12698
+recol3d=5553
+recol4s=12694
+recol4d=5553
+recol5s=12818
+recol5d=5673
+recol6s=12942
+recol6d=5793
+model=shiphull_broken
+name=Hole
+desc=This ship's not getting far with that.
+
+[dragonshipladdertop]
+active=yes
+op1=Climb-down
+mapscene=7
+recol1s=12579
+recol1d=5665
+recol2s=12574
+recol2d=5660
+recol3s=12698
+recol3d=5784
+recol4s=12694
+recol4d=5784
+model=ship_laddertop
+name=Ladder
+desc=Takes me into the ship.
+
+[dragonshipladdertop2]
+active=yes
+op1=Climb-down
+mapscene=7
+model=ladder2
+name=Ladder
+desc=Takes me into the ship.
+
+[dragonshipladder]
+active=yes
+op1=Climb-up
+mapscene=7
+model=ship_ladder
+name=Ladder
+
+[dragonshipgangplank_on]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+
+[dragonshipgangplank_off]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+
+[melzardoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=It's closed.
+
+[reddoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=1697
+recol2s=6940
+recol2d=1692
+recol3s=7064
+recol3d=1816
+recol4s=6038
+recol4d=1940
+model=door
+
+name=Red door
+desc=A blood-red door.
+
+[orangedoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=6071
+recol2s=6940
+recol2d=6067
+recol3s=7064
+recol3d=6065
+recol4s=6038
+recol4d=6063
+model=door
+
+name=Orange door
+desc=A lurid orange door.
+
+[yellowdoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=10692
+recol2s=6940
+recol2d=10688
+recol3s=7064
+recol3d=10683
+recol4s=6038
+recol4d=10679
+model=door
+
+name=Yellow door
+desc=A sickly yellow door.
+
+[bluedoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=40117
+recol2s=6940
+recol2d=40241
+recol3s=7064
+recol3d=40237
+recol4s=6038
+recol4d=40233
+model=door
+
+name=Blue door
+desc=A gloomy blue door.
+
+[magentadoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=54451
+recol2s=6940
+recol2d=54447
+recol3s=7064
+recol3d=54443
+recol4s=6038
+recol4d=54567
+model=door
+
+name=Magenta door
+desc=A groovy magenta door.
+
+[greendoor]
+active=yes
+op1=Open
+recol1s=6945
+recol1d=18716
+recol2s=6940
+recol2d=18712
+recol3s=7064
+recol3d=18836
+recol4s=6038
+recol4d=18960
+model=door
+
+name=Green door
+desc=A putrid green door.
+
+[funexit]
+active=yes
+op1=Open
+model=door
+
+name=Exit door
+desc=Probably the nicest door in this ghastly place.
+
+[funchestshut]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=It's closed.
+
+[funchestopen]
+op1=Search
+op2=Close
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=It's open.
+
+[funladdertop]
+active=yes
+op1=Climb-down
+mapscene=7
+model=model_1754
+name=Ladder
+
+[ladder_broken]
+name=Ladder
+desc=I can't climb this.
+model=model_1752
+active=yes
+op1=Climb-up
+mapscene=7
+
+[elvarg_gate_right]
+active=yes
+op1=Open
+model=ikov_mendedleverdoorl
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Gate
+desc=It's closed.
+param=next_loc_stage,loc_1563
+
+[elvarg_gate_left]
+active=yes
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Gate
+desc=It's closed.
+param=next_loc_stage,loc_1562
+
+[crandor_rock_opening]
+hillskew=yes
+width=2
+length=2
+occlude=yes
+op1=Climb-down
+model=caveentrance5
+name=Rock opening
+desc=A collection of rocks over what looks like a depression.
+
+[crandor_climbing_rope]
+op1=Climb
+model=thzq_tombrooml1_1
+name=Climbing rope
+desc=A rope hangs here that I can climb.
+
+[dragonsecretdoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=mossybricks
+name=Wall
+desc=There is something strange about this wall...
+param=next_loc_stage,inactivesecretdoor2

@@ -1,0 +1,50 @@
+[tracker1]
+vislevel=hide
+desc=It's a gnome who specialises in covert operations.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22422
+recol1d=6942
+recol2s=22426
+recol2d=6945
+name=Tracker gnome 1
+model1=npc_leprechaun
+model2=npc_gnome
+model3=npc_leprechauni3
+head1=obj_pickpocket_guide_gnome
+param=death_anim,midget_death
+
+[tracker2]
+vislevel=hide
+desc=It's a gnome who specialises in covert operations.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22422
+recol1d=6942
+recol2s=22426
+recol2d=6945
+name=Tracker gnome 2
+model1=npc_leprechaun
+model2=npc_gnome
+model3=npc_leprechauni3
+head1=obj_pickpocket_guide_gnome
+param=death_anim,midget_death
+
+[tracker3]
+vislevel=hide
+desc=It's a gnome who specialises in covert operations.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22422
+recol1d=6942
+recol2s=22426
+recol2d=6945
+name=Tracker gnome 3
+model1=npc_leprechaun
+model2=npc_gnome
+model3=npc_leprechauni3
+head1=obj_pickpocket_guide_gnome
+param=death_anim,midget_death

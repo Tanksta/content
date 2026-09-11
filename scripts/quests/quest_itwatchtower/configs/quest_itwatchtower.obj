@@ -1,0 +1,344 @@
+[explodingvial]
+desc=An exploding vial.
+model=obj_holy_water_manwear
+manwear=obj_explodingvial_manwear,0
+womanwear=obj_explodingvial_manwear,6
+2dxof=29
+2dyof=32
+2dzoom=510
+2dxan=1956
+name=Exploding vial
+weight=25g
+dummyitem=graphic_only
+
+[ogrerelic]
+desc=An old statue of an ogre warrior.
+members=yes
+model=obj_ogrerelic
+2dzoom=1710
+2dyan=1668
+2dxan=104
+name=Ogre relic
+weight=3kg
+tradeable=no
+
+[relicpart1]
+desc=Part of an ogre relic.
+model=obj_relicpart1
+members=yes
+2dxof=-2
+2dzoom=1310
+2dyan=1776
+2dxan=128
+name=Relic part 1
+weight=1kg
+category=category_1399
+tradeable=no
+
+[relicpart2]
+desc=Part of an ogre relic.
+model=obj_relicpart2
+members=yes
+2dzoom=860
+2dyan=1696
+name=Relic part 2
+weight=1kg
+category=category_1399
+tradeable=no
+
+[relicpart3]
+desc=Part of an ogre relic.
+model=obj_relicpart3
+members=yes
+2dzoom=560
+2dyan=108
+name=Relic part 3
+weight=1kg
+category=category_1399
+tradeable=no
+
+[skavidmap]
+desc=It's a map.
+model=obj_skavidmap
+2dxof=2
+2dyof=14
+2dzoom=2120
+2dyan=92
+2dxan=312
+members=yes
+name=Skavid map
+weight=10g
+tradeable=no
+
+[ogretooth]
+desc=Very tooth like.
+model=obj_old_tooth
+2dxof=1
+2dyof=17
+2dzoom=510
+2dyan=276
+2dxan=292
+members=yes
+name=Ogre tooth
+weight=10g
+tradeable=no
+
+[toban_key]
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=Toban key
+weight=10g
+tradeable=no
+
+[rockcake]
+model=obj_rockcake
+2dyof=-4
+2dzoom=740
+2dyan=152
+2dxan=156
+members=yes
+iop2=Eat
+name=Rock cake
+weight=25g
+category=category_734
+tradeable=no
+
+[powering_crystal1]
+model=obj_powering_crystal1
+2dxof=1
+2dyof=-29
+2dzoom=1320
+2dyan=128
+2dxan=216
+members=yes
+recol1s=18522
+recol1d=10167
+name=Crystal
+weight=2lb
+tradeable=no
+
+[powering_crystal2]
+model=obj_powering_crystal1
+2dxof=1
+2dyof=-29
+2dzoom=1320
+2dyan=128
+2dxan=216
+members=yes
+recol1s=18522
+recol1d=55250
+name=Crystal
+weight=2lb
+tradeable=no
+
+[powering_crystal3]
+model=obj_powering_crystal1
+2dxof=1
+2dyof=-29
+2dzoom=1320
+2dyan=128
+2dxan=216
+members=yes
+recol1s=18522
+recol1d=32433
+name=Crystal
+weight=2lb
+tradeable=no
+
+[powering_crystal4]
+model=obj_powering_crystal1
+2dxof=1
+2dyof=-29
+2dzoom=1320
+2dyan=128
+2dxan=216
+members=yes
+recol1s=22336
+recol1d=127
+name=Crystal
+weight=2lb
+tradeable=no
+
+[fingernails]
+desc=Eeeeyeeew!
+model=obj_fingernails
+2dyof=-8
+2dzoom=670
+2dyan=40
+2dxan=348
+members=yes
+name=Finger nails
+weight=2g
+tradeable=no
+
+[watchtowerrobe]
+desc=I can't wear this old thing.
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+name=Old robe
+weight=4lb
+tradeable=no
+
+[watchtowerarmour]
+desc=Looks kind of useless...
+model=obj_goblin_armour_orange
+2dyof=3
+2dzoom=1500
+2dxan=608
+members=yes
+name=Unusual armour
+weight=8lb
+tradeable=no
+
+[watchtowerdagger]
+desc=Pointy.
+model=obj_iron_dagger
+2dyof=-4
+2dzoom=760
+2dyan=1276
+2dxan=472
+members=yes
+name=Damaged dagger
+weight=1lb
+tradeable=no
+
+[watch_eye_patch]
+desc=Useless as an eyepatch.
+model=obj_eye_patch
+2dzoom=800
+2dyan=1952
+2dxan=296
+members=yes
+name=Tattered eye patch
+weight=6g
+tradeable=no
+
+[jangervial]
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+desc=An infusion of water and jangerberries.
+members=yes
+recol1s=61
+recol1d=19241
+name=Vial
+weight=15g
+tradeable=no
+
+[guamjangervial]
+model=obj_strength4
+desc=A mixture of jangerberries and guam leaves in a vial.
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=22422
+name=Vial
+weight=25g
+tradeable=no
+
+[stolen_gold]
+desc=It's a stolen bar of gold.
+cost=300
+model=obj_bronze_bar
+2dxof=1
+2dyof=-8
+2dzoom=820
+2dyan=1180
+2dxan=196
+members=yes
+recol1s=7062
+recol1d=9129
+name=Gold
+weight=4lb
+tradeable=no
+
+[ogre_potion]
+desc=A strange brew.
+cost=120
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=14278
+name=Potion
+weight=25g
+tradeable=no
+
+[magic_ogre_potion]
+desc=A dangerous magical liquid.
+cost=120
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=26849
+name=Magic ogre potion
+weight=25g
+tradeable=no
+
+[watchtowerspell]
+desc=A spell is written on this parchment.
+cost=5
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+members=yes
+name=Spell scroll
+weight=10g
+tradeable=no
+
+[shaman_robe]
+desc=A tattered old robe.
+cost=40
+2dxof=1
+2dyof=8
+2dzoom=1210
+2dyan=2036
+2dzan=164
+2dxan=544
+model=obj_priest_gown
+iop1=Search
+members=yes
+name=Shaman robe
+weight=4lb
+tradeable=no
+
+[nightshade]
+desc=Deadly!
+cost=30
+model=obj_nightshade
+2dxof=12
+2dyof=3
+2dzoom=1190
+2dyan=1676
+2dzan=324
+2dxan=1924
+iop2=Eat
+members=yes
+name=Nightshade
+weight=15g
+category=category_1748
+tradeable=no

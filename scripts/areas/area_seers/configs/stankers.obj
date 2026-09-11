@@ -1,0 +1,15 @@
+[poison_chalice]
+desc=A cup of a strange brew...
+model=obj_poison_chalice
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+iop1=Drink
+members=yes
+cost=20
+recol1s=37811
+recol1d=21460
+name=Poison chalice
+weight=2oz
+category=potion

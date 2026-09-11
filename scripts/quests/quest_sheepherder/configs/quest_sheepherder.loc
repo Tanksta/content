@@ -1,0 +1,24 @@
+[plaguesheep_furnace]
+width=3
+length=3
+forceapproach=13
+model=plaguesheep_furnace
+name=Incinerator
+desc=A special furnace for destroying contaminated items.
+
+[plaguesheep_gatel]
+active=yes
+op1=Open
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=sheepherder_gate
+
+[plaguesheep_gater]
+active=yes
+mirror=yes
+op1=Open
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=sheepherder_gate

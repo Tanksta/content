@@ -1,0 +1,13 @@
+[elenakey]
+members=yes
+cost=1
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+desc=Quite a small key.
+name=A small key
+weight=10g
+tradeable=no

@@ -1,0 +1,227 @@
+[grandtree_warship]
+desc=A model of a Karamja warship.
+cost=2
+members=yes
+model=obj_grandtree_warship
+2dxof=4
+2dyof=21
+2dzoom=710
+2dyan=1832
+2dxan=60
+name=War ship
+weight=400g
+tradeable=no
+
+[bunnyears]
+desc=A rabbit-like adornment.
+model=obj_bunnyears
+2dzoom=550
+2dyan=4
+2dxan=360
+iop2=Wear
+manwear=obj_bunnyears_manwear,0
+womanwear=obj_bunnyears_womanwear,0
+manhead=obj_bunnyears_manhead
+womanhead=obj_bunnyears_womanhead
+name=Bunny ears
+wearpos=hat
+weight=8oz
+tradeable=no
+
+[red_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+name=Red partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[yellow_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+recol1s=926
+recol1d=11200
+name=Yellow partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[blue_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+recol1s=926
+recol1d=43968
+name=Blue partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[green_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+recol1s=926
+recol1d=22464
+name=Green partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[purple_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+recol1s=926
+recol1d=51136
+name=Purple partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[white_partyhat]
+desc=A nice hat from a cracker.
+model=obj_red_partyhat
+2dxof=1
+2dyof=1
+2dzoom=440
+2dyan=1852
+2dxan=76
+iop2=Wear
+manwear=obj_red_partyhat_manwear,0
+womanwear=obj_red_partyhat_womanwear,0
+manhead=obj_red_partyhat_manhead
+womanhead=obj_red_partyhat_womanhead
+recol1s=926
+recol1d=127
+name=White partyhat
+wearpos=hat
+weight=2oz
+param=party_clean_exempt,^true
+
+[santa_hat]
+desc=It's a Santa hat.
+cost=160
+model=obj_santa_hat
+2dyof=-3
+2dzoom=540
+2dyan=136
+2dxan=72
+iop2=Wear
+manwear=obj_santa_hat_manwear,0
+womanwear=obj_santa_hat_womanwear,0
+manhead=obj_santa_hat_manhead
+womanhead=obj_santa_hat_womanhead
+iop2=Wear
+name=Santa hat
+wearpos=hat
+weight=4oz
+param=party_clean_exempt,^true
+
+[halloweenmask_green]
+desc=Aaaarrrghhh ... I'm a monster.
+cost=15
+model=obj_halloweenmask_green
+manwear=obj_halloweenmask_green_manwear,0
+womanwear=obj_halloweenmask_green_womanwear,0
+manhead=obj_halloweenmask_green_manhead
+womanhead=obj_halloweenmask_green_womanhead
+2dyof=-10
+2dzoom=730
+2dxan=516
+iop2=Wear
+recol1s=926
+recol1d=22420
+name=Green h'ween mask
+weight=12oz
+wearpos=hat
+wearpos2=head
+wearpos3=jaw
+param=party_clean_exempt,^true
+
+[halloweenmask_blue]
+desc=Aaaarrrghhh ... I'm a monster.
+cost=15
+model=obj_halloweenmask_green
+manwear=obj_halloweenmask_green_manwear,0
+womanwear=obj_halloweenmask_green_womanwear,0
+manhead=obj_halloweenmask_green_manhead
+womanhead=obj_halloweenmask_green_womanhead
+2dyof=-10
+2dzoom=730
+2dxan=516
+iop2=Wear
+recol1s=926
+recol1d=43934
+name=Blue h'ween mask
+weight=12oz
+wearpos=hat
+wearpos2=head
+wearpos3=jaw
+param=party_clean_exempt,^true
+
+[halloweenmask_red]
+desc=Aaaarrrghhh ... I'm a monster.
+cost=15
+model=obj_halloweenmask_green
+manwear=obj_halloweenmask_green_manwear,0
+womanwear=obj_halloweenmask_green_womanwear,0
+manhead=obj_halloweenmask_green_manhead
+womanhead=obj_halloweenmask_green_womanhead
+2dyof=-10
+2dzoom=730
+2dxan=516
+iop2=Wear
+name=Red h'ween mask
+weight=12oz
+wearpos=hat
+wearpos2=head
+wearpos3=jaw
+param=party_clean_exempt,^true

@@ -1,0 +1,132 @@
+[stairs]
+name=Staircase
+desc=I can climb these stairs.
+model=furniture_stairs
+width=2
+length=3
+op1=Climb-up
+forceapproach=south
+sharelight=yes
+mapscene=7
+
+[stairstop]
+name=Staircase
+desc=They go down.
+model=furniture_stairstop
+width=2
+length=2
+op1=Climb-down
+forceapproach=north
+sharelight=yes
+mapscene=7
+
+[yanillestairsdown]
+name=Staircase
+desc=I can climb down this.
+model=lgstrengthtrialgatel_1
+width=2
+length=3
+op1=Climb-down
+forceapproach=north
+mapscene=7
+
+[yanillestairsup]
+name=Staircase
+desc=I can climb this.
+model=furniture_stairs
+width=2
+length=3
+op1=Climb-up
+forceapproach=south
+mapscene=7
+
+[stairs_cellar]
+name=Staircase
+desc=I can use these stairs to climb down.
+model=furniture_stairsdown
+width=2
+length=3
+op1=Climb-down
+forceapproach=north
+mapscene=7
+
+[loc_1734]
+width=2
+length=3
+op1=Climb-up
+forceapproach=11
+mapscene=7
+model=furniture_stairs
+name=Staircase
+desc=I can climb these stairs.
+
+[loc_1736]
+length=2
+op1=Climb-down
+sharelight=yes
+forceapproach=7
+mapscene=7
+model=obj_vial_enchanted
+name=Staircase
+desc=I can climb down these stairs.
+
+[outdoorstairs_wooden_bottom]
+name=Staircase
+desc=I can climb up these stairs.
+model=rowboat_8
+op1=Climb-up
+sharelight=yes
+forceapproach=north
+mapscene=7
+
+[spiralstairs]
+name=Staircase
+desc=I can climb up these stairs.
+model=furniture_spiralstairs
+width=2
+length=2
+op1=Climb-up
+mapscene=7
+
+[spiralstairsmiddle]
+name=Staircase
+desc=I can climb up or go down these stairs.
+model=furniture_spiralstairs
+width=2
+length=2
+op1=Climb
+op2=Climb-up
+op3=Climb-down
+mapscene=7
+
+[spiralstairstop]
+name=Staircase
+desc=I can climb down these stairs.
+model=furniture_spiralstairstop
+op1=Climb-down
+forceapproach=east
+mapscene=7
+
+[balance40up]
+name=Staircase
+desc=I can climb up these stairs.
+model=furniture_stairs
+width=2
+length=3
+op1=Climb-up
+
+[cryptstairsdown]
+width=2
+length=3
+op1=Walk-Down
+model=spooky_loc_1732
+name=Stairs
+desc=Looks spooky...
+
+[cryptstairsup]
+width=2
+length=3
+op1=Walk-Up
+model=spooky_stairs
+name=Stairs
+desc=Phew, an exit!

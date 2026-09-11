@@ -1,0 +1,30 @@
+[biohazarddummy]
+op1=Hit
+forceapproach=11
+model=sworddummy
+name=Dummy
+desc=I've met less intelligent conversationalists.
+
+[lathastraining_gatel]
+op1=Open
+model=ikov_mendedleverdoorl
+name=Gate
+desc=It's closed.
+category=double_door_open_and_close_left
+param=next_loc_stage,lathastraining_gatelopen
+
+[lathastraining_gatelopen]
+model=ikov_mendedleverdoorl
+
+[lathastraining_gater]
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+name=Gate
+desc=It's closed.
+category=double_door_open_and_close_right
+param=next_loc_stage,lathastraining_gateropen
+
+[lathastraining_gateropen]
+mirror=yes
+model=ikov_mendedleverdoorl

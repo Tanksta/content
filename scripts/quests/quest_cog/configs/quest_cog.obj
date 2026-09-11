@@ -1,0 +1,60 @@
+[whitecog]
+desc=A cog from some machinery.
+model=obj_whitecog
+members=yes
+2dyan=2040
+2dxan=292
+name=Cog
+weight=1kg
+category=cog
+tradeable=no
+
+[blackcog]
+desc=A cog from some machinery.
+model=obj_whitecog
+members=yes
+2dyan=2040
+2dxan=292
+recol1s=127
+recol1d=0
+name=Cog
+weight=1kg
+category=cog
+tradeable=no
+
+[bluecog]
+desc=A cog from some machinery.
+model=obj_whitecog
+members=yes
+2dyan=2040
+2dxan=292
+recol1s=127
+recol1d=43968
+name=Cog
+weight=1kg
+category=cog
+tradeable=no
+
+[redcog]
+desc=A cog from some machinery.
+model=obj_whitecog
+members=yes
+2dyan=2040
+2dxan=292
+recol1s=127
+recol1d=960
+name=Cog
+weight=1kg
+category=cog
+tradeable=no
+
+[rat_poison]
+desc=Doesn't look very tasty.
+model=obj_rat_poison
+members=yes
+2dzoom=900
+2dyan=1828
+2dxan=68
+name=Rat poison
+weight=5oz
+tradeable=no

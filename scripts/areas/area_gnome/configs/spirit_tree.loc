@@ -1,0 +1,38 @@
+[ent]
+width=4
+length=4
+anim=entready
+op1=Talk-to
+mapscene=0
+model=ent
+name=Spirit tree
+desc=An ancient sentient tree.
+
+[stronghold_ent]
+width=4
+length=4
+anim=entready
+op1=Talk-to
+mapscene=0
+model=ent
+name=Spirit tree
+desc=An ancient sentient tree.
+
+[spirittree_small]
+width=4
+length=4
+anim=entendseq
+op1=Talk-to
+mapscene=0
+model=ent
+name=Spirit tree
+desc=An ancient sentient tree.
+
+[loc_1317]
+width=2
+length=2
+op1=Talk-to
+mapscene=0
+model=goal_gnomeball_game_8
+name=Spirit tree
+desc=A young sentient tree.

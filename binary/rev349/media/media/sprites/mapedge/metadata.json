@@ -1,0 +1,22 @@
+{
+  "member": "mapedge.dat",
+  "palette": [
+    0,
+    0,
+    16711680
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/mapedge/000.png",
+      "canvasWidth": 31,
+      "canvasHeight": 31,
+      "xOffset": 8,
+      "yOffset": 7,
+      "width": 15,
+      "height": 16,
+      "encoding": 1
+    }
+  ]
+}

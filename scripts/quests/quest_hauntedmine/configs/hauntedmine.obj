@@ -1,0 +1,96 @@
+[damp_tinderbox]
+name=Damp tinderbox
+recol1s=127
+recol1d=82
+desc=Not so useful for lighting a fire.
+model=obj_tinderbox
+manwear=obj_tinderbox_manwear,0
+womanwear=obj_tinderbox_manwear,0
+2dxof=1
+2dyof=-10
+2dzoom=660
+2dyan=1968
+2dxan=196
+members=yes
+// TODO
+
+[glowing_fungus]
+name=Glowing fungus
+desc=A bizarre fungus.  It glows with a pale blue light.
+model=obj_glowing_fungus
+2dyof=-15
+2dzoom=790
+2dyan=236
+2dzan=2044
+2dxan=208
+weight=2oz
+members=yes
+tradeable=no
+
+[crystalshard_dagger]
+2dyof=1
+2dzoom=1940
+2dxan=572
+dummyitem=inv_only
+
+[hauntedmine_reward_key]
+name=Crystal-mine key
+desc=A key I found in the lower levels of the Morytanian mines.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+weight=10g
+members=yes
+tradeable=no
+
+[hauntedmine_lift_key]
+name=Zealot's key
+recol1s=8128
+recol1d=86
+desc=I stole this from a Saradominist I met South of Mort'ton.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+weight=10g
+members=yes
+tradeable=no
+
+[crystalshard_necklace]
+name=Salve amulet
+recol1s=5916
+recol1d=127
+desc=Increases the wearer's strength and accuracy by 15% when fighting the undead.
+model=obj_crystalshard_necklace
+2dxof=2
+2dyof=-18
+2dzoom=440
+2dyan=72
+2dxan=172
+iop2=Wear
+wearpos=front
+manwear=obj_crystalshard_necklace_manwear,0
+womanwear=obj_crystalshard_necklace_womanwear,0
+weight=7g
+members=yes
+param=crushdefence,3
+param=magicdefence,3
+param=rangedefence,3
+param=prayerbonus,3
+tradeable=no
+
+[crystalshard_necklace_unstrung]
+name=Salve shard
+desc=An unstrung crystal imbued with the power of Saradomin.
+model=obj_crystalshard_necklace_unstrung
+2dyof=1
+2dzoom=180
+2dyan=2044
+weight=7g
+members=yes
+tradeable=no

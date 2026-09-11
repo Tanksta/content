@@ -1,0 +1,113 @@
+[elemental_workshop_shield_book]
+desc=A very thickly bound book.
+model=obj_mcannonbook
+cost=10
+members=yes
+iop1=Read
+2dyof=-1
+2dzoom=970
+2dyan=136
+2dxan=276
+name=Battered book
+tradeable=no
+weight=4oz
+
+[elemental_workshop_key]
+desc=An old battered key.
+model=obj_ikov_shinykey
+cost=1
+members=yes
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+name=Battered key
+tradeable=no
+weight=10g
+
+[elemental_workshop_lava_bowl]
+desc=This is an empty stone bowl.
+model=obj_spoilt_gnomebowl
+2dxof=1
+2dzoom=850
+2dyan=1888
+2dxan=192
+members=yes
+cost=1
+recol1s=7081
+recol1d=37
+recol2s=7075
+recol2d=37
+name=A stone bowl
+tradeable=no
+weight=5oz
+
+[elemental_workshop_lava_bowl_full]
+desc=This is a stone bowl full of lava.
+model=obj_spoilt_gnomebowl
+2dxof=1
+2dzoom=850
+2dyan=1888
+2dxan=192
+members=yes
+cost=1
+recol1s=7081
+recol1d=37
+recol2s=7075
+recol2d=2749
+name=A stone bowl
+tradeable=no
+weight=8oz
+
+[elemental_shield]
+desc=A magic shield.
+model=obj_elemental_shield
+iop2=Wield
+2dxof=-2
+2dyof=22
+2dyan=216
+2dxan=300
+manwear=obj_elemental_shield_manwear,0
+womanwear=obj_elemental_shield_manwear,6
+members=yes
+cost=20
+name=Elemental shield
+wearpos=lefthand
+category=armour_shield
+weight=8oz
+param=magicdefence,6
+param=defend_anim,human_shield_defence
+param=defend_sound,blade4
+
+[elemental_workshop_ore]
+desc=This needs refining.
+model=obj_copper_ore
+2dxof=1
+2dyof=15
+2dzoom=1400
+2dyan=1576
+2dxan=368
+members=yes
+cost=5
+recol1s=7062
+recol1d=50087
+name=Elemental ore
+tradeable=no
+weight=5lb
+
+[elemental_workshop_bar]
+desc=It's a bar of refined elemental ore.
+model=obj_bronze_bar
+2dxof=1
+2dyof=-8
+2dzoom=820
+2dyan=1180
+2dxan=196
+members=yes
+cost=8
+recol1s=7062
+recol1d=50087
+name=Elemental metal
+tradeable=no
+weight=4lb

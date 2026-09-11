@@ -1,0 +1,150 @@
+[openbankdoor_r]
+name=Large door
+desc=A sturdy wooden door.
+model=openbankdoorr
+op1=Open
+raiseobject=no
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+category=door_closed
+param=next_loc_stage,bankdoor_l_inactive
+
+[bankdoor_l]
+name=Large door
+desc=A sturdy wooden door.
+model=bankdoor_l
+op1=Open
+raiseobject=no
+category=door_closed
+param=next_loc_stage,bankdoor_r_inactive
+
+[bankdoor_r_inactive]
+name=Large door
+desc=A sturdy wooden door.
+model=bankdoor_l
+op1=Close
+raiseobject=no
+category=door_opened
+param=next_loc_stage,bankdoor_l
+
+[bankdoor_l_inactive]
+name=Large door
+desc=A sturdy wooden door.
+model=openbankdoorr
+op1=Close
+raiseobject=no
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+category=door_opened
+param=next_loc_stage,openbankdoor_r
+
+[inaccastledoubledoorropen]
+name=Door
+desc=The door is closed.
+model=door1
+active=yes
+op1=Open
+raiseobject=no
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+category=door_closed
+param=next_loc_stage,desertdoor_animate
+
+[desertdoor_animate]
+name=Door
+desc=The door is open.
+model=door1
+active=yes
+op1=Close
+raiseobject=no
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+category=door_opened
+param=next_loc_stage,inaccastledoubledoorropen
+
+[loc_1533]
+name=Door
+desc=A nicely fitted door.
+model=door1
+active=yes
+op1=Open
+raiseobject=no
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+category=door_closed
+param=next_loc_stage,loc_1534
+
+[loc_1534]
+name=Door
+desc=A nicely fitted door.
+model=door1
+active=yes
+op1=Close
+raiseobject=no
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+category=door_opened
+param=next_loc_stage,loc_1533
+
+[poordooropen]
+name=Door
+desc=An elf-fashioned door.
+model=door1
+active=yes
+op1=Open
+raiseobject=no
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+category=door_closed
+param=next_loc_stage,poordoor_cross
+
+[poordoor_cross]
+name=Door
+desc=An elf-fashioned door.
+model=door1
+active=yes
+op1=Close
+raiseobject=no
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+category=door_opened
+param=next_loc_stage,poordooropen
+
+[inactivepoordoor]
+name=Door
+desc=Solid bars of iron.
+model=ctratgatea
+op1=Open
+active=yes
+blockrange=no
+raiseobject=no
+category=door_closed
+param=next_loc_stage,poshdoor
+param=open_sound,grate_open
+
+[poshdoor]
+name=Door
+desc=Solid bars of iron.
+model=thickpoordoor
+op1=Close
+active=yes
+raiseobject=no
+category=door_opened
+param=next_loc_stage,inactivepoordoor
+param=close_sound,grate_close

@@ -1,0 +1,38 @@
+{
+  "member": "mod_icons.dat",
+  "palette": [
+    0,
+    9934743,
+    13671716,
+    14737632,
+    10658466,
+    16776839,
+    16252683,
+    0
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/mod_icons/000.png",
+      "canvasWidth": 13,
+      "canvasHeight": 13,
+      "xOffset": 0,
+      "yOffset": 1,
+      "width": 13,
+      "height": 11,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/mod_icons/001.png",
+      "canvasWidth": 13,
+      "canvasHeight": 13,
+      "xOffset": 0,
+      "yOffset": 1,
+      "width": 13,
+      "height": 11,
+      "encoding": 1
+    }
+  ]
+}

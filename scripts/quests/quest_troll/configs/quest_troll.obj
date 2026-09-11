@@ -1,0 +1,53 @@
+[troll_key_prison]
+desc=The key to the troll prison.
+cost=1
+members=yes
+model=obj_troll_key_prison
+2dxof=-8
+2dyof=-2
+2dzoom=860
+2dyan=20
+2dxan=460
+recol1s=57
+recol1d=7646
+recol2s=49
+recol2d=7630
+name=Prison key
+weight=55g
+tradeable=no
+
+[troll_key_godric]
+desc=The key to Godric's cell in the troll prison.
+cost=1
+members=yes
+model=obj_troll_key_prison
+2dxof=-9
+2dyof=-2
+2dzoom=860
+2dyan=20
+2dxan=460
+recol1s=57
+recol1d=7362
+recol2s=49
+recol2d=8369
+name=Cell key 1
+weight=55g
+tradeable=no
+
+[troll_key_eadgar]
+desc=The key to Mad Eadgar's cell in the troll prison.
+cost=1
+members=yes
+model=obj_troll_key_prison
+2dxof=-9
+2dyof=-2
+2dzoom=860
+2dyan=20
+2dxan=460
+recol1s=57
+recol1d=14400
+recol2s=49
+recol2d=14507
+name=Cell key 2
+weight=55g
+tradeable=no

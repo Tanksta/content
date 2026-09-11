@@ -1,0 +1,167 @@
+[boardgames_runelink_firerune]
+desc=A piece used in board games.
+model=obj_firerune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_waterrune]
+desc=A piece used in board games.
+model=obj_waterrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_earthrune]
+desc=A piece used in board games.
+model=obj_earthrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_airrune]
+desc=A piece used in board games.
+model=obj_airrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_mindrune]
+desc=A piece used in board games.
+model=obj_mindrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_bodyrune]
+desc=A piece used in board games.
+model=obj_bodyrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_naturerune]
+desc=A piece used in board games.
+model=obj_naturerune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_chaosrune]
+desc=A piece used in board games.
+model=obj_chaosrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_lawrune]
+desc=A piece used in board games.
+model=obj_lawrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_cosmicrune]
+desc=A piece used in board games.
+model=obj_cosmicrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_bloodrune]
+desc=A piece used in board games.
+model=obj_bloodrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_runelink_soulrune]
+desc=A piece used in board games.
+model=obj_soulrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+name=Board game piece
+category=boardgames_piece
+tradeable=no
+dummyitem=inv_only

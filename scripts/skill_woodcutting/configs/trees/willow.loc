@@ -1,0 +1,11 @@
+[willowtree]
+width=2
+length=2
+mapscene=3
+op1=Chop down
+ambient=25
+model=com_i273
+name=Willow
+desc=These trees are found near water.
+category=tree
+param=next_loc_stage,treestump2_green

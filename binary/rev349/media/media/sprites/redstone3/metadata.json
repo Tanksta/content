@@ -1,0 +1,29 @@
+{
+  "member": "redstone3.dat",
+  "palette": [
+    0,
+    3609363,
+    1578261,
+    1968907,
+    2756367,
+    4593688,
+    5578013,
+    6365473,
+    7284262,
+    8268587
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/redstone3/000.png",
+      "canvasWidth": 44,
+      "canvasHeight": 35,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 44,
+      "height": 35,
+      "encoding": 0
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[elemental_fire]
+desc=A fire elemental.
+readyanim=elemental_fire_ready
+walkanim=elemental_fire_walk
+op2=Attack
+vislevel=35
+name=Fire elemental
+model1=npc_elemental_fire
+respawnrate=100
+hitpoints=30
+attack=35
+strength=35
+defence=20
+magic=20
+ranged=20
+param=death_drop,ashes
+
+[elemental_earth]
+desc=An earth elemental.
+readyanim=elemental_earth_ready
+walkanim=elemental_earth_walk
+op2=Attack
+vislevel=35
+name=Earth elemental
+model1=npc_elemental_earth
+respawnrate=100
+hitpoints=35
+attack=20
+strength=35
+defence=35
+magic=10
+ranged=30
+param=attackrate,6
+
+[elemental_air]
+desc=An air elemental.
+readyanim=elemental_air_ready
+walkanim=elemental_air_ready
+op2=Attack
+vislevel=34
+name=Air elemental
+model1=npc_elemental_air
+respawnrate=100
+hitpoints=30
+attack=40
+strength=20
+defence=30
+magic=40
+ranged=20
+param=damagetype,^stab_style
+
+[elemental_water]
+desc=A water elemental.
+readyanim=elemental_water_ready
+walkanim=elemental_water_walk
+op2=Attack
+vislevel=34
+name=Water elemental
+model1=npc_elemental_water
+respawnrate=100
+hitpoints=30
+attack=30
+strength=30
+defence=30
+magic=30
+ranged=30
+param=death_drop,vial_water
+
+[earth_elemental_rock_version]
+desc=An earth elemental.
+readyanim=elemental_earth_ready
+walkanim=elemental_earth_walk
+op2=Attack
+vislevel=35
+name=Earth elemental
+model1=npc_elemental_earth
+hitpoints=35
+attack=20
+strength=35
+defence=35
+magic=10
+ranged=30
+param=attackrate,6

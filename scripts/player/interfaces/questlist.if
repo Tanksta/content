@@ -1,0 +1,1846 @@
+type=layer
+width=512
+height=334
+
+[com_0]
+x=5
+y=20
+type=layer
+width=168
+height=229
+scroll=1475
+
+[com_24]
+layer=com_0
+x=5
+y=8
+type=text
+width=84
+height=14
+font=b12_full
+shadowed=yes
+text=FREE QUESTS:
+colour=0xF99B15
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[fortress]
+layer=com_0
+x=10
+y=23
+type=text
+buttontype=normal
+width=131
+height=14
+font=p12_full
+shadowed=yes
+text=Black Knights' Fortress
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Black Knights' Fortress
+
+[cook]
+layer=com_0
+x=10
+y=38
+type=text
+buttontype=normal
+width=96
+height=14
+font=p12_full
+shadowed=yes
+text=Cook's Assistant
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Cook's Assistant
+
+[demon]
+layer=com_0
+x=10
+y=53
+type=text
+buttontype=normal
+width=76
+height=14
+font=p12_full
+shadowed=yes
+text=Demon Slayer
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Demon Slayer
+
+[runemysteries]
+layer=com_0
+x=10
+y=217
+type=text
+buttontype=normal
+width=125
+height=14
+font=p12_full
+shadowed=yes
+text=Rune Mysteries Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Rune Mysteries Quest
+
+[doric]
+layer=com_0
+x=10
+y=68
+type=text
+buttontype=normal
+width=75
+height=14
+font=p12_full
+shadowed=yes
+text=Doric's Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Doric's Quest
+
+[priest]
+layer=com_0
+x=10
+y=187
+type=text
+buttontype=normal
+width=109
+height=14
+font=p12_full
+shadowed=yes
+text=The Restless Ghost
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Restless Ghost
+
+[gobdip]
+layer=com_0
+x=10
+y=113
+type=text
+buttontype=normal
+width=94
+height=14
+font=p12_full
+shadowed=yes
+text=Goblin Diplomacy
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Goblin Diplomacy
+
+[haunted]
+layer=com_0
+x=10
+y=98
+type=text
+buttontype=normal
+width=105
+height=14
+font=p12_full
+shadowed=yes
+text=Ernest the Chicken
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Ernest the Chicken
+
+[imp]
+layer=com_0
+x=10
+y=128
+type=text
+buttontype=normal
+width=66
+height=14
+font=p12_full
+shadowed=yes
+text=Imp Catcher
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Imp Catcher
+
+[hunt]
+layer=com_0
+x=10
+y=158
+type=text
+buttontype=normal
+width=97
+height=13
+font=p12_full
+shadowed=yes
+text=Pirate's Treasure
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Pirate's Treasure
+
+[prince]
+layer=com_0
+x=10
+y=172
+type=text
+buttontype=normal
+width=96
+height=14
+font=p12_full
+shadowed=yes
+text=Prince Ali Rescue
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Prince Ali Rescue
+
+[romeojuliet]
+layer=com_0
+x=10
+y=202
+type=text
+buttontype=normal
+width=86
+height=14
+font=p12_full
+shadowed=yes
+text=Romeo & Juliet
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Romeo & Juliet
+
+[sheep]
+layer=com_0
+x=10
+y=232
+type=text
+buttontype=normal
+width=83
+height=14
+font=p12_full
+shadowed=yes
+text=Sheep Shearer
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Sheep Shearer
+
+[blackarmgang]
+layer=com_0
+x=10
+y=247
+type=text
+buttontype=normal
+width=85
+height=14
+font=p12_full
+shadowed=yes
+text=Shield of Arrav
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Shield of Arrav
+
+[squire]
+layer=com_0
+x=10
+y=143
+type=text
+buttontype=normal
+width=104
+height=14
+font=p12_full
+shadowed=yes
+text=The Knight's Sword
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Knight's Sword
+
+[vampire]
+layer=com_0
+x=10
+y=262
+type=text
+buttontype=normal
+width=84
+height=14
+font=p12_full
+shadowed=yes
+text=Vampire Slayer
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Vampire Slayer
+
+[hetty]
+layer=com_0
+x=10
+y=277
+type=text
+buttontype=normal
+width=79
+height=14
+font=p12_full
+shadowed=yes
+text=Witch's Potion
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Witch's Potion
+
+[itwatchtower]
+layer=com_0
+x=10
+y=1407
+type=text
+buttontype=normal
+width=68
+height=14
+font=p12_full
+shadowed=yes
+text=Watch Tower
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Watch Tower
+
+[com_43]
+layer=com_0
+x=4
+y=296
+type=text
+width=113
+height=14
+font=b12_full
+shadowed=yes
+text=MEMBERS QUESTS:
+colour=0xF99B15
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[waterfall]
+layer=com_0
+x=10
+y=1422
+type=text
+buttontype=normal
+width=89
+height=14
+font=p12_full
+shadowed=yes
+text=Waterfall Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Waterfall Quest
+
+[ball]
+layer=com_0
+x=10
+y=1437
+type=text
+buttontype=normal
+width=78
+height=14
+font=p12_full
+shadowed=yes
+text=Witch's House
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Witch's House
+
+[biohazard]
+layer=com_0
+x=10
+y=341
+type=text
+buttontype=normal
+width=57
+height=14
+font=p12_full
+shadowed=yes
+text=Biohazard
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Biohazard
+
+[cog]
+layer=com_0
+x=10
+y=356
+type=text
+buttontype=normal
+width=63
+height=14
+font=p12_full
+shadowed=yes
+text=Clock Tower
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Clock Tower
+
+[itexam]
+layer=com_0
+x=10
+y=431
+type=text
+buttontype=normal
+width=76
+height=14
+font=p12_full
+shadowed=yes
+text=Digsite Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Digsite Quest
+
+[chompybird]
+layer=com_0
+x=10
+y=326
+type=text
+buttontype=normal
+width=135
+height=14
+font=p12_full
+shadowed=yes
+text=Big Chompy Bird Hunting
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Big Chompy Bird Hunting
+
+[mcannon]
+layer=com_0
+x=10
+y=461
+type=text
+buttontype=normal
+width=77
+height=14
+font=p12_full
+shadowed=yes
+text=Dwarf Cannon
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Dwarf Cannon
+
+[crest]
+layer=com_0
+x=10
+y=506
+type=text
+buttontype=normal
+width=69
+height=14
+font=p12_full
+shadowed=yes
+text=Family Crest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Family Crest
+
+[arena]
+layer=com_0
+x=10
+y=536
+type=text
+buttontype=normal
+width=65
+height=14
+font=p12_full
+shadowed=yes
+text=Fight Arena
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Fight Arena
+
+[fishingcompo]
+layer=com_0
+x=10
+y=551
+type=text
+buttontype=normal
+width=88
+height=14
+font=p12_full
+shadowed=yes
+text=Fishing Contest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Fishing Contest
+
+[fluffs]
+layer=com_0
+x=10
+y=612
+type=text
+buttontype=normal
+width=83
+height=14
+font=p12_full
+shadowed=yes
+text=Gertrude's Cat
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Gertrude's Cat
+
+[grandtree]
+layer=com_0
+x=10
+y=673
+type=text
+buttontype=normal
+width=83
+height=14
+font=p12_full
+shadowed=yes
+text=The Grand Tree
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Grand Tree
+
+[hazeelcult]
+layer=com_0
+x=10
+y=703
+type=text
+buttontype=normal
+width=63
+height=14
+font=p12_full
+shadowed=yes
+text=Hazeel Cult
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Hazeel Cult
+
+[hero]
+layer=com_0
+x=10
+y=718
+type=text
+buttontype=normal
+width=77
+height=14
+font=p12_full
+shadowed=yes
+text=Heroes Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Heroes Quest
+
+[routequest]
+layer=com_0
+x=10
+y=778
+type=text
+buttontype=normal
+width=142
+height=14
+font=p12_full
+shadowed=yes
+text=In search of the Myreque
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=In search of the Myreque
+
+[junglepotion]
+layer=com_0
+x=10
+y=793
+type=text
+buttontype=normal
+width=77
+height=14
+font=p12_full
+shadowed=yes
+text=Jungle Potion
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Jungle Potion
+
+[legends]
+layer=com_0
+x=10
+y=808
+type=text
+buttontype=normal
+width=85
+height=14
+font=p12_full
+shadowed=yes
+text=Legends Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Legends Quest
+
+[zanaris]
+layer=com_0
+x=10
+y=823
+type=text
+buttontype=normal
+width=50
+height=14
+font=p12_full
+shadowed=yes
+text=Lost City
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Lost City
+
+[arthur]
+layer=com_0
+x=10
+y=868
+type=text
+buttontype=normal
+width=88
+height=14
+font=p12_full
+shadowed=yes
+text=Merlin's Crystal
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Merlin's Crystal
+
+[drunkmonk]
+layer=com_0
+x=10
+y=898
+type=text
+buttontype=normal
+width=77
+height=14
+font=p12_full
+shadowed=yes
+text=Monk's Friend
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Monk's Friend
+
+[murder]
+layer=com_0
+x=10
+y=958
+type=text
+buttontype=normal
+width=90
+height=14
+font=p12_full
+shadowed=yes
+text=Murder Mystery
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Murder Mystery
+
+[itgronigen]
+layer=com_0
+x=10
+y=988
+type=text
+buttontype=normal
+width=109
+height=14
+font=p12_full
+shadowed=yes
+text=Observatory Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Observatory Quest
+
+[elena]
+layer=com_0
+x=10
+y=1018
+type=text
+buttontype=normal
+width=63
+height=14
+font=p12_full
+shadowed=yes
+text=Plague City
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Plague City
+
+[scorpcatcher]
+layer=com_0
+x=10
+y=1122
+type=text
+buttontype=normal
+width=96
+height=14
+font=p12_full
+shadowed=yes
+text=Scorpion Catcher
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Scorpion Catcher
+
+[seaslug]
+layer=com_0
+x=10
+y=1137
+type=text
+buttontype=normal
+width=85
+height=14
+font=p12_full
+shadowed=yes
+text=Sea Slug Quest
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Sea Slug Quest
+
+[sheepherder]
+layer=com_0
+x=10
+y=1182
+type=text
+buttontype=normal
+width=76
+height=14
+font=p12_full
+shadowed=yes
+text=Sheep Herder
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Sheep Herder
+
+[zombiequeen]
+layer=com_0
+x=10
+y=1197
+type=text
+buttontype=normal
+width=67
+height=14
+font=p12_full
+shadowed=yes
+text=Shilo Village
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Shilo Village
+
+[ikov]
+layer=com_0
+x=10
+y=1272
+type=text
+buttontype=normal
+width=80
+height=14
+font=p12_full
+shadowed=yes
+text=Temple of Ikov
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Temple of Ikov
+
+[desertrescue]
+layer=com_0
+x=10
+y=1302
+type=text
+buttontype=normal
+width=88
+height=14
+font=p12_full
+shadowed=yes
+text=The Tourist Trap
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Tourist Trap
+
+[tree]
+layer=com_0
+x=10
+y=1317
+type=text
+buttontype=normal
+width=105
+height=14
+font=p12_full
+shadowed=yes
+text=Tree Gnome Village
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Tree Gnome Village
+
+[totem]
+layer=com_0
+x=10
+y=1332
+type=text
+buttontype=normal
+width=66
+height=14
+font=p12_full
+shadowed=yes
+text=Tribal Totem
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Tribal Totem
+
+[upass]
+layer=com_0
+x=10
+y=1377
+type=text
+buttontype=normal
+width=105
+height=14
+font=p12_full
+shadowed=yes
+text=Underground Pass
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Underground Pass
+
+[dragon]
+layer=com_0
+x=10
+y=83
+type=text
+buttontype=normal
+width=79
+height=14
+font=p12_full
+shadowed=yes
+text=Dragon Slayer
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Dragon Slayer
+
+[elemental_workshop]
+layer=com_0
+x=10
+y=491
+type=text
+buttontype=normal
+width=112
+height=14
+font=p12_full
+shadowed=yes
+text=Elemental Workshop
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Elemental Workshop
+
+[druid]
+layer=com_0
+x=10
+y=446
+type=text
+buttontype=normal
+width=73
+height=14
+font=p12_full
+shadowed=yes
+text=Druidic Ritual
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Druidic Ritual
+
+[priestperil]
+layer=com_0
+x=10
+y=1033
+type=text
+buttontype=normal
+width=75
+height=14
+font=p12_full
+shadowed=yes
+text=Priest in Peril
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Priest in Peril
+
+[druidspirit]
+layer=com_0
+x=10
+y=973
+type=text
+buttontype=normal
+width=72
+height=14
+font=p12_full
+shadowed=yes
+text=Nature Spirit
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Nature Spirit
+
+[death]
+layer=com_0
+x=10
+y=386
+type=text
+buttontype=normal
+width=79
+height=14
+font=p12_full
+shadowed=yes
+text=Death Plateau
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Death Plateau
+
+[troll]
+layer=com_0
+x=10
+y=1362
+type=text
+buttontype=normal
+width=88
+height=14
+font=p12_full
+shadowed=yes
+text=Troll Stronghold
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Troll Stronghold
+
+[eadgar]
+layer=com_0
+x=10
+y=476
+type=text
+buttontype=normal
+width=81
+height=14
+font=p12_full
+shadowed=yes
+text=Eadgar's Ruse
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Eadgar's Ruse
+
+[tbwt]
+layer=com_0
+x=10
+y=1227
+type=text
+buttontype=normal
+width=105
+height=14
+font=p12_full
+shadowed=yes
+text=Tai Bwo Wannai Trio
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Tai Bwo Wannai Trio
+
+[hauntedmine]
+layer=com_0
+x=10
+y=688
+type=text
+buttontype=normal
+width=76
+height=14
+font=p12_full
+shadowed=yes
+text=Haunted Mine
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Haunted Mine
+
+[regicide]
+layer=com_0
+x=10
+y=1077
+type=text
+buttontype=normal
+width=47
+height=14
+font=p12_full
+shadowed=yes
+text=Regicide
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Regicide
+
+[mortton]
+layer=com_0
+x=10
+y=1152
+type=text
+buttontype=normal
+width=110
+height=14
+font=p12_full
+shadowed=yes
+text=Shades of Mort'ton
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Shades of Mort'ton
+
+[misc]
+layer=com_0
+x=10
+y=1287
+type=text
+buttontype=normal
+width=119
+height=14
+font=p12_full
+shadowed=yes
+text=Throne of Miscellania
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Throne of Miscellania
+
+[viking]
+layer=com_0
+x=10
+y=582
+type=text
+buttontype=normal
+width=112
+height=14
+font=p12_full
+shadowed=yes
+text=The Fremennik Trials
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Fremennik Trials
+
+[mm]
+layer=com_0
+x=10
+y=883
+type=text
+buttontype=normal
+width=97
+height=14
+font=p12_full
+shadowed=yes
+text=Monkey Madness
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Monkey Madness
+
+[roving_elves]
+layer=com_0
+x=10
+y=1092
+type=text
+buttontype=normal
+width=71
+height=14
+font=p12_full
+shadowed=yes
+text=Roving Elves
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Roving Elves
+
+[grail]
+layer=com_0
+x=10
+y=733
+type=text
+buttontype=normal
+width=53
+height=14
+font=p12_full
+shadowed=yes
+text=Holy Grail
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Holy Grail
+
+[horror]
+layer=com_0
+x=10
+y=748
+type=text
+buttontype=normal
+width=119
+height=14
+font=p12_full
+shadowed=yes
+text=Horror from the Deep
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Horror from the Deep
+
+[troll_love]
+layer=com_0
+x=10
+y=1347
+type=text
+buttontype=normal
+width=76
+height=14
+font=p12_full
+shadowed=yes
+text=Troll Romance
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Troll Romance
+
+[creatureoffenkenstrain]
+layer=com_0
+x=10
+y=371
+type=text
+buttontype=normal
+width=143
+height=14
+font=p12_full
+shadowed=yes
+text=Creature of Fenkenstrain
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Creature of Fenkenstrain
+
+[onesmallfavour]
+layer=com_0
+x=10
+y=1003
+type=text
+buttontype=normal
+width=96
+height=14
+font=p12_full
+shadowed=yes
+text=One Small Favour
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=One Small Favour
+
+[mdaughter]
+layer=com_0
+x=10
+y=913
+type=text
+buttontype=normal
+width=107
+height=14
+font=p12_full
+shadowed=yes
+text=Mountain Daughter
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Mountain Daughter
+
+[ahoy]
+layer=com_0
+x=10
+y=627
+type=text
+buttontype=normal
+width=73
+height=14
+font=p12_full
+shadowed=yes
+text=Ghosts Ahoy
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Ghosts Ahoy
+
+[dwarfrock]
+layer=com_0
+x=10
+y=311
+type=text
+buttontype=normal
+width=95
+height=14
+font=p12_full
+shadowed=yes
+text=Between a Rock...
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Between a Rock...
+
+[feud]
+layer=com_0
+x=10
+y=521
+type=text
+buttontype=normal
+width=49
+height=14
+font=p12_full
+shadowed=yes
+text=The Feud
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Feud
+
+[golem]
+layer=com_0
+x=10
+y=658
+type=text
+buttontype=normal
+width=56
+height=14
+font=p12_full
+shadowed=yes
+text=The Golem
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Golem
+
+[deserttreasure]
+layer=com_0
+x=10
+y=416
+type=text
+buttontype=normal
+width=91
+height=14
+font=p12_full
+shadowed=yes
+text=Desert Treasure
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Desert Treasure
+
+[ics_little]
+layer=com_0
+x=10
+y=763
+type=text
+buttontype=normal
+width=128
+height=14
+font=p12_full
+shadowed=yes
+text=Icthlarin's Little Helper
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Icthlarin's Little Helper
+
+[tog]
+layer=com_0
+x=10
+y=1257
+type=text
+buttontype=normal
+width=87
+height=14
+font=p12_full
+shadowed=yes
+text=Tears of Guthix
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Tears of Guthix
+
+[zogre]
+layer=com_0
+x=10
+y=1452
+type=text
+buttontype=normal
+width=106
+height=14
+font=p12_full
+shadowed=yes
+text=Zogre Flesh Eaters
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Zogre Flesh Eaters
+
+[giantdwarf]
+layer=com_0
+x=10
+y=642
+type=text
+buttontype=normal
+width=87
+height=14
+font=p12_full
+shadowed=yes
+text=The Giant Dwarf
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Giant Dwarf
+
+[lost_tribe]
+layer=com_0
+x=10
+y=838
+type=text
+buttontype=normal
+width=77
+height=14
+font=p12_full
+shadowed=yes
+text=The Lost Tribe
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=The Lost Tribe
+
+[rd]
+layer=com_0
+x=10
+y=1063
+type=text
+buttontype=normal
+width=100
+height=14
+font=p12_full
+shadowed=yes
+text=Recruitment Drive
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Recruitment Drive
+
+[mourning]
+layer=com_0
+x=10
+y=928
+type=text
+buttontype=normal
+width=129
+height=14
+font=p12_full
+shadowed=yes
+text=Mourning's Ends Part 1
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Mourning's Ends Part 1
+
+[forget]
+layer=com_0
+x=10
+y=566
+type=text
+buttontype=normal
+width=100
+height=14
+font=p12_full
+shadowed=yes
+text=Forgettable Tale...
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Forgettable Tale
+
+[garden]
+layer=com_0
+x=10
+y=597
+type=text
+buttontype=normal
+width=122
+height=14
+font=p12_full
+shadowed=yes
+text=Garden of Tranquillity
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Garden of Tranquillity
+
+[twocats]
+layer=com_0
+x=10
+y=1242
+type=text
+buttontype=normal
+width=96
+height=14
+font=p12_full
+shadowed=yes
+text=A Tail of Two Cats
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=A Tail of Two Cats
+
+[wanted]
+layer=com_0
+x=10
+y=1392
+type=text
+buttontype=normal
+width=45
+height=14
+font=p12_full
+shadowed=yes
+text=Wanted!
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Wanted!
+
+[mourning2]
+layer=com_0
+x=10
+y=943
+type=text
+buttontype=normal
+width=131
+height=14
+font=p12_full
+shadowed=yes
+text=Mourning's Ends Part 2
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Mourning's Ends Part 2
+
+[deal]
+layer=com_0
+x=10
+y=1107
+type=text
+buttontype=normal
+width=50
+height=14
+font=p12_full
+shadowed=yes
+text=Rum Deal
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Rum Deal
+
+[agrith]
+layer=com_0
+x=10
+y=1167
+type=text
+buttontype=normal
+width=116
+height=14
+font=p12_full
+shadowed=yes
+text=Shadow of the Storm
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Shadow of the Storm
+
+[makinghistory]
+layer=com_0
+x=10
+y=853
+type=text
+buttontype=normal
+width=83
+height=14
+font=p12_full
+shadowed=yes
+text=Making History
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Making History
+
+[ratcatch]
+layer=com_0
+x=10
+y=1048
+type=text
+buttontype=normal
+width=73
+height=14
+font=p12_full
+shadowed=yes
+text=Rat Catchers
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Rat Catchers
+
+[elid]
+layer=com_0
+x=10
+y=1212
+type=text
+buttontype=normal
+width=97
+height=14
+font=p12_full
+shadowed=yes
+text=Spirits of the Elid
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Spirits of the Elid
+
+[devious]
+layer=com_0
+x=10
+y=401
+type=text
+buttontype=normal
+width=81
+height=14
+font=p12_full
+shadowed=yes
+text=Devious Minds
+colour=0xFF0000
+activecolour=0x000000
+overcolour=0xFFFFFF
+activeovercolour=0x000000
+option=Devious Minds
+
+[com_1]
+x=41
+y=4
+type=text
+width=93
+height=14
+font=b12_full
+shadowed=yes
+text=Quest Journal
+colour=0xFFFF00
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[com_2]
+x=-12
+y=194
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,2
+
+[com_3]
+x=150
+y=194
+type=graphic
+width=36
+height=36
+graphic=steelborder2,1
+
+[com_4]
+x=3
+y=20
+type=graphic
+width=25
+height=30
+graphic=steelborder,0
+
+[com_5]
+x=146
+y=20
+type=graphic
+width=25
+height=30
+graphic=steelborder,1
+
+[com_6]
+x=3
+y=219
+type=graphic
+width=25
+height=30
+graphic=steelborder,2
+
+[com_7]
+x=146
+y=219
+type=graphic
+width=25
+height=30
+graphic=steelborder,3
+
+[com_8]
+x=28
+y=5
+type=graphic
+width=36
+height=36
+graphic=steelborder2,0
+
+[com_9]
+x=64
+y=5
+type=graphic
+width=36
+height=36
+graphic=steelborder2,0
+
+[com_10]
+x=100
+y=5
+type=graphic
+width=36
+height=36
+graphic=steelborder2,0
+
+[com_11]
+x=112
+y=5
+type=graphic
+width=36
+height=36
+graphic=steelborder2,0
+
+[com_12]
+x=150
+y=50
+type=graphic
+width=36
+height=36
+graphic=steelborder2,1
+
+[com_13]
+x=150
+y=86
+type=graphic
+width=36
+height=36
+graphic=steelborder2,1
+
+[com_14]
+x=150
+y=122
+type=graphic
+width=36
+height=36
+graphic=steelborder2,1
+
+[com_15]
+x=150
+y=158
+type=graphic
+width=36
+height=36
+graphic=steelborder2,1
+
+[com_16]
+x=-12
+y=50
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,2
+
+[com_17]
+x=-12
+y=86
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,2
+
+[com_18]
+x=-12
+y=122
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,2
+
+[com_19]
+x=-12
+y=158
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,2
+
+[com_20]
+x=28
+y=228
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,3
+
+[com_21]
+x=64
+y=228
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,3
+
+[com_22]
+x=98
+y=228
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,3
+
+[com_23]
+x=124
+y=228
+type=graphic
+width=36
+height=36
+graphic=miscgraphics,3

@@ -1,0 +1,11 @@
+type=layer
+width=512
+height=334
+
+[com_0]
+x=472
+y=296
+type=graphic
+width=25
+height=25
+graphic=overlay_duel,0

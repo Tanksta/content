@@ -1,0 +1,81 @@
+{
+  "member": "headicons_pk.dat",
+  "palette": [
+    0,
+    3616033,
+    3606784,
+    16777215,
+    16724736,
+    13613465,
+    13575424
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/headicons_pk/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/headicons_pk/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/headicons_pk/002.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/headicons_pk/003.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/headicons_pk/004.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/media/sprites/headicons_pk/005.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[ahoy_tower_stairs_lv1]
+name=Staircase
+desc=I can climb these stairs.
+model=loc_4531_0
+recol1s=21646
+recol1d=16904
+recol2s=21526
+recol2d=16656
+width=2
+length=4
+op1=Climb-up
+forceapproach=south
+sharelight=yes
+mapscene=7
+
+[ahoy_tower_stairs_lv1_top]
+name=Staircase
+desc=They go down.
+model=loc_4530_0
+recol1s=21646
+recol1d=16904
+recol2s=21526
+recol2d=16656
+width=2
+length=2
+op1=Climb-down
+forceapproach=north
+sharelight=yes
+mapscene=7

@@ -1,0 +1,48 @@
+{
+  "member": "steelborder2.dat",
+  "palette": [
+    0,
+    4605508,
+    2894889,
+    2434338,
+    921100,
+    4802886,
+    2697510,
+    5131852,
+    1842202,
+    1644565,
+    1118478,
+    4671557,
+    4145212,
+    3158061,
+    5461073,
+    3421233,
+    1315858,
+    2105373
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/steelborder2/000.png",
+      "canvasWidth": 36,
+      "canvasHeight": 36,
+      "xOffset": 0,
+      "yOffset": 15,
+      "width": 36,
+      "height": 6,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/steelborder2/001.png",
+      "canvasWidth": 36,
+      "canvasHeight": 36,
+      "xOffset": 15,
+      "yOffset": 0,
+      "width": 6,
+      "height": 36,
+      "encoding": 1
+    }
+  ]
+}

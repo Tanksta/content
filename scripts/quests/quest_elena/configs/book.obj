@@ -1,0 +1,11 @@
+[turnip_book]
+members=yes
+cost=1
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+desc=Turnip growing for beginners.
+name=Book
+weight=18oz
+tradeable=no

@@ -1,0 +1,14 @@
+[ardougnescroll]
+members=yes
+cost=1
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+desc=Maybe I should read it...
+iop1=Read
+name=A magic scroll
+weight=20g
+tradeable=no

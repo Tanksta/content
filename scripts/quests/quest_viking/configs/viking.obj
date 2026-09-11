@@ -1,0 +1,1656 @@
+[viking_unstrung_lyre]
+desc=It's almost a musical instrument.
+model=obj_viking_unstrung_lyre
+manwear=obj_viking_unstrung_lyre_manwear,0
+womanwear=obj_viking_unstrung_lyre_manwear,0
+2dxof=-4
+2dzoom=1230
+2dyan=144
+2dxan=464
+members=yes
+name=Unstrung lyre
+wearpos=righthand
+weight=4lb
+tradeable=no
+
+[viking_strung_lyre]
+desc=It's a musical instrument I don't know how to play.
+model=obj_viking_unstrung_lyre
+manwear=obj_viking_unstrung_lyre_manwear,0
+womanwear=obj_viking_unstrung_lyre_manwear,0
+iop1=Play
+2dxof=-4
+2dzoom=1230
+2dyan=144
+2dxan=464
+members=yes
+name=Lyre
+wearpos=righthand
+weight=4lb
+tradeable=no
+
+[viking_enchanted_strung_lyre]
+desc=A musical instrument that I can magically play.
+model=obj_viking_unstrung_lyre
+iop1=Play
+2dxof=-4
+2dzoom=1230
+2dyan=144
+2dxan=464
+manwear=obj_viking_unstrung_lyre_manwear,0
+womanwear=obj_viking_unstrung_lyre_manwear,0
+members=yes
+name=Enchanted lyre
+wearpos=righthand
+weight=4lb
+tradeable=no
+
+[magic_strung_lyre]
+desc=This will teleport me to Rellekka when I play it.
+model=obj_viking_unstrung_lyre
+iop1=Play
+2dxof=-4
+2dzoom=1230
+2dyan=144
+2dxan=464
+cost=1000
+manwear=obj_viking_unstrung_lyre_manwear,0
+members=yes
+name=Enchanted lyre(1)
+wearpos=righthand
+weight=4lb
+category=category_148
+tradeable=no
+
+[viking_musical_tree_branch]
+desc=I can use this to make a lyre.
+model=obj_viking_musical_tree_branch
+2dxof=-8
+2dyof=-21
+2dzoom=940
+2dyan=152
+2dxan=268
+members=yes
+name=Branch
+weight=4lb
+tradeable=no
+
+[viking_golden_fleece]
+desc=I can spin this into golden wool...
+model=obj_wool
+2dyof=-7
+2dzoom=1070
+2dyan=160
+2dxan=332
+ambient=30
+contrast=30
+members=yes
+recol1s=10353
+recol1d=8666
+name=Golden fleece
+weight=12g
+tradeable=no
+
+[viking_golden_wool]
+desc=I can use this to make a lyre.
+model=obj_viking_golden_wool
+2dxof=6
+2dyof=-9
+2dzoom=720
+2dyan=448
+2dxan=152
+ambient=30
+contrast=30
+members=yes
+recol1s=10353
+recol1d=8666
+name=Golden wool
+weight=12g
+tradeable=no
+
+[vt_useless_rock]
+desc=The lowest maintenance pet you will ever have.
+model=obj_vt_useless_rock
+manwear=obj_vt_useless_rock_manwear,0
+womanwear=obj_vt_useless_rock_manwear,0
+2dxof=-4
+2dzoom=1010
+2dyan=1980
+2dxan=136
+members=yes
+iop1=Feed
+iop2=Stroke
+iop3=Talk-to
+recol1s=59294
+recol1d=41
+name=Pet rock
+weight=3lb
+tradeable=no
+
+[viking_draugen_talisman]
+desc=Talisman to bind the draugen
+model=obj_viking_draugen_talisman
+2dxof=4
+2dyof=4
+2dzoom=1170
+2dyan=1264
+2dxan=576
+cost=4
+iop1=Locate
+members=yes
+name=Hunters' talisman
+weight=15g
+tradeable=no
+
+[viking_draugen_talisman_uncharged]
+desc=Talisman to bind the draugen
+model=obj_viking_draugen_talisman
+2dxof=4
+2dyof=4
+2dzoom=1170
+2dyan=1264
+2dxan=576
+cost=4
+iop1=Locate
+members=yes
+name=Hunters' talisman
+weight=15g
+tradeable=no
+
+[viking_rare_flower]
+desc=Some flowers from a distant land.
+model=obj_flowers_waterfall_quest
+2dyof=-2
+2dzoom=840
+2dyan=816
+2dxan=612
+members=yes
+recol1s=17835
+recol1d=14627
+recol2s=48596
+recol2d=553
+recol3s=53167
+recol3d=553
+recol4s=37196
+recol4d=553
+recol5s=10043
+recol5d=796
+name=Exotic flower
+weight=1oz
+tradeable=no
+param=destroy_drop,^true
+
+[viking_song]
+desc=A hauntingly beautiful love ballad.
+model=obj_template_for_cert
+2dyof=2
+2dzoom=760
+2dyan=28
+2dxan=552
+members=yes
+recol1s=7516
+recol1d=7636
+name=Fremennik ballad
+weight=5g
+tradeable=no
+
+[viking_new_boots]
+desc=A pair of sturdy custom made boots.
+model=obj_ikov_bootsoflightness
+2dxof=1
+2dyof=-6
+2dzoom=770
+2dyan=160
+2dxan=152
+members=yes
+name=Sturdy boots
+weight=12oz
+tradeable=no
+
+[viking_map_to_hunting_grounds]
+desc=A map showing very active hunting spots.
+model=obj_newcomer_map
+2dxof=-1
+2dyof=56
+2dzoom=990
+2dyan=1716
+2dxan=264
+members=yes
+recol1s=5452
+recol1d=12705
+recol2s=5440
+recol2d=12820
+recol3s=5427
+recol3d=13194
+name=Hunters map
+weight=18oz
+tradeable=no
+
+[viking_bowstring]
+desc=A finely crafted string for a custom bow.
+model=obj_bow_string
+2dxof=3
+2dyof=2
+2dzoom=530
+2dyan=1872
+2dxan=148
+members=yes
+name=Custom bow string
+weight=400g
+tradeable=no
+
+[viking_unique_fish]
+desc=An extremely rare, non edible fish.
+model=obj_raw_tuna
+2dyof=3
+2dzoom=1340
+2dyan=1920
+2dxan=464
+members=yes
+recol1s=61
+recol1d=14395
+recol2s=103
+recol2d=14412
+recol3s=22402
+recol3d=14499
+name=Unusual fish
+weight=400g
+tradeable=no
+
+[viking_another_map]
+desc=Map showing the best fishing spots out at sea.
+model=obj_newcomer_map
+2dxof=-1
+2dyof=56
+2dzoom=990
+2dyan=1716
+2dxan=264
+members=yes
+recol1s=5452
+recol1d=9552
+recol2s=5440
+recol2d=9412
+recol3s=5427
+recol3d=9527
+name=Sea fishing map
+weight=18oz
+tradeable=no
+
+[viking_weather_forecast]
+desc=An estimate of expected local weather patterns.
+model=obj_template_for_cert
+2dyof=2
+2dzoom=760
+2dyan=28
+2dxan=552
+members=yes
+recol1s=7516
+recol1d=7500
+name=Weather forecast
+weight=5g
+tradeable=no
+
+[viking_champion_token]
+desc=Shows the wearer is worthy of the Champions table.
+model=obj_gold_ring
+2dxof=3
+2dyof=-35
+2dzoom=830
+2dyan=180
+2dzan=2024
+2dxan=268
+members=yes
+recol1s=9152
+recol1d=6837
+name=Champions token
+weight=4g
+tradeable=no
+
+[viking_legendary_cocktail]
+desc=Probably the greatest cocktail in the world.
+model=obj_premade_blurberry_special
+2dyof=1
+2dzoom=700
+2dyan=1988
+2dxan=104
+members=yes
+name=Legendary cocktail
+weight=450g
+tradeable=no
+
+[viking_promissary_note]
+desc=A signed statement promising a reduction on sales tax.
+model=obj_recommendedletter
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+recol1s=7070
+recol1d=5679
+recol2s=10351
+recol2d=8534
+recol3s=960
+recol3d=1847
+name=Fiscal statement
+weight=5g
+tradeable=no
+
+[viking_promissary_note2]
+desc=A legally binding contract promising not to enter the longhall.
+model=obj_recommendedletter
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+recol1s=7070
+recol1d=5679
+recol2s=10351
+recol2d=8534
+recol3s=960
+recol3d=1847
+name=Promissory note
+weight=5g
+tradeable=no
+
+[viking_promissary_note3]
+desc=This employment contract is for a warrior to act as a bodyguard.
+model=obj_recommendedletter
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+recol1s=7070
+recol1d=5679
+recol2s=10351
+recol2d=8534
+recol3s=960
+recol3d=1847
+name=Warriors' contract
+weight=5g
+tradeable=no
+
+[viking_beerkeg]
+desc=A lot of beer in a barrel.
+model=obj_viking_beerkeg
+manwear=obj_viking_beerkeg_manwear,0
+womanwear=obj_viking_beerkeg_manwear,0
+2dyof=-3
+2dzoom=1370
+2dyan=4
+2dxan=128
+members=yes
+name=Keg of beer
+weight=20kg
+tradeable=no
+respawnrate=2
+
+[viking_low_alcahol_beerkeg]
+desc=Suspiciously close to beer, but without the side effects.
+model=obj_viking_beerkeg
+2dyof=-3
+2dzoom=1370
+2dyan=4
+2dxan=128
+members=yes
+name=Low alcohol keg
+weight=20kg
+tradeable=no
+
+[viking_firecracker]
+desc=It's some kind of weird little parcel thing.
+model=obj_viking_firecracker
+2dxof=-2
+2dyof=-2
+2dzoom=920
+2dyan=1948
+2dxan=112
+members=yes
+name=Strange object
+weight=1g
+tradeable=no
+
+[viking_firecracker_lit]
+desc=It's some kind of weird little parcel thing. On fire.
+model=obj_viking_firecracker
+2dxof=-2
+2dyof=-2
+2dzoom=920
+2dyan=1948
+2dxan=112
+members=yes
+name=Lit strange object
+weight=1g
+tradeable=no
+
+[viking_dummy_coin]
+desc=A red coloured disk, apparently made of wood.
+model=obj_coins
+2dxof=15
+2dyof=16
+2dzoom=230
+2dxan=356
+members=yes
+recol1s=8128
+recol1d=2873
+recol2s=8128
+recol2d=2993
+name=Red disk
+weight=1g
+tradeable=no
+
+[viking_dummy_coin2]
+desc=A red coloured disk, apparently made of wood.
+model=obj_coins
+2dxof=15
+2dyof=16
+2dzoom=230
+2dxan=356
+members=yes
+recol1s=8128
+recol1d=0
+recol2s=8128
+recol2d=0
+name=Red disk
+weight=1g
+tradeable=no
+
+[viking_dummy_lid]
+model=minigame_start_icon_0
+members=yes
+2dxof=1
+name=Viking lid
+tradeable=no
+
+[viking_pointless_magnet]
+desc=A very attractive magnet.
+cost=3
+model=obj_magnet
+2dxof=3
+2dyof=7
+2dzoom=1130
+2dyan=132
+2dxan=440
+members=yes
+name=Magnet
+weight=20g
+tradeable=no
+
+[viking_pointless_thread]
+desc=Some blue thread.
+members=yes
+model=obj_bow_string
+2dxof=3
+2dyof=2
+2dzoom=530
+2dyan=1872
+2dxan=148
+recol1s=7479
+recol1d=43968
+name=Blue thread
+weight=2g
+tradeable=no
+
+[viking_pointless_pick]
+desc=A small pick for cracking small objects.
+model=obj_rockpick
+2dxof=-6
+2dyof=-10
+2dzoom=700
+2dyan=1076
+2dxan=476
+members=yes
+name=Small pick
+weight=2oz
+tradeable=no
+
+[viking_pointless_shiptoy]
+desc=Might be fun to play with in the bath.
+cost=2
+members=yes
+model=obj_viking_pointless_shiptoy
+2dxof=1
+2dyof=-3
+2dzoom=1160
+2dyan=244
+2dxan=68
+ambient=20
+contrast=20
+name=Toy ship
+weight=400g
+tradeable=no
+
+[viking_bucket_5]
+desc=This bucket is completely full. It has a 5 painted on its side.
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=Full bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_4]
+desc=This bucket is eighty percent full. It has a 5 painted on its side.
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=4/5ths full bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_3]
+desc=This bucket is sixty percent full. It has a 5 painted on its side.
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=3/5ths full bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_2]
+desc=This bucket is forty percent full. It has a 5 painted on its side.
+model=prison_bucket_8
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=2/5ths full bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_1]
+desc=This bucket is twenty percent full. It has a 5 painted on its side.
+model=prison_bucket_8
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=1/5ths full bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_empty]
+desc=This bucket is completely empty. It has a 5 painted on its side.
+model=prison_bucket_8
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=Empty bucket
+weight=1g
+tradeable=no
+
+[viking_bucket_frozen]
+desc=This bucket of water is frozen solid.
+model=obj_viking_bucket_frozen
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+members=yes
+name=Frozen bucket
+weight=1g
+tradeable=no
+
+[viking_jug_3]
+desc=This jug is completely full. It has a 3 painted on its side.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+members=yes
+recol1s=127
+recol1d=41280
+name=Full jug
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_jug_2]
+desc=This jug is two thirds full. It has a 3 painted on its side.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+members=yes
+recol1s=127
+recol1d=61
+name=2/3rds full jug
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_jug_1]
+desc=This jug is one thirds full. It has a 3 painted on its side.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+members=yes
+recol1s=127
+recol1d=61
+name=1/3rds full jug
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_jug_empty]
+desc=This jug is completely empty. It has a 3 painted on its side.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+members=yes
+recol1s=127
+recol1d=61
+name=Empty jug
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_jug_frozen]
+desc=This jug of water is frozen solid.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+members=yes
+recol1s=127
+recol1d=61
+recol2s=61
+recol2d=43100
+name=Frozen jug
+weight=1lb
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase]
+desc=An unusually shaped vase. You can see something glinting inside.
+model=obj_viking_airtight_vase
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Shake
+name=Vase
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase_water]
+desc=An unusually shaped vase full of water. You can see something glinting inside.
+model=obj_viking_airtight_vase
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Shake
+name=Vase of water
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase_frozen]
+desc=An unusually shaped vase full of ice. You can see something glinting inside.
+model=obj_viking_airtight_vase
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Shake
+name=Frozen vase
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_vase_lid]
+desc=This looks like a lid to some kind of container...
+model=obj_viking_vase_lid
+2dxof=-4
+2dyof=28
+2dzoom=1260
+2dxan=152
+members=yes
+name=Vase lid
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase_with_lid]
+desc=The lid is screwed on tightly.
+model=obj_viking_airtight_vase_with_lid
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Remove-lid
+name=Sealed vase
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase_with_lid_frozen]
+desc=The lid is screwed on tightly. It is very cold.
+model=obj_viking_airtight_vase_with_lid
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Remove-lid
+name=Sealed vase
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_airtight_vase_with_lid_water]
+desc=The lid is screwed on tightly. It is full of water.
+model=obj_viking_airtight_vase_with_lid
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+iop1=Remove-lid
+name=Sealed vase
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_key_in_ice]
+desc=A key encased in ice.
+model=obj_viking_key_in_ice
+2dxof=-2
+2dyof=-13
+2dzoom=1660
+2dyan=44
+2dxan=160
+members=yes
+name=Frozen key
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_red_herring]
+desc=The colouring on it seems to be some kind of sticky goop...
+model=obj_raw_herring
+2dxof=3
+2dyof=8
+2dzoom=900
+2dyan=1904
+2dxan=436
+ambient=30
+contrast=30
+members=yes
+recol1s=61
+recol1d=65067
+recol2s=103
+recol2d=716
+name=Red herring
+weight=500g
+tradeable=no
+param=destroy_death,^true
+
+[viking_red_wooden_coin]
+desc=A red coloured disk, apparently made of wood.
+model=obj_coins
+2dxof=3
+2dzoom=710
+2dyan=2012
+2dxan=184
+members=yes
+recol1s=8128
+recol1d=2873
+recol2s=8128
+recol2d=2993
+name=Red disk
+weight=2g
+tradeable=no
+param=destroy_death,^true
+
+[viking_uncoloured_wooden_coin]
+desc=A simple looking disk made of wood.
+model=obj_coins
+2dxof=3
+2dzoom=710
+2dyan=2012
+2dxan=184
+members=yes
+recol1s=8128
+recol1d=5440
+recol2s=8128
+recol2d=5431
+name=Wooden disk
+weight=2g
+tradeable=no
+param=destroy_death,^true
+
+[viking_key]
+desc=The key to leave the Seer's house.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+recol1s=8128
+recol1d=5553
+name=Seers' key
+weight=10g
+tradeable=no
+param=destroy_death,^true
+
+[viking_red_splat]
+desc=Yup, it's sticky, it's red and it's goop.
+model=obj_viking_red_splat
+2dxof=-1
+2dzoom=1090
+2dyan=2020
+2dxan=304
+name=Sticky red goop
+weight=1g
+tradeable=no
+param=destroy_death,^true
+
+[viking_helmet]
+desc=A sturdy helm worn only by Fremennik clan members.
+model=obj_viking_helmet
+2dxof=4
+2dyof=-1
+2dzoom=540
+2dyan=188
+2dxan=88
+iop2=Wear
+manwear=obj_viking_helmet_manwear,0
+manwear2=obj_viking_helmet_manwear2
+manwear3=obj_viking_helmet_manwear3
+womanwear=obj_viking_helmet_womanwear,0
+womanwear3=obj_viking_helmet_manwear2
+womanwear2=obj_viking_helmet_womanwear2
+manhead=obj_pickpocket_guide_fremennik_citizen
+manhead2=obj_viking_helmet_manhead2
+womanhead=obj_viking_helmet_womanhead
+womanhead2=obj_viking_helmet_manhead2
+members=yes
+cost=5000
+name=Fremennik helm
+wearpos=hat
+wearpos2=head
+category=armour_helmet
+tradeable=no
+weight=6lb
+param=magicattack,-6
+param=rangeattack,-2
+param=stabdefence,19
+param=slashdefence,21
+param=crushdefence,16
+param=rangedefence,19
+
+[viking_helmet_range]
+desc=This helmet is worn by archers.
+cost=60000
+model=obj_viking_helmet_range
+2dxof=-2
+2dyof=-4
+2dzoom=1010
+2dxan=16
+iop2=Wear
+manwear=obj_viking_helmet_manwear,0
+manwear2=obj_viking_helmet_range_manwear2
+manwear3=obj_viking_helmet_manwear3
+womanwear=obj_viking_helmet_womanwear,0
+womanwear2=obj_viking_helmet_range_womanwear2
+womanwear3=obj_viking_helmet_womanwear2
+manhead=obj_pickpocket_guide_fremennik_citizen
+manhead2=obj_viking_helmet_range_manhead2
+womanhead=obj_viking_helmet_womanhead
+womanhead2=obj_viking_helmet_range_manhead2
+members=yes
+name=Archer helm
+wearpos=hat
+wearpos2=head
+category=armour_helmet
+weight=6lb
+param=stabattack,-5
+param=slashattack,-5
+param=crushattack,-5
+param=magicattack,-5
+param=rangeattack,6
+param=stabdefence,6
+param=slashdefence,8
+param=crushdefence,10
+param=magicdefence,6
+param=rangedefence,6
+
+[viking_helmet_crush]
+desc=This helmet is worn by berserkers.
+cost=60000
+model=obj_viking_helmet_crush
+2dxof=2
+2dzoom=890
+2dyan=120
+2dxan=24
+iop2=Wear
+manwear=obj_viking_helmet_manwear,0
+manwear2=obj_viking_helmet_crush_manwear2
+manwear3=obj_viking_helmet_manwear3
+womanwear=obj_viking_helmet_womanwear,0
+womanwear2=obj_viking_helmet_crush_womanwear2
+womanwear3=obj_viking_helmet_womanwear2
+manhead=obj_pickpocket_guide_fremennik_citizen
+manhead2=obj_viking_helmet_crush_manhead2
+womanhead=obj_viking_helmet_womanhead
+womanhead2=obj_viking_helmet_crush_manhead2
+members=yes
+name=Berserker helm
+wearpos=hat
+wearpos2=head
+category=armour_helmet
+weight=6lb
+param=magicattack,-5
+param=rangeattack,-5
+param=stabdefence,31
+param=slashdefence,29
+param=crushdefence,33
+param=rangedefence,30
+param=strengthbonus,3
+
+[viking_helmet_slash]
+desc=This helmet is worn by warriors.
+cost=60000
+model=obj_viking_helmet_slash
+2dxof=2
+2dzoom=1100
+2dyan=204
+2dxan=12
+iop2=Wear
+manwear=obj_viking_helmet_manwear,0
+manwear2=obj_viking_helmet_slash_manwear2
+manwear3=obj_viking_helmet_manwear3
+womanwear=obj_viking_helmet_womanwear,0
+womanwear2=obj_viking_helmet_slash_womanwear2
+womanwear3=obj_viking_helmet_womanwear2
+manhead=obj_pickpocket_guide_fremennik_citizen
+manhead2=obj_viking_helmet_slash_manhead2
+womanhead=obj_viking_helmet_womanhead
+womanhead2=obj_viking_helmet_slash_manhead2
+members=yes
+name=Warrior helm
+wearpos=hat
+wearpos2=head
+category=armour_helmet
+weight=6lb
+param=slashattack,5
+param=magicattack,-5
+param=rangeattack,-5
+param=stabdefence,31
+param=slashdefence,33
+param=crushdefence,29
+param=rangedefence,30
+
+[viking_helmet_magic]
+desc=This helmet is worn by farseers.
+cost=60000
+model=obj_viking_helmet_magic
+2dxof=2
+2dzoom=820
+2dyan=104
+2dxan=32
+iop2=Wear
+manwear=obj_viking_helmet_manwear,0
+manwear2=obj_viking_helmet_magic_manwear2
+manwear3=obj_viking_helmet_manwear3
+womanwear=obj_viking_helmet_womanwear,0
+womanwear2=obj_viking_helmet_magic_womanwear2
+womanwear3=obj_viking_helmet_womanwear2
+manhead=obj_pickpocket_guide_fremennik_citizen
+manhead2=obj_viking_helmet_magic_manhead2
+womanhead=obj_viking_helmet_womanhead
+womanhead2=obj_viking_helmet_magic_manhead2
+members=yes
+name=Farseer helm
+wearpos=hat
+wearpos2=head
+category=armour_helmet
+weight=6lb
+param=stabattack,-5
+param=slashattack,-5
+param=crushattack,-5
+param=magicattack,6
+param=rangeattack,-5
+param=stabdefence,8
+param=slashdefence,10
+param=crushdefence,12
+param=magicdefence,6
+
+[viking_sword]
+desc=A sword used only by Fremennik warriors.
+model=obj_viking_sword
+2dxof=1
+2dyof=23
+2dzoom=1710
+2dyan=1940
+2dxan=332
+iop2=Wield
+manwear=obj_viking_sword_manwear,0
+womanwear=obj_viking_sword_manwear,6
+members=yes
+cost=5000
+name=Fremennik blade
+tradeable=no
+wearpos=righthand
+category=weapon_slash
+weight=4lb
+param=stabattack,-6
+param=slashattack,29
+param=crushattack,-2
+param=slashdefence,1
+param=strengthbonus,28
+param=slashattack_anim,human_sword_slash
+param=stabattack_anim,human_sword_stab
+param=defend_anim,human_sword_def
+param=slash_sound,hacksword_slash
+param=stab_sound,hacksword_stab
+
+[viking_shield]
+desc=A shield worn by Fremennik warriors.
+model=obj_viking_shield
+2dxof=3
+2dyof=9
+2dzoom=2080
+2dyan=252
+2dxan=432
+iop2=Wield
+manwear=obj_viking_shield_manwear,0
+womanwear=obj_viking_shield_manwear,6
+members=yes
+cost=5000
+name=Fremennik shield
+tradeable=no
+wearpos=lefthand
+category=armour_shield
+weight=5lb
+param=magicattack,-8
+param=rangeattack,-2
+param=stabdefence,27
+param=slashdefence,31
+param=crushdefence,29
+param=magicdefence,-1
+param=rangedefence,29
+param=defend_anim,human_shield_defence
+param=defend_sound,wood_armour3_1
+
+[viking_cloak_green]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=35290
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_darkbrown]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=8846
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_lightbrown]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=43189
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_brown]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=22416
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_top_darkbrown]
+desc=The latest in Fremennik fashion.
+cost=250
+model=obj_viking_top_darkbrown
+manwear=obj_viking_top_darkbrown_manwear,0
+manwear2=obj_priest_gown_manwear
+manwear3=obj_viking_top_darkbrown_manwear3
+womanwear=obj_priest_gown_womanwear2,0
+womanwear2=obj_viking_top_darkbrown_womanwear2
+womanwear3=obj_viking_top_darkbrown_womanwear3
+iop2=Wear
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=5537
+recol2s=8084
+recol2d=5904
+recol3s=8078
+recol3d=5656
+name=Fremennik shirt
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[viking_top_green]
+desc=The latest in Fremennik fashion.
+cost=250
+model=obj_viking_top_darkbrown
+manwear=obj_viking_top_darkbrown_manwear,0
+manwear2=obj_priest_gown_manwear
+manwear3=obj_viking_top_darkbrown_manwear3
+womanwear=obj_priest_gown_womanwear2,0
+womanwear2=obj_viking_top_darkbrown_womanwear2
+womanwear3=obj_viking_top_darkbrown_womanwear3
+iop2=Wear
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=10405
+recol2s=8078
+recol2d=10529
+recol3s=8084
+recol3d=4525
+name=Fremennik shirt
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[viking_top_beige]
+desc=The latest in Fremennik fashion.
+cost=250
+model=obj_viking_top_darkbrown
+manwear=obj_viking_top_darkbrown_manwear,0
+manwear2=obj_priest_gown_manwear
+manwear3=obj_viking_top_darkbrown_manwear3
+womanwear=obj_priest_gown_womanwear2,0
+womanwear2=obj_viking_top_darkbrown_womanwear2
+womanwear3=obj_viking_top_darkbrown_womanwear3
+iop2=Wear
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=8501
+recol2s=8078
+recol2d=7485
+recol3s=8084
+recol3d=7601
+name=Fremennik shirt
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[viking_top_red]
+cost=250
+desc=The latest in Fremennik fashion.
+model=obj_viking_top_darkbrown
+manwear=obj_viking_top_darkbrown_manwear,0
+manwear2=obj_priest_gown_manwear
+manwear3=obj_viking_top_darkbrown_manwear3
+womanwear=obj_priest_gown_womanwear2,0
+womanwear2=obj_viking_top_darkbrown_womanwear2
+womanwear3=obj_viking_top_darkbrown_womanwear3
+iop2=Wear
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=914
+recol2s=8078
+recol2d=419
+recol3s=8084
+recol3d=286
+name=Fremennik shirt
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[viking_top_blue]
+cost=250
+desc=The latest in Fremennik fashion.
+model=obj_viking_top_darkbrown
+manwear=obj_viking_top_darkbrown_manwear,0
+manwear2=obj_priest_gown_manwear
+manwear3=obj_viking_top_darkbrown_manwear3
+womanwear=obj_priest_gown_womanwear2,0
+womanwear2=obj_viking_top_darkbrown_womanwear2
+womanwear3=obj_viking_top_darkbrown_womanwear3
+iop2=Wear
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=43538
+recol2s=8078
+recol2d=43162
+recol3s=8084
+recol3d=43294
+name=Fremennik shirt
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[viking_cloak_red]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=916
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_grey]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=41
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_tangerine]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=8125
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_ocean]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=33678
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_purple]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=55194
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_pink]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=62928
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[viking_cloak_black]
+cost=250
+desc=The latest fashion in Rellekka.
+model=obj_viking_cloak_green
+2dxof=3
+2dyof=6
+2dzoom=2140
+2dyan=948
+2dxan=400
+iop2=Wear
+manwear=obj_viking_cloak_green_manwear,0
+womanwear=obj_viking_cloak_green_womanwear,0
+members=yes
+recol1s=7952
+recol1d=0
+name=Fremennik cloak
+weight=1lb
+wearpos=back
+param=slashdefence,1
+param=crushdefence,1
+param=rangedefence,2
+
+[vikingboots]
+desc=Very stylish!
+model=obj_ikov_bootsoflightness
+manwear=obj_ikov_bootsoflightness_manwear,0
+womanwear=obj_ikov_bootsoflightness_womanwear,0
+iop2=Wear
+cost=500
+2dxof=1
+2dyof=-6
+2dzoom=770
+2dyan=160
+2dxan=152
+members=yes
+recol1s=4626
+recol1d=22416
+name=Fremennik boots
+weight=12oz
+wearpos=feet
+param=slashdefence,1
+param=crushdefence,1
+
+[vikingrobetop]
+desc=The latest fashion in Rellekka.
+model=obj_priest_gown
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+iop2=Wear
+cost=500
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+recol1s=8741
+recol1d=22416
+name=Fremennik robe
+weight=2lb
+wearpos=torso
+wearpos2=arms
+param=slashdefence,2
+param=crushdefence,2
+
+[vikingrobebottom]
+desc=The latest fashion in Rellekka.
+model=obj_priest_robe
+manwear=obj_priest_robe_manwear,0
+womanwear=obj_priest_robe_womanwear,0
+iop2=Wear
+cost=500
+2dyof=1
+2dzoom=1940
+2dxan=572
+members=yes
+recol1s=25238
+recol1d=22416
+name=Fremennik skirt
+weight=2lb
+wearpos=legs
+param=slashdefence,2
+param=crushdefence,2
+
+[vikinghat]
+desc=A silly pointed hat.
+model=obj_bluewizhat
+manwear=obj_bluewizhat_manwear,0
+womanwear=obj_bluewizhat_womanwear,0
+manhead=obj_bluewizhat_manhead
+womanhead=obj_bluewizhat_womanhead
+cost=500
+iop2=Wear
+2dxof=5
+2dyof=-10
+2dzoom=800
+2dyan=156
+2dxan=152
+members=yes
+recol1s=38814
+recol1d=22416
+name=Fremennik hat
+weight=1lb
+wearpos=hat
+param=magicattack,3
+param=magicdefence,3
+
+[vikinggloves]
+desc=These will keep my hands warm!
+cost=500
+model=obj_gauntlets_of_cooking
+iop2=Wear
+manwear=obj_gauntlets_of_cooking_manwear,0
+womanwear=obj_gauntlets_of_cooking_womanwear,0
+2dxof=8
+2dyof=-8
+2dzoom=930
+2dyan=828
+2dxan=420
+members=yes
+recol1s=10004
+recol1d=22416
+recol2s=5532
+recol2d=22416
+name=Gloves
+weight=1lb
+wearpos=hands
+category=armour_hands
+param=slashdefence,1
+param=crushdefence,2
+
+[keg_of_beer]
+iop1=Drink
+desc=A lot of beer in a barrel.
+model=obj_viking_beerkeg
+manwear=obj_viking_beerkeg_manwear,0
+womanwear=obj_viking_beerkeg_manwear,0
+2dyof=-3
+2dzoom=1370
+2dyan=4
+2dxan=128
+cost=250
+members=yes
+name=Keg of beer
+weight=20kg
+
+[viking_tankard_full]
+iop1=Drink
+desc=Frothy and alcoholic.
+model=obj_viking_tankard_full
+manwear=obj_viking_tankard_full_manwear,0
+womanwear=obj_viking_tankard_full_manwear,0
+2dxof=-4
+2dyof=1
+2dzoom=670
+2dyan=76
+2dxan=132
+cost=20
+members=yes
+name=Beer
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,viking_tankard_empty
+
+[viking_tankard_empty]
+desc=A big cup for a big thirst.
+model=obj_viking_tankard_empty
+2dxof=-4
+2dyof=1
+2dzoom=670
+2dyan=76
+2dxan=132
+cost=5
+members=yes
+name=Tankard
+weight=50g

@@ -1,0 +1,23 @@
+[kilron]
+vislevel=hide
+desc=He looks shifty.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=25238
+recol1d=3980
+recol2s=8472
+recol2d=3980
+name=Kilron
+model1=npc_sigbert_the_adventurer
+model2=obj_ikov_bootsoflightness_manwear
+model3=idk_man_jaw_long
+model4=obj_leather_armour_manwear
+model5=obj_viking_top_darkbrown_manwear
+model6=obj_gauntlets_of_cooking_manwear
+model7=idk_man_legs_turn_ups
+head1=chat_male_head_model_48
+head2=idk_man_jaw_long_head
+defaultmode=none
+wanderrange=0
+moverestrict=nomove

@@ -1,0 +1,15 @@
+[monasteryladder]
+active=yes
+op1=Climb-up
+mapscene=7
+model=ladder
+name=Ladder
+desc=I can climb this.
+
+[monks_altar]
+width=2
+op1=Pray-at
+model=altar
+name=Altar
+desc=A shrine for the faithful to worship at.
+category=prayer_altar

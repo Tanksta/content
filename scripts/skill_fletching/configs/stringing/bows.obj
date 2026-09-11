@@ -1,0 +1,191 @@
+[unstrung_longbow]
+desc=I need to find a string for this.
+cost=60
+members=yes
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=6049
+name=Longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_shortbow]
+desc=I need to find a string for this.
+cost=23
+members=yes
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=6049
+name=Shortbow (u)
+weight=35oz
+category=unstrung_bow
+
+[unstrung_oak_shortbow]
+cost=50
+members=yes
+desc=An unstrung oak shortbow, I need a bowstring for this.
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=8111
+name=Oak shortbow (u)
+weight=35oz
+category=unstrung_bow
+
+[unstrung_oak_longbow]
+cost=80
+members=yes
+desc=An unstrung oak longbow, I need a bowstring for this.
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=8111
+name=Oak longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_willow_longbow]
+cost=160
+members=yes
+desc=An unstrung willow longbow, I need a bowstring for this.
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=9903
+name=Willow longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_willow_shortbow]
+cost=100
+members=yes
+desc=An unstrung willow shortbow, I need a bowstring for this.
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=9903
+name=Willow shortbow (u)
+weight=35oz
+category=unstrung_bow
+
+[unstrung_maple_longbow]
+cost=320
+members=yes
+desc=An unstrung maple longbow, I need a bowstring for this.
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=2250
+name=Maple longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_maple_shortbow]
+cost=200
+members=yes
+desc=An unstrung maple shortbow, I need a bowstring for this.
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=2250
+name=Maple shortbow (u)
+weight=35oz
+category=unstrung_bow
+
+[unstrung_yew_longbow]
+cost=640
+members=yes
+desc=An unstrung yew longbow, I need a bowstring for this.
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=9135
+name=Yew longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_yew_shortbow]
+cost=400
+members=yes
+desc=An unstrung yew shortbow, I need a bowstring for this.
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=9135
+name=Yew shortbow (u)
+weight=35oz
+category=unstrung_bow
+
+[unstrung_magic_longbow]
+cost=1280
+members=yes
+desc=An unstrung magic longbow, I need a bowstring for this.
+model=obj_unstrung_longbow
+2dxof=2
+2dyof=15
+2dzoom=1820
+2dyan=1004
+2dxan=460
+recol1s=6674
+recol1d=31516
+name=Magic longbow (u)
+weight=47oz
+category=unstrung_bow
+
+[unstrung_magic_shortbow]
+cost=800
+members=yes
+desc=An unstrung magic shortbow, I need a bowstring for this.
+model=obj_unstrung_shortbow
+2dxof=7
+2dyof=2
+2dzoom=1200
+2dyan=124
+2dxan=508
+recol1s=6674
+recol1d=31516
+name=Magic shortbow (u)
+weight=35oz
+category=unstrung_bow

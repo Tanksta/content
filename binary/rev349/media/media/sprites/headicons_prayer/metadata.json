@@ -1,0 +1,117 @@
+{
+  "member": "headicons_prayer.dat",
+  "palette": [
+    0,
+    12560752,
+    722699,
+    9734509,
+    16444678,
+    1539907,
+    1263226,
+    9579266,
+    15339264,
+    1483704
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/headicons_prayer/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/headicons_prayer/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/headicons_prayer/002.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/headicons_prayer/003.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/headicons_prayer/004.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/media/sprites/headicons_prayer/005.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 6,
+      "path": "decoded/media/media/sprites/headicons_prayer/006.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 7,
+      "path": "decoded/media/media/sprites/headicons_prayer/007.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 8,
+      "path": "decoded/media/media/sprites/headicons_prayer/008.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    }
+  ]
+}

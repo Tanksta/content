@@ -1,0 +1,40 @@
+{
+  "member": "mapmarker.dat",
+  "palette": [
+    0,
+    16711680,
+    6107921,
+    0,
+    16711090,
+    16644731,
+    12998148,
+    16579151,
+    16513332,
+    16447258
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/mapmarker/000.png",
+      "canvasWidth": 15,
+      "canvasHeight": 30,
+      "xOffset": 1,
+      "yOffset": 0,
+      "width": 8,
+      "height": 15,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/mapmarker/001.png",
+      "canvasWidth": 15,
+      "canvasHeight": 30,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 15,
+      "height": 15,
+      "encoding": 0
+    }
+  ]
+}

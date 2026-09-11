@@ -1,0 +1,104 @@
+[rantz]
+vislevel=hide
+desc=A large dim looking humanoid.
+size=2
+walkanim=ogre_walk
+readyanim=ogre_ready
+op1=Talk-to
+name=Rantz
+model1=npc_ogre
+model2=npc_rantz
+head1=npc_ogre_chieftan_head
+wanderrange=2
+param=damagetype,^crush_style
+
+[fycie]
+vislevel=hide
+desc=This must be Rantz's daughter.
+walkanim=ogre_walk
+readyanim=ogre_ready
+op1=Talk
+resizeh=128
+resizev=90
+recol1s=8722
+recol1d=5547
+recol2s=5223
+recol2d=11171
+name=Fycie
+model1=npc_ogre
+model2=npc_fycie
+head1=npc_fycie_head
+wanderrange=3
+param=damagetype,^crush_style
+
+[bugs]
+vislevel=hide
+desc=This must be Rantz's son.
+walkanim=ogre_walk
+readyanim=ogre_ready
+op1=Talk
+resizeh=128
+resizev=90
+recol1s=8722
+recol1d=5547
+recol2s=5223
+recol2d=6034
+name=Bugs
+model1=npc_ogre
+model2=npc_fycie
+head1=npc_fycie_head
+wanderrange=3
+param=damagetype,^crush_style
+
+[toad]
+vislevel=hide
+desc=A green skinned croaker, loves the swamp.
+readyanim=chompy_toad_ready
+walkanim=chompy_toad_walk
+name=Swamp toad
+model1=obj_bloated_toad
+timer=30
+
+[bloated_toad]
+vislevel=hide
+desc=A green skinned croaker.
+readyanim=bloated_toad_stay
+walkanim=bloated_toad_stay
+name=Bloated Toad
+model1=obj_bloated_toad
+wanderrange=0
+moverestrict=nomove
+
+[obj_chompy_bird_obj]
+desc=A large boisterous bird, a delicacy for ogres.
+walkanim=pog_terror_bird_walk
+readyanim=pog_terror_bird_ready
+resizeh=180
+resizev=180
+op5=Attack
+alwaysontop=yes
+vislevel=6
+name=Chompy bird
+model1=obj_chompy_bird_obj
+wanderrange=3
+hitpoints=10
+attack=5
+strength=5
+defence=3
+param=attack_anim,chompy_attack
+huntrange=7
+timer=3
+
+[chompybird_dead]
+vislevel=hide
+desc=A once boisterous bird, closer to being an ogre delicacy.
+walkanim=pog_terror_bird_attack
+readyanim=pog_terror_bird_attack
+op4=Pluck
+resizeh=180
+resizev=180
+name=Chompy bird
+model1=obj_chompy_bird_obj
+defaultmode=none
+wanderrange=0
+moverestrict=nomove

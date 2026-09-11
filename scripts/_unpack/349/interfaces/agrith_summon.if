@@ -1,0 +1,15 @@
+type=layer
+width=512
+height=334
+
+[component_15354]
+x=253
+y=153
+type=model
+width=32
+height=32
+model=com_i614
+anim=ntk_human_tele
+zoom=180
+xan=0
+yan=0

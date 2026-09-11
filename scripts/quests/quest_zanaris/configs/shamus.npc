@@ -1,0 +1,17 @@
+[zanarisleprechaun]
+vislevel=hide
+walkanim=midget_walk
+readyanim=midget_ready
+desc=A funny little man who lives in a tree.
+op1=Talk-to
+name=Shamus
+model1=npc_leprechaun
+model2=npc_leprechauni2
+model3=npc_leprechauni3
+head1=npc_zanarisleprechaun_head
+wanderrange=15
+hitpoints=16
+attack=10
+strength=10
+defence=7
+param=damagetype,^crush_style

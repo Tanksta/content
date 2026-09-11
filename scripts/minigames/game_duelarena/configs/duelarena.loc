@@ -1,0 +1,169 @@
+[flag_entrance_angled]
+width=2
+ambient=60
+contrast=60
+op1=Forfeit
+active=yes
+anim=flagblowing
+blockrange=no
+recol1s=6932
+recol1d=6689
+model=flag_entrance_angled
+name=Entrance
+desc=Flags marking the entrance to the arena.
+
+[flag_entrance2_angled]
+width=2
+ambient=60
+contrast=60
+op1=Forfeit
+active=yes
+anim=flagblowing
+blockrange=no
+recol1s=6932
+recol1d=6689
+model=flag_entrance2_angled
+name=Entrance
+desc=Flags marking the entrance to the arena.
+
+[flag_entrancel_angled]
+width=2
+ambient=60
+contrast=60
+mirror=yes
+op1=Forfeit
+active=yes
+anim=flagblowing
+blockrange=no
+recol1s=6932
+recol1d=6689
+model=flag_entrance_angled
+name=Entrance
+desc=Flags marking the entrance to the arena.
+
+[flag_entrance2l_angled]
+width=2
+ambient=60
+contrast=60
+mirror=yes
+op1=Forfeit
+active=yes
+anim=flagblowing
+blockrange=no
+recol1s=6932
+recol1d=6689
+model=flag_entrance2_angled
+name=Entrance
+desc=Flags marking the entrance to the arena.
+
+[loc_3192]
+width=2
+length=3
+ambient=50
+contrast=50
+op1=View
+active=yes
+model=invisible_type8_blocking_size9
+name=Scoreboard
+desc=You can see the last 50 fights on here.
+
+[loc_3193]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Closed chest
+desc=Used to store players' items whilst they duel.
+
+[duel_chestopen]
+op2=Bank
+op3=Shut
+forceapproach=14
+model=arena_guard_chest_open
+name=Open chest
+desc=Use for quick access to your bank.
+
+[rotten_tomato_crate]
+op1=Buy
+model=rotten_tomato_crate
+name=Crate
+desc=Smells pretty bad!
+
+[arena_trapdoor]
+op1=Forfeit
+forcedecor=yes
+sharelight=yes
+model=arena_trapdoor
+name=Trapdoor
+desc=Access to the duel arena.
+
+[duel_arena_top]
+forcedecor=yes
+ambient=30
+contrast=30
+op5=Lean against
+blockrange=no
+model=duel_arena_top
+name=Wall
+desc=Lean against the wall to get a better view!
+
+[duel_arena_topwithflag]
+forcedecor=yes
+ambient=30
+contrast=30
+op5=Lean against
+blockrange=no
+recol1s=6932
+recol1d=6689
+model=duel_arena_topwithflag
+name=Wall
+desc=Lean against the wall to get a better view!
+
+[duel_arena_top_aged]
+forcedecor=yes
+ambient=30
+contrast=30
+sharelight=yes
+op5=Lean against
+blockrange=no
+model=duel_arena_top_aged
+name=Wall
+desc=Lean against the wall to get a better view!
+
+[duel_arena_top_aged_2]
+forcedecor=yes
+ambient=30
+contrast=30
+sharelight=yes
+active=no
+model=duel_arena_top_aged2
+
+[duel_arena_top_aged_2_mirror]
+forcedecor=yes
+ambient=30
+contrast=30
+mirror=yes
+active=no
+blockrange=no
+model=duel_arena_top_aged2
+
+[duel_arena_top_aged_3]
+forcedecor=yes
+ambient=30
+contrast=30
+sharelight=yes
+op5=Lean against
+blockrange=no
+model=duel_arena_top_aged3
+name=Wall
+desc=Lean against the wall to get a better view!
+
+[duel_arena_top_aged_4]
+forcedecor=yes
+ambient=30
+contrast=30
+sharelight=yes
+op5=Lean against
+blockrange=no
+model=duel_arena_top_aged4
+name=Wall
+desc=Lean against the wall to get a better view!

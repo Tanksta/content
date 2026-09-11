@@ -1,0 +1,24 @@
+[mournertwa]
+vislevel=hide
+desc=A mourner, or plague healer.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=926
+recol1d=43270
+recol2s=8741
+recol2d=6936
+recol3s=61
+recol3d=43270
+recol4s=11200
+recol4d=43270
+recol5s=8090
+recol5d=8
+name=Mourner
+model1=obj_gasmask_manwear
+model2=obj_plague_jacket_manwear
+model3=obj_plague_jacket_manwear2
+model4=obj_plague_trousers_manwear
+model5=obj_red_cape_manwear
+model6=npc_mournerstew3
+head1=obj_gasmask_manhead

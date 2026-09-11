@@ -1,0 +1,657 @@
+[0_41_53_compofishspot]
+vislevel=hide
+desc=I can fish here.
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=category_453
+
+[0_41_53_sinisterfishspot]
+vislevel=hide
+desc=I can fish here.
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=category_453
+
+[0_41_53_bigdavefishspot]
+vislevel=hide
+desc=I can fish here.
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=category_453
+
+[0_41_53_joshuafishspot]
+vislevel=hide
+desc=I can fish here.
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=category_453
+
+[0_37_53_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_39_53_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_40_52_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_40_53_rarefish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Cage
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=rarefish
+param=whirlpool,macro_whirlpool_rarefish
+
+[0_40_53_memberfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=memberfish
+param=whirlpool,macro_whirlpool_memberfish
+
+[0_41_73_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_42_55_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_43_51_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_44_46_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_44_52_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_44_52_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_44_53_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_44_53_rarefish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Cage
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=rarefish
+param=whirlpool,macro_whirlpool_rarefish
+
+[0_44_53_memberfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=memberfish
+param=whirlpool,macro_whirlpool_memberfish
+
+[0_45_49_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_45_49_rarefish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Cage
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=rarefish
+param=whirlpool,macro_whirlpool_rarefish
+
+[0_46_49_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_47_57_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_48_50_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_48_53_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_50_50_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_51_49_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_45_152_lavafish]
+vislevel=hide
+readyanim=lava_ripples
+walkanim=lava_ripples
+desc=I can see eels swimming in the lava.
+minimap=no
+op1=Bait
+name=Fishing spot
+model1=cryptstairsdown_inactive_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+param=fishing_movement_enum,fishing_movement_taverley_dungeon_enum
+
+[0_38_49_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_43_47_karambwanji]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=There are brightly coloured fish swimming in the water.
+minimap=no
+op1=Net
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+category=category_632
+
+[general_karambwanji]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=There are brightly coloured fish swimming in the water.
+minimap=no
+op1=Net
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+category=category_632
+
+[0_45_48_karambwan]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=Something dark green is lurking in these waters.
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+category=category_633
+
+[general_karambwan]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=Something dark green is lurking in these waters.
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+category=category_633
+
+[lubufu_karambwan]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=Something dark green is lurking in these waters.
+minimap=no
+op1=Fish
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+category=category_633
+
+[0_34_50_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_35_50_freshfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Lure
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=freshfish
+param=whirlpool,macro_whirlpool_freshfish
+
+[0_33_51_memberfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=memberfish
+param=whirlpool,macro_whirlpool_memberfish
+
+[0_41_57_saltfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=saltfish
+param=whirlpool,macro_whirlpool_saltfish
+
+[0_41_57_rarefish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Cage
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=rarefish
+param=whirlpool,macro_whirlpool_rarefish
+
+[0_41_57_memberfish]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see fish swimming in the water.
+minimap=no
+op1=Net
+op3=Harpoon
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=memberfish
+param=whirlpool,macro_whirlpool_memberfish
+
+[0_54_53_slimey_eel]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see 'things' swimming in the water.
+minimap=no
+op1=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=slimeyfish
+param=fishing_movement_enum,fishing_movement_slimey_eel_east_enum
+
+[0_53_53_slimey_eel]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see 'things' swimming in the water.
+minimap=no
+op1=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=slimeyfish
+param=fishing_movement_enum,fishing_movement_slimey_eel_west_enum
+
+[0_53_51_slimey_eel]
+vislevel=hide
+readyanim=fishingspot_ready
+walkanim=fishingspot_walk
+desc=I can see 'things' swimming in the water.
+minimap=no
+op1=Bait
+name=Fishing spot
+model1=compofishspot_8
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=1
+category=slimeyfish
+param=fishing_movement_enum,fishing_movement_slimey_eel_south_enum

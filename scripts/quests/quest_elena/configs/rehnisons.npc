@@ -1,0 +1,83 @@
+[ted_rehnison]
+vislevel=hide
+desc=The head of the Rehnison family.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=43072
+recol1d=4550
+recol2s=25238
+recol2d=3980
+name=Ted Rehnison
+model1=obj_feud_desert_disguise_manwear
+model2=obj_ikov_bootsoflightness_manwear
+model3=idk_man_jaw_long
+model4=idk_man_torso_torn
+model5=obj_doctor_gown_manwear2
+model6=obj_cert_drill_top_manwear3
+model7=idk_man_legs_tatty
+head1=obj_leather_cowl_manhead2
+head2=idk_man_jaw_long_head
+moverestrict=indoors
+
+[martha_rehnison]
+vislevel=hide
+desc=A fairly poor looking woman.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=43072
+recol1d=4550
+recol2s=25238
+recol2d=3980
+recol3s=8741
+recol3d=6449
+name=Martha Rehnison
+model1=idk_woman_hair_bun
+model2=obj_ikov_bootsoflightness_womanwear
+model3=idk_woman_torso_torn
+model4=idk_woman_arms_bare_arms
+model5=obj_cert_drill_top_womanwear3
+model6=idk_woman_legs_turn_ups_3
+head1=idk_woman_hair_bun_head
+moverestrict=indoors
+
+[billy_rehnison]
+vislevel=hide
+desc=The Rehnisons' eldest son.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22426
+recol1d=8741
+recol2s=22418
+recol2d=908
+recol3s=11162
+recol3d=3980
+name=Billy Rehnison
+model1=npc_hudon_waterfall_quest
+model2=npc_leprechaun
+model3=npc_gnomechildgreeni2
+head1=obj_pickpocket_guide_man
+moverestrict=indoors
+param=death_anim,midget_death
+
+[milli]
+vislevel=hide
+desc=She doesn't seem very happy.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22426
+recol1d=6449
+recol2s=22418
+recol2d=908
+recol3s=11162
+recol3d=3980
+name=Milli Rehnison
+model1=npc_milli
+model2=npc_gnomefemale
+model3=npc_gnomechildgreeni2
+head1=idk_woman_hair_pigtails_head
+moverestrict=indoors
+param=death_anim,midget_death

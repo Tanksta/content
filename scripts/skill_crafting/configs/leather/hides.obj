@@ -1,0 +1,91 @@
+[leather]
+desc=It's a piece of leather.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+manwear=obj_leather_manwear,0
+womanwear=obj_leather_manwear,0
+recol1s=127
+recol1d=10128
+name=Leather
+weight=5lb
+
+[hard_leather]
+desc=It's a piece of hard leather.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+recol1s=127
+recol1d=7566
+name=Hard leather
+weight=7lb
+
+[dragon_leather]
+cost=50
+desc=It's a piece of prepared green dragonhide.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+members=yes
+recol1s=127
+recol1d=22416
+name=Green d-leather
+weight=7lb
+param=color,green
+
+[dragon_leather_blue]
+cost=70
+desc=It's a piece of prepared blue dragonhide.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+members=yes
+recol1s=127
+recol1d=43926
+name=Blue d-leather
+weight=7lb
+param=color,blue
+
+[dragon_leather_red]
+cost=90
+desc=It's a piece of prepared red dragonhide.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+members=yes
+recol1s=127
+recol1d=912
+name=Red dragon leather
+weight=7lb
+param=color,red
+
+[dragon_leather_black]
+cost=110
+desc=It's a piece of prepared black dragonhide.
+model=obj_cow_hide
+2dxof=-1
+2dyof=-2
+2dzoom=1190
+2dyan=116
+2dxan=440
+members=yes
+recol1s=127
+recol1d=12
+name=Black d-leather
+weight=7lb
+param=color,black

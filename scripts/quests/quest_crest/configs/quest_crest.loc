@@ -1,0 +1,123 @@
+[leverg]
+active=yes
+op1=Pull
+model=ctlevera
+name=Lever
+desc=This lever is down.
+
+[leverg2]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=This lever is up.
+
+[leverh]
+active=yes
+op1=Pull
+model=ctlevera
+name=Lever
+desc=This lever is down.
+
+[leverh2]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=This lever is up.
+
+[leveri]
+active=yes
+op1=Pull
+model=ctlevera
+name=Lever
+desc=This lever is down.
+
+[leveri2]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=This lever is up.
+
+[famcrest_doorh2]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=This door is closed by an unknown mechanism.
+
+[famcrest_doorh2i2]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=This door is closed by an unknown mechanism.
+
+[famcrest_doorg2h1]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=This door is closed by an unknown mechanism.
+
+[famcrest_doori2h1]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=This door is closed by an unknown mechanism.
+
+[famcrest_doorh2g1]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=This door is closed by an unknown mechanism.
+
+[chronodoorl]
+active=yes
+op1=Open
+model=ikov_mendedleverdoorl
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Gate
+desc=This gate is closed shut.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[chronodoorr]
+active=yes
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Gate
+desc=This gate is closed shut.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563

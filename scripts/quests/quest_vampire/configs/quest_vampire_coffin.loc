@@ -1,0 +1,16 @@
+[loc_2614]
+width=2
+length=2
+op1=Open
+model=graveyard_coffin
+name=Coffin
+desc=Spooky!
+
+[vampcoffinopen]
+width=2
+length=2
+op1=Search
+op2=Close
+model=graveyard_coffin2
+name=Coffin
+desc=Looks comfortable...

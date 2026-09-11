@@ -1,0 +1,29 @@
+{
+  "member": "mapback.dat",
+  "palette": [
+    0,
+    2105374,
+    5458496,
+    6312773,
+    3024929,
+    4076839,
+    4866874,
+    1183500,
+    65793,
+    4274996
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/mapback/000.png",
+      "canvasWidth": 172,
+      "canvasHeight": 156,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 172,
+      "height": 156,
+      "encoding": 1
+    }
+  ]
+}

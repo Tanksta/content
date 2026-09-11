@@ -1,0 +1,275 @@
+[unstrung_gold_amulet]
+cost=350
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+recol1s=127
+recol1d=12209
+name=Gold amulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_gold_amulet
+
+[unstrung_sapphire_amulet]
+cost=900
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+recol1s=127
+recol1d=43951
+name=Sapphire amulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_sapphire_amulet
+
+[unstrung_emerald_amulet]
+cost=1275
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+recol1s=127
+recol1d=22443
+name=Emerald amulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_emerald_amulet
+
+[unstrung_ruby_amulet]
+cost=2025
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+recol1s=127
+recol1d=960
+name=Ruby amulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_ruby_amulet
+
+[unstrung_diamond_amulet]
+cost=3525
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+name=Diamond amulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_diamond_amulet
+
+[unstrung_dragonstone_amulet]
+cost=17625
+desc=It needs a string so I can wear it.
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+members=yes
+recol1s=127
+recol1d=51111
+name=Dragonstoneamulet
+weight=4g
+param=crafting_jewelry_struct,unstrung_dragonstone_amulet
+
+[black_amulet]
+model=obj_unstrung_gold_amulet
+2dxof=8
+2dyof=106
+2dzoom=370
+2dyan=100
+2dxan=304
+recol1s=127
+recol1d=16
+recol2s=11200
+recol2d=16
+name=Black amulet
+dummyitem=inv_only
+
+[invis_amulet1]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Sapphire amulet
+param=crafting_jewelry_struct,unstrung_sapphire_amulet
+dummyitem=inv_only
+
+[invis_amulet2]
+desc=It's an Emerald amulet.
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Emerald amulet
+param=crafting_jewelry_struct,unstrung_emerald_amulet
+dummyitem=inv_only
+
+[invis_amulet3]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Ruby amulet
+param=crafting_jewelry_struct,unstrung_ruby_amulet
+dummyitem=inv_only
+
+[invis_amulet4]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Diamond amulet
+param=crafting_jewelry_struct,unstrung_diamond_amulet
+dummyitem=inv_only
+
+[invis_amulet5]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Dragonstoneamulet
+param=crafting_jewelry_struct,unstrung_dragonstone_amulet
+dummyitem=inv_only
+
+[strung_gold_amulet]
+cost=350
+desc=A plain gold amulet.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=127
+recol1d=12209
+recol2s=5916
+recol2d=127
+recol3s=4882
+recol3d=127
+name=Gold amulet
+wearpos=front
+weight=7g
+
+[strung_sapphire_amulet]
+cost=900
+desc=I wonder if I can get this enchanted.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=127
+recol1d=43951
+recol2s=5916
+recol2d=127
+recol3s=4882
+recol3d=127
+name=Sapphire amulet
+wearpos=front
+weight=7g
+category=category_621
+
+[strung_emerald_amulet]
+cost=1275
+desc=I wonder if I can get this enchanted.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=127
+recol1d=22443
+recol2s=5916
+recol2d=127
+recol3s=4882
+recol3d=127
+name=Emerald amulet
+wearpos=front
+weight=7g
+
+[strung_ruby_amulet]
+cost=2025
+desc=I wonder if I can get this enchanted.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=127
+recol1d=960
+recol2s=5916
+recol2d=127
+recol3s=4882
+recol3d=127
+name=Ruby amulet
+wearpos=front
+weight=7g
+
+[strung_diamond_amulet]
+cost=3525
+desc=I wonder if I can get this enchanted.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=5916
+recol1d=127
+recol2s=4882
+recol2d=127
+name=Diamond amulet
+wearpos=front
+weight=7g
+
+[strung_dragonstone_amulet]
+cost=17625
+desc=I wonder if I can get this enchanted.
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+iop2=Wear
+manwear=obj_amulet_of_accuracy_manwear,0
+womanwear=obj_amulet_of_accuracy_womanwear,0
+recol1s=127
+recol1d=51111
+recol2s=5916
+recol2d=127
+recol3s=4882
+recol3d=127
+name=Dragonstoneamulet
+wearpos=front
+weight=7g

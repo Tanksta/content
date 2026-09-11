@@ -1,0 +1,49 @@
+[book_of_astrology]
+desc=A book on the history of Astrology in RuneScape.
+model=obj_mcannonbook
+iop1=Read
+members=yes
+2dzoom=840
+2dyan=152
+2dxan=256
+name=Astrology book
+weight=3g
+tradeable=no
+
+[keep_key]
+desc=A small key for a jail door.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=Keep key
+weight=10g
+tradeable=no
+
+[lens_mould]
+desc=An unusual clay mould in the shape of a disc.
+model=obj_lens_mould
+2dyof=-17
+2dzoom=2610
+2dyan=1912
+2dxan=196
+members=yes
+name=Lens mould
+weight=1kg
+tradeable=no
+
+[lens]
+desc=A perfectly circular disc of glass.
+model=obj_lens
+2dxof=6
+2dyof=28
+2dzoom=890
+2dyan=84
+2dxan=388
+members=yes
+name=Lens
+weight=3g
+tradeable=no

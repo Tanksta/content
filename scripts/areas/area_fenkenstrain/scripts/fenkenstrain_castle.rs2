@@ -1,0 +1,16 @@
+[oploc1,fenk_mausoleum_door_open]
+~open_and_close_door2(fenk_mausoleum_door, ~check_axis(coord, loc_coord, loc_angle), door_open);
+
+[oploc1,fenk_tower_door_open]
+~open_and_close_door2(fenk_tower_door, ~check_axis(coord, loc_coord, loc_angle), door_open);
+
+[oploc1,fenk_shed_door_open]
+~open_and_close_door2(fenk_shed_door, ~check_axis(coord, loc_coord, loc_angle), door_open);
+
+[oploc1,fenk_stairs_lv1]
+p_arrivedelay;
+p_telejump(movecoord(coord, 0, 1, 4));
+
+[oploc1,fenk_stairs_lv1_top]
+p_arrivedelay;
+p_telejump(movecoord(coord, 0, -1, -4));

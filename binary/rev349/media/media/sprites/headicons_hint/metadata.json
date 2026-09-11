@@ -1,0 +1,84 @@
+{
+  "member": "headicons_hint.dat",
+  "palette": [
+    0,
+    0,
+    16447266,
+    12171015,
+    16711091,
+    16645275,
+    16644731,
+    16579166,
+    16579148,
+    16513337
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/headicons_hint/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/headicons_hint/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 1,
+      "yOffset": 0,
+      "width": 23,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/headicons_hint/002.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/headicons_hint/003.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/headicons_hint/004.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/media/sprites/headicons_hint/005.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    }
+  ]
+}

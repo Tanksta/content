@@ -1,0 +1,35 @@
+[potterywheel]
+name=Potter's Wheel
+desc=Used for fashioning clay items.
+model=obj_twpart2
+forceapproach=east
+category=potters_wheel
+
+[potteryoven]
+name=Pottery Oven
+desc=Bake your clay pots in here.
+model=obj_half_a_meat_pie
+length=2
+forceapproach=east
+op1=Fire
+category=pottery_oven
+
+[viking_potteryoven]
+length=2
+forceapproach=13
+op1=Fire
+retex1s=wall
+retex1d=pebblefloor
+recol2s=28
+recol2d=3594
+model=obj_half_a_meat_pie
+name=Pottery Oven
+desc=Bake your clay pots in here.
+category=pottery_oven
+
+[viking_potterywheel]
+forceapproach=13
+model=obj_twpart2
+name=Potter's Wheel
+desc=Used for fashioning clay items.
+category=potters_wheel

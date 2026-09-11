@@ -1,0 +1,6 @@
+[plaguemudpile]
+length=2
+op1=Climb
+model=mudpile
+name=Mud pile
+desc=A pile of what is hopefully mud.

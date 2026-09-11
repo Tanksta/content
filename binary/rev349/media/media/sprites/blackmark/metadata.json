@@ -1,0 +1,29 @@
+{
+  "member": "blackmark.dat",
+  "palette": [
+    0,
+    0,
+    1548,
+    1447704,
+    2500392,
+    7105644,
+    9013641,
+    3947580,
+    723723,
+    5395026
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/blackmark/000.png",
+      "canvasWidth": 61,
+      "canvasHeight": 82,
+      "xOffset": 9,
+      "yOffset": 7,
+      "width": 52,
+      "height": 72,
+      "encoding": 1
+    }
+  ]
+}

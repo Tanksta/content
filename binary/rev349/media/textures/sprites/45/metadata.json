@@ -1,0 +1,28 @@
+{
+  "member": "45.dat",
+  "palette": [
+    0,
+    5911054,
+    4531212,
+    3348234,
+    6698767,
+    5385742,
+    6963732,
+    7620121,
+    9130522
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/45/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 0
+    }
+  ]
+}

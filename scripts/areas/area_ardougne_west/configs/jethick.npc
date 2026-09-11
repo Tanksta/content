@@ -1,0 +1,24 @@
+[jethick]
+vislevel=hide
+desc=A cynical old man.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=8741
+recol1d=6449
+recol2s=25238
+recol2d=10913
+recol3s=6798
+recol3d=10299
+recol4s=43072
+recol4d=4550
+name=Jethick
+model1=idk_man_hair_cropped
+model2=idk_man_jaw_split
+model3=npc_ardougnian_male1
+model4=npc_barbarian
+model5=obj_cert_drill_top_manwear3
+model6=npc_captain_barnaby
+model7=obj_ikov_bootsoflightness_manwear
+head1=idk_man_hair_cropped_head
+head2=idk_man_jaw_split_head

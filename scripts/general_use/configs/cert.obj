@@ -1,0 +1,10 @@
+[template_for_cert]
+model=obj_template_for_cert
+stackable=yes
+2dyof=2
+2dzoom=760
+2dyan=28
+2dxan=552
+name=Template for cert
+weight=0g
+dummyitem=inv_only

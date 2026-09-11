@@ -1,0 +1,26 @@
+[carla]
+vislevel=hide
+desc=She looks upset.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=6798
+recol1d=5025
+recol2s=8741
+recol2d=50006
+recol3s=8741
+recol3d=50006
+recol4s=25238
+recol4d=50006
+recol5s=43072
+recol5d=4550
+recol6s=4626
+recol6d=53018
+name=Carla
+model1=idk_woman_hair_long
+model2=idk_woman_torso_simple
+model3=obj_doctor_gown_womanwear2
+model4=obj_cert_drill_top_womanwear3
+model5=obj_priest_robe_womanwear
+model6=idk_79
+head1=obj_pickpocket_guide_warrior

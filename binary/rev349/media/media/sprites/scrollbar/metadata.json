@@ -1,0 +1,35 @@
+{
+  "member": "scrollbar.dat",
+  "palette": [
+    0,
+    7759444,
+    3353893,
+    5063219,
+    0
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/scrollbar/000.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 16,
+      "height": 16,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/scrollbar/001.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 16,
+      "height": 16,
+      "encoding": 1
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[inv]
+scope=perm
+size=28
+protect=no
+runweight=yes
+
+[worn]
+scope=perm
+size=14
+runweight=yes
+
+[tradeoffer]
+size=28
+protect=no

@@ -1,0 +1,4 @@
+[proc,welcome_screen]
+last_login_info;
+if_settext(welcome_screen:com_25, "You do not have\\na Bank PIN. Please\\nvisit a bank if you\\nwould like one.");
+if_openmain(welcome_screen);

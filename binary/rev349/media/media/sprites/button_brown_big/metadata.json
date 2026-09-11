@@ -1,0 +1,30 @@
+{
+  "member": "button_brown_big.dat",
+  "palette": [
+    0,
+    11840672,
+    4865582,
+    5722676,
+    6249015,
+    5393201,
+    4866860,
+    4471593,
+    4076325,
+    5261614,
+    5063984
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/button_brown_big/000.png",
+      "canvasWidth": 343,
+      "canvasHeight": 90,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 343,
+      "height": 90,
+      "encoding": 0
+    }
+  ]
+}

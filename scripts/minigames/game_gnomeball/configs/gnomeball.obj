@@ -1,0 +1,13 @@
+[ball_gnomeball_game]
+desc=A ball used in Gnomeball.
+model=obj_ball_gnomeball_game
+2dzoom=790
+2dyan=2020
+2dxan=108
+iop2=Hold
+manwear=obj_ball_gnomeball_game_manwear,0
+womanwear=obj_ball_gnomeball_game_manwear,6
+members=yes
+name=Gnomeball
+weight=500g
+wearpos=righthand

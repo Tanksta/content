@@ -1,0 +1,600 @@
+[specimen_jar]
+desc=A receptacle for specimens!
+model=obj_specimen_jar
+2dzoom=1030
+2dyan=1772
+2dxan=96
+members=yes
+name=Specimen jar
+weight=2oz
+tradeable=no
+
+[specimen_brush]
+desc=A small brush used to clean rock samples.
+model=obj_specimen_brush
+2dxof=2
+2dyof=-12
+2dzoom=790
+2dyan=116
+2dxan=272
+members=yes
+name=Specimen brush
+weight=2oz
+tradeable=no
+
+[rock_sample1]
+model=obj_rock_sample1
+2dxof=8
+2dyof=-15
+2dzoom=1170
+2dyan=1904
+2dxan=120
+desc=A carefully-kept-safe rock sample.
+members=yes
+name=Rock sample 1
+weight=3oz
+tradeable=no
+
+[rock_sample2]
+model=obj_rock_sample2
+desc=A carefully-kept-safe rock sample.
+2dyof=-12
+2dzoom=1290
+2dyan=1952
+2dxan=144
+members=yes
+name=Rock sample 2
+weight=3oz
+tradeable=no
+
+[rock_sample3]
+model=obj_rock_sample3
+desc=A carefully-kept-safe rock sample.
+2dxof=-2
+2dyof=-6
+2dzoom=1370
+2dyan=1908
+2dxan=104
+members=yes
+name=Rock sample 3
+weight=3oz
+tradeable=no
+
+[cracked_sample]
+model=obj_rock_sample1
+2dxof=8
+2dyof=-37
+2dzoom=1130
+2dyan=1840
+2dxan=172
+desc=A rough shaped piece of rock.
+members=yes
+name=Rock sample
+weight=3oz
+tradeable=no
+
+[rockpick]
+desc=A small pick for cracking rock samples.
+model=obj_rockpick
+2dxof=-6
+2dyof=-10
+2dzoom=700
+2dyan=1076
+2dxan=476
+members=yes
+name=Rock pick
+weight=2oz
+tradeable=no
+
+[trowel]
+desc=Used for digging!
+model=obj_trowel
+2dxof=1
+2dyof=-5
+2dzoom=1030
+2dyan=1412
+2dxan=312
+members=yes
+name=Trowel
+weight=2oz
+tradeable=no
+
+[tray_empty]
+desc=An empty tray for panning.
+model=obj_tray_empty
+2dyof=17
+2dzoom=1340
+2dyan=1920
+2dxan=172
+members=yes
+iop2=Search
+name=Panning tray
+weight=3oz
+tradeable=no
+
+[tray_gold]
+desc=This tray contains gold.
+model=obj_tray_gold
+2dyof=17
+2dzoom=1340
+2dyan=1920
+2dxan=172
+members=yes
+iop2=Search
+name=Panning tray
+weight=5oz
+tradeable=no
+
+[tray_mud]
+desc=This tray contains mud.
+model=obj_tray_mud
+2dyof=17
+2dzoom=1340
+2dyan=1920
+2dxan=172
+members=yes
+iop2=Search
+name=Panning tray
+weight=6oz
+tradeable=no
+
+[nuggets]
+desc=Pure, lovely gold!
+model=obj_nuggets
+2dxof=7
+2dyof=12
+2dzoom=1550
+2dxan=320
+members=yes
+stackable=yes
+name=Nuggets
+weight=4oz
+tradeable=no
+
+[digtalisman]
+desc=An unusual symbol of a lesser-known god.
+model=obj_digtalisman
+2dxof=-1
+2dyof=9
+2dzoom=1150
+2dyan=1980
+2dxan=324
+members=yes
+name=Zaros talisman
+weight=3oz
+tradeable=no
+
+[digplainletter]
+model=obj_nulodions_notes
+desc=A scroll waiting to be stamped.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+name=Unstamped letter
+weight=20g
+tradeable=no
+
+[recommendedletter]
+model=obj_recommendedletter
+desc=A stamped scroll of recommendation.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+name=Stamped letter
+weight=20g
+tradeable=no
+
+[digsitebuckle]
+model=obj_digsitebuckle
+desc=Used to hold up trousers!
+2dxof=10
+2dyof=14
+2dzoom=460
+2dyan=1852
+2dzan=56
+2dxan=524
+members=yes
+name=Belt buckle
+weight=1kg
+tradeable=no
+
+[old_boot]
+desc=Phew!
+model=obj_old_boot
+2dxof=6
+2dyof=-4
+2dzoom=1000
+2dyan=156
+2dxan=168
+members=yes
+name=Old boot
+weight=2oz
+tradeable=no
+
+[digsitesword]
+desc=A decent enough weapon gone rusty.
+model=obj_digsitesword
+2dyof=-1
+2dzoom=590
+2dyan=1136
+2dxan=652
+members=yes
+name=Rusty sword
+weight=5lb
+tradeable=no
+
+[digsitearrow]
+desc=This must have been shot at high speed.
+model=obj_digsitearrow
+2dxof=17
+2dyof=-16
+2dzoom=800
+2dyan=1956
+2dxan=168
+members=yes
+name=Broken arrow
+weight=15g
+tradeable=no
+
+[digsitebuttons]
+desc=Not Dick Whittington's helper at all!
+model=obj_digsitebuttons
+2dxof=-3
+2dyof=2
+2dzoom=600
+2dyan=112
+2dxan=236
+members=yes
+name=Buttons
+weight=1g
+tradeable=no
+
+[digsitestaff]
+model=obj_digsitestaff
+desc=I pity the poor person beaten with this!
+2dxof=4
+2dyof=-17
+2dzoom=1130
+2dyan=512
+2dxan=192
+members=yes
+name=Broken staff
+weight=4lb
+tradeable=no
+
+[digsiteglass]
+desc=Watch those feet!
+model=obj_digsiteglass
+2dxof=-1
+2dyof=1
+2dzoom=960
+2dyan=32
+2dxan=412
+members=yes
+name=Broken glass
+weight=20g
+tradeable=no
+
+[level1certificate]
+model=obj_nulodions_notes
+desc=The owner has passed the Earth Sciences level 1 exam.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+name=Level 1 certificate
+weight=20g
+tradeable=no
+
+[level2certificate]
+model=obj_nulodions_notes
+desc=The owner has passed Earth Sciences level 2 exam.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+name=Level 2 certificate
+weight=20g
+tradeable=no
+
+[level3certificate]
+model=obj_nulodions_notes
+desc=The owner has passed Earth Sciences level 3 exam.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+name=Level 3 certificate
+weight=20g
+tradeable=no
+
+[digsitepottery]
+desc=Smashing!
+model=obj_digsitepottery
+2dzoom=1140
+2dyan=1876
+2dxan=168
+members=yes
+recol1s=7081
+recol1d=9104
+recol2s=6040
+recol2d=9098
+name=Ceramic remains
+weight=2oz
+tradeable=no
+
+[old_tooth]
+desc=Now if I can just find a tooth fairy to sell this to...
+model=obj_old_tooth
+2dxof=1
+2dyof=17
+2dzoom=510
+2dyan=276
+2dxan=292
+members=yes
+name=Old tooth
+weight=1g
+tradeable=no
+
+[digexpertscroll]
+model=obj_nulodions_notes
+desc=A letter inviting me to use the private digshafts.
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+iop2=Read
+name=Invitation letter
+weight=20g
+tradeable=no
+
+[digsitearmour1]
+desc=Beyond repair.
+model=damagedarmour1_0
+2dxof=-8
+2dyof=11
+2dzoom=1450
+2dyan=128
+2dxan=292
+members=yes
+recol1s=45
+recol1d=8472
+name=Damaged armour
+weight=17lb
+tradeable=no
+
+[digsitearmour2]
+desc=No use to me...
+model=damagedarmour2_0
+2dxof=5
+2dyof=8
+2dzoom=1510
+2dyan=60
+2dxan=496
+members=yes
+recol1s=45
+recol1d=8472
+name=Broken armour
+weight=17lb
+tradeable=no
+
+[zarosstonetablet]
+desc=An old stone slab with writing on it.
+model=obj_zarosstonetablet
+2dyof=-16
+2dzoom=1370
+2dyan=1888
+2dxan=180
+members=yes
+iop2=Read
+name=Stone tablet
+weight=800g
+tradeable=no
+
+[unidentified_powder]
+desc=An acrid chemical.
+model=obj_unicorn_horn_dust
+members=yes
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+recol1s=82
+recol1d=115
+name=Chemical powder
+weight=1oz
+tradeable=no
+
+[ammonium_nitrate]
+desc=An acrid chemical.
+model=obj_unicorn_horn_dust
+members=yes
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+recol1s=82
+recol1d=115
+name=Ammonium nitrate
+weight=15g
+tradeable=no
+
+[unidentified_liquid]
+desc=A strong chemical.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=6080
+name=Unidentified liquid
+weight=25g
+tradeable=no
+param=destroy_drop,^true
+
+[nitroglycerin]
+desc=A strong chemical.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=6080
+name=Nitroglycerin
+weight=25g
+tradeable=no
+param=destroy_drop,^true
+
+[ground_charcoal]
+desc=Charcoal, crushed to small pieces!
+model=obj_unicorn_horn_dust
+members=yes
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+recol1s=82
+recol1d=12
+name=Ground charcoal
+weight=8g
+tradeable=no
+
+[precharcoalmixture]
+desc=A mixture of strong chemicals.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=8107
+name=Mixed chemicals
+weight=30g
+tradeable=no
+param=destroy_drop,^true
+
+[postcharcoalmixture]
+desc=A mixture of strong chemicals.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=4003
+name=Mixed chemicals
+weight=35g
+tradeable=no
+param=destroy_drop,^true
+
+[digcompound]
+desc=A mixture of strong chemicals.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=12
+name=Chemical compound
+weight=35g
+tradeable=no
+param=destroy_drop,^true
+
+[arcenia_root]
+desc=The root of an Arcenia plant.
+model=obj_arcenia_root
+2dxof=3
+2dyof=4
+2dzoom=1130
+2dyan=380
+2dxan=456
+members=yes
+name=Arcenia root
+weight=10g
+tradeable=no
+
+[digchestkey]
+desc=This fits a chest.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=Chest key
+weight=10g
+tradeable=no
+
+[digsitevase]
+desc=A vessel for holding plants.
+model=obj_glarials_urn_full_waterfall_quest
+2dyof=-3
+2dzoom=1070
+2dyan=104
+2dxan=68
+members=yes
+recol1s=37093
+recol1d=5541
+name=Vase
+weight=500g
+tradeable=no
+
+[digsitebook]
+desc=It's about chemicals, judging from its cover.
+model=obj_digsitebook
+2dxof=1
+2dyof=-21
+2dzoom=830
+2dyan=116
+2dxan=244
+members=yes
+iop2=Read
+recol1s=5018
+recol1d=24743
+recol2s=61
+recol2d=24850
+recol3s=11177
+recol3d=24850
+name=Book on chemicals
+weight=18oz
+tradeable=no
+
+[display_tea]
+desc=A refreshing cuppa.
+iop1=Drink
+model=obj_display_tea
+2dxof=-1
+2dyof=-2
+2dzoom=500
+2dyan=1980
+2dxan=156
+members=yes
+name=Cup of tea
+weight=150g
+tradeable=no
+
+[obj_713]
+tradeable=no

@@ -1,0 +1,30 @@
+{
+  "member": "tex_brown.dat",
+  "palette": [
+    0,
+    4866604,
+    5393201,
+    5196077,
+    5591091,
+    5854005,
+    6183479,
+    5063728,
+    4734507,
+    4406056,
+    4076325
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/tex_brown/000.png",
+      "canvasWidth": 104,
+      "canvasHeight": 104,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 104,
+      "height": 104,
+      "encoding": 0
+    }
+  ]
+}

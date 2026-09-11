@@ -1,0 +1,108 @@
+[cupboard]
+length=2
+forceapproach=13
+op1=Open
+model=cupboard
+name=Cupboard
+desc=This may be worth opening.
+category=cupboard_closed
+param=cupboard_other,cupboardopen
+
+[cupboardhigh]
+length=2
+forceapproach=13
+op1=Open
+model=cupboardhigh
+name=Cupboard
+desc=This may be worth opening.
+category=cupboard_closed
+param=cupboard_other,cupboardopen_high
+
+[cupboard_big]
+width=2
+length=3
+forceapproach=13
+op1=Open
+model=cupboard_big
+name=Large cupboard
+desc=This may be worth opening.
+category=cupboard_closed
+param=cupboard_other,cupboardopen_big
+
+[cupboardopen]
+length=2
+op2=Search
+op3=Shut
+forceapproach=13
+model=cupboardopen
+name=Open Cupboard
+desc=This may be worth searching.
+category=cupboard_opened
+param=cupboard_other,cupboard
+
+[cupboardopen_high]
+length=2
+op2=Search
+op3=Shut
+forceapproach=13
+model=cupboardopen_high
+name=Cupboard
+desc=This may be worth searching.
+category=cupboard_opened
+param=cupboard_other,cupboardhigh
+
+[cupboardopen_big]
+width=2
+length=3
+op2=Search
+op3=Close
+forceapproach=13
+model=cupboardopen_big
+name=Large open cupboard
+desc=This may be worth searching.
+category=cupboard_opened
+param=cupboard_other,cupboard_big
+
+[vyvincupboardshut]
+length=2
+op1=Open
+forceapproach=13
+model=cupboardhigh
+name=Cupboard
+desc=I wonder what's inside?
+category=cupboard_closed
+param=cupboard_other,vyvincupboardopen
+
+[vyvincupboardopen]
+length=2
+op1=Search
+op2=Shut
+forceapproach=13
+model=cupboardopen_high
+name=Cupboard
+desc=It's open.
+category=cupboard_opened
+param=cupboard_other,vyvincupboardshut
+
+[garliccupboardshut]
+length=2
+op1=Open
+forceapproach=13
+blockwalk=no
+model=cupboardhigh
+name=Cupboard
+desc=Wonder what's in here...
+category=cupboard_closed
+param=cupboard_other,garliccupboardopen
+
+[garliccupboardopen]
+length=2
+op1=Search
+op2=Close
+forceapproach=13
+raiseobject=no
+model=cupboardopen_high
+name=Cupboard
+desc=Smells kind of funny...
+category=cupboard_opened
+param=cupboard_other,garliccupboardshut

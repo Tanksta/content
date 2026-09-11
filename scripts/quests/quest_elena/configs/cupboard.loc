@@ -1,0 +1,20 @@
+[alrenascupboardshut]
+length=2
+op1=Open
+forceapproach=13
+model=cupboard
+name=Cupboard
+desc=I wonder what's inside?
+category=cupboard_closed
+param=cupboard_other,alrenascupboardopen
+
+[alrenascupboardopen]
+length=2
+op1=Search
+op2=Close
+forceapproach=13
+model=cupboardopen
+name=Cupboard
+desc=It's open.
+category=cupboard_opened
+param=cupboard_other,alrenascupboardshut

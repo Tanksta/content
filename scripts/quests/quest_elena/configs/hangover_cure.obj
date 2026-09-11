@@ -1,0 +1,14 @@
+[hangover_cure]
+members=yes
+cost=2
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+desc=It doesn't look very tasty.
+recol1s=39834
+recol1d=21706
+name=Hangover cure
+weight=2200g
+tradeable=no

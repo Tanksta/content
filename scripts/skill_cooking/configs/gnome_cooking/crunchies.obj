@@ -1,0 +1,232 @@
+[premade_worm_crunchies]
+desc=It actually smells quite good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+cost=85
+recol1s=3974
+recol1d=5345
+name=Worm crunchies
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_chocchip_crunchies]
+desc=Yum... smells good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+cost=85
+name=Chocchip crunchies
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_spicy_crunchies]
+desc=Yum... smells good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+cost=85
+recol1s=3974
+recol1d=5056
+name=Spicy crunchies
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_toad_crunchies]
+desc=It actually smells quite good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+cost=85
+recol1s=3974
+recol1d=22433
+name=Toad crunchies
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[spoilt_crunchies]
+iop1=Eat
+desc=These crunchies don't look very appetising.
+cost=2
+members=yes
+model=obj_spoilt_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+recol1s=8642
+recol1d=9112
+name=Odd crunchies
+category=gnome_unf_odd_crunchies
+weight=300g
+
+[burnt_crunchies]
+desc=These crunchies have been burnt to a cinder.
+cost=1
+members=yes
+model=obj_spoilt_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+recol1s=8642
+recol1d=20
+name=Burnt crunchies
+weight=250g
+
+[half_baked_crunchy]
+iop1=Inspect
+desc=This crunchy is in the early stages of preparation.
+cost=2
+members=yes
+model=obj_half_baked_crunchy
+2dxof=2
+2dyof=11
+2dzoom=1520
+2dyan=1664
+2dxan=252
+recol1s=8642
+recol1d=6829
+name=Half baked crunchy
+weight=350g
+tradeable=no
+
+[raw_crunchies]
+desc=These crunchies need cooking.
+cost=2
+members=yes
+model=obj_half_baked_crunchy
+2dxof=2
+2dyof=11
+2dzoom=1520
+2dyan=1664
+2dxan=252
+name=Raw crunchies
+weight=400g
+tradeable=no
+
+[unfinished_worm_crunchies]
+desc=These crunchies are just missing those little finishing touches.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+recol1s=3974
+recol1d=5345
+name=Unfinished crunchy
+category=gnome_unf_odd_crunchies
+weight=300g
+param=gnome_cooking_type,2
+
+[worm_crunchies]
+cost=2
+desc=It actually smells quite good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+recol1s=3974
+recol1d=5345
+name=Worm crunchies
+category=gnome_crunchies
+weight=250g
+
+[unfinished_chocchip_crunchies]
+desc=These crunchies are just missing those little finishing touches.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+name=Unfinished crunchy
+category=gnome_unf_odd_crunchies
+weight=300g
+param=gnome_cooking_type,2
+
+[chocchip_crunchies]
+cost=2
+desc=Yum... smells good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+name=Chocchip crunchies
+category=gnome_crunchies
+weight=250g
+
+[unfinished_spicy_crunchies]
+desc=These crunchies are just missing those little finishing touches.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+recol1s=3974
+recol1d=5056
+name=Unfinished crunchy
+category=gnome_unf_odd_crunchies
+weight=300g
+param=gnome_cooking_type,2
+
+[spicy_crunchies]
+cost=2
+desc=Yum... smells good.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+recol1s=3974
+recol1d=5056
+name=Spicy crunchies
+category=gnome_crunchies
+weight=250g
+
+[unfinished_toad_crunchies]
+desc=These crunchies are just missing those little finishing touches.
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+iop1=Eat
+members=yes
+recol1s=3974
+recol1d=22433
+name=Unfinished crunchy
+category=gnome_unf_odd_crunchies
+weight=300g
+param=gnome_cooking_type,2
+
+[toad_crunchies]
+desc=It actually smells quite good.
+cost=2
+model=obj_unfinished_worm_crunchies
+2dxof=-2
+2dzoom=650
+2dxan=220
+members=yes
+iop1=Eat
+recol1s=3974
+recol1d=22433
+name=Toad crunchies
+category=gnome_crunchies
+weight=250g

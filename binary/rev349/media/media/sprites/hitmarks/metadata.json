@@ -1,0 +1,73 @@
+{
+  "member": "hitmarks.dat",
+  "palette": [
+    0,
+    198005,
+    7012609,
+    19200,
+    5520128,
+    10646016,
+    16561938,
+    4210943,
+    12582912,
+    49152
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/hitmarks/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 24,
+      "height": 23,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/hitmarks/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 24,
+      "height": 23,
+      "encoding": 0
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/hitmarks/002.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 24,
+      "height": 23,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/hitmarks/003.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 24,
+      "height": 23,
+      "encoding": 0
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/hitmarks/004.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 2,
+      "yOffset": 0,
+      "width": 23,
+      "height": 25,
+      "encoding": 0
+    }
+  ]
+}

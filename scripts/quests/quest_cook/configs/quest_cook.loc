@@ -1,0 +1,7 @@
+[cooksquestrange]
+length=2
+forceapproach=13
+model=cooksquestrange
+name=Cooking range
+desc=An appliance for cooking with.
+category=cooking_oven

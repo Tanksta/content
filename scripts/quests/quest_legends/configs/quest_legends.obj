@@ -1,0 +1,614 @@
+[thkaramjamap]
+desc=Notes given to you by Radimus Erkle, it includes a partially completed map.
+members=yes
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+iop2=Complete
+recol1s=10351
+recol1d=40171
+recol2s=7070
+recol2d=933
+name=Radimus notes
+weight=20g
+tradeable=no
+
+[thkaramjamapcomp]
+desc=Notes given to you by Radimus Erkle, it includes a partially completed map.
+members=yes
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+recol1s=10351
+recol1d=40171
+recol2s=7070
+recol2d=22433
+name=Radimus notes
+weight=20g
+tradeable=no
+
+[bullroarer]
+desc=It makes a loud but interesting sound when swung in the air.
+model=obj_bullroarer
+members=yes
+2dzoom=1000
+2dyan=1984
+2dxan=176
+iop1=Swing
+name=Bull roarer
+weight=20g
+tradeable=no
+
+[scrawled_note1]
+desc=A scrawled note with spidery writing on it.
+members=yes
+model=obj_scrawled_note1
+manwear=obj_scrawled_note1_manwear,0
+womanwear=obj_scrawled_note1_manwear,6
+2dzoom=940
+2dyan=112
+2dxan=248
+iop1=Read
+recol1s=0
+recol1d=926
+recol2s=898
+recol2d=926
+recol3s=898
+recol3d=8530
+recol4s=898
+recol4d=8530
+recol5s=904
+recol5d=8530
+recol6s=5351
+recol6d=8530
+name=Scrawled note
+weight=20g
+tradeable=no
+
+[scrawled_note2]
+desc=A scrawled note with spidery writing on it.
+members=yes
+model=obj_scrawled_note1
+manwear=obj_scrawled_note1_manwear,0
+womanwear=obj_scrawled_note1_manwear,6
+2dzoom=940
+2dyan=112
+2dxan=248
+iop1=Read
+recol1s=0
+recol1d=8414
+recol2s=898
+recol2d=960
+recol3s=898
+recol3d=8414
+recol4s=898
+recol4d=960
+recol5s=904
+recol5d=8414
+recol6s=5351
+recol6d=8414
+name=A scribbled note
+weight=20g
+tradeable=no
+
+[scrawled_note3]
+desc=A scrawled note with spidery writing on it.
+members=yes
+model=obj_scrawled_note1
+manwear=obj_scrawled_note1_manwear,0
+womanwear=obj_scrawled_note1_manwear,6
+2dzoom=940
+2dyan=112
+2dxan=248
+iop1=Read
+recol1s=0
+recol1d=36781
+recol2s=898
+recol2d=18652
+recol3s=898
+recol3d=36781
+recol4s=898
+recol4d=18652
+recol5s=904
+recol5d=36781
+recol6s=5351
+recol6d=18652
+name=Scrumpled note
+weight=20g
+tradeable=no
+
+[goldbowlpic]
+desc=A rough sketch of a bowl shaped vessel given to you by Gujuo.
+cost=10
+members=yes
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Look
+recol1s=10351
+recol1d=40171
+recol2s=7070
+recol2d=933
+name=Sketch
+weight=20g
+tradeable=no
+
+[goldbowl_empty]
+desc=A specially made bowl constructed out of pure gold.
+cost=700
+members=yes
+model=obj_goldbowl_empty
+2dzoom=910
+2dyan=1856
+2dxan=204
+recol1s=7075
+recol1d=9166
+recol2s=7081
+recol2d=9166
+name=Gold bowl
+weight=800g
+tradeable=no
+param=next_obj_stage,goldbowl_water
+
+[goldbowlbless_empty]
+desc=A specially made bowl constructed out of pure gold and blessed.
+cost=700
+members=yes
+model=obj_goldbowl_empty
+2dzoom=910
+2dyan=1856
+2dxan=204
+recol1s=7075
+recol1d=9166
+recol2s=7081
+recol2d=9166
+name=Blessed gold bowl
+weight=800g
+tradeable=no
+param=next_obj_stage,goldbowlbless_water
+
+[goldbowl_water]
+desc=A specially made golden bowl with water.
+cost=700
+members=yes
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+iop4=Empty
+recol1s=7081
+recol1d=9166
+name=Golden bowl
+weight=1kg
+tradeable=no
+param=next_obj_stage,goldbowl_empty
+
+[goldbowl_pure]
+desc=A specially made bowl constructed out of pure gold. It has pure water in it.
+cost=700
+members=yes
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+iop4=Empty
+recol1s=7081
+recol1d=9166
+name=Golden bowl
+weight=1kg
+tradeable=no
+param=next_obj_stage,goldbowl_empty
+
+[goldbowlbless_water]
+desc=A blessed golden bowl. It has water in it.
+cost=700
+members=yes
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+iop4=Empty
+recol1s=7081
+recol1d=9166
+name=Golden bowl
+weight=1kg
+tradeable=no
+param=next_obj_stage,goldbowlbless_empty
+
+[goldbowlbless_pure]
+desc=A blessed golden bowl. It has pure sacred water in it.
+cost=700
+members=yes
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+iop4=Empty
+recol1s=7081
+recol1d=9166
+name=Golden bowl
+weight=1kg
+tradeable=no
+param=next_obj_stage,goldbowlbless_empty
+
+[reed_hollow]
+cost=2
+desc=One of nature's pipes.
+members=yes
+model=obj_reed_hollow
+manwear=obj_reed_hollow_manwear,0
+womanwear=obj_reed_hollow_manwear,0
+2dxof=-2
+2dyof=-15
+2dzoom=1770
+2dyan=940
+2dxan=212
+name=Hollow reed
+weight=12g
+
+[shamans_tome]
+desc=It looks like the Shamans personal notes...
+model=obj_shamans_tome
+2dzoom=840
+2dyan=152
+2dxan=256
+members=yes
+iop1=Read
+recol1s=5018
+recol1d=14226
+recol2s=10351
+recol2d=14247
+name=Shamans tome
+weight=18oz
+tradeable=no
+
+[book_of_binding]
+desc=An ancient tome on Demonology.
+model=obj_book_of_binding
+2dyof=5
+2dzoom=1340
+2dyan=1940
+2dxan=412
+members=yes
+iop1=Read
+iop2=Enchant-Vials
+recol1s=5018
+recol1d=43544
+recol2s=41
+recol2d=41191
+recol3s=61
+recol3d=41191
+recol4s=11177
+recol4d=41191
+recol5s=10351
+recol5d=33744
+name=Book of binding
+weight=18oz
+tradeable=no
+
+[vial_enchanted]
+desc=An enchanted empty glass vial.
+model=obj_vial_enchanted
+members=yes
+2dyof=-2
+2dzoom=710
+2dyan=1516
+2dxan=80
+manwear=obj_vial_empty_manwear,0
+womanwear=obj_vial_empty_manwear,6
+name=Enchanted vial
+weight=10g
+tradeable=no
+
+[holy_water]
+desc=A vial of holy water, good against certain demons.
+model=obj_vial_enchanted
+members=yes
+stackable=yes
+2dyof=-2
+2dzoom=710
+2dyan=1516
+2dxan=80
+manwear=obj_holy_water_manwear,0
+womanwear=obj_holy_water_manwear,6
+iop2=Wield
+recol1s=61
+recol1d=43959
+name=Holy water
+wearpos=righthand
+category=weapon_thrown
+weight=2lb
+param=rangeattack,6
+tradeable=no
+param=rangebonus,12
+param=levelrequire,1
+param=attackrange,4
+param=rangeattack_anim,human_throw
+param=defend_anim,human_unarmedblock
+param=rangeattack_sound,thrown
+
+[smashed_glass]
+desc=Fragments of a broken container.
+cost=1
+members=yes
+model=obj_digsiteglass
+2dxof=-1
+2dyof=1
+2dzoom=960
+2dyan=32
+2dxan=412
+name=Smashed glass
+weight=2g
+
+[yommiseeds]
+desc=These need to be germinated before they can be used.
+model=obj_mithril_seed
+2dxof=7
+2dyof=39
+2dzoom=920
+2dyan=676
+2dxan=240
+members=yes
+stackable=yes
+op1=Look
+recol1s=43288
+recol1d=22433
+name=Yommi tree seeds
+weight=1g
+tradeable=no
+
+[yommiseeds_germ]
+desc=These are germinated and ready to be planted in fertile soil.
+model=obj_mithril_seed
+2dxof=7
+2dyof=39
+2dzoom=920
+2dyan=676
+2dxan=240
+members=yes
+stackable=yes
+op1=Look
+recol1s=43288
+recol1d=17344
+name=Yommi tree seeds
+weight=1g
+tradeable=no
+
+[snakeweed_sol]
+desc=It's a mixture of Snakeweed and water. Needs another ingredient.
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=17344
+name=Snakeweed mixture
+weight=25g
+tradeable=no
+
+[ardrigal_sol]
+desc=It's a mixture of Ardrigal and water. Needs another ingredient.
+model=obj_strength4
+members=yes
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+recol1s=61
+recol1d=8615
+name=Ardrigal mixture
+weight=25g
+tradeable=no
+
+[bravery_pot]
+desc=A bravery potion for which Gujuo gave you the details, let's hope it works.
+model=obj_strength4
+members=yes
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+iop1=Drink
+recol1s=61
+recol1d=5018
+name=Bravery potion
+weight=25g
+tradeable=no
+
+[viyeldihat]
+desc=A strange blue wizards hat.
+cost=2
+model=obj_bluewizhat
+members=yes
+2dxof=5
+2dyof=-10
+2dzoom=800
+2dyan=156
+2dxan=152
+iop2=Wear
+manwear=obj_bluewizhat_manwear,0
+womanwear=obj_bluewizhat_womanwear,0
+manhead=obj_bluewizhat_manhead
+womanhead=obj_bluewizhat_womanhead
+name=Blue hat
+wearpos=hat
+weight=1lb
+param=magicattack,3
+tradeable=no
+param=magicdefence,2
+
+[heartcrystal_sectiona]
+desc=It looks like it's been snapped off of something.
+model=obj_heartcrystal_sectiona
+members=yes
+2dxof=2
+2dyof=1
+2dzoom=660
+name=Chunk of crystal
+weight=50g
+tradeable=no
+param=crystal_bit,^legends_smelting_chunk
+
+[heartcrystal_sectionb]
+desc=It looks like it's been snapped off of something.
+model=obj_heartcrystal_sectionb
+members=yes
+2dxof=2
+2dyof=1
+2dzoom=660
+name=Hunk of crystal
+weight=50g
+tradeable=no
+param=crystal_bit,^legends_smelting_hunk
+
+[heartcrystal_sectionc]
+desc=It looks like it's been snapped off of something.
+model=obj_heartcrystal_sectionc
+members=yes
+2dxof=6
+2dyof=6
+2dzoom=510
+2dyan=60
+name=Lump of crystal
+weight=50g
+tradeable=no
+param=crystal_bit,^legends_smelting_lump
+
+[heartcrystal]
+desc=A heart shaped crystal.
+model=obj_heartcrystal
+members=yes
+2dxof=2
+2dyof=1
+2dzoom=660
+iop1=Look-at
+name=Heart crystal
+weight=150g
+tradeable=no
+
+[heartcrystal_glow]
+desc=A heart shaped crystal.
+model=obj_heartcrystal_glow
+members=yes
+2dxof=2
+2dyof=1
+2dzoom=660
+iop1=Look-at
+name=Heart crystal
+weight=150g
+tradeable=no
+
+[deathdagger]
+model=obj_deathdagger
+members=yes
+2dxof=1
+2dzoom=1000
+2dyan=248
+2dxan=412
+desc=A black obsidian dagger, it has a strange aura about it.
+iop2=Wield
+manwear=obj_deathdagger_manwear,0
+womanwear=obj_deathdagger_manwear,6
+name=Dark dagger
+wearpos=righthand
+category=weapon_stab
+weight=1lb
+param=stabattack,5
+tradeable=no
+param=slashattack,3
+param=crushattack,-4
+param=magicattack,1
+param=magicdefence,1
+param=stabattack_anim,human_sword_stab
+param=slashattack_anim,human_sword_slash
+param=defend_anim,human_sword_def
+param=stab_sound,stabsword_stab
+param=slash_sound,stabsword_slash
+param=strengthbonus,7
+
+[deathdaggerdone]
+model=obj_deathdaggerdone
+2dxof=1
+2dzoom=1000
+2dyan=248
+2dxan=412
+desc=A black obsidian dagger, it has a strange aura about it - it seems to be glowing.
+members=yes
+iop2=Wield
+manwear=obj_deathdaggerdone_manwear,0
+womanwear=obj_deathdaggerdone_manwear,6
+name=Glowing dagger
+wearpos=righthand
+category=weapon_stab
+weight=1lb
+param=stabattack,5
+tradeable=no
+param=slashattack,3
+param=crushattack,-4
+param=magicattack,1
+param=magicdefence,1
+param=stabattack_anim,human_sword_stab
+param=slashattack_anim,human_sword_slash
+param=defend_anim,human_sword_def
+param=stab_sound,stabsword_stab
+param=slash_sound,stabsword_slash
+
+[holyforce]
+desc=A powerful spell for good.
+model=obj_holyforce
+members=yes
+2dyof=17
+2dzoom=1460
+2dyan=112
+2dxan=272
+iop1=Cast Spell
+name=Holy force
+weight=20g
+tradeable=no
+
+[thtotempole]
+desc=A well carved totem pole made from the trunk of a Yommi tree.
+members=yes
+model=totem_pole_8
+2dxof=-84
+2dyof=-51
+2dzoom=4070
+2dyan=132
+2dzan=1780
+name=Yommi totem
+weight=3kg
+tradeable=no
+
+[thtotempolegift]
+desc=A gilded totem pole from the Kharazi tribe.
+model=totem_pole_8
+2dxof=-84
+2dyof=-51
+2dzoom=4070
+2dyan=132
+2dzan=1780
+members=yes
+recol1s=6315
+recol1d=62992
+recol2s=8596
+recol2d=10178
+recol3s=127
+recol3d=670
+recol4s=10126
+recol4d=10178
+name=Gilded totem
+weight=3kg
+tradeable=no

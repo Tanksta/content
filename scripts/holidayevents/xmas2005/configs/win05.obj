@@ -1,0 +1,851 @@
+
+[win05_starbauble_unpainted]
+desc=An unpainted bauble shaped like a star.
+model=obj_win05_starbauble_unpainted
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+name=Star bauble
+
+
+[win05_starbauble_yellow]
+desc=A bauble shaped like a star painted yellow.
+model=obj_win05_starbauble_yellow
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+name=Star bauble
+
+
+[win05_starbauble_red]
+desc=A bauble shaped like a star painted red.
+model=obj_win05_starbauble_yellow
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+recol1s=11187
+recol1d=695
+name=Star bauble
+
+
+[win05_starbauble_blue]
+desc=A bauble shaped like a star painted blue.
+model=obj_win05_starbauble_yellow
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+recol1s=11187
+recol1d=40772
+name=Star bauble
+
+
+[win05_starbauble_green]
+desc=A bauble shaped like a star painted green.
+model=obj_win05_starbauble_yellow
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+recol1s=11187
+recol1d=22340
+name=Star bauble
+
+
+[win05_starbauble_pink]
+desc=A bauble shaped like a star painted pink.
+model=obj_win05_starbauble_yellow
+2dxof=1
+2dyof=4
+2dzoom=465
+2dyan=297
+2dxan=194
+recol1s=11187
+recol1d=55108
+name=Star bauble
+
+
+[win05_boxbauble_unpainted]
+desc=An unpainted bauble shaped like a gift.
+model=obj_win05_boxbauble_unpainted
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+name=Box bauble
+
+
+[win05_boxbauble_yellow]
+desc=A bauble shaped like a gift painted yellow.
+model=obj_win05_boxbauble_yellow
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+name=Box bauble
+
+
+[win05_boxbauble_red]
+desc=A bauble shaped like a gift painted red.
+model=obj_win05_boxbauble_yellow
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+recol1s=11187
+recol1d=695
+name=Box bauble
+
+
+[win05_boxbauble_blue]
+desc=A bauble shaped like a gift painted blue.
+model=obj_win05_boxbauble_yellow
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+recol1s=11187
+recol1d=40772
+name=Box bauble
+
+
+[win05_boxbauble_green]
+desc=A bauble shaped like a gift painted green.
+model=obj_win05_boxbauble_yellow
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+recol1s=11187
+recol1d=22340
+name=Box bauble
+
+
+[win05_boxbauble_pink]
+desc=A bauble shaped like a gift painted pink.
+model=obj_win05_boxbauble_yellow
+2dxof=1
+2dyof=-1
+2dzoom=854
+2dyan=1904
+2dxan=138
+recol1s=11187
+recol1d=55108
+name=Box bauble
+
+
+[win05_diamondbauble_unpainted]
+desc=An unpainted bauble shaped like a diamond.
+model=obj_win05_diamondbauble_unpainted
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+name=Diamond bauble
+
+
+[win05_diamondbauble_yellow]
+desc=A bauble shaped like a diamond painted yellow.
+model=obj_win05_diamondbauble_yellow
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+name=Diamond bauble
+
+
+[win05_diamondbauble_red]
+desc=A bauble shaped like a diamond painted red.
+model=obj_win05_diamondbauble_yellow
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+recol1s=11187
+recol1d=695
+name=Diamond bauble
+
+
+[win05_diamondbauble_blue]
+desc=A bauble shaped like a diamond painted blue.
+model=obj_win05_diamondbauble_yellow
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+recol1s=11187
+recol1d=40772
+name=Diamond bauble
+
+
+[win05_diamondbauble_green]
+desc=A bauble shaped like a diamond painted green.
+model=obj_win05_diamondbauble_yellow
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+recol1s=11187
+recol1d=22340
+name=Diamond bauble
+
+
+[win05_diamondbauble_pink]
+desc=A bauble shaped like a diamond painted pink.
+model=obj_win05_diamondbauble_yellow
+2dxof=1
+2dyof=5
+2dzoom=724
+2dyan=1980
+2dxan=186
+recol1s=11187
+recol1d=55108
+name=Diamond bauble
+
+
+[win05_treebauble_unpainted]
+desc=An unpainted bauble shaped like a wintumber tree.
+model=obj_win05_treebauble_unpainted
+2dzoom=530
+name=Tree bauble
+
+
+[win05_treebauble_yellow]
+desc=A bauble shaped like a wintumber tree painted yellow.
+model=obj_win05_treebauble_yellow
+2dzoom=530
+name=Tree bauble
+
+
+[win05_treebauble_red]
+desc=A bauble shaped like a wintumber tree painted red.
+model=obj_win05_treebauble_yellow
+2dzoom=530
+recol1s=11187
+recol1d=695
+name=Tree bauble
+
+
+[win05_treebauble_blue]
+desc=A bauble shaped like a wintumber tree painted blue.
+model=obj_win05_treebauble_yellow
+2dzoom=530
+recol1s=11187
+recol1d=40772
+name=Tree bauble
+
+
+[win05_treebauble_green]
+desc=A bauble shaped like a wintumber tree painted green.
+model=obj_win05_treebauble_yellow
+2dzoom=530
+recol1s=11187
+recol1d=22340
+name=Tree bauble
+
+
+[win05_treebauble_pink]
+desc=A bauble shaped like a wintumber tree painted pink.
+model=obj_win05_treebauble_yellow
+2dzoom=530
+recol1s=11187
+recol1d=55108
+name=Tree bauble
+
+
+[win05_bellbauble_unpainted]
+desc=An unpainted bauble shaped like a bell.
+model=obj_win05_bellbauble_unpainted
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+name=Bell bauble
+
+
+[win05_bellbauble_yellow]
+desc=A bauble shaped like a bell painted yellow.
+model=obj_win05_bellbauble_yellow
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+name=Bell bauble
+
+
+[win05_bellbauble_red]
+desc=A bauble shaped like a bell painted red.
+model=obj_win05_bellbauble_yellow
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+recol1s=11187
+recol1d=695
+name=Bell bauble
+
+
+[win05_bellbauble_blue]
+desc=A bauble shaped like a bell painted blue.
+model=obj_win05_bellbauble_yellow
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+recol1s=11187
+recol1d=40772
+name=Bell bauble
+
+
+[win05_bellbauble_green]
+desc=A bauble shaped like a bell painted green.
+model=obj_win05_bellbauble_yellow
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+recol1s=11187
+recol1d=22340
+name=Bell bauble
+
+
+[win05_bellbauble_pink]
+desc=A bauble shaped like a bell painted pink.
+model=obj_win05_bellbauble_yellow
+2dyof=-5
+2dzoom=661
+2dyan=84
+2dxan=138
+recol1s=11187
+recol1d=55108
+name=Bell bauble
+
+
+[win05_20puppet_box]
+desc=A box for storing completed puppets.
+model=obj_win05_20puppet_box
+2dzoom=3408
+2dyan=144
+2dxan=138
+iop1=Examine-closer
+name=Puppet box
+
+
+[win05_20bauble_box]
+desc=A box for storing painted baubles.
+model=obj_win05_20bauble_box
+2dyof=-8
+2dzoom=3189
+2dyan=207
+2dxan=165
+iop1=Examine-closer
+name=Bauble box
+
+
+[win05_20puppet_box_full]
+desc=A box full of puppets. Bring to the Taverly members gate.
+model=obj_win05_20puppet_box_full
+2dzoom=3408
+2dyan=144
+2dxan=138
+iop5=Destroy
+name=Puppet box
+
+
+[win05_20bauble_box_full]
+desc=A box full of painted baubles. Give to a Pixie or use to decorate a tree.
+model=obj_win05_20bauble_box_full
+2dyof=-8
+2dzoom=3189
+2dyan=207
+2dxan=165
+iop5=Destroy
+name=Bauble box
+
+
+[win05_hat1]
+desc=A woolly bobble hat.
+model=obj_win05_hat1
+2dxof=1
+2dyof=-1
+2dzoom=512
+2dyan=270
+2dxan=99
+iop2=Wear
+manwear=obj_win05_hat1_manwear,0
+womanwear=obj_win05_hat1_womanwear,0
+wearpos=hat
+manhead=obj_win05_hat1_manhead
+womanhead=obj_win05_hat1_womanhead
+iop5=Destroy
+name=Bobble hat
+
+
+[win05_scarf1]
+desc=A woolly scarf.
+model=obj_win05_scarf1
+2dxof=3
+2dyof=-1
+2dzoom=659
+2dyan=207
+2dxan=511
+iop2=Wear
+manwear=obj_win05_scarf1_manwear,0
+womanwear=obj_win05_scarf1_womanwear,0
+wearpos=front
+iop5=Destroy
+name=Bobble scarf
+
+
+[win05_hat2]
+desc=A woolly jester hat.
+model=obj_win05_hat2
+2dxof=1
+2dyof=1
+2dzoom=724
+2dyan=2006
+2dxan=93
+iop2=Wear
+manwear=obj_win05_hat2_manwear,0
+womanwear=obj_win05_hat2_womanwear,0
+wearpos=hat
+manhead=obj_win05_hat2_manhead
+womanhead=obj_win05_hat2_womanhead
+iop5=Destroy
+name=Jester hat
+
+
+[win05_scarf2]
+desc=A woolly jester scarf.
+model=obj_win05_scarf2
+2dxof=1
+2dyof=-1
+2dzoom=659
+2dyan=207
+2dxan=511
+iop2=Wear
+manwear=obj_win05_scarf2_manwear,0
+womanwear=obj_win05_scarf2_womanwear,0
+wearpos=front
+iop5=Destroy
+name=Jester scarf
+
+
+[win05_hat3]
+desc=A woolly tripple bobble jester hat.
+model=obj_win05_hat3
+2dxof=1
+2dyof=-7
+2dzoom=592
+2dyan=267
+2dxan=171
+iop2=Wear
+manwear=obj_win05_hat3_manwear,0
+womanwear=obj_win05_hat3_womanwear,0
+wearpos=hat
+manhead=obj_win05_hat3_manhead
+womanhead=obj_win05_hat3_womanhead
+iop5=Destroy
+name=Tri-jester hat
+
+
+[win05_scarf3]
+desc=A woolly jester scarf.
+model=obj_win05_scarf3
+2dxof=1
+2dyof=-1
+2dzoom=659
+2dyan=207
+2dxan=511
+iop2=Wear
+manwear=obj_win05_scarf3_manwear,0
+womanwear=obj_win05_scarf3_womanwear,0
+wearpos=front
+iop5=Destroy
+name=Tri-jester scarf
+
+
+[win05_hat4]
+desc=A woolly tabogganing hat.
+model=obj_win05_hat4
+2dxof=-1
+2dyof=-1
+2dzoom=659
+2dyan=1425
+2dxan=124
+iop2=Wear
+manwear=obj_win05_hat4_manwear,0
+womanwear=obj_win05_hat4_womanwear,0
+wearpos=hat
+manhead=obj_win05_hat4_manhead
+womanhead=obj_win05_hat4_womanhead
+iop5=Destroy
+name=Woolly hat
+
+
+[win05_scarf4]
+desc=A woolly tabogganing hat.
+model=obj_win05_scarf4
+2dxof=1
+2dyof=-1
+2dzoom=659
+2dyan=207
+2dxan=511
+iop2=Wear
+manwear=obj_win05_scarf4_manwear,0
+womanwear=obj_win05_scarf4_womanwear,0
+wearpos=front
+iop5=Destroy
+name=Woolly scarf
+
+
+[win05_marionette_handle]
+desc=The controlling part of a marionette.
+iop2=Wear
+cost=60000
+model=obj_win05_marionette_handle
+2dxof=42
+2dyof=100
+2dzoom=724
+2dyan=180
+2dxan=166
+manwear=obj_win05_marionette_handle,0
+womanwear=obj_win05_marionette_handle,0
+wearpos=righthand
+name=Marionette handle
+
+
+[win05_marionette_complete_blue_alive]
+desc=I've got no strings ... oh hang on!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=1
+2dyof=8
+2dzoom=1368
+2dxan=512
+iop1=Jump
+iop2=Walk
+iop3=Bow
+iop4=Dance
+iop5=Destroy
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_complete_green_alive]
+desc=I've got no strings ... oh hang on!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=1
+2dyof=8
+2dzoom=1368
+2dxan=512
+iop1=Jump
+iop2=Walk
+iop3=Bow
+iop4=Dance
+iop5=Destroy
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette
+
+
+[win05_marionette_complete_red_alive]
+desc=I've got no strings ... oh hang on!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=1
+2dyof=8
+2dzoom=1368
+2dxan=512
+iop1=Jump
+iop2=Walk
+iop3=Bow
+iop4=Dance
+iop5=Destroy
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_complete_blue]
+desc=I want to be a real boy!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_complete_green]
+desc=I want to be a real boy!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette
+
+
+[win05_marionette_complete_red]
+desc=I want to be a real boy!
+model=obj_win05_marionette_complete_blue_alive
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_stage1_red]
+desc=The torso of a marionette.
+model=obj_win05_marionette_stage1_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_stage2_red]
+desc=The torso and head of a marionette.
+model=obj_win05_marionette_stage2_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_stage3_red]
+desc=The torso, head and arms of a marionette.
+model=obj_win05_marionette_stage3_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_stage4_red]
+desc=No strings attached.
+model=obj_win05_marionette_stage4_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=553
+recol2s=6573
+recol2d=920
+recol3s=5543
+recol3d=912
+name=Red marionette
+
+
+[win05_marionette_stage1_blue]
+desc=Needs a head.
+model=obj_win05_marionette_stage1_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_stage2_blue]
+desc=Needs arms.
+model=obj_win05_marionette_stage2_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_stage3_blue]
+desc=Needs legs.
+model=obj_win05_marionette_stage3_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_stage4_blue]
+desc=No strings attached.
+model=obj_win05_marionette_stage4_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=43579
+recol2s=6573
+recol2d=42795
+recol3s=5543
+recol3d=42910
+name=Blue marionette
+
+
+[win05_marionette_stage1_green]
+desc=Needs a head.
+model=obj_win05_marionette_stage1_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette
+
+
+[win05_marionette_stage2_green]
+desc=Needs arms.
+model=obj_win05_marionette_stage2_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette
+
+
+[win05_marionette_stage3_green]
+desc=Needs legs.
+model=obj_win05_marionette_stage3_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette
+
+
+[win05_marionette_stage4_green]
+desc=No strings attached.
+model=obj_win05_marionette_stage4_red
+2dxof=4
+2dyof=86
+2dzoom=984
+2dyan=126
+2dxan=282
+recol1s=6457
+recol1d=22305
+recol2s=6573
+recol2d=22424
+recol3s=5543
+recol3d=22416
+name=Green marionette

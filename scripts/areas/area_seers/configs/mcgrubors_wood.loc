@@ -1,0 +1,115 @@
+[mcgruborlooserailing]
+sharelight=yes
+hillskew=yes
+op1=Squeeze-through
+model=railing
+name=Loose Railing
+desc=Hmmm... I wonder if it's loose enough to get through.
+
+[mcgruborgatel]
+op1=Open
+model=ikov_mendedleverdoorl
+name=Gate
+desc=It's locked.
+category=mcgrubor_gate
+
+[mcgruborgater]
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+name=Gate
+desc=It's locked.
+category=mcgrubor_gate
+
+[red_worm_vine]
+op1=Check
+hillskew=yes
+sharelight=yes
+blockwalk=no
+blockrange=no
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=red_worm_vine
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_end]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_end
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_junction]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_junction
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_diag1]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_diag1
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_diag3]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_diag3
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_diagfiller]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_diagfiller
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine
+
+[red_worm_end_diag]
+op1=Check
+hillskew=yes
+sharelight=yes
+recol1s=929
+recol1d=1688
+recol2s=931
+recol2d=1812
+model=redvine_end_diag
+name=Vine
+desc=Known commonly as Red worm vine.
+category=red_vine

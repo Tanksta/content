@@ -1,0 +1,12 @@
+[newcomer_map]
+desc=Issued by RuneScape Council to all new citizens.
+model=obj_newcomer_map
+2dxof=-1
+2dyof=56
+2dzoom=990
+2dyan=1716
+2dxan=264
+iop1=Read
+cost=1
+name=Newcomer map
+weight=18oz

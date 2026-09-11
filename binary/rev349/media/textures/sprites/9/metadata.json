@@ -1,0 +1,35 @@
+{
+  "member": "9.dat",
+  "palette": [
+    0,
+    11960121,
+    12356425,
+    11564580,
+    10840602,
+    10639109,
+    10771990,
+    10048260,
+    9854233,
+    9392646,
+    8866052,
+    8667651,
+    9652224,
+    8337920,
+    9717769,
+    9655057
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/9/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 1
+    }
+  ]
+}

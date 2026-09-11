@@ -1,0 +1,15 @@
+type=layer
+width=512
+height=334
+
+[inv]
+x=16
+y=8
+type=inv
+width=4
+height=7
+margin=10,4
+option1=Value
+option2=Sell 1
+option3=Sell 5
+option4=Sell 10

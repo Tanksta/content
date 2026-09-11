@@ -1,0 +1,11 @@
+[mapletree]
+width=2
+mapscene=2
+length=2
+op1=Chop down
+ambient=25
+model=obj_reinitialisation_04
+name=Maple tree
+desc=I bet this makes good syrup!
+category=tree
+param=next_loc_stage,treestump2_green

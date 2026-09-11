@@ -1,0 +1,147 @@
+[broken_multicannon]
+length=3
+width=3
+op1=Inspect
+model=broken_multicannon
+name=Broken MultiCannon
+desc=A powerful ranging device, unfortunately not working.
+
+[dwarf_multicannon1]
+length=3
+width=3
+op1=Fire
+op2=Pick-up
+blockrange=no
+blockwalk=no
+model=broken_multicannon
+name=Dwarf MultiCannon
+desc=A powerful ranging device that fires metal balls.
+
+[multicannon_base]
+length=3
+width=3
+op1=Pick-up
+blockwalk=no
+model=multicannon_base
+name=Cannon base
+desc=The cannon is built on here.
+
+[multicannon_stand]
+length=3
+width=3
+op1=Pick-up
+blockwalk=no
+model=multicannon_stand
+name=Cannon stand
+desc=The mounting for the multicannon.
+
+[multicannon_barrels]
+length=3
+width=3
+op1=Pick-up
+blockwalk=no
+model=multicannon_barrels
+name=Cannon base
+desc=The barrels of the multicannon.
+
+[mcannondoor]
+active=yes
+op1=Open
+model=door1
+name=Door
+desc=The door is closed.
+param=next_loc_stage,elenagateopen
+
+[mcannondoor1]
+active=yes
+op1=Open
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+model=door1
+name=Door
+desc=The door is closed.
+param=next_loc_stage,elenagateopen
+
+[mcannonplain]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing1]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing2]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing3]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing4]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing5]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannonrailing6]
+sharelight=yes
+hillskew=yes
+blockrange=no
+op1=Inspect
+model=railing
+name=Railing
+desc=Intended to keep the goblins away from the mines.
+
+[mcannoncave]
+width=4
+length=2
+forceapproach=11
+op1=Enter
+model=caveentrance
+name=Cave Entrance
+desc=Looks and smells like a place where goblins live.
+
+[mcanmudpile]
+length=2
+shadow=no
+blockrange=no
+hillskew=yes
+op1=Climb-over
+model=mudpile
+name=Mud pile
+desc=Mud caved in from above.

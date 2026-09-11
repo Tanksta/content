@@ -1,0 +1,11 @@
+[merlin_beehive]
+active=yes
+op1=Take-from
+model=merlin_beehive
+name=Beehive
+desc=Where bees live.
+
+[beehive]
+model=merlin_beehive
+name=Beehive
+desc=Where bees live.

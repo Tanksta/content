@@ -1,0 +1,27 @@
+{
+  "member": "22.dat",
+  "palette": [
+    0,
+    2627599,
+    3678741,
+    4927003,
+    6306339,
+    7226152,
+    8080173,
+    9262643
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/22/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 0
+    }
+  ]
+}

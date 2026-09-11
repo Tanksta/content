@@ -1,0 +1,111 @@
+[scorpioncageempty]
+members=yes
+model=obj_scorpioncageempty
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+cost=10
+desc=It's empty!
+name=Scorpion cage
+weight=150g
+category=scorpcage
+tradeable=no
+
+[scorpioncagea]
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+cost=10
+desc=There is 1 scorpion inside.
+name=Scorpion cage
+weight=175g
+category=scorpcage
+tradeable=no
+
+[scorpioncageab]
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+cost=10
+desc=There are 2 scorpions inside.
+name=Scorpion cage
+weight=200g
+category=scorpcage
+tradeable=no
+
+[scorpioncageac]
+cost=10
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+desc=There are 2 scorpions inside.
+name=Scorpion cage
+weight=200g
+category=scorpcage
+tradeable=no
+
+[scorpioncageb]
+cost=10
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+desc=There is 1 scorpion inside.
+name=Scorpion cage
+weight=175g
+category=scorpcage
+tradeable=no
+
+[scorpioncagebc]
+desc=There are 2 scorpions inside.
+cost=10
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+name=Scorpion cage
+weight=200g
+category=scorpcage
+tradeable=no
+
+[scorpioncagec]
+cost=10
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+desc=There is 1 scorpion inside.
+name=Scorpion cage
+weight=175g
+category=scorpcage
+tradeable=no
+
+[scorpioncagefull]
+members=yes
+model=obj_scorpioncagea
+2dxof=-5
+2dzoom=1730
+2dyan=1904
+2dxan=156
+cost=10
+desc=There are 3 scorpions inside.
+name=Scorpion cage
+weight=225g
+category=scorpcage
+tradeable=no

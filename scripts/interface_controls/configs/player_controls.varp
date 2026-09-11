@@ -1,0 +1,9 @@
+[option_nodef]
+protect=no
+transmit=yes
+scope=perm
+
+[option_run]
+clientcode=7
+protect=no
+transmit=yes

@@ -1,0 +1,20 @@
+[chadwell]
+vislevel=hide
+desc=Shop keeper.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+op3=Trade
+name=Chadwell
+model1=obj_feud_desert_disguise_manwear
+model2=obj_priest_gown_manwear
+model3=obj_macro_mime_legs_manwear
+model4=idk_man_jaw_none
+model5=npc_barbarian
+model6=idk_42
+model7=obj_cert_drill_top_manwear3
+head1=obj_leather_cowl_manhead2
+category=shop_keeper
+param=owned_shop,upassgeneralshop
+param=shop_title,West Ardougne General Store
+moverestrict=indoors

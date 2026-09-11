@@ -1,0 +1,317 @@
+[regicide_quest_kings_summons]
+desc=A summons from King Lathas.
+model=obj_recommendedletter
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+cost=1
+iop1=Read
+name=King's message
+weight=2oz
+tradeable=no
+
+[regicide_iorwerth_message]
+desc=A letter for King Lathas from Lord Iorwerth.
+model=obj_recommendedletter
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+members=yes
+cost=1
+iop1=Read
+name=Iorwerths message
+weight=2oz
+tradeable=no
+
+[regicide_crystal_pendant]
+desc=Lord Iorwerth's crystal pendant.
+model=obj_glarials_amulet_waterfall_quest
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+cost=10
+iop2=Wear
+manwear=obj_glarials_amulet_waterfall_quest_manwear,0
+womanwear=obj_glarials_amulet_waterfall_quest_womanwear,0
+name=Crystal pendant
+wearpos=front
+weight=5g
+tradeable=no
+
+[regicide_sulphar]
+desc=A piece of sulphur formation.
+model=obj_regicide_sulphar
+2dxof=5
+2dyof=-24
+2dzoom=1340
+2dyan=1960
+2dxan=196
+members=yes
+name=Sulphur
+weight=10g
+tradeable=no
+param=grindable_ingredient_refined,regicide_sulphar_dust
+
+[limestone]
+cost=10
+desc=Some limestone.
+model=obj_limestone
+members=yes
+2dxof=-7
+2dyof=-41
+2dyan=164
+2dxan=220
+name=Limestone
+weight=5lb
+
+[regicide_quicklime]
+cost=4
+desc=Some quicklime.
+model=obj_limestone
+2dxof=-7
+2dyof=-41
+2dyan=164
+2dxan=220
+members=yes
+recol1s=10295
+recol1d=54397
+name=Quicklime
+weight=5lb
+tradeable=no
+
+[regicide_quicklime_dust]
+cost=5
+desc=A pot of ground quicklime.
+model=obj_pot_flour
+2dxof=1
+2dyof=15
+2dzoom=1400
+2dyan=1576
+2dxan=368
+members=yes
+recol1s=82
+recol1d=54397
+name=Pot of quicklime
+weight=1lb
+tradeable=no
+
+[regicide_sulphar_dust]
+desc=A pile of ground sulphur.
+cost=5
+model=obj_unicorn_horn_dust
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+members=yes
+recol1s=82
+recol1d=11200
+name=Ground sulphur
+weight=2oz
+tradeable=no
+
+[regicide_barrel_empty]
+desc=An empty barrel.
+model=obj_regicide_barrel_empty
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+name=Barrel
+weight=10kg
+tradeable=no
+
+[regicide_barrel_lid]
+desc=A barrel full of fire oil.
+model=obj_regicide_barrel_lid
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+name=Barrel bomb
+weight=32kg
+tradeable=no
+
+[regicide_barrel_lid_fused]
+desc=A fused barrel full of fire oil.
+model=obj_regicide_barrel_lid
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+name=Barrel bomb
+weight=32kg
+tradeable=no
+
+[regicide_barrel_tar]
+desc=A barrel full of coal-tar.
+model=obj_regicide_barrel_tar
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+name=Barrel of coal-tar
+weight=32kg
+tradeable=no
+
+[regicide_barrel_naphtha]
+desc=A barrel full of naphtha.
+model=obj_regicide_barrel_naphtha
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+name=Barrel of naphtha
+weight=32kg
+tradeable=no
+
+[regicide_barrel_naphtha_sulphar_mix]
+desc=A barrel full of naphtha and sulphur.
+model=obj_regicide_barrel_naphtha
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+recol1s=61
+recol1d=11200
+name=Naphtha mix
+weight=32kg
+tradeable=no
+
+[regicide_barrel_naphtha_quicklime_mix]
+desc=A barrel full of naphtha and quicklime.
+model=obj_regicide_barrel_naphtha
+2dxof=-3
+2dyof=-3
+2dzoom=1660
+2dyan=1976
+2dxan=152
+members=yes
+recol1s=61
+recol1d=127
+name=Naphtha mix
+weight=32kg
+tradeable=no
+
+[regicide_cloth]
+desc=A bolt of cloth.
+cost=10
+model=obj_childs_blanket
+2dyof=-15
+2dzoom=1360
+2dxan=368
+members=yes
+recol1s=7390
+recol1d=43115
+name=Cloth
+weight=12oz
+tradeable=no
+
+[raw_rabbit]
+desc=Might taste better cooked.
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+cost=1
+members=yes
+name=Raw rabbit
+weight=6oz
+category=cooking_generic
+
+[cooked_rabbit]
+desc=Mmm this looks tasty.
+iop1=Eat
+cost=4
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+members=yes
+recol1s=947
+recol1d=5027
+recol2s=127
+recol2d=2613
+name=Cooked rabbit
+weight=5oz
+category=meat
+
+[regicide_alchemy]
+desc=A book by Mel Achy.
+cost=1
+model=obj_digsitebook
+2dzoom=840
+2dyan=152
+2dxan=256
+members=yes
+iop1=Read
+recol1s=47677
+recol1d=9104
+recol2s=10351
+recol2d=54482
+name=Big book of bangs
+weight=8oz
+tradeable=no
+
+[regicide_alchemy_symbol1]
+model=obj_regicide_alchemy_symbol1
+2dxof=-2
+2dyof=7
+2dzoom=1890
+2dxan=496
+name=Symbol1
+weight=1g
+tradeable=no
+
+[regicide_alchemy_symbol2]
+model=obj_regicide_alchemy_symbol2
+2dxof=-2
+2dyof=7
+2dzoom=1890
+2dxan=496
+name=Symbol2
+weight=1g
+tradeable=no
+
+[regicide_alchemy_symbol3]
+model=obj_regicide_alchemy_symbol3
+2dxof=-2
+2dyof=7
+2dzoom=1890
+2dxan=496
+name=Symbol3
+weight=1g
+tradeable=no
+
+[regicide_alchemy_symbol4]
+model=obj_regicide_alchemy_symbol4
+2dxof=-2
+2dyof=7
+2dzoom=1890
+2dxan=496
+name=Symbol4
+weight=1g
+tradeable=no

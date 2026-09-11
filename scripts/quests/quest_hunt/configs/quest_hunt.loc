@@ -1,0 +1,28 @@
+[wydindoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+
+[grocerycrate]
+op1=Search
+model=merlincrate_empty
+name=Crate
+desc=Used for storage.
+
+[piratechest]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[piratechestopen]
+active=no
+forceapproach=14
+model=arena_guard_chest_open

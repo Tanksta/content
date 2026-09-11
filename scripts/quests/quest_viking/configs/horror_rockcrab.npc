@@ -1,0 +1,71 @@
+[horror_rockcrab]
+desc=No one likes crabs...
+walkanim=horror_crab_walk
+readyanim=horror_crab_ready
+minimap=no
+op2=Attack
+vislevel=13
+name=Rock Crab
+model1=npc_1265
+model2=npc_1265i2
+wanderrange=7
+maxrange=9
+respawnrate=100
+hitpoints=50
+param=death_drop,null
+
+[horror_rockcrab_inactive]
+vislevel=hide
+desc=A rocky outcrop.
+walkanim=horror_crab_walk
+readyanim=horror_crab_hide_ready
+minimap=no
+name=Rocks
+model1=npc_1265
+model2=npc_1265i2
+wanderrange=0
+maxrange=9
+respawnrate=100
+hitpoints=50
+param=death_drop,null
+huntrange=1
+attackrange=1
+huntmode=aggressive_ranged
+
+[horror_rockcrab_small]
+desc=No one likes crabs...
+walkanim=horror_crab_walk
+readyanim=horror_crab_ready
+resizeh=84
+resizev=84
+minimap=no
+op2=Attack
+vislevel=13
+name=Rock Crab
+model1=npc_1265
+model2=npc_1265i2
+wanderrange=7
+maxrange=9
+respawnrate=100
+hitpoints=50
+param=death_drop,null
+
+[horror_rockcrab_small_inactive]
+vislevel=hide
+desc=A rocky outcrop.
+walkanim=horror_crab_walk
+readyanim=horror_crab_hide_ready
+resizeh=84
+resizev=84
+minimap=no
+name=Rocks
+model1=npc_1265
+model2=npc_1265i2
+wanderrange=0
+maxrange=9
+respawnrate=100
+hitpoints=50
+param=death_drop,null
+huntrange=1
+attackrange=1
+huntmode=aggressive_ranged

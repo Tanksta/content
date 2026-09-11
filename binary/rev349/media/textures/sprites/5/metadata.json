@@ -1,0 +1,39 @@
+{
+  "member": "5.dat",
+  "palette": [
+    0,
+    2233090,
+    2430980,
+    1904640,
+    1707008,
+    2627075,
+    2693381,
+    2759433,
+    2100736,
+    3153418,
+    3154189,
+    1378560,
+    2299144,
+    2957324,
+    2430984,
+    1115136,
+    852480,
+    3285777,
+    3023120,
+    2759952
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/5/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 0
+    }
+  ]
+}

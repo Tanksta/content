@@ -1,0 +1,49 @@
+[zamorakghost]
+desc=Spooky!
+walkanim=ghost_walk
+readyanim=ghost_ready
+op1=Talk-to
+op2=Attack
+vislevel=24
+name=Ghost
+model1=npc_ghost
+model2=npc_ghosti2
+model3=npc_ghosti3
+head1=npc_zamorakghost_head
+respawnrate=100
+hitpoints=20
+attack=23
+strength=20
+defence=23
+param=damagetype,^crush_style
+
+[spirit_of_scorpius]
+vislevel=hide
+desc=The essence of evil.
+walkanim=ghost_walk
+readyanim=ghost_ready
+op1=Talk-to
+name=Spirit of Scorpius
+model1=npc_ghost
+model2=npc_ghosti2
+model3=npc_ghosti3
+head1=npc_zamorakghost_head
+wanderrange=2
+param=undead,^true
+
+[grave_scorpion]
+desc=A vicious little stinging thing.
+walkanim=smallscorpion_walk
+readyanim=smallscorpion_ready
+op2=Attack
+vislevel=12
+name=Grave Scorpion
+model1=npc_smallscorpion
+wanderrange=4
+maxrange=6
+respawnrate=100
+hitpoints=7
+attack=11
+strength=12
+defence=14
+param=slashdefence,3

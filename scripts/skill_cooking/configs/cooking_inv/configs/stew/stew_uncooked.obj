@@ -1,0 +1,26 @@
+[uncooked_stew]
+desc=I need to cook this.
+cost=10
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+recol1s=44263
+recol1d=8755
+name=Uncooked stew
+weight=1500g
+category=cooking_generic
+
+[uncooked_curry]
+desc=I need to cook this.
+cost=10
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+members=yes
+recol1s=44263
+recol1d=6080
+name=Uncooked curry
+weight=1500g
+category=cooking_generic

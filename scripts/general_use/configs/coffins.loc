@@ -1,0 +1,17 @@
+[coffin]
+width=2
+length=2
+op1=Open
+blockrange=no
+model=graveyard_coffin
+name=Coffin
+desc=I hope no-one's home...
+
+[coffin2]
+name=Coffin
+desc=I see dead people.
+model=graveyard_coffin2
+width=2
+length=2
+op1=Close
+blockrange=no

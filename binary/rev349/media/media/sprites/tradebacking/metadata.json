@@ -1,0 +1,23 @@
+{
+  "member": "tradebacking.dat",
+  "palette": [
+    0,
+    4603186,
+    4734515,
+    4800564
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/tradebacking/000.png",
+      "canvasWidth": 88,
+      "canvasHeight": 60,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 88,
+      "height": 60,
+      "encoding": 1
+    }
+  ]
+}

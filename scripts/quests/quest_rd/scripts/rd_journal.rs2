@@ -1,0 +1,77 @@
+[if_button,questlist:rd]
+def_string $text;
+
+if (%rd_main = ^recruitmentdrive_not_started) {
+    $text = "@dbl@I can start this quest by speaking to @dre@Sir Amik Varze@dbl@ in|";
+    $text = append($text, "@dre@Falador Castle@dbl@.||");
+    $text = append($text, "@dbl@Required:|");
+    if (%qp < 12) {
+        $text = append($text, "@dre@12 Quest Points|");
+    } else {
+        $text = append($text, "@str@12 Quest Points|");
+    }
+    if (%spy < ^blackknight_complete) {
+        $text = append($text, "@dre@Black Knights' Fortress|");
+    } else {
+        $text = append($text, "@str@Black Knights' Fortress|");
+    }
+    if (%druidquest < ^druid_complete) {
+        $text = append($text, "@dre@Druidic Ritual|");
+    } else {
+        $text = append($text, "@str@Druidic Ritual|");
+    }
+    $text = append($text, "@dbl@I should bank all items and equipment before testing.");
+    ~quest_journal("Recruitment Drive", $text);
+    return;
+}
+
+if (%rd_main = ^recruitmentdrive_complete) {
+    $text = "@str@Sir Tiffy accepted me for the Temple Knight tests.|";
+    $text = append($text, "@str@I passed five Temple Knight trials, including Sir Leye's|");
+    $text = append($text, "@str@combat trial.||");
+    $text = append($text, "@str@Sir Tiffy welcomed me as an Initiate of the Temple Knights.|");
+    $text = append($text, "@red@QUEST COMPLETE!");
+    ~quest_journal("Recruitment Drive", $text);
+    return;
+}
+
+$text = "@str@Sir Amik Varze recommended me to the Temple Knights.|";
+$text = append($text, "@str@Sir Tiffy accepted me for the Temple Knight tests.|");
+$text = append($text, "@dbl@I need to pass five tests, including Sir Leye's combat trial.|");
+$text = append($text, "@dbl@Tests passed: <tostring(~rd_completed_count)> / 5.||");
+if (%rd_room1_complete = 1) {
+    $text = append($text, "@str@I passed Sir Spishyus' bridge test.|");
+} else {
+    $text = append($text, "@dbl@Sir Spishyus may still test my logic with the bridge.|");
+}
+if (%rd_room2_complete = 1) {
+    $text = append($text, "@str@I solved Lady Table's missing statue test.|");
+} else {
+    $text = append($text, "@dbl@I still need to solve Lady Table's missing statue test.|");
+}
+if (%rd_room3_complete = 1) {
+    $text = append($text, "@str@I defeated Sir Leye.|");
+} else {
+    $text = append($text, "@dbl@I still need to defeat Sir Leye.|");
+}
+if (%rd_room4_complete = 1) {
+    $text = append($text, "@str@I passed Sir Tinley's patience test.|");
+} else {
+    $text = append($text, "@dbl@I still need to pass Sir Tinley's patience test.|");
+}
+if (%rd_room5_complete = 1) {
+    $text = append($text, "@str@I solved Sir Ren Itchood's four-letter riddle.|");
+} else {
+    $text = append($text, "@dbl@I still need to solve Sir Ren Itchood's four-letter riddle.|");
+}
+if (%rd_room6_complete = 1) {
+    $text = append($text, "@str@I solved Miss Cheevers' alchemical door puzzle.|");
+} else {
+    $text = append($text, "@dbl@I still need to solve Miss Cheevers' alchemical door puzzle.|");
+}
+if (%rd_room7_complete = 1) {
+    $text = append($text, "@str@I solved Ms. Hynn Terprett's logic riddle.|");
+} else {
+    $text = append($text, "@dbl@I still need to solve Ms. Hynn Terprett's logic riddle.|");
+}
+~quest_journal("Recruitment Drive", $text);

@@ -1,0 +1,8 @@
+[deadtree_burnt]
+mapscene=6
+op1=Chop down
+model=deadtree_burnt
+name=Dead tree
+desc=It's only useful for firewood now.
+category=tree
+param=next_loc_stage,deadtree_burnt_stump

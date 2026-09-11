@@ -1,0 +1,81 @@
+[sink]
+length=2
+blockrange=no
+model=sink
+name=Sink
+desc=Ideal for washing things in.
+category=watersource
+
+[sink2]
+length=2
+blockrange=no
+retex1s=elfwood
+retex1d=wood2
+model=sink
+name=Sink
+desc=Ideal for washing things in.
+category=watersource
+
+[desertwell]
+blockrange=no
+model=desertwell
+name=Well
+desc=No this is not a mirage!
+category=well
+
+[fountain]
+width=2
+length=2
+mapscene=8
+blockrange=no
+model=fountain
+name=Fountain
+desc=Everyone needs a water feature.
+category=watersource
+
+[goldfountain]
+width=2
+length=2
+mapscene=8
+blockrange=no
+recol1s=28
+recol1d=8103
+recol2s=61
+recol2d=9129
+model=fountain
+name=Fountain
+desc=A beautiful water feature.
+category=watersource
+
+[well]
+width=2
+length=2
+resizex=90
+resizey=100
+resizez=90
+blockrange=no
+ambient=20
+model=well
+name=Well
+desc=Best used with a bucket.
+category=well
+
+[mortton_sink]
+length=2
+blockrange=no
+retex1s=elfwood
+retex1d=wood2
+recol2s=103
+recol2d=6439
+recol3s=90
+recol3d=5537
+retex4s=water
+retex4d=door
+recol5s=960
+recol5d=60719
+recol6s=43968
+recol6d=40237
+model=sink
+name=Sink
+desc=Ideal for washing things in.
+category=watersource

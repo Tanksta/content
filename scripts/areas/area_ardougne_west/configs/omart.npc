@@ -1,0 +1,27 @@
+[omart]
+vislevel=hide
+desc=A nervous looking fellow.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=926
+recol1d=43270
+recol2s=8741
+recol2d=6936
+recol3s=7073
+recol3d=6032
+recol4s=11200
+recol4d=43270
+name=Omart
+model1=npc_omart
+model2=obj_ikov_bootsoflightness_manwear
+model3=idk_man_jaw_split
+model4=obj_leather_armour_manwear
+model5=obj_macro_mime_top_manwear2
+model6=obj_gauntlets_of_cooking_manwear
+model7=idk_man_legs_turn_ups
+head1=npc_omart_head
+head2=idk_man_jaw_split_head
+defaultmode=none
+wanderrange=0
+moverestrict=nomove

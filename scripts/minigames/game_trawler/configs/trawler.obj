@@ -1,0 +1,29 @@
+[bucket_bailing]
+desc=It's a bailing bucket.
+cost=10
+model=prison_bucket_8
+manwear=obj_bucket_bailing_manwear,0
+womanwear=obj_bucket_bailing_manwear,6
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+iop1=Bail-with
+members=yes
+name=Bailing bucket
+weight=1kg
+
+[bucket_bailingfull]
+desc=It's a bailing bucket full of salty water.
+cost=10
+model=obj_bucket_wax
+manwear=obj_bucket_bailing_manwear,0
+womanwear=obj_bucket_bailing_manwear,6
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+iop1=Empty
+members=yes
+name=Bailing bucket
+weight=5kg

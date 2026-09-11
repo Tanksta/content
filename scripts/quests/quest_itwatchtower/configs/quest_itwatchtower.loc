@@ -1,0 +1,384 @@
+[blacksmithtools]
+name=Blacksmith's tools
+desc=Various implements for working with metal.
+model=obj_gold_ring
+active=yes
+
+[ogreguardgate1]
+op1=Open
+active=yes
+model=ikov_mendedleverdoorl
+name=City gate
+desc=An entrance to Gu'Tanoth.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[ogreguardgate1right]
+op1=Open
+active=yes
+mirror=yes
+model=ikov_mendedleverdoorl
+name=City gate
+desc=An entrance to Gu'Tanoth.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563
+
+[ogreguardgate2]
+op1=Open
+active=yes
+model=ikov_mendedleverdoorl
+name=City gate
+desc=An entrance to Gu'Tanoth.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[ogreguardgate2right]
+op1=Open
+active=yes
+mirror=yes
+model=ikov_mendedleverdoorl
+name=City gate
+desc=An entrance to Gu'Tanoth.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563
+
+[tobanchest]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside it.
+
+[empty_rock_cake_counter]
+width=2
+active=yes
+op1=Steal-From
+model=rockcounter
+name=Counter
+desc=A counter made from a stone block.
+
+[rockcounter_withcakes]
+width=2
+active=yes
+op1=Steal-From
+model=rockcounter_withcakes
+name=Counter
+desc=An ogre is selling cakes here.
+
+[watchleverup]
+op1=Pull
+active=yes
+model=ctleverb_q
+name=Lever
+desc=A lever for activating something.
+
+[watchleverdown]
+op1=Pull
+active=yes
+model=ctlevera_q
+name=Lever
+desc=A lever for activating something.
+
+[watchladderup]
+op1=Climb-up
+mapscene=7
+model=ladder
+name=Ladder
+desc=This leads to the watchtower.
+
+[watchladderdown]
+op1=Climb-down
+mapscene=7
+model=model_1754
+name=Ladder
+desc=This leads downwards.
+
+[watchtowerbush]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[watchtowerbushnail]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[watchtowerbushdagger]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[watchtowerbusheyepatch]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[watchtowerbushrobe]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[watchtowerbusharmour]
+op1=Search
+mapscene=9
+model=bush1
+name=Bush
+desc=A leafy bush.
+
+[shamanentrance]
+width=4
+length=2
+op1=Enter
+active=yes
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave1]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave2]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave3]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave4]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave5]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[skavid_cave6]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[tobancave]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[tobanladderdown]
+op1=Climb-down
+mapscene=7
+model=totem_pole_8
+name=Ladder
+desc=This leads downwards.
+
+[enclavecave]
+width=4
+length=2
+op1=Enter
+model=caveentrance
+name=Cave entrance
+desc=I think I can squeeze through here...
+
+[shamangate]
+op1=Open
+model=ikov_mendedleverdoorl
+name=Gate
+desc=The gate has been locked shut.
+
+[shamangate2]
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+name=Gate
+desc=The gate has been locked shut.
+
+[rock_of_dalgroth]
+width=2
+length=2
+mapscene=11
+op1=Prospect
+op2=Mine
+model=rock_of_dalgroth
+name=Rock of Dalgroth
+desc=A strange looking rock...
+
+[cave1exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[cave2exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[cave3exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[cave4exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[cave5exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[cave6exit]
+sharelight=yes
+op1=Leave
+hillskew=yes
+recol1s=12
+recol1d=26
+model=cave_exit
+name=Cave exit
+desc=I think I can get out here...
+
+[yanilleholein]
+op1=Climb-down
+model=hole
+name=Hole
+desc=A hole.
+
+[yanilleholeout]
+model=hole
+name=Hole
+desc=A hole
+
+[darkcave_escape]
+op1=Climb
+model=thzq_tombrooml1_1
+name=Climbing rope
+desc=I hope this leads the way out.
+
+[shuttanothchest1]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside it?
+
+[shuttanothchest2]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside it?
+
+[opentanothchest1]
+op1=Close
+forceapproach=14
+active=no
+model=arena_guard_chest_open
+
+[opentanothchest2]
+active=no
+op1=Close
+forceapproach=14
+model=arena_guard_chest_open
+
+[tanothjump1]
+op1=Jump-From
+model=rock2
+name=Rock
+desc=You can probably jump over from here.
+
+[tanothjump2]
+op1=Jump-From
+model=rock2
+name=Rock
+desc=You can probably jump over from here.
+
+[ganothbattlement]
+active=yes
+blockrange=no
+op1=Climb-over
+model=ganothbattlement
+name=Battlement
+desc=A low wall is blocking your path.
+
+[towerladder]
+op1=Climb-up
+mapscene=7
+model=ladder
+name=Ladder
+desc=This goes up!
+
+[tobanblock]
+op1=Climb-over
+active=yes
+model=crumblywalllow
+name=Battlement
+desc=A low wall is blocking your path.
+
+[darkcaverock]
+op1=Search
+model=rock1
+name=Rock

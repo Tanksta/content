@@ -1,0 +1,115 @@
+[loc_2650]
+width=2
+length=2
+op2=Investigate
+model=hauntedcompostheap
+name=Sinclair family compost heap
+desc=A pile of smelly rotting waste.
+
+[quest_murder_beehive]
+op2=Investigate
+model=merlin_beehive
+name=Sinclair family beehive
+desc=A sturdy home for bees.
+
+[murderdrain]
+op2=Investigate
+model=pipe+drain
+name=Sinclair mansion drain
+desc=Looks like this is where waste from the kitchen comes out.
+
+[loc_2653]
+op2=Investigate
+recol1s=9152
+recol1d=82
+model=floorweb_q
+name=Spiders' nest
+desc=It looks like a spiders' nest to me.
+
+[murderfountain]
+width=2
+length=2
+mapscene=8
+op2=Investigate
+model=fountain
+name=Sinclair family fountain
+desc=This fountain suits the garden.
+category=watersource
+
+[murdersign]
+op2=Investigate
+model=murdersign
+name=Sinclair family crest
+desc=It's the Sinclair Family coat of arms.
+
+[murderbarrela]
+op2=Search
+model=barrel
+name=Anna's barrel
+desc=Looks like this is where Anna keeps her stuff.
+
+[murderbarrelb]
+op2=Search
+model=barrel
+name=Bob's barrel
+desc=Looks like this is where Bob keeps his stuff.
+
+[murderbarrelc]
+op2=Search
+model=barrel
+name=Carol's barrel
+desc=Looks like this is where Carol keeps her stuff.
+
+[murderbarreld]
+op2=Search
+model=barrel
+name=David's barrel
+desc=Looks like this is where David keeps his stuff.
+
+[murderbarrele]
+op2=Search
+model=barrel
+name=Elizabeth's barrel
+desc=Looks like this is where Elizabeth keeps her stuff.
+
+[murderbarrelf]
+op2=Search
+model=barrel
+name=Frank' barrel
+desc=Looks like this is where Frank keeps his stuff.
+
+[flourbarrel]
+op2=Take From
+model=barrel
+name=Barrel of flour
+desc=Looks like this is where the cook stores flour.
+
+[murdersacks]
+op2=Investigate
+model=percy_sacks
+name=Sacks
+desc=Some sacks of general garden items.
+
+[murderdoggatel]
+op1=Investigate
+model=plaguesheep_gatel
+name=Sturdy wooden gate
+desc=Luckily it seems able to keep that vicious dog inside.
+
+[murderdoggater]
+mirror=yes
+op1=Investigate
+model=plaguesheep_gatel
+name=Sturdy wooden gate
+desc=Luckily it seems able to keep that vicious dog inside.
+
+[loc_2666]
+active=yes
+op2=Investigate
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+model=brokenwindow
+name=Smashed window
+desc=Looks like the killer smashed this to leave the mansion.

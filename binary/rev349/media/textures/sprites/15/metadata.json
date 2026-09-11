@@ -1,0 +1,30 @@
+{
+  "member": "15.dat",
+  "palette": [
+    0,
+    7697785,
+    7434612,
+    6908268,
+    6776425,
+    8026748,
+    8487299,
+    6513509,
+    7171184,
+    7960187,
+    6184543
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/15/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 1
+    }
+  ]
+}

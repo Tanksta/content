@@ -1,0 +1,9 @@
+[rd_initiate_shop]
+scope=shared
+size=40
+restock=yes
+stackall=yes
+allstock=no
+stock1=basic_tk_helm,30,1
+stock2=basic_tk_legs,30,1
+stock3=basic_tk_body,30,1

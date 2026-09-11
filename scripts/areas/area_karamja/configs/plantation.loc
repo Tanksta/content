@@ -1,0 +1,80 @@
+[bananatreefull]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+model2=bananatreefulli2
+name=Banana Tree
+desc=Grows weird yellow fruit.
+category=banana_tree
+param=next_loc_stage,bananatreefour
+
+[bananatreefour]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+model2=bananatreefour
+name=Banana Tree
+desc=Grows weird yellow fruit.
+category=banana_tree
+param=next_loc_stage,bananatreethree
+
+[bananatreethree]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+model2=bananatreethree
+name=Banana Tree
+desc=Grows weird yellow fruit.
+category=banana_tree
+param=next_loc_stage,bananatreetwo
+
+[bananatreetwo]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+model2=bananatreetwo
+name=Banana Tree
+desc=Grows weird yellow fruit.
+category=banana_tree
+param=next_loc_stage,bananatreeone
+
+[bananatreeone]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+model2=bananatreeone
+name=Banana Tree
+desc=Grows weird yellow fruit.
+category=banana_tree
+param=next_loc_stage,bananatreeempty
+
+[bananatreeempty]
+width=2
+length=2
+op1=Search
+mapscene=5
+ambient=25
+model=bananatreefull
+name=Banana Tree
+desc=Grows weird yellow fruit.
+
+[bananacrate]
+op1=Search
+model=merlincrate_empty
+name=Crate
+desc=Used for storage.

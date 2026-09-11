@@ -1,0 +1,176 @@
+[grandtree_barksample]
+desc=A sample of the bark from the Grand Tree.
+members=yes
+cost=2
+model=obj_grandtree_barksample
+2dxof=2
+2dyof=64
+2dzoom=900
+2dyan=76
+2dxan=264
+recol1s=6024
+recol1d=6028
+name=Bark sample
+weight=15g
+tradeable=no
+
+[grandtree_translationbook]
+desc=A book to translate the ancient gnome language into English.
+members=yes
+cost=2
+model=obj_digsitebook
+2dxof=1
+2dyof=-21
+2dzoom=830
+2dyan=116
+2dxan=244
+iop1=Read
+recol1s=5018
+recol1d=18721
+recol2s=61
+recol2d=7952
+recol3s=11177
+recol3d=7952
+name=Translation book
+weight=18oz
+tradeable=no
+
+[grandtree_journal]
+desc=Perhaps I should read it and see what Glough is up to!
+members=yes
+cost=2
+model=obj_shamans_tome
+2dxof=1
+2dyof=22
+2dzoom=860
+2dyan=120
+2dxan=276
+iop1=Read
+recol1s=5018
+recol1d=17682
+recol2s=10351
+recol2d=15591
+name=Glough's journal
+weight=18oz
+tradeable=no
+
+[grandtree_scroll]
+desc=Hazelmere wrote something down on this scroll.
+members=yes
+cost=2
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+name=Hazelmere's scroll
+weight=20g
+tradeable=no
+
+[grandtree_order]
+desc=An order from the Karamja shipyard.
+members=yes
+cost=2
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+name=Lumber order
+weight=20g
+tradeable=no
+
+[grandtree_gloughskey]
+desc=The key to Glough's chest.
+members=yes
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+name=Glough's key
+weight=10g
+tradeable=no
+
+[grandtree_twigt]
+desc=Twigs bound together in the shape of a T.
+model=obj_grandtree_twigt
+members=yes
+2dxof=-3
+2dyof=1
+2dzoom=1240
+2dyan=88
+2dxan=440
+name=Twigs
+weight=20g
+tradeable=no
+
+[grandtree_twigu]
+desc=Twigs bound together in the shape of a U.
+model=obj_grandtree_twigu
+members=yes
+2dxof=-1
+2dyof=3
+2dzoom=1230
+2dyan=2036
+2dxan=364
+name=Twigs
+weight=20g
+tradeable=no
+
+[grandtree_twigz]
+desc=Twigs bound together in the shape of a Z.
+model=obj_grandtree_twigz
+members=yes
+2dzoom=1170
+2dyan=48
+2dxan=420
+name=Twigs
+weight=20g
+tradeable=no
+
+[grandtree_twigo]
+desc=Twigs bound together in the shape of a O.
+model=obj_grandtree_twigo
+members=yes
+2dxof=-2
+2dyof=3
+2dzoom=1500
+2dxan=452
+name=Twigs
+weight=20g
+tradeable=no
+
+[grandtree_daconiarock]
+model=obj_rock_sample2
+desc=An ancient rock with strange magical properties.
+2dyof=-12
+2dzoom=1290
+2dyan=1952
+2dxan=144
+members=yes
+recol1s=5790
+recol1d=41240
+name=Daconia rock
+weight=2lb
+tradeable=no
+
+[grandtree_invasionplans]
+desc=These are plans for an invasion!
+members=yes
+cost=2
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+iop1=Read
+name=Invasion plans
+weight=20g
+tradeable=no

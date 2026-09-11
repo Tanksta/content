@@ -1,0 +1,145 @@
+[bronze_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=1
+recol1s=61
+recol1d=5652
+recol2s=57
+recol2d=5652
+name=Bronze arrowtips
+category=category_968
+weight=4g
+
+[iron_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=2
+recol1s=61
+recol1d=33
+recol2s=57
+recol2d=33
+name=Iron arrowtips
+category=category_968
+weight=4g
+
+[steel_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=6
+name=Steel arrowtips
+category=category_968
+weight=4g
+
+[mithril_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=16
+recol1s=61
+recol1d=43297
+recol2s=57
+recol2d=43297
+name=Mithril arrowtips
+category=category_968
+weight=3g
+
+[adamant_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=40
+recol1s=61
+recol1d=21662
+recol2s=57
+recol2d=21662
+name=Adamant arrowtips
+category=category_968
+weight=5g
+
+[rune_arrowheads]
+desc=I can make an arrow with these.
+model=obj_bronze_arrowheads
+2dxof=4
+2dyof=4
+2dzoom=780
+2dyan=176
+2dxan=440
+members=yes
+stackable=yes
+cost=200
+recol1s=61
+recol1d=36133
+recol2s=57
+recol2d=36133
+name=Rune arrowtips
+category=category_968
+weight=4g
+
+[arrow_shaft]
+desc=A wooden arrow shaft.
+cost=1
+stackable=yes
+members=yes
+model=obj_arrow_shaft
+2dxof=6
+2dyof=-29
+2dzoom=1220
+2dyan=100
+2dxan=216
+count1=arrow_shaft_2,2
+count2=arrow_shaft_3,3
+count3=arrow_shaft_4,4
+count4=arrow_shaft_5,5
+name=Arrow shaft
+weight=10g
+
+[headless_arrow]
+desc=A wooden arrow shaft with flights attached.
+cost=1
+stackable=yes
+members=yes
+model=obj_headless_arrow
+2dxof=6
+2dyof=-29
+2dzoom=1220
+2dyan=100
+2dxan=216
+count1=headless_arrow_2,2
+count2=headless_arrow_3,3
+count3=headless_arrow_4,4
+count4=headless_arrow_5,5
+name=Headless arrow
+weight=12g

@@ -1,0 +1,33 @@
+[opnpct,magic:com_531] ~pvm_tele_block;
+[apnpct,magic:com_531] ~pvm_tele_block;
+[opplayert,magic:com_531] ~pvp_tele_block;
+[applayert,magic:com_531] ~pvp_tele_block;
+
+[proc,pvm_tele_block]
+~pvm_default_spell(^tele_block);
+
+[proc,pvp_tele_block]
+def_dbrow $spell_data = ~get_spell_data(^tele_block);
+if (~pvp_combat_spell_checks($spell_data) = false) {
+    return;
+}
+if (~in_duel_arena(coord) = true | ~wilderness_level(coord) < 1 | ~wilderness_level(.coord) < 1) {
+    mes("This spell cannot be used here.");
+    return;
+}
+if (.teleblock_ticks > 0) {
+    mes("Your target is already affected by this spell.");
+    return;
+}
+def_int $duration = ~pvp_spell_cast($spell_data);
+if (~pvp_hit_roll(^magic_style) = true) {
+    ~pvp_spell_success($spell_data, null, $duration);
+    def_int $teleblock_duration = 500;
+    if (~.check_protect_prayer(^magic_style) = true) {
+        $teleblock_duration = 250;
+    }
+    .teleblock_set($teleblock_duration);
+    .mes("A Tele Block has been cast on you.");
+} else {
+    ~pvp_spell_fail($spell_data, $duration);
+}

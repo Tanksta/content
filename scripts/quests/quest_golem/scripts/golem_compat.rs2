@@ -1,0 +1,15 @@
+[proc,agrith_handle_golem_talk]()(boolean)
+return(false);
+
+[proc,agrith_handle_golem_use_item]()(boolean)
+return(false);
+
+[proc,agrith_shadow_portal_active]()(boolean)
+return(false);
+
+[label,agrith_shadow_portal]
+
+[label,agrith_exit_den]
+
+[label,music_playbyregionplane](coord $coord)
+@music_playbyregion($coord);

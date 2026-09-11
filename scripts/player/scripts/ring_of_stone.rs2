@@ -1,0 +1,45 @@
+[opheld2,enchanted_onyx_ring] @ring_of_stone_wear(last_slot);
+
+[if_button,ring_of_stone:unmorph]
+~ring_of_stone_unmorph;
+
+[label,ring_of_stone_wear](int $slot)
+~equip($slot);
+if (inv_getobj(worn, ^wearpos_ring) = enchanted_onyx_ring) {
+    ~ring_of_stone_morph;
+}
+
+[proc,ring_of_stone_morph]
+if (inv_getobj(worn, ^wearpos_ring) ! enchanted_onyx_ring) {
+    return;
+}
+p_stopaction;
+p_clearpendingaction;
+~ring_of_stone_hide_tabs;
+if_openside(ring_of_stone);
+p_transmogrify(tzhaar_morph_rock);
+buildappearance(worn);
+
+[proc,ring_of_stone_unmorph]
+if_close;
+~initalltabs;
+~update_bas;
+p_animprotect(^false);
+p_transmogrify(null);
+buildappearance(worn);
+
+[proc,ring_of_stone_hide_tabs]
+if_settab(null, ^tab_combat_options);
+if_settab(null, ^tab_skills);
+if_settab(null, ^tab_quest_journal);
+if_settab(null, ^tab_inventory);
+if_settab(null, ^tab_wornitems);
+if_settab(null, ^tab_prayer);
+if_settab(null, ^tab_magic);
+if_settab(null, 7);
+if_settab(null, ^tab_friends);
+if_settab(null, ^tab_ignore);
+if_settab(null, ^tab_logout);
+if_settab(null, ^tab_game_options);
+if_settab(null, ^tab_player_controls);
+if_settab(null, ^tab_musicplayer);

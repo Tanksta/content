@@ -1,0 +1,83 @@
+[wizards_robe]
+cost=15
+desc=I can do magic better in this.
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+iop2=Wear
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+recol1s=8741
+recol1d=38814
+name=Wizard robe
+wearpos=torso
+wearpos2=arms
+weight=2lb
+param=magicattack,3
+param=magicdefence,3
+
+[bluewizhat]
+cost=2
+desc=A silly pointed hat.
+model=obj_bluewizhat
+2dxof=5
+2dyof=-10
+2dzoom=800
+2dyan=156
+2dxan=152
+iop2=Wear
+manwear=obj_bluewizhat_manwear,0
+womanwear=obj_bluewizhat_womanwear,0
+manhead=obj_bluewizhat_manhead
+womanhead=obj_bluewizhat_womanhead
+name=Wizard hat
+wearpos=hat
+weight=1lb
+param=magicattack,2
+param=magicdefence,2
+
+[black_robe]
+cost=13
+desc=I can do magic better in this.
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+iop2=Wear
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+recol1s=8741
+recol1d=10508
+name=Black robe
+wearpos=torso
+wearpos2=arms
+weight=2lb
+param=magicattack,3
+param=magicdefence,3
+
+[blackwizhat]
+cost=2
+desc=A silly pointed hat.
+model=obj_bluewizhat
+2dxof=5
+2dyof=-10
+2dzoom=800
+2dyan=156
+2dxan=152
+iop2=Wear
+manwear=obj_bluewizhat_manwear,0
+womanwear=obj_bluewizhat_womanwear,0
+manhead=obj_bluewizhat_manhead
+womanhead=obj_bluewizhat_womanhead
+recol1s=38814
+recol1d=0
+name=Wizard hat
+wearpos=hat
+weight=1lb
+param=magicattack,2
+param=magicdefence,2

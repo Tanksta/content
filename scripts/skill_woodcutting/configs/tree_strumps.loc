@@ -1,0 +1,227 @@
+[treestump]
+mapscene=6
+recol1s=5388
+recol1d=3470
+model=treestump
+name=Tree stump
+desc=This tree has been cut down.
+
+[treestump2]
+width=2
+length=2
+mapscene=6
+recol1s=5388
+recol1d=3470
+recol2s=3470
+recol2d=5665
+model=treestump2
+name=Tree stump
+desc=This tree has been cut down.
+
+[treestump2_light]
+width=2
+length=2
+mapscene=6
+recol1s=5388
+recol1d=5029
+model=treestump2
+name=Tree stump
+desc=This tree has been cut down.
+
+[treestump2_green]
+width=2
+length=2
+mapscene=6
+recol1s=5388
+recol1d=5786
+model=treestump2
+name=Tree stump
+desc=This tree has been cut down.
+
+[treestump2_small]
+width=2
+length=2
+resizex=100
+resizey=100
+resizez=100
+recol1s=5388
+recol1d=3470
+model=treestump2
+name=Tree stump
+desc=This tree has been cut down.
+
+[treestump2_big]
+width=2
+length=2
+resizex=448
+resizey=448
+resizez=448
+mapscene=6
+recol1s=5388
+recol1d=3470
+model=treestump2
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree1_large_stump]
+width=2
+length=2
+mapscene=6
+recol1s=6674
+recol1d=5388
+model=deadtree1_large_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree1_stump]
+width=2
+length=2
+resizex=100
+resizey=100
+resizez=100
+mapscene=6
+recol1s=6674
+recol1d=5388
+model=deadtree1_large_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree1_light_stump]
+width=2
+length=2
+resizex=100
+resizey=100
+resizez=100
+mapscene=6
+recol1s=5388
+recol1d=6814
+recol2s=6674
+recol2d=6814
+model=deadtree1_large_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree1_small_stump]
+width=2
+length=2
+resizex=80
+resizey=80
+resizez=80
+mapscene=6
+recol1s=6674
+recol1d=5388
+model=deadtree1_large_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree2_stump]
+mapscene=6
+recol1s=6028
+recol1d=3470
+recol2s=7054
+recol2d=3470
+model=deadtree2_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree2_stump_swamp]
+mapscene=6
+recol1s=7054
+recol1d=21646
+recol2s=6028
+recol2d=21646
+model=deadtree2_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree2_stump_dark]
+recol1s=7054
+recol1d=5388
+recol2s=6028
+recol2d=5388
+model=deadtree2_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree3_stump]
+width=2
+length=2
+model=deadtree3_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[evergreen_large_stump]
+width=3
+length=3
+recol1s=3470
+recol1d=5665
+model=evergreen_large_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[oaktree_stump]
+ambient=25
+width=3
+length=3
+model=oaktree_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[yewtree_stump]
+width=3
+length=3
+model=yewtree_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree6_stump]
+recol1s=7690
+recol1d=3470
+model=deadtree6_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[deadtree_burnt_stump]
+model=deadtree_burnt_stump
+name=Tree stump
+desc=This tree has been cut down.
+
+[hollow_tree_stump]
+name=Tree stump
+desc=This tree has been cut down.
+model=hollow_tree_stump
+recol1s=7056
+recol1d=13592
+recol2s=6674
+recol2d=10512
+ambient=25
+mapscene=6
+
+[regicide_tree_stump]
+width=3
+length=3
+mapscene=10
+model=regicide_tree_stump
+name=Tree stump
+desc=It's a tree stump.
+
+[regicide_tree_stump_small]
+width=2
+length=2
+mapscene=10
+model=regicide_tree_stump
+name=Tree stump
+desc=It's a tree stump.
+
+[hollow_tree_stump_big]
+width=2
+length=2
+ambient=25
+mapscene=6
+recol1s=7056
+recol1d=13592
+recol2s=6674
+recol2d=10512
+model=hollow_tree_stump_big
+name=Tree stump
+desc=This tree has been cut down.

@@ -1,0 +1,98 @@
+[fullstyle]
+length=2
+hillskew=yes
+op1=Climb-over
+blockrange=no
+model=fullstyle
+name=Stile
+desc=I can climb over the fence with this.
+
+[castlecrumbly]
+op1=Climb-over
+model=castlecrumbly2
+name=Crumbling wall
+desc=It looks like I might be able to climb over this piece of the wall...
+
+[watchshortcut]
+name=Climbing rocks
+desc=The irregular surface can be climbed.
+model=walldecor_climbing_rocks
+op1=Climb-up
+
+[loc_2320]
+width=3
+op1=Swing across
+blockwalk=no
+model=model_loc_2019
+name=Monkeybars
+desc=I can traverse these.
+category=monkeybars
+param=agil_level_req,15
+
+[tree_ropeswing1]
+name=Ropeswing
+desc=Use this to swing across gaps.
+model=outdoorfurniture_ropeswing_long_rope2
+op1=Swing-on
+length=6
+blockwalk=no
+category=island_rope_swing
+param=start_coord,0_42_50_21_9
+param=end_coord,0_42_50_16_9
+param=dir,3
+
+[tree_ropeswing2]
+name=Ropeswing
+desc=Use this to swing across gaps.
+model=outdoorfurniture_ropeswing_long_rope2
+op1=Swing-on
+length=6
+blockwalk=no
+category=island_rope_swing
+param=start_coord,0_42_50_17_5
+param=end_coord,0_42_50_21_5
+param=dir,1
+
+[tree_ropeswing3]
+name=Ropeswing
+desc=Use this to swing across gaps.
+model=outdoorfurniture_ropeswing_long_rope2
+op1=Swing-on
+length=6
+blockwalk=no
+category=island_rope_swing
+param=start_coord,0_39_48_15_19
+param=end_coord,0_39_48_15_24
+param=dir,0
+
+[zq_logbalance]
+name=A wooden log
+desc=A nearly rotten wooden log that crosses the river.
+model=floor_log_balance1
+op1=Balance
+sharelight=yes
+mapscene=13
+
+[zqrockjump1]
+name=Stepping stones
+desc=A rocky outcrop from the running water.
+model=wake2_8
+op1=Balance
+active=yes
+category=karamja_stepping_stone
+
+[zqrockjump2]
+name=Stepping stones
+desc=A rocky outcrop from the running water.
+model=wake2_8
+op1=Balance
+active=yes
+category=karamja_stepping_stone
+
+[zqrockjump3]
+name=Stepping stones
+desc=A rocky outcrop from the running water.
+model=wake2_8
+op1=Balance
+active=yes
+category=karamja_stepping_stone

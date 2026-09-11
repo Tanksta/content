@@ -1,0 +1,9 @@
+[herorockslide]
+width=2
+length=2
+op1=Investigate
+op2=Mine
+mapscene=12
+model=idk_woman_torso_simple
+name=Rock slide
+desc=Rocks that contain nothing interesting, but block the way.

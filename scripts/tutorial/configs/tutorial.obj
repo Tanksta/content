@@ -1,0 +1,50 @@
+[newbielogs]
+desc=A number of wooden logs.
+cost=4
+model=obj_logs
+2dyof=-7
+2dzoom=1180
+2dyan=1852
+2dxan=120
+op4=Light
+name=Logs
+weight=3lb
+tradeable=no
+
+[newbieraw_shrimp]
+desc=I should try cooking this.
+model=obj_shrimp
+2dzoom=950
+2dyan=552
+2dxan=272
+cost=5
+recol1s=6080
+recol1d=3299
+recol2s=4032
+recol2d=3546
+name=Raw shrimps
+weight=120g
+
+[newbie_pot_flour]
+desc=There is flour in this pot.
+model=obj_pot_flour
+2dxof=-1
+2dyof=2
+2dzoom=990
+2dyan=8
+2dxan=112
+cost=10
+name=Pot of flour
+weight=3lb
+
+[newbiebones]
+desc=Bones are for burying!
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+name=Bones
+weight=500g
+param=bone_exp,45

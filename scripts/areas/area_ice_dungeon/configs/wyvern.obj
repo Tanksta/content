@@ -1,0 +1,20 @@
+[wyvern_bones]
+name=Wyvern bones
+desc=Bones of a large flying creature!
+model=obj_wyvern_bones
+2dxof=-3
+2dyof=41
+2dzoom=2160
+2dxan=292
+2dyan=2000
+2dzan=1964
+cost=1600
+stackable=no
+iop1=Bury
+iop4=Drop
+members=yes
+category=bones
+param=bone_exp,720
+
+[cert_wyvern_bones]
+certlink=wyvern_bones

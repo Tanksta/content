@@ -1,0 +1,19 @@
+[recruiter]
+vislevel=hide
+desc=A member of the Ardougne Royal Army.
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_staffready
+op1=Talk-to
+name=Recruiter
+model1=obj_feud_desert_disguise_manwear
+model2=idk_42
+model3=idk_man_jaw_pointy
+model4=obj_khazard_platemail_manwear
+model5=obj_iron_platebody_manwear2
+model6=obj_cert_drill_top_manwear3
+model7=obj_iron_platelegs_manwear
+model8=obj_headband_red_manwear
+model9=npc_sigbert_the_adventureri2
+head1=obj_leather_cowl_manhead2
+head2=idk_man_jaw_pointy_head
+wanderrange=2

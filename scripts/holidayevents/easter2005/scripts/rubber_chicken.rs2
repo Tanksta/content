@@ -1,0 +1,21 @@
+[opheld3,rubber_chicken] @diango_rubber_chicken_dance;
+
+[label,diango_rubber_chicken_dance]
+p_stopaction;
+anim(human_chicken_dance, 20);
+
+[proc,diango_rubber_chicken_wack_player]
+if (inv_getobj(worn, ^wearpos_rhand) ! rubber_chicken) {
+    return;
+}
+if (p_finduid(uid) = false | .p_finduid(.uid) = false) {
+    return;
+}
+if (distance(coord, .coord) > 1) {
+    p_aprange(1);
+    return;
+}
+p_stopaction;
+facesquare(.coord);
+anim(human_rubber_chicken_attack, 0);
+sound_synth(rubber_chicken_attack, 0, 0);

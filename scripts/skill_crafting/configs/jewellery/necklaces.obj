@@ -1,0 +1,165 @@
+[gold_necklace]
+cost=450
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=9152
+name=Gold necklace
+wearpos=front
+weight=7g
+param=crafting_jewelry_struct,gold_necklace
+
+[sapphire_necklace]
+cost=1050
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=43951
+name=Sapphire necklace
+wearpos=front
+weight=10g
+respawnrate=500
+
+[emerald_necklace]
+cost=1425
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=22443
+name=Emerald necklace
+wearpos=front
+weight=10g
+
+[ruby_necklace]
+cost=2175
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=960
+name=Ruby necklace
+wearpos=front
+weight=10g
+
+[diamond_necklace]
+cost=3675
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=127
+name=Diamond necklace
+wearpos=front
+weight=10g
+
+[dragonstone_necklace]
+cost=18375
+desc=I wonder if this is valuable.
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=41
+recol1d=51111
+name=Dragon necklace
+wearpos=front
+weight=10g
+
+[black_necklace]
+model=obj_perfect_ruby_necklace
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+recol1s=41
+recol1d=16
+recol2s=9152
+recol2d=16
+name=Black necklace
+dummyitem=inv_only
+
+[invis_necklace1]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Sapphire necklace
+param=crafting_jewelry_struct,sapphire_necklace
+dummyitem=inv_only
+
+[invis_necklace2]
+desc=It's an Emerald necklace.
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Emerald necklace
+param=crafting_jewelry_struct,emerald_necklace
+dummyitem=inv_only
+
+[invis_necklace3]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Ruby necklace
+param=crafting_jewelry_struct,ruby_necklace
+dummyitem=inv_only
+
+[invis_necklace4]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Diamond necklace
+param=crafting_jewelry_struct,diamond_necklace
+dummyitem=inv_only
+
+[invis_necklace5]
+model=minigame_start_icon_0
+2dyan=4
+2dxan=20
+name=Dragon necklace
+param=crafting_jewelry_struct,dragonstone_necklace
+dummyitem=inv_only

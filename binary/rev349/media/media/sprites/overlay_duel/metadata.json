@@ -1,0 +1,29 @@
+{
+  "member": "overlay_duel.dat",
+  "palette": [
+    0,
+    14605927,
+    16430592,
+    2040096,
+    12632256,
+    7236716,
+    5592405,
+    4210752,
+    4140555,
+    7292695
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/overlay_duel/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    }
+  ]
+}

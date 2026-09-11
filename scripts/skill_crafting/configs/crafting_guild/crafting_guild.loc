@@ -1,0 +1,7 @@
+[crafting_guild_door]
+active=yes
+op1=Open
+model=door
+name=Guild Door
+desc=The door to the Crafting Guild.
+param=next_loc_stage,loc_1532

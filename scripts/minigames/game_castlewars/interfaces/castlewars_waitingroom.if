@@ -1,0 +1,20 @@
+type=layer
+width=512
+height=334
+
+[com_0]
+x=111
+y=51
+type=text
+width=282
+height=14
+script1op1=pushvar,castlewars_timer
+script1=gt,0
+center=yes
+font=b12_full
+text=Waiting for players to join the other team.
+activetext=Time until next game starts: %1
+colour=0xFFFFFF
+activecolour=0xFFFFFF
+overcolour=0x000000
+activeovercolour=0x000000

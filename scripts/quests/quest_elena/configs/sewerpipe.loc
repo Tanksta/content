@@ -1,0 +1,12 @@
+[plaguesewerpipe]
+width=2
+op1=Search
+model=cavern_loc_2541
+name=Sewer pipe
+desc=An outlet to the sewer.
+
+[plaguesewerpipe_open]
+width=2
+model=cavern_cavewall_face1_withpipe
+name=Sewer pipe
+desc=An outlet to the sewer.

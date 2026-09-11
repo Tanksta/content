@@ -1,0 +1,13 @@
+type=layer
+width=512
+height=334
+
+[component_13294]
+x=16
+y=8
+type=inv
+width=4
+height=7
+margin=10,4
+option1=Value
+option2=Sell

@@ -1,0 +1,30 @@
+{
+  "member": "button_red.dat",
+  "palette": [
+    0,
+    11240319,
+    3867392,
+    4719104,
+    7217173,
+    5572097,
+    5903624,
+    6623237,
+    8335906,
+    10243901,
+    7019529
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/button_red/000.png",
+      "canvasWidth": 229,
+      "canvasHeight": 90,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 229,
+      "height": 90,
+      "encoding": 1
+    }
+  ]
+}

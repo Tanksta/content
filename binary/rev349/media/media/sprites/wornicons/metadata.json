@@ -1,0 +1,142 @@
+{
+  "member": "wornicons.dat",
+  "palette": [
+    0,
+    3025699
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/wornicons/000.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 6,
+      "yOffset": 4,
+      "width": 20,
+      "height": 23,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/wornicons/001.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 5,
+      "yOffset": 1,
+      "width": 22,
+      "height": 30,
+      "encoding": 1
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/wornicons/002.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 8,
+      "yOffset": 9,
+      "width": 17,
+      "height": 16,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/wornicons/003.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 4,
+      "yOffset": 4,
+      "width": 25,
+      "height": 25,
+      "encoding": 0
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/wornicons/004.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 8,
+      "yOffset": 8,
+      "width": 16,
+      "height": 19,
+      "encoding": 0
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/media/sprites/wornicons/005.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 2,
+      "yOffset": 9,
+      "width": 28,
+      "height": 18,
+      "encoding": 0
+    },
+    {
+      "index": 6,
+      "path": "decoded/media/media/sprites/wornicons/006.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 3,
+      "yOffset": 3,
+      "width": 26,
+      "height": 28,
+      "encoding": 1
+    },
+    {
+      "index": 7,
+      "path": "decoded/media/media/sprites/wornicons/007.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 8,
+      "yOffset": 2,
+      "width": 16,
+      "height": 29,
+      "encoding": 1
+    },
+    {
+      "index": 8,
+      "path": "decoded/media/media/sprites/wornicons/008.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 1,
+      "yOffset": 2,
+      "width": 31,
+      "height": 29,
+      "encoding": 0
+    },
+    {
+      "index": 9,
+      "path": "decoded/media/media/sprites/wornicons/009.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 4,
+      "yOffset": 6,
+      "width": 22,
+      "height": 22,
+      "encoding": 1
+    },
+    {
+      "index": 10,
+      "path": "decoded/media/media/sprites/wornicons/010.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 5,
+      "yOffset": 6,
+      "width": 23,
+      "height": 20,
+      "encoding": 0
+    },
+    {
+      "index": 11,
+      "path": "decoded/media/media/sprites/wornicons/011.png",
+      "canvasWidth": 32,
+      "canvasHeight": 32,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 32,
+      "height": 32,
+      "encoding": 0
+    }
+  ]
+}

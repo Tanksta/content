@@ -1,0 +1,155 @@
+[obs_dungeonladderdown]
+active=yes
+op1=Climb-down
+model=totem_pole_8
+name=Ladder
+desc=I can climb down this ladder.
+
+[loc_2188]
+active=yes
+op1=Climb-up
+model=ladder
+name=Ladder
+desc=I can climb up this ladder.
+
+[loc_2189]
+active=yes
+op1=Climb-up
+model=ladder
+name=Ladder
+desc=I can climb up this ladder.
+
+[domeladderdown]
+active=yes
+op1=Climb-down
+model=totem_pole_8
+name=Ladder
+desc=I can climb down this ladder.
+
+[shutdungeonchest]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[loc_2192]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[loc_2193]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[opendungeonchest]
+active=yes
+op1=Close
+op2=Search
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=Perhaps I should search it.
+
+[loc_2195]
+active=yes
+op1=Close
+op2=Search
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=Perhaps I should search it.
+
+[loc_2196]
+active=yes
+op1=Close
+op2=Search
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=Perhaps I should search it.
+
+[loc_2197]
+active=yes
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Chest
+desc=I wonder what's inside?
+
+[loc_2198]
+active=yes
+op1=Close
+op2=Search
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=Perhaps I should search it.
+
+[keepgate_closed]
+active=yes
+op1=Open
+mirror=yes
+model=ikov_mendedleverdoorl
+name=Keep gate
+desc=An old gate for locking up undesirables.
+category=observatory_dungeon_gate
+
+[keepgate_closed_left]
+active=yes
+op1=Open
+model=ikov_mendedleverdoorl
+name=Keep gate
+desc=An old gate for locking up undesirables.
+category=observatory_dungeon_gate
+
+[zodiac1]
+hillskew=yes
+model=zodiac1
+
+[zodiac2]
+hillskew=yes
+model=zodiac2
+
+[zodiac3]
+hillskew=yes
+model=zodiac3
+
+[zodiac4]
+hillskew=yes
+model=zodiac4
+
+[zodiac5]
+hillskew=yes
+model=merlin_star
+
+[zodiac6]
+hillskew=yes
+model=zodiac6
+
+[zodiac7]
+hillskew=yes
+model=zodiac7
+
+[zodiac8]
+hillskew=yes
+model=zodiac8
+
+[zodiac9]
+hillskew=yes
+model=zodiac9
+
+[telescope]
+length=3
+op1=Use
+model=telescope
+name=Telescope
+desc=Looking through it makes far off things look closer!

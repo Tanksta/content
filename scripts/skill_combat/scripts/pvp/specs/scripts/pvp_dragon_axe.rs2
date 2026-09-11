@@ -1,0 +1,22 @@
+[label,pvp_dragon_axe_sa]
+~set_sa_vars(oc_param(inv_getobj(worn, ^wearpos_rhand), sa_energy));
+~set_pk_vars;
+def_int $damage = 0;
+def_int $maxhit = %com_maxhit;
+def_int $attack_roll = ~player_attack_roll_specific(%damagetype);
+def_int $defence_roll = ~.player_defence_roll_specific(^slash_style);
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    if (~.check_protect_prayer(^melee_style) = true) {
+        $maxhit = scale(6, 10, $maxhit);
+    }
+    $damage = min(randominc($maxhit), .stat(hitpoints));
+    .stat_drain(defence, 0, 10);
+    .stat_drain(magic, 0, 10);
+    ~give_combat_experience_pvp(%damagestyle, $damage, ~pvp_xp_multiplier(~.player_combat_level));
+    both_heropoints($damage);
+}
+anim(dragon_smallaxe_anim, 0);
+spotanim_pl(dragon_smallaxe_swoosh_spotanim, 96, 0);
+.anim(.%com_defendanim, 20);
+.queue*(pvp_retaliate, 0)(uid);
+~.pvp_damage(0, $damage);

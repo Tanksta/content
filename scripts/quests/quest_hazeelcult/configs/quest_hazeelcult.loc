@@ -1,0 +1,143 @@
+[sewervalve1]
+active=yes
+op1=Turn-left
+op2=Turn-right
+model=sewervalve1
+name=Sewer valve
+desc=This looks like it can be turned.
+category=hazeelcult_valve
+param=hazeelcult_valve_idx,0
+
+[sewervalve2]
+active=yes
+op1=Turn-left
+op2=Turn-right
+model=sewervalve1
+name=Sewer valve
+desc=This looks like it can be turned.
+category=hazeelcult_valve
+param=hazeelcult_valve_idx,1
+
+[sewervalve3]
+active=yes
+op1=Turn-left
+op2=Turn-right
+model=sewervalve1
+name=Sewer valve
+desc=This looks like it can be turned.
+category=hazeelcult_valve
+param=hazeelcult_valve_idx,2
+
+[sewervalve4]
+active=yes
+op1=Turn-left
+op2=Turn-right
+model=sewervalve1
+name=Sewer valve
+desc=This looks like it can be turned.
+category=hazeelcult_valve
+param=hazeelcult_valve_idx,3
+
+[sewervalve5]
+active=yes
+op1=Turn-left
+op2=Turn-right
+model=sewervalve1
+name=Sewer valve
+desc=This looks like it can be turned.
+category=hazeelcult_valve
+param=hazeelcult_valve_idx,4
+
+[hazeelsewerraft]
+length=2
+active=yes
+op1=Board
+model=lograft_waterfall_quest
+name=Raft
+desc=A rudimentary type of boat.
+
+[hazeelcbshut]
+length=2
+op1=Open
+forceapproach=13
+model=cupboardhigh
+name=Cupboard
+desc=It's closed.
+param=cupboard_other,hazeelcbopen
+
+[hazeelcbopen]
+length=2
+op1=Search
+op2=Shut
+forceapproach=13
+model=cupboardopen_high
+name=Cupboard
+desc=It's open.
+param=cupboard_other,hazeelcbshut
+
+[hazeelcultcave]
+width=4
+length=4
+active=yes
+op1=Enter
+model=gnome_caveentrance
+name=Cave entrance
+desc=I can probably squeeze my way inside there.
+
+[hazeelcultstairs]
+width=2
+length=3
+op1=Climb-up
+model=furniture_stairs
+name=Stairs
+desc=It's a flight of stairs.
+
+[loc_2854]
+wallwidth=8
+occlude=yes
+active=yes
+op1=Knock-at
+model=timberwall
+name=Wall
+desc=Made of wood.
+
+[loc_2855]
+wallwidth=8
+occlude=yes
+model=timberwall
+
+[carnilleanshutchest]
+name=Chest
+desc=I wonder what's inside?
+model=arena_guard_chest_shut
+op1=Open
+forceapproach=north
+
+[carnilleanopenchest]
+op1=Search
+op2=Close
+forceapproach=14
+model=arena_guard_chest_open
+name=Chest
+desc=It's open.
+
+[carnilleancrate]
+active=yes
+op1=Search
+model=merlincrate_empty
+name=Crate
+desc=Used for storage.
+
+[carnilleanrange]
+active=yes
+length=2
+model=furniture_range
+name=Range
+desc=A hot range, where some soup is bubbling nicely.
+
+[hazeelcoffin]
+width=3
+active=yes
+model=hazeelcoffin
+name=Hazeel's coffin
+desc=Very ominous.

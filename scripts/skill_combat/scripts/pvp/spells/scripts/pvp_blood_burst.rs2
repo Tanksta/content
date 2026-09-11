@@ -1,0 +1,223 @@
+[opplayert,magic2:com_63] ~pvp_blood_burst(^blood_burst);
+[applayert,magic2:com_63] ~pvp_blood_burst(^blood_burst);
+
+[proc,pvp_blood_burst](int $spell)
+def_dbrow $spell_data = ~get_spell_data($spell);
+if (~pvp_combat_spell_checks($spell_data) = false) {
+    return;
+}
+if (~pvp_debuff_allowed($spell_data) = false) {
+    return;
+}
+
+def_int $duration = ~pvp_spell_cast($spell_data);
+def_player_uid $primary_target = .uid;
+def_coord $center = .coord;
+def_int $hit_count = 0;
+
+if (map_multiway(coord) = true & map_multiway(.coord) = true) {
+
+    if (~pvp_hit_roll(^magic_style) = true) {
+
+        def_int $maxhit = ~magic_spell_maxhit($spell_data);
+        def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+        def_int $heal = divide($damage, 4);
+        if ($heal > 0) {
+            stat_add(hitpoints, $heal, 0);
+        }
+
+    } else {
+
+        ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+    }
+
+    $hit_count = 1;
+
+    def_player_uid $target1 = null;
+    def_player_uid $target2 = null;
+    def_player_uid $target3 = null;
+    def_player_uid $target4 = null;
+    def_player_uid $target5 = null;
+    def_player_uid $target6 = null;
+    def_player_uid $target7 = null;
+    def_player_uid $target8 = null;
+
+    huntall($center, 1, ^vis_lineofsight);
+    while (.huntnext = true) {
+        if ($hit_count < 9 & .uid ! uid & .uid ! $primary_target) {
+            if ($target1 = null) {
+                $target1 = .uid;
+            } else if ($target2 = null) {
+                $target2 = .uid;
+            } else if ($target3 = null) {
+                $target3 = .uid;
+            } else if ($target4 = null) {
+                $target4 = .uid;
+            } else if ($target5 = null) {
+                $target5 = .uid;
+            } else if ($target6 = null) {
+                $target6 = .uid;
+            } else if ($target7 = null) {
+                $target7 = .uid;
+            } else if ($target8 = null) {
+                $target8 = .uid;
+            }
+            $hit_count = add($hit_count, 1);
+        }
+    }
+
+    if (.finduid($target1) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target2) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target3) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target4) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target5) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target6) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target7) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+    if (.finduid($target8) = true) {
+
+                if (~pvp_hit_roll(^magic_style) = true) {
+
+                    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+                    def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+                    def_int $heal = divide($damage, 4);
+                    if ($heal > 0) {
+                        stat_add(hitpoints, $heal, 0);
+                    }
+
+                } else {
+
+                    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+                }
+
+    }
+
+    ~pvp_restore_spell_target($primary_target);
+
+} else {
+
+    if (~pvp_hit_roll(^magic_style) = true) {
+
+        def_int $maxhit = ~magic_spell_maxhit($spell_data);
+        def_int $damage = ~pvp_spell_success($spell_data, $maxhit, $duration);
+        def_int $heal = divide($damage, 4);
+        if ($heal > 0) {
+            stat_add(hitpoints, $heal, 0);
+        }
+
+    } else {
+
+        ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+    }
+}

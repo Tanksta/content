@@ -1,0 +1,30 @@
+[opheldu,vial_empty]
+switch_obj(last_useitem) {
+    case coconut_half : @make_coconut_milk(last_slot, last_useslot);
+    case default : ~displaymessage(^dm_default);
+}
+
+[opheldu,coconut_half]
+switch_obj(last_useitem) {
+    case vial_empty : @make_coconut_milk(last_useslot, last_slot);
+    case default : ~displaymessage(^dm_default);
+}
+
+[label,make_coconut_milk](int $vial_slot, int $coconut_slot)
+inv_setslot(inv, $vial_slot, vial_coconut_milk, 1);
+inv_setslot(inv, $coconut_slot, coconut_shell, 1);
+mes("You pour the coconut milk into the vial.");
+
+[oploc1,palm]
+@pick_coconut;
+
+[oploc1,palm2]
+@pick_coconut;
+
+[label,pick_coconut]
+if (inv_freespace(inv) = 0) {
+    mes("You don't have room for a coconut.");
+    return;
+}
+inv_add(inv, coconut, 1);
+mes("You pick a coconut from the palm tree.");

@@ -1,0 +1,24 @@
+[whistledoor]
+active=yes
+op1=Open
+model=door1
+name=Door
+desc=The door is shut.
+
+[percy_sacks]
+op1=Prod
+op2=Open
+model=percy_sacks
+name=Sacks
+desc=Unusually lumpy looking.
+
+[merlinworkshop]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=The door is shut.

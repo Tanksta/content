@@ -1,0 +1,57 @@
+[knights_portrait]
+desc=Picture of a posing Paladin.
+cost=3
+model=obj_knights_portrait
+2dzoom=1450
+2dyan=80
+2dxan=288
+name=Portrait
+weight=3lb
+tradeable=no
+
+[faladian_sword]
+desc=A Faladian Knight's sword.
+cost=200
+model=obj_faladian_sword
+2dxof=6
+2dyof=-49
+2dzoom=1530
+2dyan=408
+2dxan=224
+manwear=obj_faladian_sword_manwear,0
+womanwear=obj_faladian_sword_manwear,6
+iop2=Wield
+name=Blurite sword
+category=weapon_slash
+wearpos=righthand
+weight=4lb
+param=stabattack,9
+tradeable=no
+param=slashattack,14
+param=crushattack,-2
+param=slashdefence,3
+param=crushdefence,2
+param=strengthbonus,10
+param=attackrate,5
+param=ready_baseanim,human_ds_ready
+param=slashattack_anim,human_sword_slash
+param=stabattack_anim,human_sword_stab
+param=defend_anim,human_sword_def
+param=slash_sound,hacksword_slash
+param=stab_sound,hacksword_stab
+
+[blurite_ore]
+cost=3
+desc=Definitely blue.
+model=obj_copper_ore
+2dxof=1
+2dyof=15
+2dzoom=1400
+2dyan=1576
+2dxan=368
+recol1s=7062
+recol1d=43486
+name=Blurite ore
+weight=5lb
+category=category_91
+tradeable=no

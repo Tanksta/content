@@ -1,0 +1,198 @@
+[ikov_leverbracket]
+active=yes
+model=ikov_leverbracket
+name=Lever bracket
+desc=Seems very old...
+
+[ikov_mendedlever]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=I guess you pull it...
+
+[ikov_leverdown]
+active=no
+model=ctlevera
+
+[ikov_mendedleverdoorl]
+op1=Open
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[ikov_mendedleverdoorr]
+op1=Open
+mirror=yes
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563
+
+[ikov_traplever]
+active=yes
+op1=Pull
+op2=Search for traps
+model=ctleverb
+name=Lever
+desc=I don't like the look of this!
+
+[ikov_trapleverdoor]
+active=yes
+op1=Open
+active=yes
+model=door1
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+name=Door
+desc=The door is closed.
+
+[ikov_firewarriordoor]
+active=yes
+op1=Open
+active=yes
+model=door1
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+name=Door
+desc=The door is closed.
+
+[ikov_dooroffearl]
+op1=Open
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[ikov_dooroffearr]
+op1=Open
+mirror=yes
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563
+
+[ikov_darkstairs]
+width=2
+length=3
+op1=Climb-up
+active=yes
+recol1s=49
+recol1d=8
+recol2s=37
+recol2d=24
+recol3s=7064
+recol3d=7050
+model=furniture_stairs
+name=Stairs
+desc=A dark flight of stairs.
+
+[ikov_darkstairstop]
+width=2
+length=2
+active=no
+recol1s=49
+recol1d=8
+recol2s=37
+recol2d=24
+recol3s=7064
+recol3d=7050
+model=furniture_stairstop
+
+[ikov_darkstairsdown]
+width=2
+length=3
+op1=Climb-down
+active=yes
+recol1s=49
+recol1d=8
+recol2s=37
+recol2d=24
+recol3s=7064
+recol3d=7050
+model=furniture_stairsdown
+name=Stairs
+desc=A dark flight of stairs.
+
+[ikov_shinykeydoor]
+active=yes
+op1=Open
+active=yes
+model=door1
+retex1s=wall
+retex1d=door
+recol2s=24
+recol2d=4762
+name=Door
+desc=The door is closed.
+
+[ikov_trapdoor]
+op1=Open
+blockwalk=no
+model=ikov_trapdoor
+name=Trapdoor
+desc=Don't you open that trapdoor!
+
+[ikov_trapladder]
+active=yes
+op1=Climb-up
+mapscene=7
+model=ladder
+name=Ladder
+desc=I can climb this.
+
+[ikov_luciendoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+name=Door
+desc=A sturdy door.
+
+[ikov_chestclosed]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Closed chest
+desc=I wonder what's inside.
+
+[ikov_chestopen]
+op1=Search
+op2=Shut
+forceapproach=14
+model=arena_guard_chest_open
+name=Open chest
+desc=Perhaps I should search it.
+
+[hiddentrapdoor_closed]
+blockwalk=no
+blockrange=no
+model=hiddentrapdoor_closed
+name=Trapdoor
+desc=I wonder what that's there for...
+
+[hiddentrapdoor_open]
+blockwalk=no
+blockrange=no
+model=hiddentrapdoor_open
+name=hiddentrapdoor_open

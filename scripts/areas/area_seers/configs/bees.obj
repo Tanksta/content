@@ -1,0 +1,25 @@
+[insect_repellent]
+desc=Drives away all known 6 legged creatures.
+cost=3
+model=obj_insect_repellent
+members=yes
+2dyof=-6
+2dzoom=1430
+2dyan=1836
+2dxan=124
+name=Insect repellent
+weight=1oz
+
+[bucket_wax]
+desc=It's a bucket of wax.
+cost=6
+model=obj_bucket_wax
+members=yes
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+recol1s=39834
+recol1d=7766
+name=Bucket of wax
+weight=2500g

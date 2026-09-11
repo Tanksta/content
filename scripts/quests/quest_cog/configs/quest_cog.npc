@@ -1,0 +1,20 @@
+[clocktower_rat]
+resizeh=64
+resizev=64
+walkanim=giantrat_walk
+readyanim=giantrat_ready
+desc=A dirty rat.
+op2=Attack
+vislevel=12
+recol1s=43299
+recol1d=70
+name=Dungeon rat
+model1=npc_giantrat
+wanderrange=6
+maxrange=8
+respawnrate=50
+hitpoints=12
+attack=10
+strength=10
+defence=10
+param=damagetype,^stab_style

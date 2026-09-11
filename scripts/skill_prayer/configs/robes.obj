@@ -1,0 +1,112 @@
+[druidrobebottom]
+model=obj_priest_robe
+2dyof=1
+2dzoom=1940
+2dxan=572
+members=yes
+cost=30
+desc=Keeps a druid's knees nice and warm.
+iop2=Wear
+manwear=obj_priest_robe_manwear,0
+womanwear=obj_priest_robe_womanwear,0
+recol1s=25238
+recol1d=127
+name=Druid's robe
+wearpos=legs
+weight=2lb
+param=prayerbonus,4
+
+[druidrobetop]
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+members=yes
+cost=40
+desc=I feel closer to the gods when I am wearing this.
+iop2=Wear
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+recol1s=8741
+recol1d=127
+name=Druid's robe
+wearpos=torso
+wearpos2=arms
+weight=2lb
+param=prayerbonus,4
+
+[monkrobebottom]
+model=obj_priest_robe
+2dyof=1
+2dzoom=1940
+2dxan=572
+cost=30
+desc=Keeps a monk's knees nice and warm.
+iop2=Wear
+manwear=obj_priest_robe_manwear,0
+womanwear=obj_priest_robe_womanwear,0
+recol1s=25238
+recol1d=4769
+name=Monk's robe
+wearpos=legs
+weight=2lb
+param=prayerbonus,5
+
+[monkrobetop]
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+cost=40
+desc=I feel closer to the gods when I am wearing this.
+iop2=Wear
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+recol1s=8741
+recol1d=4769
+name=Monk's robe
+wearpos=torso
+wearpos2=arms
+weight=2lb
+param=prayerbonus,6
+
+[blackrobetop]
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+cost=40
+desc=I feel closer to the gods when I am wearing this.
+iop2=Wear
+manwear=obj_priest_gown_manwear2,0
+womanwear=obj_priest_gown_womanwear2,0
+manwear2=obj_priest_gown_manwear
+womanwear2=obj_priest_gown_womanwear
+recol1s=8741
+recol1d=0
+name=Shade robe
+wearpos=torso
+wearpos2=arms
+weight=2lb
+param=prayerbonus,5
+
+[blackrobebottom]
+model=obj_priest_robe
+2dyof=1
+2dzoom=1940
+2dxan=572
+cost=30
+desc=If a shade had knees, this would keep them nice and warm.
+iop2=Wear
+manwear=obj_priest_robe_manwear,0
+womanwear=obj_priest_robe_womanwear,0
+recol1s=25238
+recol1d=0
+name=Shade robe
+wearpos=legs
+weight=2lb
+param=prayerbonus,4

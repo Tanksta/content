@@ -1,0 +1,31 @@
+{
+  "member": "coins.dat",
+  "palette": [
+    0,
+    3,
+    2170127,
+    3551246,
+    5589773,
+    986638,
+    6641675,
+    7496716,
+    9009169,
+    12889632,
+    10850840,
+    15918131
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/coins/000.png",
+      "canvasWidth": 77,
+      "canvasHeight": 82,
+      "xOffset": 4,
+      "yOffset": 10,
+      "width": 72,
+      "height": 68,
+      "encoding": 0
+    }
+  ]
+}

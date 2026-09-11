@@ -1,0 +1,330 @@
+[templewall_base]
+op1=Repair
+model=templewall_base
+name=Broken Wall
+desc=Looks like a pile of ancient rubble.
+category=category_226
+param=next_loc_stage,templewall_1
+
+[templewall_1]
+anim=temple_build1
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_2
+
+[templewall_2]
+anim=temple_build2
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_3
+
+[templewall_3]
+anim=temple_build3
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_4
+
+[templewall_4]
+anim=temple_build4
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_5
+
+[templewall_5]
+anim=temple_build5
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_6
+
+[templewall_6]
+anim=temple_build6
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_7
+
+[templewall_7]
+anim=temple_build7
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_8
+
+[templewall_8]
+anim=temple_build8
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=The starting of a wall.
+category=category_226
+param=next_loc_stage,templewall_9
+
+[templewall_9]
+anim=temple_build9
+op1=Repair
+model=templewall1
+name=Temple wall
+desc=It's nearly a wall.
+category=category_226
+param=next_loc_stage,templewall_10
+
+[templewall_10]
+anim=temple_build10
+op1=Reinforce
+model=templewall1
+name=Temple wall
+desc=A rebuilt wall.
+category=category_226
+param=temple_wall_level,10
+
+[templewallcorner_base]
+op1=Repair
+model=templewallcorner_base
+name=Broken Wall
+desc=The broken wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_1
+
+[templewallcorner_1]
+anim=temple_build1
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_2
+
+[templewallcorner_2]
+anim=temple_build2
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_3
+
+[templewallcorner_3]
+anim=temple_build3
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_4
+
+[templewallcorner_4]
+anim=temple_build4
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_5
+
+[templewallcorner_5]
+anim=temple_build5
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_6
+
+[templewallcorner_6]
+anim=temple_build6
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_7
+
+[templewallcorner_7]
+anim=temple_build7
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_8
+
+[templewallcorner_8]
+anim=temple_build8
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The partially repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_9
+
+[templewallcorner_9]
+anim=temple_build9
+op1=Repair
+model=templewallcorner1
+name=Temple wall
+desc=The nearly repaired wall of a desecrated temple.
+category=category_226
+param=next_loc_stage,templewallcorner_10
+
+[templewallcorner_10]
+anim=temple_build10
+op1=Reinforce
+model=templewallcorner1
+name=Temple wall
+desc=The repaired wall of a temple.
+category=category_226
+param=prev_loc_stage,templewallcorner_9
+
+[templefire_altar]
+anim=fire
+recol1s=37
+recol1d=61
+model=templefire_altar
+name=Flaming Fire altar
+desc=A flaming Fire altar.
+
+[templefire_altar_nofire]
+op1=Light
+model=templefire_altar_nofire
+name=Fire altar
+desc=An ancient Fire altar.
+
+[templefire_altar_nofire_broken]
+model=templefire_altar_nofire_broken
+name=Broken Fire altar
+desc=An ancient, totally desecrated, broken down fire altar.
+
+[temple_pyre]
+anim=temple_pyre_nowood
+length=3
+mapscene=37
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs some wood.
+
+[temple_pyre_logs]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_logs
+
+[temple_pyre_oak]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_oak
+
+[temple_pyre_willow]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_willow
+
+[temple_pyre_maple]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_maple
+
+[temple_pyre_yew]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_yew
+
+[temple_pyre_magic]
+anim=temple_pyre_nobones
+length=3
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a body.
+category=category_2051
+param=next_loc_stage,temple_pyre_bones_magic
+
+[temple_pyre_bones_logs]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_logs
+
+[temple_pyre_bones_oak]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_oak_logs
+
+[temple_pyre_bones_willow]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_willow_logs
+
+[temple_pyre_bones_maple]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_maple_logs
+
+[temple_pyre_bones_yew]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_yew_logs
+
+[temple_pyre_bones_magic]
+length=3
+op1=Light
+model=temple_pyre
+name=Funeral Pyre
+desc=A place to cremate the dead. Needs a light.
+category=category_2052
+param=funeral_pyre_struct,pyre_magic_logs

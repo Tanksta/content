@@ -1,0 +1,55 @@
+[molten_glass]
+cost=2
+model=obj_molten_glass
+2dxof=4
+2dyof=132
+2dzoom=590
+2dyan=140
+2dxan=268
+members=yes
+desc=Hot glass ready to be blown into useful objects.
+name=Molten glass
+weight=3g
+
+[soda_ash]
+desc=One of the ingredients for making glass.
+cost=2
+members=yes
+model=obj_unicorn_horn_dust
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+recol1s=82
+recol1d=111
+name=Soda ash
+weight=2oz
+
+[bucket_sand]
+members=yes
+desc=One of the ingredients for making glass.
+cost=2
+iop4=Empty
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+recol1s=39834
+recol1d=7626
+name=Bucket of sand
+weight=2500g
+
+[glassblowingpipe]
+cost=2
+members=yes
+model=obj_glassblowingpipe
+manwear=obj_reed_hollow_manwear,0
+womanwear=obj_reed_hollow_manwear,0
+2dxof=2
+2dyof=-18
+2dzoom=1400
+2dyan=132
+2dxan=228
+name=Glassblowing pipe
+weight=2oz

@@ -1,0 +1,36 @@
+{
+  "member": "34.dat",
+  "palette": [
+    0,
+    16775300,
+    16775307,
+    16775571,
+    16775578,
+    16775587,
+    16775850,
+    16775857,
+    16776139,
+    16776122,
+    16776412,
+    16776403,
+    16776701,
+    16776679,
+    16776130,
+    16713983,
+    16719615
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/34/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 118,
+      "height": 128,
+      "encoding": 0
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+[proc,give_quest_xp](stat $stat, int $exp)(int)
+stat_advance($stat, $exp);
+return($exp);

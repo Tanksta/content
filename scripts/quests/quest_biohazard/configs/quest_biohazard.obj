@@ -1,0 +1,216 @@
+[ethenea]
+cost=10
+model=obj_vial_empty
+members=yes
+desc=An expensive colourless liquid.
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+name=Ethanea
+weight=30g
+tradeable=no
+
+[liquid_honey]
+cost=0
+model=obj_strength4
+members=yes
+desc=This isn't worth much.
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+recol1s=61
+recol1d=8111
+name=Liquid honey
+weight=30g
+tradeable=no
+
+[sulphuric_broline]
+cost=1
+model=obj_strength4
+members=yes
+desc=It's highly poisonous.
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+recol1s=61
+recol1d=23488
+name=Sulphuric broline
+weight=30g
+tradeable=no
+
+[plaguesample]
+desc=Probably best I don't keep this too long.
+cost=1
+model=obj_plaguesample
+2dyof=2
+2dzoom=1060
+2dyan=116
+2dxan=136
+members=yes
+name=Plague sample
+weight=50g
+tradeable=no
+
+[touch_paper]
+desc=A special kind of paper.
+cost=1
+model=obj_touch_paper
+2dxof=-1
+2dyof=30
+2dzoom=1050
+2dyan=1672
+2dxan=288
+members=yes
+name=Touch paper
+weight=10g
+tradeable=no
+
+[distillator]
+members=yes
+desc=Apparently it distills.
+cost=1
+model=obj_distillator
+2dxof=3
+2dyof=3
+2dzoom=720
+2dyan=684
+2dxan=304
+name=Distillator
+weight=20g
+tradeable=no
+
+[king_lathas_amulet]
+desc=Yup. It's an amulet.
+cost=10
+model=obj_ikov_pendantoflucien
+2dxof=-1
+2dyof=-5
+2dzoom=420
+2dyan=80
+2dxan=224
+members=yes
+iop2=Wear
+manwear=obj_ikov_pendantoflucien_manwear,0
+womanwear=obj_ikov_pendantoflucien_womanwear,0
+name=Lathas' amulet
+wearpos=front
+weight=10g
+tradeable=no
+
+[birdfeed]
+desc=Birds love this stuff!
+cost=1
+model=obj_birdfeed
+2dxof=-2
+2dyof=-4
+2dzoom=550
+2dyan=1844
+2dxan=116
+members=yes
+name=Bird feed
+weight=50g
+tradeable=no
+
+[mournerkeytw]
+desc=Opens things.
+cost=1
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=Key
+weight=10g
+tradeable=no
+
+[pigeons]
+cost=1
+desc=It's full of pigeons.
+model=obj_pigeons
+2dxof=-9
+2dyof=-21
+2dzoom=1590
+2dyan=1708
+2dxan=192
+iop1=Open
+members=yes
+name=Pigeon cage
+weight=2kg
+tradeable=no
+
+[pigeoncage]
+cost=1
+desc=It's empty...
+model=obj_lobster_pot
+2dzoom=1180
+2dyan=1668
+2dxan=192
+members=yes
+name=Pigeon cage
+weight=500g
+tradeable=no
+
+[priest_gown]
+desc=Top half of a priest suit.
+cost=5
+model=obj_priest_gown
+2dyof=7
+2dzoom=1370
+2dxan=536
+iop2=Wear
+manwear=obj_priest_gown_manwear,0
+manwear2=obj_priest_gown_manwear2
+womanwear=obj_priest_gown_womanwear,0
+womanwear2=obj_priest_gown_womanwear2
+recol1s=8741
+recol1d=0
+name=Priest gown
+wearpos=torso
+wearpos2=arms
+weight=4lb
+param=prayerbonus,3
+
+[priest_robe]
+desc=Bottom half of a priest suit.
+cost=5
+model=obj_priest_robe
+2dyof=1
+2dzoom=1940
+2dxan=572
+iop2=Wear
+manwear=obj_priest_robe_manwear,0
+womanwear=obj_priest_robe_womanwear,0
+recol1s=25238
+recol1d=0
+name=Priest gown
+wearpos=legs
+weight=4lb
+param=prayerbonus,3
+
+[doctor_gown]
+desc=Medical looking.
+cost=40
+model=obj_doctor_gown
+iop2=Wear
+2dxof=-2
+2dyof=11
+2dzoom=1040
+2dyan=168
+2dxan=304
+manwear=obj_priest_gown_manwear,0
+manwear2=obj_doctor_gown_manwear2
+womanwear=obj_priest_gown_womanwear,0
+womanwear2=obj_doctor_gown_womanwear2
+members=yes
+recol1s=8741
+recol1d=127
+name=Doctors' gown
+wearpos=torso
+wearpos2=arms
+weight=4lb
+tradeable=no

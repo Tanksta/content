@@ -1,0 +1,158 @@
+[lograft_waterfall_quest]
+length=2
+op1=Board
+model=lograft_waterfall_quest
+name=Log raft
+desc=A primitive looking boat.
+
+[lograft_broken]
+width=2
+length=2
+model=lograft_broken
+name=Broken log raft
+desc=Oops!
+
+[bookcase_waterfall_quest]
+length=2
+op1=Search
+forceapproach=13
+model=bookcase
+name=Bookcase
+desc=A good source of books!
+
+[golrie_crate_waterfall_quest]
+op1=Search
+model=crate3
+name=Crate
+desc=A wooden crate for storage.
+
+[golrie_gate_waterfall_quest]
+op1=Open
+active=yes
+blockrange=no
+model=ctratgatea
+name=Door
+desc=Solid bars of iron.
+
+[glarials_tombstone_waterfall_quest]
+width=2
+length=2
+op1=Read
+model=largegrave
+name=Glarial's tombstone
+desc=There is an indent the size of a pebble in the stone's centre.
+
+[glarials_tomb_waterfall_quest]
+width=2
+op1=Search
+model=tombgravestone
+name=Glarial's tomb
+desc=A stone tomb surrounded by flowers.
+
+[glarials_chest_closed_waterfall_quest]
+op1=Open
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_shut
+name=Closed chest
+desc=I wonder what's inside.
+
+[glarials_chest_open_waterfall_quest]
+op1=Search
+op2=Shut
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_open
+name=Open chest
+desc=Perhaps I should search it.
+
+[crossing_rock_waterfall_quest]
+op1=Swim to
+shadow=no
+blockwalk=no
+model=crossing_rock_waterfall_quest
+name=Rock
+desc=I should be safe if I can reach this.
+
+[crossing_rock_roped_waterfall_quest]
+op1=Swim to
+shadow=no
+blockwalk=no
+model=crossing_rock_roped_waterfall_quest
+name=Rock
+desc=I should be safe if I can reach this.
+
+[crossing_rope_waterfall_quest]
+shadow=no
+blockwalk=no
+model=quest_loc_1998
+name=Rope
+desc=Rope.
+
+[baxtorian_crate_waterfall_quest]
+op1=Search
+model=crate3
+name=Crate
+desc=A wooden crate for storage.
+
+[baxtorian_door_waterfall_quest]
+op1=Open
+model=door1
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+name=Door
+desc=An elf-fashioned door.
+
+[baxtorian_door_open_waterfall_quest]
+model=door1
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+
+[baxtorian_door_2_waterfall_quest]
+op1=Open
+model=door1
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+name=Door
+desc=An elf-fashioned door.
+
+[baxtorian_door_2_open_waterfall_quest]
+model=door1
+retex1s=wall
+retex1d=elfdoor
+recol2s=24
+recol2d=4762
+
+[stonepillar_small_waterfall_quest]
+resizex=50
+resizey=50
+resizez=50
+model=stonepillar
+name=Pillar
+desc=The pillar has a rune shaped dent in it.
+
+[statue_king_waterfall_quest]
+recol1s=61
+recol1d=43053
+recol2s=10363
+recol2d=6587
+model=statue_king
+name=Statue of Baxtorian
+desc=A statue of Baxtorian chiselled in stone.
+
+[statue_queen_waterfall_quest]
+recol1s=61
+recol1d=43053
+recol2s=10363
+recol2d=6587
+model=statue_queen
+name=Statue of Glarial
+desc=A statue of Glarial chiselled in stone.

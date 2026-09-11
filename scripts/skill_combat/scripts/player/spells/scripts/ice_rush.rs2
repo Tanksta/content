@@ -1,0 +1,33 @@
+[opnpct,magic2:com_5] ~pvm_ice_rush(^ice_rush);
+[apnpct,magic2:com_5] ~pvm_ice_rush(^ice_rush);
+
+[proc,pvm_ice_rush](int $spell)
+def_dbrow $spell_data = ~get_spell_data($spell);
+if (~pvm_combat_spell_checks($spell_data) = false) {
+    return;
+}
+if (~pvm_debuff_allowed($spell_data) = false) {
+    return;
+}
+
+def_int $duration = ~pvm_spell_cast($spell_data);
+
+// hit check
+if (~player_npc_hit_roll(^magic_style) = true) {
+
+    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+    ~pvm_spell_success($spell_data, $maxhit, $duration);
+    ~pvm_stat_change_effect($spell_data);
+
+    def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+    if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+        %npc_stunned = calc(map_clock + $freeze_time);
+        npc_walktrigger(8, 0);
+    }
+
+} else {
+
+    // splash logic
+    ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+}

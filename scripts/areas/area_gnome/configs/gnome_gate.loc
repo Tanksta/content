@@ -1,0 +1,21 @@
+[gnome_areagate]
+width=5
+length=2
+active=yes
+op1=Open
+model=gnome_areagate
+name=Gate
+desc=A large gate in the gnome style.
+
+[gnome_areagate_open_left]
+width=2
+length=2
+active=no
+model=gnome_areagate_open_left
+
+[gnome_areagate_open_right]
+width=2
+length=2
+active=no
+mirror=yes
+model=gnome_areagate_open_left

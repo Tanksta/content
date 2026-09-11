@@ -1,0 +1,257 @@
+[serum_book]
+desc=A diary belonging to Herbi Flax.
+model=obj_digsitebook
+iop1=Read
+2dxof=1
+2dyof=-21
+2dzoom=830
+2dyan=116
+2dxan=244
+members=yes
+recol1s=5018
+recol1d=8076
+recol2s=10351
+recol2d=7838
+recol3s=11177
+recol3d=8076
+recol4s=61
+recol4d=8076
+name=Diary
+tradeable=no
+weight=510g
+
+[ashesvial]
+desc=I need another ingredient to finish this potion.
+cost=11
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+recol1s=61
+recol1d=10708
+name=Unfinished potion
+weight=56g
+
+[mort_serum4]
+desc=4 doses serum 207 as described in Herbi Flax's diary.
+cost=14
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=35745
+name=Serum 207 (4)
+category=category_108
+param=next_obj_stage,mort_serum3
+weight=35g
+
+[mort_serum3]
+desc=3 doses serum 207 as described in Herbi Flax's diary.
+cost=13
+model=obj_guamvial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=35745
+name=Serum 207 (3)
+category=category_108
+param=next_obj_stage,mort_serum2
+weight=30g
+
+[mort_serum2]
+desc=2 doses serum 207 as described in Herbi Flax's diary.
+cost=13
+model=obj_2dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=35745
+name=Serum 207 (2)
+category=category_108
+param=next_obj_stage,mort_serum1
+weight=25g
+
+[mort_serum1]
+desc=1 dose serum 207 as described in Herbi Flax's diary.
+cost=11
+model=obj_1dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=35745
+name=Serum 207 (1)
+category=category_108
+param=next_obj_stage,vial_empty
+weight=20g
+
+[mort_serum_perm4]
+desc=4 doses permanent serum 207 as described in Herbi Flax's diary.
+cost=14
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=38848
+name=Serum 207(p) (4)
+param=next_obj_stage,mort_serum_perm3
+category=category_109
+tradeable=false
+weight=35g
+
+[mort_serum_perm3]
+desc=3 doses permanent serum 207 as described in Herbi Flax's diary.
+cost=13
+model=obj_guamvial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=38848
+name=Serum 207(p) (3)
+param=next_obj_stage,mort_serum_perm2
+category=category_109
+tradeable=false
+weight=30g
+
+[mort_serum_perm2]
+desc=2 doses permanent serum 207 as described in Herbi Flax's diary.
+cost=13
+model=obj_2dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=38848
+name=Serum 207(p) (2)
+param=next_obj_stage,mort_serum_perm1
+category=category_109
+tradeable=false
+weight=25g
+
+[mort_serum_perm1]
+desc=1 dose permanent serum 207 as described in Herbi Flax's diary.
+cost=11
+model=obj_1dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=38848
+name=Serum 207(p) (1)
+param=next_obj_stage,vial_empty
+category=category_109
+tradeable=false
+weight=20g
+
+[limestonebrick]
+desc=A well carved limestone brick.
+cost=20
+model=obj_tog_bowl
+2dxof=-7
+2dyof=-41
+2dyan=164
+2dxan=220
+members=yes
+recol1s=7062
+recol1d=10295
+name=Limestone brick
+weight=1360g
+
+[oliveoil4]
+desc=4 doses of olive oil.
+cost=22
+model=obj_strength4
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=14272
+name=Olive oil(4)
+category=category_110
+param=next_obj_stage,sacred_oil4
+weight=35g
+
+[oliveoil3]
+desc=3 doses of olive oil.
+cost=20
+model=obj_guamvial
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=14272
+name=Olive oil(3)
+category=category_110
+param=next_obj_stage,sacred_oil3
+weight=30g
+
+[oliveoil2]
+desc=2 doses of olive oil.
+cost=17
+model=obj_2dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=14272
+name=Olive oil(2)
+category=category_110
+param=next_obj_stage,sacred_oil2
+weight=25g
+
+[oliveoil1]
+desc=1 dose of olive oil.
+cost=14
+model=obj_1dose1strength
+2dyof=-1
+2dzoom=550
+2dyan=1996
+2dxan=84
+members=yes
+iop4=Empty
+recol1s=61
+recol1d=14272
+name=Olive oil(1)
+category=category_110
+param=next_obj_stage,sacred_oil1
+weight=20g

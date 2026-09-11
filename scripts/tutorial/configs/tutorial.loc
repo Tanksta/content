@@ -1,0 +1,177 @@
+[newbie_door1]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A nicely fitted door.
+param=next_loc_stage,loc_1535
+
+[newbiegateclosedl2]
+active=yes
+op1=Open
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=tutorial_gate
+
+[newbiegateclosedr2]
+active=yes
+mirror=yes
+op1=Open
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=tutorial_gate
+
+[newbie_door2]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A nicely fitted door.
+param=next_loc_stage,loc_1535
+
+[newbie_door3]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A nicely fitted door.
+param=next_loc_stage,loc_1535
+
+[newbie_door4]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A nicely fitted door.
+param=next_loc_stage,loc_1535
+
+[newbiedoor4l]
+op1=Open
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=tut_mining_exit
+
+[newbiedoor4r]
+op1=Open
+mirror=yes
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=tut_mining_exit
+
+[newbiedoor5_l]
+op1=Open
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=rat_pit_cage
+
+[newbiedoor5_r]
+op1=Open
+mirror=yes
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=rat_pit_cage
+
+[newbie_door6]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A closed door.
+param=next_loc_stage,loc_1535
+
+[newbie_door7]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A closed door.
+param=next_loc_stage,loc_1535
+
+[newbie_door8]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A closed door.
+param=next_loc_stage,loc_1535
+
+[newbietree]
+width=2
+length=2
+mapscene=0
+op1=Chop down
+model=tree
+name=Tree
+desc=One of the most common trees in RuneScape.
+param=next_loc_stage,treestump2
+
+[newbietree2]
+width=2
+length=2
+mapscene=0
+op1=Chop down
+model=tree2
+name=Tree
+desc=One of the most common trees in RuneScape.
+param=next_loc_stage,treestump2
+
+[newbiedeadtree2]
+width=2
+length=2
+mapscene=6
+op1=Chop down
+model=deadtree2
+name=Tree
+desc=One of the most common trees in RuneScape.
+param=next_loc_stage,deadtree1_stump
+
+[newbieoaktree]
+width=3
+length=3
+op1=Chop down
+mapscene=1
+model=com_i2
+name=Oak
+desc=A beautiful old oak.

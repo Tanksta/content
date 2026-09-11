@@ -1,0 +1,154 @@
+[jug_empty]
+desc=This jug is empty.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+cost=1
+recol1s=127
+recol1d=61
+name=Jug
+weight=1lb
+param=next_obj_stage,jug_water
+
+[jug_water]
+desc=It's full of water.
+model=obj_wine_of_zamorak
+2dxof=1
+2dyof=100
+2dzoom=600
+2dyan=84
+2dxan=260
+cost=1
+iop4=Empty
+recol1s=127
+recol1d=43486
+name=Jug of water
+weight=1kg
+param=is_water_source,^true
+
+[bucket_empty]
+desc=It's a wooden bucket.
+cost=2
+model=prison_bucket_8
+manwear=obj_bucket_bailing_manwear,0
+womanwear=obj_bucket_bailing_manwear,6
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+name=Bucket
+weight=1kg
+param=next_obj_stage,bucket_water
+
+[bucket_water]
+desc=It's a bucket of water.
+cost=6
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+iop4=Empty
+name=Bucket of water
+weight=3kg
+param=is_water_source,^true
+
+[bowl_water]
+desc=It's a bowl of water.
+cost=4
+model=obj_goldbowl_water
+2dzoom=910
+2dyan=1856
+2dxan=204
+iop4=Empty
+name=Bowl of water
+weight=2lb
+param=is_water_source,^true
+
+[bowl_empty]
+desc=Useful for mixing things.
+cost=4
+model=obj_goldbowl_empty
+2dzoom=910
+2dyan=1856
+2dxan=204
+name=Bowl
+weight=1lb
+param=next_obj_stage,bowl_water
+
+[water_skin4]
+desc=A full waterskin with four portions of water.
+cost=30
+model=obj_water_skin4
+2dxof=-4
+2dyof=1
+2dzoom=780
+2dyan=156
+2dxan=52
+members=yes
+name=Waterskin(4)
+weight=1100g
+category=water_skin_filled
+param=is_water_source,^true
+
+[water_skin3]
+desc=A nearly full waterskin with three portions of water.
+cost=27
+model=obj_water_skin4
+members=yes
+2dxof=-4
+2dyof=1
+2dzoom=780
+2dyan=156
+2dxan=52
+name=Waterskin(3)
+weight=30oz
+category=water_skin_filled
+param=is_water_source,^true
+
+[water_skin2]
+desc=A half empty waterskin with two portions of water.
+cost=24
+model=obj_water_skin4
+members=yes
+2dxof=-4
+2dyof=1
+2dzoom=780
+2dyan=156
+2dxan=52
+name=Waterskin(2)
+weight=600g
+category=water_skin_filled
+param=is_water_source,^true
+
+[water_skin1]
+desc=A nearly empty waterskin with one portion of water.
+cost=18
+model=obj_water_skin4
+members=yes
+2dxof=-4
+2dyof=1
+2dzoom=780
+2dyan=156
+2dxan=52
+name=Waterskin(1)
+weight=350g
+category=water_skin_filled
+param=is_water_source,^true
+
+[water_skin0]
+desc=A completely empty waterskin - you'll need to fill it up.
+cost=15
+members=yes
+model=obj_water_skin4
+2dxof=-4
+2dyof=1
+2dzoom=780
+2dyan=156
+2dxan=52
+name=Waterskin(0)
+weight=100g
+param=next_obj_stage,water_skin1

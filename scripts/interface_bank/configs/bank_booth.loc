@@ -1,0 +1,19 @@
+[bankbooth]
+op1=Use
+op2=Use-quickly
+blockrange=no
+model=furniture_bankbooth
+name=Bank booth
+desc=The bank teller will serve you from here.
+
+[loc_2214]
+blockrange=no
+model=furniture_loc_2214
+name=Bank booth
+desc=This booth is for private customers only.
+
+[bankboothclosed]
+name=Closed bank booth
+desc=This booth is closed.
+model=furniture_bankbooth
+blockrange=no

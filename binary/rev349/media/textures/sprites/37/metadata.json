@@ -1,0 +1,27 @@
+{
+  "member": "37.dat",
+  "palette": [
+    0,
+    657930,
+    2500134,
+    3421236,
+    5592405,
+    7829367,
+    6842472,
+    4539717
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/37/000.png",
+      "canvasWidth": 64,
+      "canvasHeight": 64,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 64,
+      "height": 64,
+      "encoding": 1
+    }
+  ]
+}

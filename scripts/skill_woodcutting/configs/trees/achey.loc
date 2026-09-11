@@ -1,0 +1,10 @@
+[achey_tree]
+width=2
+length=2
+mapscene=0
+op1=Chop
+model=achey_tree
+name=Achey Tree
+desc=An interesting tree with long straight branches.
+category=tree
+param=next_loc_stage,achey_tree_stump

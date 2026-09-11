@@ -1,0 +1,86 @@
+[phoenixdoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A solid looking door.
+
+[phoenixdoor2]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A solid looking door.
+
+[blackarmdoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+desc=A solid looking door.
+
+[blackarmcupboardshut]
+length=2
+offsetx=-20
+offsetz=50
+active=yes
+op1=Open
+forceapproach=13
+model=cupboard
+name=Cupboard
+desc=Might be worth searching.
+param=cupboard_other,blackarmcupboardopen
+
+[blackarmcupboardopen]
+length=2
+offsetx=-20
+offsetz=50
+active=yes
+op1=Shut
+op2=Search
+forceapproach=13
+model=cupboardopen
+name=Cupboard
+desc=Might be worth searching.
+param=cupboard_other,blackarmcupboardshut
+
+[questbookcase]
+length=2
+active=yes
+op2=Check
+model=bookcase
+name=Bookcase
+desc=A good source of books!
+
+[phoenixshutchest]
+active=yes
+op1=Open
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_shut
+name=Chest
+desc=Might be worth searching.
+
+[phoenixopenchest]
+active=yes
+op1=Search
+op2=Close
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_open
+name=Chest
+desc=Might be worth searching.

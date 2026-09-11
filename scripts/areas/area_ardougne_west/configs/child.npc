@@ -1,0 +1,35 @@
+[w_ardoungechild1]
+vislevel=hide
+desc=One of RuneScape's many citizens.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22426
+recol1d=5797
+recol2s=11162
+recol2d=5006
+name=Child
+model1=npc_hudon_waterfall_quest
+model2=npc_leprechaun
+model3=npc_gnomechildgreeni2
+head1=npc_hudon_waterfall_quest_head
+param=death_anim,midget_death
+
+[dskin_w_ardoungechild1]
+vislevel=hide
+desc=One of RuneScape's many citizens.
+walkanim=midget_walk
+readyanim=midget_ready
+op1=Talk-to
+recol1s=22426
+recol1d=5797
+recol2s=4550
+recol2d=5662
+recol3s=11162
+recol3d=5006
+name=Child
+model1=npc_hudon_waterfall_quest
+model2=npc_leprechaun
+model3=npc_gnomechildgreeni2
+head1=npc_hudon_waterfall_quest_head
+param=death_anim,midget_death

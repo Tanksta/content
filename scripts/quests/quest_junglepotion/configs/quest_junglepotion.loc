@@ -1,0 +1,101 @@
+[snake_vine_full]
+hillskew=yes
+op2=Search
+recol1s=22441
+recol1d=22435
+recol2s=13243
+recol2d=10173
+model=greenvine_yellowleaves
+name=Marshy jungle vine
+desc=A marshy jungle vine.
+
+[snake_vine_empty]
+hillskew=yes
+recol1s=13243
+recol1d=22441
+model=greenvine_yellowleaves
+name=Marshy jungle vine
+desc=A marshy jungle vine.
+
+[ardrigal_palm_full]
+width=2
+length=2
+mapscene=5
+op2=Search
+model=palm
+name=Palm tree
+desc=A tall palm tree with some plants growing at its stem.
+
+[ardrigal_palm_empty]
+width=2
+length=2
+mapscene=5
+model=palm
+name=Palm tree
+desc=A tall palm tree.
+
+[sito_soil_full]
+mapscene=5
+hillskew=yes
+op2=Search
+recol1s=4892
+recol1d=4750
+recol2s=4899
+recol2d=7056
+model=sito_soil_full
+name=Scorched earth
+desc=The burnt ground has a plant growing on it.
+
+[sito_soil_empty]
+mapscene=5
+hillskew=yes
+recol1s=4892
+recol1d=4750
+recol2s=4899
+recol2d=7056
+model=sito_soil_full
+name=Scorched earth
+desc=The ground has been burnt here by a fire.
+
+[volencia_moss_rock_full]
+mapscene=12
+op2=Search
+model=rock3
+name=Rock
+desc=A rock with green moss growing on it.
+
+[volencia_moss_rock_empty]
+mapscene=12
+model=rock3
+name=Rock
+desc=A rock, it looks like something was growing here.
+
+[rogues_purse_cave_full]
+contrast=100
+ambient=50
+active=yes
+op2=Search
+recol1s=6689
+recol1d=22428
+model=cave_detail2_white
+name=Fungus covered Cavern wall
+desc=It looks as if it is covered in some fungus.
+
+[pothole_cave_entrance]
+width=2
+length=2
+hillskew=yes
+occlude=yes
+op2=Search
+model=ahzarhoon_entrance_fissure
+name=Rocks
+desc=A collection of rocks over what looks like a depression.
+
+[jp_caverocksout]
+contrast=100
+ambient=50
+active=yes
+op1=Climb
+model=cave_climbingrocks
+name=Hand holds
+desc=Rocky walls, you may be able to climb it.

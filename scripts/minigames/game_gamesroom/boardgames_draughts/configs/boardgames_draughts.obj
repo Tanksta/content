@@ -1,0 +1,203 @@
+[boardgames_draughts_firerune_king]
+desc=A piece used in board games.
+model=obj_firerune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_waterrune_king]
+desc=A piece used in board games.
+model=obj_waterrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_earthrune_king]
+desc=A piece used in board games.
+model=obj_earthrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_airrune_king]
+desc=A piece used in board games.
+model=obj_airrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_mindrune_king]
+desc=A piece used in board games.
+model=obj_mindrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_bodyrune_king]
+desc=A piece used in board games.
+model=obj_bodyrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_naturerune_king]
+desc=A piece used in board games.
+model=obj_naturerune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_chaosrune_king]
+desc=A piece used in board games.
+model=obj_chaosrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_lawrune_king]
+desc=A piece used in board games.
+model=obj_lawrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_cosmicrune_king]
+desc=A piece used in board games.
+model=obj_cosmicrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_bloodrune_king]
+desc=A piece used in board games.
+model=obj_bloodrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only
+
+[boardgames_draughts_soulrune_king]
+desc=A piece used in board games.
+model=obj_soulrune
+2dyof=1
+2dzoom=740
+2dyan=1012
+2dxan=528
+members=yes
+ambient=30
+recol1s=61
+recol1d=840
+name=Board game piece
+category=draughts_king
+weight=2g
+tradeable=no
+dummyitem=inv_only

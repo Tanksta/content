@@ -1,0 +1,22 @@
+[manholeclosed]
+op1=Open
+blockrange=no
+model=manholeclosed
+name=Manhole
+desc=There's a cover over this manhole.
+
+[manholeopen]
+op1=Climb down
+blockrange=no
+recol1s=49
+recol1d=37
+model=manholeopen
+name=Manhole
+desc=How dangerous, someone has left this manhole open.
+
+[loc_883]
+op1=Close
+blockrange=no
+model=manholeclosed
+name=Manhole cover
+desc=This is supposed to stop people falling down the manhole.

@@ -1,0 +1,150 @@
+[easter_egg_2005_lightblue]
+name=Blue sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=38115
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_darkblue]
+name=Deep blue sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=40637
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_white]
+name=White sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=119
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_purple]
+name=Purple sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=50124
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_red]
+name=Red sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=972
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_green]
+name=Green sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=19379
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g
+
+
+
+
+[easter_egg_2005_pink]
+name=Pink sweets
+desc=Not likely to last until next Halloween.
+recol1s=39896
+recol1d=55256
+model=obj_easter_egg_2005_lightblue
+resizex=90
+resizey=90
+resizez=90
+2dxof=7
+2dyof=5
+2dzoom=1460
+2dyan=1268
+2dxan=484
+cost=1
+stackable=yes
+iop1=Eat
+weight=10g

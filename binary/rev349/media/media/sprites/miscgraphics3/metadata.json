@@ -1,0 +1,50 @@
+{
+  "member": "miscgraphics3.dat",
+  "palette": [
+    0,
+    3025699,
+    4395023,
+    7496785,
+    10429987,
+    4802885,
+    4079163,
+    5066057,
+    5921365,
+    5592401,
+    4473921,
+    7609370,
+    6953496,
+    8133915,
+    8593181,
+    8921118,
+    9380640,
+    5395021,
+    6382172,
+    10954789
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/miscgraphics3/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/miscgraphics3/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 25,
+      "encoding": 1
+    }
+  ]
+}

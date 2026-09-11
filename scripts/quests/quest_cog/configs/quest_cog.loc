@@ -1,0 +1,105 @@
+[brokeclockpole_red]
+active=yes
+recol1s=41905
+recol1d=960
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+
+[brokeclockpole_black]
+active=yes
+recol1s=41905
+recol1d=0
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+
+[brokeclockpole_white]
+active=yes
+recol1s=41905
+recol1d=127
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+
+[brokeclockpole_blue]
+active=yes
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+
+[clockpole_red]
+active=yes
+recol1s=41905
+recol1d=960
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+category=incorrect_clock_spindle
+
+[clockpole_black]
+active=yes
+recol1s=41905
+recol1d=0
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+category=incorrect_clock_spindle
+
+[clockpole_white]
+active=yes
+recol1s=41905
+recol1d=127
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+category=incorrect_clock_spindle
+
+[clockpole_blue]
+active=yes
+model=clockpole_red
+name=Clock spindle
+desc=Seems to be some kind of clock part.
+category=incorrect_clock_spindle
+
+[ctlevera]
+active=yes
+op1=Pull
+model=ctlevera
+name=Lever
+desc=Yup, definitely a lever.
+
+[ctleverb]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=Yup, definitely a lever.
+
+[ctlevera2]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=Yup, definitely a lever.
+
+[ctleverb2]
+active=yes
+op1=Pull
+model=ctlevera
+name=Lever
+desc=Yup, definitely a lever.
+
+[ctratgatec]
+active=yes
+op1=Go-through
+model=ctratgatea
+name=Gate
+desc=Stops people walking past.
+
+[ctfoodtrough]
+width=2
+active=yes
+model=ctfoodtrough
+name=Food trough
+desc=Animals have no table manners.

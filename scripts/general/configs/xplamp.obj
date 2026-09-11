@@ -1,0 +1,13 @@
+[macro_genilamp]
+desc=Wonder what happens if I rub it...
+model=obj_macro_genilamp
+2dxof=2
+2dyof=-2
+2dzoom=840
+2dyan=228
+2dxan=28
+iop1=Rub
+name=Lamp
+weight=100g
+tradeable=no
+param=unbankable,^true

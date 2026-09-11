@@ -1,0 +1,144 @@
+[if_button,combat_staff_2:auto_choose] @open_autocast_interface;
+[if_button,staff_spells:ssb0] @set_autocast_spell(^wind_strike);
+[if_button,staff_spells:ssb1] @set_autocast_spell(^water_strike);
+[if_button,staff_spells:ssb2] @set_autocast_spell(^earth_strike);
+[if_button,staff_spells:ssb3] @set_autocast_spell(^fire_strike);
+[if_button,staff_spells:ssb4] @set_autocast_spell(^wind_bolt);
+[if_button,staff_spells:ssb5] @set_autocast_spell(^water_bolt);
+[if_button,staff_spells:ssb6] @set_autocast_spell(^earth_bolt);
+[if_button,staff_spells:ssb7] @set_autocast_spell(^fire_bolt);
+[if_button,staff_spells:ssb8] @set_autocast_spell(^wind_blast);
+[if_button,staff_spells:ssb9] @set_autocast_spell(^water_blast);
+[if_button,staff_spells:ssb10] @set_autocast_spell(^earth_blast);
+[if_button,staff_spells:ssb11] @set_autocast_spell(^fire_blast);
+[if_button,staff_spells:ssb12] @set_autocast_spell(^wind_wave);
+[if_button,staff_spells:ssb13] @set_autocast_spell(^water_wave);
+[if_button,staff_spells:ssb14] @set_autocast_spell(^earth_wave);
+[if_button,staff_spells:ssb15] @set_autocast_spell(^fire_wave);
+
+[if_button,ancient_staff_spells:assb0] @set_ancient_autocast_spell(^smoke_rush);
+[if_button,ancient_staff_spells:assb1] @set_ancient_autocast_spell(^shadow_rush);
+[if_button,ancient_staff_spells:assb2] @set_ancient_autocast_spell(^blood_rush);
+[if_button,ancient_staff_spells:assb3] @set_ancient_autocast_spell(^ice_rush);
+[if_button,ancient_staff_spells:assb4] @set_ancient_autocast_spell(^smoke_burst);
+[if_button,ancient_staff_spells:assb5] @set_ancient_autocast_spell(^shadow_burst);
+[if_button,ancient_staff_spells:assb6] @set_ancient_autocast_spell(^blood_burst);
+[if_button,ancient_staff_spells:assb7] @set_ancient_autocast_spell(^ice_burst);
+[if_button,ancient_staff_spells:assb8] @set_ancient_autocast_spell(^smoke_blitz);
+[if_button,ancient_staff_spells:assb9] @set_ancient_autocast_spell(^shadow_blitz);
+[if_button,ancient_staff_spells:assb10] @set_ancient_autocast_spell(^blood_blitz);
+[if_button,ancient_staff_spells:assb11] @set_ancient_autocast_spell(^ice_blitz);
+[if_button,ancient_staff_spells:assb12] @set_ancient_autocast_spell(^smoke_barrage);
+[if_button,ancient_staff_spells:assb13] @set_ancient_autocast_spell(^shadow_barrage);
+[if_button,ancient_staff_spells:assb14] @set_ancient_autocast_spell(^blood_barrage);
+[if_button,ancient_staff_spells:assb15] @set_ancient_autocast_spell(^ice_barrage);
+
+[label,open_autocast_interface]
+if_close;
+if (p_finduid(uid) = false) { // cant open autocast interface if delayed
+    return;
+}
+%attackstyle_magic = 0;
+if (inv_getobj(worn, ^wearpos_rhand) = staff_of_zaros & %alternate_spells = ^spellbook_ancient) {
+    if_settab(ancient_staff_spells, 0);
+    return;
+}
+if (%alternate_spells = ^spellbook_ancient) {
+    mes("You cannot use this staff to autocast ancient magickz.");
+    return;
+}
+
+if_settab(staff_spells, 0);
+
+[if_button,staff_spells:cancelspell]
+if_close;
+if (p_finduid(uid) = true) {
+    ~initalltabs;
+}
+
+
+[if_button,ancient_staff_spells:cancelspell]
+if_close;
+if (p_finduid(uid) = true) {
+    ~initalltabs;
+}
+
+[label,set_ancient_autocast_spell](int $spell)
+@set_autocast_spell($spell);
+
+// todo: allow setting autocast to go through delays.
+[label,set_autocast_spell](int $spell)
+if_close;
+if (p_finduid(uid) = true) {
+    def_obj $weapon = inv_getobj(worn, ^wearpos_rhand);
+    if (~player_can_autocast_spell($weapon, $spell) = false) {
+        if (%alternate_spells = ^spellbook_ancient) {
+            mes("You cannot use this staff to autocast ancient magickz.");
+            return;
+        }
+        mes("You cannot autocast that spell with your current staff.");
+        return;
+    }
+    def_dbrow $spell_data = ~get_spell_data($spell);
+    if (~check_spell_requirements($spell_data) = false) {
+        return;
+    }
+    // set selected autocast spell
+    %autocast_spell = $spell;
+
+    %attackstyle_magic = 2;
+    if_settext(combat_staff_2:auto_spell, db_getfield($spell_data, magic_spell_table:name, 0));
+
+    ~initalltabs;
+}
+
+[proc,player_autocast_enabled]()(boolean)
+def_obj $weapon = inv_getobj(worn, ^wearpos_rhand);
+if (~player_can_autocast_spell($weapon, %autocast_spell) = true & testbit(%attackstyle_magic, 0) = ^true & %attackstyle_magic = 3 & %autocast_spell > 0) {
+    return(true);
+}
+return(false);
+
+[proc,player_autocast_spell_is_ancient](int $spell)(boolean)
+if ($spell = ^ice_rush | $spell = ^ice_burst | $spell = ^ice_blitz | $spell = ^ice_barrage | $spell = ^blood_rush | $spell = ^blood_burst | $spell = ^blood_blitz | $spell = ^blood_barrage | $spell = ^shadow_rush | $spell = ^shadow_burst | $spell = ^shadow_blitz | $spell = ^shadow_barrage | $spell = ^smoke_rush | $spell = ^smoke_burst | $spell = ^smoke_blitz | $spell = ^smoke_barrage) {
+    return(true);
+}
+return(false);
+
+[proc,player_can_autocast_spell](obj $weapon, int $spell)(boolean)
+if ($weapon = null | oc_category($weapon) ! weapon_staff | $spell <= 0) {
+    return(false);
+}
+if (~player_autocast_spell_is_ancient($spell) = true) {
+    if ($weapon = staff_of_zaros & %alternate_spells = ^spellbook_ancient) {
+        return(true);
+    }
+    return(false);
+}
+if (%alternate_spells = ^spellbook_ancient) {
+    return(false);
+}
+return(true);
+
+[proc,.player_can_autocast_spell](obj $weapon, int $spell)(boolean)
+if ($weapon = null | oc_category($weapon) ! weapon_staff | $spell <= 0) {
+    return(false);
+}
+if (~player_autocast_spell_is_ancient($spell) = true) {
+    if ($weapon = staff_of_zaros & .%alternate_spells = ^spellbook_ancient) {
+        return(true);
+    }
+    return(false);
+}
+if (.%alternate_spells = ^spellbook_ancient) {
+    return(false);
+}
+return(true);
+
+[proc,player_autocast_reset]
+%attackstyle_magic = 0;
+%autocast_spell = null;
+
+[proc,.player_autocast_reset]
+.%attackstyle_magic = 0;
+.%autocast_spell = null;

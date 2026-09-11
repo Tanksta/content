@@ -1,0 +1,32 @@
+[opplayert,magic2:com_83] ~pvp_smoke_rush(^smoke_rush);
+[applayert,magic2:com_83] ~pvp_smoke_rush(^smoke_rush);
+
+[proc,pvp_smoke_rush](int $spell)
+def_dbrow $spell_data = ~get_spell_data($spell);
+if (~pvp_combat_spell_checks($spell_data) = false) {
+    return;
+}
+if (~pvp_debuff_allowed($spell_data) = false) {
+    return;
+}
+
+def_int $duration = ~pvp_spell_cast($spell_data);
+
+// hit check
+if (~pvp_hit_roll(^magic_style) = true) {
+
+    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+    ~pvp_spell_success($spell_data, $maxhit, $duration);
+    ~pvp_stat_change_effect($spell_data);
+
+    // Smoke Rush poison logic: 1/8 chance
+    if (random(8) = 0) {
+        .queue(poison_player, 0, 10);
+    }
+
+} else {
+
+    // splash logic
+    ~pvp_spell_fail_custom($spell_data, $duration, spellfail);
+}

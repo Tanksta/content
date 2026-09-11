@@ -1,0 +1,214 @@
+[balloon_yellow]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_yellow_pop
+
+[balloon_red]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+recol1s=11200
+recol1d=960
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_red_pop
+
+[balloon_blue]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+recol1s=11200
+recol1d=43968
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_blue_pop
+
+[balloon_green]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+recol1s=11200
+recol1d=22464
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_green_pop
+
+[balloon_purple]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+recol1s=11200
+recol1d=53184
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_purple_pop
+
+[balloon_white]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow
+recol1s=11200
+recol1d=127
+name=Party Balloon
+desc=A party balloon.
+category=party_balloon
+param=next_loc_stage,balloon_white_pop
+
+[balloon2]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow_2
+name=Party Balloon
+desc=Aren't they pretty?
+category=party_balloon
+param=next_loc_stage,balloon2_pop
+
+[balloon3]
+anim=balloon_drop
+blockwalk=no
+blockrange=no
+ambient=60
+op1=Burst
+model=balloon_yellow_3
+name=Party Balloon
+desc=Paaaarty!
+category=party_balloon
+param=next_loc_stage,balloon3_pop
+
+[balloon_yellow_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon_red_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+recol1s=11200
+recol1d=960
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon_blue_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+recol1s=11200
+recol1d=43968
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon_green_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+recol1s=11200
+recol1d=22464
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon_purple_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+recol1s=11200
+recol1d=53184
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon_white_pop]
+anim=balloon_burst
+blockwalk=no
+blockrange=no
+ambient=60
+recol1s=11200
+recol1d=127
+model=balloon_yellow_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon2_pop]
+anim=balloon_burst_2
+blockwalk=no
+blockrange=no
+ambient=60
+model=balloon2_pop
+name=Party Balloon
+desc=A party balloon.
+
+[balloon3_pop]
+anim=balloon_burst_3
+blockwalk=no
+blockrange=no
+ambient=60
+model=balloon3_pop
+name=Party Balloon
+desc=A party balloon.
+
+[loc_2416]
+active=yes
+op1=Pull
+forceapproach=11
+model=obj_murderfingerprint
+name=Lever
+desc=Pull me!
+
+[loc_2417]
+op1=Open
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_shut
+name=Closed chest
+desc=Place party drop items here.
+
+[partyroom_chestopen]
+op2=Deposit
+op3=Shut
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_open
+name=Open chest
+desc=Place party drop items here.

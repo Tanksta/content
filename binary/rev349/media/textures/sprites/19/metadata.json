@@ -1,0 +1,29 @@
+{
+  "member": "19.dat",
+  "palette": [
+    0,
+    5063219,
+    4141606,
+    5126187,
+    3811610,
+    6506547,
+    5915435,
+    5190942,
+    6837051,
+    3153680
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/19/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 1
+    }
+  ]
+}

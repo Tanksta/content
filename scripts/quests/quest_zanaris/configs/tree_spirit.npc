@@ -1,0 +1,19 @@
+[tree_spirit]
+desc=Guardian of the dramen tree.
+walkanim=ghost_walk
+readyanim=ghost_ready
+op2=Attack
+vislevel=101
+recol1s=39025
+recol1d=5012
+recol2s=61
+recol2d=21826
+name=Tree spirit
+model1=npc_ghost
+model2=npc_ghosti3
+model3=npc_ghosti2
+hitpoints=85
+attack=90
+strength=95
+defence=80
+param=damagetype,^crush_style

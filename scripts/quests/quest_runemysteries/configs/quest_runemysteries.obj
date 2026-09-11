@@ -1,0 +1,30 @@
+[research_package]
+desc=This contains some vital research results.
+cost=2
+model=obj_research_package
+2dyof=-14
+2dzoom=1180
+2dyan=172
+2dxan=160
+recol1s=2999
+recol1d=43325
+recol2s=22410
+recol2d=54558
+name=Research package
+weight=2lb
+param=no_alchemy,1
+tradeable=no
+
+[research_notes]
+desc=It seems to be written in some kind of code.
+cost=5
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+name=Notes
+weight=1oz
+param=no_alchemy,1
+tradeable=no

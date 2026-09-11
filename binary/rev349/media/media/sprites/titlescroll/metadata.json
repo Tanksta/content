@@ -1,0 +1,43 @@
+{
+  "member": "titlescroll.dat",
+  "palette": [
+    0,
+    5786674,
+    8088135,
+    10323803,
+    12164971,
+    0,
+    3353630,
+    14400639,
+    13217140,
+    13809018,
+    14006397,
+    14861187,
+    15453066,
+    15387013,
+    15979151,
+    16307856,
+    16636820,
+    16703128,
+    16769947,
+    16771229,
+    16769173,
+    15190151,
+    16570510,
+    14993034
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/titlescroll/000.png",
+      "canvasWidth": 503,
+      "canvasHeight": 47,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 503,
+      "height": 47,
+      "encoding": 0
+    }
+  ]
+}

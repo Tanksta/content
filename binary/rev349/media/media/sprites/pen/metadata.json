@@ -1,0 +1,39 @@
+{
+  "member": "pen.dat",
+  "palette": [
+    0,
+    65792,
+    1052429,
+    2302237,
+    3814434,
+    3487039,
+    8947609,
+    7829129,
+    10789278,
+    4078922,
+    2829109,
+    11908293,
+    4671318,
+    14144982,
+    5657961,
+    12368868,
+    14079479,
+    15987450,
+    10000570,
+    6776700
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/pen/000.png",
+      "canvasWidth": 74,
+      "canvasHeight": 82,
+      "xOffset": 6,
+      "yOffset": 9,
+      "width": 67,
+      "height": 67,
+      "encoding": 0
+    }
+  ]
+}

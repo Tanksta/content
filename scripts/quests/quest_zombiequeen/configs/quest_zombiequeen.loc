@@ -1,0 +1,449 @@
+[shilo_brokencart]
+width=3
+length=3
+op1=Look-at
+op2=Search
+model=brokencart
+name=Broken cart
+desc=This looks like it's being used to block entrance to the village.
+
+[ahzarhoon_entrance]
+width=3
+length=3
+resizex=256
+resizez=256
+mapscene=11
+op1=Look-at
+op2=Search
+model=ahzarhoon_entrance
+name=Mound of earth
+desc=Something seems to be buried under this.
+
+[ahzarhoon_entrance_fissure]
+width=3
+length=3
+resizex=192
+resizez=192
+hillskew=yes
+occlude=yes
+op1=Look-at
+op2=Search
+recol1s=5425
+recol1d=6798
+recol2s=61
+recol2d=5908
+recol3s=45
+recol3d=5772
+recol4s=57
+recol4d=8086
+recol5s=28
+recol5d=5388
+recol6s=16156
+recol6d=6798
+model=ahzarhoon_entrance_fissure
+name=Fissure
+desc=A narrow fissure in the ground.
+
+[ahzarhoon_entrance_fissure_withrope]
+hillskew=yes
+width=3
+length=3
+resizex=192
+resizez=192
+occlude=yes
+op1=Look-at
+op2=Search
+recol1s=5425
+recol1d=6798
+recol2s=61
+recol2d=5908
+recol3s=45
+recol3d=5772
+recol4s=57
+recol4d=8086
+recol5s=28
+recol5d=5388
+recol6s=16156
+recol6d=6798
+model=obj_bronze_dart_manwear
+name=Fissure
+desc=A narrow fissure in the ground.
+
+[secretrubble]
+length=2
+op2=Search
+model=mudpile
+name=Cave in
+desc=A pile of rubble.
+
+[zqsecretstone]
+active=yes
+op1=Look-at
+op2=Investigate
+model=stonedisc
+name=Strange looking stone
+desc=A stone with some carvings on it.
+
+[secretrubblebook]
+length=2
+op2=Search
+model=mudpile
+name=Loose rocks
+desc=A pile of loose rocks.
+
+[zqsacks]
+op2=Search
+model=percy_sacks
+name=Old sacks
+desc=Probably nothing useful in these.
+
+[zqgallows]
+width=2
+length=2
+op1=Look-at
+op2=Search
+model=zqgallows
+name=Ancient gallows
+desc=A rotten and barely standing set of gallows.
+
+[zqwaterfallrocks]
+hillskew=yes
+op1=Look-at
+op2=Search
+model=obj_plague_trousers_womanwear
+name=Waterfall rocks
+desc=Wet rocks, it looks like you might be able to climb them.
+
+[zqtableraft]
+op1=Look-at
+op2=Craft
+model=smashedtable
+name=Smashed table
+desc=This table has seen better days.
+
+[zqlograft]
+length=2
+op2=Disembark
+model=lograft_waterfall_quest
+name=Crude raft
+desc=A crudely constructed raft.
+
+[zq_waterfall]
+model=zq_waterfall
+
+[zq_tribal_statue]
+width=2
+length=2
+op1=Investigate
+model=tribalstatue
+name=Tribal Statue
+desc=A statue to mark Tai Bwo Wannai sacred grounds.
+
+[brimhavencart]
+width=2
+length=3
+op1=Look-at
+op2=Board
+model=cart
+name=Travel cart
+desc=A sturdy cart for travelling in.
+
+[zqclimbingrocks]
+hillskew=yes
+op1=Climb
+ambient=25
+contrast=25
+model=zqclimbingrocks
+name=Rocks
+desc=A rocky outcrop.
+
+[zqclimbingrocks_inactive]
+hillskew=yes
+ambient=25
+contrast=25
+forcedecor=yes
+model=zqclimbingrocks_inactive
+
+[zqclimbingrocks_falloff]
+hillskew=yes
+ambient=25
+contrast=25
+forcedecor=yes
+model=zqclimbingrocks_falloff
+
+[zqrocks]
+op1=Investigate
+op2=Search
+hillskew=yes
+model=rock1
+name=Well stacked rocks
+desc=Rocks that have been stacked at regular intervals.
+
+[zqdolmen]
+width=2
+length=2
+op1=Inspect
+op2=Search
+model=guthix_altar
+name=Tomb dolmen
+desc=An ancient construct for supporting the bones of the deceased.
+
+[zqhandholds]
+forcedecor=yes
+active=yes
+hillskew=yes
+op1=Climb
+model=model_535
+name=Climbing rocks
+desc=I can climb the rocky outcrop.
+
+[zqquest_hidytree]
+width=3
+length=2
+op2=Search
+mapscene=5
+model=medplant
+name=Palm tree
+desc=An exotic looking tree.
+
+[loc_2238]
+width=2
+op1=Enter
+model=cluescroll_tutor_icon
+name=Hillside entrance
+desc=Large doors set into the hillside.
+category=rashiliyia_tomb_door_opened
+
+[loc_2239]
+width=2
+mirror=yes
+op1=Enter
+model=cluescroll_tutor_icon
+name=Hillside entrance
+desc=Large doors set into the hillside.
+category=rashiliyia_tomb_door_opened
+
+[hillsideclosedl]
+width=2
+op1=Open
+op2=Search
+model=hillsideclosedl
+name=Carved doors
+desc=These doors must have been hidden here for years.
+category=rashiliyia_tomb_door_closed
+
+[hillsideclosedr]
+width=2
+mirror=yes
+op1=Open
+op2=Search
+model=hillsideclosedl
+name=Carved doors
+desc=These doors must have been hidden here for years.
+category=rashiliyia_tomb_door_closed
+
+[hillsideexitclosedl]
+width=2
+op1=Open
+op2=Search
+model=hillsideclosedl_2
+name=Tomb exit
+desc=Perhaps you should give them a push.
+
+[hillsideexitclosedr]
+width=2
+mirror=yes
+op1=Open
+op2=Search
+model=hillsideclosedl_2
+name=Tomb exit
+desc=Perhaps you should give them a push.
+
+[zq_doorblock_jungle1]
+width=2
+blockwalk=no
+model=jungle2
+name=Jungle plant
+desc=Commonly found in these parts.
+
+[zq_doorblock_jungle2]
+width=2
+recol1s=17304
+recol1d=22447
+model=jungle2
+name=Jungle plant
+desc=A leafy fern.
+
+[thzq_tombrooml1]
+op1=Open
+op2=Search
+recol1s=900
+recol1d=5231
+model=thzq_tombrooml1
+name=Tomb doors
+desc=Large carved tomb doors, they look terrifying.
+category=zqtombdoor
+
+[thzq_tombroomr1]
+mirror=yes
+op1=Open
+op2=Search
+recol1s=902
+recol1d=5231
+recol2s=898
+recol2d=5231
+model=thzq_tombrooml1
+name=Tomb doors
+desc=Large carved tomb doors, they look terrifying.
+category=zqtombdoor
+
+[thzq_tombrooml2]
+op1=Open
+op2=Search
+recol1s=900
+recol1d=5231
+recol2s=898
+recol2d=5231
+model=thzq_tombrooml1
+name=Tomb doors
+desc=Large carved tomb doors, they look terrifying.
+category=zqtombdoor
+
+[thzq_tombrooml3]
+op1=Open
+op2=Search
+recol1s=900
+recol1d=5231
+recol2s=898
+recol2d=5231
+recol3s=902
+recol3d=5231
+model=thzq_tombrooml1
+name=Tomb doors
+desc=Large carved tomb doors, they look terrifying.
+category=zqtombdoor
+
+[thzq_tombroomr2]
+mirror=yes
+op1=Open
+op2=Search
+recol1s=902
+recol1d=5231
+recol2s=898
+recol2d=5231
+recol3s=900
+recol3d=5231
+model=thzq_tombrooml1
+name=Tomb doors
+desc=Large carved tomb doors, they look terrifying.
+category=zqtombdoor
+
+[thzq_tombrooml_inac]
+recol1s=900
+recol1d=5231
+recol2s=898
+recol2d=5231
+recol3s=902
+recol3d=5231
+model=thzq_tombrooml1
+
+[thzq_tombroomr_inac]
+mirror=yes
+recol1s=902
+recol1d=5231
+recol2s=898
+recol2d=5231
+recol3s=900
+recol3d=5231
+model=thzq_tombrooml1
+
+[hillsideexitl]
+length=2
+op1=Open
+op2=Search
+model=hillsideclosedl
+name=Tomb exit
+desc=Perhaps you should give them a push.
+
+[hillsideexitr]
+length=2
+mirror=yes
+op1=Open
+op2=Search
+model=hillsideclosedl
+name=Tomb exit
+desc=Perhaps you should give them a push.
+
+[zombiequeengateclosedl]
+op1=Open
+op2=Search
+model=ikov_mendedleverdoorl
+name=Ancient metal gate
+
+[zombiequeengateclosedr]
+mirror=yes
+op1=Open
+op2=Search
+model=ikov_mendedleverdoorl
+name=Ancient metal gate
+
+[zq_rashrocks]
+hillskew=yes
+op1=Climb
+model=rock1
+name=Rocks
+desc=A rocky outcrop.
+
+[zqrashdolmen]
+width=2
+length=2
+op1=Look-at
+op2=Search
+model=guthix_altar
+name=Tomb dolmen
+desc=An ancient construct for supporting the bones of the deceased.
+
+[zqshilogateclosedl]
+op1=Open
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Metal gate
+desc=The gate is closed.
+category=shilo_metalgate
+
+[zqshilogateclosedr]
+op1=Open
+mirror=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Metal gate
+desc=The gate is closed.
+category=shilo_metalgate
+
+[zqwoodengateclosed_l]
+active=yes
+op1=Open
+blockrange=no
+model=plaguesheep_gatel
+name=Wooden gate
+desc=The gate is closed.
+category=shilo_woodengate
+
+[zqwoodengateclosed_r]
+mirror=yes
+active=yes
+op1=Open
+blockrange=no
+model=plaguesheep_gatel
+name=Wooden gate
+desc=The gate is closed.
+category=shilo_woodengate
+
+[zqwoodengateclosed_l_inactive]
+blockrange=no
+model=plaguesheep_gatel
+
+[zqwoodengateclosed_r_inactive]
+mirror=yes
+blockrange=no
+model=plaguesheep_gatel

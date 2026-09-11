@@ -1,0 +1,14 @@
+type=layer
+width=512
+height=334
+
+[component_13711]
+x=248
+y=146
+type=model
+width=32
+height=32
+model=com_i426
+zoom=150
+xan=0
+yan=0

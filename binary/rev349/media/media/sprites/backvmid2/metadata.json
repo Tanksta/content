@@ -1,0 +1,34 @@
+{
+  "member": "backvmid2.dat",
+  "palette": [
+    0,
+    1380878,
+    2104085,
+    591879,
+    2958618,
+    3682857,
+    4340271,
+    4932149,
+    5524028,
+    6444101,
+    7825236,
+    3025444,
+    2236702,
+    11177577,
+    12165500
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/backvmid2/000.png",
+      "canvasWidth": 37,
+      "canvasHeight": 133,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 37,
+      "height": 133,
+      "encoding": 1
+    }
+  ]
+}

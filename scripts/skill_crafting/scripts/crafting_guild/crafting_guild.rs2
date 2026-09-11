@@ -1,0 +1,23 @@
+[oploc1,crafting_guild_door]
+if (~check_axis(coord, loc_coord, loc_angle) = true) {
+    if (stat(crafting) < 40) {
+        ~chatnpc_specific(nc_name(master_crafter), master_crafter, "<p,neutral>Sorry only experienced craftsmen are allowed in here.|You must be level 40 or above to enter.");
+        return;
+    }
+    if (inv_total(worn, brown_apron) < 1) {
+        ~chatnpc_specific(nc_name(master_crafter), master_crafter, "<p,neutral>Where's your brown apron? You can't come in here unless you're wearing one.");
+        if (inv_total(inv, brown_apron) < 1) {
+            ~chatplayer("<p,neutral>Err... I haven't got one.");
+        }
+        return;
+    }
+    ~open_and_close_door(loc_param(next_loc_stage), true, false);
+    ~chatnpc_specific(nc_name(master_crafter), master_crafter, "<p,neutral>Welcome to the Guild of Master Craftsmen.");
+} else {
+    ~open_and_close_door(loc_param(next_loc_stage), false, false);
+}
+
+[opnpc1,master_crafter]
+~chatnpc("<p,happy>Hello, welcome to the Crafter's guild.|Accomplished crafters from all over the land come here.|All to use our top notch workshops."); 
+// https://www.runescape.pc.pl/images/artykuly/gildie/crafting/screen11.jpg 
+

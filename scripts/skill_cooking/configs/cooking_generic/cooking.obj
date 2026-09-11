@@ -1,0 +1,473 @@
+[asgarnian_ale]
+desc=Probably the finest ale in Asgarnia.
+cost=2
+iop1=Drink
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=6059
+recol2s=7116
+recol2d=5943
+name=Asgarnian ale
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[wizards_mind_bomb]
+desc=It's got strange bubbles in it.
+cost=2
+iop1=Drink
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=43208
+recol2s=7116
+recol2d=43216
+name=Wizard's mind bomb
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[greenmans_ale]
+desc=A glass of frothy ale.
+cost=2
+iop1=Drink
+members=yes
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=6963
+recol2s=7116
+recol2d=6843
+name=Greenman's ale
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[dragon_bitter]
+desc=A glass of bitter.
+cost=2
+iop1=Drink
+members=yes
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=933
+recol2s=7116
+recol2d=935
+name=Dragon bitter
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[dwarven_stout]
+desc=A pint of thick dark beer.
+cost=2
+iop1=Drink
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=16
+recol2s=7116
+recol2d=41
+name=Dwarven stout
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[grog]
+desc=A murky glass of some sort of drink.
+cost=3
+iop1=Drink
+members=yes
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=21681
+recol2s=7116
+recol2d=21689
+name=Grog
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[beer]
+desc=A glass of frothy ale.
+cost=2
+iop1=Drink
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+name=Beer
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass
+
+[beer_glass]
+desc=I need to fill this with beer.
+cost=2
+model=obj_beer_glass
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+manwear=obj_beer_glass_manwear,0
+womanwear=obj_beer_glass_manwear,0
+name=Beer glass
+weight=50g
+param=crafting_glass_struct,beer_glass
+
+[swamp_tar]
+desc=A foul smelling thick tar like substance.
+cost=1
+model=obj_swamp_tar
+2dxof=1
+2dyof=-22
+2dzoom=710
+2dyan=148
+2dxan=224
+members=yes
+stackable=yes
+name=Swamp tar
+weight=1lb
+category=category_135
+
+[rawswamppaste]
+desc=A thick tar like substance mixed with flour.
+cost=1
+model=obj_swamp_tar
+2dxof=1
+2dyof=-22
+2dzoom=710
+2dyan=148
+2dxan=224
+members=yes
+stackable=yes
+recol1s=16
+recol1d=28
+name=Raw swamp paste
+weight=18oz
+
+[swamppaste]
+desc=A tar like substance mixed with flour and warmed.
+cost=30
+model=obj_swamppaste
+2dxof=1
+2dyof=-22
+2dzoom=710
+2dyan=148
+2dxan=224
+members=yes
+stackable=yes
+name=Swamp paste
+weight=18oz
+
+[chefs_hat]
+desc=What a silly hat.
+cost=2
+model=obj_chefs_hat
+2dxof=-4
+2dyof=3
+2dzoom=580
+2dxan=668
+manwear=obj_chefs_hat_manwear,0
+womanwear=obj_chefs_hat_womanwear,0
+manhead=obj_chefs_hat_manhead
+womanhead=obj_chefs_hat_womanhead
+iop2=Wear
+recol1s=61
+recol1d=127
+name=Chef's hat
+wearpos=hat
+weight=2lb
+
+[pumpkin]
+desc=Happy Halloween.
+cost=30
+iop1=Eat
+model=obj_pumpkin
+2dxof=3
+2dyof=-1
+2dzoom=1040
+2dyan=104
+2dxan=132
+name=Pumpkin
+weight=500g
+category=category_131
+param=party_clean_exempt,^true
+
+[easter_egg]
+desc=Happy Easter.
+cost=10
+iop1=Eat
+model=obj_easter_egg
+2dzoom=1080
+2dyan=20
+2dxan=2044
+name=Easter egg
+weight=3oz
+category=category_59
+param=party_clean_exempt,^true
+
+[banana]
+desc=Mmm this looks tasty.
+cost=2
+iop1=Eat
+model=obj_banana
+2dxof=9
+2dyof=10
+2dzoom=930
+2dyan=1944
+2dxan=280
+manwear=obj_banana_manwear,0
+womanwear=obj_banana_manwear,6
+name=Banana
+weight=1oz
+category=category6
+
+[cabbage]
+desc=Yuck I don't like cabbage.
+model=cabbage_fullygrown_8
+2dxof=1
+2dyof=27
+2dzoom=1730
+2dyan=1800
+2dxan=284
+iop1=Eat
+cost=1
+ambient=17
+name=Cabbage
+weight=1lb
+category=category_131
+param=gnome_cooking_ingredient,^true
+
+[magic_cabbage]
+desc=Yuck I don't like cabbage.
+model=cabbage_fullygrown_8
+2dxof=1
+2dyof=27
+2dzoom=1730
+2dyan=1800
+2dxan=284
+iop1=Eat
+cost=1
+name=Cabbage
+weight=350g
+category=category_59
+
+[spinach_roll]
+iop1=Eat
+desc=A home made spinach thing.
+model=obj_spinach_roll
+2dzoom=790
+2dyan=164
+2dxan=376
+cost=1
+name=Spinach roll
+weight=100g
+category=category_59
+
+[kebab]
+desc=A meaty kebab.
+cost=3
+iop1=Eat
+model=obj_ugthanki_kebab_bad
+2dxof=4
+2dyof=1
+2dzoom=700
+2dyan=1844
+2dzan=176
+2dxan=1876
+name=Kebab
+weight=250g
+category=category_59
+
+[chocolaty_milk]
+iop1=Drink
+cost=2
+members=yes
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+desc=Milk with chocolate in it.
+recol1s=39834
+recol1d=3619
+name=Chocolatey milk
+weight=2kg
+category=category_59
+param=next_obj_stage,bucket_empty
+tradeable=no
+
+[cup_of_tea]
+desc=A nice cup of tea.
+cost=10
+iop1=Drink
+model=obj_display_tea
+2dxof=-1
+2dyof=-2
+2dzoom=500
+2dyan=1980
+2dxan=156
+members=yes
+name=Cup of tea
+weight=150g
+param=next_obj_stage,cup_empty
+
+[cup_empty]
+desc=An empty cup.
+cost=2
+model=obj_murdercup
+2dxof=-1
+2dyof=-2
+2dzoom=500
+2dyan=1980
+2dxan=156
+members=yes
+recol1s=7236
+recol1d=127
+recol2s=5173
+recol2d=82
+recol3s=5177
+recol3d=107
+name=Empty cup
+weight=50g
+
+[rottenapples]
+desc=Rotten to the core!
+model=obj_cooking_apple
+2dzoom=940
+2dyan=80
+2dxan=212
+iop1=Eat
+members=yes
+cost=1
+recol1s=17331
+recol1d=3742
+recol2s=22422
+recol2d=9647
+recol3s=17304
+recol3d=3742
+recol4s=18347
+recol4d=17304
+name=Rotten apple
+weight=120g
+category=category6
+tradeable=no
+
+[onion]
+desc=A strong smelling onion.
+cost=3
+model=onion_offset_8
+2dzoom=670
+2dyan=116
+2dxan=116
+iop1=Eat
+recol1s=7283
+recol1d=4552
+name=Onion
+weight=150g
+category=category_131
+param=gnome_cooking_ingredient,^true
+
+[chocolate_dust]
+cost=2
+model=obj_unicorn_horn_dust
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+desc=It's ground up chocolate.
+recol1s=82
+recol1d=3738
+name=Chocolate dust
+weight=150g
+category=category_59
+param=gnome_topping,^true
+
+[pot_empty]
+desc=This pot is empty.
+model=obj_pot_unfired
+2dxof=-1
+2dyof=2
+2dzoom=990
+2dyan=8
+2dxan=112
+cost=1
+name=Pot
+weight=1lb
+
+[flour]
+desc=A little heap of flour.
+cost=2
+model=obj_unicorn_horn_dust
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+recol1s=82
+recol1d=111
+name=Flour
+weight=500g
+tradeable=no
+
+[grain]
+desc=Some wheat heads.
+cost=2
+model=obj_grain
+2dxof=-1
+2dyof=9
+2dzoom=830
+2dyan=88
+2dxan=292
+name=Grain
+weight=600g
+
+[moonlight_mead]
+desc=A foul smelling brew.
+cost=5
+iop1=Drink
+members=yes
+model=obj_asgarnian_ale
+2dxof=-3
+2dyof=2
+2dzoom=660
+2dyan=1904
+2dxan=140
+recol1s=7091
+recol1d=10324
+recol2s=7116
+recol2d=10328
+name=Moonlight mead
+weight=550g
+category=alcoholic_drinks
+param=next_obj_stage,beer_glass

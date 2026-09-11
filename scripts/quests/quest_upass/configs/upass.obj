@@ -1,0 +1,373 @@
+[throwingrope]
+desc=A rope.
+model=obj_throwingrope
+manwear=obj_throwingrope_manwear,0
+womanwear=obj_throwingrope_manwear,6
+2dyof=40
+2dzoom=1810
+2dyan=16
+2dxan=1592
+name=Throwing rope
+wearpos=righthand
+weight=2lb
+dummyitem=graphic_only
+
+[swamprocks1]
+desc=A chunk of rock.
+model=obj_rock_sample2
+members=yes
+name=Rock
+weight=1g
+tradeable=no
+
+[caveorb1]
+desc=A magical sphere that glimmers within.
+cost=10
+model=loc_3361_8
+2dzoom=1390
+2dyan=1700
+2dxan=100
+members=yes
+name=Orb of light
+weight=1lb
+param=orb_bit,^upass_orb1_bit
+tradeable=no
+
+[caveorb2]
+desc=A magical sphere that glimmers within.
+cost=10
+model=loc_3361_8
+2dzoom=1390
+2dyan=1700
+2dxan=100
+members=yes
+name=Orb of light
+weight=1lb
+param=orb_bit,^upass_orb2_bit
+tradeable=no
+
+[caveorb3]
+desc=A magical sphere that glimmers within.
+cost=10
+model=loc_3361_8
+2dzoom=1390
+2dyan=1700
+2dxan=100
+members=yes
+name=Orb of light
+weight=1lb
+param=orb_bit,^upass_orb3_bit
+tradeable=no
+
+[caveorb4]
+desc=A magical sphere that glimmers within.
+cost=20
+model=loc_3361_8
+2dzoom=1390
+2dyan=1700
+2dxan=100
+members=yes
+name=Orb of light
+weight=1lb
+param=orb_bit,^upass_orb4_bit
+tradeable=no
+
+[damp_cloth]
+desc=A damp, wet cloth.
+cost=10
+model=obj_childs_blanket
+2dyof=-15
+2dzoom=1360
+2dxan=368
+members=yes
+recol1s=7390
+recol1d=5400
+name=Damp cloth
+weight=12g
+tradeable=no
+
+[caverailing]
+desc=A broken piece of railing.
+cost=10
+model=obj_caverailing
+2dxof=1
+2dyof=-37
+2dzoom=1890
+2dyan=1960
+2dxan=240
+members=yes
+name=Piece of railing
+weight=2kg
+tradeable=no
+
+[cave_unicorn_horn]
+desc=A withered unicorn horn.
+model=obj_unicorn_horn
+2dxof=4
+2dyof=-8
+2dzoom=840
+2dyan=132
+2dxan=248
+members=yes
+cost=20
+name=Unicorn horn
+weight=7g
+tradeable=no
+
+[paladinbadge1]
+desc=A coat of arms of the Ardougne Paladins.
+cost=10
+model=obj_paladinbadge1
+2dxof=-2
+2dyof=3
+2dzoom=580
+2dyan=156
+2dxan=444
+members=yes
+name=Paladin's badge
+weight=12g
+tradeable=no
+
+[paladinbadge2]
+desc=A coat of arms of the Ardougne Paladins.
+cost=10
+model=obj_paladinbadge1
+2dxof=-2
+2dyof=3
+2dzoom=580
+2dyan=156
+2dxan=444
+members=yes
+recol1s=42570
+recol1d=18074
+name=Paladin's badge
+weight=12g
+tradeable=no
+
+[paladinbadge3]
+desc=A coat of arms of the Ardougne Paladins.
+cost=10
+model=obj_paladinbadge1
+2dxof=-2
+2dyof=3
+2dzoom=580
+2dyan=156
+2dxan=444
+members=yes
+recol1s=42570
+recol1d=1575
+name=Paladin's badge
+weight=12g
+tradeable=no
+
+[cavewitchcat]
+desc=A cat.
+model=obj_cavewitchcat
+2dxof=13
+2dyof=21
+2dzoom=880
+2dyan=152
+2dzan=1940
+2dxan=32
+members=yes
+recol1s=61
+recol1d=16
+name=Witch's cat
+weight=1200g
+tradeable=no
+param=destroy_drop,^true
+
+[ibandoll]
+desc=A simple doll with Iban's likeness.
+cost=2
+model=obj_ibandoll
+members=yes
+iop1=Search
+2dxof=2
+2dyof=15
+2dzoom=1040
+2dyan=1736
+2dxan=364
+name=Doll of iban
+weight=300g
+tradeable=no
+
+[upass_journal]
+desc=An account of the last times of someone.
+cost=1
+model=obj_shamans_tome
+2dzoom=840
+2dyan=152
+2dxan=256
+members=yes
+iop1=Read
+recol1s=5018
+recol1d=9104
+recol2s=10351
+recol2d=5330
+name=Old journal
+category=category_1328
+weight=8oz
+tradeable=no
+
+[old_journal]
+desc=The tale of Iban.
+cost=1
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+members=yes
+iop1=Read
+name=History of iban
+category=category_1328
+weight=8oz
+tradeable=no
+
+[klanks_gauntlets]
+desc=Strong dwarvish gloves.
+cost=6
+model=obj_gauntlets_of_cooking
+2dxof=8
+2dyof=-8
+2dzoom=930
+2dyan=828
+2dxan=420
+members=yes
+iop2=Wear
+manwear=obj_gauntlets_of_cooking_manwear,0
+womanwear=obj_gauntlets_of_cooking_womanwear,0
+recol1s=10004
+recol1d=30600
+name=Klank's gauntlets
+weight=8oz
+wearpos=hands
+category=armour_hands
+param=stabattack,2
+tradeable=no
+param=slashattack,2
+param=crushattack,2
+param=stabdefence,8
+param=slashdefence,9
+param=crushdefence,7
+param=strengthbonus,2
+
+[ibansdove]
+desc=I thought you only saw these in pairs?
+cost=1
+model=obj_ibansdove
+2dxof=-4
+2dzoom=1920
+2dyan=2012
+2dxan=472
+members=yes
+name=Iban's dove
+weight=100g
+tradeable=no
+
+[othainian_amulet]
+desc=A mystical demonic amulet.
+cost=0
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+recol1s=11200
+recol1d=933
+recol2s=127
+recol2d=916
+name=Amulet of othanian
+weight=10g
+tradeable=no
+
+[doomion_amulet]
+desc=A mystical demonic amulet.
+cost=0
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+recol1s=11200
+recol1d=933
+recol2s=127
+recol2d=916
+name=Amulet of doomion
+weight=10g
+tradeable=no
+
+[holthion_amulet]
+desc=A mystical demonic amulet.
+cost=0
+model=obj_amulet_of_accuracy
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+members=yes
+recol1s=11200
+recol1d=933
+recol2s=127
+recol2d=916
+name=Amulet of holthion
+weight=10g
+tradeable=no
+
+[ibansshadow]
+desc=A strange dark liquid.
+cost=2
+model=obj_ibansshadow
+2dzoom=1640
+2dxan=92
+members=yes
+name=Iban's shadow
+weight=25g
+tradeable=no
+
+[upassdwarfbrew]
+cost=2
+members=yes
+model=obj_bucket_wax
+2dyof=-18
+2dzoom=1020
+2dyan=1688
+2dxan=204
+desc=Smells stronger than most spirits.
+recol1s=39834
+recol1d=9135
+name=Dwarf brew
+weight=150g
+tradeable=no
+
+[ibans_ashes]
+desc=The burnt remains of Iban.
+cost=2
+model=obj_unicorn_horn_dust
+2dxof=-6
+2dzoom=1210
+2dyan=1892
+2dxan=264
+members=yes
+recol1s=82
+recol1d=28
+name=Iban's ashes
+weight=2oz
+tradeable=no
+
+[caveorb4dot]
+desc=A magical sphere that glimmers within.
+cost=1
+model=inviswall_1
+members=yes
+2dzoom=1390
+2dyan=1700
+2dxan=100
+name=Orb of light
+respawnrate=50
+tradeable=no

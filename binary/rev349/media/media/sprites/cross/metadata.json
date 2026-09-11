@@ -1,0 +1,100 @@
+{
+  "member": "cross.dat",
+  "palette": [
+    0,
+    0,
+    16776960,
+    16711680
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/cross/000.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 3,
+      "yOffset": 3,
+      "width": 10,
+      "height": 10,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/cross/001.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/cross/002.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/cross/003.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/media/sprites/cross/004.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 3,
+      "yOffset": 3,
+      "width": 10,
+      "height": 10,
+      "encoding": 0
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/media/sprites/cross/005.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    },
+    {
+      "index": 6,
+      "path": "decoded/media/media/sprites/cross/006.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    },
+    {
+      "index": 7,
+      "path": "decoded/media/media/sprites/cross/007.png",
+      "canvasWidth": 16,
+      "canvasHeight": 16,
+      "xOffset": 1,
+      "yOffset": 1,
+      "width": 14,
+      "height": 14,
+      "encoding": 0
+    }
+  ]
+}

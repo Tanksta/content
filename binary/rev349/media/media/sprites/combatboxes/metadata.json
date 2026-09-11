@@ -1,0 +1,72 @@
+{
+  "member": "combatboxes.dat",
+  "palette": [
+    0,
+    3025699,
+    4395023,
+    7496785,
+    10429987,
+    5790036,
+    5000521,
+    4473921,
+    5197899,
+    4802886,
+    5395021,
+    5592401,
+    9446176,
+    8133915,
+    7019032,
+    8593181,
+    7674906,
+    8921118,
+    6184794,
+    4013371
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/combatboxes/000.png",
+      "canvasWidth": 72,
+      "canvasHeight": 36,
+      "xOffset": 2,
+      "yOffset": 2,
+      "width": 68,
+      "height": 32,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/combatboxes/001.png",
+      "canvasWidth": 72,
+      "canvasHeight": 36,
+      "xOffset": 2,
+      "yOffset": 2,
+      "width": 68,
+      "height": 32,
+      "encoding": 0
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/combatboxes/002.png",
+      "canvasWidth": 72,
+      "canvasHeight": 36,
+      "xOffset": 2,
+      "yOffset": 8,
+      "width": 68,
+      "height": 20,
+      "encoding": 0
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/combatboxes/003.png",
+      "canvasWidth": 72,
+      "canvasHeight": 36,
+      "xOffset": 2,
+      "yOffset": 8,
+      "width": 68,
+      "height": 20,
+      "encoding": 0
+    }
+  ]
+}

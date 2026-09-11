@@ -1,0 +1,130 @@
+[cattleprod]
+desc=A sharp cattleprod.
+members=yes
+cost=3
+model=obj_cattleprod
+2dxof=-5
+2dzoom=680
+2dyan=1844
+2dxan=264
+iop2=Equip
+manwear=obj_cattleprod_manwear,0
+womanwear=obj_cattleprod_manwear,6
+name=Cattleprod
+wearpos=righthand
+weight=1lb
+category=weapon_stab
+param=stabattack,4
+tradeable=no
+param=slashattack,2
+param=crushattack,-4
+param=magicattack,1
+param=magicdefence,1
+param=strengthbonus,3
+param=stabattack_anim,human_sword_stab
+param=slashattack_anim,human_sword_slash
+param=defend_anim,human_sword_def
+param=stab_sound,stabsword_stab
+param=slash_sound,stabsword_slash
+
+[poisoned_feed]
+desc=Councillor Halgrive gave me this to kill some sheep.
+cost=3
+model=obj_poisoned_feed
+members=yes
+2dyof=-3
+2dzoom=930
+2dyan=1936
+2dxan=120
+name=Sheep feed
+weight=5lb
+tradeable=no
+
+[sheepbonesa]
+desc=The suspicious-looking remains of a suspicious-looking sheep.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+name=Sheep bones (1)
+weight=3lb
+tradeable=no
+
+[sheepbonesb]
+desc=The suspicious-looking remains of a suspicious-looking sheep.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+name=Sheep bones (2)
+weight=3lb
+tradeable=no
+
+[sheepbonesc]
+desc=The suspicious-looking remains of a suspicious-looking sheep.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+name=Sheep bones (3)
+weight=3lb
+tradeable=no
+
+[sheepbonesd]
+desc=The suspicious-looking remains of a suspicious-looking sheep.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+name=Sheep bones (4)
+weight=3lb
+tradeable=no
+
+[plague_jacket]
+desc=This should protect me from the plague, I hope!
+members=yes
+cost=50
+model=obj_plague_jacket
+2dyof=3
+2dzoom=1360
+2dyan=92
+2dzan=1932
+2dxan=416
+iop2=Wear
+manwear=obj_plague_jacket_manwear,0
+manwear2=obj_plague_jacket_manwear2
+womanwear=obj_plague_jacket_womanwear,0
+womanwear2=obj_plague_jacket_womanwear2
+name=Plague jacket
+wearpos=torso
+wearpos2=arms
+wearpos3=hands
+weight=6lb
+tradeable=no
+
+[plague_trousers]
+desc=These should protect me from the plague, I hope!
+members=yes
+cost=50
+model=obj_plague_trousers
+2dyof=6
+2dzoom=2060
+2dyan=1924
+2dzan=104
+2dxan=596
+iop2=Wear
+manwear=obj_plague_trousers_manwear,0
+womanwear=obj_plague_trousers_womanwear,0
+name=Plague trousers
+wearpos=legs
+wearpos2=feet
+weight=5lb
+tradeable=no

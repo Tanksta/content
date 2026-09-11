@@ -1,0 +1,26 @@
+{
+  "member": "0.dat",
+  "palette": [
+    0,
+    2233094,
+    5256983,
+    4270863,
+    3744006,
+    590850,
+    6309666
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/0/000.png",
+      "canvasWidth": 128,
+      "canvasHeight": 128,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 128,
+      "height": 128,
+      "encoding": 0
+    }
+  ]
+}

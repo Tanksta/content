@@ -1,0 +1,24 @@
+[flax]
+desc=I should use this with a spinning wheel.
+cost=5
+members=yes
+model=obj_flax
+2dxof=4
+2dzoom=770
+2dyan=1076
+2dzan=1840
+2dxan=428
+name=Flax
+weight=1lb
+param=crafting_spinning_struct,flax
+
+[wool]
+desc=I think this came from a sheep.
+model=obj_wool
+2dyof=-7
+2dzoom=1070
+2dyan=160
+2dxan=332
+name=Wool
+weight=3g
+param=crafting_spinning_struct,wool

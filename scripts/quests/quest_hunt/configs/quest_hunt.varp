@@ -1,0 +1,11 @@
+[hunt]
+scope=perm
+
+[hunt_store_employed]
+scope=perm
+
+[crate_bananas]
+scope=perm
+
+[crate_rum]
+scope=perm

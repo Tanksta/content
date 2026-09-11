@@ -1,0 +1,423 @@
+[murdernecklace]
+desc=Annas' shiny silver coated necklace.
+members=yes
+model=obj_perfect_ruby_necklace
+2dxof=5
+2dyof=44
+2dzoom=600
+2dyan=160
+2dxan=304
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=9152
+recol1d=82
+name=Silver necklace
+wearpos=front
+weight=10g
+category=murder_proofobj
+param=product,murdernecklacedust
+tradeable=no
+
+[murdernecklacedust]
+desc=Annas' shiny silver coated necklace coated with a thin layer of flour.
+members=yes
+model=obj_perfect_ruby_necklace
+2dxof=5
+2dyof=44
+2dzoom=600
+2dyan=160
+2dxan=304
+iop2=Wear
+manwear=obj_perfect_ruby_necklace_manwear,0
+womanwear=obj_perfect_ruby_necklace_womanwear,0
+recol1s=9152
+recol1d=82
+name=Silver necklace
+wearpos=front
+weight=10g
+category=murder_flourobj
+param=product,murderfingerprinta
+tradeable=no
+
+[murdercup]
+desc=Bobs' shiny silver coated tea cup.
+members=yes
+model=obj_murdercup
+2dxof=-1
+2dyof=-2
+2dzoom=500
+2dyan=1980
+2dxan=156
+name=Silver cup
+weight=70g
+category=murder_proofobj
+param=product,murdercupdust
+tradeable=no
+
+[murdercupdust]
+desc=Bobs' shiny silver coated tea cup coated with a thin layer of flour.
+members=yes
+model=obj_murdercup
+2dxof=-1
+2dyof=-2
+2dzoom=500
+2dyan=1980
+2dxan=156
+recol1s=5173
+recol1d=82
+name=Silver cup
+weight=70g
+category=murder_flourobj
+param=product,murderfingerprintb
+tradeable=no
+
+[murderbottle]
+desc=Carols' shiny silver coated bottle.
+members=yes
+model=obj_murderbottle
+2dyof=-1
+2dzoom=1000
+2dyan=192
+2dxan=116
+recol1s=5012
+recol1d=82
+name=Silver bottle
+weight=90g
+category=murder_proofobj
+param=product,murderbottledust
+tradeable=no
+
+[murderbottledust]
+desc=Carols' shiny silver coated bottle coated with a thin layer of flour.
+members=yes
+model=obj_murderbottle
+2dzoom=1030
+2dyan=1808
+2dxan=76
+recol1s=5012
+recol1d=82
+name=Silver bottle
+weight=90g
+category=murder_flourobj
+param=product,murderfingerprintc
+tradeable=no
+
+[murderbook]
+desc=Davids' shiny silver coated book.
+members=yes
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+recol1s=5018
+recol1d=82
+name=Silver book
+weight=8oz
+category=murder_proofobj
+param=product,murderbookdust
+tradeable=no
+
+[murderbookdust]
+desc=Davids' shiny silver coated book coated with a thin layer of flour.
+members=yes
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+recol1s=5018
+recol1d=82
+name=Silver book
+weight=8oz
+category=murder_flourobj
+param=product,murderfingerprintd
+tradeable=no
+
+[murderneedle]
+desc=Elizabeths' shiny silver coated needle.
+members=yes
+model=obj_needle
+2dxof=2
+2dyof=4
+2dzoom=850
+2dyan=868
+2dxan=368
+recol1s=74
+recol1d=82
+name=Silver needle
+weight=1g
+category=murder_proofobj
+param=product,murderneedledust
+tradeable=no
+
+[murderneedledust]
+desc=Elizabeths' shiny silver coated needle coated with a thin layer of flour.
+members=yes
+model=obj_needle
+2dxof=2
+2dyof=4
+2dzoom=850
+2dyan=868
+2dxan=368
+recol1s=74
+recol1d=82
+name=Silver needle
+weight=1g
+category=murder_flourobj
+param=product,murderfingerprinte
+tradeable=no
+
+[murderpot]
+desc=Franks' shiny silver coated pot.
+members=yes
+model=obj_pot_unfired
+2dxof=-1
+2dyof=2
+2dzoom=990
+2dyan=8
+2dxan=112
+recol1s=4775
+recol1d=82
+name=Silver pot
+weight=2lb
+category=murder_proofobj
+param=product,murderpotdust
+tradeable=no
+
+[murderpotdust]
+desc=Franks' shiny silver coated pot coated with a thin layer of flour.
+members=yes
+model=obj_pot_unfired
+2dxof=-1
+2dyof=2
+2dzoom=990
+2dyan=8
+2dxan=112
+recol1s=4775
+recol1d=82
+name=Silver pot
+weight=2lb
+category=murder_flourobj
+param=product,murderfingerprintf
+tradeable=no
+
+[murderthreadr]
+desc=Some red thread found at the murder scene.
+members=yes
+model=obj_bow_string
+2dxof=3
+2dyof=2
+2dzoom=530
+2dyan=1872
+2dxan=148
+recol1s=7479
+recol1d=960
+name=Criminals' thread
+weight=2g
+tradeable=no
+
+[murderthreadg]
+desc=Some green thread found at the murder scene.
+members=yes
+model=obj_bow_string
+2dxof=3
+2dyof=2
+2dzoom=530
+2dyan=1872
+2dxan=148
+recol1s=7479
+recol1d=22464
+name=Criminals' thread
+weight=2g
+tradeable=no
+
+[murderthreadb]
+desc=Some blue thread found at the murder scene.
+members=yes
+model=obj_bow_string
+2dxof=3
+2dyof=2
+2dzoom=530
+2dyan=1872
+2dxan=148
+recol1s=7479
+recol1d=43968
+name=Criminals' thread
+weight=2g
+tradeable=no
+
+[murderpaper]
+desc=A piece of fly paper. It's sticky.
+model=obj_murderpaper
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+members=yes
+name=Flypaper
+weight=10g
+tradeable=no
+
+[murderpot2]
+desc=A pot found at the murder scene, with a sickly odour.
+members=yes
+model=obj_pot_unfired
+2dxof=-1
+2dyof=2
+2dzoom=990
+2dyan=8
+2dxan=112
+recol1s=4775
+recol1d=1959
+name=Pungent pot
+weight=2lb
+tradeable=no
+
+[murderweapon]
+desc=A flimsy looking dagger found at the crime scene.
+members=yes
+model=obj_iron_dagger
+2dyof=-4
+2dzoom=760
+2dyan=1276
+2dxan=472
+recol1s=11200
+recol1d=35344
+name=Criminals' dagger
+weight=1lb
+category=murder_proofobj
+param=product,murderweapondust
+tradeable=no
+
+[murderweapondust]
+desc=A flimsy looking dagger found at the crime scene coated with a thin layer of flour.
+members=yes
+model=obj_iron_dagger
+2dyof=-4
+2dzoom=760
+2dyan=1276
+2dxan=472
+recol1s=11200
+recol1d=35344
+name=Criminals' dagger
+weight=1lb
+category=murder_flourobj
+param=product,murderfingerprint1
+tradeable=no
+
+[murderfingerprint]
+desc=The fingerprints of the murderer.
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+members=yes
+model=obj_murderfingerprint
+name=Killers' print
+weight=10g
+tradeable=no
+
+[murderfingerprinta]
+desc=An imprint of Annas' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Annas' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,1
+tradeable=no
+
+[murderfingerprintb]
+desc=An imprint of Bobs' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Bobs' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,2
+tradeable=no
+
+[murderfingerprintc]
+desc=An imprint of Carols' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Carols' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,3
+tradeable=no
+
+[murderfingerprintd]
+desc=An imprint of Davids' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Davids' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,4
+tradeable=no
+
+[murderfingerprinte]
+desc=An imprint of Elizabeths' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Elizabeths' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,5
+tradeable=no
+
+[murderfingerprintf]
+desc=An imprint of Franks' fingerprint.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Franks' print
+weight=10g
+category=murder_printobj
+param=murder_id_value,6
+tradeable=no
+
+[murderfingerprint1]
+desc=An unidentified fingerprint taken from the murder weapon.
+members=yes
+model=obj_murderfingerprint
+2dxof=2
+2dyof=28
+2dzoom=1380
+2dyan=84
+2dxan=320
+name=Unknown print
+weight=10g
+tradeable=no

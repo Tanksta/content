@@ -1,0 +1,103 @@
+[the_shield_of_arrav]
+desc=The Shield of Arrav by A R Wright.
+iop1=Read
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+name=Book
+weight=200g
+tradeable=no
+
+[phoenixkey1]
+desc=The key to get into the Phoenix Gang HQ.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+name=Key
+weight=10g
+tradeable=no
+
+[phoenixkey2]
+desc=The key to the Phoenix Gang's weapons store.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+name=Key
+weight=10g
+
+[intelligence_report]
+desc=An intelligence report.
+cost=5
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+name=Scroll
+weight=20g
+
+[arravshield1]
+desc=Half of the Shield of Arrav.
+model=obj_arravshield1
+2dxof=18
+2dyof=-29
+2dzoom=1070
+2dyan=172
+2dxan=220
+name=Broken shield
+weight=6lb
+param=no_alchemy,1
+
+[arravshield2]
+desc=Half of the Shield of Arrav.
+model=obj_arravshield2
+2dzoom=1630
+2dyan=8
+2dxan=376
+name=Broken shield
+weight=6lb
+param=no_alchemy,1
+
+[phoenix_crossbow]
+desc=Former property of the Phoenix Gang.
+cost=4
+model=obj_phoenix_crossbow
+2dxof=-1
+2dzoom=1030
+2dyan=1132
+2dxan=332
+iop2=Wield
+manwear=obj_phoenix_crossbow_manwear,0
+womanwear=obj_phoenix_crossbow_manwear,6
+recol1s=6798
+recol1d=6806
+name=Phoenix crossbow
+category=weapon_crossbow
+weight=8lb
+wearpos=righthand
+param=rangeattack,6
+param=levelrequire,1
+param=attackrate,6
+param=attackrange,5
+param=rangeattack_anim,human_crossbow
+param=defend_anim,human_unarmedblock
+param=rangeattack_sound,crossbow
+
+[arravcertificate]
+desc=I can use this to claim a reward from the King.
+model=obj_nulodions_notes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+name=Certificate
+weight=20g

@@ -1,0 +1,86 @@
+[raw_ugthanki_meat]
+desc=I need to cook this first.
+cost=2
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+members=yes
+name=Raw ugthanki meat
+weight=800g
+category=cooking_generic
+
+[raw_beef]
+desc=I need to cook this first.
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+cost=1
+name=Raw beef
+weight=12oz
+category=cooking_generic
+
+[raw_rat_meat]
+desc=I need to cook this first.
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+cost=1
+name=Raw rat meat
+weight=5oz
+category=cooking_generic
+
+[raw_bear_meat]
+desc=I need to cook this first.
+model=obj_enchanted_beef
+2dxof=1
+2dyof=3
+2dzoom=560
+2dyan=176
+2dxan=308
+cost=1
+name=Raw bear meat
+weight=15oz
+category=cooking_generic
+
+[raw_chicken]
+desc=I need to cook this first.
+model=obj_enchanted_chicken
+2dxof=-3
+2dzoom=870
+2dyan=1748
+2dxan=88
+cost=1
+recol1s=4773
+recol1d=208
+name=Raw chicken
+weight=6oz
+category=cooking_generic
+
+[raw_lava_eel]
+desc=A very strange eel.
+cost=150
+members=yes
+model=obj_raw_lava_eel
+2dxof=17
+2dyof=25
+2dzoom=1270
+2dyan=1936
+2dxan=312
+recol1s=61
+recol1d=8128
+recol2s=43055
+recol2d=4032
+name=Raw lava eel
+weight=8oz
+category=cooking_generic
+param=fishing_struct,fishing_struct_lava_eel
+tradeable=no

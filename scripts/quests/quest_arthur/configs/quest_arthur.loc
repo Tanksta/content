@@ -1,0 +1,59 @@
+[jewellersdoor]
+active=yes
+op1=Open
+model=door1
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+name=Door
+
+[jewellersladder]
+active=yes
+op1=Climb-up
+mapscene=7
+model=ladder
+name=Ladder
+
+[merlins_crystal]
+active=yes
+width=2
+length=2
+op1=Smash
+model=merlins_crystal
+name=Giant crystal
+desc=Is there something in there?
+
+[merlincrate_empty]
+active=yes
+op2=Hide-in
+model=merlincrate_empty
+name=Crate
+desc=Used for storage.
+
+[merlincrate_empty2]
+active=yes
+op2=Hide-in
+model=merlincrate_empty
+name=Crate
+desc=Used for storage.
+
+[merlincrate_wall]
+sharelight=yes
+occlude=yes
+op1=Climb-out
+model=door1
+retex1s=wall
+retex1d=elfwood
+recol2s=24
+recol2d=3398
+name=Crate wall
+desc=Surprisingly sturdy looking.
+
+[arhein_ship_on]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.

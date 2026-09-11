@@ -1,0 +1,137 @@
+[empty_ogre_bellows]
+desc=A large pair of ogre bellows.
+members=yes
+model=inv_ogre_bellows_empty
+2dyof=-4
+2dzoom=970
+2dyan=36
+2dxan=112
+name=Ogre bellows
+weight=18oz
+tradeable=no
+category=ogre_bellows
+
+[filled_ogre_bellow3]
+desc=A large pair of ogre bellows, it has three loads of swamp gas in it.
+members=yes
+model=inv_ogre_bellows_empty
+2dyof=-4
+2dzoom=970
+2dyan=36
+2dxan=112
+recol1s=6457
+recol1d=20007
+name=Ogre bellows (3)
+weight=18oz
+tradeable=no
+category=ogre_bellows
+
+[filled_ogre_bellow2]
+desc=A large pair of ogre bellows, it has two loads of swamp gas in it.
+members=yes
+model=inv_ogre_bellows_empty
+2dyof=-4
+2dzoom=970
+2dyan=36
+2dxan=112
+recol1s=6457
+recol1d=16811
+name=Ogre bellows (2)
+weight=18oz
+tradeable=no
+category=ogre_bellows
+
+[filled_ogre_bellow1]
+desc=A large pair of ogre bellows, it has one load of swamp gas in it.
+members=yes
+model=inv_ogre_bellows_empty
+2dyof=-4
+2dzoom=970
+2dyan=36
+2dxan=112
+recol1s=6457
+recol1d=12591
+name=Ogre bellows (1)
+weight=18oz
+tradeable=no
+category=ogre_bellows
+
+[bloated_toad]
+desc=An inflated toad.
+members=yes
+model=obj_bloated_toad
+2dxof=-2
+2dyof=-34
+2dzoom=1430
+2dyan=204
+2dxan=212
+iop1=Drop
+iop4=Release All
+iop5=Release
+name=Bloated toad
+weight=750g
+tradeable=no
+param=unbankable,^true
+
+[raw_chompy]
+desc=I need to cook this first.
+members=yes
+cost=85
+model=obj_enchanted_chicken
+2dxof=-3
+2dzoom=870
+2dyan=1748
+2dxan=88
+recol1s=4773
+recol1d=10801
+name=Raw chompy
+weight=10kg
+
+[cooked_chompy]
+desc=It might look delicious to an ogre.
+members=yes
+cost=130
+model=obj_enchanted_chicken
+2dxof=-3
+2dzoom=870
+2dyan=1748
+2dxan=88
+iop1=Eat
+recol1s=4773
+recol1d=8993
+name=Cooked chompy
+weight=10kg
+category=category_5
+
+[ruined_chompy]
+desc=It's really burnt.
+members=yes
+model=obj_enchanted_chicken
+2dxof=-3
+2dzoom=870
+2dyan=1748
+2dxan=88
+recol1s=4773
+recol1d=6798
+name=Ruined chompy
+weight=10kg
+
+[cooked_s_chompy]
+desc=It has been deliciously seasoned to taste wonderful for ogres.
+members=yes
+cost=10
+model=obj_enchanted_chicken
+2dxof=-3
+2dzoom=870
+2dyan=1748
+2dxan=88
+recol1s=4773
+recol1d=6053
+name=Seasoned chompy
+weight=10kg
+tradeable=no
+
+[chompy_bird_obj]
+model=obj_chompy_bird_obj
+2dyof=1
+name=Chompy bird obj

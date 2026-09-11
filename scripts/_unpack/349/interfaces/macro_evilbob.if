@@ -1,0 +1,18 @@
+type=layer
+width=512
+height=334
+
+[component_14457]
+x=344
+y=14
+type=text
+width=158
+height=14
+center=yes
+font=p12_full
+shadowed=yes
+text=Watch the statue! Fish here!
+colour=0xFFFF00
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000

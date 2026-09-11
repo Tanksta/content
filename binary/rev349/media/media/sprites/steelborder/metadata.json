@@ -1,0 +1,70 @@
+{
+  "member": "steelborder.dat",
+  "palette": [
+    0,
+    921100,
+    2434338,
+    2697510,
+    2894889,
+    4802886,
+    1842201,
+    1118478,
+    1644565,
+    5131852,
+    1381650,
+    4145212,
+    4671557,
+    3158061,
+    3421233,
+    2105373,
+    5461073,
+    4605508
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/steelborder/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 30,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 30,
+      "encoding": 1
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/media/sprites/steelborder/001.png",
+      "canvasWidth": 25,
+      "canvasHeight": 30,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 30,
+      "encoding": 1
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/media/sprites/steelborder/002.png",
+      "canvasWidth": 25,
+      "canvasHeight": 30,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 30,
+      "encoding": 1
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/media/sprites/steelborder/003.png",
+      "canvasWidth": 25,
+      "canvasHeight": 30,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 25,
+      "height": 30,
+      "encoding": 1
+    }
+  ]
+}

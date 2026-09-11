@@ -1,0 +1,23 @@
+[bionurse]
+vislevel=hide
+desc=She's quite a looker!
+walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
+readyanim=human_ready
+op1=Talk-to
+recol1s=25238
+recol1d=5231
+recol2s=8741
+recol2d=5231
+recol3s=4550
+recol3d=5805
+recol4s=43072
+recol4d=5805
+name=Nurse Sarah
+model1=idk_woman_hair_long
+model2=obj_priest_gown_womanwear
+model3=obj_doctor_gown_womanwear2
+model4=obj_cert_drill_top_womanwear3
+model5=idk_woman_legs_turn_ups_5
+model6=idk_79
+head1=obj_pickpocket_guide_warrior
+moverestrict=indoors

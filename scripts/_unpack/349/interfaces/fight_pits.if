@@ -1,0 +1,44 @@
+type=layer
+width=512
+height=334
+
+[component_02805]
+x=177
+y=25
+type=text
+width=172
+height=12
+center=yes
+font=p11_full
+shadowed=yes
+text=Current Champion: TzHaar-Xil-Huz
+colour=0xCCCCCC
+activecolour=0x000000
+overcolour=0x000000
+activeovercolour=0x000000
+
+[component_03208]
+x=170
+y=31
+type=layer
+width=191
+height=27
+
+[component_02806]
+layer=component_03208
+x=50
+y=7
+type=text
+width=97
+height=12
+script1op1=pushvar,tzhaar_fightpit_remaining
+script1=lt,1
+center=yes
+font=p11_full
+shadowed=yes
+text=Foes Remaining: %1
+activetext=You're the Winner!
+colour=0xFF0000
+activecolour=0xCC6600
+overcolour=0x000000
+activeovercolour=0x000000

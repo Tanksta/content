@@ -1,0 +1,32 @@
+{
+  "member": "titlebutton.dat",
+  "palette": [
+    0,
+    1250325,
+    723723,
+    3289915,
+    1842464,
+    2697775,
+    5066586,
+    4737620,
+    5658467,
+    3816260,
+    4342862,
+    4079433,
+    3553344
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/title/sprites/titlebutton/000.png",
+      "canvasWidth": 147,
+      "canvasHeight": 41,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 147,
+      "height": 41,
+      "encoding": 0
+    }
+  ]
+}

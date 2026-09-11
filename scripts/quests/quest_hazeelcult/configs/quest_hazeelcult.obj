@@ -1,0 +1,71 @@
+[hazeel_scroll]
+desc=Scroll containing a powerful enchantment of restoration.
+model=obj_nulodions_notes
+members=yes
+2dxof=1
+2dyof=7
+2dzoom=1040
+2dyan=120
+2dxan=380
+name=Hazeel scroll
+weight=10g
+param=no_alchemy,1
+tradeable=no
+
+[carnilleanchestkey]
+desc=This key opens a chest in the Carnillean household.
+members=yes
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+name=Chest key
+weight=10g
+param=no_alchemy,1
+tradeable=no
+
+[carnillean_armour]
+desc=Decorative armour; an heirloom of the Carnillean family.
+cost=65
+model=obj_khazard_platemail
+members=yes
+2dxof=-1
+2dzoom=1250
+2dxan=488
+iop2=Wear
+manwear=obj_khazard_platemail_manwear,0
+manwear2=obj_iron_platebody_manwear2
+womanwear=obj_khazard_platemail_womanwear,0
+womanwear2=obj_iron_platebody_womanwear2
+recol1s=61
+recol1d=937
+recol2s=41
+recol2d=43945
+name=Carnillean armour
+wearpos=torso
+wearpos2=arms
+weight=20lb
+category=armour_body
+param=stabdefence,20
+tradeable=no
+param=slashdefence,14
+param=crushdefence,8
+
+[mark_of_hazeel]
+desc=A sign of my commitment to Hazeel.
+model=obj_mark_of_hazeel
+members=yes
+2dxof=-1
+2dyof=12
+2dzoom=430
+2dyan=1764
+2dxan=288
+iop2=Wear
+manwear=obj_stringsnake_manwear2,0
+womanwear=obj_stringsnake_womanwear2,0
+name=Hazeel's mark
+wearpos=front
+weight=12g
+tradeable=no

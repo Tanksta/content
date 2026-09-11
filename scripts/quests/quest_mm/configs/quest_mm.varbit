@@ -1,0 +1,10 @@
+[mm_awowogei_access]
+basevar=mm_gnomes
+startbit=28
+endbit=29
+
+[mm_garkor_plot_revealed]
+basevar=mm_gnomes
+startbit=30
+endbit=30
+

@@ -1,0 +1,15 @@
+[tunnel_dwarf]
+vislevel=hide
+desc=He looks short and grumpy.
+walkanim=dwarf_walk
+readyanim=dwarf_ready
+op1=Talk-to
+name=Mountain Dwarf
+model1=npc_dwarf_normal
+model2=npc_dwarf_mountain
+model3=npc_dwarf_mountaini2
+model4=npc_dwarf_mountaini3
+model5=npc_dwarf_normali5
+model6=npc_dwarf_chaosi4
+head1=npc_lawgof2_head
+param=death_anim,dwarf_death

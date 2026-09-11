@@ -1,0 +1,22 @@
+// TO-DO: Need to make the head able to be used on Dr. Fenkenstrain during quest for additional dialogue.
+[trick_or_treat_head]
+desc=Alas...I hardly knew him.
+model=obj_trick_or_treat_head
+manwear=obj_trick_or_treat_head_manwear,0
+womanwear=obj_trick_or_treat_head_manwear,6
+iop1=Talk-At
+iop2=Display
+iop3=Question
+2dxof=4
+2dyof=1
+2dzoom=750
+2dyan=140
+2dxan=36
+cost=0
+recol1s=4550
+recol1d=14387
+recol2s=6798
+recol2d=41
+recol3s=127
+recol3d=914
+name=Zombie head

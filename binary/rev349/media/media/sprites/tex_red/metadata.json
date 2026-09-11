@@ -1,0 +1,30 @@
+{
+  "member": "tex_red.dat",
+  "palette": [
+    0,
+    5968394,
+    6493195,
+    6952460,
+    7345933,
+    7542797,
+    5509130,
+    5246729,
+    5049865,
+    4525064,
+    7936270
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/tex_red/000.png",
+      "canvasWidth": 104,
+      "canvasHeight": 104,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 104,
+      "height": 104,
+      "encoding": 0
+    }
+  ]
+}

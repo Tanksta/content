@@ -1,0 +1,186 @@
+{
+  "member": "runes.dat",
+  "palette": [
+    0,
+    16776958
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/title/sprites/runes/000.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 4,
+      "yOffset": 7,
+      "width": 83,
+      "height": 77,
+      "encoding": 0
+    },
+    {
+      "index": 1,
+      "path": "decoded/media/title/sprites/runes/001.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 1,
+      "yOffset": 2,
+      "width": 93,
+      "height": 87,
+      "encoding": 0
+    },
+    {
+      "index": 2,
+      "path": "decoded/media/title/sprites/runes/002.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 6,
+      "width": 93,
+      "height": 83,
+      "encoding": 1
+    },
+    {
+      "index": 3,
+      "path": "decoded/media/title/sprites/runes/003.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 9,
+      "yOffset": 4,
+      "width": 85,
+      "height": 85,
+      "encoding": 1
+    },
+    {
+      "index": 4,
+      "path": "decoded/media/title/sprites/runes/004.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 4,
+      "yOffset": 7,
+      "width": 83,
+      "height": 77,
+      "encoding": 0
+    },
+    {
+      "index": 5,
+      "path": "decoded/media/title/sprites/runes/005.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 1,
+      "yOffset": 2,
+      "width": 93,
+      "height": 87,
+      "encoding": 0
+    },
+    {
+      "index": 6,
+      "path": "decoded/media/title/sprites/runes/006.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 6,
+      "width": 93,
+      "height": 83,
+      "encoding": 1
+    },
+    {
+      "index": 7,
+      "path": "decoded/media/title/sprites/runes/007.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 9,
+      "yOffset": 4,
+      "width": 85,
+      "height": 85,
+      "encoding": 1
+    },
+    {
+      "index": 8,
+      "path": "decoded/media/title/sprites/runes/008.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 4,
+      "yOffset": 7,
+      "width": 83,
+      "height": 77,
+      "encoding": 0
+    },
+    {
+      "index": 9,
+      "path": "decoded/media/title/sprites/runes/009.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 1,
+      "yOffset": 2,
+      "width": 93,
+      "height": 87,
+      "encoding": 0
+    },
+    {
+      "index": 10,
+      "path": "decoded/media/title/sprites/runes/010.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 6,
+      "width": 93,
+      "height": 83,
+      "encoding": 1
+    },
+    {
+      "index": 11,
+      "path": "decoded/media/title/sprites/runes/011.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 9,
+      "yOffset": 4,
+      "width": 85,
+      "height": 85,
+      "encoding": 1
+    },
+    {
+      "index": 12,
+      "path": "decoded/media/title/sprites/runes/012.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 96,
+      "height": 96,
+      "encoding": 0
+    },
+    {
+      "index": 13,
+      "path": "decoded/media/title/sprites/runes/013.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 96,
+      "height": 96,
+      "encoding": 0
+    },
+    {
+      "index": 14,
+      "path": "decoded/media/title/sprites/runes/014.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 96,
+      "height": 96,
+      "encoding": 0
+    },
+    {
+      "index": 15,
+      "path": "decoded/media/title/sprites/runes/015.png",
+      "canvasWidth": 96,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 96,
+      "height": 96,
+      "encoding": 0
+    }
+  ]
+}

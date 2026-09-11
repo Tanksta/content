@@ -1,0 +1,73 @@
+[kalphite_burrow_entrance]
+width=2
+length=2
+model=kalphite_burrow_entrance
+name=Tunnel entrance
+desc=How am I going to get down there?
+
+[kalphite_burrow_entrance_withrope]
+width=2
+length=2
+op1=Climb-down
+model=kalphite_burrow_entrance_withrope
+name=Tunnel entrance
+desc=How am I going to get down there?
+
+[kalphite_burrow_exit]
+blockwalk=no
+blockrange=no
+op1=Climb-up
+model=thzq_tombrooml1_1
+name=Rope
+desc=I hope this holds!
+
+[kalphite_chamber_entrance]
+width=2
+length=2
+recol1s=9678
+recol1d=8503
+recol2s=8648
+recol2d=8623
+recol3s=8631
+recol3d=8615
+recol4s=8743
+recol4d=8734
+recol5s=9110
+recol5d=8982
+model=kalphite_burrow_entrance
+name=Tunnel entrance
+desc=How am I going to get down there?
+
+[kalphite_chamber_entrance_withrope]
+width=2
+length=2
+op1=Climb-down
+recol1s=9678
+recol1d=8503
+recol2s=8648
+recol2d=8623
+recol3s=8631
+recol3d=8615
+recol4s=8743
+recol4d=8734
+recol5s=9110
+recol5d=8982
+model=kalphite_burrow_entrance_withrope
+name=Tunnel entrance
+desc=How am I going to get down there?
+
+[kalphite_chamber_exit]
+blockwalk=no
+blockrange=no
+op1=Climb-up
+model=thzq_tombrooml1_1
+name=Rope
+desc=I hope this holds!
+
+[kalphite_egg]
+width=2
+length=2
+blockrange=no
+model=kalphite_egg
+name=Cocoon
+desc=It's moving...

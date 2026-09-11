@@ -1,0 +1,30 @@
+{
+  "member": "number_button.dat",
+  "palette": [
+    0,
+    11240319,
+    3998976,
+    5509129,
+    5968394,
+    6493195,
+    6952460,
+    7477005,
+    7936270,
+    4984329,
+    4525064
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/number_button/000.png",
+      "canvasWidth": 64,
+      "canvasHeight": 64,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 64,
+      "height": 64,
+      "encoding": 0
+    }
+  ]
+}

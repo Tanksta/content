@@ -1,0 +1,13 @@
+[elenadoor2]
+active=yes
+op1=Open
+model=door
+name=Door
+desc=It's a door.
+category=door_open_and_close
+param=next_loc_stage,elenadoor2open
+
+[elenadoor2open]
+model=door
+category=door_open_and_close
+param=next_loc_stage,elenadoor2

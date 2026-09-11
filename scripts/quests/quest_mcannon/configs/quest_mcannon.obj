@@ -1,0 +1,147 @@
+[mcannonremains]
+desc=The body of a Dwarf savaged by Goblins.
+model=obj_mcannonremains
+2dxof=-4
+2dyof=12
+2dzoom=1780
+2dyan=436
+2dxan=320
+members=yes
+name=Dwarf remains
+weight=16kg
+tradeable=no
+
+[mcannontoolkit]
+desc=These could be handy.
+model=obj_mcannontoolkit
+2dxof=-2
+2dyof=-2
+2dzoom=780
+2dyan=104
+2dxan=432
+members=yes
+name=Tool kit
+weight=1lb
+tradeable=no
+
+[mcannonball]
+desc=Ammo for the Dwarf Cannon.
+model=obj_mcannonball
+2dxof=1
+2dzoom=1400
+2dyan=1852
+2dxan=156
+stackable=yes
+members=yes
+cost=5
+name=Cannonball
+weight=8lb
+category=category_1176
+
+[nulodions_notes]
+desc=Construction notes for Dwarf cannon ammo.
+model=obj_nulodions_notes
+2dxof=2
+2dyof=3
+2dzoom=1100
+2dyan=48
+2dxan=528
+iop1=Read
+members=yes
+name=Nulodion's notes
+weight=1oz
+tradeable=no
+
+[ammo_mould]
+desc=Used to make cannon ammunition.
+model=obj_ammo_mould
+2dxof=8
+2dzoom=2160
+2dyan=88
+2dxan=308
+cost=5
+members=yes
+name=Ammo mould
+weight=10lb
+tradeable=no
+
+[mcannonbook]
+desc=An old note book.
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+iop1=Read
+cost=10
+members=yes
+name=Instruction manual
+weight=18oz
+tradeable=no
+
+[twpart1]
+desc=The cannon is built on this.
+model=obj_twpart1
+2dxof=-2
+2dyof=-4
+2dzoom=2590
+2dyan=1756
+2dxan=188
+cost=187500
+iop1=Set-up
+members=yes
+name=Cannon base
+weight=10kg
+category=cannon_parts
+
+[twpart2]
+desc=The mounting for the multicannon.
+model=obj_twpart2
+2dyof=106
+2dzoom=1750
+2dyan=1456
+2dxan=268
+cost=187500
+members=yes
+name=Cannon stand
+weight=2lb
+category=cannon_parts
+
+[twpart3]
+desc=The barrels of the multicannon.
+model=obj_twpart3
+2dyof=-3
+2dyan=1872
+2dxan=188
+cost=187500
+members=yes
+name=Cannon barrels
+weight=15kg
+category=cannon_parts
+
+[twpart4]
+desc=This powers the multicannon.
+model=obj_twpart4
+2dxof=2
+2dyof=-19
+2dzoom=1170
+2dyan=1780
+2dxan=160
+cost=187500
+members=yes
+name=Cannon furnace
+weight=5kg
+category=cannon_parts
+
+[mcannonrailing1_obj]
+desc=A metal railing replacement.
+model=obj_mcannonrailing1_obj
+members=yes
+2dxof=4
+2dyof=-3
+2dzoom=1730
+2dyan=1976
+2dzan=212
+2dxan=4
+name=Railing
+weight=2kg
+tradeable=no

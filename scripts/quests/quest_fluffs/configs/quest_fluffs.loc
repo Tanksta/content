@@ -1,0 +1,23 @@
+[gertrudefence]
+sharelight=yes
+blockrange=no
+op1=Climb-over
+model=gertrudefence
+name=Broken fence
+desc=The fence is broken at this point.
+
+[gertrudeempty_barrel]
+op1=Search
+model=barrel
+name=Barrel
+desc=A wooden barrel for storage.
+
+[gertrudeempty_crate]
+op1=Search
+retex1s=darkwood
+retex1d=wood2
+retex2s=elfwood
+retex2d=wood2
+model=crate
+name=Crate
+desc=An old crate for storage.

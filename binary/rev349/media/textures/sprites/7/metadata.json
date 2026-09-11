@@ -1,0 +1,24 @@
+{
+  "member": "7.dat",
+  "palette": [
+    0,
+    1377024,
+    3480577,
+    4598530,
+    5914383
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/textures/sprites/7/000.png",
+      "canvasWidth": 64,
+      "canvasHeight": 64,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 64,
+      "height": 64,
+      "encoding": 0
+    }
+  ]
+}

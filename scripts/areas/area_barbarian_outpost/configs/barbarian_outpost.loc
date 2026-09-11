@@ -1,0 +1,14 @@
+[barbariangatel]
+op1=Open
+active=yes
+model=ikov_mendedleverdoorl
+name=Gate
+category=outpost_gate
+
+[barbariangater]
+op1=Open
+mirror=yes
+active=yes
+model=ikov_mendedleverdoorl
+name=Gate
+category=outpost_gate

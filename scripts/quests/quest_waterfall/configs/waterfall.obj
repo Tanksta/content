@@ -1,0 +1,111 @@
+[baxtorian_book_waterfall_quest]
+cost=2
+desc=A book on elven history in northern RuneScape.
+model=obj_mcannonbook
+2dzoom=840
+2dyan=152
+2dxan=256
+members=yes
+iop1=Read
+recol1s=5018
+recol1d=14226
+name=Book on baxtorian
+weight=18oz
+tradeable=no
+
+[golrie_key_waterfall_quest]
+desc=This will unlock something.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=A key
+weight=10g
+tradeable=no
+
+[glarials_pebble_waterfall_quest]
+desc=A small pebble with elven inscription.
+model=obj_glarials_pebble_waterfall_quest
+2dzoom=640
+2dyan=1808
+2dxan=236
+members=yes
+name=Glarial's pebble
+weight=10g
+tradeable=no
+
+[glarials_amulet_waterfall_quest]
+desc=A bright green gem set in a necklace.
+model=obj_glarials_amulet_waterfall_quest
+2dxof=1
+2dyof=16
+2dzoom=620
+2dyan=68
+2dxan=424
+iop2=Wear
+manwear=obj_glarials_amulet_waterfall_quest_manwear,0
+womanwear=obj_glarials_amulet_waterfall_quest_womanwear,0
+members=yes
+recol1s=11200
+recol1d=22464
+name=Glarial's amulet
+wearpos=front
+weight=10g
+tradeable=no
+
+[glarials_urn_full_waterfall_quest]
+desc=An urn containing Glarial's ashes.
+model=obj_glarials_urn_full_waterfall_quest
+2dyof=-3
+2dzoom=1070
+2dyan=104
+2dxan=68
+members=yes
+name=Glarial's urn
+weight=5oz
+tradeable=no
+
+[glarials_urn_empty_waterfall_quest]
+desc=An empty urn made for Glarial's ashes.
+model=obj_glarials_urn_full_waterfall_quest
+2dyof=-3
+2dzoom=1070
+2dyan=104
+2dxan=68
+members=yes
+name=Glarial's urn
+weight=3oz
+tradeable=no
+
+[baxtorian_key_waterfall_quest]
+desc=This will unlock something.
+model=obj_ikov_shinykey
+2dxof=-3
+2dyof=5
+2dzoom=700
+2dyan=20
+2dxan=328
+members=yes
+name=A key
+weight=10g
+tradeable=no
+
+[mithril_seed]
+desc=Magical seeds in a mithril case.
+cost=200
+model=obj_mithril_seed
+2dxof=7
+2dyof=39
+2dzoom=920
+2dyan=676
+2dxan=240
+members=yes
+stackable=yes
+iop1=Plant
+recol1s=43288
+recol1d=22433
+name=Mithril seeds
+weight=1oz

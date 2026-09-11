@@ -1,0 +1,41 @@
+[chestclosed]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Closed chest
+desc=I wonder what's inside.
+category=chest_closed
+param=chest_other,chestopen
+
+[chestclosedgold]
+op1=Open
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_shut
+name=Closed chest
+desc=I wonder what's inside.
+category=chest_closed
+param=chest_other,chestopengold
+
+[chestopen]
+op2=Search
+op3=Shut
+forceapproach=14
+model=arena_guard_chest_open
+name=Open chest
+desc=Perhaps I should search it.
+category=chest_open
+param=chest_other,chestclosed
+
+[chestopengold]
+op2=Search
+op3=Shut
+forceapproach=14
+recol1s=41
+recol1d=11173
+model=arena_guard_chest_open
+name=Open chest
+desc=Perhaps I should search it.
+category=chest_open
+param=chest_other,chestclosedgold

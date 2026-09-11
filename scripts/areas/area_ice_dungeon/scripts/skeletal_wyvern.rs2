@@ -1,0 +1,208 @@
+[ai_queue1,skeletal_wyvern1] ~npc_default_retaliate_ap;
+[ai_queue1,skeletal_wyvern2] ~npc_default_retaliate_ap;
+[ai_queue1,skeletal_wyvern3] ~npc_default_retaliate_ap;
+[ai_queue1,skeletal_wyvern4] ~npc_default_retaliate_ap;
+
+[ai_opplayer2,skeletal_wyvern1] @skeletal_wyvern_attack;
+[ai_opplayer2,skeletal_wyvern2] @skeletal_wyvern_attack;
+[ai_opplayer2,skeletal_wyvern3] @skeletal_wyvern_attack;
+[ai_opplayer2,skeletal_wyvern4] @skeletal_wyvern_attack;
+[ai_applayer2,skeletal_wyvern1] @skeletal_wyvern_attack;
+[ai_applayer2,skeletal_wyvern2] @skeletal_wyvern_attack;
+[ai_applayer2,skeletal_wyvern3] @skeletal_wyvern_attack;
+[ai_applayer2,skeletal_wyvern4] @skeletal_wyvern_attack;
+
+[ai_queue3,skeletal_wyvern1] @skeletal_wyvern_death;
+[ai_queue3,skeletal_wyvern2] @skeletal_wyvern_death;
+[ai_queue3,skeletal_wyvern3] @skeletal_wyvern_death;
+[ai_queue3,skeletal_wyvern4] @skeletal_wyvern_death;
+
+[label,skeletal_wyvern_attack]
+if (%npc_action_delay > map_clock) return;
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) return;
+
+if (npc_range(coord) > 1) {
+    if (npc_range(coord) <= 5 & random(2) = 0) {
+        ~skeletal_wyvern_icy_breath;
+    } else {
+        ~skeletal_wyvern_iceball;
+    }
+    return;
+}
+
+def_int $style = random(3);
+if ($style = 0) {
+    ~skeletal_wyvern_icy_breath;
+} else if ($style = 1) {
+    ~skeletal_wyvern_iceball;
+} else {
+    ~skeletal_wyvern_melee;
+}
+
+[proc,skeletal_wyvern_icy_breath]
+if_close;
+npc_anim(npc_param(magicattack_anim), 0);
+sound_synth(kingicebreath, 0, 30);
+spotanim_npc(wyvern_skeleton_travel_breath, 32, 0);
+def_int $duration = 30;
+spotanim_pl(wyvern_skeleton_impact_breath, 124, $duration);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+
+def_int $maxhit = 50;
+if (~wyvern_icy_breath_protection = true) {
+    mes("Your shield absorbs most of the wyvern's ice breath!");
+    $maxhit = 10;
+}
+
+def_int $damage = 0;
+def_boolean $freeze = false;
+def_int $attack_roll = ~npc_magic_attack_roll;
+def_int $defence_roll = ~player_defence_roll_specific(^magic_style);
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    $damage = randominc($maxhit);
+    $freeze = true;
+}
+~queue_combat_damage_player(calc($duration / 30), $damage);
+queue*(playerhit_n_retaliate, calc($duration / 30))(npc_uid);
+if ($freeze = true) {
+    queue(wyvern_freeze_player, calc($duration / 30), 10);
+}
+~npc_set_attack_vars;
+
+[proc,wyvern_icy_breath_protection]()(boolean)
+if (inv_total(worn, elemental_shield) > 0) return(true);
+return(false);
+
+[proc,skeletal_wyvern_iceball]
+if_close;
+npc_anim(npc_param(rangeattack_anim), 0);
+if (npc_param(rangeattack_sound) ! null) {
+    sound_synth(npc_param(rangeattack_sound), 0, 0);
+}
+spotanim_npc(npc_param(proj_launch), 92, 0);
+def_coord $projectile_coord = ~skeletal_wyvern_projectile_coord(coord);
+def_int $duration = ~player_projectile($projectile_coord, coord, uid, npc_param(proj_travel), 92, 31, 51, 16, -5, 64, 10);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+
+def_int $damage = 0;
+def_int $attack_roll = ~npc_ranged_attack_roll;
+def_int $defence_roll = ~player_defence_roll_specific(^ranged_style);
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    $damage = randominc(13);
+}
+~playerhit_n_ranged(true, $damage, $duration, npc_param(attackrate));
+
+[proc,skeletal_wyvern_melee]
+if (random(2) = 0) {
+    npc_anim(wyvern_skeleton_tail_swipe, 0);
+    if (npc_param(tailattack_sound) ! null) {
+        sound_synth(npc_param(tailattack_sound), 0, 0);
+    }
+    ~npc_meleeattack;
+} else {
+    gosub(npc_default_attack);
+}
+
+[proc,skeletal_wyvern_projectile_coord](coord $target)(coord)
+def_coord $npc_coord = movecoord(npc_coord, 2, 0, 2);
+def_int $z = calc(coordz($npc_coord) - coordz($target));
+def_int $x = calc(coordx($npc_coord) - coordx($target));
+if (calc($z / 2) <= $x & calc($x / 2) <= $z) {
+    return(movecoord($npc_coord, -1, 0, -1));
+} else if (calc($z / 2) <= multiply($x, -1) & calc($x / 2) >= multiply($z, -1)) {
+    return(movecoord($npc_coord, 1, 0, -1));
+} else if (calc($x / 2) >= $z & calc($z / 2) >= $x) {
+    return(movecoord($npc_coord, 1, 0, 1));
+} else if (calc($z / 2) >= multiply($x, -1) & calc($z / 2 * -1) >= $x) {
+    return(movecoord($npc_coord, -1, 0, 1));
+} else if (calc($x / 2) <= $z & calc($z / 2) >= $x) {
+    return(movecoord($npc_coord, 0, 0, -1));
+}  else if (calc($x / 2) <= $z & calc($x / 2) <= multiply($z, -1)) {
+    return(movecoord($npc_coord, 1, 0, 0));
+} else if (calc($z / 2) <= $x & calc($z / 2 * -1) >= $x) {
+    return(movecoord($npc_coord, 0, 0, 1));
+}
+return(movecoord($npc_coord, -1, 0, 0));
+
+[queue,wyvern_freeze_player](int $duration)
+def_boolean $already_frozen = false;
+if (map_clock < %frozen) {
+    $already_frozen = true;
+}
+%frozen = calc(map_clock + $duration + 1);
+if ($already_frozen = false) {
+    mes("You've been frozen!");
+    walktrigger(wyvern_frozen);
+}
+
+[walktrigger,wyvern_frozen]
+if (map_clock < %frozen) {
+    mes("You're frozen and can't move!");
+    p_walk(coord);
+    walktrigger(wyvern_frozen);
+}
+
+[label,skeletal_wyvern_death]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+obj_add(npc_coord, wyvern_bones, 1, ^lootdrop_duration);
+~trail_hardcluedrop(128, npc_coord);
+if (random(512) = 0) {
+    obj_add(npc_coord, granite_legs, 1, ^lootdrop_duration);
+}
+def_int $random = random(128);
+if ($random < 4) {
+    return;
+} else if ($random < 6) {
+    obj_add(npc_coord, rune_full_helm, 1, ^lootdrop_duration);
+} else if ($random < 9) {
+    return;
+} else if ($random < 14) {
+    obj_add(npc_coord, adamant_battleaxe, 1, ^lootdrop_duration);
+} else if ($random < 19) {
+    obj_add(npc_coord, adamant_full_helm, 1, ^lootdrop_duration);
+} else if ($random < 27) {
+    obj_add(npc_coord, chaosrune, ~random_range(30, 60), ^lootdrop_duration);
+} else if ($random < 34) {
+    obj_add(npc_coord, lawrune, ~random_range(15, 45), ^lootdrop_duration);
+} else if ($random < 41) {
+    obj_add(npc_coord, deathrune, ~random_range(10, 30), ^lootdrop_duration);
+} else if ($random < 47) {
+    obj_add(npc_coord, bloodrune, ~random_range(10, 20), ^lootdrop_duration);
+} else if ($random < 53) {
+    obj_add(npc_coord, soulrune, ~random_range(10, 20), ^lootdrop_duration);
+} else if ($random < 61) {
+    obj_add(npc_coord, coal, ~random_range(5, 25), ^lootdrop_duration);
+} else if ($random < 67) {
+    obj_add(npc_coord, mithril_ore, ~random_range(3, 10), ^lootdrop_duration);
+} else if ($random < 72) {
+    obj_add(npc_coord, adamantite_bar, ~random_range(1, 2), ^lootdrop_duration);
+} else if ($random < 74) {
+    obj_add(npc_coord, runite_bar, 1, ^lootdrop_duration);
+} else if ($random < 82) {
+    obj_add(npc_coord, lobster, ~random_range(2, 6), ^lootdrop_duration);
+} else if ($random < 90) {
+    obj_add(npc_coord, yew_logs, ~random_range(3, 8), ^lootdrop_duration);
+} else if ($random < 94) {
+    obj_add(npc_coord, magic_logs, ~random_range(2, 5), ^lootdrop_duration);
+} else if ($random < 99) {
+    obj_add(npc_coord, ranarr_seed, 1, ^lootdrop_duration);
+} else if ($random < 102) {
+    obj_add(npc_coord, snapdragon_seed, 1, ^lootdrop_duration);
+} else if ($random < 106) {
+    obj_add(npc_coord, maple_seed, 1, ^lootdrop_duration);
+} else if ($random < 111) {
+    obj_add(npc_coord, limpwurt_seed, ~random_range(1, 3), ^lootdrop_duration);
+} else if ($random < 118) {
+    obj_add(npc_coord, rune_arrow, ~random_range(10, 30), ^lootdrop_duration);
+} else if ($random < 124) {
+    obj_add(npc_coord, ~randomjewel, ^lootdrop_duration);
+} else {
+    obj_add(npc_coord, coins, ~random_range(500, 1500), ^lootdrop_duration);
+}

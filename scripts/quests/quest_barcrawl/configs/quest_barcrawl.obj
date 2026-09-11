@@ -1,0 +1,14 @@
+[barcrawl_card]
+members=yes
+desc=The official Alfred Grimhand bar crawl card.
+cost=10
+model=obj_barcrawl_card
+2dxof=5
+2dyof=8
+2dzoom=830
+2dyan=1644
+2dxan=404
+iop1=Read
+name=Barcrawl card
+weight=150g
+tradeable=no

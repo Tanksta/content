@@ -1,0 +1,35 @@
+[delrith]
+size=2
+desc=A freshly summoned demon.
+walkanim=demon_walk
+readyanim=demon_ready
+op2=Attack
+vislevel=27
+name=Delrith
+model1=poh_demon_8
+wanderrange=2
+maxrange=4
+hitpoints=7
+attack=32
+strength=25
+defence=27
+param=damagetype,^crush_style
+timer=100
+
+[delrith_weakened]
+size=2
+desc=The demon doesn't look so strong now.
+resizeh=100
+resizev=100
+readyanim=demon_portal
+vislevel=1
+recol1s=918
+recol1d=3486
+name=Weakened Delrith
+model1=poh_demon_8
+model2=model_3019_npc
+defaultmode=none
+wanderrange=0
+moverestrict=nomove
+timer=100
+param=death_anim,demon_portalend

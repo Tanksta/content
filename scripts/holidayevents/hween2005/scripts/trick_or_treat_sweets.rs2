@@ -1,0 +1,26 @@
+[opheld1,easter_egg_2005_lightblue] @diango_hot_sweet("You eat the blue sweets...");
+[opheld1,easter_egg_2005_darkblue] @diango_hot_sweet("You eat the deep blue sweets...");
+[opheld1,easter_egg_2005_white] @diango_hot_sweet("You eat the white sweets...");
+[opheld1,easter_egg_2005_purple] @diango_hot_sweet("You eat the purple sweets...");
+[opheld1,easter_egg_2005_red] @diango_hot_sweet("You eat the red sweets...");
+[opheld1,easter_egg_2005_green] @diango_hot_sweet("You eat the green sweets...");
+[opheld1,easter_egg_2005_pink] @diango_hot_sweet("You eat the pink sweets...");
+
+[label,diango_hot_sweet](string $message)
+def_obj $obj = inv_getobj(inv, last_slot);
+if (~duel_arena_consume_check($obj) = false) {
+    return;
+}
+if (%eat_delay >= map_clock) {
+    return;
+}
+%eat_delay = calc(map_clock + 2);
+%action_delay = calc(%action_delay + 3);
+inv_del(inv, $obj, 1);
+sound_synth(eat, 0, 0);
+anim(human_eat, 0);
+mes($message);
+p_delay(2);
+anim(steam_head_play, 0);
+spotanim_pl(steam_head_spotanim, 64, 0);
+mes("Ouch! You burn your mouth from the scorching hot sweets!");

@@ -1,0 +1,31 @@
+[haystack]
+width=2
+op1=Search
+blockrange=no
+model=haystack
+name=Hay Bales
+desc=I bet there's a needle in it somewhere.
+
+[haystack2]
+width=2
+op1=Search
+blockrange=no
+model=haystack2
+name=Hay Bales
+desc=I bet there's a needle in it somewhere.
+
+[haystack3]
+width=2
+length=2
+op1=Search
+blockrange=no
+model=haystack3
+name=Haystack
+desc=I bet there's a needle in it somewhere.
+
+[haybail]
+op1=Search
+blockrange=no
+model=haybail
+name=Hay bale
+desc=I bet there's a needle in it somewhere.

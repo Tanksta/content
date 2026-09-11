@@ -1,0 +1,38 @@
+[fountain_of_heroes]
+width=2
+length=2
+mapscene=8
+recol1s=28
+recol1d=8103
+recol2s=61
+recol2d=9129
+model=fountain
+name=Fountain of Heroes
+desc=A source of pure water.
+
+[herodoor_l]
+active=yes
+op1=Open
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+model=lefayeunopenabledoorl_1,0
+name=Door
+desc=The entrance to the Hero's Guild.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1522
+
+[herodoor_r]
+active=yes
+op1=Open
+mirror=yes
+retex1s=wall
+retex1d=door2
+recol2s=24
+recol2d=4762
+model=lefayeunopenabledoorl_1,0
+name=Door
+desc=The entrance to the Hero's Guild.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1523

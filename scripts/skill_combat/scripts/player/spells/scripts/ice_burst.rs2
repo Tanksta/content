@@ -1,0 +1,264 @@
+[opnpct,magic2:com_25] ~pvm_ice_burst(^ice_burst);
+[apnpct,magic2:com_25] ~pvm_ice_burst(^ice_burst);
+
+[proc,pvm_ice_burst](int $spell)
+def_dbrow $spell_data = ~get_spell_data($spell);
+if (~pvm_combat_spell_checks($spell_data) = false) {
+    return;
+}
+if (~pvm_debuff_allowed($spell_data) = false) {
+    return;
+}
+
+def_int $duration = ~pvm_spell_cast($spell_data);
+def_npc_uid $primary_target = npc_uid;
+def_coord $center = npc_coord;
+def_int $hit_count = 0;
+
+if (map_multiway(coord) = true & map_multiway(npc_coord) = true) {
+
+    if (~player_npc_hit_roll(^magic_style) = true) {
+
+        def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+        ~pvm_spell_success($spell_data, $maxhit, $duration);
+        ~pvm_stat_change_effect($spell_data);
+
+        def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+        if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+            %npc_stunned = calc(map_clock + $freeze_time);
+            npc_walktrigger(8, 0);
+        }
+
+    } else {
+
+        ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+    }
+
+    $hit_count = 1;
+
+    def_npc_uid $target1 = null;
+    def_npc_uid $target2 = null;
+    def_npc_uid $target3 = null;
+    def_npc_uid $target4 = null;
+    def_npc_uid $target5 = null;
+    def_npc_uid $target6 = null;
+    def_npc_uid $target7 = null;
+    def_npc_uid $target8 = null;
+
+    npc_huntall($center, 1, ^vis_lineofsight);
+    while (npc_findnext = true) {
+        if ($hit_count < 9 & npc_uid ! $primary_target) {
+            if ($target1 = null) {
+                $target1 = npc_uid;
+            } else if ($target2 = null) {
+                $target2 = npc_uid;
+            } else if ($target3 = null) {
+                $target3 = npc_uid;
+            } else if ($target4 = null) {
+                $target4 = npc_uid;
+            } else if ($target5 = null) {
+                $target5 = npc_uid;
+            } else if ($target6 = null) {
+                $target6 = npc_uid;
+            } else if ($target7 = null) {
+                $target7 = npc_uid;
+            } else if ($target8 = null) {
+                $target8 = npc_uid;
+            }
+            $hit_count = add($hit_count, 1);
+        }
+    }
+
+    if (npc_finduid($target1) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target2) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target3) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target4) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target5) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target6) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target7) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+    if (npc_finduid($target8) = true) {
+
+            if (~player_npc_hit_roll(^magic_style) = true) {
+
+                def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+                ~pvm_spell_success($spell_data, $maxhit, $duration);
+                ~pvm_stat_change_effect($spell_data);
+
+                def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+                if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+                    %npc_stunned = calc(map_clock + $freeze_time);
+                    npc_walktrigger(8, 0);
+                }
+
+            } else {
+
+                ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+            }
+
+    }
+
+    ~pvm_restore_spell_target($primary_target);
+
+} else {
+
+    if (~player_npc_hit_roll(^magic_style) = true) {
+
+        def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+        ~pvm_spell_success($spell_data, $maxhit, $duration);
+        ~pvm_stat_change_effect($spell_data);
+
+        def_int $freeze_time = db_getfield($spell_data, magic_spell_table:freeze_time, 0);
+        if ($freeze_time > 0 & map_clock > calc(%npc_stunned + 5)) {
+            %npc_stunned = calc(map_clock + $freeze_time);
+            npc_walktrigger(8, 0);
+        }
+
+    } else {
+
+        ~pvm_spell_fail_custom($spell_data, $duration, spellfail);
+    }
+}
+

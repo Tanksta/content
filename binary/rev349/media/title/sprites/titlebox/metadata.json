@@ -1,0 +1,37 @@
+{
+  "member": "titlebox.dat",
+  "palette": [
+    0,
+    723723,
+    2895156,
+    1842464,
+    2434603,
+    3289915,
+    3816259,
+    4277069,
+    4737619,
+    5395550,
+    5921894,
+    6908532,
+    7632511,
+    6382446,
+    5000793,
+    9013907,
+    4013897,
+    3553343
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/title/sprites/titlebox/000.png",
+      "canvasWidth": 360,
+      "canvasHeight": 200,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 360,
+      "height": 200,
+      "encoding": 0
+    }
+  ]
+}

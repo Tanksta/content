@@ -1,0 +1,14 @@
+[elena_picture]
+members=yes
+cost=1
+model=obj_elena_picture
+2dxof=1
+2dyof=22
+2dzoom=1420
+2dyan=112
+2dxan=288
+desc=A picture of a lady called Elena.
+name=Picture
+weight=1lb
+respawnrate=5
+tradeable=no

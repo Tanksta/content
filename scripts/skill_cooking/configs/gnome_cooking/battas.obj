@@ -1,0 +1,448 @@
+[premade_worm_batta]
+desc=It actually smells quite good.
+cost=120
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=5698
+recol2s=15283
+recol2d=3550
+name=Worm batta
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_toad_batta]
+desc=It actually smells quite good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+cost=120
+recol1s=926
+recol1d=22414
+name=Toad batta
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_cheese+tom_batta]
+desc=This smells really good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+cost=120
+recol1s=15283
+recol1d=11200
+name=Cheese+tom batta
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_fruit_batta]
+desc=It actually smells quite good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+cost=120
+recol1s=926
+recol1d=6080
+name=Fruit batta
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[premade_vegetable_batta]
+desc=Well... it looks healthy.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+cost=120
+recol1s=926
+recol1d=947
+recol2s=15283
+recol2d=12762
+name=Vegetable batta
+weight=250g
+category=gnome_premade_and_toadlegs_kingworm
+
+[spoilt_batta]
+desc=This batta doesn't look very appetising.
+cost=2
+members=yes
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+recol1s=926
+recol1d=8094
+recol2s=15283
+recol2d=11169
+recol3s=7070
+recol3d=9118
+name=Odd batta
+category=gnome_unf_odd_batta
+weight=250g
+
+[burnt_batta]
+desc=This batta has been burnt to a cinder.
+cost=1
+members=yes
+model=obj_burnt_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+recol1s=8642
+recol1d=20
+name=Burnt batta
+weight=200g
+
+[half_baked_batta]
+iop1=Inspect
+desc=This gnome batta is in the early stages of preparation.
+cost=2
+members=yes
+model=obj_half_baked_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+recol1s=8642
+recol1d=6829
+name=Half baked batta
+weight=250g
+tradeable=no
+
+[raw_batta]
+desc=This gnome batta needs cooking.
+cost=2
+members=yes
+model=obj_half_baked_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+name=Raw batta
+weight=250g
+tradeable=no
+
+[unfinished_worm_batta]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=5698
+recol2s=15283
+recol2d=3550
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[worm_batta]
+desc=It actually smells quite good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=5698
+recol2s=15283
+recol2d=3550
+name=Worm batta
+category=gnome_batta
+weight=250g
+
+[toad_batta]
+cost=2
+desc=It actually smells quite good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=22414
+name=Toad batta
+category=gnome_batta
+weight=250g
+
+[unfinished_cheese+tom_batta]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=15283
+recol1d=11200
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[cheese+tom_batta]
+cost=2
+desc=This smells really good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=15283
+recol1d=11200
+name=Cheese+tom batta
+category=gnome_batta
+weight=250g
+
+[fruitless_batta]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=22430
+recol2s=15283
+recol2d=22422
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_lime]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=22453
+recol2s=15283
+recol2d=22422
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_orange]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=6080
+recol2s=15283
+recol2d=22422
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_pineapple]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=8128
+recol2s=15283
+recol2d=22422
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_limeorange]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=22453
+recol2s=15283
+recol2d=6080
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_limepineapple]
+desc=This batta is just missing those little finishing touches.
+members=yes
+2dzoom=780
+2dxan=236
+2dyan=136
+2dyof=32
+2dxof=1
+model=obj_premade_worm_batta
+iop1=Eat
+recol1s=926
+recol1d=22453
+recol2s=15283
+recol2d=8128
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta_orangepineapple]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=6080
+recol2s=15283
+recol2d=8128
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[unfinished_fruit_batta]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=6080
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[fruit_batta]
+cost=2
+desc=It actually smells quite good.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=6080
+name=Fruit batta
+category=gnome_batta
+weight=250g
+
+[unfinished_vegetable_batta]
+desc=This batta is just missing those little finishing touches.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=947
+recol2s=15283
+recol2d=12762
+name=Unfinished batta
+category=gnome_unf_odd_batta
+weight=250g
+param=gnome_cooking_type,3
+
+[vegetable_batta]
+cost=2
+desc=Well... it looks healthy.
+model=obj_premade_worm_batta
+2dxof=1
+2dyof=32
+2dzoom=780
+2dyan=136
+2dxan=236
+iop1=Eat
+members=yes
+recol1s=926
+recol1d=947
+recol2s=15283
+recol2d=12762
+name=Vegetable batta
+weight=250g
+category=gnome_batta

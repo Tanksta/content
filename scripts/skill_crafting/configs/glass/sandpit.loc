@@ -1,0 +1,19 @@
+[sandpit]
+name=Sand pit
+desc=A tray of sand.
+model=outdoorfurniture_loc_2375
+width=2
+length=2
+category=sand_pit
+
+[viking_sandpit]
+width=2
+length=2
+recol1s=5010
+recol1d=5404
+recol2s=6618
+recol2d=6730
+model=outdoorfurniture_loc_2375
+name=Sand pit
+desc=A tray of sand.
+category=sand_pit

@@ -1,0 +1,18 @@
+[cauldrondoor]
+op1=Open
+active=yes
+model=ctratgatea
+name=Prison door
+desc=Looks secure.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1541
+
+[cauldrondoor_l]
+op1=Open
+mirror=yes
+active=yes
+model=ctratgatea
+name=Prison door
+desc=Looks secure.
+category=double_door_open_and_close_left
+param=next_loc_stage,prisondoor

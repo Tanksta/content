@@ -1,0 +1,51 @@
+[furnace1]
+width=3
+length=3
+sharelight=yes
+forceapproach=13
+op2=Smelt
+model=plaguesheep_furnace
+name=Furnace
+desc=A hot place for forging things in.
+category=smithing_furnace
+
+[furnace2]
+name=Furnace
+desc=A hot place for forging things in.
+model=obj_body_talisman
+forceapproach=east
+sharelight=yes
+category=smithing_furnace
+
+[furnace_legendsquest]
+width=3
+length=3
+forceapproach=13
+op1=Look
+op2=Search
+recol1s=7952
+recol1d=3980
+model=furnace_legendsquest
+name=Furnace
+desc=A hot place for forging things in.
+category=smithing_furnace
+
+[newbiefurnace]
+active=yes
+width=3
+length=3
+forceapproach=13
+op1=Use
+model=plaguesheep_furnace
+name=Furnace
+desc=A hot place for forging things in.
+category=smithing_furnace
+
+[furnace_upass]
+width=3
+length=3
+forceapproach=13
+model=furnace_legendsquest
+name=Furnace
+desc=A hot place for forging things in.
+category=smithing_furnace

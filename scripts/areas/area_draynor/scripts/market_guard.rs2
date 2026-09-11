@@ -1,0 +1,7 @@
+[ai_queue1,farming_market_guard] ~npc_default_retaliate;
+[ai_queue1,wom_marketguard] ~npc_default_retaliate;
+
+[ai_opplayer2,farming_market_guard] ~npc_default_attack;
+[ai_applayer2,farming_market_guard] ~npc_default_attack;
+[ai_opplayer2,wom_marketguard] ~npc_default_attack;
+[ai_applayer2,wom_marketguard] ~npc_default_attack;

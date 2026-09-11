@@ -1,0 +1,13 @@
+[wildinlever]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=I wonder what this does...
+
+[wildoutlever]
+active=yes
+op1=Pull
+model=ctleverb
+name=Lever
+desc=I wonder what this does...

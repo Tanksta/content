@@ -1,0 +1,46 @@
+[opheldu,cup_hot_water]
+switch_obj(last_useitem) {
+    case guam_leaf, marentill, harralander : @make_guthix_rest;
+    case default : ~displaymessage(^dm_default);
+}
+
+[opheldu,guam_leaf]
+switch_obj(last_useitem) {
+    case cup_hot_water : @make_guthix_rest;
+    case default : ~attempt_brew_potion(last_useslot, last_slot);
+}
+
+[opheldu,marentill]
+switch_obj(last_useitem) {
+    case cup_hot_water : @make_guthix_rest;
+    case default : ~attempt_brew_potion(last_useslot, last_slot);
+}
+
+[opheldu,harralander]
+switch_obj(last_useitem) {
+    case cup_hot_water : @make_guthix_rest;
+    case default : ~attempt_brew_potion(last_useslot, last_slot);
+}
+
+[label,make_guthix_rest]
+if (map_members = ^false) {
+    mes(^mes_members_herblore);
+    return;
+}
+if (stat(herblore) < 18) {
+    ~mesbox("You need a Herblore level of at least 18 to make this tea.");
+    return;
+}
+if (inv_total(inv, cup_hot_water) < 1 | inv_total(inv, guam_leaf) < 2 | inv_total(inv, harralander) < 1 | inv_total(inv, marentill) < 1) {
+    mes("You need a cup of hot water, two Guam leaves, a Harralander and a Marrentill to make Guthix rest.");
+    return;
+}
+inv_del(inv, cup_hot_water, 1);
+inv_del(inv, guam_leaf, 2);
+inv_del(inv, harralander, 1);
+inv_del(inv, marentill, 1);
+inv_add(inv, cup_guthix_rest_3, 1);
+anim(human_herbing_vial, 0);
+sound_synth(grind, 0, 0);
+mes("You mix the herbs into the cup of hot water.");
+stat_advance(herblore, 595);

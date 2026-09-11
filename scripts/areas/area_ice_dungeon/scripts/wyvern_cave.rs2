@@ -1,0 +1,20 @@
+[oploc1,wyvern_snow_cave_exit]
+mes("You leave the icy cavern.");
+p_delay(0);
+p_telejump(0_47_149_48_26);
+
+[oploc1,wyvern_snow_cave_entrance]
+~mesbox("STOP! The creatures in this cave are VERY dangerous. Are you sure you want to enter?");
+if (~p_choice2("Yes, I'm not afraid of death!", 1, "No thanks, I don't want to die!", 2) = 2) {
+    return;
+}
+mes("You enter the icy cavern.");
+p_delay(0);
+p_telejump(0_47_149_48_19);
+
+[oploc1,loc_9472]
+p_arrivedelay;
+mes("You climb down through the trapdoor...");
+anim(human_pickupfloor, 0);
+p_delay(0);
+p_telejump(movecoord(coord(), 0, 0, 6400));

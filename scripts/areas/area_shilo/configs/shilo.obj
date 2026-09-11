@@ -1,0 +1,25 @@
+[paramayaticket]
+desc=Allows you to rest in the luxurious Paramayer Inn.
+cost=5
+model=obj_paramayaticket
+2dxof=6
+2dyof=-2
+2dzoom=830
+2dyan=132
+2dxan=320
+members=yes
+name=Paramaya ticket
+weight=4g
+
+[shiloshipticket]
+desc=Allows you passage on the 'Lady of the waves' ship.
+cost=5
+model=obj_paramayaticket
+2dxof=6
+2dyof=-2
+2dzoom=830
+2dyan=132
+2dxan=320
+members=yes
+name=Ship ticket
+weight=4g

@@ -1,0 +1,6 @@
+[autocast_spell]
+scope=perm
+
+[attackstyle_magic]
+protect=no
+transmit=yes

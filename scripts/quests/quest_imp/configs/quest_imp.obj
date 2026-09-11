@@ -1,0 +1,45 @@
+[red_bead]
+cost=4
+desc=A small round red bead.
+model=obj_red_bead
+2dzoom=1020
+2dyan=68
+2dxan=68
+recol1s=127
+recol1d=960
+name=Red bead
+weight=3g
+
+[yellow_bead]
+cost=4
+desc=A small round yellow bead.
+model=obj_red_bead
+2dzoom=1020
+2dyan=68
+2dxan=68
+recol1s=127
+recol1d=11200
+name=Yellow bead
+weight=3g
+
+[black_bead]
+cost=4
+desc=A small round black bead.
+model=obj_red_bead
+2dzoom=1020
+2dyan=68
+2dxan=68
+recol1s=127
+recol1d=0
+name=Black bead
+weight=3g
+
+[white_bead]
+cost=4
+desc=A small round white bead.
+model=obj_red_bead
+2dzoom=1020
+2dyan=68
+2dxan=68
+name=White bead
+weight=3g

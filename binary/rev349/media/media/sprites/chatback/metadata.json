@@ -1,0 +1,24 @@
+{
+  "member": "chatback.dat",
+  "palette": [
+    0,
+    11704693,
+    12166529,
+    12233610,
+    12299922
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/chatback/000.png",
+      "canvasWidth": 479,
+      "canvasHeight": 96,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 479,
+      "height": 96,
+      "encoding": 0
+    }
+  ]
+}

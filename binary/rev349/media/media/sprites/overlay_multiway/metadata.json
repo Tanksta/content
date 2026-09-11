@@ -1,0 +1,27 @@
+{
+  "member": "overlay_multiway.dat",
+  "palette": [
+    0,
+    2040096,
+    12632256,
+    10921638,
+    9540242,
+    10066585,
+    16764490,
+    10832384
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/overlay_multiway/000.png",
+      "canvasWidth": 25,
+      "canvasHeight": 25,
+      "xOffset": 2,
+      "yOffset": 3,
+      "width": 20,
+      "height": 19,
+      "encoding": 0
+    }
+  ]
+}

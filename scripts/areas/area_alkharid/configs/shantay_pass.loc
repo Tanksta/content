@@ -1,0 +1,12 @@
+[thbankchest]
+op1=Open
+forceapproach=14
+model=arena_guard_chest_shut
+name=Shantay chest
+desc=This is used by Shantay and his men to take items to the bank on your behalf.
+
+[shantay_prisondoor]
+op1=Open
+model=ctratgatea
+name=Prison door
+desc=It looks fairly sturdy.

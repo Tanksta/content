@@ -1,0 +1,14 @@
+[wearable_stool_white]
+desc=A comfy stool.
+cost=800
+model=loc_14912_8
+manwear=obj_wearable_stool_white_manwear,0
+womanwear=obj_wearable_stool_white_manwear,6
+members=yes
+2dxof=4
+2dyof=7
+2dzoom=740
+2dyan=2004
+2dxan=1812
+name=Stool
+wearpos=righthand

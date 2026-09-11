@@ -1,0 +1,27 @@
+[opnpct,magic2:com_45] ~pvm_blood_rush(^blood_rush);
+[apnpct,magic2:com_45] ~pvm_blood_rush(^blood_rush);
+
+[proc,pvm_blood_rush](int $spell)
+def_dbrow $spell_data = ~get_spell_data($spell);
+
+if (~pvm_combat_spell_checks($spell_data) = false) {
+    return;
+}
+
+def_int $duration = ~pvm_spell_cast($spell_data);
+
+if (~player_npc_hit_roll(^magic_style) = true) {
+
+    def_int $maxhit = ~magic_spell_maxhit($spell_data);
+
+    def_int $damage = ~pvm_spell_success($spell_data, $maxhit, $duration);
+
+    def_int $heal = divide($damage, 4);
+
+    if ($heal > 0) {
+        stat_add(hitpoints, $heal, 0);
+    }
+
+} else {
+    ~pvm_spell_fail_custom($spell_data, $duration, blood_rush_fail);
+}

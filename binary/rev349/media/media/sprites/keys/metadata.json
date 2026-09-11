@@ -1,0 +1,27 @@
+{
+  "member": "keys.dat",
+  "palette": [
+    0,
+    329216,
+    3750407,
+    6382093,
+    8816661,
+    11645738,
+    15066955,
+    16645517
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/keys/000.png",
+      "canvasWidth": 51,
+      "canvasHeight": 82,
+      "xOffset": 6,
+      "yOffset": 2,
+      "width": 44,
+      "height": 80,
+      "encoding": 1
+    }
+  ]
+}

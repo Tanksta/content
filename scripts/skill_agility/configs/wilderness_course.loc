@@ -1,0 +1,72 @@
+[loc_2307]
+op1=Open
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_left
+param=next_loc_stage,loc_1562
+
+[loc_2308]
+op1=Open
+mirror=yes
+active=yes
+blockrange=no
+model=ikov_mendedleverdoorl
+name=Gate
+desc=A wrought iron gate.
+category=double_door_open_and_close_right
+param=next_loc_stage,loc_1563
+
+[loc_2309]
+op1=Open
+active=yes
+blockrange=no
+model=ctratgatea
+name=Door
+desc=Solid bars of iron.
+
+[obstical_pipe2]
+name=Obstacle pipe
+desc=A pipe I can squeeze through.
+model=cavern_cavewall_face1_withpipe
+op1=Squeeze-through
+width=2
+recol1s=6689
+recol1d=41
+
+[obstical_ropeswing2]
+name=Ropeswing
+desc=Use this to swing over crevices.
+model=outdoorfurniture_ropeswing_long
+op1=Swing-on
+length=6
+blockwalk=no
+
+[wilderness_stepping_stone]
+op1=Jump-from
+active=yes
+forcedecor=yes
+model=floor_steppingstone
+name=Stepping stone
+desc=I can jump from this stepping stone.
+
+[wilderness_log_balance1]
+name=Log balance
+desc=A slippery log I can walk across.
+model=floor_log_balance1
+op1=Walk-across
+active=yes
+sharelight=yes
+
+[wilderness_rocks]
+hillskew=yes
+op1=Climb
+ambient=25
+contrast=25
+recol1s=6689
+recol1d=20
+model=zqclimbingrocks
+name=Rocks
+desc=A rocky outcrop.

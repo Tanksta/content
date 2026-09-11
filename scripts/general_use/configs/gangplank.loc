@@ -1,0 +1,113 @@
+[sarimshipplank_on]
+hillskew=yes
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_board
+param=board_message,You must speak to the Customs Officer before it will set sail.
+
+[sarimshipplank_off]
+hillskew=yes
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_disembark
+
+[karamjashipplank_on]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_board
+param=board_message,You must speak to one of the sailors before it will set sail.
+
+[karamjashipplank_off]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_disembark
+
+[brimhavenshipplank_on]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_board
+param=board_message,You must speak to Captain Barnaby before it will set sail.
+
+[brimhavenshipplank_off]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_disembark
+
+[ardougneshipplank_on]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_board
+param=board_message,You must speak to the Customs Officer before it will set sail.
+
+[ardougneshipplank_off]
+op1=Cross
+active=yes
+sharelight=yes
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding boats.
+category=gangplank_disembark
+
+[ship_to_entrana_on]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+category=gangplank_board
+
+[ship_to_entrana_off]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+category=gangplank_disembark
+
+[ship_from_entrana_on]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+category=gangplank_board
+
+[ship_from_entrana_off]
+sharelight=yes
+active=yes
+op1=Cross
+model=arhein_ship_on
+name=Gangplank
+desc=Handy for boarding the ship.
+category=gangplank_disembark

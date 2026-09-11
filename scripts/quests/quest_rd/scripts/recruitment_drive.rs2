@@ -1,0 +1,1169 @@
+[opnpc1,rd_teleporter_guy]
+if (%rd_main = ^recruitmentdrive_complete) {
+    @rd_tiffy_afterquest;
+    return;
+}
+if (%rd_main = ^recruitmentdrive_not_started) {
+    @rd_tiffy_needs_amik;
+    return;
+}
+if (%rd_spoke_to_tiffy = 1 | ~rd_completed_count > 0) {
+    @rd_tiffy_resume;
+    return;
+}
+@rd_tiffy_start;
+
+[proc,rd_tiffy_open_initiate_shop]
+~openshop(rd_initiate_shop, 500, 1000, 0, "Initiate Temple Knight Armoury");
+
+[label,rd_tiffy_needs_amik]
+~chatplayer("<p,neutral>Hello. Are you Sir Tiffy Cashien?");
+~chatnpc("<p,happy>What ho! Sir Tiffy Cashien at your service, old bean.");
+~chatnpc("<p,neutral>I handle recruitment for the Temple Knights, but candidates need Sir Amik Varze's recommendation first.");
+~chatnpc("<p,neutral>Have a word with Sir Amik in Falador Castle, then come back and we'll see about your test.");
+
+[label,rd_tiffy_start]
+~chatplayer("<p,neutral>Hello. Are you Sir Tiffy Cashien?");
+~chatnpc("<p,happy>What ho! Sir Amik told me to expect you, dontchaknow. A promising candidate for the Temple Knights.");
+if (%qp < 12) {
+    ~chatnpc("<p,neutral>Sadly, we only test adventurers who have already made a name for themselves.");
+    mes("You need at least 12 quest points before you may start Recruitment Drive.");
+    return;
+}
+if (%spy < ^blackknight_complete) {
+    ~chatnpc("<p,neutral>Sir Amik's recommendation is rather important. Help him with the Black Knights first, then come back to me.");
+    return;
+}
+if (%druidquest < ^druid_complete) {
+    ~chatnpc("<p,neutral>The order requires a basic knowledge of Herblore. Finish Druidic Ritual and then we can talk.");
+    return;
+}
+def_int $choice = ~p_choice3("Testing?", 1, "Tell me about the Temple Knights.", 2, "Yes, let's go!", 3);
+if ($choice = 1) {
+    ~chatplayer("<p,quiz>Testing? What exactly do you mean?");
+    ~chatnpc("<p,neutral>Not brute force, old bean. We have enough people who can swing swords. The order needs wit, judgement and nerve.");
+    ~chatnpc("<p,neutral>You will pass through a series of sealed rooms. Each one is self-contained; bring no equipment and no items.");
+    ~chatnpc("<p,neutral>You may quit at any time through the entrance portal, but doing so clears your trial progress.");
+    $choice = ~p_choice2("I'm ready.", 1, "I'll prepare first.", 2);
+    if ($choice = 2) {
+        ~chatplayer("<p,neutral>I'll prepare first.");
+        return;
+    }
+} else if ($choice = 2) {
+    ~chatplayer("<p,quiz>Tell me about the Temple Knights.");
+    ~chatnpc("<p,neutral>We are Saradomin's premier order of knights, shrouded in secrecy and trusted with problems too delicate for ordinary soldiers.");
+    ~chatnpc("<p,happy>Only the sharpest recruits are invited. That is where your puzzle rooms come in, what?");
+    $choice = ~p_choice2("I'm ready.", 1, "I'll prepare first.", 2);
+    if ($choice = 2) {
+        ~chatplayer("<p,neutral>I'll prepare first.");
+        return;
+    }
+} else {
+    ~chatplayer("<p,happy>Yes, let's go!");
+}
+@rd_begin_testing;
+
+[label,rd_tiffy_resume]
+~chatnpc("<p,happy>Back for another crack at the old testing rooms, what?");
+def_int $choice = ~p_choice2("Yes, send me back.", 1, "No, not yet.", 2);
+if ($choice = 2) {
+    ~chatplayer("<p,neutral>No, not yet.");
+    return;
+}
+@rd_resume_testing;
+
+[label,rd_begin_testing]
+if (inv_freespace(inv) ! inv_size(inv) | inv_freespace(worn) ! inv_size(worn)) {
+    ~chatnpc("<p,neutral>Standard puzzle room rules, old bean: empty hands, empty pack, empty pockets. Bank everything first.");
+    return;
+}
+~rd_dismiss_macro_event;
+~rd_reset_trial_vars;
+%rd_spoke_to_tiffy = 1;
+if (gender() = 0) {
+    %rd_male_at_start = 1;
+} else {
+    %rd_male_at_start = 0;
+}
+~chatnpc("<p,happy>Jolly good show! Mind your head... ignore the smell... and here we are.");
+~rd_enter_next_trial;
+
+[label,rd_resume_testing]
+if (inv_freespace(inv) ! inv_size(inv) | inv_freespace(worn) ! inv_size(worn)) {
+    ~chatnpc("<p,neutral>Standard puzzle room rules, old bean: empty hands, empty pack, empty pockets. Bank everything first.");
+    return;
+}
+~rd_dismiss_macro_event;
+%rd_spoke_to_tiffy = 1;
+~send_quest_progress(questlist:rd, %rd_main, ^recruitmentdrive_complete);
+~chatnpc("<p,happy>Right-o. I'll send you back to your next unfinished test.");
+~rd_enter_next_trial;
+
+[label,rd_tiffy_afterquest]
+~chatnpc("<p,happy>Good day Initiate. Is there anything I can do for you?");
+@rd_tiffy_afterquest_options;
+
+[label,rd_tiffy_afterquest_options]
+def_int $choice = ~p_choice3("Do you have any jobs for me yet?", 1, "Can I buy some armour?", 2, "Goodbye.", 3);
+if ($choice = 1) {
+    ~chatplayer("<p,quiz>Do you have any jobs for me yet?");
+    ~chatnpc("<p,neutral>Sorry old bean, but we are still getting things organised.");
+    ~chatnpc("<p,happy>I'm sure we will have something for you soon. Anything else I can do in the meantime?");
+    @rd_tiffy_afterquest_options;
+} else if ($choice = 2) {
+    ~chatplayer("<p,neutral>Can I buy some armour?");
+    ~chatnpc("<p,happy>Of course old bean. Initiate armour is available to members of the order.");
+    ~rd_tiffy_open_initiate_shop;
+} else {
+    ~chatplayer("<p,neutral>Well, see you around Tiffy.");
+    ~chatnpc("<p,happy>Ta-ta for now, old bean!");
+}
+
+[proc,rd_reset_trial_vars]
+%rd_rooms_tempvar = 0;
+%rd_rooms_tempvar2 = 0;
+%rd_room1_complete = 0;
+%rd_room2_complete = 0;
+%rd_room3_complete = 0;
+%rd_room4_complete = 0;
+%rd_room5_complete = 0;
+%rd_room6_complete = 0;
+%rd_room7_complete = 0;
+%rd_room_order = 0;
+%rd_room2_missing_choice = 0;
+%rd_male_at_start = 0;
+%rd_room1_initiated = 0;
+~rd_reset_room6_item_varbits;
+%rd_foxleft = 0;
+%rd_foxright = 0;
+%rd_chickleft = 0;
+%rd_chickright = 0;
+%rd_grainleft = 0;
+%rd_grainright = 0;
+~rd_clear_room_items;
+
+[proc,rd_clear_room_items]
+~rd_del_all(rd_fox);
+~rd_del_all(rd_chicken);
+~rd_del_all(rd_sack);
+~rd_del_all(rd_hourglass);
+~rd_del_all(rd_cupric_sulphate);
+~rd_del_all(rd_acetic_acid);
+~rd_del_all(rd_gypsum);
+~rd_del_all(rd_sodium_chloride);
+~rd_del_all(rd_nitorus_oxide);
+~rd_del_all(rd_dihydrogen_monoxide);
+~rd_del_all(rd_tin_ore_powder);
+~rd_del_all(rd_copper_ore_powder);
+~rd_del_all(rd_puzzleroom_key);
+~rd_del_all(rd_metal_spade);
+~rd_del_all(rd_metal_spade_no_handle);
+~rd_del_all(rd_chem_book);
+~rd_del_all(rd_cupric_sulphate2);
+~rd_del_all(rd_plaster_vial);
+~rd_del_all(rd_spoilt_potion);
+~rd_del_all(rd_tin);
+~rd_del_all(rd_tinfull);
+~rd_del_all(rd_keymould);
+~rd_del_all(rd_full_keymould_tin);
+~rd_del_all(rd_full_keymould_copper);
+~rd_del_all(rd_full_keymould_unheated);
+~rd_del_all(rd_full_keymould_complete);
+~rd_del_all(rd_tin_of_crap);
+~rd_del_all(rd_tin_of_crap_empty);
+~rd_del_all(rd_chisel);
+~rd_del_all(rd_wire);
+~rd_del_all(rd_shears);
+~rd_del_all(rd_magnet);
+~rd_del_all(rd_knife);
+~rd_del_all(steel_sword);
+~rd_del_all(steel_claws);
+~rd_del_all(steel_battleaxe);
+~rd_del_all(steel_warhammer);
+
+[proc,rd_del_all](obj $item)
+inv_del(inv, $item, ^max_32bit_int);
+inv_del(worn, $item, ^max_32bit_int);
+
+[proc,rd_dismiss_macro_event]
+if (%macro_event > 0) {
+    if (npc_finduid(%macro_event_uid) = true) {
+        ~macro_event_disappear;
+    }
+    ~macro_events_varps_reset;
+}
+
+[proc,rd_in_trial_area](coord $coord)(boolean)
+def_int $map_x;
+def_int $map_z;
+$map_x, $map_z = ~mapsquare($coord);
+if (%rd_main = ^recruitmentdrive_started & $map_x = 38 & $map_z = 77) {
+    return(true);
+}
+return(false);
+
+[proc,rd_local_x](coord $coord)(int)
+def_int $y;
+def_int $map_x;
+def_int $map_z;
+def_int $local_x;
+def_int $local_z;
+$y, $map_x, $map_z, $local_x, $local_z = ~coord_unpack($coord);
+return($local_x);
+
+[proc,rd_clear_trial_session_vars]
+%rd_rooms_tempvar = 0;
+%rd_rooms_tempvar2 = 0;
+%rd_room_order = 0;
+%rd_room2_missing_choice = 0;
+~rd_reset_room6_item_varbits;
+%rd_spoke_to_tiffy = 1;
+
+[proc,rd_reset_room6_item_varbits]
+%rd_got_vinegar = 0;
+%rd_got_water = 0;
+%rd_got_copsulph = 0;
+%rd_got_gypsum = 0;
+%rd_got_salt = 0;
+%rd_got_n2o = 0;
+%rd_got_tin = 0;
+%rd_got_copore = 0;
+%rd_spare_water = 0;
+%rd_room6_stone_door = 0;
+%rd_react_on_spade = 0;
+%rd_gypsum_in_tin = 0;
+%rd_water_in_tin = 0;
+%rd_room6_hint1 = 0;
+
+[proc,rd_cleanup_trial_npcs]
+npc_findallany(0_38_77_32_32, 64, ^vis_off);
+while (npc_findnext = true) {
+    switch_npc(npc_type) {
+        case rd_combat_npc_room_3 :
+            npc_del;
+    }
+}
+
+[proc,rd_logout]
+if (~rd_in_trial_area(coord) = false) {
+    return;
+}
+~rd_cleanup_trial_npcs;
+~rd_clear_room_items;
+~rd_clear_trial_session_vars;
+p_telejump(0_46_52_53_44);
+
+[proc,rd_completed_count]()(int)
+def_int $count = 0;
+if (%rd_room1_complete = 1) { $count = add($count, 1); }
+if (%rd_room2_complete = 1) { $count = add($count, 1); }
+if (%rd_room3_complete = 1) { $count = add($count, 1); }
+if (%rd_room4_complete = 1) { $count = add($count, 1); }
+if (%rd_room5_complete = 1) { $count = add($count, 1); }
+if (%rd_room6_complete = 1) { $count = add($count, 1); }
+if (%rd_room7_complete = 1) { $count = add($count, 1); }
+return ($count);
+
+[proc,rd_room_is_complete](int $room)(boolean)
+switch_int ($room) {
+    case 1 : if (%rd_room1_complete = 1) { return (true); } return (false);
+    case 2 : if (%rd_room2_complete = 1) { return (true); } return (false);
+    case 3 : if (%rd_room3_complete = 1) { return (true); } return (false);
+    case 4 : if (%rd_room4_complete = 1) { return (true); } return (false);
+    case 5 : if (%rd_room5_complete = 1) { return (true); } return (false);
+    case 6 : if (%rd_room6_complete = 1) { return (true); } return (false);
+    case 7 : if (%rd_room7_complete = 1) { return (true); } return (false);
+}
+return (true);
+
+[proc,rd_next_trial]()(int)
+def_int $complete = ~rd_completed_count;
+if ($complete >= 5 & %rd_room3_complete = 1) {
+    return (8);
+}
+if ($complete >= 4 & %rd_room3_complete = 0) {
+    return (3);
+}
+
+def_int $tries = 0;
+def_int $room;
+while ($tries < 16) {
+    $room = add(random(7), 1);
+    if (~rd_room_is_complete($room) = false) {
+        return ($room);
+    }
+    $tries = add($tries, 1);
+}
+if (%rd_room1_complete = 0) { return (1); }
+if (%rd_room2_complete = 0) { return (2); }
+if (%rd_room3_complete = 0) { return (3); }
+if (%rd_room4_complete = 0) { return (4); }
+if (%rd_room5_complete = 0) { return (5); }
+if (%rd_room6_complete = 0) { return (6); }
+if (%rd_room7_complete = 0) { return (7); }
+return (8);
+
+[proc,rd_trial_coord](int $room)(coord)
+switch_int ($room) {
+    case 1 : return (0_38_77_56_45);
+    case 2 : return (0_38_77_26_53);
+    case 3 : return (0_38_77_25_38);
+    case 4 : return (0_38_77_44_30);
+    case 5 : return (0_38_77_10_28);
+    case 6 : return (0_38_77_37_13);
+    case 7 : return (0_38_77_20_11);
+}
+return (0_46_52_53_44);
+
+[proc,rd_room_complete](int $room)
+switch_int ($room) {
+    case 1 : %rd_room1_complete = 1;
+    case 2 : %rd_room2_complete = 1;
+    case 3 : %rd_room3_complete = 1;
+    case 4 : %rd_room4_complete = 1;
+    case 5 : %rd_room5_complete = 1;
+    case 6 : %rd_room6_complete = 1;
+    case 7 : %rd_room7_complete = 1;
+}
+~rd_clear_room_items;
+
+[proc,rd_enter_next_trial]
+def_int $room = ~rd_next_trial;
+if ($room >= 8) {
+    ~rd_complete_quest;
+    return;
+}
+p_telejump(~rd_trial_coord($room));
+if ($room = 2) {
+    ~rd_room2_intro;
+}
+
+[label,rd_trial_exit](int $room)
+switch_int ($room) {
+    case 1 : if (%rd_room1_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 2 : if (%rd_room2_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 3 : if (%rd_room3_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 4 : if (%rd_room4_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 5 : if (%rd_room5_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 6 : if (%rd_room6_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+    case 7 : if (%rd_room7_complete = 0) { mes("The door refuses to open until the trial is complete."); return; }
+}
+~rd_enter_next_trial;
+
+[label,rd_quit_trials]
+~chatnpc_specific("Sir Tiffy Cashien", rd_teleporter_guy, "<p,sad>Jolly bad luck, what? Come back when you fancy another attempt.");
+~rd_cleanup_trial_npcs;
+~rd_reset_trial_vars;
+p_telejump(0_46_52_53_44);
+
+[label,rd_fail_trial](string $reason)
+mes($reason);
+~rd_cleanup_trial_npcs;
+~rd_reset_trial_vars;
+p_telejump(0_46_52_53_44);
+
+[oploc1,rd_portal_room1_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room2_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room3_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room4_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room5_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room6_entrance] @rd_quit_trials;
+[oploc1,rd_portal_room7_entrance] @rd_quit_trials;
+
+[oploc1,rd_portal_room1_exit] @rd_trial_exit(1);
+[oploc1,rd_room1_exitdoor] @rd_trial_exit(1);
+[oploc1,rd_portal_room2_exit] @rd_trial_exit(2);
+[oploc1,rd_room2_exitdoor] @rd_trial_exit(2);
+[oploc1,rd_portal_room3_exit] @rd_trial_exit(3);
+[oploc1,rd_room3_exitdoor] @rd_trial_exit(3);
+[oploc1,rd_portal_room4_exit] @rd_trial_exit(4);
+[oploc1,rd_room4_exitdoor] @rd_trial_exit(4);
+[oploc1,rd_portal_room5_exit] @rd_trial_exit(5);
+[oploc1,rd_room5_exitdoor] @rd_trial_exit(5);
+[oploc1,rd_portal_room6_exit] @rd_trial_exit(6);
+[oploc1,rd_room6_exitdoor] @rd_trial_exit(6);
+[oploc1,rd_portal_room7_exit] @rd_trial_exit(7);
+[oploc1,rd_room7_exitdoor] @rd_trial_exit(7);
+
+[opnpc1,rd_observer_room_1]
+if (%rd_room1_complete = 1) {
+    ~chatnpc("<p,happy>Well done. The exit portal is open.");
+    return;
+}
+if (%rd_room1_intro_chat = 1) {
+    ~chatnpc("<p,neutral>Remember: bring the fox, chicken and grain safely to the far side.");
+    return;
+}
+%rd_room1_intro_chat = 1;
+~chatnpc("<p,neutral>Your task is to take the fox, chicken and grain across the bridge.");
+~chatnpc("<p,neutral>You may carry the fox and chicken together if you have to, but never leave them alone together.");
+~chatnpc("<p,neutral>Bring all three safely to the far side.");
+
+[opnpc1,rd_observer_room_2]
+if (%rd_room2_complete = 1) {
+    ~chatnpc("<p,happy>You have already solved my test.");
+    return;
+}
+if (%rd_room2_missing_choice = 0) {
+    ~rd_room2_intro;
+    return;
+}
+~chatnpc("<p,neutral>Remember the missing statue from when you entered. Four weapons, three metals. Touch the one that was absent.");
+
+[proc,rd_room2_intro]
+if (%rd_room2_complete = 1) {
+    return;
+}
+%rd_room2_missing_choice = add(random(12), 1);
+%rd_room_order = %rd_room2_missing_choice;
+queue(rd_room2_reveal_statues_queue, 4, 0);
+~chatnpc_specific("Lady Table", rd_observer_room_2, "<p,neutral>Observe the statues carefully. Four weapons, three metals. One of them is missing.");
+~chatnpc_specific("Lady Table", rd_observer_room_2, "<p,neutral>When the room changes, all the statues will return. Touch the statue that was missing before.");
+p_delay(3);
+~rd_room2_reveal_statues;
+
+[queue,rd_room2_reveal_statues_queue]
+~rd_room2_reveal_statues;
+
+[proc,rd_room2_reveal_statues]
+if (%rd_room2_complete = 0 & %rd_main = ^recruitmentdrive_started) {
+    %rd_room_order = 0;
+}
+
+[oploc1,rd_statue_multi_1] @rd_statue_choice(1);
+[oploc1,rd_statue_multi_2] @rd_statue_choice(2);
+[oploc1,rd_statue_multi_3] @rd_statue_choice(3);
+[oploc1,rd_statue_multi_4] @rd_statue_choice(4);
+[oploc1,rd_statue_multi_5] @rd_statue_choice(5);
+[oploc1,rd_statue_multi_6] @rd_statue_choice(6);
+[oploc1,rd_statue_multi_7] @rd_statue_choice(7);
+[oploc1,rd_statue_multi_8] @rd_statue_choice(8);
+[oploc1,rd_statue_multi_9] @rd_statue_choice(9);
+[oploc1,rd_statue_multi_10] @rd_statue_choice(10);
+[oploc1,rd_statue_multi_11] @rd_statue_choice(11);
+[oploc1,rd_statue_multi_12] @rd_statue_choice(12);
+
+[label,rd_statue_choice](int $choice)
+if (%rd_room2_missing_choice < 1 | %rd_room2_missing_choice > 12) {
+    mes("You need to observe the room first.");
+    return;
+}
+if (%rd_room_order ! 0) {
+    mes("You need to wait for all the statues to return first.");
+    return;
+}
+def_int $answer = ~rd_statue_answer;
+if ($choice = $answer) {
+    mes("You touch the statue that was missing from the set.");
+    ~rd_room_complete(2);
+    mes("Lady Table unlocks the exit.");
+} else {
+    @rd_fail_trial("That is not the missing statue. The trial resets.");
+}
+
+[proc,rd_statue_answer]()(int)
+switch_int (%rd_room2_missing_choice) {
+    case 1 : return (6);
+    case 2 : return (5);
+    case 3 : return (4);
+    case 4 : return (3);
+    case 5 : return (2);
+    case 6 : return (1);
+    case 7 : return (10);
+    case 8 : return (11);
+    case 9 : return (12);
+    case 10 : return (9);
+    case 11 : return (8);
+    case 12 : return (7);
+}
+return (0);
+
+[opnpc1,rd_observer_room_3]
+if (%rd_room3_complete = 1) {
+    ~chatnpc("<p,happy>Sir Leye has been defeated. Use the exit portal.");
+    return;
+}
+~chatnpc("<p,neutral>Sir Leye is blessed by Saradomin, so no man may defeat him. A woman can only best him in combat.");
+if (gender() = 0) {
+    ~chatnpc("<p,neutral>You may need the Make-over Mage before you can pass this room.");
+} else {
+    if_close;
+    queue(rd_leye_start_fight_queue, 1, 0);
+}
+
+[queue,rd_leye_start_fight_queue]
+if (%rd_main = ^recruitmentdrive_started & %rd_room3_complete = 0) {
+    @rd_leye_start_fight;
+}
+
+[label,rd_leye_start_fight]
+if (npc_find(0_38_77_27_36, rd_combat_npc_room_3, 12, 0) = false) {
+    npc_add(0_38_77_27_36, rd_combat_npc_room_3, 500);
+}
+%npc_aggressive_player = uid;
+%npc_attacking_uid = uid;
+%npc_lastcombat = map_clock;
+hint_npc;
+npc_setmode(opplayer2);
+
+[opnpc2,rd_combat_npc_room_3] @rd_leye_player_attack;
+[apnpc2,rd_combat_npc_room_3] @rd_leye_player_attack_ap;
+
+[label,rd_leye_player_attack_ap]
+if (gender() = 0) {
+    mes("Sir Leye's blessing prevents any man from defeating him.");
+    return;
+}
+@player_combat_start_ap;
+
+[label,rd_leye_player_attack]
+if (gender() = 0) {
+    mes("Sir Leye's blessing prevents any man from defeating him.");
+    return;
+}
+@player_combat_start;
+
+[opnpc1,rd_combat_npc_room_3]
+~chatnpc("<p,angry>No man alive may defeat me.");
+if (gender() = 0) {
+    ~chatplayer("<p,neutral>That sounds inconvenient.");
+} else {
+    ~chatplayer("<p,angry>Then defend yourself.");
+}
+
+[ai_queue2,rd_combat_npc_room_3]
+if (npc_findhero = ^true & gender() = 0) {
+    npc_damage(^hitmark_block, 0);
+    return;
+}
+~npc_default_damage(last_int);
+
+[ai_queue3,rd_combat_npc_room_3]
+gosub(npc_death);
+if (npc_findhero = ^true) {
+    if_close;
+    if (p_finduid(uid) = true) {
+        @rd_leye_defeated;
+        return;
+    }
+    queue(rd_leye_defeated_queue, 0, 0);
+}
+
+[queue,rd_leye_defeated_queue] @rd_leye_defeated;
+
+[label,rd_leye_defeated]
+hint_stop;
+if (%rd_main ! ^recruitmentdrive_started | %rd_room3_complete = 1) {
+    return;
+}
+if (gender() = 0) {
+    @rd_fail_trial("Sir Leye's blessing prevents you from completing the trial as a man.");
+    return;
+}
+%rd_room3_complete = 1;
+mes("Sir Leye has been defeated. The exit is unlocked.");
+
+[proc,rd_leye_valid_finishing_weapon]()(boolean)
+def_obj $weapon = inv_getobj(worn, ^wearpos_rhand);
+if ($weapon = null | $weapon = steel_warhammer) {
+    return(true);
+}
+return(false);
+
+[opnpc1,rd_observer_room_4]
+if (%rd_room4_complete = 1) {
+    ~chatnpc("<p,happy>You have waited long enough. Use the exit.");
+    return;
+}
+~chatnpc("<p,neutral>This test is simple: patience. Do nothing until I tell you to move.");
+def_coord $start = coord;
+if_close;
+p_delay(8);
+if (coord ! $start) {
+    @rd_fail_trial("You moved before Sir Tinley told you to. The trial resets.");
+    return;
+}
+~chatnpc_specific("Sir Tinley", rd_observer_room_4, "<p,happy>Good, you waited.");
+~rd_room_complete(4);
+
+[oploc1,rd_wooden_table]
+if (%rd_room4_complete = 0 & %rd_room5_complete = 1) {
+    if (inv_total(inv, rd_hourglass) = 0) {
+        inv_add(inv, rd_hourglass, 1);
+        mes("You take the hourglass from the table.");
+    } else {
+        mes("You already have the hourglass.");
+    }
+} else {
+    mes("It is an ordinary table.");
+}
+
+[opnpc1,rd_observer_room_5]
+if (%rd_room5_complete = 1) {
+    ~chatnpc("<p,happy>The lock is already open.");
+    return;
+}
+~chatnpc("<p,neutral>Each line gives you a first letter. Four letters make the answer.");
+def_int $riddle = ~rd_room5_riddle;
+def_int $correct;
+def_int $choice;
+switch_int ($riddle) {
+    case 1 :
+        ~chatnpc("<p,neutral>Find my answer in the first breath.|Inside each line a letter waits.|Seek those starts, then speak them here.|Hear the door accept your word.");
+        $correct = 1;
+        $choice = ~p_choice4("FISH", 1, "RAIN", 2, "BITE", 3, "TIME", 4);
+    case 2 :
+        ~chatnpc("<p,neutral>Begin with every opening sound.|In the lines the answer hides.|Trust the first of each phrase.|Enter that word to pass.");
+        $correct = 2;
+        $choice = ~p_choice4("FISH", 1, "BITE", 2, "PASS", 3, "CLUE", 4);
+    case 3 :
+        ~chatnpc("<p,neutral>Read the first marks carefully.|Answers are often left in sight.|In each line one letter leads.|Name the word those leaders form.");
+        $correct = 3;
+        $choice = ~p_choice4("MEAT", 1, "TIME", 2, "RAIN", 3, "LAST", 4);
+    case 4 :
+        ~chatnpc("<p,neutral>Look to the start of every line.|A hidden answer waits there.|Study them together.|Tell what they spell.");
+        $correct = 4;
+        $choice = ~p_choice4("PASS", 1, "CLUE", 2, "MEAT", 3, "LAST", 4);
+    case 5 :
+        ~chatnpc("<p,neutral>Many clues can hide in words.|Every answer starts a line.|All initials form the key.|Tell me what they spell.");
+        $correct = 4;
+        $choice = ~p_choice4("RAIN", 1, "TIME", 2, "FISH", 3, "MEAT", 4);
+    case 6 :
+        ~chatnpc("<p,neutral>The first thing said is what matters.|In every line a letter begins.|Mark them in order.|Enter the word they make.");
+        $correct = 2;
+        $choice = ~p_choice4("RAIN", 1, "TIME", 2, "BITE", 3, "MEAT", 4);
+}
+if ($choice = $correct) {
+    ~chatplayer("<p,neutral>That should be the answer.");
+    ~chatnpc("<p,happy>Correct. The combination lock clicks open.");
+    ~rd_room_complete(5);
+} else {
+    @rd_fail_trial("The lock refuses that answer. The trial resets.");
+}
+
+[proc,rd_room5_riddle]()(int)
+if (%rd_templock_1 < 1 | %rd_templock_1 > 6) {
+    %rd_templock_1 = add(random(6), 1);
+}
+return (%rd_templock_1);
+
+[opnpc1,rd_observer_room_6]
+if (%rd_room6_complete = 1) {
+    ~chatnpc("<p,happy>You have solved my room already.");
+    return;
+}
+if (%rd_room6_hint1 = 1) {
+    ~chatnpc("<p,neutral>Remember: expand metal in the stone door, then make and fire a copied key for the exit.");
+    return;
+}
+%rd_room6_hint1 = 1;
+~chatnpc("<p,neutral>Search the room carefully. Two doors block your way: one needs a new handle, the other a copied key.");
+
+[oploc1,rd_bookshelf_old_tall] ~rd_room6_take(rd_chem_book, "You find a set of alchemical notes.");
+[oploc1,rd_bookshelf_old_tall2] ~rd_room6_take(rd_chem_book, "You find a set of alchemical notes.");
+[oploc1,rd_bookshelf_old_tall3] ~rd_room6_take(rd_chem_book, "You find a set of alchemical notes.");
+[oploc1,rd_bookshelf_old_tall4] ~rd_room6_take(rd_chem_book, "You find a set of alchemical notes.");
+[oploc1,rd_shelves_chemicals_1]
+if (%rd_got_vinegar = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_acetic_acid, "You take a vial of acetic acid.") = true) { %rd_got_vinegar = 1; }
+
+[oploc1,rd_shelves_chemicals_2]
+if (%rd_got_water = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_dihydrogen_monoxide, "You take a vial of liquid.") = true) { %rd_got_water = 1; %rd_spare_water = 1; }
+
+[oploc1,rd_shelves_chemicals_3]
+if (%rd_got_copsulph = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_cupric_sulphate, "You take a vial of cupric sulfate.") = true) { %rd_got_copsulph = 1; }
+
+[oploc1,rd_shelves_chemicals_4]
+if (%rd_got_gypsum = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_gypsum, "You take a vial of gypsum.") = true) { %rd_got_gypsum = 1; }
+
+[oploc1,rd_shelves_chemicals_5]
+if (%rd_got_salt = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_sodium_chloride, "You take a vial of sodium chloride.") = true) { %rd_got_salt = 1; }
+
+[oploc1,rd_shelves_chemicals_6]
+if (%rd_got_n2o = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_nitorus_oxide, "You take a vial of nitrous oxide.") = true) { %rd_got_n2o = 1; }
+
+[oploc1,rd_shelves_chemicals_7]
+if (%rd_got_tin = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_tin_ore_powder, "You take some tin ore powder.") = true) { %rd_got_tin = 1; }
+
+[oploc1,rd_shelves_chemicals_8]
+if (%rd_got_copore = 1) { mes("You find nothing else useful."); return; }
+if (~rd_room6_take(rd_copper_ore_powder, "You take some cupric ore powder.") = true) { %rd_got_copore = 1; }
+
+[oploc1,rd_large_crate] ~rd_room6_tools;
+[oploc1,rd_large_crates] ~rd_room6_tools;
+[oploc1,rd_small_crates] ~rd_room6_tools;
+[oploc1,rd_crate] ~rd_room6_tools;
+
+[oploc1,rd_chest_closed]
+loc_change(rd_chest_open, 50);
+~rd_room6_tools;
+
+[oploc1,rd_chest_open] ~rd_room6_tools;
+[oploc2,rd_chest_open] loc_change(rd_chest_closed, 50);
+
+[proc,rd_room6_take](namedobj $item, string $message)(boolean)
+if (inv_total(inv, $item) > 0 | inv_total(worn, $item) > 0) {
+    mes("You find nothing else useful.");
+    return(false);
+}
+if (inv_freespace(inv) = 0) {
+    mes("You don't have enough inventory space.");
+    return(false);
+}
+inv_add(inv, $item, 1);
+mes($message);
+return(true);
+
+[proc,rd_room6_tools]
+if (inv_freespace(inv) < 7) {
+    mes("You need more inventory space to take the useful tools.");
+    return;
+}
+if (inv_total(inv, rd_metal_spade) = 0) { inv_add(inv, rd_metal_spade, 1); }
+if (inv_total(inv, rd_tin) = 0) { inv_add(inv, rd_tin, 1); }
+if (inv_total(inv, rd_chisel) = 0) { inv_add(inv, rd_chisel, 1); }
+if (inv_total(inv, rd_wire) = 0) { inv_add(inv, rd_wire, 1); }
+if (inv_total(inv, rd_shears) = 0) { inv_add(inv, rd_shears, 1); }
+if (inv_total(inv, rd_magnet) = 0) { inv_add(inv, rd_magnet, 1); }
+if (inv_total(inv, rd_knife) = 0) { inv_add(inv, rd_knife, 1); }
+mes("You gather the useful tools from the container.");
+
+[opheld1,rd_chem_book]
+~mesbox("The notes describe two tricks: heat a metal spade, then expand it with cupric sulfate and water; and use gypsum in a tin to copy a key before adding tin and copper powders.");
+
+[opheld1,rd_nitorus_oxide]
+mes("Haha.");
+
+[oplocu,rd_wooden_table_bunsen_burner]
+switch_obj (last_useitem) {
+    case rd_metal_spade :
+        inv_del(inv, rd_metal_spade, 1);
+        inv_add(inv, rd_metal_spade_no_handle, 1);
+        mes("The wooden handle burns away, leaving the metal spade head.");
+    case rd_full_keymould_unheated :
+        inv_del(inv, rd_full_keymould_unheated, 1);
+        inv_add(inv, rd_full_keymould_complete, 1);
+        mes("The powders melt into a bronze key inside the mould.");
+    case default :
+        ~displaymessage(^dm_default);
+}
+
+[oplocu,rd_stone_door] @rd_room6_use_stone_door;
+[oplocu,rd_stone_door_basic] @rd_room6_use_stone_door;
+[oplocu,rd_stone_door_spade] @rd_room6_use_stone_door;
+
+[label,rd_room6_use_stone_door]
+if (last_useitem = rd_metal_spade_no_handle & %rd_room6_stone_door = 0) {
+    inv_del(inv, rd_metal_spade_no_handle, 1);
+    %rd_room6_stone_door = 1;
+    mes("You wedge the metal spade head into the hole.");
+    return;
+}
+if (last_useitem = rd_cupric_sulphate & %rd_room6_stone_door = 1) {
+    inv_del(inv, rd_cupric_sulphate, 1);
+    %rd_room6_stone_door = 2;
+    mes("You coat the spade head with cupric sulfate.");
+    return;
+}
+if (last_useitem = rd_dihydrogen_monoxide & %rd_room6_stone_door = 2) {
+    inv_del(inv, rd_dihydrogen_monoxide, 1);
+    %rd_room6_stone_door = 3;
+    %rd_react_on_spade = 1;
+    mes("The metal expands and forces the stone door open.");
+    return;
+}
+if (%rd_room6_stone_door > 0) {
+    mes("The spade is stuck firmly in the hole.");
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[oploc1,rd_stone_door] @rd_room6_study_stone_door;
+[oploc1,rd_stone_door_basic] @rd_room6_study_stone_door;
+[oploc1,rd_stone_door_spade] @rd_room6_study_stone_door;
+[oploc1,rd_stone_door_opened] @rd_room6_walkthrough_stone_door;
+
+[label,rd_room6_study_stone_door]
+if (%rd_room6_stone_door >= 3) {
+    @rd_room6_walkthrough_stone_door;
+    return;
+}
+if (%rd_room6_stone_door = 0) {
+    mes("There is a small hole in the centre of the stone door.");
+} else if (%rd_react_on_spade = 0) {
+    mes("The spade is wedged in the stone door.");
+} else {
+    mes("The spade has forced the stone door open.");
+}
+
+[label,rd_room6_walkthrough_stone_door]
+if (%rd_room6_stone_door < 3) {
+    mes("The stone door is not open.");
+    return;
+}
+p_arrivedelay;
+if (~rd_local_x(coord) <= 44) {
+    ~forcemove(0_38_77_45_12);
+} else {
+    ~forcemove(0_38_77_44_12);
+}
+
+[oplocu,rd_key_chained]
+if (last_useitem = rd_tinfull) {
+    inv_del(inv, rd_tinfull, 1);
+    inv_add(inv, rd_keymould, 1);
+    mes("You press the hardening mixture around the key and make an imprint.");
+} else {
+    mes("The key is chained down. You need a mould of it.");
+}
+
+[oploc1,rd_key_chained]
+mes("The key is chained down. You cannot take it.");
+
+[opheldu,rd_tin]
+if (last_useitem = rd_dihydrogen_monoxide) {
+    @rd_tin_add_water;
+} else if (last_useitem = rd_gypsum) {
+    mes("The gypsum needs liquid to set in.");
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[opheldu,rd_dihydrogen_monoxide]
+if (last_useitem = rd_tin) {
+    @rd_tin_add_water;
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[opheldu,rd_gypsum]
+if (last_useitem = rd_tin) {
+    mes("The gypsum needs liquid to set in.");
+} else if (last_useitem = rd_tin_of_crap_empty) {
+    @rd_make_tinfull;
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[opheldu,rd_tin_of_crap_empty]
+if (last_useitem = rd_gypsum) {
+    @rd_make_tinfull;
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[label,rd_tin_add_water]
+if (inv_total(inv, rd_tin) < 1 | inv_total(inv, rd_dihydrogen_monoxide) < 1) {
+    mes("You need a tin and a vial of liquid.");
+    return;
+}
+inv_del(inv, rd_tin, 1);
+inv_del(inv, rd_dihydrogen_monoxide, 1);
+inv_add(inv, rd_tin_of_crap_empty, 1);
+%rd_water_in_tin = 1;
+mes("You pour the liquid into the tin.");
+
+[label,rd_make_tinfull]
+if (inv_total(inv, rd_tin_of_crap_empty) < 1 | inv_total(inv, rd_gypsum) < 1) {
+    mes("You need a tin with liquid in it and some gypsum.");
+    return;
+}
+inv_del(inv, rd_tin_of_crap_empty, 1);
+inv_del(inv, rd_gypsum, 1);
+inv_add(inv, rd_tinfull, 1);
+%rd_gypsum_in_tin = 1;
+mes("You make a white lumpy mixture in the tin.");
+
+[opheldu,rd_keymould] @rd_powder_use(rd_keymould, last_useitem);
+[opheldu,rd_tin_ore_powder] @rd_powder_use(rd_tin_ore_powder, last_useitem);
+[opheldu,rd_copper_ore_powder] @rd_powder_use(rd_copper_ore_powder, last_useitem);
+[opheldu,rd_full_keymould_tin] @rd_powder_use(rd_full_keymould_tin, last_useitem);
+[opheldu,rd_full_keymould_copper] @rd_powder_use(rd_full_keymould_copper, last_useitem);
+
+[label,rd_powder_use](obj $target, obj $used)
+if (inv_total(inv, rd_keymould) > 0 & ($target = rd_tin_ore_powder | $used = rd_tin_ore_powder) & inv_total(inv, rd_tin_ore_powder) > 0) {
+    inv_del(inv, rd_keymould, 1);
+    inv_del(inv, rd_tin_ore_powder, 1);
+    inv_add(inv, rd_full_keymould_tin, 1);
+    mes("You add the tin ore powder to the key mould.");
+} else if (inv_total(inv, rd_keymould) > 0 & ($target = rd_copper_ore_powder | $used = rd_copper_ore_powder) & inv_total(inv, rd_copper_ore_powder) > 0) {
+    inv_del(inv, rd_keymould, 1);
+    inv_del(inv, rd_copper_ore_powder, 1);
+    inv_add(inv, rd_full_keymould_copper, 1);
+    mes("You add the cupric ore powder to the key mould.");
+} else if (inv_total(inv, rd_full_keymould_tin) > 0 & ($target = rd_copper_ore_powder | $used = rd_copper_ore_powder) & inv_total(inv, rd_copper_ore_powder) > 0) {
+    inv_del(inv, rd_full_keymould_tin, 1);
+    inv_del(inv, rd_copper_ore_powder, 1);
+    inv_add(inv, rd_full_keymould_unheated, 1);
+    mes("You add the cupric ore powder to the tin-filled mould.");
+} else if (inv_total(inv, rd_full_keymould_copper) > 0 & ($target = rd_tin_ore_powder | $used = rd_tin_ore_powder) & inv_total(inv, rd_tin_ore_powder) > 0) {
+    inv_del(inv, rd_full_keymould_copper, 1);
+    inv_del(inv, rd_tin_ore_powder, 1);
+    inv_add(inv, rd_full_keymould_unheated, 1);
+    mes("You add the tin ore powder to the cupric-filled mould.");
+} else {
+    ~displaymessage(^dm_default);
+}
+
+[opheldu,rd_full_keymould_complete]
+switch_obj (last_useitem) {
+    case rd_chisel, rd_wire, rd_knife, rd_shears :
+        inv_del(inv, rd_full_keymould_complete, 1);
+        inv_add(inv, rd_puzzleroom_key, 1);
+        mes("You prise the bronze key out of the mould.");
+    case default :
+        ~displaymessage(^dm_default);
+}
+
+[opheldu,rd_chisel]
+if (last_useitem = rd_full_keymould_complete) { inv_del(inv, rd_full_keymould_complete, 1); inv_add(inv, rd_puzzleroom_key, 1); mes("You prise the bronze key out of the mould."); }
+
+[opheldu,rd_wire]
+if (last_useitem = rd_full_keymould_complete) { inv_del(inv, rd_full_keymould_complete, 1); inv_add(inv, rd_puzzleroom_key, 1); mes("You prise the bronze key out of the mould."); }
+
+[opheldu,rd_knife]
+if (last_useitem = rd_full_keymould_complete) { inv_del(inv, rd_full_keymould_complete, 1); inv_add(inv, rd_puzzleroom_key, 1); mes("You prise the bronze key out of the mould."); }
+
+[oplocu,rd_room6_exitdoor]
+if (last_useitem = rd_puzzleroom_key) {
+    ~rd_room_complete(6);
+    mes("The bronze key unlocks the final door.");
+    return;
+}
+if (%rd_room6_complete = 1) {
+    @rd_trial_exit(6);
+} else {
+    mes("The door is locked.");
+}
+
+[opnpc1,rd_observer_room_7]
+if (%rd_room7_complete = 1) {
+    ~chatnpc("<p,happy>The answer has already been accepted.");
+    return;
+}
+def_int $riddle = ~rd_room7_riddle;
+def_int $correct;
+def_int $choice;
+switch_int ($riddle) {
+    case 1 :
+        ~chatnpc("<p,neutral>Which statement is true: the number of false statements here is one, two, three, or four?");
+        $correct = 3;
+        $choice = ~p_choice4("One.", 1, "Two.", 2, "Three.", 3, "Four.", 4);
+    case 2 :
+        ~chatnpc("<p,neutral>My husband is four times older than my daughter. In twenty years he will be twice her age. How old is she now?");
+        $correct = 2;
+        $choice = ~p_choice4("Five.", 1, "Ten.", 2, "Fifteen.", 3, "Twenty.", 4);
+    case 3 :
+        ~chatnpc("<p,neutral>You must choose a death: acid, fire, unfed wolves, or a fall from castle walls.");
+        $correct = 3;
+        $choice = ~p_choice4("The acid.", 1, "The fire.", 2, "The unfed wolves.", 3, "The fall.", 4);
+    case 4 :
+        ~chatnpc("<p,neutral>Four stones are dropped into buckets at 32, 33, 34 and 35 degrees Fahrenheit. Which stone reaches the bottom last?");
+        $correct = 1;
+        $choice = ~p_choice4("The 32 degree bucket.", 1, "The 33 degree bucket.", 2, "The 34 degree bucket.", 3, "The 35 degree bucket.", 4);
+    case 5 :
+        ~chatnpc("<p,neutral>If the fingers on every left hand in RuneScape were multiplied by zero, what number would you get?");
+        $correct = 4;
+        $choice = ~p_choice4("One.", 1, "One million.", 2, "Ten million.", 3, "Zero.", 4);
+}
+if ($choice = $correct) {
+    ~chatplayer("<p,neutral>That is my answer.");
+    ~chatnpc("<p,happy>Correct. Logic, not guesswork.");
+    ~rd_room_complete(7);
+    mes("The final door unlocks.");
+} else {
+    @rd_fail_trial("That answer contradicts the riddle. The trial resets.");
+}
+
+[proc,rd_room7_riddle]()(int)
+if (%rd_templock_2 < 1 | %rd_templock_2 > 5) {
+    %rd_templock_2 = add(random(5), 1);
+}
+return (%rd_templock_2);
+
+[oploc1,rd_room2_fox_multi] @rd_room2_pickup(1, rd_fox);
+[oploc1,rd_room2_fox_multi_right] @rd_room2_pickup(2, rd_fox);
+[oploc1,rd_room2_chicken_multi] @rd_room2_pickup(1, rd_chicken);
+[oploc1,rd_room2_chicken_multi_right] @rd_room2_pickup(2, rd_chicken);
+[oploc1,rd_room2_grain_multi] @rd_room2_pickup(1, rd_sack);
+[oploc1,rd_room2_grain_multi_right] @rd_room2_pickup(2, rd_sack);
+
+[label,rd_room2_pickup](int $side, obj $item)
+if (%rd_room1_complete = 1) {
+    mes("The trial has already been solved.");
+    return;
+}
+if (inv_getobj(worn, oc_wearpos($item)) ! null) {
+    mes("You need both hands and your back free for this test.");
+    return;
+}
+if (~rd_room2_can_carry($item) = false) {
+    return;
+}
+if ($side = 1) {
+    if ($item = rd_fox & %rd_foxleft = 0) { %rd_foxleft = 1; ~rd_room2_carry(rd_fox); mes("You pick up the fox."); return; }
+    if ($item = rd_chicken & %rd_chickleft = 0) { %rd_chickleft = 1; ~rd_room2_carry(rd_chicken); mes("You pick up the chicken."); return; }
+    if ($item = rd_sack & %rd_grainleft = 0) { %rd_grainleft = 1; ~rd_room2_carry(rd_sack); mes("You pick up the grain."); return; }
+} else {
+    if ($item = rd_fox & %rd_foxright = 1) { %rd_foxright = 0; ~rd_room2_carry(rd_fox); mes("You pick up the fox."); return; }
+    if ($item = rd_chicken & %rd_chickright = 1) { %rd_chickright = 0; ~rd_room2_carry(rd_chicken); mes("You pick up the chicken."); return; }
+    if ($item = rd_sack & %rd_grainright = 1) { %rd_grainright = 0; ~rd_room2_carry(rd_sack); mes("You pick up the grain."); return; }
+}
+mes("There is nothing there to pick up.");
+
+[proc,rd_room2_can_carry](obj $item)(boolean)
+def_int $carried_count = ~rd_carried_count;
+if ($carried_count = 0) {
+    return(true);
+}
+if ($item = rd_sack | inv_total(worn, rd_sack) > 0 | inv_total(inv, rd_sack) > 0) {
+    mes("You can only carry the grain by itself.");
+    return(false);
+}
+if ($carried_count = 1) {
+    if ($item = rd_fox & (inv_total(worn, rd_chicken) > 0 | inv_total(inv, rd_chicken) > 0)) {
+        return(true);
+    }
+    if ($item = rd_chicken & (inv_total(worn, rd_fox) > 0 | inv_total(inv, rd_fox) > 0)) {
+        return(true);
+    }
+}
+mes("You can only carry the fox and chicken together.");
+return(false);
+
+[proc,rd_room2_carry](namedobj $item)
+inv_setslot(worn, oc_wearpos($item), $item, 1);
+~update_all(null);
+
+[proc,rd_room2_carried_item]()(obj)
+if (inv_total(inv, rd_fox) > 0 | inv_total(worn, rd_fox) > 0) { return(rd_fox); }
+if (inv_total(inv, rd_chicken) > 0 | inv_total(worn, rd_chicken) > 0) { return(rd_chicken); }
+if (inv_total(inv, rd_sack) > 0 | inv_total(worn, rd_sack) > 0) { return(rd_sack); }
+return(null);
+
+[proc,rd_carried_count]()(int)
+return (calc(inv_total(inv, rd_fox) + inv_total(inv, rd_chicken) + inv_total(inv, rd_sack) + inv_total(worn, rd_fox) + inv_total(worn, rd_chicken) + inv_total(worn, rd_sack)));
+
+[oploc1,rd_bridge_left] @rd_room2_cross;
+[oploc1,rd_bridge_right] @rd_room2_cross;
+
+[label,rd_room2_cross]
+if (~rd_room2_can_cross = false) {
+    mes("The bridge will only support the fox and chicken together.");
+    return;
+}
+if (~rd_room2_on_east_side(coord) = true) {
+    ~rd_room2_bridge_walk(0_38_77_44_44);
+    if (~rd_room2_bad_left = true) { @rd_fail_trial("Something has eaten something else. The trial resets."); return; }
+} else {
+    ~rd_room2_bridge_walk(0_38_77_52_44);
+    if (~rd_room2_bad_right = true) { @rd_fail_trial("Something has eaten something else. The trial resets."); return; }
+}
+~rd_room2_check_complete;
+
+[proc,rd_room2_can_cross]()(boolean)
+def_int $carried_count = ~rd_carried_count;
+if ($carried_count < 2) {
+    return(true);
+}
+if ($carried_count = 2 & (inv_total(worn, rd_fox) > 0 | inv_total(inv, rd_fox) > 0) & (inv_total(worn, rd_chicken) > 0 | inv_total(inv, rd_chicken) > 0) & inv_total(worn, rd_sack) = 0 & inv_total(inv, rd_sack) = 0) {
+    return(true);
+}
+return(false);
+
+[proc,rd_room2_bridge_walk](coord $dest)
+p_arrivedelay;
+p_walk($dest);
+p_delay(calc(distance(coord, $dest) + 1));
+
+[proc,rd_room2_on_east_side](coord $check)(boolean)
+if (distance($check, 0_38_77_54_46) <= distance($check, 0_38_77_42_42)) {
+    return(true);
+}
+return(false);
+
+[proc,rd_room2_check_complete]
+if (%rd_room1_complete = 0 & %rd_foxright = 1 & %rd_chickright = 1 & %rd_grainright = 1 & ~rd_carried_count = 0) {
+    ~rd_room_complete(1);
+    mes("The fox, chicken and grain are safely across.");
+}
+
+[proc,rd_room2_is_carry_item](obj $item)(boolean)
+if ($item = rd_fox | $item = rd_chicken | $item = rd_sack) {
+    return(true);
+}
+return(false);
+
+[proc,rd_room2_return_carried](obj $item)(boolean)
+if (~rd_room2_is_carry_item($item) = false) {
+    return(false);
+}
+inv_del(worn, $item, ^max_32bit_int);
+if (%rd_main = ^recruitmentdrive_started & inzone(0_38_77_38_40, 0_38_77_58_49, coord) = true) {
+    if (~rd_room2_on_east_side(coord) = true) {
+        ~rd_room2_mark_left($item);
+    } else {
+        ~rd_room2_mark_right($item);
+    }
+}
+~update_all($item);
+mes("You put down the <lowercase(oc_name($item))>.");
+~rd_room2_check_complete;
+return(true);
+
+[proc,rd_room2_mark_left](obj $item)
+if ($item = rd_fox) { %rd_foxleft = 0; }
+if ($item = rd_chicken) { %rd_chickleft = 0; }
+if ($item = rd_sack) { %rd_grainleft = 0; }
+
+[proc,rd_room2_mark_right](obj $item)
+if ($item = rd_fox) { %rd_foxright = 1; }
+if ($item = rd_chicken) { %rd_chickright = 1; }
+if ($item = rd_sack) { %rd_grainright = 1; }
+
+[label,rd_room2_place_right]
+def_obj $carried = ~rd_room2_carried_item;
+if (inv_total(inv, rd_fox) > 0 | inv_total(worn, rd_fox) > 0) { ~rd_del_all(rd_fox); %rd_foxright = 1; }
+if (inv_total(inv, rd_chicken) > 0 | inv_total(worn, rd_chicken) > 0) { ~rd_del_all(rd_chicken); %rd_chickright = 1; }
+if (inv_total(inv, rd_sack) > 0 | inv_total(worn, rd_sack) > 0) { ~rd_del_all(rd_sack); %rd_grainright = 1; }
+if ($carried ! null) { ~update_all($carried); }
+
+[label,rd_room2_place_left]
+def_obj $carried = ~rd_room2_carried_item;
+if (inv_total(inv, rd_fox) > 0 | inv_total(worn, rd_fox) > 0) { ~rd_del_all(rd_fox); %rd_foxleft = 0; }
+if (inv_total(inv, rd_chicken) > 0 | inv_total(worn, rd_chicken) > 0) { ~rd_del_all(rd_chicken); %rd_chickleft = 0; }
+if (inv_total(inv, rd_sack) > 0 | inv_total(worn, rd_sack) > 0) { ~rd_del_all(rd_sack); %rd_grainleft = 0; }
+if ($carried ! null) { ~update_all($carried); }
+
+[proc,rd_room2_bad_left]()(boolean)
+if (%rd_room1_complete = 1) { return (false); }
+if (%rd_foxleft = 0 & %rd_chickleft = 0 & %rd_grainleft ! 0) { return (true); }
+return (false);
+
+[proc,rd_room2_bad_right]()(boolean)
+if (%rd_room1_complete = 1) { return (false); }
+if (%rd_foxright = 1 & %rd_chickright = 1 & %rd_grainright ! 1) { return (true); }
+return (false);
+
+[proc,rd_complete_quest]
+~rd_cleanup_trial_npcs;
+~rd_clear_room_items;
+%rd_main = ^recruitmentdrive_complete;
+p_telejump(0_46_52_53_44);
+~give_quest_xp(prayer, 10000);
+~give_quest_xp(herblore, 10000);
+~give_quest_xp(agility, 10000);
+inv_add(inv, coins, 3000);
+inv_add(inv, basic_tk_helm, 1);
+if (%rd_male_at_start = 1) {
+    inv_add(inv, rd_makeover_ticket, 1);
+}
+session_log(^log_adventure, "Quest complete: Recruitment Drive");
+~chatnpc_specific("Sir Tiffy Cashien", rd_teleporter_guy, "<p,happy>Oh, jolly well done! Welcome to the Temple Knights, Initiate.");
+~send_quest_complete(questlist:rd, basic_tk_helm, 250, ^recruitmentdrive_questpoints, "You have passed the\\nRecruitment Drive!");

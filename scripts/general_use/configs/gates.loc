@@ -1,0 +1,93 @@
+[loc_1551]
+op1=Open
+active=yes
+blockrange=no
+raiseobject=no
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=gate_main_closed
+param=next_loc_stage,loc_1552
+
+[loc_1553]
+mirror=yes
+op1=Open
+active=yes
+blockrange=no
+raiseobject=no
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=gate_outer_closed
+param=next_loc_stage,loc_1556
+
+[loc_1552]
+op1=Close
+active=yes
+raiseobject=no
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=gate_main_open
+param=next_loc_stage,loc_1551
+
+[loc_1556]
+mirror=yes
+op1=Close
+active=yes
+raiseobject=no
+model=plaguesheep_gatel
+name=Gate
+desc=A wooden gate.
+category=gate_outer_open
+param=next_loc_stage,loc_1553
+
+[loc_3197]
+op1=Open
+active=yes
+blockrange=no
+model=plaguesheep_gatel
+recol1s=6040
+recol1d=6689
+name=Gate
+desc=Entrance to the Duel Arena.
+category=gate_main_closed
+param=next_loc_stage,loc_4139
+
+[loc_3198]
+mirror=yes
+op1=Open
+active=yes
+blockrange=no
+model=plaguesheep_gatel
+recol1s=6040
+recol1d=6689
+name=Gate
+desc=Entrance to the Duel Arena.
+category=gate_outer_closed
+param=next_loc_stage,loc_4140
+
+[loc_4139]
+active=yes
+op1=Close
+blockrange=no
+model=plaguesheep_gatel
+recol1s=6040
+recol1d=6689
+name=Gate
+desc=Entrance to the Duel Arena.
+category=gate_main_open
+param=next_loc_stage,loc_3197
+
+[loc_4140]
+active=yes
+op1=Close
+mirror=yes
+blockrange=no
+model=plaguesheep_gatel
+recol1s=6040
+recol1d=6689
+name=Gate
+desc=Entrance to the Duel Arena.
+category=gate_outer_open
+param=next_loc_stage,loc_3198

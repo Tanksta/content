@@ -1,0 +1,29 @@
+{
+  "member": "redstone2.dat",
+  "palette": [
+    0,
+    1115911,
+    2821903,
+    3281169,
+    3871764,
+    4659224,
+    7218469,
+    5578013,
+    6365473,
+    8268330
+  ],
+  "transparentIndex": 0,
+  "frames": [
+    {
+      "index": 0,
+      "path": "decoded/media/media/sprites/redstone2/000.png",
+      "canvasWidth": 30,
+      "canvasHeight": 37,
+      "xOffset": 0,
+      "yOffset": 0,
+      "width": 30,
+      "height": 37,
+      "encoding": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[spinningwheel]
+name=Spinning wheel
+desc=Used for spinning thread.
+model=obj_ball_gnomeball_game
+forceapproach=south
+op2=Spin
+category=spinning_wheel
+
+[flax]
+name=Flax
+desc=A plant cultivated for fibres.
+model=model_2646
+op2=Pick
+
+[viking_spinningwheel]
+op2=Spin
+forceapproach=11
+recol1s=6051
+recol1d=5683
+recol2s=127
+recol2d=5229
+recol3s=41
+recol3d=5409
+recol4s=6049
+recol4d=5675
+model=obj_ball_gnomeball_game
+name=Spinning wheel
+desc=Used for spinning thread.
+category=spinning_wheel

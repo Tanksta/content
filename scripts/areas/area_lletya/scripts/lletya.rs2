@@ -1,0 +1,86 @@
+[opnpc1,mourning_arianwyn]
+~chatnpc("<p,neutral>Welcome to Lletya, home to the Elven Resistance.");
+
+[opnpc1,mourning_stores_man]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,neutral>Welcome to Lletya. Take a look at my stock if you need supplies.");
+
+[opnpc1,mourning_seamstress]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,neutral>I mend and sell clothing for the people of Lletya.");
+
+[opnpc1,mourning_bow_seller]
+~chatnpc("<p,happy>Can I help you at all?");
+@multi3("Yes please. What are you selling?", mourning_bow_seller_shop, "Why do you sell this stuff?", mourning_bow_seller_why, "No thanks.", mourning_bow_seller_no);
+
+[label,mourning_bow_seller_shop]
+~chatplayer("<p,neutral>Yes please. What are you selling?");
+~openshop_activenpc;
+
+[label,mourning_bow_seller_why]
+~chatplayer("<p,quiz>Why do you sell this stuff? The Crystal Bow is so much better.");
+~chatnpc("<p,neutral>We keep all these old toys to train our children with, but if people will part with coins for them, then they are theirs!");
+
+[label,mourning_bow_seller_no]
+~chatplayer("<p,neutral>No thanks.");
+
+[opnpc1,mourning_elven_cook]
+~chatplayer("<p,neutral>Hello.");
+~chatnpc("<p,neutral>Fresh food for the Resistance. Help yourself from the shop.");
+
+[opnpc1,mourning_elf_bankerm] @talk_to_banker;
+[opnpc1,mourning_elf_bankerf] @talk_to_banker;
+[opnpc3,mourning_elf_bankerm] @openbank;
+[opnpc3,mourning_elf_bankerf] @openbank;
+
+[ai_spawn,mourning_elf_bankerm] @mourning_lletya_banker_spawn;
+[ai_spawn,mourning_elf_bankerf] @mourning_lletya_banker_spawn;
+
+[label,mourning_lletya_banker_spawn]
+npc_facesquare(movecoord(npc_coord, 0, 0, -1));
+
+[opnpc1,mourning_town_elf_1] @mourning_town_elf_dialogue;
+[opnpc1,mourning_town_elf_2] @mourning_town_elf_dialogue;
+[opnpc1,mourning_town_elf_3] @mourning_town_elf_dialogue;
+[opnpc1,mourning_town_elf_4] @mourning_town_elf_dialogue;
+[opnpc1,mourning_town_elf_5] @mourning_town_elf_dialogue;
+
+[label,mourning_town_elf_dialogue]
+~chatnpc("<p,neutral>Good day, traveller.");
+
+[opnpc1,mourning_elf_kid_1] @mourning_elf_child_dialogue;
+[opnpc1,mourning_elf_kid_2] @mourning_elf_child_dialogue;
+
+[label,mourning_elf_child_dialogue]
+~chatnpc("<p,neutral>Hello.");
+
+[opnpc3,mourning_town_elf_1] @attempt_pick_pocket(npc_type);
+[opnpc3,mourning_town_elf_2] @attempt_pick_pocket(npc_type);
+[opnpc3,mourning_town_elf_3] @attempt_pick_pocket(npc_type);
+[opnpc3,mourning_town_elf_4] @attempt_pick_pocket(npc_type);
+[opnpc3,mourning_town_elf_5] @attempt_pick_pocket(npc_type);
+
+[ai_opplayer2,mourning_guard_range] npc_setmode(applayer2);
+[ai_applayer2,mourning_guard_range] ~npc_rangeattack;
+[ai_opplayer2,mourning_guard_range2] npc_setmode(applayer2);
+[ai_applayer2,mourning_guard_range2] ~npc_rangeattack;
+
+[oploc1,elf_village_ladder]
+p_arrivedelay;
+~climb_ladder(movecoord(coord(), 0, 1, 0), true);
+
+[oploc1,elf_village_ladder_mid]
+p_arrivedelay;
+@ladder_options(movecoord(coord(), 0, 1, 0), movecoord(coord(), 0, -1, 0));
+
+[oploc2,elf_village_ladder_mid]
+p_arrivedelay;
+~climb_ladder(movecoord(coord(), 0, 1, 0), true);
+
+[oploc3,elf_village_ladder_mid]
+p_arrivedelay;
+~climb_ladder(movecoord(coord(), 0, -1, 0), false);
+
+[oploc1,elf_village_ladder_top]
+p_arrivedelay;
+~climb_ladder(movecoord(coord(), 0, -1, 0), false);
