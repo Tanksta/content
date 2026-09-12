@@ -404,6 +404,7 @@ walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op2=Attack
 vislevel=20
+members=yes
 recol1s=25238
 recol1d=12698
 recol2s=43072
