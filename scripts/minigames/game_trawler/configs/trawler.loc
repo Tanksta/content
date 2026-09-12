@@ -1,31 +1,31 @@
 [sinkingbarrel1]
 name=Barrel
 desc=It's a floating barrel.
-model=magearena_side_dr_0
+model=loc_2159
 op1=Climb-on
 
 [sinkingbarrel2]
 name=Barrel
 desc=It's a floating barrel.
-model=loc_457_8
+model=loc_2160
 op1=Climb-on
 
 [sinkingbarrel3]
 name=Barrel
 desc=It's a floating barrel.
-model=magearena_scan_1
+model=loc_2161
 op1=Climb-on
 
 [game_trawler_net1]
 length=2
-model=loc_462_8
+model=loc_2162
 name=Trawler net
 desc=Smells like fish.
 
 [game_trawler_net2]
 length=2
 mirror=yes
-model=loc_462_8
+model=loc_2162
 name=Trawler net
 desc=Smells like fish.
 
@@ -119,14 +119,14 @@ sharelight=yes
 [game_trawler_hole]
 width=2
 active=yes
-model=timberwall_3
+model=loc_2176
 name=Hole
 desc=This old trawler has seen better days.
 
 [shiphull_trawler]
 name=Hull
 desc=This old trawler has seen better days.
-model=timberwall_4
+model=loc_2177
 width=2
 active=yes
 blockwalk=no

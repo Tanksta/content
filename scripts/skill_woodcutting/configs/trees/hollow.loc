@@ -16,7 +16,7 @@ param=next_loc_stage,hollow_tree_stump
 [hollow_tree_big]
 name=Hollow tree
 desc=It's hollow...
-model=eadgar_aviary_parrott_perch_mid_8
+model=loc_4060
 recol1s=7056
 recol1d=13592
 recol2s=6674

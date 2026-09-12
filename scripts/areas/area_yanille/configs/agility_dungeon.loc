@@ -32,7 +32,7 @@ recol1d=7721
 [climbingcaverocks2]
 name=Pile of rubble
 desc=I can climb down these rocks to another cave.
-model=obj_bronze_dart_manwear
+model=loc_492
 width=2
 length=2
 op1=Climb-down
@@ -42,7 +42,7 @@ recol1d=9106
 [monkeybars_end2]
 name=Monkeybars
 desc=I can traverse these.
-model=model_loc_2019
+model=loc_2320
 width=3
 op1=Swing across
 blockwalk=no

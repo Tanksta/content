@@ -190,7 +190,7 @@ desc=A party balloon.
 active=yes
 op1=Pull
 forceapproach=11
-model=obj_murderfingerprint
+model=loc_2416
 name=Lever
 desc=Pull me!
 

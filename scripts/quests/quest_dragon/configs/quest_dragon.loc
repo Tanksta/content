@@ -214,13 +214,13 @@ desc=It's open.
 active=yes
 op1=Climb-down
 mapscene=7
-model=model_1754
+model=loc_1754
 name=Ladder
 
 [ladder_broken]
 name=Ladder
 desc=I can't climb this.
-model=model_1752
+model=loc_1752
 active=yes
 op1=Climb-up
 mapscene=7
@@ -262,7 +262,7 @@ desc=A collection of rocks over what looks like a depression.
 
 [crandor_climbing_rope]
 op1=Climb
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Climbing rope
 desc=A rope hangs here that I can climb.
 

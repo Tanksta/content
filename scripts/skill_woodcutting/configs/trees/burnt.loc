@@ -1,8 +1,10 @@
 [deadtree_burnt]
 mapscene=6
 op1=Chop down
+op3=hidden
 model=deadtree_burnt
 name=Dead tree
 desc=It's only useful for firewood now.
 category=tree
+param=ent,macro_ent_dead_tree2
 param=next_loc_stage,deadtree_burnt_stump

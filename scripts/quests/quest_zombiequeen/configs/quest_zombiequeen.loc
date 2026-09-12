@@ -65,7 +65,7 @@ recol5s=28
 recol5d=5388
 recol6s=16156
 recol6d=6798
-model=obj_bronze_dart_manwear
+model=loc_492
 name=Fissure
 desc=A narrow fissure in the ground.
 
@@ -110,7 +110,7 @@ desc=A rotten and barely standing set of gallows.
 hillskew=yes
 op1=Look-at
 op2=Search
-model=obj_plague_trousers_womanwear
+model=loc_436
 name=Waterfall rocks
 desc=Wet rocks, it looks like you might be able to climb them.
 
@@ -193,7 +193,7 @@ forcedecor=yes
 active=yes
 hillskew=yes
 op1=Climb
-model=model_535
+model=loc_535
 name=Climbing rocks
 desc=I can climb the rocky outcrop.
 

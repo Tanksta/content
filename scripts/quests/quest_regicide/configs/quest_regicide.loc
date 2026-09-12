@@ -570,7 +570,7 @@ model=caveentrance5
 [regicide_old_camp_footprints]
 name=Tracks
 desc=Tracks in the soil.
-model=regicide_tree_dead1_8
+model=loc_3941
 hillskew=yes
 shadow=no
 op1=Follow
@@ -1007,7 +1007,7 @@ model=spearwall
 [regicide_spearwall_straight]
 blockrange=no
 active=no
-model=hanging_dragonhide_q
+model=loc_2067
 recol1s=7073
 recol1d=6319
 recol2s=5914

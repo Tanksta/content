@@ -23,7 +23,7 @@ mapscene=7
 [yanillestairsdown]
 name=Staircase
 desc=I can climb down this.
-model=lgstrengthtrialgatel_1
+model=loc_1727
 width=2
 length=3
 op1=Climb-down
@@ -66,14 +66,14 @@ op1=Climb-down
 sharelight=yes
 forceapproach=7
 mapscene=7
-model=obj_vial_enchanted
+model=loc_1736
 name=Staircase
 desc=I can climb down these stairs.
 
 [outdoorstairs_wooden_bottom]
 name=Staircase
 desc=I can climb up these stairs.
-model=rowboat_8
+model=loc_1737
 op1=Climb-up
 sharelight=yes
 forceapproach=north

@@ -69,6 +69,6 @@ param=millbase_coord,0_41_52_8_57
 param=hopper_coord,2_41_52_8_58
 
 [hoppercontrol_inuse]
-model=obj_raw_mantaray
+model=loc_2722
 name=Hopper controls
 desc=These control the flow of grain from the hopper to the millstones.

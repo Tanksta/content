@@ -313,7 +313,7 @@ active=yes
 op1=Climb-Down
 forceapproach=13
 active=yes
-model=totem_pole_8
+model=loc_1759
 name=Ladder
 desc=Leads down to the Burthorpe Games Rooms.
 
@@ -364,7 +364,7 @@ model=boardgames_archtop
 blockrange=no
 blockrange=no
 active=no
-model=obj_shortbow_manwear
+model=loc_512
 recol1s=41
 recol1d=5660
 recol2s=931

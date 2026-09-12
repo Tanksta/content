@@ -215,7 +215,7 @@ desc=Takes me out of the maze.
 [vt_mazeladderescapeladder]
 active=yes
 op1=Climb-up
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Escape rope
 desc=Takes me out of the maze.
 
@@ -1459,7 +1459,7 @@ recol2s=20
 recol2d=5392
 recol3s=61
 recol3d=5281
-model=obj_body_talisman
+model=loc_2785
 name=Furnace
 desc=A hot place for forging things in.
 category=smithing_furnace
@@ -1478,7 +1478,7 @@ recol5s=41
 recol5d=5161
 retex6s=wood2
 retex6d=elfwood
-model=obj_gold_ring
+model=loc_2784
 name=Blacksmith's tools
 desc=Various implements for working with metal.
 
@@ -1909,7 +1909,7 @@ hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=obj_khazard_platemail_womanwear
+model=loc_468
 
 [viking_stalagtite_twin_grey]
 blockwalk=no
@@ -1917,14 +1917,14 @@ hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=idk_woman_torso_crop_top
+model=loc_469
 
 [viking_stalagmite_small_grey]
 hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=obj_dramen_staff_manwear
+model=loc_534
 
 [viking_rockslide1]
 width=2
@@ -1936,7 +1936,7 @@ mapscene=11
 active=no
 recol1s=6689
 recol1d=7331
-model=idk_woman_torso_simple
+model=loc_471
 
 [viking_rockslide2]
 width=2
@@ -1948,7 +1948,7 @@ mapscene=11
 active=no
 recol1s=6689
 recol1d=7331
-model=npc_morgan_le_faye
+model=loc_472
 
 [viking_rockslide3]
 width=2
@@ -1960,7 +1960,7 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=7331
-model=model_473
+model=loc_473
 
 [viking_rockslide4]
 width=2
@@ -1972,21 +1972,21 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=7331
-model=idk_woman_torso_torn
+model=loc_474
 
 [viking_rockslide5]
 hillskew=yes
 active=no
 recol1s=6689
 recol1d=7331
-model=obj_leather_armour_womanwear
+model=loc_475
 
 [viking_rockslide6]
 hillskew=yes
 active=no
 recol1s=6689
 recol1d=7331
-model=model_476
+model=loc_476
 
 [viking_cave_detail1r]
 mirror=yes

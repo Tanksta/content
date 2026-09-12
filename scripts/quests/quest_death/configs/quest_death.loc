@@ -96,7 +96,7 @@ model=spearwall
 [death_troll_spearwall_straight]
 blockrange=no
 active=no
-model=hanging_dragonhide_q
+model=loc_2067
 recol1s=7073
 recol1d=6319
 recol2s=5914
@@ -533,7 +533,7 @@ hillskew=yes
 mapscene=11
 recol1s=6689
 recol1d=10396
-model=idk_woman_torso_simple
+model=loc_471
 
 [death_rockslide2]
 width=2
@@ -544,7 +544,7 @@ blockrange=no
 mapscene=11
 recol1s=6689
 recol1d=10396
-model=npc_morgan_le_faye
+model=loc_472
 
 [death_rockslide3]
 width=2
@@ -556,7 +556,7 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=10396
-model=model_473
+model=loc_473
 
 [death_rockslide4]
 width=2
@@ -568,19 +568,19 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=10396
-model=idk_woman_torso_torn
+model=loc_474
 
 [death_rockslide5]
 hillskew=yes
 recol1s=6689
 recol1d=10396
-model=obj_leather_armour_womanwear
+model=loc_475
 
 [death_rockslide6]
 hillskew=yes
 recol1s=6689
 recol1d=10396
-model=model_476
+model=loc_476
 
 [death_climbingrocks_top]
 hillskew=yes
@@ -710,7 +710,7 @@ recol4d=6936
 blockrange=no
 recol1s=61
 recol1d=7335
-model=obj_silverlight_manwear
+model=loc_513
 
 [death_spade]
 blockrange=no

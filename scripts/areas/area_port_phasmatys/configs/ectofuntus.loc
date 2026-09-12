@@ -1,7 +1,7 @@
 [ahoy_tower_stairs_lv1]
 name=Staircase
 desc=I can climb these stairs.
-model=loc_4531_0
+model=loc_4493
 recol1s=21646
 recol1d=16904
 recol2s=21526
@@ -16,7 +16,7 @@ mapscene=7
 [ahoy_tower_stairs_lv1_top]
 name=Staircase
 desc=They go down.
-model=loc_4530_0
+model=loc_4494
 recol1s=21646
 recol1d=16904
 recol2s=21526

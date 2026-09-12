@@ -148,7 +148,7 @@ forcedecor=yes
 active=yes
 recol1s=61
 recol1d=5309
-model=crumbly_runestoneglow_greatrunestone_top
+model=loc_2319
 name=Monkey bars
 desc=Now, I'm the king of the swingers, oh, the jungle VIP.
 
@@ -160,7 +160,7 @@ active=yes
 op1=Swing-across
 recol1s=61
 recol1d=5309
-model=model_loc_2019
+model=loc_2320
 name=Monkey bars
 desc=Now, I'm the king of the swingers, oh, the jungle VIP.
 
@@ -288,7 +288,7 @@ forcedecor=yes
 active=yes
 recol1s=61
 recol1d=6449
-model=underground_rootwall_toplvl1_8
+model=loc_3577
 name=Plank
 desc=Walk the plank! Ya land lubber!
 
@@ -653,7 +653,7 @@ active=yes
 op1=Climb-Down
 forceapproach=13
 active=yes
-model=totem_pole_8
+model=loc_1759
 name=Ladder
 desc=Leads down into the Agility Arena.
 

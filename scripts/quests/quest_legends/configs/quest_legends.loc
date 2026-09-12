@@ -203,7 +203,7 @@ mapscene=11
 op1=Search
 recol1s=14228
 recol1d=127
-model=obj_dragonhide_body_womanwear
+model=loc_477
 name=Mossy rock
 desc=Looks slippery!
 
@@ -212,7 +212,7 @@ mapscene=12
 op1=Search
 recol1s=14228
 recol1d=127
-model=obj_barrows_verac_body_womanwear
+model=loc_478
 name=Mossy rock
 desc=Looks slippery!
 
@@ -467,7 +467,7 @@ op1=Look
 op2=Search
 recol1s=5916
 recol1d=7952
-model=obj_dramen_staff_manwear
+model=loc_534
 name=Carved rock
 desc=An ornately carved rock with a pointed receptacle.
 
@@ -605,7 +605,7 @@ length=2
 op1=Look
 op2=Investigate
 mapscene=8
-model=npc_barbarian_woman
+model=loc_443
 name=Water Pool
 desc=A sparkling, babbling flow of water from an underground source.
 
@@ -615,7 +615,7 @@ length=2
 op1=Look
 retex1s=water
 retex1d=bark
-model=npc_barbarian_woman
+model=loc_443
 name=Polluted water
 desc=Disgusting filthy quagmire that oozes from the ground.
 
@@ -763,7 +763,7 @@ desc=This earth is damaged by cultivation, time will restore the fertility.
 
 [lgclimbrope_viyeldicaves]
 op1=Climb
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Climbing rope
 desc=A rope hangs here.
 
@@ -817,7 +817,7 @@ mapscene=11
 op1=Search
 recol1s=14228
 recol1d=978
-model=obj_dragonhide_body_womanwear
+model=loc_477
 name=Mossy rock
 desc=Looks slippery!
 

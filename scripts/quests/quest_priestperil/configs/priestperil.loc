@@ -354,7 +354,7 @@ name=Coffin
 desc=An ornately decorated coffin. Something seems to be alive inside.
 
 [cracks_black1]
-model=com_i43
+model=loc_3481
 recol1s=0
 recol1d=24
 
