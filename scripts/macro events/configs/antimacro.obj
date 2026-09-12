@@ -608,6 +608,20 @@ name=Rune axe head
 weight=2lb
 param=fixed,rune_axe
 
+[macro_dragon_hatchethead]
+desc=It's missing a handle.
+model=obj_macro_dragon_hatchethead
+2dxof=-12
+2dyof=-19
+2dzoom=1114
+2dyan=1203
+2dxan=456
+cost=54999
+members=yes
+name=Dragon axe head
+weight=2lb
+param=fixed,dragon_axe
+
 [macro_mime_mask]
 desc=A mime would wear this.
 model=obj_macro_mime_mask

@@ -17608,7 +17608,7 @@ recol1s=28
 recol1d=0
 recol2s=33
 recol2d=0
-name=Black spear
+name=Black spearstrength
 
 
 [cert_black_spear]
@@ -47181,6 +47181,8 @@ members=yes
 2dzoom=620
 2dyan=1940
 2dxan=340
+param=magicattack,4
+param=magicdefence,4
 name=Seers ring
 wearpos=ring
 
@@ -47201,6 +47203,8 @@ members=yes
 2dzoom=630
 2dyan=1904
 2dxan=332
+param=rangeattack,4
+param=rangedefence,4
 name=Archers ring
 wearpos=ring
 
@@ -47221,6 +47225,8 @@ members=yes
 2dzoom=570
 2dyan=1776
 2dxan=348
+param=slashattack,4
+param=slashdefence,4
 name=Warrior ring
 wearpos=ring
 
@@ -47241,6 +47247,8 @@ members=yes
 2dzoom=600
 2dyan=1916
 2dxan=324
+param=strengthbonus,4
+param=crushdefence,4
 name=Berserker ring
 wearpos=ring
 
@@ -47309,19 +47317,6 @@ name=Broken axe
 [cert_macro_broken_dragon_hatchet]
 certlink=macro_broken_dragon_hatchet
 certtemplate=template_for_cert
-
-
-[macro_dragon_hatchethead]
-desc=It's missing a handle.
-model=obj_macro_dragon_hatchethead
-2dxof=-12
-2dyof=-19
-2dzoom=1114
-2dyan=1203
-2dxan=456
-cost=54999
-members=yes
-name=Dragon axe head
 
 
 [cert_macro_dragon_hatchethead]
