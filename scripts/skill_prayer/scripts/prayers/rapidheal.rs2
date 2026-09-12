@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_rapidheal;
 }
-return;
+%prayer7 = %prayer7;
 
 [label,activate_prayer_rapidheal]
 p_clearpendingaction;

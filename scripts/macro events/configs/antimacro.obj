@@ -9,6 +9,7 @@ iop1=Eat
 name=Strange fruit
 weight=3oz
 param=cures_poison,yes
+category=miscfood
 
 [macro_pickaxehandle]
 desc=Useless without the head.

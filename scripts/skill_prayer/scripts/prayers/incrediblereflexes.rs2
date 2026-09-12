@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_incrediblereflexes;
 }
-return;
+%prayer11 = %prayer11; // resync varp
 
 [label,activate_prayer_incrediblereflexes]
 p_clearpendingaction;

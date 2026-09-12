@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_ultimatestrength;
 }
-return;
+%prayer10 = %prayer10;
 
 [label,activate_prayer_ultimatestrength]
 p_clearpendingaction;

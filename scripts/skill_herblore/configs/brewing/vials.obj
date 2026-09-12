@@ -13,6 +13,8 @@ recol1d=42330
 weight=20g
 cost=2
 param=next_obj_stage,vial_empty
+iop4=Empty
+category=potion
 // jagex name
 
 [vial_empty]

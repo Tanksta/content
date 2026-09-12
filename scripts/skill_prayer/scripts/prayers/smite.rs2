@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_smite;
 }
-return;
+%prayer17 = %prayer17; // resync varp
 
 [label,activate_prayer_smite]
 p_clearpendingaction;

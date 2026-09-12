@@ -106,19 +106,6 @@ switch_obj(last_item) {
         @player_consume_item(consume_effect_super_antipoison, null, null);
     case default : @player_consume_item(consume_effect_stat, null, null);
 }
-[opheld4,_category_69]@player_empty_potion;
-[opheld1,_category_69]
-switch_obj(last_item) {
-    // anti dragon
-    case 1dose1antidragon, 2dose1antidragon, 3dose1antidragon, 4dose1antidragon :
-        @player_consume_item(consume_effect_antidragon, null, null);
-    // anti posions
-    case 1doseantipoison, 2doseantipoison, 3doseantipoison, 4doseantipoison :
-        @player_consume_item(consume_effect_antipoison, null, null);
-    case 1dose2antipoison, 2dose2antipoison, 3dose2antipoison, 4dose2antipoison :
-        @player_consume_item(consume_effect_super_antipoison, null, null);
-    case default : @player_consume_item(consume_effect_stat, null, null);
-}
 [opheld1,macro_triffidfruit]@player_consume_item(consume_effect_strange_fruit, 2, 3);
 
 [opheld1,keg_of_beer] @player_consume_item(consume_effect_keg_of_beer, null, null);
@@ -143,10 +130,6 @@ if ($skill_delay ! null) {
     %action_delay = calc(%action_delay + $skill_delay);
 }
 
-if (oc_category($obj) = category_69) {
-    p_clearpendingaction;
-}
-
 // consume effect
 jump($consume_effect);
 
@@ -154,7 +137,3 @@ jump($consume_effect);
 [label,player_empty_item]
 inv_setslot(inv, last_slot, oc_param(last_item, next_obj_stage), 1);
 mes("You empty the <oc_name(oc_param(last_item, next_obj_stage))>.");
-
-[label,player_empty_potion]
-inv_setslot(inv, last_slot, vial_empty, 1);
-mes("You empty the potion.");
