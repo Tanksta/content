@@ -23,7 +23,7 @@ op1=Climb-up
 width=3
 op1=Swing across
 blockwalk=no
-model=model_loc_2019
+model=loc_2320
 name=Monkeybars
 desc=I can traverse these.
 category=monkeybars
@@ -76,7 +76,7 @@ mapscene=13
 [zqrockjump1]
 name=Stepping stones
 desc=A rocky outcrop from the running water.
-model=wake2_8
+model=floor_steppingstone
 op1=Balance
 active=yes
 category=karamja_stepping_stone

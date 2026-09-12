@@ -94,6 +94,8 @@ name=Sacred oil(4)
 param=next_obj_stage,sacred_oil3
 category=category_111
 weight=35g
+param=dose_count,4
+param=decant_potion_enum,potion_sacredoil
 
 [sacred_oil3]
 desc=3 doses of sacred Oil.
@@ -111,6 +113,8 @@ name=Sacred oil(3)
 param=next_obj_stage,sacred_oil2
 category=category_111
 weight=30g
+param=dose_count,3
+param=decant_potion_enum,potion_sacredoil
 
 [sacred_oil2]
 desc=2 doses of sacred Oil.
@@ -128,6 +132,8 @@ name=Sacred oil(2)
 param=next_obj_stage,sacred_oil1
 category=category_111
 weight=25g
+param=dose_count,2
+param=decant_potion_enum,potion_sacredoil
 
 [sacred_oil1]
 desc=1 dose of sacred Oil.
@@ -145,6 +151,8 @@ name=Sacred oil(1)
 param=next_obj_stage,vial_empty
 category=category_111
 weight=20g
+param=dose_count,1
+param=decant_potion_enum,potion_sacredoil
 
 [logs_pyre]
 desc=Logs prepared with sacred oil for a funeral pyre.

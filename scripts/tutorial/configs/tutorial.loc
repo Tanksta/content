@@ -172,6 +172,6 @@ width=3
 length=3
 op1=Chop down
 mapscene=1
-model=com_i2
+model=loc_3037
 name=Oak
 desc=A beautiful old oak.

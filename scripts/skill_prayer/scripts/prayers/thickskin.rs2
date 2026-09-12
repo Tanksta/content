@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_thickskin;
 }
-return;
+%prayer0 = %prayer0;
 
 [label,activate_prayer_thickskin]
 p_clearpendingaction;

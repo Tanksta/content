@@ -1,7 +1,7 @@
 [blacksmithtools]
 name=Blacksmith's tools
 desc=Various implements for working with metal.
-model=obj_gold_ring
+model=loc_2784
 active=yes
 
 [ogreguardgate1]
@@ -90,7 +90,7 @@ desc=This leads to the watchtower.
 [watchladderdown]
 op1=Climb-down
 mapscene=7
-model=model_1754
+model=loc_1754
 name=Ladder
 desc=This leads downwards.
 
@@ -204,7 +204,7 @@ desc=I think I can squeeze through here...
 [tobanladderdown]
 op1=Climb-down
 mapscene=7
-model=totem_pole_8
+model=loc_1759
 name=Ladder
 desc=This leads downwards.
 
@@ -312,7 +312,7 @@ desc=A hole
 
 [darkcave_escape]
 op1=Climb
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Climbing rope
 desc=I hope this leads the way out.
 

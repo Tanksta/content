@@ -9,7 +9,7 @@ category=spinning_wheel
 [flax]
 name=Flax
 desc=A plant cultivated for fibres.
-model=model_2646
+model=loc_2646
 op2=Pick
 
 [viking_spinningwheel]
@@ -23,7 +23,7 @@ recol3s=41
 recol3d=5409
 recol4s=6049
 recol4d=5675
-model=obj_ball_gnomeball_game
+model=loc_2644
 name=Spinning wheel
 desc=Used for spinning thread.
 category=spinning_wheel

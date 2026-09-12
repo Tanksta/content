@@ -387,7 +387,7 @@ raiseobject=no
 [hauntedmine_laddertop]
 name=Ladder
 desc=I can climb down this.
-model=model_1754
+model=loc_1754
 active=yes
 op1=Climb-down
 mapscene=7
@@ -403,7 +403,7 @@ mapscene=7
 [hauntedmine_laddertop_1e]
 name=Ladder
 desc=I can climb down this.
-model=model_1754
+model=loc_1754
 active=yes
 op1=Climb-down
 mapscene=7
@@ -419,7 +419,7 @@ mapscene=7
 [hauntedmine_laddertop_1sw]
 name=Ladder
 desc=I can climb down this.
-model=model_1754
+model=loc_1754
 active=yes
 op1=Climb-down
 mapscene=7

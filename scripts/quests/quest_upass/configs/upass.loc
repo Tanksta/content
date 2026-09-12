@@ -813,7 +813,7 @@ hillskew=yes
 op1=Climb-over
 recol1s=6689
 recol1d=7952
-model=npc_1384i2
+model=loc_439
 name=Rockslide
 desc=A deposit of rocks.
 
@@ -929,13 +929,13 @@ name=upass_bridge_corner
 length=3
 sharelight=yes
 active=no
-model=obj_bronze_2h_sword_manwear
+model=loc_546
 
 [darkmonster_statue_upass_right]
 length=3
 sharelight=yes
 mirror=yes
-model=obj_bronze_2h_sword_manwear
+model=loc_546
 name=Eerie statue
 desc=Intimidating!
 
@@ -1047,7 +1047,7 @@ hillskew=yes
 op1=Climb-over
 recol1s=6689
 recol1d=7952
-model=npc_morgan_le_faye
+model=loc_472
 name=Rock pile
 desc=A pile of rocks.
 
@@ -1246,7 +1246,7 @@ desc=A wooden crate for storage.
 [caveorb_vis]
 active=yes
 op3=Take
-model=obj_unlitarrow_5
+model=loc_3361
 name=Orb of Light
 desc=A magical sphere that glimmers within.
 
@@ -1263,7 +1263,7 @@ model=upass_walkway_spikes
 [obstical_rockswing_middle_for_clipping]
 length=6
 blockwalk=no
-model=loc_2279_8
+model=loc_2275
 name=Rock
 desc=An odd looking rock formation.
 

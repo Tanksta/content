@@ -17,7 +17,7 @@ desc=How am I going to get down there?
 blockwalk=no
 blockrange=no
 op1=Climb-up
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Rope
 desc=I hope this holds!
 
@@ -60,7 +60,7 @@ desc=How am I going to get down there?
 blockwalk=no
 blockrange=no
 op1=Climb-up
-model=thzq_tombrooml1_1
+model=loc_1762
 name=Rope
 desc=I hope this holds!
 

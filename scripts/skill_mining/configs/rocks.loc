@@ -26,6 +26,7 @@ param=mining_rock_empty,1
 
 [plainrock1_alt]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -54,6 +55,7 @@ active=yes
 width=5
 length=5
 op1=Mine
+op3=hidden
 op2=Prospect
 sharelight=yes
 model=crumbly_loc_493
@@ -62,6 +64,7 @@ desc=The source of all Rune Stones.
 
 [copperrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -75,6 +78,7 @@ param=next_loc_stage_mining,rocks1
 
 [copperrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -88,6 +92,7 @@ param=next_loc_stage_mining,rocks2
 
 [ironrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -101,6 +106,7 @@ param=next_loc_stage_mining,rocks1
 
 [ironrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -114,6 +120,7 @@ param=next_loc_stage_mining,rocks2
 
 [tinrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -127,6 +134,7 @@ param=next_loc_stage_mining,rocks1
 
 [tinrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -140,6 +148,7 @@ param=next_loc_stage_mining,rocks2
 
 [coalrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -153,6 +162,7 @@ param=next_loc_stage_mining,rocks1
 
 [coalrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -166,6 +176,7 @@ param=next_loc_stage_mining,rocks2
 
 [goldrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -179,6 +190,7 @@ param=next_loc_stage_mining,rocks1
 
 [goldrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -192,6 +204,7 @@ param=next_loc_stage_mining,rocks2
 
 [silverrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -205,6 +218,7 @@ param=next_loc_stage_mining,rocks1
 
 [silverrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -218,6 +232,7 @@ param=next_loc_stage_mining,rocks2
 
 [mithrilrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -231,6 +246,7 @@ param=next_loc_stage_mining,rocks1
 
 [mithrilrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -244,6 +260,7 @@ param=next_loc_stage_mining,rocks2
 
 [adamantiterock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -257,6 +274,7 @@ param=next_loc_stage_mining,rocks1
 
 [adamantiterock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -270,6 +288,7 @@ param=next_loc_stage_mining,rocks2
 
 [runiterock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -283,6 +302,7 @@ param=next_loc_stage_mining,rocks1
 
 [runiterock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -296,6 +316,7 @@ param=next_loc_stage_mining,rocks2
 
 [clayrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -309,6 +330,7 @@ param=next_loc_stage_mining,rocks1
 
 [clayrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -322,6 +344,7 @@ param=next_loc_stage_mining,rocks2
 
 [bluriterock]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=25
 blockrange=no
@@ -331,7 +354,7 @@ recol1s=37
 recol1d=34927
 recol2s=24
 recol2d=39869
-model=com_i699
+model=loc_2110
 name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
@@ -339,6 +362,7 @@ param=next_loc_stage_mining,rocks2
 
 [gemrock]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 blockrange=no
@@ -351,6 +375,7 @@ param=next_loc_stage_mining,rocks2
 
 [macro_copperrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -364,6 +389,7 @@ category=mining_rock_macro_gas
 
 [macro_copperrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -377,6 +403,7 @@ category=mining_rock_macro_gas
 
 [macro_ironrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -392,6 +419,7 @@ category=mining_rock_macro_gas
 
 [macro_ironrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -407,6 +435,7 @@ category=mining_rock_macro_gas
 
 [macro_tinrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -422,6 +451,7 @@ category=mining_rock_macro_gas
 
 [macro_tinrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -437,6 +467,7 @@ category=mining_rock_macro_gas
 
 [macro_coalrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -452,6 +483,7 @@ category=mining_rock_macro_gas
 
 [macro_coalrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -467,6 +499,7 @@ category=mining_rock_macro_gas
 
 [macro_goldrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -482,6 +515,7 @@ category=mining_rock_macro_gas
 
 [macro_goldrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -497,6 +531,7 @@ category=mining_rock_macro_gas
 
 [macro_silverrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -512,6 +547,7 @@ category=mining_rock_macro_gas
 
 [macro_silverrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -527,6 +563,7 @@ category=mining_rock_macro_gas
 
 [macro_mithrilrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -542,6 +579,7 @@ category=mining_rock_macro_gas
 
 [macro_mithrilrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -557,6 +595,7 @@ category=mining_rock_macro_gas
 
 [macro_adamantiterock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -572,6 +611,7 @@ category=mining_rock_macro_gas
 
 [macro_adamantiterock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -587,6 +627,7 @@ category=mining_rock_macro_gas
 
 [macro_runiterock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -602,6 +643,7 @@ category=mining_rock_macro_gas
 
 [macro_runiterock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -617,6 +659,7 @@ category=mining_rock_macro_gas
 
 [macro_clayrock1]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -632,6 +675,7 @@ category=mining_rock_macro_gas
 
 [macro_clayrock2]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -647,6 +691,7 @@ category=mining_rock_macro_gas
 
 [macro_bluriterock]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -662,6 +707,7 @@ category=mining_rock_macro_gas
 
 [macro_gemrock]
 op1=Mine
+op3=hidden
 op2=Prospect
 mapscene=12
 anim=gas
@@ -677,12 +723,13 @@ category=mining_rock_macro_gas
 
 [loc_4027]
 op1=Mine
+op3=hidden
 op2=Prospect
 recol1s=10299
 recol1d=8373
 recol2s=24
 recol2d=10295
-model=npc_1202i3
+model=loc_4027
 name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
@@ -690,12 +737,13 @@ param=next_loc_stage_mining,loc_4028
 
 [loc_4028]
 op1=Mine
+op3=hidden
 op2=Prospect
 recol1s=37
 recol1d=8373
 recol2s=24
 recol2d=10295
-model=npc_1679i3
+model=loc_4028
 name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
@@ -703,6 +751,7 @@ param=next_loc_stage_mining,loc_4029
 
 [loc_4029]
 op1=Mine
+op3=hidden
 op2=Prospect
 resizex=96
 resizey=96
@@ -711,7 +760,7 @@ recol1s=37
 recol1d=8373
 recol2s=24
 recol2d=10295
-model=com_i699
+model=loc_2110
 name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
@@ -727,7 +776,7 @@ recol1s=37
 recol1d=8373
 recol2s=24
 recol2d=8373
-model=com_i699
+model=loc_2110
 name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal

@@ -52,7 +52,7 @@ retex1s=wall
 retex1d=door
 recol2s=24
 recol2d=4762
-model=obj_easter_egg
+model=loc_2534
 name=Door
 desc=There's black cross on the door.
 
@@ -63,7 +63,7 @@ retex1s=wall
 retex1d=door
 recol2s=24
 recol2d=4762
-model=obj_easter_egg
+model=loc_2534
 name=Door
 desc=The door is closed.
 
@@ -73,14 +73,14 @@ retex1s=wall
 retex1d=door
 recol2s=24
 recol2d=4762
-model=obj_easter_egg
+model=loc_2534
 name=Door
 
 [loc_2997]
 active=yes
 op1=Open
 raiseobject=no
-model=obj_easter_egg
+model=loc_2534
 name=Door
 desc=The door is closed.
 category=door_closed
@@ -90,7 +90,7 @@ param=next_loc_stage,loc_2998
 active=yes
 op1=Close
 raiseobject=no
-model=obj_easter_egg
+model=loc_2534
 name=Door
 desc=The door is open.
 category=door_opened

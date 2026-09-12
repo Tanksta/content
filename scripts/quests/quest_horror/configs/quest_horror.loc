@@ -573,7 +573,7 @@ hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=obj_khazard_platemail_womanwear
+model=loc_468
 
 [horror_stalagtite_twin_grey]
 blockwalk=no
@@ -581,14 +581,14 @@ hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=idk_woman_torso_crop_top
+model=loc_469
 
 [horror_stalagmite_small_grey]
 hillskew=yes
 active=no
 recol1s=5916
 recol1d=7331
-model=obj_dramen_staff_manwear
+model=loc_534
 
 [horror_rockslide1]
 width=2
@@ -600,7 +600,7 @@ mapscene=11
 active=no
 recol1s=6689
 recol1d=7331
-model=idk_woman_torso_simple
+model=loc_471
 
 [horror_rockslide2]
 width=2
@@ -612,7 +612,7 @@ mapscene=11
 active=no
 recol1s=6689
 recol1d=7331
-model=npc_morgan_le_faye
+model=loc_472
 
 [horror_rockslide3]
 width=2
@@ -624,7 +624,7 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=7331
-model=model_473
+model=loc_473
 
 [horror_rockslide4]
 width=2
@@ -636,21 +636,21 @@ hillskew=yes
 mapscene=12
 recol1s=6689
 recol1d=7331
-model=idk_woman_torso_torn
+model=loc_474
 
 [horror_rockslide5]
 hillskew=yes
 active=no
 recol1s=6689
 recol1d=7331
-model=obj_leather_armour_womanwear
+model=loc_475
 
 [horror_rockslide6]
 hillskew=yes
 active=no
 recol1s=6689
 recol1d=7331
-model=model_476
+model=loc_476
 
 [horror_cave_detail1r]
 mirror=yes

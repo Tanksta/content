@@ -9,7 +9,7 @@ sharelight=yes
 hillskew=yes
 
 [win05_xmas_wall]
-model=model_4502
+model=loc_4502
 recol1s=21534
 recol1d=8371
 recol2s=21530
@@ -659,7 +659,7 @@ op1=Add
 [win05_trapdoor]
 name=Trapdoor
 desc=What could be down here?
-model=shiprail_for_cannons_1
+model=loc_9472
 active=yes
 op1=Climb-down
 forceapproach=north

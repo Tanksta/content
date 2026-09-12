@@ -50,6 +50,9 @@ name=Serum 207 (4)
 category=category_108
 param=next_obj_stage,mort_serum3
 weight=35g
+param=next_obj_stage_temple,mort_serum_perm4
+param=dose_count,4
+param=decant_potion_enum,potion_mortserum
 
 [mort_serum3]
 desc=3 doses serum 207 as described in Herbi Flax's diary.
@@ -67,6 +70,9 @@ name=Serum 207 (3)
 category=category_108
 param=next_obj_stage,mort_serum2
 weight=30g
+param=next_obj_stage_temple,mort_serum_perm3
+param=dose_count,3
+param=decant_potion_enum,potion_mortserum
 
 [mort_serum2]
 desc=2 doses serum 207 as described in Herbi Flax's diary.
@@ -84,6 +90,9 @@ name=Serum 207 (2)
 category=category_108
 param=next_obj_stage,mort_serum1
 weight=25g
+param=next_obj_stage_temple,mort_serum_perm2
+param=dose_count,2
+param=decant_potion_enum,potion_mortserum
 
 [mort_serum1]
 desc=1 dose serum 207 as described in Herbi Flax's diary.
@@ -101,6 +110,9 @@ name=Serum 207 (1)
 category=category_108
 param=next_obj_stage,vial_empty
 weight=20g
+param=next_obj_stage_temple,mort_serum_perm1
+param=dose_count,1
+param=decant_potion_enum,potion_mortserum
 
 [mort_serum_perm4]
 desc=4 doses permanent serum 207 as described in Herbi Flax's diary.
@@ -119,6 +131,8 @@ param=next_obj_stage,mort_serum_perm3
 category=category_109
 tradeable=false
 weight=35g
+param=dose_count,4
+param=decant_potion_enum,potion_mortserumperm
 
 [mort_serum_perm3]
 desc=3 doses permanent serum 207 as described in Herbi Flax's diary.
@@ -137,6 +151,8 @@ param=next_obj_stage,mort_serum_perm2
 category=category_109
 tradeable=false
 weight=30g
+param=dose_count,3
+param=decant_potion_enum,potion_mortserumperm
 
 [mort_serum_perm2]
 desc=2 doses permanent serum 207 as described in Herbi Flax's diary.
@@ -155,6 +171,8 @@ param=next_obj_stage,mort_serum_perm1
 category=category_109
 tradeable=false
 weight=25g
+param=dose_count,2
+param=decant_potion_enum,potion_mortserumperm
 
 [mort_serum_perm1]
 desc=1 dose permanent serum 207 as described in Herbi Flax's diary.
@@ -173,6 +191,8 @@ param=next_obj_stage,vial_empty
 category=category_109
 tradeable=false
 weight=20g
+param=dose_count,1
+param=decant_potion_enum,potion_mortserumperm
 
 [limestonebrick]
 desc=A well carved limestone brick.
@@ -204,6 +224,8 @@ name=Olive oil(4)
 category=category_110
 param=next_obj_stage,sacred_oil4
 weight=35g
+param=dose_count,4
+param=decant_potion_enum,potion_oliveoil
 
 [oliveoil3]
 desc=3 doses of olive oil.
@@ -221,6 +243,8 @@ name=Olive oil(3)
 category=category_110
 param=next_obj_stage,sacred_oil3
 weight=30g
+param=dose_count,3
+param=decant_potion_enum,potion_oliveoil
 
 [oliveoil2]
 desc=2 doses of olive oil.
@@ -238,6 +262,8 @@ name=Olive oil(2)
 category=category_110
 param=next_obj_stage,sacred_oil2
 weight=25g
+param=dose_count,2
+param=decant_potion_enum,potion_oliveoil
 
 [oliveoil1]
 desc=1 dose of olive oil.
@@ -255,3 +281,5 @@ name=Olive oil(1)
 category=category_110
 param=next_obj_stage,sacred_oil1
 weight=20g
+param=dose_count,1
+param=decant_potion_enum,potion_oliveoil

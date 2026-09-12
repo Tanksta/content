@@ -3,7 +3,7 @@ if_close;
 if (p_finduid(uid) = true) {
     @activate_prayer_protectfrommelee;
 }
-return;
+%prayer14 = %prayer14;
 
 [label,activate_prayer_protectfrommelee]
 p_clearpendingaction;

@@ -1,7 +1,7 @@
 [obs_dungeonladderdown]
 active=yes
 op1=Climb-down
-model=totem_pole_8
+model=loc_1759
 name=Ladder
 desc=I can climb down this ladder.
 
@@ -22,7 +22,7 @@ desc=I can climb up this ladder.
 [domeladderdown]
 active=yes
 op1=Climb-down
-model=totem_pole_8
+model=loc_1759
 name=Ladder
 desc=I can climb down this ladder.
 
