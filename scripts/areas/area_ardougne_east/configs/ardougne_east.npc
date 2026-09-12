@@ -750,6 +750,7 @@ walkanim=human_walk_f,human_walk_b,human_walk_l,human_walk_r
 readyanim=human_ready
 op3=Pickpocket
 vislevel=hide
+members=yes
 recol1s=8741
 recol1d=12583
 recol2s=25238

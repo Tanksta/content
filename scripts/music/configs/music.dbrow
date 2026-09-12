@@ -1625,3 +1625,861 @@ data=name,Zealot
 data=playbutton,music:zealot
 data=unlock,6,12
 data=track,zealot
+
+[music_Scape_Original]
+table=music
+data=name,Scape Original
+data=playbutton,music:scape_original
+data=track,scape original
+
+[music_Wilderness]
+table=music
+data=name,Wilderness
+data=playbutton,music:wilderness
+data=unlock,5,14
+data=track,wilderness
+
+[music_Karamja_Jam]
+table=music
+data=name,Karamja Jam
+data=playbutton,music:karamja_jam
+data=unlock,9,30
+data=track,karamja jam
+
+[music_Goblin_Game]
+table=music
+data=name,Goblin Game
+data=playbutton,music:goblin_game
+data=unlock,8,28
+data=track,goblin game
+
+[music_Fruits_de_Mer]
+table=music
+data=name,Fruits de Mer
+data=playbutton,music:fruits_de_mer
+data=unlock,9,17
+data=track,fruits de mer
+
+[music_Etceteria]
+table=music
+data=name,Etceteria
+data=playbutton,music:etceteria
+data=unlock,8,3
+data=track,etcetera
+
+[music_Miscellania]
+table=music
+data=name,Miscellania
+data=playbutton,music:miscellania
+data=unlock,8,2
+data=track,miscellania
+
+[music_Narnode_s_Theme]
+table=music
+data=name,Narnode's Theme
+data=playbutton,music:narnodes_theme
+data=unlock,9,18
+data=track,narnodes theme
+
+[music_Anywhere]
+table=music
+data=name,Anywhere
+data=playbutton,music:anywhere
+data=unlock,8,16
+data=track,anywhere
+
+[music_Technology]
+table=music
+data=name,Technology
+data=playbutton,music:technology
+data=unlock,8,14
+data=track,technology
+
+[music_Monkey_Madness]
+table=music
+data=name,Monkey Madness
+data=playbutton,music:monkey_madness
+data=unlock,8,15
+data=track,monkey madness
+
+[music_Marooned]
+table=music
+data=name,Marooned
+data=playbutton,music:marooned
+data=unlock,8,17
+data=track,marooned
+
+[music_Island_Life]
+table=music
+data=name,Island Life
+data=playbutton,music:island_life
+data=unlock,8,18
+data=track,island life
+
+[music_Temple]
+table=music
+data=name,Temple
+data=playbutton,music:temple
+data=unlock,8,19
+data=track,temple
+
+[music_Suspicious]
+table=music
+data=name,Suspicious
+data=playbutton,music:suspicious
+data=unlock,8,20
+data=track,suspicious
+
+[music_Showdown]
+table=music
+data=name,Showdown
+data=playbutton,music:showdown
+data=unlock,8,21
+data=track,showdown
+
+[music_Find_My_Way]
+table=music
+data=name,Find My Way
+data=playbutton,music:find_my_way
+data=unlock,8,22
+data=track,find my way
+
+[music_Castlewars]
+table=music
+data=name,Castlewars
+data=playbutton,music:castlewars
+data=unlock,8,23
+data=track,castlewars
+
+[music_Melodrama]
+table=music
+data=name,Melodrama
+data=playbutton,music:melodrama
+data=unlock,8,24
+data=track,melodrama
+
+[music_Ready_for_Battle]
+table=music
+data=name,Ready for Battle
+data=playbutton,music:ready_for_battle
+data=unlock,8,25
+data=track,ready for battle
+
+[music_Haunted_Mine]
+table=music
+data=name,Haunted Mine
+data=playbutton,music:haunted_mine
+data=unlock,7,30
+data=track,haunted mine
+
+[music_Spooky_2]
+table=music
+data=name,Spooky 2
+data=playbutton,music:spooky2
+data=unlock,7,26
+data=track,spooky2
+
+[music_Deep_Down]
+table=music
+data=name,Deep Down
+data=playbutton,music:deep_down
+data=unlock,8,0
+data=track,deep down
+
+[music_Chamber]
+table=music
+data=name,Chamber
+data=playbutton,music:chamber
+data=unlock,8,1
+data=track,chamber
+
+[music_Scape_Santa]
+table=music
+data=name,Scape Santa
+data=playbutton,music:scape_santa
+data=track,scape santa
+
+[music_Hells_Bells]
+table=music
+data=name,Hells Bells
+data=playbutton,music:hells_bells
+data=unlock,8,30
+data=track,hells bells
+
+[music_Romancing_the_Crone]
+table=music
+data=name,Romancing the Crone
+data=playbutton,music:romancing_the_crone
+data=unlock,9,8
+data=track,romancing the crone
+
+[music_Stranded]
+table=music
+data=name,Stranded
+data=playbutton,music:stranded
+data=unlock,8,10
+data=track,stranded
+
+[music_Stillness]
+table=music
+data=name,Stillness
+data=playbutton,music:stillness
+data=unlock,8,26
+data=track,stillness
+
+[music_Pathways]
+table=music
+data=name,Pathways
+data=playbutton,music:pathways
+data=unlock,9,31
+data=track,pathways
+
+[music_7th_Realm]
+table=music
+data=name,7th Realm
+data=playbutton,music:7th_realm
+data=unlock,9,29
+data=track,7th realm
+
+[music_Masquerade]
+table=music
+data=name,Masquerade
+data=playbutton,music:masquerade
+data=unlock,9,12
+data=track,masquerade
+
+[music_The_Terrible_Tower]
+table=music
+data=name,The Terrible Tower
+data=playbutton,music:the_terrible_tower
+data=unlock,9,11
+data=track,the terrible tower
+
+[music_The_Slayer]
+table=music
+data=name,The Slayer
+data=playbutton,music:the_slayer
+data=unlock,9,13
+data=track,the slayer
+
+[music_Fenkenstrain_s_Refrain]
+table=music
+data=name,Fenkenstrain's Refrain
+data=playbutton,music:fenkenstrains_refrain
+data=unlock,9,15
+data=track,fenkenstrain's refrain
+
+[music_Body_Parts]
+table=music
+data=name,Body Parts
+data=playbutton,music:body_parts
+data=unlock,9,14
+data=track,body parts
+
+[music_Barking_Mad]
+table=music
+data=name,Barking Mad
+data=playbutton,music:barking_mad
+data=unlock,9,18
+data=track,barking mad
+
+[music_Shipwrecked]
+table=music
+data=name,Shipwrecked
+data=playbutton,music:shipwrecked
+data=unlock,9,20
+data=track,shipwrecked
+
+[music_Phasmatys]
+table=music
+data=name,Phasmatys
+data=playbutton,music:phasmatys
+data=unlock,9,21
+data=track,phasmatys
+
+[music_The_Other_Side]
+table=music
+data=name,The Other Side
+data=playbutton,music:the_other_side
+data=unlock,9,22
+data=track,the other side
+
+[music_Dragontooth_Island]
+table=music
+data=name,Dragontooth Island
+data=playbutton,music:dragontooth_island
+data=unlock,9,25
+data=track,dragontooth island
+
+[music_Monster_Melee]
+table=music
+data=name,Monster Melee
+data=playbutton,music:monster_melee
+data=unlock,9,16
+data=track,monster melee
+
+[music_Cave_of_Beasts]
+table=music
+data=name,Cave of Beasts
+data=playbutton,music:cave_of_beasts
+data=unlock,9,24
+data=track,cave of beasts
+
+[music_Settlement]
+table=music
+data=name,Settlement
+data=playbutton,music:settlement
+data=unlock,9,23
+data=track,settlement
+
+[music_Cave_of_the_Goblins]
+table=music
+data=name,Cave of the Goblins
+data=playbutton,music:cave_of_the_goblins
+data=unlock,10,16
+data=track,cave of the goblins
+
+[music_Time_to_Mine]
+table=music
+data=name,Time to Mine
+data=playbutton,music:time_to_mine
+data=unlock,10,1
+data=track,time to mine
+
+[music_In_Between]
+table=music
+data=name,In Between
+data=playbutton,music:in_between
+data=unlock,10,2
+data=track,in between
+
+[music_Claustrophobia]
+table=music
+data=name,Claustrophobia
+data=playbutton,music:claustrophobia
+data=unlock,10,3
+data=track,claustrophobia
+
+[music_Dynasty]
+table=music
+data=name,Dynasty
+data=playbutton,music:dynasty
+data=unlock,9,19
+data=track,dynasty
+
+[music_The_Golem]
+table=music
+data=name,The Golem
+data=playbutton,music:the_golem
+data=unlock,10,7
+data=track,the golem
+
+[music_Forgotten]
+table=music
+data=name,Forgotten
+data=playbutton,music:forgotten
+data=unlock,10,8
+data=track,forgotten
+
+[music_Throne_of_the_Demon]
+table=music
+data=name,Throne of the Demon
+data=playbutton,music:throne_of_the_demon
+data=unlock,10,9
+data=track,throne of the demon
+
+[music_Bone_Dry]
+table=music
+data=name,Bone Dry
+data=playbutton,music:bone_dry
+data=unlock,7,24
+data=track,bone dry
+
+[music_Path_of_Peril]
+table=music
+data=name,Path of Peril
+data=playbutton,music:path_of_peril
+data=unlock,10,19
+data=track,path of peril
+
+[music_Sarcophagus]
+table=music
+data=name,Sarcophagus
+data=playbutton,music:sarcophagus
+data=unlock,9,27
+data=track,sarcophagus
+
+[music_Frostbite]
+table=music
+data=name,Frostbite
+data=playbutton,music:frostbite
+data=unlock,8,12
+data=track,frostbite
+
+[music_Down_Below]
+table=music
+data=name,Down Below
+data=playbutton,music:down_below
+data=unlock,9,28
+data=track,down below
+
+[music_City_of_the_Dead]
+table=music
+data=name,City of the Dead
+data=playbutton,music:city_of_the_dead
+data=unlock,10,12
+data=track,city of the dead
+
+[music_Scarab]
+table=music
+data=name,Scarab
+data=playbutton,music:scarab
+data=unlock,9,26
+data=track,scarab
+
+[music_Sphinx]
+table=music
+data=name,Sphinx
+data=playbutton,music:sphinx
+data=unlock,10,14
+data=track,sphinx
+
+[music_Hypnotized]
+table=music
+data=name,Hypnotized
+data=playbutton,music:hypnotized
+data=unlock,10,13
+data=track,hypnotized
+
+[music_Mirage]
+table=music
+data=name,Mirage
+data=playbutton,music:mirage
+data=unlock,10,15
+data=track,mirage
+
+[music_Tears_of_Guthix]
+table=music
+data=name,Tears of Guthix
+data=playbutton,music:tears_of_guthix
+data=unlock,10,23
+data=track,tears of guthix
+
+[music_The_Power_of_Tears]
+table=music
+data=name,The Power of Tears
+data=playbutton,music:the_power_of_tears
+data=unlock,10,31
+data=track,the power of tears
+
+[music_Dance_of_the_Undead]
+table=music
+data=name,Dance of the Undead
+data=playbutton,music:dance_of_the_undead
+data=unlock,10,10
+data=track,dance of the undead
+
+[music_Dangerous_Way]
+table=music
+data=name,Dangerous Way
+data=playbutton,music:dangerous_way
+data=unlock,10,11
+data=track,dangerous way
+
+[music_Wayward]
+table=music
+data=name,Wayward
+data=playbutton,music:wayward
+data=unlock,10,20
+data=track,wayward
+
+[music_Zogre_Dance]
+table=music
+data=name,Zogre Dance
+data=playbutton,music:zogre_dance
+data=unlock,10,18
+data=track,zogre dance
+
+[music_Romper_Chomper]
+table=music
+data=name,Romper Chomper
+data=playbutton,music:romper_chomper
+data=unlock,10,24
+data=track,romper chomper
+
+[music_The_Lost_Melody]
+table=music
+data=name,The Lost Melody
+data=playbutton,music:the_lost_melody
+data=unlock,10,27
+data=track,the lost melody
+
+[music_The_Lost_Tribe]
+table=music
+data=name,The Lost Tribe
+data=playbutton,music:the_lost_tribe
+data=unlock,11,2
+data=track,the lost tribe
+
+[music_Tale_of_Keldagrim]
+table=music
+data=name,Tale of Keldagrim
+data=playbutton,music:tale_of_keldagrim
+data=unlock,10,21
+data=track,tale of keldagrim
+
+[music_Land_of_the_Dwarves]
+table=music
+data=name,Land of the Dwarves
+data=playbutton,music:land_of_the_dwarves
+data=unlock,10,22
+data=track,land of the dwarves
+
+[music_Into_the_Abyss]
+table=music
+data=name,Into the Abyss
+data=playbutton,music:into_the_abyss
+data=unlock,10,29
+data=track,into the abyss
+
+[music_The_Rogues_Den]
+table=music
+data=name,The Rogues Den
+data=playbutton,music:the_rogues_den
+data=unlock,10,25
+data=track,the rogues den
+
+[music_The_Far_Side]
+table=music
+data=name,The Far Side
+data=playbutton,music:the_far_side
+data=unlock,10,26
+data=track,the far side
+
+[music_The_Chosen]
+table=music
+data=name,The Chosen
+data=playbutton,music:the_chosen
+data=unlock,11,4
+data=track,the chosen
+
+[music_Ground_Scape]
+table=music
+data=name,Ground Scape
+data=playbutton,music:ground_scape
+data=track,ground scape
+
+[music_Far_Away]
+table=music
+data=name,Far Away
+data=playbutton,music:far_away
+data=unlock,10,4
+data=track,far away
+
+[music_Fight_or_Flight]
+table=music
+data=name,Fight or Flight
+data=playbutton,music:fight_or_flight
+data=unlock,10,5
+data=track,fight or flight
+
+[music_Forgettable_Melody]
+table=music
+data=name,Forgettable Melody
+data=playbutton,music:forgettable_melody
+data=unlock,11,6
+data=track,forgettable melody
+
+[music_Right_on_Track]
+table=music
+data=name,Right on Track
+data=playbutton,music:right_on_track
+data=unlock,11,7
+data=track,right on track
+
+[music_The_Desolate_Isle]
+table=music
+data=name,The Desolate Isle
+data=playbutton,music:the_desolate_isle
+data=unlock,11,10
+data=track,the desolate isle
+
+[music_The_Monsters_Below]
+table=music
+data=name,The Monsters Below
+data=playbutton,music:the_monsters_below
+data=unlock,11,9
+data=track,the monsters below
+
+[music_Pheasant_Peasant]
+table=music
+data=name,Pheasant Peasant
+data=playbutton,music:pheasant_peasant
+data=unlock,11,1
+data=track,pheasant peasant
+
+[music_Frogland]
+table=music
+data=name,Frogland
+data=playbutton,music:frogland
+data=unlock,11,16
+data=track,frogland
+
+[music_The_Quizmaster]
+table=music
+data=name,The Quizmaster
+data=playbutton,music:the_quizmaster
+data=unlock,10,30
+data=track,the quizmaster
+
+[music_Brew_Hoo_Hoo]
+table=music
+data=name,Brew Hoo Hoo!
+data=playbutton,music:brew_hoo_hoo
+data=unlock,11,18
+data=track,brew hoo hoo
+
+[music_Evil_Bob_s_Island]
+table=music
+data=name,Evil Bob's Island
+data=playbutton,music:evil_bobs_island
+data=unlock,10,28
+data=track,evil bobs island
+
+[music_Dead_Can_Dance]
+table=music
+data=name,Dead Can Dance
+data=playbutton,music:dead_can_dance
+data=unlock,11,21
+data=track,dead can dance
+
+[music_Wild_Side]
+table=music
+data=name,Wild Side
+data=playbutton,music:wild_side
+data=unlock,11,20
+data=track,wild side
+
+[music_The_Cellar_Dwellers]
+table=music
+data=name,The Cellar Dwellers
+data=playbutton,music:the_cellar_dwellers
+data=unlock,11,22
+data=track,the cellar dwellers
+
+[music_Have_A_Blast]
+table=music
+data=name,Have A Blast
+data=playbutton,music:have_a_blast
+data=unlock,11,5
+data=track,have a blast
+
+[music_Jungle_Troubles]
+table=music
+data=name,Jungle Troubles
+data=playbutton,music:jungle_troubles
+data=unlock,11,23
+data=track,jungle troubles
+
+[music_Strange_Place]
+table=music
+data=name,Strange Place
+data=playbutton,music:strange_place
+data=unlock,11,17
+data=track,strange place
+
+[music_Fire_and_Brimstone]
+table=music
+data=name,Fire and Brimstone
+data=playbutton,music:com_330
+data=unlock,11,14
+data=track,fire and brimstone
+
+[music_In_the_Pits]
+table=music
+data=name,In the Pits
+data=playbutton,music:com_331
+data=unlock,11,15
+data=track,in the pits
+
+[music_TzHaar]
+table=music
+data=name,TzHaar!
+data=playbutton,music:tzhaar
+data=unlock,11,19
+data=track,tzhaar
+
+[music_Temple_of_Light]
+table=music
+data=name,Temple of Light
+data=playbutton,music:temple_of_light
+data=unlock,10,6
+data=track,temple of light
+
+[music_La_Mort]
+table=music
+data=name,La Mort
+data=playbutton,music:la_mort
+data=unlock,7,0
+data=track,la mort
+
+[music_Corporal_Punishment]
+table=music
+data=name,Corporal Punishment
+data=playbutton,music:corporal_punishment
+data=unlock,11,3
+data=track,corporal punishment
+
+[music_Mudskipper_Melody]
+table=music
+data=name,Mudskipper Melody
+data=playbutton,music:mudskipper_melody
+data=unlock,12,9
+data=track,mudskipper melody
+
+[music_Blistering_Barnacles]
+table=music
+data=name,Blistering Barnacles
+data=playbutton,music:blistering_barnacles
+data=unlock,12,0
+data=track,blistering barnacles
+
+[music_Aye_Car_Rum_Ba]
+table=music
+data=name,Aye Car Rum Ba
+data=playbutton,music:aye_car_rum_ba
+data=unlock,11,31
+data=track,aye car rum ba
+
+[music_Dagannoth_Dawn]
+table=music
+data=name,Dagannoth Dawn
+data=playbutton,music:dagannoth_dawn
+data=unlock,12,13
+data=track,dagannoth dawn
+
+[music_Subterranea]
+table=music
+data=name,Subterranea
+data=playbutton,music:subterranea
+data=unlock,12,10
+data=track,subterranea
+
+[music_Xenophobe]
+table=music
+data=name,Xenophobe
+data=playbutton,music:xenophobe
+data=unlock,12,14
+data=track,xenophobe
+
+[music_Grip_of_the_Talon]
+table=music
+data=name,Grip of the Talon
+data=playbutton,music:grip_of_the_talon
+data=unlock,12,12
+data=track,grip of the talon
+
+[music_Incantation]
+table=music
+data=name,Incantation
+data=playbutton,music:incantation
+data=unlock,12,11
+data=track,incantation
+
+[music_Catch_me_if_you_can]
+table=music
+data=name,Catch me if you can
+data=playbutton,music:catch_me_if_you_can
+data=unlock,11,24
+data=track,catch me if you can
+
+[music_Bubble_and_Squeak]
+table=music
+data=name,Bubble and Squeak
+data=playbutton,music:bubble_and_squeak
+data=unlock,11,27
+data=track,bubble and squeak
+
+[music_The_Noble_Rodent]
+table=music
+data=name,The Noble Rodent
+data=playbutton,music:the_noble_rodent
+data=unlock,11,26
+data=track,the noble rodent
+
+[music_Rat_a_Tat_Tat]
+table=music
+data=name,Rat a Tat Tat
+data=playbutton,music:rat_a_tat_tat
+data=unlock,11,25
+data=track,rat a tat tat
+
+[music_Rat_Hunt]
+table=music
+data=name,Rat Hunt
+data=playbutton,music:rat_hunt
+data=unlock,11,29
+data=track,rat hunt
+
+[music_Sarim_s_Vermin]
+table=music
+data=name,Sarim's Vermin
+data=playbutton,music:sarims_vermin
+data=unlock,11,28
+data=track,sarims vermin
+
+[music_Desert_Heat]
+table=music
+data=name,Desert Heat
+data=playbutton,music:desert_heat
+data=unlock,11,13
+data=track,desert heat
+
+[music_The_Genie]
+table=music
+data=name,The Genie
+data=playbutton,music:the_genie
+data=unlock,11,12
+data=track,the genie
+
+[music_Over_to_Nardah]
+table=music
+data=name,Over to Nardah
+data=playbutton,music:over_to_nardah
+data=unlock,11,8
+data=track,over to nardah
+
+[music_Spirits_of_the_Elid]
+table=music
+data=name,Spirits of the Elid
+data=playbutton,music:spirits_of_the_elid
+data=unlock,11,11
+data=track,spirits of the elid
+
+[music_Title_Fight]
+table=music
+data=name,Title Fight
+data=playbutton,music:title_fight
+data=unlock,12,15
+data=track,title fight
+
+[music_Victory_is_Mine]
+table=music
+data=name,Victory is Mine
+data=playbutton,music:victory_is_mine
+data=unlock,12,16
+data=track,victory is mine
+
+[music_Woe_of_the_Wyvern]
+table=music
+data=name,Woe of the Wyvern
+data=playbutton,music:woe_of_the_wyvern
+data=unlock,12,17
+data=track,woe of the wyvern
+
+[music_Diango_s_Little_Helpers]
+table=music
+data=name,Diango's Little Helpers
+data=playbutton,music:diangos_little_helpers
+data=unlock,12,19
+data=track,diangos little helpers

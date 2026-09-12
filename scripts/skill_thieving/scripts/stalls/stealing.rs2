@@ -20,6 +20,10 @@
 @attempt_steal_from_stall(loc_type, loc_coord, loc_angle, loc_shape);
 
 [oploc2,seed_stall] // Seed stall
+if (map_members = ^false) {
+    mes("To do that you must login to a members' server");
+    return;
+}
 @attempt_steal_from_stall(loc_type, loc_coord, loc_angle, loc_shape);
 
 [oploc2,misc_fish_market] // Fish stall
