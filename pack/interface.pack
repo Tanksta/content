@@ -8213,13 +8213,13 @@
 8285=duel_select_type:com_187
 8286=duel_select_type:com_188
 8287=agilityarena_overlay
-8287=inter_177
+9196=inter_177
 8288=agilityarena_overlay:com_0
 8289=agilityarena_overlay:com_1
 8290=agilityarena_overlay:com_2
 8291=agilityarena_overlay:com_3
 8292=agilityarena_trade
-8292=inter_178
+9275=inter_178
 8293=agilityarena_trade:com_0
 8294=agilityarena_trade:com_1
 8295=agilityarena_trade:com_2
@@ -8388,7 +8388,7 @@
 8458=regicide_still:com_165
 8459=regicide_still:com_166
 8460=combat_polearm
-8460=inter_179
+9359=inter_179
 8461=combat_polearm:preview
 8462=combat_polearm:com_1
 8463=combat_polearm:name
@@ -8440,7 +8440,7 @@
 8509=inter_273:com_16
 8510=inter_167:com_3
 8510=inter_167:com_4
-8511=inter_180
+9454=inter_180
 8512=inter_167:com_5
 8513=inter_167:com_6
 8514=inter_167:com_7
@@ -8575,11 +8575,11 @@
 8675=magic:com_498
 8676=magic:com_499
 8677=eadgar_fade_to_black
-8677=inter_182
+9632=inter_182
 8678=eadgar_fade_to_black:com_0
 8679=questlist:eadgar
-8680=inter_183
-8714=inter_184
+9720=inter_183
+9839=inter_184
 8714=skill_guide
 8715=skill_guide:com_0
 8716=skill_guide:skill_name
@@ -11240,7 +11240,7 @@
 11089=misc_both_manage:com_104
 11090=inter_210:com_105
 11091=inter_210:com_106
-11092=inter_212
+11104=inter_212
 11092=misc_shipjourney
 11093=inter_211:com_0
 11093=misc_shipjourney:com_0
