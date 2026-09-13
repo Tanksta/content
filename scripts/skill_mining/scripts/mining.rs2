@@ -14,6 +14,10 @@
 [oploc1,gemrock] @mining_firstswing(get_ore_gem_rock);
 [oploc3,gemrock] @mining_continue(get_ore_gem_rock);
 
+// Tears of Guthix stone
+[oploc1,_mining_rock_tog] @mining_firstswing(get_ore_tog_stone);
+[oploc3,_mining_rock_tog] @mining_continue(get_ore_tog_stone);
+
 [label,mining_firstswing](label $get_ore)
 def_int $is_empty = loc_param(mining_rock_empty);
 if ($is_empty = ^true) {
@@ -185,6 +189,25 @@ if (random($chance) = ^true) {
     // Temp note: dur does not need updated
     loc_change(loc_param(next_loc_stage_mining), $respawn);
     sound_synth(mine, 1, 0); // Sudden says its mine
+    anim(null, 0);
+    inv_add(inv, db_getfield($data, mining_table:rock_output, 0), 1);
+    stat_advance(mining, db_getfield($data, mining_table:rock_exp, 0));
+    mes("You manage to mine some <db_getfield($data, mining_table:ore_name, 0)>.");
+    return;
+}
+p_oploc(3);
+
+
+[label,get_ore_tog_stone]
+db_find(mining_table:rock, loc_type);
+def_dbrow $data = db_findnext;
+if ($data = null) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (stat_random(mining, db_getfield($data, mining_table:rock_successchance, 0)) = true) {
+    p_delay(0);
+    sound_synth(mine, 1, 0);
     anim(null, 0);
     inv_add(inv, db_getfield($data, mining_table:rock_output, 0), 1);
     stat_advance(mining, db_getfield($data, mining_table:rock_exp, 0));

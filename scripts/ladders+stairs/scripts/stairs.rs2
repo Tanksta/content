@@ -178,7 +178,12 @@ switch_coord (loc_coord) {
     case default : @unhandled_stairs(loc_coord);
 }
 
+[oploc1,sarim_spiralstairs] @handle_spiralstairs;
+
 [oploc1,spiralstairs]
+@handle_spiralstairs;
+
+[label,handle_spiralstairs]
 // Climb up
 switch_coord (loc_coord) {
     case 0_50_50_4_7 : p_telejump(1_50_50_5_9); // Lumbridge Castle South - level 0
@@ -284,7 +289,12 @@ switch_coord (loc_coord) {
     case default : @unhandled_stairs(loc_coord);
 }
 
+[oploc1,sarim_spiralstairstop] @handle_spiralstairstop;
+
 [oploc1,spiralstairstop]
+@handle_spiralstairstop;
+
+[label,handle_spiralstairstop]
 // Climb down
 switch_coord (loc_coord) {
     case 2_50_50_5_8 : p_telejump(1_50_50_5_9); // Lumbridge Castle South - level 2

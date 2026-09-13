@@ -21,6 +21,45 @@ p_oploc(1);
 
 [oploc1,_mining_rock_macro_gas] @mining_firstswing(get_ore_macro_gas); 
 [oploc3,_mining_rock_macro_gas] @mining_continue(get_ore_macro_gas);
+[oploc1,gas] @mining_gas_firstswing;
+[oploc3,gas] @mining_gas_continue;
+
+[label,mining_gas_firstswing]
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    anim(null, 0);
+    ~mesbox("You need a Pickaxe to mine this rock. You do not have a Pickaxe which you have the Mining level to use.");
+    return;
+}
+def_int $mining_rate = oc_param($pickaxe, mining_rate);
+if (%action_delay < map_clock) {
+    %action_delay = calc(map_clock + $mining_rate);
+    p_oploc(1);
+    return;
+}
+anim(oc_param($pickaxe, mining_animation), 0);
+mes("You swing your pick at the rock.");
+if (%action_delay = map_clock) {
+    jump(get_ore_macro_gas);
+}
+p_oploc(3);
+
+[label,mining_gas_continue]
+def_obj $pickaxe = ~pickaxe_checker;
+if ($pickaxe = null) {
+    anim(null, 0);
+    ~mesbox("You need a Pickaxe to mine this rock. You do not have a Pickaxe which you have the Mining level to use.");
+    return;
+}
+def_int $mining_rate = oc_param($pickaxe, mining_rate);
+sound_synth(mine_quick, 1, 0);
+if (%action_delay < map_clock) {
+    %action_delay = calc(map_clock + $mining_rate);
+} else if (%action_delay = map_clock) {
+    anim(oc_param($pickaxe, mining_animation), 0);
+    jump(get_ore_macro_gas);
+}
+p_oploc(3);
 
 [label,get_ore_macro_gas]
 // Getting mixed information on the damage:

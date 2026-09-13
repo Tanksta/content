@@ -1,0 +1,25 @@
+[rimmington_mining_spade]
+name=Spade
+desc=Popular with farmers and treasure hunters.
+model=rimmington_mining_spade
+op1=Take
+blockwalk=no
+blockrange=no
+recol1s=61
+recol1d=5181
+recol2s=41
+recol2d=61
+recol3s=11171
+recol3d=52118
+forceapproach=north
+
+[rimmington_mining_no_spade]
+model=rimmington_mining_no_spade
+blockrange=no
+active=no
+recol1s=61
+recol1d=5181
+recol2s=57
+recol2d=5177
+recol3s=70
+recol3d=5190

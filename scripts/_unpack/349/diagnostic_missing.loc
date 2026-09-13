@@ -309,26 +309,6 @@ name=Rubble
 desc=Broken parts of an old temple.
 model=loc_2510
 
-[potters_wheel]
-name=Potter's Wheel
-desc=Used for fashioning clay items.
-model=loc_2642
-forceapproach=east
-
-[pottery_oven]
-name=Pottery Oven
-desc=Bake your clay pots in here.
-model=loc_2643
-length=2
-forceapproach=east
-
-[spinning_wheel]
-name=Spinning wheel
-desc=Used for spinning thread.
-model=loc_2644
-forceapproach=south
-op2=Spin
-
 [sand_pit]
 name=Sand pit
 desc=A tray of sand.
@@ -34093,26 +34073,6 @@ op1=Climb-down
 forceapproach=north
 sharelight=yes
 mapscene=7
-
-[sarim_spiralstairs]
-name=Staircase
-desc=I can climb up these stairs.
-model=sarim_spiralstairs
-width=2
-length=2
-op1=Climb-up
-forceapproach=south
-mapscene=7
-ambient=20
-
-[sarim_spiralstairstop]
-name=Staircase
-desc=I can climb down these stairs.
-model=sarim_spiralstairstop
-op1=Climb-down
-forceapproach=east
-mapscene=7
-ambient=20
 
 [mourning_cavewall_candle_face1]
 model=mourning_cavewall_candle_face1

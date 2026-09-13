@@ -6,6 +6,14 @@ forceapproach=south
 op2=Spin
 category=spinning_wheel
 
+[spinning_wheel]
+name=Spinning wheel
+desc=Used for spinning thread.
+model=loc_2644
+forceapproach=south
+op2=Spin
+category=spinning_wheel
+
 [flax]
 name=Flax
 desc=A plant cultivated for fibres.

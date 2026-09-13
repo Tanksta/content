@@ -5,10 +5,26 @@ model=obj_twpart2
 forceapproach=east
 category=potters_wheel
 
+[potters_wheel]
+name=Potter's Wheel
+desc=Used for fashioning clay items.
+model=loc_2642
+forceapproach=east
+category=potters_wheel
+
 [potteryoven]
 name=Pottery Oven
 desc=Bake your clay pots in here.
 model=obj_half_a_meat_pie
+length=2
+forceapproach=east
+op1=Fire
+category=pottery_oven
+
+[pottery_oven]
+name=Pottery Oven
+desc=Bake your clay pots in here.
+model=loc_2643
 length=2
 forceapproach=east
 op1=Fire

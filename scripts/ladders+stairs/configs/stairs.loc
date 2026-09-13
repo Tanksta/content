@@ -87,6 +87,19 @@ width=2
 length=2
 op1=Climb-up
 mapscene=7
+category=spiralstairs
+
+[sarim_spiralstairs]
+name=Staircase
+desc=I can climb up these stairs.
+model=sarim_spiralstairs
+width=2
+length=2
+op1=Climb-up
+forceapproach=south
+mapscene=7
+ambient=20
+category=spiralstairs
 
 [spiralstairsmiddle]
 name=Staircase
@@ -106,6 +119,17 @@ model=furniture_spiralstairstop
 op1=Climb-down
 forceapproach=east
 mapscene=7
+category=spiralstairstop
+
+[sarim_spiralstairstop]
+name=Staircase
+desc=I can climb down these stairs.
+model=sarim_spiralstairstop
+op1=Climb-down
+forceapproach=east
+mapscene=7
+ambient=20
+category=spiralstairstop
 
 [balance40up]
 name=Staircase

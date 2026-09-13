@@ -79,3 +79,11 @@ model=sink
 name=Sink
 desc=Ideal for washing things in.
 category=watersource
+
+[rimmington_sink]
+name=Sink
+desc=Wash your hands!
+model=rimmington_sink
+length=2
+blockrange=no
+category=watersource

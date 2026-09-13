@@ -2,6 +2,7 @@
 switch_obj (last_useitem)
 {
     case limestone : @craft_limestonebrick;
+    case tog_stone : @craft_tog_bowl;
     case uncut_sapphire, uncut_emerald, uncut_ruby, uncut_diamond, uncut_dragonstone, uncut_onyx, uncut_opal, uncut_jade, uncut_red_topaz : @crafting_gem(last_useitem);
     case opal, smalloysterpearls, bigoysterpearls : @make_bolt_tips(last_useitem);
     case wolf_bones : @make_wolf_bone_tips;
@@ -9,6 +10,13 @@ switch_obj (last_useitem)
     case default :
         if(oc_category(last_useitem) = category_3) @craft_snelm(last_useitem);
         ~displaymessage(^dm_default);
+}
+
+[opheldu,tog_stone]
+if (last_useitem = chisel) {
+    @craft_tog_bowl;
+} else {
+    ~displaymessage(^dm_default);
 }
 
 //--- Label to craft a gem
@@ -62,3 +70,10 @@ mes("You cut the <$product_name>.");
 inv_add(inv, $cut_gem, 1);
 stat_advance(crafting, db_getfield($data, gem_cutting_table:experience, 0));
 //-----------------------
+
+[label,craft_tog_bowl]
+anim(human_limestonecutting, 0);
+sound_synth(chisel, 1, 0);
+inv_del(inv, tog_stone, 1);
+inv_add(inv, tog_bowl, 1);
+mes("You make a stone bowl.");
