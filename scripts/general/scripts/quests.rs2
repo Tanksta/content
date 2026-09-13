@@ -335,6 +335,9 @@ if (%mm_main >= ^mm_complete) {
 if (%routequest >= ^routequest_complete) {
     $questpoints = add($questpoints, ^routequest_questpoints); 
 }
+if (%roving_elves_quest = ^roving_complete) {
+    $questpoints = add($questpoints, ^roving_questpoints);
+}
 return ($questpoints);
 
 [proc,update_questlist]
@@ -374,6 +377,7 @@ if (%phoenixgang > ^phoenixgang_not_started & %blackarmgang ! ^blackarmgang_comp
 ~send_quest_progress_colour(questlist:arthur, %arthur, ^arthur_complete);
 ~send_quest_progress_colour(questlist:tree, %treequest, ^tree_complete);
 ~send_quest_progress_colour(questlist:waterfall, %waterfall_quest, ^waterfall_complete);
+~send_quest_progress_colour(questlist:roving_elves, %roving_elves_quest, ^roving_complete);
 ~send_quest_progress_colour(questlist:grail, %grail, ^grail_complete);
 ~send_quest_progress_colour(questlist:ball, %ballquest, ^ball_complete);
 ~send_quest_progress_colour(questlist:murder, %murderquest, ^murder_complete);

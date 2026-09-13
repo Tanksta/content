@@ -153,6 +153,7 @@ switch_category (oc_category($obj)) {
     case weapon_polearm : ~weapon_category_tab_attack(combat_polearm:preview, combat_polearm:name, combat_polearm, $obj, combat_polearm:specbar_layer);
     // ranged
     case weapon_bow : ~weapon_category_tab_attack(combat_bow:preview, combat_bow:name, combat_bow, $obj, combat_bow:specbar_layer);
+    case weapon_chargebow : ~weapon_category_tab_attack(combat_bow:preview, combat_bow:name, combat_bow, $obj, combat_bow:specbar_layer);
     case weapon_crossbow : ~weapon_category_tab_attack(combat_crossbow:preview, combat_crossbow:name, combat_crossbow, $obj, combat_crossbow:specbar_layer);
     case weapon_thrown, weapon_javelin : ~weapon_category_tab_attack(combat_thrown:preview, combat_thrown:name, combat_thrown, $obj, combat_thrown:specbar_layer);
     // magic
@@ -230,6 +231,7 @@ switch_category (oc_category($obj)) {
     case weapon_polearm : ~.weapon_category_tab_attack(combat_polearm:preview, combat_polearm:name, combat_polearm, $obj, combat_polearm:specbar_layer);
     // ranged
     case weapon_bow : ~.weapon_category_tab_attack(combat_bow:preview, combat_bow:name, combat_bow, $obj, combat_bow:specbar_layer);
+    case weapon_chargebow : ~.weapon_category_tab_attack(combat_bow:preview, combat_bow:name, combat_bow, $obj, combat_bow:specbar_layer);
     case weapon_crossbow : ~.weapon_category_tab_attack(combat_crossbow:preview, combat_crossbow:name, combat_crossbow, $obj, combat_crossbow:specbar_layer);
     case weapon_thrown, weapon_javelin : ~.weapon_category_tab_attack(combat_thrown:preview, combat_thrown:name, combat_thrown, $obj, combat_thrown:specbar_layer);
     // magic

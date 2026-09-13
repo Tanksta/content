@@ -211,20 +211,13 @@ if (tzhaar_fightcave_active = true | tzhaar_fightcave_return_pending = true) {
 ~tzhaar_fightcave_cleanup;
 ~tzhaar_fightcave_reset;
 def_boolean $refresh = false;
-if (%tzhaar_fightpit_state > 0 | $fightpit_skull = true | $in_fightpit = true) {
-    %tzhaar_fightpit_remaining = 0;
-    %tzhaar_fightpit_state = 0;
-    set_player_op(null, 2, ^false);
-    if_openoverlay(null);
-    if ($fightpit_skull = true) {
-        ~headicon_del(^headicon_fightpit_skull);
-    }
+if ($fightpit_skull = true | $in_fightpit = true) {
+    ~tzhaar_fightpit_cleanup_player;
     $refresh = true;
 }
 if ($refresh = true) {
     ~tzhaar_fightpit_refresh_all;
 }
-%tzhaar_fightpit_state = 0;
 if ($resume_fightcave = true) {
     p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
     ~music_refresh_autoplay;
@@ -244,13 +237,14 @@ if ($in_fightpit = true) {
 }
 
 [proc,tzhaar_logout]
+def_boolean $in_fightpit = ~tzhaar_in_fightpit(coord);
 def_boolean $fightpit_skull = ~headicon_exists(^headicon_fightpit_skull);
-if (tzhaar_fightcave_active = false & %tzhaar_fightpit_state = 0 & $fightpit_skull = false) {
+if (tzhaar_fightcave_active = false & $in_fightpit = false & $fightpit_skull = false) {
     return;
 }
 def_boolean $refresh = false;
 def_boolean $finish_round = false;
-if (%tzhaar_fightpit_state = 2 & ~tzhaar_in_fightpit_arena(coord) = true) {
+if ($in_fightpit = true & ~tzhaar_in_fightpit_arena(coord) = true) {
     $finish_round = true;
 }
 if (tzhaar_fightcave_active = true) {
@@ -260,17 +254,10 @@ if (tzhaar_fightcave_active = true) {
     p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
     ~music_refresh_autoplay;
 }
-if (%tzhaar_fightpit_state > 0 | $fightpit_skull = true) {
-    %tzhaar_fightpit_remaining = 0;
-    %tzhaar_fightpit_state = 0;
-    set_player_op(null, 2, ^false);
-    if_openoverlay(null);
-    if ($fightpit_skull = true) {
-        ~headicon_del(^headicon_fightpit_skull);
-    }
+if ($in_fightpit = true | $fightpit_skull = true) {
+    ~tzhaar_fightpit_cleanup_player;
     $refresh = true;
 }
-%tzhaar_fightpit_state = 0;
 if ($refresh = true) {
     if ($finish_round = true) {
         ~tzhaar_fightpit_try_finish_round;
@@ -279,7 +266,7 @@ if ($refresh = true) {
 }
 
 [proc,tzhaar_music_refresh]
-if (%tzhaar_fightpit_state > 0) {
+if (~tzhaar_in_fightpit(coord) = true) {
     ~music_playrow(music_Fire_and_Brimstone);
     return;
 }

@@ -2,7 +2,7 @@
 gosub(npc_death);
 if (npc_findhero = ^false) return;
 
-if (inv_total(inv, roving_old_consecration_seed) = 0) {
+if (%roving_elves_quest = ^roving_seed_fetch & inv_total(inv, roving_old_consecration_seed) = 0 & inv_total(bank, roving_old_consecration_seed) = 0) {
     obj_add(npc_coord, roving_old_consecration_seed, 1, ^lootdrop_duration);
 }
 

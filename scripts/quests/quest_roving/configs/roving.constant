@@ -1,6 +1,8 @@
 ^roving_roam_ticks = 500
 ^roving_questpoints = 1
 
+^roving_cadarn_lineage_pages = 3
+
 ^roving_grandmothers_remains = 1
 ^roving_agreed_to_help = 2
 ^roving_seed_fetch = 3

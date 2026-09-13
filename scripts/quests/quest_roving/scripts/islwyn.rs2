@@ -9,10 +9,15 @@ switch_int (%roving_elves_quest) {
     case ^roving_seed_fetch : @roving_islwyn_seed_fetch;
     case ^roving_enchanted_seed : @roving_islwyn_enchanted_seed;
     case ^roving_planted_seed : @roving_islwyn_planted_seed;
-    case ^roving_complete : npc_say("Eep! Eep! Cabbage!");
+    case ^roving_complete : @roving_islwyn_post_quest;
 }
 
 [label,roving_islwyn_quest_start]
+if (%regicide_quest ! ^regicide_complete | %waterfall_quest ! ^waterfall_complete) {
+    ~chatplayer("<p,neutral>Hello there.");
+    ~chatnpc("<p,neutral>Leave me be, I have no time for easterners, now be gone.");
+    return;
+}
 ~chatplayer("<p,neutral>Hello there.");
 ~chatnpc("<p,neutral>Leave me be, I have no time for easterners. Between your lot and them gnomes, all you do is take and destroy. No thought for others.");
 ~chatplayer("<p,neutral>...But...");
@@ -40,6 +45,7 @@ if ($choice = 1) {
     ~chatnpc("<p,neutral>This is gravely concerning... Her resting place must be consecrated.");
     // Quest journal changes here - https://youtu.be/mRAozDH_1qI?t=193
     if (%roving_elves_quest = 0) %roving_elves_quest = ^roving_grandmothers_remains;
+    ~send_quest_progress_colour(questlist:roving_elves, %roving_elves_quest, ^roving_complete);
     @roving_islwyn_help_choice;
 } else if ($choice = 2) {
     ~chatplayer("<p,neutral>I overheard someone in the pub talking about her, they talked of leaving her remains in the home of a guy called Baxtorian, under a waterfall.");
@@ -47,6 +53,7 @@ if ($choice = 1) {
     ~chatnpc("<p,neutral>This is no good... Her resting place must be consecrated.");
     // Quest journal changes here - https://youtu.be/mRAozDH_1qI?t=193
     if (%roving_elves_quest = 0) %roving_elves_quest = ^roving_grandmothers_remains;
+    ~send_quest_progress_colour(questlist:roving_elves, %roving_elves_quest, ^roving_complete);
     @roving_islwyn_help_choice;
 } else {
     ~chatplayer("<p,neutral>Sorry this holds no interest for me, good day.");
@@ -99,7 +106,8 @@ if (inv_total(inv, roving_old_consecration_seed) > 0) {
 ~chatnpc("<p,neutral>Her restlessness has finally left me. Here - I should give you something for your effort.");
 ~doubleobjbox(roving_crystal_bow_new, roving_crystal_shield_new, "Islwyn shows you a crystal bow and a crystal shield.", 150);
 // TODO: 500 uses was likely changed later when charges were bumped to 2500
-~chatnpc("<p,neutral>Crystal equipment is at its best when new and previously unused. The bow does not require ammunition and reduces in strength the more it's fired. The shield decreases in defensive capabilities the more it's hit. Both the shield and the bow I am carrying only have 500 uses before they revert to seed.");
+def_int $charges_left = calc(2 * ^crystal_equip_charges_per_degradation);
+~chatnpc("<p,neutral>Crystal equipment is at its best when new and previously unused. The bow does not require ammunition and reduces in strength the more it's fired. The shield decreases in defensive capabilities the more it's hit. Both the shield and the bow I am carrying only have <tostring($charges_left)> uses before they revert to seed.");
 ~chatplayer("<p,neutral>Revert to seed? What do you mean?");
 ~chatnpc("<p,neutral>Ahhh, young one. It was thousands of years before we fully understood that ourselves. All will be explained if we feel you are ready. Now which one of these crystal creations would you like?");
 def_int $choice = ~p_choice2("Shields are for wimps! Give me the bow!", 1, "I don't like running and hiding behind mushrooms. Shield please!", 2);
@@ -127,4 +135,21 @@ if (%roving_elves_quest = ^roving_planted_seed) {
     stat_advance(strength, 10000);
     inv_add(inv, $choice_obj, 1);
     ~send_quest_complete2(questlist:roving_elves, $choice_obj, 250, ^roving_questpoints, "You have completed Roving Elves Quest!", "Used elf equipment|10000 Strength XP");
+}
+
+[label,roving_islwyn_post_quest] // taken from https://runescape.wiki/w/Transcript:Islwyn?oldid=15958886
+~chatplayer("<p,neutral>Hello again.");
+// you'll either get this or 'Ah, good to see you back. Are you after another shield or one of my bows?' if you picked a shield as a reward
+~chatnpc("<p,neutral>Ah, good to see you back. Are you after another bow or one of my shields?");
+def_int $choice = ~p_choice3("One of your bows, please.", 1, "I'd like to buy a shield.", 2, "No, I'm just passing by.", 3);
+
+switch_int ($choice) {
+    case 1 :
+        ~chatplayer("<p,neutral>One of your bows, please.");
+    case 2 :
+        ~chatplayer("<p,neutral>I'd like to buy a shield.");
+    case default :
+        ~chatplayer("<p,neutral>No, I'm just passing by.");
+        ~chatnpc("<p,neutral>Well it's good to see you again. I hoe all is going well for you?");
+        ~chatplayer("<p,neutral>As well as can be expected.");
 }

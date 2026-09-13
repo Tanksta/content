@@ -319,7 +319,7 @@ mes("A magical force is preventing you from teleporting.");
 return(true);
 
 [proc,tzhaar_fightcave_prevent_teleport]()(boolean)
-if (tzhaar_fightcave_active = true | %tzhaar_fightpit_state > 0 | ~tzhaar_in_fightpit(coord) = true) {
+if (tzhaar_fightcave_active = true | ~tzhaar_in_fightpit(coord) = true) {
     mes("A mysterious force blocks your teleport.");
     return(true);
 }

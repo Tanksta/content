@@ -6,7 +6,7 @@ switch_int (%roving_elves_quest) {
     case ^roving_seed_fetch : @roving_eluned_seed_fetch;
     case ^roving_enchanted_seed : @roving_eluned_enchanted_seed;
     case ^roving_planted_seed : @roving_eluned_planted_seed;
-    case ^roving_complete : npc_say("Eep! Eep! Cabbage!");
+    case ^roving_complete : @roving_eluned_post_quest;
 }
 
 [label,roving_eluned_pre_quest]
@@ -82,3 +82,8 @@ inv_add(inv, roving_new_consecration_seed, 1);
 ~chatnpc("<p,neutral>Hey... how's it going? Have you managed to reconsecrate Glarial's resting place?");
 ~chatplayer("<p,neutral>Yes, it's done.");
 ~chatnpc("<p,neutral>Well done... You should go see Islwyn, but I'd guess he already knows.");
+
+[label,roving_eluned_post_quest]
+~chatplayer("<p,neutral>Hi there.");
+~chatnpc("<p,neutral>Hi! I hear you finished consecrating Glarial's tomb. Well done.");
+~chatplayer("<p,neutral>It was a worthy deed.");

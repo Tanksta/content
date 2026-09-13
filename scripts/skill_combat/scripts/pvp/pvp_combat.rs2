@@ -51,7 +51,7 @@ return(true);
 if (~tzhaar_fightpit_is_attackable = true) {
     return(true);
 }
-if (%tzhaar_fightpit_state > 0 | .%tzhaar_fightpit_state > 0) {
+if (~tzhaar_in_fightpit(coord) = true | ~.tzhaar_in_fightpit(.coord) = true) {
     return(false);
 }
 if (~in_duel_arena(coord) = true) {
@@ -84,7 +84,7 @@ if (~player_autocast_enabled = false & ~inzone_coord_pair_table(mage_arena, coor
 if (~tzhaar_fightpit_is_attackable = true) {
     return(true);
 }
-if (%tzhaar_fightpit_state > 0 | .%tzhaar_fightpit_state > 0) {
+if (~tzhaar_in_fightpit(coord) = true | ~.tzhaar_in_fightpit(.coord) = true) {
     return(false);
 }
 if (~in_duel_arena(coord) = true) {

@@ -69,7 +69,7 @@ if (~macro_event_area(coord) = false) {
 if (~in_castlewars_game(coord) = true | ~in_castlewars_waitingroom(coord) = true) {
     return(false);
 }
-if (tzhaar_fightcave_active = true | %tzhaar_fightpit_state > 0 | ~tzhaar_in_fightpit(coord) = true) {
+if (tzhaar_fightcave_active = true | ~tzhaar_in_fightpit(coord) = true) {
     return(false);
 }
 // if this var isnt reset on npc delete, then youll never get a random event: https://youtu.be/vRlOfkCCGkw

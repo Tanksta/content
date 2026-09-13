@@ -13,7 +13,8 @@ if (inv_total(inv, spade) = 0) {
 }
 
 if (inzone(0_40_154_38_34, 0_40_154_52_62, coord) = false) {
-    ~mesbox("This seed may only be planted close to Glarial's remains.");
+    // https://youtu.be/JFMzbOQ7ba4?t=243
+    mes("This seed may only be planted close to Glarial's remains.");
     return;
 }
 def_coord $coord = map_findsquare(coord, 1, 1, 0);
@@ -21,6 +22,7 @@ def_coord $coord = map_findsquare(coord, 1, 1, 0);
 mes("You dig a small hole with your spade.");
 facesquare($coord);
 anim(human_dig, 0);
+sound_synth(crystal_tree_planting, 0, 0);
 p_delay(1);
 
 // since we've delayed the player, $coord might be unsafe now, re-check before spawning it.
