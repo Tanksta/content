@@ -67,7 +67,7 @@ switch_obj(last_useitem) {
 }
 
 [oploc1,ahoy_ectofunctus]
-if (%ahoy_ectofuntus_worships >= ^ahoy_ectofuntus_max_unclaimed) {
+if (ectofuntus_unclaimed_tokens >= ^ahoy_ectofuntus_max_unclaimed_tokens) {
     mes("There isn't room to put any more in.");
     return;
 }
@@ -87,7 +87,7 @@ inv_add(inv, bucket_empty, 1);
 anim(ahoy_prayer, 0);
 sound_synth(prayer_recharge, 0, 0);
 stat_advance(prayer, ~ectofuntus_bonemeal_xp($bonemeal));
-%ahoy_ectofuntus_worships = add(%ahoy_ectofuntus_worships, 1);
+ectofuntus_add_unclaimed_tokens(^ahoy_ectofuntus_tokens_per_worship);
 mes("You worship the Ectofuntus.");
 
 [opnpc1,ahoy_disciple]
@@ -96,7 +96,8 @@ if (~ahoy_has_ghostspeak = false) {
     mes("You cannot understand the ghost.");
     return;
 }
-if (%ahoy_ectofuntus_worships < 1) {
+def_int $tokens = ectofuntus_unclaimed_tokens;
+if ($tokens < 1) {
     def_int $info = ~p_choice3("How do I worship the Ectofuntus?", 1, "What are ecto-tokens?", 2, "Nothing, thanks.", 3);
     if ($info = 1) {
         ~chatnpc("<p,neutral>Grind bones in the bone grinder upstairs. You will|need an empty pot to catch the bonemeal.");
@@ -106,10 +107,9 @@ if (%ahoy_ectofuntus_worships < 1) {
     }
     return;
 }
-def_int $tokens = multiply(%ahoy_ectofuntus_worships, 5);
 ~chatnpc("<p,happy>You have pleased the Ectofuntus. Accept these ecto-tokens.");
 inv_add(inv, ectotoken, $tokens);
-%ahoy_ectofuntus_worships = 0;
+ectofuntus_clear_unclaimed_tokens;
 
 [oploc1,green_gloop] @ectofuntus_fill_slime_click;
 [oploc1,green_gloop2] @ectofuntus_fill_slime_click;
@@ -181,12 +181,13 @@ if ($bonemeal = null) {
     ~displaymessage(^dm_default);
     return;
 }
-if (%ahoy_grinder_bonemeal ! 0) {
+if (ectofuntus_pending_bonemeal ! 0) {
     mes("There is already some bonemeal ready to collect.");
     return;
 }
 inv_delslot(inv, last_useslot);
-%ahoy_grinder_bonemeal = ~ectofuntus_bonemeal_code($bonemeal);
+ectofuntus_set_pending_bonemeal(~ectofuntus_bonemeal_code($bonemeal));
+%ahoy_grinder_status = 1;
 anim(ahoy_bone_grind, 0);
 sound_synth(fill_grinder, 0, 0);
 mes("You grind the bones into bonemeal.");
@@ -203,7 +204,7 @@ mes("You turn the grinder handle.");
 @ectofuntus_collect_bonemeal_click;
 
 [label,ectofuntus_collect_bonemeal_click]
-if (%ahoy_grinder_bonemeal = 0) {
+if (ectofuntus_pending_bonemeal = 0) {
     mes("There is no bonemeal to collect.");
     return;
 }
@@ -211,9 +212,11 @@ if (inv_total(inv, pot_empty) < 1) {
     mes("You need an empty pot to collect the bonemeal.");
     return;
 }
+def_int $bonemeal = ectofuntus_pending_bonemeal;
 inv_del(inv, pot_empty, 1);
-inv_add(inv, ~ectofuntus_code_to_bonemeal(%ahoy_grinder_bonemeal), 1);
-%ahoy_grinder_bonemeal = 0;
+inv_add(inv, ~ectofuntus_code_to_bonemeal($bonemeal), 1);
+ectofuntus_set_pending_bonemeal(0);
+%ahoy_grinder_status = 0;
 anim(ahoy_fillbucket_bonedust, 0);
 sound_synth(grinder_empty, 0, 0);
 mes("You collect the bonemeal in a pot.");
@@ -222,7 +225,7 @@ mes("You collect the bonemeal in a pot.");
 @ectofuntus_grinder_status;
 
 [label,ectofuntus_grinder_status]
-if (%ahoy_grinder_bonemeal = 0) {
+if (ectofuntus_pending_bonemeal = 0) {
     mes("There is no bonemeal to collect.");
     return;
 }
@@ -233,13 +236,15 @@ if (last_useitem ! pot_empty) {
     ~displaymessage(^dm_default);
     return;
 }
-if (%ahoy_grinder_bonemeal = 0) {
+if (ectofuntus_pending_bonemeal = 0) {
     mes("There is no bonemeal to collect.");
     return;
 }
+def_int $bonemeal = ectofuntus_pending_bonemeal;
 inv_delslot(inv, last_useslot);
-inv_add(inv, ~ectofuntus_code_to_bonemeal(%ahoy_grinder_bonemeal), 1);
-%ahoy_grinder_bonemeal = 0;
+inv_add(inv, ~ectofuntus_code_to_bonemeal($bonemeal), 1);
+ectofuntus_set_pending_bonemeal(0);
+%ahoy_grinder_status = 0;
 anim(ahoy_fillbucket_bonedust, 0);
 sound_synth(grinder_empty, 0, 0);
 mes("You collect the bonemeal in a pot.");

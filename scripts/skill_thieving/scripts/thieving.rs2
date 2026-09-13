@@ -188,12 +188,12 @@ if (npc_type = master_farmer_1 | npc_type = master_farmer_2) {
 
 [proc,seed_market_start_stall_timer]
 clearqueue(stolen_from_stall_seed);
-longqueue(stolen_from_stall_seed, ^baker_stall_timer, 0, ^discard);
+longqueue(stolen_from_stall_seed, ^seed_market_thief_timer, 0, ^discard);
 %marketthief_seed = 1;
 
 [proc,seed_market_start_farmer_timer]
 clearqueue(stolen_from_master_farmer);
-longqueue(stolen_from_master_farmer, ^baker_stall_timer, 0, ^discard);
+longqueue(stolen_from_master_farmer, ^seed_market_thief_timer, 0, ^discard);
 %marketthief_farmer = 1;
 
 [proc,pick_pocket_check_for_single_reward](dbrow $data)

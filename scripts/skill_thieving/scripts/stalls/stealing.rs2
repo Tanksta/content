@@ -168,10 +168,10 @@ if (%marketthief_tea = 1) {
     longqueue(stolen_from_stall_tea, ^tea_stall_timer, 0, ^discard);
 }
 if (%marketthief_seed = 1) {
-    longqueue(stolen_from_stall_seed, ^baker_stall_timer, 0, ^discard);
+    longqueue(stolen_from_stall_seed, ^seed_market_thief_timer, 0, ^discard);
 }
 if (%marketthief_farmer = 1) {
-    longqueue(stolen_from_master_farmer, ^baker_stall_timer, 0, ^discard);
+    longqueue(stolen_from_master_farmer, ^seed_market_thief_timer, 0, ^discard);
 }
 if (%marketthief_silk = 1) {
     longqueue(stolen_from_stall_silk, ^silk_stall_timer, 0, ^discard);

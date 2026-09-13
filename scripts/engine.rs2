@@ -237,6 +237,16 @@
 [command,.tzhaar_fightcave_return_pending]()(boolean)
 [command,tzhaar_fightcave_set_return_pending](boolean $return_pending)
 [command,.tzhaar_fightcave_set_return_pending](boolean $return_pending)
+[command,ectofuntus_unclaimed_tokens]()(int)
+[command,.ectofuntus_unclaimed_tokens]()(int)
+[command,ectofuntus_add_unclaimed_tokens](int $tokens)
+[command,.ectofuntus_add_unclaimed_tokens](int $tokens)
+[command,ectofuntus_clear_unclaimed_tokens]
+[command,.ectofuntus_clear_unclaimed_tokens]
+[command,ectofuntus_pending_bonemeal]()(int)
+[command,.ectofuntus_pending_bonemeal]()(int)
+[command,ectofuntus_set_pending_bonemeal](int $bonemeal)
+[command,.ectofuntus_set_pending_bonemeal](int $bonemeal)
 // info: Requires protected access - walk the player to $dest
 [command,p_walk](coord $dest)
 // info: Requires protected access - walk the secondary player to $dest
