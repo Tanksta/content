@@ -7,18 +7,47 @@
 %shop_haggle = $shop_haggle;
 if_settext(shop_template:com_76, $title);
 inv_transmit(inv, shop_template_side:inv);
-inv_transmit($shop, shop_template:inv);
+~shop_open_layout(%shop);
 if_openmain_side(shop_template, shop_template_side);
 
 [proc,openshop_activenpc]
-%shop = npc_param(owned_shop);
+def_inv $shop = npc_param(owned_shop);
+%shop = $shop;
 %shop_buy = npc_param(shop_buy_multiplier);
 %shop_sell = npc_param(shop_sell_multiplier);
 %shop_haggle = npc_param(shop_delta);
 if_settext(shop_template:com_76, npc_param(shop_title));
 inv_transmit(inv, shop_template_side:inv);
-inv_transmit(%shop, shop_template:inv);
+~shop_open_layout(%shop);
 if_openmain_side(shop_template, shop_template_side);
+
+[proc,shop_open_layout](inv $shop)
+inv_stoptransmit(shop_template:inv);
+inv_transmit($shop, shop_template:inv);
+
+[proc,is_tokkul_shop](inv $shop)(boolean)
+if ($shop = tzhaar_shop_equipment | $shop = tzhaar_shop_oreandgem | $shop = tzhaar_shop_rune) {
+    return (true);
+}
+return (false);
+
+[proc,shop_currency_obj](inv $shop)(namedobj)
+if (~is_tokkul_shop($shop) = true) {
+    return (tzhaar_token);
+}
+return (coins);
+
+[proc,shop_currency_value_suffix](inv $shop)(string)
+if (~is_tokkul_shop($shop) = true) {
+    return (" Tokkul");
+}
+return ("gp");
+
+[proc,shop_currency_name](inv $shop)(string)
+if (~is_tokkul_shop($shop) = true) {
+    return ("Tokkul");
+}
+return ("coins");
 
 [if_close,shop_template]
 inv_stoptransmit(shop_template_side:inv);
@@ -26,7 +55,8 @@ inv_stoptransmit(shop_template:inv);
 
 [proc,can_sell_obj](obj $item)(boolean)
 def_boolean $item_is_tradable = oc_tradeable(oc_uncert($item));
-if ($item = coins) {
+def_namedobj $currency = ~shop_currency_obj(%shop);
+if ($item = $currency) {
     mes("You can't sell this item to a shop.");
     return (false);
 } else if ($item_is_tradable = false | (map_members = ^false & oc_members($item) = true)) {
@@ -40,25 +70,32 @@ return (true);
 
 // sell value
 [inv_button1,shop_template_side:inv]
-def_obj $item = oc_uncert(inv_getobj(inv, last_slot));
-def_string $item_name = oc_name($item);
-def_int $item_value = ~adjusted_item_cost_selling($item, inv_total(%shop, $item));
+def_obj $item = inv_getobj(inv, last_slot);
+if ($item = null) return;
+$item = oc_uncert($item);
 if(~can_sell_obj($item) = false) {
     return;
 }
-mes("<$item_name>: shop will buy for <tostring($item_value)>gp.");
+def_string $item_name = oc_name($item);
+def_int $item_value = ~adjusted_item_cost_selling($item, inv_total(%shop, $item));
+def_string $currency_suffix = ~shop_currency_value_suffix(%shop);
+mes("<$item_name>: shop will buy for <tostring($item_value)><$currency_suffix>.");
 
 // Buy value
 [inv_button1,shop_template:inv]
 def_obj $item = inv_getobj(%shop, last_slot);
+if ($item = null) return;
 def_string $item_name = oc_name($item);
 def_int $item_value = ~adjusted_item_cost_buying($item, inv_total(%shop, $item));
-mes("<$item_name>: currently costs <tostring($item_value)>gp.");
+def_string $currency_suffix = ~shop_currency_value_suffix(%shop);
+mes("<$item_name>: currently costs <tostring($item_value)><$currency_suffix>.");
 
 // Buy an item from the shop
 [label,buy_item](obj $obj, int $amount)
 def_int $i = 0;
-def_int $current_gp = inv_total(inv, coins);
+def_namedobj $currency = ~shop_currency_obj(%shop);
+def_string $currency_name = ~shop_currency_name(%shop);
+def_int $current_currency = inv_total(inv, $currency);
 def_int $shop_stock = calc(inv_total(%shop, $obj));
 def_int $space_overflow = inv_itemspace2(inv, $obj, $amount, inv_size(inv));
 def_int $total_cost = 0;
@@ -66,11 +103,11 @@ def_int $total_cost = 0;
 while($i < $amount) {
     def_int $added_amt = ~adjusted_item_cost_buying($obj, calc($shop_stock - $i));
     def_int $current_stock = calc($shop_stock - $i);
-    if(calc($total_cost + $added_amt) > $current_gp) {
+    if(calc($total_cost + $added_amt) > $current_currency) {
         if ($i > 0) {
             wealth_event(^wealth_shop_buy, oc_debugname($obj), $i, $total_cost);
         }
-        mes("You don't have enough coins.");
+        mes("You don't have enough <$currency_name>.");
         return;
     }
     if($current_stock <= 0) {
@@ -80,9 +117,9 @@ while($i < $amount) {
         mes("The shop has run out of stock.");
         return;
     }
-    // do calc($total_cost + $added_amt) ! $current_gp for the case where the exact gp required for the purchase
+    // do calc($total_cost + $added_amt) ! $current_currency for the case where the exact currency required for the purchase
     // is used. Not sure if this should be the case in 2004
-    if($space_overflow >= calc($amount - $i) & calc($total_cost + $added_amt) ! $current_gp) {
+    if($space_overflow >= calc($amount - $i) & calc($total_cost + $added_amt) ! $current_currency) {
         if ($i > 0) {
             wealth_event(^wealth_shop_buy, oc_debugname($obj), $i, $total_cost);
         }
@@ -90,7 +127,7 @@ while($i < $amount) {
         return;
     }
     $total_cost = calc($total_cost + $added_amt);
-    inv_del(inv, coins, $added_amt);
+    inv_del(inv, $currency, $added_amt);
     inv_moveitem_uncert(%shop, inv, $obj, 1);
     $i = calc($i + 1);
 }
@@ -101,11 +138,12 @@ wealth_event(^wealth_shop_buy, oc_debugname($obj), $i, $total_cost);
 def_int $shop_total = inv_total(%shop, oc_uncert($obj));
 def_int $total_value = 0;
 def_int $sell_amount = ~calculate_items_amount_sold($obj, $amount);
+def_namedobj $currency = ~shop_currency_obj(%shop);
 if(~can_sell_obj($obj) = false) {
     return;
 }
-// Check if you will have space in your inventory to hold the coins after selling
-if(inv_itemspace(inv, coins, $sell_amount, inv_size(inv)) = false & oc_stackable($obj) = true & inv_total(inv, $obj) > $sell_amount) {
+// Check if you will have space in your inventory to hold the shop currency after selling
+if(inv_itemspace(inv, $currency, $sell_amount, inv_size(inv)) = false & oc_stackable($obj) = true & inv_total(inv, $obj) > $sell_amount) {
     mes("You don't have enough inventory space.");
     return;
 }
@@ -125,7 +163,7 @@ while($i < $sell_amount) {
 inv_moveitem_uncert(inv, %shop, $obj, $sell_amount);
 wealth_event(^wealth_shop_sell, oc_debugname($obj), $sell_amount, $total_value);
 if($total_value > 0) {
-    inv_add(inv, coins, $total_value);
+    inv_add(inv, $currency, $total_value);
 }
 
 [proc,price_mod](inv $inv, int $diff, obj $obj)(int)
@@ -173,13 +211,14 @@ return ($sell_amount);
 [label,shop_request](inv $shop_inv, int $slot, int $amount)
 // Check if the slot was empty.
 def_obj $item = inv_getobj($shop_inv, $slot);
+if ($item = null) return;
 if($shop_inv = %shop) {
     @buy_item($item, $amount);
 } else {
     @sell_item($item, $amount);
 }
 
-// Calculate the gp value for the shop operation
+// Calculate the value for the shop operation
 [proc,calc_shop_value](int $base_cost, int $shophaggle, int $shopbuy, int $int3)(int)
 def_int $int4 = 0;
 def_int $int5 = min(1000, max(-5000, calc($int3 * $shophaggle)));

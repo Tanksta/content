@@ -2,8 +2,13 @@
 mes("You leave the icy cavern.");
 p_delay(0);
 p_telejump(0_47_149_48_26);
+@music_playbyregion(coord);
 
 [oploc1,wyvern_snow_cave_entrance]
+if (map_members = ^false) {
+    mes("To go here you must login to a members' server");
+    return;
+}
 ~mesbox("STOP! The creatures in this cave are VERY dangerous. Are you sure you want to enter?");
 if (~p_choice2("Yes, I'm not afraid of death!", 1, "No thanks, I don't want to die!", 2) = 2) {
     return;
@@ -11,6 +16,7 @@ if (~p_choice2("Yes, I'm not afraid of death!", 1, "No thanks, I don't want to d
 mes("You enter the icy cavern.");
 p_delay(0);
 p_telejump(0_47_149_48_19);
+@music_playbyregion(coord);
 
 [oploc1,loc_9472]
 p_arrivedelay;

@@ -4176,65 +4176,6 @@ size=1
 [skill_guide_agility_shortcuts]
 size=1
 
-[tzhaar_shop_general]
-size=1
-// https://oldschool.runescape.wiki/w/Unused_shops
-
-//Thzaar city guide September 2005
-// https://web.archive.org/web/20051217131010/http://runehq.com/RHQCityGuidesView.php?id=00600
-[tzhaar_shop_equipment]
-scope=shared
-size=40
-restock=yes
-stackall=yes
-allstock=no
-stock1=tzhaar_throwingring,500,10
-stock2=tzhaar_splitsword,1,100
-stock3=tzhaar_spikeshield,1,100
-stock4=tzhaar_knife,1,100
-stock5=tzhaar_staff,1,100
-stock6=tzhaar_mace,1,100
-stock7=tzhaar_maul,1,100
-stock8=tzhaar_cape_obsidian,1,100
-
-[tzhaar_shop_oreandgem]
-scope=shared
-size=40
-restock=yes
-stackall=yes
-allstock=no
-stock1=tin_ore,5,100
-stock2=copper_ore,5,100
-stock3=iron_ore,2,100
-stock4=silver_ore,0,100
-stock5=coal,0,100
-stock6=gold_ore,0,100
-stock7=mithril_ore,0,100
-stock8=adamantite_ore,0,100
-stock9=runite_ore,0,100
-stock10=uncut_sapphire,1,100
-stock11=uncut_emerald,1,100
-stock12=uncut_ruby,0,100
-stock13=uncut_diamond,0,100
-stock14=uncut_dragonstone,0,00
-stock15=uncut_onyx,1,100
-
-[tzhaar_shop_rune]
-scope=shared
-size=40
-restock=yes
-stackall=yes
-allstock=no
-//stock1=firerune,5000,
-//stock2=waterrune,5000,
-//stock3=airrune,5000,
-//stock4=earthrune,5000,
-//stock5=mindrune,5000,
-//stock5=bodyrune,5000,
-//stock6=chaosrune,250,
-//stock8=deathrune,250,
-// TODO try find out what is original restock times.
-
 [whiteknight_armoury1]
 scope=shared
 size=40

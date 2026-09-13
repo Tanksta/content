@@ -20,6 +20,14 @@ if (~in_castlewars_game(coord) = true) {
 if (~in_castlewars_waitingroom(coord) = true) {
     if (p_finduid(uid) = true) @player_death_castlewars_waitingroom;
 }
+if (tzhaar_fightcave_active = true) {
+    ~tzhaar_fightcave_player_death;
+    return;
+}
+if (~tzhaar_in_fightpit(coord) = true) {
+    ~tzhaar_fightpit_player_death;
+    return;
+}
 ~player_death;
 ~music_jingle(death2);
 // https://storage.googleapis.com/tannerdino/images/6543.jpg

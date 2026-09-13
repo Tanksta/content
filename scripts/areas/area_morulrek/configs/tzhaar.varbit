@@ -1,0 +1,10 @@
+[tzhaar_morphed]
+basevar=tzhaar_temp
+startbit=4
+endbit=4
+
+[tzhaar_fightpit_orb]
+basevar=tzhaar_temp
+startbit=5
+endbit=7
+

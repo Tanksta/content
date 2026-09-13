@@ -1,0 +1,277 @@
+[proc,tzhaar_city_is_mej]()(boolean)
+switch_npc(npc_type) {
+    case tzhaar_mej1, tzhaar_mej2, tzhaar_mej3, tzhaar_mej4, tzhaar_mej5, tzhaar_mej6, tzhaar_mej7 :
+        return(true);
+}
+return(false);
+
+[proc,tzhaar_city_is_ket_or_xil]()(boolean)
+switch_npc(npc_type) {
+    case tzhaar_ket1, tzhaar_ket2, tzhaar_ket3, tzhaar_ket4, tzhaar_ket5, tzhaar_ket6, tzhaar_ket7,
+         tzhaar_xil1, tzhaar_xil2, tzhaar_xil3, tzhaar_xil4, tzhaar_xil5, tzhaar_xil6 :
+        return(true);
+}
+return(false);
+
+[proc,tzhaar_city_attackrange]()(int)
+def_int $attackrange = npc_param(attackrange);
+if ($attackrange > 1) {
+    return($attackrange);
+}
+switch_npc(npc_type) {
+    case tzhaar_mej1, tzhaar_mej2, tzhaar_mej3, tzhaar_mej4, tzhaar_mej5, tzhaar_mej6, tzhaar_mej7 :
+        return(8);
+    case tzhaar_xil3, tzhaar_xil6 :
+        return(7);
+}
+return(1);
+
+[proc,tzhaar_city_set_aggressive](player_uid $target, boolean $prefer_ap)
+%npc_aggressive_player = $target;
+%npc_attacking_uid = $target;
+%npc_lastcombat = sub(^max_32bit_int, 8);
+if ($prefer_ap = true & ~tzhaar_city_attackrange > 1) {
+    npc_setmode(applayer2);
+} else {
+    npc_setmode(opplayer2);
+}
+
+[proc,tzhaar_mej_call_for_help](coord $target_coord, player_uid $target)
+npc_say("Kot kl, zek e JalYt!");
+npc_huntall($target_coord, 6, ^vis_lineofsight);
+while (npc_findnext = true) {
+    if (~tzhaar_city_is_ket_or_xil = true & npc_getmode ! opplayer2 & npc_getmode ! applayer2 & npc_getmode ! playerescape) {
+        ~tzhaar_city_set_aggressive($target, true);
+    }
+}
+
+[proc,tzhaar_hur_alert_mej](coord $source, player_uid $target)
+npc_huntall($source, 6, ^vis_lineofsight);
+while (npc_findnext = true) {
+    if (~tzhaar_city_is_mej = true & npc_getmode ! opplayer2 & npc_getmode ! applayer2 & npc_getmode ! playerescape) {
+        npc_say("Kot kl, zek e JalYt!");
+        ~tzhaar_city_set_aggressive($target, true);
+    }
+}
+
+[proc,tzhaar_city_retaliate]
+if (finduid(%npc_aggressive_player) = false | ~npc_retal_ready = false) {
+    return;
+}
+%npc_action_delay = add(map_clock, divide(npc_param(attackrate), 2));
+%npc_attacking_uid = %npc_aggressive_player;
+if (npc_stat(hitpoints) <= npc_param(retreat)) {
+    npc_setmode(playerescape);
+} else if (npc_range(coord) <= 1) {
+    npc_setmode(opplayer2);
+} else if (~tzhaar_city_attackrange > 1) {
+    npc_setmode(applayer2);
+} else {
+    npc_setmode(opplayer2);
+}
+
+[proc,tzhaar_city_attack_checks]()(boolean)
+if (%death = ^true) {
+    npc_setmode(null);
+    return(false);
+}
+if (~mm_wearing_greegree = true) {
+    npc_setmode(null);
+    return(false);
+}
+if (%npc_action_delay > map_clock) {
+    return(false);
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return(false);
+}
+if (~npc_check_notcombat_self = false) {
+    return(false);
+}
+return(true);
+
+[proc,tzhaar_city_fixed_melee](int $maxhit)
+if (npc_range(coord) > 1) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~tzhaar_city_attack_checks = false) {
+    return;
+}
+anim(%com_defendanim, 0);
+npc_anim(npc_param(attack_anim), 0);
+if (npc_param(attack_sound) ! null) {
+    sound_synth(npc_param(attack_sound), 0, 0);
+}
+
+def_int $damage = 0;
+if (~npc_player_hit_roll(npc_param(damagetype)) = true) {
+    $damage = randominc($maxhit);
+}
+~playerhit_n_melee(true, $damage, npc_param(attackrate));
+~npc_poison_player;
+
+[proc,tzhaar_mej_magic]
+if (npc_range(coord) <= 1) {
+    npc_setmode(opplayer2);
+    return;
+}
+if (npc_range(coord) > ~tzhaar_city_attackrange) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~tzhaar_city_attack_checks = false) {
+    return;
+}
+
+npc_anim(thzaar_magic_attack, 0);
+spotanim_npc(tzhaar_fire_launch_travel, 92, 0);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+def_int $duration = ~player_projectile(npc_coord, coord, uid, tzhaar_fire_launch_travel, 40, 36, 32, 15, 0, 11, 5);
+
+def_int $damage = 0;
+if (~npc_player_hit_roll(^magic_style) = true & ~check_protect_prayer(^magic_style) = false) {
+    $damage = randominc(13);
+}
+~queue_combat_damage_player(calc($duration / 30), $damage);
+queue*(playerhit_n_retaliate, calc($duration / 30))(npc_uid);
+~npc_set_attack_vars;
+
+[proc,tzhaar_xil3_ranged]
+if (npc_range(coord) <= 1) {
+    npc_setmode(opplayer2);
+    return;
+}
+if (npc_range(coord) > ~tzhaar_city_attackrange) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~tzhaar_city_attack_checks = false) {
+    return;
+}
+
+npc_anim(thzaar_ring_attack, 0);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+def_int $duration = ~player_projectile(npc_coord, coord, uid, tzhaar_ring_throw_attack, 40, 36, 32, 15, 0, 11, 5);
+
+def_int $damage = 0;
+if (~npc_player_hit_roll(^ranged_style) = true) {
+    $damage = randominc(16);
+}
+~playerhit_n_ranged(true, $damage, $duration, npc_param(attackrate));
+~npc_poison_player;
+
+[proc,tzhaar_city_ap_melee]
+npc_setmode(opplayer2);
+
+[proc,tzhaar_city_melee_attack]
+~npc_default_attack;
+
+[proc,tzhaar_mej_retaliate]
+if (finduid(%npc_aggressive_player) = false | ~npc_retal_ready = false) {
+    return;
+}
+def_coord $target_coord = coord;
+def_player_uid $target = uid;
+~tzhaar_city_retaliate;
+~tzhaar_mej_call_for_help($target_coord, $target);
+
+[proc,tzhaar_hur_retaliate]
+def_coord $source = npc_coord;
+gosub(npc_default_retaliate);
+if (finduid(%npc_aggressive_player) = true) {
+    ~tzhaar_hur_alert_mej($source, uid);
+}
+
+[proc,tzhaar_mej_attack]
+if (npc_range(coord) <= 1) {
+    ~tzhaar_city_fixed_melee(9);
+    return;
+}
+~tzhaar_mej_magic;
+
+[proc,tzhaar_xil3_attack]
+if (npc_range(coord) <= 1) {
+    ~tzhaar_city_fixed_melee(11);
+    return;
+}
+~tzhaar_xil3_ranged;
+
+[ai_queue1,tzhaar_mej1] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej2] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej3] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej4] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej5] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej6] ~tzhaar_mej_retaliate;
+[ai_queue1,tzhaar_mej7] ~tzhaar_mej_retaliate;
+
+[ai_queue1,tzhaar_hur1] ~tzhaar_hur_retaliate;
+[ai_queue1,tzhaar_hur2] ~tzhaar_hur_retaliate;
+[ai_queue1,tzhaar_hur3] ~tzhaar_hur_retaliate;
+[ai_queue1,tzhaar_hur4] ~tzhaar_hur_retaliate;
+[ai_queue1,tzhaar_hur5] ~tzhaar_hur_retaliate;
+[ai_queue1,tzhaar_hur6] ~tzhaar_hur_retaliate;
+
+[ai_queue1,tzhaar_xil3] ~tzhaar_city_retaliate;
+
+[ai_queue1,tzhaar_ket1] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket2] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket3] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket4] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket5] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket6] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_ket7] ~tzhaar_city_retaliate;
+
+[ai_queue1,tzhaar_xil1] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_xil2] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_xil4] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_xil5] ~tzhaar_city_retaliate;
+[ai_queue1,tzhaar_xil6] ~tzhaar_city_retaliate;
+
+[ai_opplayer2,tzhaar_mej1] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej2] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej3] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej4] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej5] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej6] ~tzhaar_mej_attack;
+[ai_opplayer2,tzhaar_mej7] ~tzhaar_mej_attack;
+
+[ai_applayer2,tzhaar_mej1] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej2] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej3] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej4] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej5] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej6] ~tzhaar_mej_attack;
+[ai_applayer2,tzhaar_mej7] ~tzhaar_mej_attack;
+
+[ai_opplayer2,tzhaar_xil3] ~tzhaar_xil3_attack;
+[ai_applayer2,tzhaar_xil3] ~tzhaar_xil3_attack;
+[ai_opplayer2,tzhaar_xil6] ~tzhaar_xil3_attack;
+[ai_applayer2,tzhaar_xil6] ~tzhaar_xil3_attack;
+
+[ai_opplayer2,tzhaar_ket1] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket2] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket3] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket4] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket5] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket6] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_ket7] ~tzhaar_city_melee_attack;
+
+[ai_opplayer2,tzhaar_xil1] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_xil2] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_xil4] ~tzhaar_city_melee_attack;
+[ai_opplayer2,tzhaar_xil5] ~tzhaar_city_melee_attack;
+
+[ai_applayer2,tzhaar_ket1] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket2] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket3] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket4] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket5] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket6] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_ket7] ~tzhaar_city_ap_melee;
+
+[ai_applayer2,tzhaar_xil1] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_xil2] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_xil4] ~tzhaar_city_ap_melee;
+[ai_applayer2,tzhaar_xil5] ~tzhaar_city_ap_melee;

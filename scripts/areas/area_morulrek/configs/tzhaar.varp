@@ -1,0 +1,8 @@
+[tzhaar_fightpit_state]
+transmit=yes
+
+[tzhaar_fightpit_remaining]
+transmit=yes
+
+[tzhaar_temp]
+transmit=yes

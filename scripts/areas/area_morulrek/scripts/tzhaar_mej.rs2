@@ -1,0 +1,45 @@
+[ai_queue3,tzhaar_mej1] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej2] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej3] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej4] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej5] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej6] @tzhaar_mej_drops;
+[ai_queue3,tzhaar_mej7] @tzhaar_mej_drops;
+
+[label,tzhaar_mej_drops]
+gosub(npc_death);
+if (npc_findhero = ^false) {
+    return;
+}
+
+def_int $random = random(4096);
+
+if ($random < 1) {
+    obj_add(npc_coord, tzhaar_cape_obsidian, 1, ^lootdrop_duration);
+} else if ($random < 2) {
+    obj_add(npc_coord, tzhaar_staff, 1, ^lootdrop_duration);
+} else if ($random < 130) {
+    obj_add(npc_coord, earthrune, 25, ^lootdrop_duration);
+} else if ($random < 258) {
+    obj_add(npc_coord, firerune, 25, ^lootdrop_duration);
+} else if ($random < 386) {
+    obj_add(npc_coord, airrune, 25, ^lootdrop_duration);
+} else if ($random < 450) {
+    obj_add(npc_coord, chaosrune, 5, ^lootdrop_duration);
+} else if ($random < 514) {
+    obj_add(npc_coord, naturerune, 2, ^lootdrop_duration);
+} else if ($random < 578) {
+    obj_add(npc_coord, deathrune, 2, ^lootdrop_duration);
+} else if ($random < 610) {
+    obj_add(npc_coord, uncut_sapphire, 1, ^lootdrop_duration);
+} else if ($random < 626) {
+    obj_add(npc_coord, uncut_emerald, 1, ^lootdrop_duration);
+} else if ($random < 634) {
+    obj_add(npc_coord, uncut_ruby, 1, ^lootdrop_duration);
+} else if ($random < 636) {
+    obj_add(npc_coord, uncut_diamond, 1, ^lootdrop_duration);
+} else if ($random < 2620) {
+    obj_add(npc_coord, tzhaar_token, calc(1 + random(21)), ^lootdrop_duration);
+} else if ($random < 2684) {
+    obj_add(npc_coord, tzhaar_token, 22, ^lootdrop_duration);
+}

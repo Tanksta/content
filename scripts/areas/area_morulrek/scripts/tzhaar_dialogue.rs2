@@ -1,0 +1,94 @@
+[opnpc1,tzhaar_merchant_equipment] @tzhaar_shopkeeper_talk;
+[opnpc1,tzhaar_merchant_oreandgem] @tzhaar_shopkeeper_talk;
+[opnpc1,tzhaar_merchant_rune] @tzhaar_shopkeeper_talk;
+
+[proc,tzhaar_player_caste_type]()(int)
+def_int $mej = calc(stat_base(magic) + stat_base(prayer));
+def_int $ket = calc(stat_base(strength) + stat_base(defence));
+def_int $xil = calc(stat_base(attack) + stat_base(agility));
+def_int $hur = calc(stat_base(crafting) + stat_base(smithing));
+
+// OSRS tie priority: Mej -> Ket -> Xil -> Hur.
+if ($mej >= $ket & $mej >= $xil & $mej >= $hur) {
+    return (0);
+}
+if ($ket >= $xil & $ket >= $hur) {
+    return (1);
+}
+if ($xil >= $hur) {
+    return (2);
+}
+return (3);
+
+[proc,tzhaar_player_caste_name]()(string)
+switch_int(~tzhaar_player_caste_type()) {
+    case 0 : return ("JalYt-Mej");
+    case 1 : return ("JalYt-Ket");
+    case 2 : return ("JalYt-Xil");
+    case default : return ("JalYt-Hur");
+}
+
+[proc,tzhaar_player_caste_description]()(string)
+switch_int(~tzhaar_player_caste_type()) {
+    case 0 : return ("That what you are... you user of mystic powers no?");
+    case 1 : return ("That what you are... you tough and strong no?");
+    case 2 : return ("That what you are... you agile and quick no?");
+    case default : return ("That what you are... you skilled at making things no?");
+}
+
+[proc,tzhaar_shopkeeper_is_mej]()(boolean)
+if (npc_type = tzhaar_merchant_rune) {
+    return (true);
+}
+return (false);
+
+[label,tzhaar_shopkeeper_talk]
+def_string $caste = ~tzhaar_player_caste_name;
+~chatnpc("<p,neutral>Can I help you <$caste>-<displayname()>?");
+@multi3("What do you have to trade?", tzhaar_shopkeeper_trade, "What did you call me?", tzhaar_shopkeeper_called, "No I'm fine thanks.", tzhaar_shopkeeper_fine);
+
+[label,tzhaar_shopkeeper_trade]
+~chatplayer("<p,neutral>What do you have to trade?");
+~openshop_activenpc;
+
+[label,tzhaar_shopkeeper_called]
+def_string $caste = ~tzhaar_player_caste_name;
+def_string $description = ~tzhaar_player_caste_description;
+~chatplayer("<p,quiz>What did you call me?");
+~chatnpc("<p,confused>Are you not <$caste>-<displayname()>?");
+~chatplayer("<p,quiz>What's a '<$caste>'?");
+~chatnpc("<p,neutral><$description>");
+~chatplayer("<p,neutral>Well yes I suppose I am...");
+~chatnpc("<p,neutral>Then you <$caste>!");
+@multi4("What are you then?", tzhaar_shopkeeper_what_are_you, "Thanks for explaining it.", tzhaar_shopkeeper_thanks, "I guess so...", tzhaar_shopkeeper_guess, "No I'm not!", tzhaar_shopkeeper_no_im_not);
+
+[label,tzhaar_shopkeeper_what_are_you]
+~chatplayer("<p,quiz>What are you then?");
+if (~tzhaar_shopkeeper_is_mej = true) {
+    ~chatnpc("<p,neutral>Foolish JalYt, I am TzHaar-Mej, one of the mystics of this city.");
+    @multi2("What other types are there?", tzhaar_shopkeeper_mej_types, "Ah ok then.", tzhaar_shopkeeper_ah_ok);
+    return;
+}
+~chatnpc("<p,neutral>Silly JalYt, I am TzHaar-Hur, one of the crafters for this city.");
+~chatnpc("<p,neutral>There are the wise TzHaar-Mej who guide us, the mighty TzHaar-Ket who guard us, and the swift TzHaar-Xil who hunt for our food.");
+
+[label,tzhaar_shopkeeper_thanks]
+~chatplayer("<p,happy>Thanks for explaining it.");
+
+[label,tzhaar_shopkeeper_guess]
+~chatplayer("<p,neutral>I guess so...");
+~chatnpc("<p,neutral>Well then, no problems.");
+
+[label,tzhaar_shopkeeper_no_im_not]
+~chatplayer("<p,angry>No I'm not!");
+~chatnpc("<p,neutral>What ever you say, crazy JalYt!");
+
+[label,tzhaar_shopkeeper_mej_types]
+~chatplayer("<p,quiz>What other types are there?");
+~chatnpc("<p,neutral>There are the mighty TzHaar-Ket who guard us, the swift TzHaar-Xil who hunt for our food, and the skilled TzHaar-Hur who craft our homes and tools.");
+
+[label,tzhaar_shopkeeper_ah_ok]
+~chatplayer("<p,neutral>Ah ok then.");
+
+[label,tzhaar_shopkeeper_fine]
+~chatplayer("<p,neutral>No I'm fine thanks.");

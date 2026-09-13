@@ -193,6 +193,50 @@
 [command,p_telejump](coord $coord)
 // info: Requires protected access - teleport the secondary player to $coord, forcing a visual teleport
 [command,.p_telejump](coord $coord)
+// info: Requires protected access - teleport the player to an instanced mapsquare
+[command,p_telejump_instance](coord $coord)
+[command,tzhaar_fightcave_active]()(boolean)
+[command,.tzhaar_fightcave_active]()(boolean)
+[command,tzhaar_fightcave_start_state]
+[command,.tzhaar_fightcave_start_state]
+[command,tzhaar_fightcave_jump_state](int $wave)
+[command,.tzhaar_fightcave_jump_state](int $wave)
+[command,tzhaar_fightcave_reset_state]
+[command,.tzhaar_fightcave_reset_state]
+[command,tzhaar_fightcave_clear_progress_state]
+[command,.tzhaar_fightcave_clear_progress_state]
+[command,tzhaar_fightcave_wave]()(int)
+[command,.tzhaar_fightcave_wave]()(int)
+[command,tzhaar_fightcave_set_wave](int $wave)
+[command,.tzhaar_fightcave_set_wave](int $wave)
+[command,tzhaar_fightcave_remaining]()(int)
+[command,.tzhaar_fightcave_remaining]()(int)
+[command,tzhaar_fightcave_set_remaining](int $remaining)
+[command,.tzhaar_fightcave_set_remaining](int $remaining)
+[command,tzhaar_fightcave_rotation]()(int)
+[command,.tzhaar_fightcave_rotation]()(int)
+[command,tzhaar_fightcave_set_rotation](int $rotation)
+[command,.tzhaar_fightcave_set_rotation](int $rotation)
+[command,tzhaar_fightcave_healers]()(int)
+[command,.tzhaar_fightcave_healers]()(int)
+[command,tzhaar_fightcave_set_healers](int $healers)
+[command,.tzhaar_fightcave_set_healers](int $healers)
+[command,tzhaar_fightcave_jad_uid]()(npc_uid)
+[command,.tzhaar_fightcave_jad_uid]()(npc_uid)
+[command,tzhaar_fightcave_set_jad_uid](npc_uid $jad_uid)
+[command,.tzhaar_fightcave_set_jad_uid](npc_uid $jad_uid)
+[command,tzhaar_fightcave_jad_spawn_coord]()(coord)
+[command,.tzhaar_fightcave_jad_spawn_coord]()(coord)
+[command,tzhaar_fightcave_set_jad_spawn_coord](coord $coord)
+[command,.tzhaar_fightcave_set_jad_spawn_coord](coord $coord)
+[command,tzhaar_fightcave_completed]()(int)
+[command,.tzhaar_fightcave_completed]()(int)
+[command,tzhaar_fightcave_set_completed](int $completed)
+[command,.tzhaar_fightcave_set_completed](int $completed)
+[command,tzhaar_fightcave_return_pending]()(boolean)
+[command,.tzhaar_fightcave_return_pending]()(boolean)
+[command,tzhaar_fightcave_set_return_pending](boolean $return_pending)
+[command,.tzhaar_fightcave_set_return_pending](boolean $return_pending)
 // info: Requires protected access - walk the player to $dest
 [command,p_walk](coord $dest)
 // info: Requires protected access - walk the secondary player to $dest

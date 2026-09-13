@@ -1,0 +1,857 @@
+[opnpc1,tzhaar_fightcave_master]
+~tzhaar_fightcave_talk;
+
+[oploc1,loc_9357]
+~tzhaar_fightcave_leave(false);
+
+[oploc1,loc_9356]
+~tzhaar_fightcave_start;
+
+[proc,tzhaar_fightcave_talk]
+def_string $caste = ~tzhaar_player_caste_name;
+if (inv_total(inv, tzhaar_cape_fire) > 0) {
+    ~chatnpc("<p,neutral>You want help <$caste>-<displayname()>?");
+    switch_int(~p_choice5_header("Enter the Fight Cave.", 1, "What is this place?", 2, "What did you call me?", 3, "I have a fire cape here.", 4, "No I'm fine thanks.", 5, "TzHaar-Mej-Jal watches.")) {
+        case 1 : ~tzhaar_fightcave_talk_enter;
+        case 2 : ~tzhaar_fightcave_talk_place;
+        case 3 : ~tzhaar_fightcave_talk_called;
+        case 4 : ~tzhaar_fightcave_talk_cape;
+        case default : ~chatplayer("<p,neutral>No I'm fine thanks.");
+    }
+    return;
+}
+~chatnpc("<p,neutral>You want help <$caste>-<displayname()>?");
+switch_int(~p_choice4_header("Enter the Fight Cave.", 1, "What is this place?", 2, "What did you call me?", 3, "No I'm fine thanks.", 4, "TzHaar-Mej-Jal watches.")) {
+    case 1 : ~tzhaar_fightcave_talk_enter;
+    case 2 : ~tzhaar_fightcave_talk_place;
+    case 3 : ~tzhaar_fightcave_talk_called;
+    case default : ~chatplayer("<p,neutral>No I'm fine thanks.");
+}
+
+[proc,tzhaar_fightcave_talk_enter]
+~chatplayer("<p,neutral>I want to enter the Fight Cave.");
+~chatnpc("<p,neutral>You sure JalYt? You might get hurt.");
+switch_int(~p_choice2_header("Yes, I'm ready.", 1, "No, not yet.", 2, "Enter the Fight Cave?")) {
+    case 1 :
+        ~chatplayer("<p,neutral>Yes, I'm ready.");
+        ~tzhaar_fightcave_start;
+    case default :
+        ~chatplayer("<p,neutral>No, not yet.");
+        ~chatnpc("<p,neutral>Come back when you are ready.");
+}
+
+[proc,tzhaar_fightcave_talk_place]
+~chatplayer("<p,quiz>What is this place?");
+~chatnpc("<p,neutral>This is the Fight Cave. Fight through all the waves in here and defeat TzTok-Jad.");
+~chatnpc("<p,neutral>If you can do that, then you can have fire cape. If not, maybe you leave with TokKul.");
+
+[proc,tzhaar_fightcave_talk_called]
+def_string $caste = ~tzhaar_player_caste_name;
+def_string $description = ~tzhaar_player_caste_description;
+~chatplayer("<p,quiz>What did you call me?");
+~chatnpc("<p,confused>Are you not <$caste>-<displayname()>?");
+~chatplayer("<p,quiz>What's a '<$caste>'?");
+~chatnpc("<p,neutral><$description>");
+~chatplayer("<p,quiz>What are you then?");
+~chatnpc("<p,neutral>I am TzHaar-Mej. We are the mystics of this city.");
+~chatnpc("<p,neutral>There are the mighty TzHaar-Ket who guard us, the swift TzHaar-Xil who hunt for our food, and the skilled TzHaar-Hur who craft our homes and tools.");
+
+[proc,tzhaar_fightcave_talk_cape]
+~chatplayer("<p,neutral>I have a fire cape here.");
+~chatnpc("<p,neutral>Then you want TokKul for it?");
+switch_int(~p_choice2_header("Yes, give me TokKul.", 1, "No, I'll keep it.", 2, "Trade in your fire cape?")) {
+    case 1 :
+        ~chatplayer("<p,neutral>Yes, give me TokKul.");
+        if (inv_total(inv, tzhaar_cape_fire) < 1) {
+            mes("You don't seem to have a fire cape with you anymore.");
+            return;
+        }
+        inv_del(inv, tzhaar_cape_fire, 1);
+        inv_add(inv, tzhaar_token, 8000);
+        ~chatnpc("<p,neutral>Very well JalYt, take TokKul.");
+    case default :
+        ~chatplayer("<p,neutral>No, I'll keep it.");
+}
+
+[proc,tzhaar_fightcave_entry_coord]()(coord)
+return(0_37_79_31_32);
+
+[proc,tzhaar_fightcave_exit_coord]()(coord)
+return(0_38_80_6_48);
+
+[proc,tzhaar_fightcave_tokkul_reward](int $waves)(int)
+if ($waves <= 0) {
+    return(0);
+}
+return(multiply($waves, add($waves, 1)));
+
+[proc,tzhaar_fightcave_clear_progress]
+tzhaar_fightcave_clear_progress_state;
+
+[proc,tzhaar_fightcave_reward_partial]
+def_int $tokkul = ~tzhaar_fightcave_tokkul_reward(tzhaar_fightcave_completed);
+if ($tokkul > 0) {
+    inv_add(inv, tzhaar_token, $tokkul);
+    mes("TzHaar-Mej-Jal gives you <tostring($tokkul)> TokKul for the waves you completed.");
+    return;
+}
+mes("TzHaar-Mej-Jal says: Well I suppose you tried... better luck next time.");
+
+[proc,tzhaar_fightcave_reward_complete]
+def_boolean $drop_cape = false;
+if (inv_freespace(inv) < 1 & inv_total(inv, tzhaar_cape_fire) = 0) {
+    $drop_cape = true;
+}
+inv_add(inv, tzhaar_token, 8032);
+if ($drop_cape = true) {
+    obj_add(coord, tzhaar_cape_fire, 1, ^lootdrop_duration);
+} else {
+    inv_add(inv, tzhaar_cape_fire, 1);
+}
+~chatnpc_specific("TzHaar-Mej-Jal", tzhaar_fightcave_master, "<p,happy>You even defeated TzTok-Jad, I am most impressed! Please accept this gift as a reward.");
+
+[proc,tzhaar_fightcave_playercount]()(int)
+return(0);
+
+[proc,tzhaar_fightcave_start]
+if (tzhaar_fightcave_active = true) {
+    mes("You are already in the Fight Cave.");
+    return;
+}
+if (%macro_event > 0 & npc_finduid(%macro_event_uid) = true) {
+    ~macro_event_disappear;
+    ~macro_events_varps_reset;
+}
+~tzhaar_fightcave_clear_progress;
+tzhaar_fightcave_start_state;
+tzhaar_fightcave_set_rotation(random(7));
+def_coord $start = ~tzhaar_fightcave_entry_coord;
+mes("You descend into the Fight Cave.");
+p_delay(0);
+p_telejump_instance($start);
+~tzhaar_fightcave_cleanup;
+~tzhaar_music_refresh;
+queue(tzhaar_fightcave_begin, 1, 0);
+~chatnpc_specific("TzHaar-Mej-Jal", tzhaar_fightcave_master, "<p,neutral>You're on your own now JalYt, prepare to fight for your life!");
+
+[queue,tzhaar_fightcave_begin]
+if (tzhaar_fightcave_active = false) {
+    return;
+}
+~tzhaar_fightcave_spawn_wave;
+
+[proc,tzhaar_fightcave_jump_to_wave](int $wave)
+if (tzhaar_fightcave_active = false) {
+    mes("You need to be inside an active Fight Cave run first.");
+    return;
+}
+if ($wave < 1 | $wave > 63) {
+    mes("Fight Cave wave must be between 1 and 63.");
+    return;
+}
+~combat_clearqueue;
+p_stopaction;
+~tzhaar_fightcave_cleanup;
+clearqueue(tzhaar_fightcave_begin);
+clearqueue(tzhaar_fightcave_advance);
+clearqueue(tzhaar_fightcave_complete);
+clearqueue(tzhaar_jad_monitor);
+tzhaar_fightcave_jump_state($wave);
+tzhaar_fightcave_set_rotation(random(7));
+queue(tzhaar_fightcave_begin, 1, 0);
+mes("Fight Cave set to wave <tostring($wave)>.");
+
+[proc,tzhaar_fightcave_cleanup]
+npc_findallany(0_37_79_31_32, 96, ^vis_off);
+while (npc_findnext = true) {
+    switch_npc(npc_type) {
+        case tzhaar_fightcave_swarm_1a, tzhaar_fightcave_swarm_1b,
+             tzhaar_fightcave_swarm_2a, tzhaar_fightcave_swarm_2b, tzhaar_fightcave_swarm_2spawn,
+             tzhaar_fightcave_swarm_3a, tzhaar_fightcave_swarm_3b,
+             tzhaar_fightcave_swarm_4a, tzhaar_fightcave_swarm_4b,
+             tzhaar_fightcave_swarm_5a, tzhaar_fightcave_swarm_5b,
+             tzhaar_fightcave_swarm_boss, tzhaar_fightcave_swarm_boss_cleric :
+                npc_del;
+    }
+}
+
+[proc,tzhaar_fightcave_reset]
+tzhaar_fightcave_reset_state;
+clearqueue(tzhaar_fightcave_begin);
+clearqueue(tzhaar_fightcave_advance);
+clearqueue(tzhaar_fightcave_complete);
+clearqueue(tzhaar_jad_monitor);
+
+[proc,tzhaar_fightcave_leave](boolean $completed)
+if ($completed = true) {
+    tzhaar_fightcave_set_completed(63);
+}
+~tzhaar_fightcave_cleanup;
+~tzhaar_fightcave_reset;
+p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
+~music_refresh_autoplay;
+if ($completed = true) {
+    ~tzhaar_fightcave_reward_complete;
+    ~tzhaar_fightcave_clear_progress;
+    return;
+}
+~tzhaar_fightcave_reward_partial;
+~tzhaar_fightcave_clear_progress;
+
+[proc,tzhaar_login]
+if (tzhaar_fightcave_active = false & tzhaar_fightcave_return_pending = false & ~tzhaar_in_fightpit(coord) = false) {
+    return;
+}
+def_boolean $in_fightpit = ~tzhaar_in_fightpit(coord);
+def_boolean $fightpit_skull = ~headicon_exists(^headicon_fightpit_skull);
+def_boolean $resume_fightcave = false;
+if (tzhaar_fightcave_active = true | tzhaar_fightcave_return_pending = true) {
+    $resume_fightcave = true;
+}
+~tzhaar_fightcave_cleanup;
+~tzhaar_fightcave_reset;
+def_boolean $refresh = false;
+if (%tzhaar_fightpit_state > 0 | $fightpit_skull = true | $in_fightpit = true) {
+    %tzhaar_fightpit_remaining = 0;
+    %tzhaar_fightpit_state = 0;
+    set_player_op(null, 2, ^false);
+    if_openoverlay(null);
+    if ($fightpit_skull = true) {
+        ~headicon_del(^headicon_fightpit_skull);
+    }
+    $refresh = true;
+}
+if ($refresh = true) {
+    ~tzhaar_fightpit_refresh_all;
+}
+%tzhaar_fightpit_state = 0;
+if ($resume_fightcave = true) {
+    p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
+    ~music_refresh_autoplay;
+    if (tzhaar_fightcave_completed >= 63) {
+        ~tzhaar_fightcave_reward_complete;
+    } else {
+        ~tzhaar_fightcave_reward_partial;
+    }
+    ~tzhaar_fightcave_clear_progress;
+    return;
+}
+if ($in_fightpit = true) {
+    p_telejump(0_37_80_31_57);
+    ~music_refresh_autoplay;
+    mes("Your Fight Pits session has ended.");
+    return;
+}
+
+[proc,tzhaar_logout]
+def_boolean $fightpit_skull = ~headicon_exists(^headicon_fightpit_skull);
+if (tzhaar_fightcave_active = false & %tzhaar_fightpit_state = 0 & $fightpit_skull = false) {
+    return;
+}
+def_boolean $refresh = false;
+def_boolean $finish_round = false;
+if (%tzhaar_fightpit_state = 2 & ~tzhaar_in_fightpit_arena(coord) = true) {
+    $finish_round = true;
+}
+if (tzhaar_fightcave_active = true) {
+    tzhaar_fightcave_set_return_pending(true);
+    ~tzhaar_fightcave_cleanup;
+    ~tzhaar_fightcave_reset;
+    p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
+    ~music_refresh_autoplay;
+}
+if (%tzhaar_fightpit_state > 0 | $fightpit_skull = true) {
+    %tzhaar_fightpit_remaining = 0;
+    %tzhaar_fightpit_state = 0;
+    set_player_op(null, 2, ^false);
+    if_openoverlay(null);
+    if ($fightpit_skull = true) {
+        ~headicon_del(^headicon_fightpit_skull);
+    }
+    $refresh = true;
+}
+%tzhaar_fightpit_state = 0;
+if ($refresh = true) {
+    if ($finish_round = true) {
+        ~tzhaar_fightpit_try_finish_round;
+    }
+    ~tzhaar_fightpit_refresh_all;
+}
+
+[proc,tzhaar_music_refresh]
+if (%tzhaar_fightpit_state > 0) {
+    ~music_playrow(music_Fire_and_Brimstone);
+    return;
+}
+if (tzhaar_fightcave_active = true) {
+    ~music_playrow(music_TzHaar);
+    return;
+}
+~music_refresh_autoplay;
+
+[proc,tzhaar_fightcave_player_death]
+def_obj $prev_wep = inv_getobj(worn, ^wearpos_rhand);
+~player_death;
+~music_jingle(death2);
+mes("Oh dear you are dead!");
+~combat_clearqueue;
+clearqueue(player_death);
+~tzhaar_fightcave_cleanup;
+~tzhaar_fightcave_reset;
+p_telejump(map_findsquare(~tzhaar_fightcave_exit_coord, 1, 2, ^map_findsquare_lineofwalk));
+buildappearance(worn);
+~prayer_deactivate_all;
+anim(null, 0);
+p_stopaction;
+~stat_reset_all;
+healenergy(10000);
+~clear_pk_skull;
+~clear_poison;
+~update_all($prev_wep);
+~initalltabs;
+~tzhaar_fightcave_reward_partial;
+~tzhaar_fightcave_clear_progress;
+~music_refresh_autoplay;
+
+[proc,tzhaar_fightcave_spawn_wave]
+if (tzhaar_fightcave_active = false) {
+    return;
+}
+tzhaar_fightcave_set_rotation(random(7));
+tzhaar_fightcave_set_healers(0);
+tzhaar_fightcave_set_remaining(0);
+def_int $wave = tzhaar_fightcave_wave;
+def_int $offset = 0;
+def_int $orange_ketzek_offset = -1;
+if ($wave >= 62) {
+    $orange_ketzek_offset = add($offset, random(2));
+}
+while ($wave >= 63) {
+    ~tzhaar_fightcave_spawn_npc(tzhaar_fightcave_swarm_boss, $offset);
+    $wave = sub($wave, 63);
+    $offset = add($offset, 1);
+}
+while ($wave >= 31) {
+    def_npc $npc5 = tzhaar_fightcave_swarm_5a;
+    if ($offset = $orange_ketzek_offset) {
+        $npc5 = tzhaar_fightcave_swarm_5b;
+    } else if ($orange_ketzek_offset = -1 & modulo($offset, 2) = 1) {
+        $npc5 = tzhaar_fightcave_swarm_5b;
+    }
+    ~tzhaar_fightcave_spawn_npc($npc5, $offset);
+    $wave = sub($wave, 31);
+    $offset = add($offset, 1);
+}
+while ($wave >= 15) {
+    def_npc $npc4 = tzhaar_fightcave_swarm_4a;
+    if (modulo($offset, 2) = 1) {
+        $npc4 = tzhaar_fightcave_swarm_4b;
+    }
+    ~tzhaar_fightcave_spawn_npc($npc4, $offset);
+    $wave = sub($wave, 15);
+    $offset = add($offset, 1);
+}
+while ($wave >= 7) {
+    def_npc $npc3 = tzhaar_fightcave_swarm_3a;
+    if (modulo($offset, 2) = 1) {
+        $npc3 = tzhaar_fightcave_swarm_3b;
+    }
+    ~tzhaar_fightcave_spawn_npc($npc3, $offset);
+    $wave = sub($wave, 7);
+    $offset = add($offset, 1);
+}
+while ($wave >= 3) {
+    def_npc $npc2 = tzhaar_fightcave_swarm_2a;
+    if (modulo($offset, 2) = 1) {
+        $npc2 = tzhaar_fightcave_swarm_2b;
+    }
+    ~tzhaar_fightcave_spawn_npc($npc2, $offset);
+    $wave = sub($wave, 3);
+    $offset = add($offset, 1);
+}
+while ($wave >= 1) {
+    def_npc $npc1 = tzhaar_fightcave_swarm_1a;
+    if (modulo($offset, 2) = 1) {
+        $npc1 = tzhaar_fightcave_swarm_1b;
+    }
+    ~tzhaar_fightcave_spawn_npc($npc1, $offset);
+    $wave = sub($wave, 1);
+    $offset = add($offset, 1);
+}
+
+[proc,tzhaar_fightcave_spawn_npc](npc $type, int $offset)
+def_coord $spawn = ~tzhaar_fightcave_spawn_coord($offset);
+if ($type = tzhaar_fightcave_swarm_boss & tzhaar_fightcave_jad_spawn_coord ! null) {
+    $spawn = tzhaar_fightcave_jad_spawn_coord;
+}
+npc_add($spawn, $type, ^max_32bit_int);
+%npc_aggressive_player = uid;
+%npc_attacking_uid = uid;
+%npc_lastcombat = map_clock;
+switch_npc ($type) {
+    case tzhaar_fightcave_swarm_3a, tzhaar_fightcave_swarm_3b,
+         tzhaar_fightcave_swarm_5a, tzhaar_fightcave_swarm_5b,
+         tzhaar_fightcave_swarm_boss :
+            npc_setmode(applayer2);
+    case tzhaar_fightcave_swarm_boss_cleric :
+            npc_setmode(opplayer2);
+            npc_settimer(4);
+    case default :
+            npc_setmode(opplayer2);
+    }
+if ($type = tzhaar_fightcave_swarm_boss) {
+    tzhaar_fightcave_set_jad_uid(npc_uid);
+    %npc_attacking_uid = null;
+    npc_sethuntmode(null);
+    npc_setmode(none);
+    queue*(tzhaar_jad_monitor, 10)(npc_uid);
+    ~chatnpc_specific("TzHaar-Mej-Jal", tzhaar_fightcave_master, "<p,angry>Look out, here comes TzTok-Jad!");
+} else if ($type = tzhaar_fightcave_swarm_5b) {
+    tzhaar_fightcave_set_jad_spawn_coord($spawn);
+}
+tzhaar_fightcave_set_remaining(add(tzhaar_fightcave_remaining, 1));
+
+[proc,tzhaar_fightcave_spawn_coord](int $offset)(coord)
+def_int $slot = modulo(add(tzhaar_fightcave_rotation, $offset), 7);
+switch_int ($slot) {
+    case 0 : return(map_findsquare(0_37_79_14_48, 0, 2, ^map_findsquare_lineofwalk));
+    case 1 : return(map_findsquare(0_37_79_32_35, 0, 2, ^map_findsquare_lineofwalk));
+    case 2 : return(map_findsquare(0_37_79_44_51, 0, 2, ^map_findsquare_lineofwalk));
+    case 3 : return(map_findsquare(0_37_79_50_26, 0, 2, ^map_findsquare_lineofwalk));
+    case 4 : return(map_findsquare(0_37_79_28_16, 0, 2, ^map_findsquare_lineofwalk));
+    case 5 : return(map_findsquare(0_37_79_12_16, 0, 2, ^map_findsquare_lineofwalk));
+    case default : return(map_findsquare(0_37_79_30_45, 0, 2, ^map_findsquare_lineofwalk));
+}
+
+[queue,tzhaar_fightcave_advance]
+if (tzhaar_fightcave_active = false | tzhaar_fightcave_remaining > 0) {
+    return;
+}
+~music_jingle(the_fight_continues);
+if (tzhaar_fightcave_wave >= 63) {
+    queue(tzhaar_fightcave_complete, 1, 0);
+    return;
+}
+tzhaar_fightcave_set_wave(add(tzhaar_fightcave_wave, 1));
+queue(tzhaar_fightcave_begin, 1, 0);
+
+[queue,tzhaar_fightcave_complete]
+if (tzhaar_fightcave_active = false) {
+    return;
+}
+~music_jingle(the_fight_continues);
+queue(tzhaar_fightcave_victory_cheer, 3, 0);
+
+[queue,tzhaar_fightcave_victory_cheer]
+if (tzhaar_fightcave_active = false) {
+    return;
+}
+anim(emote_cheer, 0);
+queue(tzhaar_fightcave_victory_exit, 1, 0);
+
+[queue,tzhaar_fightcave_victory_exit]
+if (tzhaar_fightcave_active = false) {
+    return;
+}
+~tzhaar_fightcave_leave(true);
+
+[queue,tzhaar_jad_monitor](npc_uid $jad_uid)
+if (tzhaar_fightcave_active = false | tzhaar_fightcave_jad_uid ! $jad_uid) {
+    return;
+}
+if (npc_finduid($jad_uid) = false) {
+    return;
+}
+if (%npc_attacking_uid = null) {
+    %npc_aggressive_player = uid;
+    %npc_attacking_uid = uid;
+    %npc_lastcombat = map_clock;
+    npc_sethunt(64);
+    npc_sethuntmode(aggressive_ranged);
+    npc_setmode(applayer2);
+} else {
+    npc_sethunt(64);
+    npc_sethuntmode(aggressive_ranged);
+    if (npc_getmode = none | npc_getmode = playerescape) {
+        npc_setmode(applayer2);
+    }
+    if (tzhaar_fightcave_healers = 0 & npc_stat(hitpoints) <= divide(npc_basestat(hitpoints), 2)) {
+        tzhaar_fightcave_set_healers(1);
+        tzhaar_fightcave_set_remaining(add(tzhaar_fightcave_remaining, 4));
+        def_coord $jad_coord = npc_coord;
+        ~tzhaar_jad_spawn_healer($jad_coord, movecoord($jad_coord, -1, 0, 2));
+        ~tzhaar_jad_spawn_healer($jad_coord, movecoord($jad_coord, 5, 0, 2));
+        ~tzhaar_jad_spawn_healer($jad_coord, movecoord($jad_coord, 2, 0, -1));
+        ~tzhaar_jad_spawn_healer($jad_coord, movecoord($jad_coord, 2, 0, 5));
+    }
+}
+queue*(tzhaar_jad_monitor, 2)($jad_uid);
+
+[proc,tzhaar_retaliate_ap]
+if (finduid(%npc_aggressive_player) = false | ~npc_retal_ready = false) {
+    return;
+}
+%npc_action_delay = add(map_clock, divide(npc_param(attackrate), 2));
+%npc_attacking_uid = %npc_aggressive_player;
+if (npc_stat(hitpoints) <= npc_param(retreat)) {
+    npc_setmode(playerescape);
+} else {
+    npc_setmode(applayer2);
+    if (npc_inrange = false) {
+        npc_setmode(playerescape);
+    }
+}
+
+[proc,tzhaar_retaliate_hybrid_ap](int $melee_distance)
+if (finduid(%npc_aggressive_player) = false) {
+    return;
+}
+if (npc_getmode = opplayer2 & distance(coord, npc_coord) > $melee_distance) {
+    %npc_attacking_uid = %npc_aggressive_player;
+    npc_setmode(applayer2);
+    return;
+}
+~tzhaar_retaliate_ap;
+
+[proc,tzhaar_ketzek_sync_mode]
+if (finduid(%npc_aggressive_player) = false) {
+    return;
+}
+%npc_attacking_uid = %npc_aggressive_player;
+if (~tzhaar_ketzek_can_melee = true) {
+    if (npc_getmode ! opplayer2) {
+        npc_setmode(opplayer2);
+    }
+    return;
+}
+if (npc_getmode ! applayer2) {
+    npc_setmode(applayer2);
+}
+
+[proc,tzhaar_ketzek_can_melee]()(boolean)
+if (distance(coord, npc_coord) <= 1) {
+    return(true);
+}
+return(false);
+
+[proc,tzhaar_tokxil_can_melee]()(boolean)
+if (distance(coord, npc_coord) <= 3) {
+    return(true);
+}
+return(false);
+
+[proc,tzhaar_fire_attack](int $maxhit, spotanim $launch, spotanim $travel, spotanim $impact)
+if (%npc_action_delay > map_clock) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+if (npc_param(magicattack_anim) = null) {
+    npc_anim(npc_param(attack_anim), 0);
+} else {
+    npc_anim(npc_param(magicattack_anim), 0);
+}
+if (npc_param(attack_sound) ! null) {
+    sound_synth(npc_param(attack_sound), 0, 0);
+}
+spotanim_npc($launch, 92, 0);
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+def_int $duration = ~player_projectile(npc_coord, coord, uid, $travel, 43, 31, 51, 16, -5, 64, 10);
+spotanim_pl($impact, 10, $duration);
+def_int $damage = 0;
+if (~npc_player_hit_roll(^magic_style) = true & ~check_protect_prayer(^magic_style) = false) {
+    $damage = randominc($maxhit);
+}
+~queue_combat_damage_player(calc($duration / 30), $damage);
+queue*(playerhit_n_retaliate, calc($duration / 30))(npc_uid);
+~npc_set_attack_vars;
+
+[proc,tzhaar_spine_rangeattack]
+if (%npc_action_delay > map_clock) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+
+def_int $attack_roll = ~npc_ranged_attack_roll;
+def_int $defence_roll = ~player_defence_roll_specific(npc_param(damagetype));
+def_int $maxhit = ~npc_ranged_maxhit;
+
+if (npc_param(rangeattack_anim) = null) {
+    npc_anim(npc_param(attack_anim), 0);
+} else {
+    npc_anim(npc_param(rangeattack_anim), 0);
+}
+sound_synth(npc_param(rangeattack_sound), 0, 0);
+
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+def_int $duration = ~player_projectile(npc_coord, coord, uid, npc_param(proj_travel), 40, 36, 32, 15, 0, 11, 5);
+
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    ~playerhit_n_ranged(true, randominc($maxhit), $duration, npc_param(attackrate));
+    ~npc_poison_player;
+    return;
+}
+~playerhit_n_ranged(true, 0, $duration, npc_param(attackrate));
+
+[proc,tzhaar_kih_attack]
+if (%death = ^true) {
+    npc_setmode(null);
+    return;
+}
+if (%npc_action_delay > map_clock) {
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+anim(%com_defendanim, 0);
+npc_anim(npc_param(attack_anim), 0);
+if (npc_param(attack_sound) ! null) {
+    sound_synth(npc_param(attack_sound), 0, 0);
+}
+
+def_int $attack_roll = ~npc_melee_attack_roll;
+def_int $defence_roll = ~player_defence_roll_specific(npc_param(damagetype));
+def_int $maxhit = ~npc_melee_maxhit;
+def_int $damage = 0;
+
+if (randominc($attack_roll) > randominc($defence_roll)) {
+    $damage = randominc($maxhit);
+}
+
+if_close;
+~npc_set_attack_vars;
+%npc_action_delay = add(map_clock, npc_param(attackrate));
+if (npc_stat(hitpoints) = 0) {
+    return;
+}
+if (~check_protect_prayer(^melee_style) = true) {
+    $damage = 0;
+}
+stat_sub(prayer, add($damage, 1), 0);
+~queue_combat_damage_player(0, $damage);
+queue*(playerhit_n_retaliate, 0)(npc_uid);
+
+[proc,tzhaar_mejkot_heal_target]()(npc_uid)
+def_npc_uid $self = npc_uid;
+npc_findallany(npc_coord, 2, ^vis_off);
+while (npc_findnext = true) {
+    if (npc_uid ! $self) {
+        switch_npc(npc_type) {
+            case tzhaar_fightcave_swarm_1a, tzhaar_fightcave_swarm_1b,
+                 tzhaar_fightcave_swarm_2a, tzhaar_fightcave_swarm_2b, tzhaar_fightcave_swarm_2spawn,
+                 tzhaar_fightcave_swarm_3a, tzhaar_fightcave_swarm_3b,
+                 tzhaar_fightcave_swarm_4a, tzhaar_fightcave_swarm_4b,
+                 tzhaar_fightcave_swarm_5a, tzhaar_fightcave_swarm_5b :
+                    if (npc_stat(hitpoints) <= divide(npc_basestat(hitpoints), 2)) {
+                        return(npc_uid);
+                    }
+        }
+    }
+}
+return(null);
+
+[proc,tzhaar_mejkot_try_heal]()(boolean)
+if (npc_range(coord) > 1 | %npc_int > map_clock) {
+    return(true);
+}
+
+def_npc_uid $self = npc_uid;
+def_npc_uid $heal_target = ~tzhaar_mejkot_heal_target;
+if (npc_finduid($self) = false) {
+    return(false);
+}
+
+if ($heal_target ! null) {
+    def_int $heal = add(random(10), 1);
+    if (npc_finduid($heal_target) = true) {
+        npc_statheal(hitpoints, $heal, 0);
+        sound_synth(heal, 0, 0);
+        spotanim_npc(tzhaar_heal, 124, 0);
+    }
+    if (npc_finduid($self) = false) {
+        return(false);
+    }
+    %npc_int = add(map_clock, 5);
+    return(true);
+}
+
+if (npc_stat(hitpoints) <= divide(npc_basestat(hitpoints), 2)) {
+    npc_statheal(hitpoints, add(random(10), 1), 0);
+    sound_synth(heal, 0, 0);
+    spotanim_npc(tzhaar_heal, 124, 0);
+    %npc_int = add(map_clock, 5);
+}
+return(true);
+
+[proc,tzhaar_mejkot_attack]
+if (%death = ^true) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+
+if (~tzhaar_mejkot_try_heal = false) {
+    return;
+}
+if (%npc_action_delay > map_clock) {
+    return;
+}
+
+~npc_default_attack;
+
+[ai_queue1,tzhaar_fightcave_swarm_1a] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_1b] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_2a] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_2b] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_2spawn] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_4a] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_4b] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_3a] ~tzhaar_retaliate_hybrid_ap(3);
+[ai_queue1,tzhaar_fightcave_swarm_3b] ~tzhaar_retaliate_hybrid_ap(3);
+[ai_queue1,tzhaar_fightcave_swarm_5a] ~tzhaar_ketzek_sync_mode;
+[ai_queue1,tzhaar_fightcave_swarm_5b] ~tzhaar_ketzek_sync_mode;
+
+[ai_opplayer2,tzhaar_fightcave_swarm_1a] ~tzhaar_kih_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_1b] ~tzhaar_kih_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_2a] ~npc_default_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_2b] ~npc_default_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_2spawn] ~npc_default_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_4a] ~tzhaar_mejkot_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_4b] ~tzhaar_mejkot_attack;
+
+[ai_opplayer2,tzhaar_fightcave_swarm_3a]
+if (~tzhaar_tokxil_can_melee = false) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_opplayer2,tzhaar_fightcave_swarm_3b]
+if (~tzhaar_tokxil_can_melee = false) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_opplayer2,tzhaar_fightcave_swarm_5a]
+if (~tzhaar_ketzek_can_melee = false) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_opplayer2,tzhaar_fightcave_swarm_5b]
+if (~tzhaar_ketzek_can_melee = false) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_applayer2,tzhaar_fightcave_swarm_3a]
+if (~tzhaar_tokxil_can_melee = true) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_spine_rangeattack;
+
+[ai_applayer2,tzhaar_fightcave_swarm_3b]
+if (~tzhaar_tokxil_can_melee = true) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_spine_rangeattack;
+
+[ai_applayer2,tzhaar_fightcave_swarm_5a]
+if (~tzhaar_ketzek_can_melee = true) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_fire_attack(49, tzhaar_firebreath_attack, tzhaar_fire_launch_travel, tzhaar_inferno);
+
+[ai_applayer2,tzhaar_fightcave_swarm_5b]
+if (~tzhaar_ketzek_can_melee = true) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_fire_attack(49, tzhaar_firebreath_attack, tzhaar_fire_launch_travel, tzhaar_inferno);
+
+[label,tzhaar_fightcave_common_death]
+gosub(npc_death);
+if (.finduid(%npc_aggressive_player) = false | .tzhaar_fightcave_active = false) {
+    return;
+}
+if (.tzhaar_fightcave_remaining > 0) {
+    .tzhaar_fightcave_set_remaining(sub(.tzhaar_fightcave_remaining, 1));
+}
+if (.tzhaar_fightcave_remaining = 0) {
+    .tzhaar_fightcave_set_completed(.tzhaar_fightcave_wave);
+    .queue(tzhaar_fightcave_advance, 2, 0);
+}
+
+[ai_queue3,tzhaar_fightcave_swarm_1a] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_1b] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_2spawn] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_3a] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_3b] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_4a] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_4b] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_5a] @tzhaar_fightcave_common_death;
+[ai_queue3,tzhaar_fightcave_swarm_5b] @tzhaar_fightcave_common_death;
+
+[ai_queue3,tzhaar_fightcave_swarm_2a]
+gosub(npc_death);
+if (.finduid(%npc_aggressive_player) = false | .tzhaar_fightcave_active = false) {
+    return;
+}
+.tzhaar_fightcave_set_remaining(add(.tzhaar_fightcave_remaining, 1));
+npc_add(map_findsquare(movecoord(npc_coord, -1, 0, 0), 0, 1, ^map_findsquare_lineofwalk), tzhaar_fightcave_swarm_2spawn, ^max_32bit_int);
+%npc_aggressive_player = .uid;
+%npc_attacking_uid = .uid;
+npc_setmode(opplayer2);
+npc_sethuntmode(aggressive_melee);
+npc_add(map_findsquare(movecoord(npc_coord, 1, 0, 0), 0, 1, ^map_findsquare_lineofwalk), tzhaar_fightcave_swarm_2spawn, ^max_32bit_int);
+%npc_aggressive_player = .uid;
+%npc_attacking_uid = .uid;
+npc_setmode(opplayer2);
+npc_sethuntmode(aggressive_melee);
+
+[ai_queue3,tzhaar_fightcave_swarm_2b]
+gosub(npc_death);
+if (.finduid(%npc_aggressive_player) = false | .tzhaar_fightcave_active = false) {
+    return;
+}
+.tzhaar_fightcave_set_remaining(add(.tzhaar_fightcave_remaining, 1));
+npc_add(map_findsquare(movecoord(npc_coord, 0, 0, -1), 0, 1, ^map_findsquare_lineofwalk), tzhaar_fightcave_swarm_2spawn, ^max_32bit_int);
+%npc_aggressive_player = .uid;
+%npc_attacking_uid = .uid;
+npc_setmode(opplayer2);
+npc_sethuntmode(aggressive_melee);
+npc_add(map_findsquare(movecoord(npc_coord, 0, 0, 1), 0, 1, ^map_findsquare_lineofwalk), tzhaar_fightcave_swarm_2spawn, ^max_32bit_int);
+%npc_aggressive_player = .uid;
+%npc_attacking_uid = .uid;
+npc_setmode(opplayer2);
+npc_sethuntmode(aggressive_melee);

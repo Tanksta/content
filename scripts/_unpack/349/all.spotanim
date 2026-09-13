@@ -3124,6 +3124,11 @@ model=spot_retribution_spotanim
 anim=tzhaar_fire_floor
 
 
+[tzhaar_ring_throw_attack]
+model=obj_tzhaar_throwingring_manwear
+anim=thzaar_ring_fly
+
+
 [tzhaar_spine_attack]
 model=spot_tzhaar_spine_attack
 ambient=60

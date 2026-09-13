@@ -79,6 +79,7 @@ if(inzone(movecoord(^grandtree_jail_coord, 0, 0, -2), movecoord(^grandtree_jail_
 
 ~initalltabs;
 ~castlewars_login;
+~tzhaar_login;
 ~update_all(inv_getobj(worn, ^wearpos_rhand));
 cam_reset;
 if (%tutorial < ^tutorial_complete & ~in_tutorial_island(coord) = true) {

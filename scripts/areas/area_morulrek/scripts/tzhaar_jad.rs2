@@ -1,0 +1,252 @@
+[proc,tzhaar_jad_attack_origin](coord $target)(coord)
+return(movecoord(npc_coord, 2, 0, 2));
+
+[queue,tzhaar_jad_snapshot_hit](npc_uid $nid, int $style, int $maxhit, int $accuracy_hit, int $remaining_ticks)
+def_int $damage = 0;
+if ($accuracy_hit = 1) {
+    if ($style = ^magic_style & ~check_protect_prayer(^magic_style) = false) {
+        $damage = randominc($maxhit);
+    } else if ($style = ^ranged_style & ~check_protect_prayer(^ranged_style) = false) {
+        $damage = randominc($maxhit);
+    }
+}
+~queue_combat_damage_player($remaining_ticks, $damage);
+queue*(playerhit_n_retaliate, $remaining_ticks)($nid);
+
+[proc,tzhaar_jad_magic](int $maxhit)
+if (%npc_action_delay > map_clock) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+if (npc_param(magicattack_anim) = null) {
+    npc_anim(npc_param(attack_anim), 0);
+} else {
+    npc_anim(npc_param(magicattack_anim), 0);
+}
+def_coord $mouth_coord = ~tzhaar_jad_attack_origin(coord);
+sound_synth(firebreath, 0, 0);
+def_int $cast_delay = 80;
+def_int $follow_delay = add($cast_delay, 4);
+def_int $end_delay = add($cast_delay, 10);
+sound_synth(firewave_cast_and_fire, 0, $cast_delay);
+// Keep the opener as a npc-targeted projectile, but send the spit chain directly at the player again.
+projanim_npc($mouth_coord, npc_uid, tzhaar_firebreath_attack, 124, 124, 2, 8, 16, 32);
+~player_projectile($mouth_coord, coord, uid, tzhaar_fire_spit_travel, 124, 26, $cast_delay, 16, -5, 32, 10);
+~player_projectile($mouth_coord, coord, uid, tzhaar_fire_spit_follow_travel, 124, 26, $follow_delay, 16, -5, 32, 10);
+def_int $end_duration = ~player_projectile($mouth_coord, coord, uid, tzhaar_fire_spit_end_travel, 124, 26, $end_delay, 16, -5, 32, 10);
+def_int $impact_delay = add($end_duration, 2);
+sound_synth(firewave_hit, 0, $impact_delay);
+spotanim_map(firewave_impact, coord, 92, $impact_delay);
+%npc_action_delay = add(map_clock, max(npc_param(attackrate), calc($impact_delay / 30)));
+def_int $accuracy_hit = 0;
+if (~npc_player_hit_roll(^magic_style) = true) {
+    $accuracy_hit = 1;
+}
+def_int $impact_ticks = calc($impact_delay / 30);
+def_int $snapshot_ticks = max(1, divide($impact_ticks, 2));
+def_int $remaining_ticks = max(0, sub($impact_ticks, $snapshot_ticks));
+def_int $magic_style = ^magic_style;
+queue*(tzhaar_jad_snapshot_hit, $snapshot_ticks)(npc_uid, $magic_style, $maxhit, $accuracy_hit, $remaining_ticks);
+~npc_set_attack_vars;
+
+[proc,tzhaar_jad_ranged](int $maxhit)
+if (%npc_action_delay > map_clock) {
+    npc_setmode(applayer2);
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+if (npc_param(rangeattack_anim) = null) {
+    npc_anim(npc_param(attack_anim), 0);
+} else {
+    npc_anim(npc_param(rangeattack_anim), 0);
+}
+def_int $fall_delay = 120;
+spotanim_map(tzhaar_rock_smash, coord, 92, $fall_delay);
+sound_synth(firewave_hit, 0, $fall_delay);
+%npc_action_delay = add(map_clock, max(npc_param(attackrate), calc($fall_delay / 30)));
+def_int $accuracy_hit = 0;
+if (~npc_player_hit_roll(^ranged_style) = true) {
+    $accuracy_hit = 1;
+}
+def_int $impact_ticks = calc($fall_delay / 30);
+def_int $snapshot_ticks = max(1, divide($impact_ticks, 2));
+def_int $remaining_ticks = max(0, sub($impact_ticks, $snapshot_ticks));
+def_int $ranged_style = ^ranged_style;
+queue*(tzhaar_jad_snapshot_hit, $snapshot_ticks)(npc_uid, $ranged_style, $maxhit, $accuracy_hit, $remaining_ticks);
+~npc_set_attack_vars;
+
+[proc,tzhaar_jad_attack](int $maxhit)
+if (%death = ^true) {
+    npc_setmode(null);
+    return;
+}
+if (%npc_action_delay > map_clock) {
+    return;
+}
+if (~npc_check_notcombat = false) {
+    npc_setmode(null);
+    return;
+}
+if (~npc_check_notcombat_self = false) {
+    return;
+}
+anim(%com_defendanim, 0);
+npc_anim(npc_param(attack_anim), 0);
+if (npc_param(attack_sound) ! null) {
+    sound_synth(npc_param(attack_sound), 0, 0);
+}
+def_int $damage = 0;
+if (randominc(~npc_melee_attack_roll) > randominc(~player_defence_roll_specific(npc_param(damagetype)))) {
+    $damage = randominc($maxhit);
+}
+~playerhit_n_melee(true, $damage, npc_param(attackrate));
+
+[proc,tzhaar_jad_random_attack]
+if (distance(coord, npc_coord) > 1) {
+    if (random(2) = 0) {
+        ~tzhaar_jad_ranged(97);
+        return;
+    }
+    ~tzhaar_jad_magic(95);
+    return;
+}
+switch_int (random(3)) {
+    case 0 : ~tzhaar_jad_attack(97);
+    case 1 : ~tzhaar_jad_ranged(97);
+    case 2 : ~tzhaar_jad_magic(95);
+}
+
+[proc,tzhaar_jad_death]
+npc_walk(npc_coord);
+npc_setmode(none);
+npc_arrivedelay;
+if (finduid(%npc_aggressive_player) = true) {
+    if (npc_param(death_sound) ! null) {
+        ~sound_within_distance(npc_param(death_sound), 0, npc_coord, 12);
+    }
+    %lastcombat = null;
+}
+npc_anim(npc_param(death_anim), 0);
+def_int $inferno_delay = 90;
+spotanim_npc(tzhaar_inferno, 0, $inferno_delay);
+npc_anim(tzhaar_inferno, $inferno_delay);
+npc_delay(8);
+npc_del;
+
+[proc,tzhaar_jad_retaliate_ap]
+if (%npc_attacking_uid = null) {
+    return;
+}
+~tzhaar_retaliate_ap;
+
+[ai_queue1,tzhaar_fightcave_swarm_boss_cleric] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightcave_swarm_boss] ~tzhaar_jad_retaliate_ap;
+
+[ai_opplayer2,tzhaar_fightcave_swarm_boss_cleric] ~npc_default_attack;
+[ai_opplayer2,tzhaar_fightcave_swarm_boss] ~tzhaar_jad_random_attack;
+
+[ai_applayer2,tzhaar_fightcave_swarm_boss] ~tzhaar_jad_random_attack;
+
+[proc,tzhaar_jad_safe_healer_coord](coord $jad_coord, coord $preferred)(coord)
+def_coord $spawn = map_findsquare($preferred, 0, 3, ^map_findsquare_lineofwalk);
+if (map_blocked($spawn) = false & lineofwalk($spawn, $jad_coord) = true) {
+    return($spawn);
+}
+$spawn = map_findsquare($jad_coord, 4, 8, ^map_findsquare_lineofwalk);
+if (map_blocked($spawn) = false & lineofwalk($spawn, $jad_coord) = true) {
+    return($spawn);
+}
+$spawn = map_findsquare($jad_coord, 1, 10, ^map_findsquare_lineofwalk);
+if (map_blocked($spawn) = false & lineofwalk($spawn, $jad_coord) = true) {
+    return($spawn);
+}
+$spawn = map_findsquare($jad_coord, 1, 10, ^map_findsquare_none);
+if (map_blocked($spawn) = false) {
+    return($spawn);
+}
+return($preferred);
+
+[proc,tzhaar_jad_spawn_healer](coord $jad_coord, coord $spawn)
+def_player_uid $target = %npc_aggressive_player;
+npc_add(~tzhaar_jad_safe_healer_coord($jad_coord, $spawn), tzhaar_fightcave_swarm_boss_cleric, ^max_32bit_int);
+%npc_aggressive_player = $target;
+%npc_attacking_uid = null;
+%npc_lastcombat = map_clock;
+npc_sethuntmode(null);
+npc_setmode(none);
+npc_settimer(2);
+
+[ai_timer,tzhaar_fightcave_swarm_boss_cleric]
+if (.p_finduid(%npc_aggressive_player) = false) {
+    npc_settimer(0);
+    return;
+}
+if (.tzhaar_fightcave_active = false) {
+    npc_settimer(0);
+    return;
+}
+if (%npc_attacking_uid ! null) {
+    npc_sethunt(64);
+    npc_sethuntmode(aggressive_melee);
+    if (npc_getmode = none) {
+        npc_setmode(opplayer2);
+    }
+    npc_settimer(0);
+    return;
+}
+def_coord $healer_coord = npc_coord;
+def_npc_uid $healer = npc_uid;
+if (npc_finduid(.tzhaar_fightcave_jad_uid) = true) {
+    def_coord $jad_coord = npc_coord;
+    def_coord $jad_heal_spot = movecoord($jad_coord, 2, 0, 5);
+    if (coordx($healer_coord) <= coordx($jad_coord)) {
+        $jad_heal_spot = movecoord($jad_coord, -1, 0, 2);
+    } else if (coordx($healer_coord) >= add(coordx($jad_coord), 5)) {
+        $jad_heal_spot = movecoord($jad_coord, 5, 0, 2);
+    } else if (coordz($healer_coord) <= coordz($jad_coord)) {
+        $jad_heal_spot = movecoord($jad_coord, 2, 0, -1);
+    }
+    if (npc_stat(hitpoints) > 0 & npc_range($healer_coord) <= 1) {
+        npc_statheal(hitpoints, 5, 0);
+        spotanim_npc(tzhaar_heal, 92, 0);
+        if (npc_finduid($healer) = true) {
+            .sound_synth(heal, 0, 0);
+            npc_facesquare($jad_coord);
+            npc_setmode(none);
+            npc_settimer(4);
+        }
+    } else if (npc_finduid($healer) = true) {
+        npc_facesquare($jad_coord);
+        npc_walk(~tzhaar_jad_safe_healer_coord($jad_coord, $jad_heal_spot));
+        npc_setmode(none);
+        npc_settimer(2);
+    }
+    return;
+}
+if (npc_finduid($healer) = true) {
+    npc_settimer(0);
+}
+
+[ai_queue3,tzhaar_fightcave_swarm_boss_cleric] @tzhaar_fightcave_common_death;
+
+[ai_queue3,tzhaar_fightcave_swarm_boss]
+gosub(tzhaar_jad_death);
+if (.finduid(%npc_aggressive_player) = true & .tzhaar_fightcave_active = true) {
+    .tzhaar_fightcave_set_completed(63);
+    .tzhaar_fightcave_set_remaining(0);
+    .tzhaar_fightcave_set_healers(0);
+    .queue(tzhaar_fightcave_complete, 2, 0);
+}

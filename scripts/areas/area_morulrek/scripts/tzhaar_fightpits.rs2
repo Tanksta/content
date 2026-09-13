@@ -1,0 +1,257 @@
+[opnpc1,tzhaar_fightpit_master]
+def_int $choice = ~p_choice2_header("Enter the Fight Pits.", 1, "Not right now.", 2, "TzHaar-Mej-Kah watches.");
+if_close;
+if ($choice = 1) {
+    ~tzhaar_fightpit_enter;
+    return;
+}
+mes("You decide not to enter the Fight Pits yet.");
+
+[oploc1,loc_9391]
+~tzhaar_fightpit_view;
+
+[oploc1,loc_9367]
+if (~tzhaar_in_fightpit(coord) = true) {
+    ~tzhaar_fightpit_leave;
+} else {
+    ~tzhaar_fightpit_enter;
+}
+
+[oploc1,loc_9368]
+if (~tzhaar_in_fightpit(coord) = true) {
+    ~tzhaar_fightpit_leave;
+} else {
+    ~tzhaar_fightpit_enter;
+}
+
+[oploc1,loc_9369]
+if (~tzhaar_in_fightpit(coord) = true) {
+    ~tzhaar_fightpit_leave;
+} else {
+    ~tzhaar_fightpit_enter;
+    return;
+}
+if (%tzhaar_fightpit_state > 0 | ~tzhaar_in_fightpit(coord) = true) {
+    ~tzhaar_fightpit_leave;
+    return;
+}
+mes("You can only use that hot vent from outside the waiting area.");
+
+[proc,tzhaar_fightpit_door_south]
+if (coordz(coord) < coordz(loc_coord)) {
+    if (%tzhaar_fightpit_state = 2 & ~tzhaar_in_fightpit_arena(coord) = true) {
+        ~tzhaar_fightpit_leave;
+        return;
+    }
+    mes("You can only use that hot vent from inside the arena.");
+    return;
+}
+mes("The vent only opens from inside the arena.");
+
+[proc,tzhaar_fightpit_view]
+if (~tzhaar_fightpit_phase < 2) {
+    mes("There is no game currently in Fight-Pits!");
+    return;
+}
+def_int $choice = ~p_choice5_header("Central view.", 1, "North-east view.", 2, "South-east view.", 3, "South-west view.", 4, "North-west view.", 5, "Choose a viewing orb angle");
+cam_reset;
+switch_int($choice) {
+    case 1 : ~tzhaar_fightpit_orb_camera(0_37_80_30_30, ^north_east_camera);
+    case 2 : ~tzhaar_fightpit_orb_camera(0_37_80_41_38, ^north_east_camera);
+    case 3 : ~tzhaar_fightpit_orb_camera(0_37_80_43_17, ^south_east_camera);
+    case 4 : ~tzhaar_fightpit_orb_camera(0_37_80_20_18, ^south_west_camera);
+    case 5 : ~tzhaar_fightpit_orb_camera(0_37_80_16_37, ^north_west_camera);
+}
+walktrigger(tzhaar_fightpit_orb_view);
+
+[proc,tzhaar_fightpit_orb_camera](coord $coord, int $camera_type)
+switch_int($camera_type) {
+    case ^north_camera :
+        cam_moveto(movecoord($coord, 0, 0, 8), 1926, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, 3), 1276, 0, 100);
+    case ^south_camera :
+        cam_moveto(movecoord($coord, 0, 0, -8), 1926, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, -3), 1276, 0, 100);
+    case ^east_camera :
+        cam_moveto(movecoord($coord, 8, 0, 0), 1926, 0, 100);
+        cam_lookat(movecoord($coord, 3, 0, 0), 1276, 0, 100);
+    case ^west_camera :
+        cam_moveto(movecoord($coord, -8, 0, 0), 1926, 0, 100);
+        cam_lookat(movecoord($coord, -3, 0, 0), 1276, 0, 100);
+    case ^north_east_camera :
+        cam_moveto(movecoord($coord, 6, 0, 2), 1980, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, -1), 1155, 0, 100);
+    case ^north_west_camera :
+        cam_moveto(movecoord($coord, -6, 0, 2), 1980, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, -1), 1155, 0, 100);
+    case ^south_east_camera :
+        cam_moveto(movecoord($coord, 6, 0, -2), 1980, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, 1), 1155, 0, 100);
+    case ^south_west_camera :
+        cam_moveto(movecoord($coord, -6, 0, -2), 1980, 0, 100);
+        cam_lookat(movecoord($coord, 0, 0, 1), 1155, 0, 100);
+}
+
+[walktrigger,tzhaar_fightpit_orb_view]
+cam_reset;
+
+[proc,tzhaar_in_fightpit](coord $coord)(boolean)
+if (inzone(0_37_80_14_14, 0_37_80_47_56, $coord) = true) {
+    return(true);
+}
+return(false);
+
+[proc,.tzhaar_in_fightpit](coord $coord)(boolean)
+if (inzone(0_37_80_14_14, 0_37_80_47_56, $coord) = true) {
+    return(true);
+}
+return(false);
+
+[proc,tzhaar_in_fightpit_arena](coord $coord)(boolean)
+if (inzone(0_37_80_14_14, 0_37_80_47_44, $coord) = true) {
+    return(true);
+}
+return(false);
+
+[proc,tzhaar_fightpit_phase]()(int)
+return(%tzhaar_fightpit_state);
+
+[proc,tzhaar_fightpit_enter]
+if (~tzhaar_in_fightpit(coord) = true) {
+    mes("You are already in the Fight Pits.");
+    return;
+}
+if (%macro_event > 0 & npc_finduid(%macro_event_uid) = true) {
+    ~macro_event_disappear;
+    ~macro_events_varps_reset;
+}
+%tzhaar_fightpit_state = 1;
+%tzhaar_fightpit_remaining = 0;
+mes("You step into the Fight Pits.");
+p_delay(0);
+p_telejump(map_findsquare(0_37_80_31_55, 0, 1, ^map_findsquare_lineofwalk));
+~tzhaar_music_refresh;
+queue(tzhaar_fightpit_post_enter, 0, 0);
+
+[queue,tzhaar_fightpit_post_enter]
+if (%tzhaar_fightpit_state = 0) {
+    return;
+}
+if_openoverlay(fight_pits);
+~tzhaar_fightpit_refresh_all;
+
+[proc,tzhaar_fightpit_leave]
+def_int $old_state = %tzhaar_fightpit_state;
+~headicon_del(^headicon_fightpit_skull);
+%tzhaar_fightpit_remaining = 0;
+set_player_op(null, 2, ^false);
+if_openoverlay(null);
+%tzhaar_fightpit_state = 0;
+p_delay(0);
+p_telejump(0_37_80_31_57);
+~music_refresh_autoplay;
+mes("You leave the Fight Pits.");
+if ($old_state = 2) {
+    ~tzhaar_fightpit_try_finish_round;
+    return;
+}
+~tzhaar_fightpit_refresh_all;
+
+[proc,tzhaar_fightpit_try_finish_round]
+return;
+
+[proc,tzhaar_fightpit_refresh_all]
+if (%tzhaar_fightpit_state > 0) {
+    if_openoverlay(fight_pits);
+    return;
+}
+if_openoverlay(null);
+
+[proc,tzhaar_fightpit_is_attackable]()(boolean)
+if (%tzhaar_fightpit_state = 2 & .%tzhaar_fightpit_state = 2 & ~tzhaar_in_fightpit_arena(coord) = true & ~tzhaar_in_fightpit_arena(.coord) = true) {
+    return(true);
+}
+return(false);
+
+[proc,tzhaar_fightpit_player_death]
+def_obj $prev_wep = inv_getobj(worn, ^wearpos_rhand);
+def_int $old_state = %tzhaar_fightpit_state;
+~player_death;
+~music_jingle(death2);
+mes("Oh dear you are dead!");
+~combat_clearqueue;
+clearqueue(player_death);
+%tzhaar_fightpit_remaining = 0;
+~headicon_del(^headicon_fightpit_skull);
+if_close;
+p_stopaction;
+if ($old_state = 2) {
+    %tzhaar_fightpit_state = 1;
+    p_telejump(0_37_80_31_55);
+    mes("You return to the Fight Pits waiting area.");
+} else {
+    %tzhaar_fightpit_state = 0;
+    p_telejump(0_37_80_31_57);
+}
+buildappearance(worn);
+~prayer_deactivate_all;
+anim(null, 0);
+~stat_reset_all;
+healenergy(10000);
+~clear_pk_skull;
+~clear_poison;
+~update_all($prev_wep);
+~initalltabs;
+~sa_reset;
+~music_refresh_autoplay;
+if ($old_state = 2) {
+    ~tzhaar_fightpit_try_finish_round;
+}
+~tzhaar_fightpit_refresh_all;
+
+[ai_queue1,tzhaar_fightpit_swarm_1a] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightpit_swarm_1b] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightpit_swarm_2a] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightpit_swarm_2b] ~npc_default_retaliate;
+[ai_queue1,tzhaar_fightpit_swarm_3a] ~tzhaar_retaliate_ap;
+[ai_queue1,tzhaar_fightpit_swarm_3b] ~tzhaar_retaliate_ap;
+
+[ai_opplayer2,tzhaar_fightpit_swarm_1a] ~tzhaar_kih_attack;
+[ai_opplayer2,tzhaar_fightpit_swarm_1b] ~tzhaar_kih_attack;
+[ai_opplayer2,tzhaar_fightpit_swarm_2a] ~npc_default_attack;
+[ai_opplayer2,tzhaar_fightpit_swarm_2b] ~npc_default_attack;
+
+[ai_opplayer2,tzhaar_fightpit_swarm_3a]
+if (npc_range(coord) > 1) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_opplayer2,tzhaar_fightpit_swarm_3b]
+if (npc_range(coord) > 1) {
+    npc_setmode(applayer2);
+    return;
+}
+gosub(npc_default_attack);
+
+[ai_applayer2,tzhaar_fightpit_swarm_3a]
+if (npc_range(coord) <= 1) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_spine_rangeattack;
+
+[ai_applayer2,tzhaar_fightpit_swarm_3b]
+if (npc_range(coord) <= 1) {
+    npc_setmode(opplayer2);
+    return;
+}
+~tzhaar_spine_rangeattack;
+
+[ai_queue3,tzhaar_fightpit_swarm_1a] gosub(npc_death);
+[ai_queue3,tzhaar_fightpit_swarm_1b] gosub(npc_death);
+[ai_queue3,tzhaar_fightpit_swarm_2a] gosub(npc_death);
+[ai_queue3,tzhaar_fightpit_swarm_2b] gosub(npc_death);
+[ai_queue3,tzhaar_fightpit_swarm_3a] gosub(npc_death);
+[ai_queue3,tzhaar_fightpit_swarm_3b] gosub(npc_death);

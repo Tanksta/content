@@ -1,0 +1,15 @@
+[oploc1,loc_9358]
+if (map_members = ^false) {
+    mes("To go here you must login to a members' server");
+    return;
+}
+mes("You walk through the passage...");
+p_delay(0);
+p_telejump(0_38_80_48_54);
+~music_refresh_autoplay;
+
+[oploc1,loc_9359]
+mes("You walk through the passage...");
+p_delay(0);
+p_telejump(0_44_149_46_36);
+~music_refresh_autoplay;

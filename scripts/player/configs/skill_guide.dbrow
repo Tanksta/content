@@ -66,9 +66,9 @@ data=unlock,1,Standard bows.\n          Ammo: Arrows up to iron.
 // [sic] exact number of spaces
 data=unlock,5,Oak bows.\n          Ammo: Arrows up to steel.
 // [sic] exact number of spaces
-data=unlock,20,Members: Willow bows.\n          Ammo: Arrows up to mithril.
+data=unlock,20,Willow bows.\n          Ammo: Arrows up to mithril.
 // [sic] exact number of spaces
-data=unlock,30,Members: Maple bows.\n          Ammo: Arrows up to adamant.
+data=unlock,30,Maple bows.\n          Ammo: Arrows up to adamant.
 // [sic] exact number of spaces
 data=unlock,40,Members: Yew bows.\n          Ammo: Arrows up to rune.
 // [sic] exact number of spaces

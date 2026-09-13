@@ -1782,3 +1782,6 @@ transmit=yes
 
 [win05_var]
 transmit=yes
+
+[tzhaar_fightpit_state]
+transmit=yes

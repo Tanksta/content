@@ -48,6 +48,12 @@ if ($wilderness_level < $combat_level_diff) {
 return(true);
 
 [proc,pvp_is_attackable]()(boolean)
+if (~tzhaar_fightpit_is_attackable = true) {
+    return(true);
+}
+if (%tzhaar_fightpit_state > 0 | .%tzhaar_fightpit_state > 0) {
+    return(false);
+}
 if (~in_duel_arena(coord) = true) {
     if (~duel_arena_checks = false) {
         return(false);
@@ -75,6 +81,12 @@ if (~player_autocast_enabled = false & ~inzone_coord_pair_table(mage_arena, coor
 
 // For magic
 [proc,pvp_is_attackable_opt]()(boolean)
+if (~tzhaar_fightpit_is_attackable = true) {
+    return(true);
+}
+if (%tzhaar_fightpit_state > 0 | .%tzhaar_fightpit_state > 0) {
+    return(false);
+}
 if (~in_duel_arena(coord) = true) {
     if (~duel_arena_checks = false) {
         return(false);

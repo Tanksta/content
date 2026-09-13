@@ -1,5 +1,8 @@
 [proc,ring_of_life_check]
 if (p_finduid(uid) = true) {
+    if (tzhaar_fightcave_active = true) {
+        return;
+    }
     if (inv_getobj(worn, ^wearpos_ring) ! ring_of_life | map_members = ^false | ~wilderness_level(coord) > 30 | stat(hitpoints) > scale(10, 100, stat_base(hitpoints))) {
         return;
     }

@@ -1148,7 +1148,7 @@ data=musicdata,music_Pirates_of_Peril
 [musicregion_47_149]
 table=musicregion
 data=mapsquare,0_47_149_0_0
-data=musicdata,music_Starlight
+data=musicdata,music_Woe_of_the_Wyvern
 
 [musicregion_47_152]
 table=musicregion
@@ -1744,3 +1744,18 @@ data=musicdata,music_Deadlands
 table=musicregion
 data=mapsquare,0_56_54_0_0
 data=musicdata,music_Deadlands
+
+[musicregion_37_79]
+table=musicregion
+data=mapsquare,0_37_79_0_0
+data=musicdata,music_TzHaar
+
+[musicregion_37_80]
+table=musicregion
+data=mapsquare,0_37_80_0_0
+data=musicdata,music_Fire_and_Brimstone
+
+[musicregion_38_80]
+table=musicregion
+data=mapsquare,0_38_80_0_0
+data=musicdata,music_In_the_Pits

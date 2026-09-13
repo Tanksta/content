@@ -168,6 +168,9 @@ if (p_finduid(uid) = true) {
 }
 
 [proc,player_teleport_normal](coord $coord)
+if (~tzhaar_fightcave_prevent_teleport = true) {
+    return;
+}
 if_close;
 p_stopaction;
 ~tele_checks;
@@ -182,6 +185,9 @@ p_delay(0);
 ~p_telejump_safe($coord);
 
 [proc,player_teleport_zaros](coord $coord)
+if (~tzhaar_fightcave_prevent_teleport = true) {
+    return;
+}
 if_close;
 p_stopaction;
 ~tele_checks;
@@ -192,6 +198,9 @@ p_delay(2);
 ~p_telejump_safe($coord);
 
 [proc,p_telejump_safe](coord $coord)
+if (~tzhaar_fightcave_prevent_teleport = true) {
+    return;
+}
 if (stat(hitpoints) = 0) {
     return;
 }
@@ -245,6 +254,9 @@ if(inv_total(inv, thanainabarrel) > 0) {
 }
 
 [proc,pre_tele_checks](coord $coord)(boolean)
+if (~tzhaar_fightcave_prevent_teleport = true) {
+    return(false);
+}
 if (~in_tutorial_island(coord) = true) {
     ~mesbox("You cannot teleport from Tutorial Island!"); // https://youtu.be/tt38tH6X30E?t=64
     return(false);
@@ -305,6 +317,13 @@ if (teleblock_ticks <= 0 | ~wilderness_level($coord) < 1) {
 }
 mes("A magical force is preventing you from teleporting.");
 return(true);
+
+[proc,tzhaar_fightcave_prevent_teleport]()(boolean)
+if (tzhaar_fightcave_active = true | %tzhaar_fightpit_state > 0 | ~tzhaar_in_fightpit(coord) = true) {
+    mes("A mysterious force blocks your teleport.");
+    return(true);
+}
+return(false);
 
 [proc,teleblock_prevent_teleport_anywhere]()(boolean)
 if (teleblock_ticks <= 0) {

@@ -4793,11 +4793,6 @@ basevar=tzhaar_temp
 startbit=3
 endbit=3
 
-[tzhaar_morphed]
-basevar=tzhaar_temp
-startbit=4
-endbit=4
-
 [bankpin_a]
 basevar=bankpin_1
 startbit=0
@@ -5062,11 +5057,6 @@ endbit=29
 basevar=varp_569
 startbit=30
 endbit=30
-
-[tzhaar_fightpit_orb]
-basevar=tzhaar_temp
-startbit=5
-endbit=7
 
 [wanted_main]
 basevar=quest_wanted

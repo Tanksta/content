@@ -6,6 +6,9 @@ if (~in_duel_arena(coord) = true) {
 if (~in_castlewars_game(coord) = true) {
     return(false);
 }
+if (%tzhaar_fightpit_state > 0 | .%tzhaar_fightpit_state > 0) {
+    return(false);
+}
 if (.%pk_prey1 = uid | .%pk_prey2 = uid | %pk_predator1 = .uid | %pk_predator2 = .uid | %pk_predator3 = .uid) {
     return(false);
 }
@@ -30,6 +33,7 @@ if (~deserves_pk_skull = true) {
 
 // requires active_player
 [proc,pk_skull](int $duration)
+~headicon_del(^headicon_fightpit_skull);
 ~headicon_add(^headicon_skull);
 %pk_skull = add(map_clock, $duration);
 clearsofttimer(pk_skull_timer);
@@ -37,6 +41,9 @@ softtimer(pk_skull_timer, $duration);
 
 [proc,clear_pk_skull]
 ~headicon_del(^headicon_skull);
+if (%tzhaar_fightpit_state = 0) {
+    ~headicon_del(^headicon_fightpit_skull);
+}
 clearsofttimer(pk_skull_timer);
 %pk_skull = 0;
 
