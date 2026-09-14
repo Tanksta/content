@@ -38,6 +38,44 @@ data=success_chance,150,240
 data=loot,coins,9,9,123
 data=pocket,farmer's pocket
 
+[pickpocket_ham_woman]
+table=pickpocket
+data=npc,favour_female_ham_civilian
+data=level,15
+data=experience,180
+data=stun_ticks,8
+data=stun_damage,1
+data=success_chance,135,240
+data=loot,coins,1,5,42
+data=loot,bronze_arrow,1,5,18
+data=loot,leather_boots,1,1,14
+data=loot,ham_hood,1,1,10
+data=loot,ham_cloak,1,1,10
+data=loot,ham_shirt,1,1,10
+data=loot,ham_robe,1,1,8
+data=loot,ham_gloves,1,1,8
+data=loot,ham_boots,1,1,8
+data=pocket,H.A.M. member's pocket
+
+[pickpocket_ham_man]
+table=pickpocket
+data=npc,favour_male_ham_civilian
+data=level,20
+data=experience,220
+data=stun_ticks,8
+data=stun_damage,1
+data=success_chance,117,240
+data=loot,coins,1,5,42
+data=loot,bronze_arrow,1,5,18
+data=loot,leather_boots,1,1,14
+data=loot,ham_hood,1,1,10
+data=loot,ham_cloak,1,1,10
+data=loot,ham_shirt,1,1,10
+data=loot,ham_robe,1,1,8
+data=loot,ham_gloves,1,1,8
+data=loot,ham_boots,1,1,8
+data=pocket,H.A.M. member's pocket
+
 [pickpocket_warrior]
 table=pickpocket
 data=npc,warrior_woman

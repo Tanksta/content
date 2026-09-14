@@ -176,7 +176,7 @@ loc_change(loc_2572, $respawn_ticks); //looted chest
 
 
 [proc,pick_pocket_uses_single_reward]()(boolean)
-if (npc_type = master_farmer_1 | npc_type = master_farmer_2) {
+if (npc_type = favour_female_ham_civilian | npc_type = favour_male_ham_civilian | npc_type = master_farmer_1 | npc_type = master_farmer_2) {
     return(true);
 }
 return(false);

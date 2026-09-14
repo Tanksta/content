@@ -91,6 +91,12 @@
 [opnpc3,master_farmer_2] // Master Farmer
 @attempt_pick_pocket(npc_type);
 
+[opnpc3,favour_female_ham_civilian] // H.A.M. Member
+@attempt_pick_pocket(npc_type);
+
+[opnpc3,favour_male_ham_civilian] // H.A.M. Member
+@attempt_pick_pocket(npc_type);
+
 [opnpc3,viking_man] @attempt_pick_viking_pocket(npc_type);
 [opnpc3,viking_man2] @attempt_pick_viking_pocket(npc_type);
 [opnpc3,viking_man3] @attempt_pick_viking_pocket(npc_type);

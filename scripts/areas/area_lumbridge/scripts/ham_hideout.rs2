@@ -1,0 +1,59 @@
+[oploc1,osf_trapdoor_closed]
+~ham_trapdoor_picklock;
+
+[oploc5,osf_trapdoor_closed]
+~ham_trapdoor_picklock;
+
+[oploc1,ham_multi_trapdoor]
+~ham_trapdoor_picklock;
+
+[oploc5,ham_multi_trapdoor]
+~ham_trapdoor_picklock;
+
+[oploc1,osf_trapdoor_open]
+~ham_climb_down_trapdoor;
+
+[oploc2,osf_trapdoor_open]
+mes("You close the trapdoor.");
+sound_synth(door_close, 0, 0);
+%ham_thief = 0;
+
+[oploc1,osf_ham_ladder]
+mes("You climb up the ladder...");
+anim(human_climbing, 0);
+p_delay(0);
+p_telejump(0_49_50_30_53);
+~music_refresh_autoplay;
+
+[proc,ham_trapdoor_picklock]
+if (map_members = ^false) {
+    mes("To go here you must login to a members' server");
+    return;
+}
+if (stat(thieving) < 17) {
+    mes("You need a Thieving level of 17 to pick the lock on this trapdoor.");
+    return;
+}
+mes("You attempt to pick the lock on the trapdoor.");
+sound_synth(locked, 0, 0);
+p_delay(2);
+if (stat_random(thieving, 15, 128) = false) {
+    mes("You fail to pick the lock.");
+    return;
+}
+%ham_thief = 1;
+sound_synth(door_open, 0, 0);
+mes("You pick the lock.");
+~ham_climb_down_trapdoor;
+
+[proc,ham_climb_down_trapdoor]
+if (map_members = ^false) {
+    mes("To go here you must login to a members' server");
+    return;
+}
+mes("You climb down through the trapdoor...");
+anim(human_pickupfloor, 0);
+p_delay(0);
+p_telejump(0_49_150_13_52);
+~music_refresh_autoplay;
+%ham_thief = 0;
