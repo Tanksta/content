@@ -1,0 +1,6 @@
+[bank_deposit_box]
+name=Bank Deposit Box
+desc=Lets you put items into your bank.
+model=bank_deposit_box
+forceapproach=south
+op1=Deposit

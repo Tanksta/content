@@ -2,7 +2,7 @@ type=layer
 width=512
 height=334
 
-[component_04466]
+[com_0]
 x=88
 y=20
 type=graphic
@@ -10,7 +10,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_04467]
+[com_1]
 x=88
 y=80
 type=graphic
@@ -18,7 +18,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_04468]
+[com_2]
 x=88
 y=140
 type=graphic
@@ -26,7 +26,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_04469]
+[com_3]
 x=88
 y=200
 type=graphic
@@ -34,7 +34,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_04470]
+[com_4]
 x=176
 y=20
 type=graphic
@@ -42,7 +42,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05625]
+[com_5]
 x=176
 y=80
 type=graphic
@@ -50,7 +50,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05626]
+[com_6]
 x=176
 y=140
 type=graphic
@@ -58,7 +58,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05627]
+[com_7]
 x=176
 y=200
 type=graphic
@@ -66,7 +66,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05652]
+[com_8]
 x=264
 y=20
 type=graphic
@@ -74,7 +74,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05656]
+[com_9]
 x=352
 y=80
 type=graphic
@@ -82,7 +82,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05660]
+[com_10]
 x=264
 y=80
 type=graphic
@@ -90,7 +90,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05664]
+[com_11]
 x=264
 y=140
 type=graphic
@@ -98,7 +98,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05668]
+[com_12]
 x=264
 y=200
 type=graphic
@@ -106,7 +106,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05672]
+[com_13]
 x=352
 y=140
 type=graphic
@@ -114,7 +114,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05676]
+[com_14]
 x=352
 y=20
 type=graphic
@@ -122,7 +122,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05680]
+[com_15]
 x=352
 y=200
 type=graphic
@@ -130,7 +130,7 @@ width=88
 height=60
 graphic=tradebacking,0
 
-[component_05684]
+[com_16]
 x=67
 y=50
 type=graphic
@@ -138,7 +138,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_05688]
+[com_17]
 x=82
 y=20
 type=graphic
@@ -146,7 +146,7 @@ width=25
 height=30
 graphic=steelborder,0
 
-[component_05692]
+[com_18]
 x=67
 y=86
 type=graphic
@@ -154,7 +154,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_05696]
+[com_19]
 x=67
 y=122
 type=graphic
@@ -162,7 +162,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_05700]
+[com_20]
 x=67
 y=158
 type=graphic
@@ -170,7 +170,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_05704]
+[com_21]
 x=67
 y=194
 type=graphic
@@ -178,7 +178,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_07377]
+[com_22]
 x=67
 y=212
 type=graphic
@@ -186,7 +186,7 @@ width=36
 height=36
 graphic=miscgraphics,2
 
-[component_07384]
+[com_23]
 x=425
 y=50
 type=graphic
@@ -194,7 +194,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07385]
+[com_24]
 x=425
 y=86
 type=graphic
@@ -202,7 +202,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07386]
+[com_25]
 x=425
 y=122
 type=graphic
@@ -210,7 +210,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07387]
+[com_26]
 x=425
 y=158
 type=graphic
@@ -218,7 +218,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07388]
+[com_27]
 x=425
 y=194
 type=graphic
@@ -226,7 +226,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07389]
+[com_28]
 x=425
 y=218
 type=graphic
@@ -234,7 +234,7 @@ width=36
 height=36
 graphic=steelborder2,1
 
-[component_07390]
+[com_29]
 x=107
 y=245
 type=graphic
@@ -242,7 +242,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07391]
+[com_30]
 x=143
 y=245
 type=graphic
@@ -250,7 +250,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07392]
+[com_31]
 x=179
 y=245
 type=graphic
@@ -258,7 +258,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07393]
+[com_32]
 x=215
 y=245
 type=graphic
@@ -266,7 +266,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07394]
+[com_33]
 x=251
 y=245
 type=graphic
@@ -274,7 +274,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07395]
+[com_34]
 x=287
 y=245
 type=graphic
@@ -282,7 +282,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07396]
+[com_35]
 x=323
 y=245
 type=graphic
@@ -290,7 +290,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07397]
+[com_36]
 x=359
 y=245
 type=graphic
@@ -298,7 +298,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07398]
+[com_37]
 x=388
 y=245
 type=graphic
@@ -306,7 +306,7 @@ width=36
 height=36
 graphic=miscgraphics,3
 
-[component_07399]
+[com_38]
 x=107
 y=5
 type=graphic
@@ -314,7 +314,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07400]
+[com_39]
 x=143
 y=5
 type=graphic
@@ -322,7 +322,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07401]
+[com_40]
 x=179
 y=5
 type=graphic
@@ -330,7 +330,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07402]
+[com_41]
 x=215
 y=5
 type=graphic
@@ -338,7 +338,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07403]
+[com_42]
 x=251
 y=5
 type=graphic
@@ -346,7 +346,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07404]
+[com_43]
 x=287
 y=5
 type=graphic
@@ -354,7 +354,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07405]
+[com_44]
 x=323
 y=5
 type=graphic
@@ -362,7 +362,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07406]
+[com_45]
 x=359
 y=5
 type=graphic
@@ -370,7 +370,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07407]
+[com_46]
 x=395
 y=5
 type=graphic
@@ -378,7 +378,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07408]
+[com_47]
 x=262
 y=34
 type=graphic
@@ -386,7 +386,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07409]
+[com_48]
 x=82
 y=236
 type=graphic
@@ -394,7 +394,7 @@ width=25
 height=30
 graphic=steelborder,2
 
-[component_07410]
+[com_49]
 x=421
 y=20
 type=graphic
@@ -402,7 +402,7 @@ width=25
 height=30
 graphic=steelborder,1
 
-[component_07411]
+[com_50]
 x=421
 y=236
 type=graphic
@@ -410,7 +410,7 @@ width=25
 height=30
 graphic=steelborder,3
 
-[component_07412]
+[com_51]
 x=298
 y=34
 type=graphic
@@ -418,7 +418,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07413]
+[com_52]
 x=334
 y=34
 type=graphic
@@ -426,7 +426,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07414]
+[com_53]
 x=370
 y=34
 type=graphic
@@ -434,7 +434,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07415]
+[com_54]
 x=405
 y=34
 type=graphic
@@ -442,7 +442,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07416]
+[com_55]
 x=226
 y=34
 type=graphic
@@ -450,7 +450,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07417]
+[com_56]
 x=190
 y=34
 type=graphic
@@ -458,7 +458,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07418]
+[com_57]
 x=154
 y=34
 type=graphic
@@ -466,7 +466,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07419]
+[com_58]
 x=118
 y=34
 type=graphic
@@ -474,7 +474,7 @@ width=36
 height=36
 graphic=steelborder2,0
 
-[component_07420]
+[com_59]
 x=87
 y=34
 type=graphic

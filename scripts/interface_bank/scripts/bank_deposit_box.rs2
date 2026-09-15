@@ -1,0 +1,19 @@
+[inv_button1,bank_deposit_box:inv] @bank_deposit(last_slot, 1);
+[inv_button2,bank_deposit_box:inv] @bank_deposit(last_slot, 5);
+[inv_button3,bank_deposit_box:inv] @bank_deposit(last_slot, 10);
+[inv_button4,bank_deposit_box:inv] @bank_deposit(last_slot, ^max_32bit_int);
+[inv_button5,bank_deposit_box:inv] @bank_deposit(last_slot, null);
+[inv_buttond,bank_deposit_box:inv] inv_movetoslot(inv, inv, last_slot, last_targetslot);
+
+[oploc1,bank_deposit_box]
+if_openmain(bank_deposit_box);
+if_settab(null, ^tab_inventory);
+if_settab(null, ^tab_wornitems);
+inv_transmit(inv, bank_deposit_box:inv);
+
+[if_close,bank_deposit_box]
+inv_stoptransmit(bank_deposit_box:inv);
+inv_transmit(inv, inventory:inv);
+inv_transmit(worn, wornitems:wear);
+if_settab(inventory, ^tab_inventory);
+if_settab(wornitems, ^tab_wornitems);
