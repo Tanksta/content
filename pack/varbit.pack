@@ -1014,9 +1014,9 @@
 1013=bankpin_next
 1014=bankpin_status
 1015=bankpin_delay
-1016=varbit_1016
-1017=varbit_1017
-1018=varbit_1018
+1016=bankpin_fail_count
+1017=bankpin_penalty_stage
+1018=bankpin_last_runeday
 1019=varbit_1019
 1020=varbit_1020
 1021=varbit_1021

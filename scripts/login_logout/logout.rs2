@@ -9,6 +9,7 @@
 %last_logout = map_clock;
 
 [if_button,logout:try_logout]
+%bankpin_counter = 4;
 if_close;
 if (p_finduid(uid) = true) {
     if (~in_duel_arena(coord) = true) {

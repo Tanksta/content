@@ -1,2 +1,30 @@
 ^bank_total_slots = 336
 ^bank_free_slots = 60
+
+^bank_pin_status_none = 0
+^bank_pin_status_set = 1
+^bank_pin_status_pending_set = 2
+^bank_pin_status_pending_delete = 3
+
+^bank_pin_mode_unlock = 0
+^bank_pin_mode_set = 1
+^bank_pin_mode_confirm_set = 2
+^bank_pin_mode_change_auth = 3
+^bank_pin_mode_change_new = 4
+^bank_pin_mode_change_confirm = 5
+^bank_pin_mode_delete_auth = 6
+^bank_pin_mode_cancel_delete_auth = 7
+^bank_pin_mode_settings_auth = 8
+^bank_pin_mode_pending_set_bank = 9
+^bank_pin_mode_pending_set_settings = 10
+^bank_pin_mode_cancel_pending_set = 11
+^bank_pin_first_penalty_failures = 2
+^bank_pin_second_penalty_failures = 3
+^bank_pin_lockout_failures = 4
+^bank_pin_first_penalty_seconds = 10
+^bank_pin_second_penalty_seconds = 15
+^bank_pin_lockout_minutes = 10
+^bank_pin_day_minutes = 1440
+^bank_pin_delay_short_days = 3
+^bank_pin_delay_long_days = 7
+^bank_pin_create_days = 7

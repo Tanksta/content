@@ -1559,9 +1559,6 @@ transmit=yes
 transmit=yes
 // rs3 name: villrand?
 
-[bankpin]
-scope=perm
-
 [varp_537]
 
 [varp_538]
@@ -1626,13 +1623,11 @@ transmit=yes
 [tzhaar_temp]
 transmit=yes
 
-[bankpin_1]
+[bankpin_3]
+scope=perm
 
-[bankpin_2]
-
-[varp_564]
-
-[varp_565]
+[bankpin_lockout]
+scope=perm
 
 [varp_566]
 
@@ -1782,3 +1777,10 @@ transmit=yes
 
 [win05_var]
 transmit=yes
+
+[bankpin]
+scope=perm
+
+[bankpin_1]
+
+[bankpin_2]

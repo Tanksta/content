@@ -562,8 +562,8 @@
 561=tzhaar_temp
 562=bankpin_1
 563=bankpin_2
-564=varp_564
-565=varp_565
+564=bankpin_3
+565=bankpin_lockout
 566=varp_566
 567=varp_567
 568=twocats_varbit

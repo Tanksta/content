@@ -1,0 +1,12 @@
+[bankpin]
+scope=perm
+
+[bankpin_1]
+
+[bankpin_2]
+
+[bankpin_3]
+scope=perm
+
+[bankpin_lockout]
+scope=perm

@@ -1,0 +1,885 @@
+[proc,bank_pin_check]()(boolean)
+~bank_pin_refresh_pending;
+if (~bank_pin_lockout_active = true) {
+    ~bank_pin_too_many_mesbox;
+    return(false);
+}
+if (%bankpin_penalty_stage > 0) {
+    ~bank_pin_start_penalty(~bank_pin_penalty_seconds, ^bank_pin_mode_unlock, "Please enter your FOUR DIGIT PIN using the buttons below.");
+    return(false);
+}
+if (%bankpin_status = ^bank_pin_status_pending_set) {
+    if (%bankpin_unlocked = ^true) {
+        return(true);
+    }
+    %varbit_1010 = ^bank_pin_mode_pending_set_bank;
+    ~bank_pin_open_pending_set_confirm;
+    return(false);
+}
+if (%bankpin_status = ^bank_pin_status_none) {
+    return(true);
+}
+if (%bankpin_unlocked = ^true) {
+    return(true);
+}
+%varbit_1010 = ^bank_pin_mode_unlock;
+~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+return(false);
+
+[label,open_bank_pin_setting]
+~bank_pin_refresh_pending;
+if (%bankpin_status = ^bank_pin_status_pending_set) {
+    ~bank_pin_open_settings_interface;
+    return;
+}
+if (~bank_pin_lockout_active = true) {
+    ~bank_pin_too_many_mesbox;
+    return;
+}
+if (%bankpin_penalty_stage > 0) {
+    ~bank_pin_start_penalty(~bank_pin_penalty_seconds, ^bank_pin_mode_settings_auth, "Please enter your current Bank PIN.");
+    return;
+}
+if (%bankpin_status = ^bank_pin_status_set | %bankpin_status = ^bank_pin_status_pending_delete) {
+    if (%bankpin_unlocked = ^false) {
+        %varbit_1010 = ^bank_pin_mode_settings_auth;
+        ~bank_pin_open_entry("Please enter your current Bank PIN.");
+        return;
+    }
+}
+if_openmain(bankpin_settings);
+sound_synth(PIN_pending, 1, 0);
+~bank_pin_refresh_settings;
+
+[proc,bank_pin_open_settings_interface]
+if_openmain(bankpin_settings);
+sound_synth(PIN_pending, 1, 0);
+~bank_pin_refresh_settings;
+
+[proc,bank_pin_open_settings_interface_quiet]
+if_openmain(bankpin_settings);
+~bank_pin_refresh_settings;
+
+[proc,bank_pin_refresh_settings]
+if_sethide(bankpin_settings:com_182, true);
+~bank_pin_refresh_messages;
+if (~bank_pin_set_pending = true) {
+    if_settext(bankpin_settings:com_178, "PIN coming soon");
+    if_sethide(bankpin_settings:com_181, true);
+    if_sethide(bankpin_settings:com_147, true);
+    if_sethide(bankpin_settings:com_150, true);
+    if_sethide(bankpin_settings:com_154, false);
+    if_settext(bankpin_settings:com_155, "Cancel the PIN that's pending");
+} else if (~bank_pin_delete_pending = true) {
+    if_settext(bankpin_settings:com_178, "PIN deletion pending");
+    if_sethide(bankpin_settings:com_181, true);
+    if_sethide(bankpin_settings:com_147, true);
+    if_sethide(bankpin_settings:com_150, true);
+    if_sethide(bankpin_settings:com_154, false);
+    if_settext(bankpin_settings:com_155, "Cancel the PIN that's pending");
+} else if (%bankpin_status = ^bank_pin_status_set) {
+    if_settext(bankpin_settings:com_178, "You have a PIN");
+    if_sethide(bankpin_settings:com_181, false);
+    if_sethide(bankpin_settings:com_147, true);
+    if_sethide(bankpin_settings:com_150, false);
+    if_sethide(bankpin_settings:com_154, true);
+    if_settext(bankpin_settings:com_151, "Change your PIN");
+    if_settext(bankpin_settings:com_152, "Delete your PIN");
+    if_settext(bankpin_settings:com_153, "Change your recovery delay");
+    if_setposition(bankpin_settings:com_151, 0, 0);
+    if_setposition(bankpin_settings:com_152, 0, 0);
+    if_setposition(bankpin_settings:com_153, 0, 0);
+    if_sethide(bankpin_settings:com_153, false);
+} else {
+    if_settext(bankpin_settings:com_178, "No PIN set");
+    if_sethide(bankpin_settings:com_181, false);
+    if_sethide(bankpin_settings:com_147, false);
+    if_sethide(bankpin_settings:com_150, true);
+    if_sethide(bankpin_settings:com_154, true);
+    if_sethide(bankpin_settings:com_153, false);
+}
+if (%bankpin_delay = ^true) {
+    if_settext(bankpin_settings:com_180, "7 Days");
+} else {
+    if_settext(bankpin_settings:com_180, "3 Days");
+}
+
+[if_button,bankpin_settings:com_148] @bank_pin_start_set;
+[if_button,bankpin_settings:com_149] @bank_pin_toggle_delay;
+[if_button,bankpin_settings:com_151] @bank_pin_start_change;
+[if_button,bankpin_settings:com_152] @bank_pin_start_delete;
+[if_button,bankpin_settings:com_153] @bank_pin_toggle_delay;
+[if_button,bankpin_settings:com_155] @bank_pin_pending_button;
+[if_button,bankpin_settings:com_111] @bank_pin_settings_exit;
+[if_button,bankpin_settings:com_247] @bank_pin_confirm_set_yes;
+[if_button,bankpin_settings:com_254] @bank_pin_confirm_set_no;
+
+[label,bank_pin_start_set]
+if (%bankpin_status = ^bank_pin_status_set) {
+    mes("You already have a Bank PIN.");
+    @open_bank_pin_setting;
+    return;
+}
+%bankpin_next = 0;
+%varbit_1010 = ^bank_pin_mode_set;
+~bank_pin_open_set_confirm;
+
+[label,bank_pin_start_change]
+if (~bank_pin_delete_pending = true) {
+    %varbit_1010 = ^bank_pin_mode_cancel_delete_auth;
+    ~bank_pin_open_delete_confirm;
+    return;
+}
+if (%bankpin_status ! ^bank_pin_status_set) {
+    mes("You do not have a Bank PIN set.");
+    @open_bank_pin_setting;
+    return;
+}
+%varbit_1010 = ^bank_pin_mode_change_new;
+~bank_pin_open_delete_confirm;
+
+[label,bank_pin_start_delete]
+if (~bank_pin_delete_pending = true) {
+    if_close;
+    return;
+}
+if (%bankpin_status ! ^bank_pin_status_set) {
+    mes("You do not have a Bank PIN set.");
+    @open_bank_pin_setting;
+    return;
+}
+%varbit_1010 = ^bank_pin_mode_delete_auth;
+~bank_pin_open_delete_confirm;
+
+[label,bank_pin_toggle_delay]
+if (%bankpin_delay = ^true) {
+    %bankpin_delay = ^false;
+} else {
+    %bankpin_delay = ^true;
+}
+sound_synth(PIN_pending2, 1, 0);
+@open_bank_pin_setting;
+
+[label,bank_pin_cancel_pending]
+if (~bank_pin_delete_pending = false) {
+    @open_bank_pin_setting;
+    return;
+}
+%bankpin_next = 0;
+%bankpin_status = ^bank_pin_status_set;
+sound_synth(PIN_cancel, 1, 0);
+mes("Your pending Bank PIN deletion has been cancelled.");
+@open_bank_pin_setting;
+
+[proc,bank_pin_open_set_confirm]
+sound_synth(PIN_pending2, 1, 0);
+if_settext(bankpin_settings:com_184, "Do you really wish to set a PIN on your bank account?");
+if_settext(bankpin_settings:com_247, "Yes, I really want a Bank PIN. I will never forget it!");
+if_settext(bankpin_settings:com_254, "No, I might forget it!");
+if_sethide(bankpin_settings:com_182, false);
+
+[proc,bank_pin_open_delete_confirm]
+sound_synth(PIN_pending2, 1, 0);
+if_settext(bankpin_settings:com_184, "Do you really wish to do that?");
+if_settext(bankpin_settings:com_247, "Yes, I really want to do that.");
+if_settext(bankpin_settings:com_254, "No, forget I asked.");
+if_sethide(bankpin_settings:com_182, false);
+
+[label,bank_pin_pending_button]
+if (~bank_pin_delete_pending = true) {
+    %varbit_1010 = ^bank_pin_mode_cancel_delete_auth;
+    ~bank_pin_open_delete_confirm;
+    return;
+}
+if (~bank_pin_set_pending = true) {
+    %varbit_1010 = ^bank_pin_mode_cancel_pending_set;
+    ~bank_pin_open_delete_confirm;
+    return;
+}
+@open_bank_pin_setting;
+
+[proc,bank_pin_open_pending_set_confirm]
+if_openmain(bankpin_settings);
+~bank_pin_refresh_settings;
+sound_synth(PIN_pending2, 1, 0);
+def_string $delay = ~bank_pin_pending_delay_phrase;
+if_settext(bankpin_settings:com_184, "A PIN will be set on your account in another <$delay>.");
+if_settext(bankpin_settings:com_247, "Yes, I asked for this. I want this PIN.");
+if_settext(bankpin_settings:com_254, "No, I didn't ask for this. Cancel it.");
+if_sethide(bankpin_settings:com_182, false);
+
+[label,bank_pin_pending_set_confirm]
+if (~bank_pin_set_pending = false) {
+    @open_bank_pin_setting;
+    return;
+}
+%varbit_1010 = ^bank_pin_mode_pending_set_settings;
+~bank_pin_open_pending_set_confirm;
+
+[label,bank_pin_confirm_set_no]
+sound_synth(PIN_cancel, 1, 0);
+if (%varbit_1010 = ^bank_pin_mode_cancel_pending_set) {
+    mes("Cancelled.");
+    @open_bank_pin_setting;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_cancel_delete_auth) {
+    mes("Cancelled.");
+    @open_bank_pin_setting;
+    return;
+}
+if (~bank_pin_set_pending = true) {
+    %bankpin_true = 0;
+    %bankpin_next = 0;
+    %bankpin_last_runeday = 0;
+    %bankpin_status = ^bank_pin_status_none;
+    %bankpin_unlocked = ^false;
+    mes("The requested bank PIN has been cancelled.");
+    if (%varbit_1010 = ^bank_pin_mode_pending_set_bank) {
+        if_close;
+        return;
+    }
+    @open_bank_pin_setting;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_delete_auth) {
+    mes("Cancelled.");
+    @open_bank_pin_setting;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_change_new) {
+    if_close;
+    mes("Cancelled.");
+    return;
+}
+@open_bank_pin_setting;
+
+[label,bank_pin_confirm_set_yes]
+if (%varbit_1010 = ^bank_pin_mode_cancel_pending_set) {
+    %bankpin_true = 0;
+    %bankpin_next = 0;
+    %bankpin_last_runeday = 0;
+    %bankpin_status = ^bank_pin_status_none;
+    %bankpin_unlocked = ^false;
+    %varbit_1010 = ^bank_pin_mode_unlock;
+    sound_synth(PIN_cancel, 1, 0);
+    mes("The requested bank PIN has been cancelled.");
+    @open_bank_pin_setting;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_cancel_delete_auth) {
+    @bank_pin_cancel_pending;
+    return;
+}
+if (~bank_pin_set_pending = true) {
+    if (%varbit_1010 = ^bank_pin_mode_pending_set_bank) {
+        %bankpin_unlocked = ^true;
+        if_close;
+        @openbank_unlocked;
+        return;
+    }
+    @open_bank_pin_setting;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_delete_auth) {
+    @bank_pin_request_delete;
+    return;
+}
+if (%varbit_1010 = ^bank_pin_mode_change_new) {
+    if_close;
+    ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+    return;
+}
+if_close;
+%varbit_1010 = ^bank_pin_mode_set;
+~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+
+[proc,bank_pin_open_entry](string $prompt)
+%bankpin_guess = 0;
+%bankpin_counter = 0;
+~bank_pin_shuffle;
+if_openmain(bankpin_main);
+if_settext(bankpin_main:com_147, $prompt);
+~bank_pin_refresh_forgot_exit_buttons;
+if (~bank_pin_delete_pending = true) {
+    def_string $day_word = ~bank_pin_day_word(~bank_pin_pending_days_left);
+    if_settext(bankpin_main:com_150, "Your PIN will be deleted in <tostring(~bank_pin_pending_days_left)> <$day_word>.");
+} else {
+    if_settext(bankpin_main:com_150, "Bank of RuneScape");
+}
+~bank_pin_refresh_digits;
+~bank_pin_refresh_progress;
+
+[proc,bank_pin_refresh_forgot_exit_buttons]
+if (~bank_pin_hide_forgot_button = true) {
+    if_sethide(bankpin_main:com_148, true);
+    if_settext(bankpin_main:com_148, "");
+    if_setposition(bankpin_main:com_148, 0, 200);
+    if_setposition(bankpin_main:com_149, 0, 11);
+    return;
+}
+if_sethide(bankpin_main:com_148, false);
+if_settext(bankpin_main:com_148, "I don't know it.");
+if_setposition(bankpin_main:com_148, 0, 0);
+if_setposition(bankpin_main:com_149, 0, 0);
+
+[proc,bank_pin_hide_forgot_button]()(boolean)
+if (%varbit_1010 = ^bank_pin_mode_set) {
+    return(true);
+}
+if (%varbit_1010 = ^bank_pin_mode_confirm_set) {
+    return(true);
+}
+if (%varbit_1010 = ^bank_pin_mode_change_new) {
+    return(true);
+}
+if (%varbit_1010 = ^bank_pin_mode_change_confirm) {
+    return(true);
+}
+return(false);
+
+[if_button,bankpin_main:com_100] @bank_pin_digit(%bankpin_a);
+[if_button,bankpin_main:com_101] @bank_pin_digit(%bankpin_b);
+[if_button,bankpin_main:com_102] @bank_pin_digit(%bankpin_c);
+[if_button,bankpin_main:com_103] @bank_pin_digit(%bankpin_d);
+[if_button,bankpin_main:com_104] @bank_pin_digit(%bankpin_e);
+[if_button,bankpin_main:com_105] @bank_pin_digit(%bankpin_f);
+[if_button,bankpin_main:com_106] @bank_pin_digit(%bankpin_g);
+[if_button,bankpin_main:com_107] @bank_pin_digit(%bankpin_h);
+[if_button,bankpin_main:com_108] @bank_pin_digit(%bankpin_i);
+[if_button,bankpin_main:com_109] @bank_pin_digit(%bankpin_j);
+[if_button,bankpin_main:com_121] @bank_pin_digit(%bankpin_a);
+[if_button,bankpin_main:com_123] @bank_pin_digit(%bankpin_b);
+[if_button,bankpin_main:com_125] @bank_pin_digit(%bankpin_c);
+[if_button,bankpin_main:com_127] @bank_pin_digit(%bankpin_d);
+[if_button,bankpin_main:com_129] @bank_pin_digit(%bankpin_e);
+[if_button,bankpin_main:com_131] @bank_pin_digit(%bankpin_f);
+[if_button,bankpin_main:com_133] @bank_pin_digit(%bankpin_g);
+[if_button,bankpin_main:com_135] @bank_pin_digit(%bankpin_h);
+[if_button,bankpin_main:com_137] @bank_pin_digit(%bankpin_i);
+[if_button,bankpin_main:com_139] @bank_pin_digit(%bankpin_j);
+[if_button,bankpin_main:com_148] @bank_pin_forgot;
+[if_button,bankpin_main:com_149] @bank_pin_exit_button;
+[if_close,bankpin_main] @bank_pin_exit;
+
+[label,bank_pin_digit](int $digit)
+if (%bankpin_counter >= 4) {
+    return;
+}
+sound_synth(PIN_beep, 1, 0);
+%bankpin_guess = add(multiply(%bankpin_guess, 10), $digit);
+%bankpin_counter = add(%bankpin_counter, 1);
+if (%bankpin_counter = 4) {
+    ~bank_pin_refresh_progress;
+    @bank_pin_submit;
+    return;
+}
+~bank_pin_shuffle;
+~bank_pin_refresh_progress;
+
+[label,bank_pin_submit]
+switch_int (%varbit_1010) {
+    case ^bank_pin_mode_unlock :
+        if (%bankpin_guess = %bankpin_true) {
+            ~bank_pin_reset_failures;
+            %bankpin_unlocked = ^true;
+            if (~bank_pin_delete_pending = true) {
+                %bankpin_next = 0;
+                %bankpin_status = ^bank_pin_status_set;
+            }
+            sound_synth(pillory_success, 1, 0);
+            mes("You have correctly entered your PIN.");
+            @openbank_unlocked;
+        } else {
+            @bank_pin_incorrect("Please enter your FOUR DIGIT PIN using the buttons below.");
+        }
+    case ^bank_pin_mode_set :
+        %bankpin_next = %bankpin_guess;
+        %varbit_1010 = ^bank_pin_mode_confirm_set;
+        sound_synth(PIN_pending, 1, 0);
+        ~bank_pin_open_entry("Now please enter that number again!");
+    case ^bank_pin_mode_confirm_set :
+        if (%bankpin_guess = %bankpin_next) {
+            %bankpin_true = %bankpin_guess;
+            ~bank_pin_start_pending_timer(^bank_pin_create_days);
+            %bankpin_status = ^bank_pin_status_pending_set;
+            %bankpin_unlocked = ^true;
+            ~bank_pin_reset_failures;
+            sound_synth(PIN_pending2, 1, 0);
+            def_string $day_word = ~bank_pin_day_word(^bank_pin_create_days);
+            mes("Your Bank PIN will be set in <tostring(^bank_pin_create_days)> <$day_word>.");
+            @open_bank_pin_setting;
+        } else {
+            sound_synth(PIN_cancel, 1, 0);
+            %bankpin_next = 0;
+            %varbit_1010 = ^bank_pin_mode_set;
+            mes("Those numbers did not match. Please try again.");
+            ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+        }
+    case ^bank_pin_mode_change_auth :
+        if (%bankpin_guess = %bankpin_true) {
+            ~bank_pin_reset_failures;
+            %bankpin_next = 0;
+            %varbit_1010 = ^bank_pin_mode_change_new;
+            sound_synth(pillory_success, 1, 0);
+            mes("You have correctly entered your PIN.");
+            ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+        } else {
+            @bank_pin_incorrect("Please enter your current Bank PIN.");
+        }
+    case ^bank_pin_mode_change_new :
+        %bankpin_next = %bankpin_guess;
+        %varbit_1010 = ^bank_pin_mode_change_confirm;
+        sound_synth(PIN_pending, 1, 0);
+        ~bank_pin_open_entry("Now please enter that number again!");
+    case ^bank_pin_mode_change_confirm :
+        if (%bankpin_guess = %bankpin_next) {
+            %bankpin_true = %bankpin_guess;
+            %bankpin_next = 0;
+            %bankpin_status = ^bank_pin_status_set;
+            %bankpin_unlocked = ^true;
+            ~bank_pin_reset_failures;
+            sound_synth(PIN_pending2, 1, 0);
+            mes("Your Bank PIN has been changed.");
+            @open_bank_pin_setting;
+        } else {
+            sound_synth(PIN_cancel, 1, 0);
+            %bankpin_next = 0;
+            %varbit_1010 = ^bank_pin_mode_change_new;
+            mes("Those numbers did not match. Please try again.");
+            ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+        }
+    case ^bank_pin_mode_cancel_delete_auth :
+        if (%bankpin_guess = %bankpin_true) {
+            ~bank_pin_reset_failures;
+            %bankpin_next = 0;
+            %bankpin_status = ^bank_pin_status_set;
+            sound_synth(pillory_success, 1, 0);
+            mes("You have correctly entered your PIN.");
+            mes("Your pending Bank PIN deletion has been cancelled.");
+            ~bank_pin_open_settings_interface_quiet;
+        } else {
+            @bank_pin_incorrect("Please enter your current Bank PIN.");
+        }
+    case ^bank_pin_mode_settings_auth :
+        if (%bankpin_guess = %bankpin_true) {
+            ~bank_pin_reset_failures;
+            %bankpin_unlocked = ^true;
+            sound_synth(pillory_success, 1, 0);
+            mes("You have correctly entered your PIN.");
+            @open_bank_pin_setting;
+        } else {
+            @bank_pin_incorrect("Please enter your current Bank PIN.");
+        }
+}
+
+[label,bank_pin_request_delete]
+if_close;
+~bank_pin_start_pending_timer(~bank_pin_recovery_days);
+%bankpin_status = ^bank_pin_status_pending_delete;
+%bankpin_unlocked = ^true;
+sound_synth(PIN_pending2, 1, 0);
+~bank_pin_delete_requested_mesbox;
+
+[proc,bank_pin_delete_requested_mesbox]
+def_string $day_word = ~bank_pin_day_word(~bank_pin_recovery_days);
+if_settext(message4:com_0, "");
+if_settext(message4:com_1, "The removal of your bank PIN has been requested.");
+if_settext(message4:com_2, "It will be removed @dre@in <tostring(~bank_pin_recovery_days)> <$day_word>@bla@.");
+if_settext(message4:com_3, "");
+if_setcolour(message4:com_0, 0x000000);
+if_setcolour(message4:com_1, 0x000000);
+if_setcolour(message4:com_2, 0x000000);
+if_setcolour(message4:com_3, 0x000000);
+if_openchat(message4);
+p_pausebutton;
+
+[proc,bank_pin_start_pending_timer](int $days)
+%bankpin_next = add(date_minutes, multiply($days, ^bank_pin_day_minutes));
+%bankpin_last_runeday = 0;
+
+[proc,bank_pin_refresh_pending]
+if (~bank_pin_set_pending = true | ~bank_pin_delete_pending = true) {
+    if (%bankpin_next > 0 & %bankpin_next <= ^bank_pin_delay_long_days) {
+        %bankpin_next = add(date_minutes, multiply(%bankpin_next, ^bank_pin_day_minutes));
+    }
+    if (%bankpin_next <= date_minutes) {
+        %bankpin_next = 0;
+    }
+}
+if (~bank_pin_set_pending = true) {
+    if (%bankpin_next = 0) {
+        %bankpin_next = 0;
+        %bankpin_last_runeday = 0;
+        %bankpin_status = ^bank_pin_status_set;
+        %bankpin_unlocked = ^false;
+    }
+}
+if (~bank_pin_delete_pending = true) {
+    if (%bankpin_next = 0) {
+        %bankpin_true = 0;
+        %bankpin_next = 0;
+        %bankpin_last_runeday = 0;
+        %bankpin_status = ^bank_pin_status_none;
+        %bankpin_unlocked = ^false;
+    }
+}
+
+[proc,bank_pin_set_pending]()(boolean)
+if (%bankpin_status = ^bank_pin_status_pending_set) {
+    return(true);
+}
+return(false);
+
+[proc,bank_pin_delete_pending]()(boolean)
+if (%bankpin_status = ^bank_pin_status_pending_delete) {
+    return(true);
+}
+return(false);
+
+[proc,bank_pin_recovery_days]()(int)
+if (%bankpin_delay = ^true) {
+    return(^bank_pin_delay_long_days);
+}
+return(^bank_pin_delay_short_days);
+
+[proc,bank_pin_pending_days_left]()(int)
+def_int $minutes = ~bank_pin_pending_minutes_left;
+if ($minutes < 1) {
+    return(1);
+}
+return(divide(add($minutes, sub(^bank_pin_day_minutes, 1)), ^bank_pin_day_minutes));
+
+[proc,bank_pin_pending_minutes_left]()(int)
+if (%bankpin_next <= date_minutes) {
+    return(0);
+}
+return(sub(%bankpin_next, date_minutes));
+
+[proc,bank_pin_pending_delay_phrase]()(string)
+if (~bank_pin_pending_days_left = 1) {
+    return("day");
+}
+return("<tostring(~bank_pin_pending_days_left)> days");
+
+[proc,bank_pin_day_word](int $days)(string)
+if ($days = 1) {
+    return("day");
+}
+return("days");
+
+[proc,bank_pin_lockout_active]()(boolean)
+if (%bankpin_lockout > date_minutes) {
+    return(true);
+}
+if (%bankpin_lockout > 0) {
+    %bankpin_lockout = 0;
+    ~bank_pin_reset_failures;
+}
+return(false);
+
+[proc,bank_pin_reset_failures]
+%bankpin_fail_count = 0;
+%bankpin_penalty_stage = 0;
+%bankpin_lockout = 0;
+
+[proc,bank_pin_penalty_seconds]()(int)
+if (%bankpin_penalty_stage = 2) {
+    return(^bank_pin_second_penalty_seconds);
+}
+return(^bank_pin_first_penalty_seconds);
+
+[proc,bank_pin_refresh_messages]
+if (~bank_pin_set_pending = true) {
+    def_string $delay = ~bank_pin_pending_delay_phrase;
+    if_settext(bankpin_settings:com_113, "You have requested that");
+    if_settext(bankpin_settings:com_114, "a PIN be set on your bank");
+    if_settext(bankpin_settings:com_115, "account. This will take");
+    if_settext(bankpin_settings:com_116, "effect in another <$delay>.");
+    if_settext(bankpin_settings:com_117, "");
+    if_settext(bankpin_settings:com_118, "If you wish to cancel this");
+    if_settext(bankpin_settings:com_119, "PIN, please use the");
+    if_settext(bankpin_settings:com_120, "button on the left.");
+    if_settext(bankpin_settings:com_121, "");
+    if_settext(bankpin_settings:com_122, "");
+    if_settext(bankpin_settings:com_123, "");
+    if_settext(bankpin_settings:com_124, "");
+    return;
+}
+if (~bank_pin_delete_pending = true) {
+    def_string $day_word = ~bank_pin_day_word(~bank_pin_pending_days_left);
+    if_settext(bankpin_settings:com_113, "You have requested your");
+    if_settext(bankpin_settings:com_114, "PIN to be deleted for");
+    if_settext(bankpin_settings:com_115, "your bank account. Your");
+    if_settext(bankpin_settings:com_116, "PIN will be deleted in");
+    if_settext(bankpin_settings:com_117, "<tostring(~bank_pin_pending_days_left)> <$day_word>.");
+    if_settext(bankpin_settings:com_118, "");
+    if_settext(bankpin_settings:com_119, "If you wish to cancel this,");
+    if_settext(bankpin_settings:com_120, "please use the button on");
+    if_settext(bankpin_settings:com_121, "the left.");
+    if_settext(bankpin_settings:com_122, "");
+    if_settext(bankpin_settings:com_123, "");
+    if_settext(bankpin_settings:com_124, "");
+    return;
+}
+if_settext(bankpin_settings:com_113, "Customers are reminded");
+if_settext(bankpin_settings:com_114, "that they should NEVER");
+if_settext(bankpin_settings:com_115, "tell anyone their Bank");
+if_settext(bankpin_settings:com_116, "PINs or passwords, nor");
+if_settext(bankpin_settings:com_117, "should they ever enter");
+if_settext(bankpin_settings:com_118, "their PINs on any website");
+if_settext(bankpin_settings:com_119, "or form.");
+if_settext(bankpin_settings:com_120, "");
+if_settext(bankpin_settings:com_121, "Have you read the PIN");
+if_settext(bankpin_settings:com_122, "guide on the website?");
+if_settext(bankpin_settings:com_123, "");
+if_settext(bankpin_settings:com_124, "");
+
+[label,bank_pin_incorrect](string $prompt)
+sound_synth(pillory_wrong, 1, 0);
+%bankpin_fail_count = add(%bankpin_fail_count, 1);
+if (%bankpin_fail_count = ^bank_pin_first_penalty_failures) {
+    %bankpin_penalty_stage = 1;
+    ~bank_pin_start_penalty(^bank_pin_first_penalty_seconds, %varbit_1010, $prompt);
+    return;
+}
+if (%bankpin_fail_count = ^bank_pin_second_penalty_failures) {
+    %bankpin_penalty_stage = 2;
+    ~bank_pin_start_penalty(^bank_pin_second_penalty_seconds, %varbit_1010, $prompt);
+    return;
+}
+if (%bankpin_fail_count >= ^bank_pin_lockout_failures) {
+    if_close;
+    %bankpin_fail_count = 0;
+    %bankpin_penalty_stage = 0;
+    %bankpin_lockout = add(date_minutes, ^bank_pin_lockout_minutes);
+    ~bank_pin_too_many_mesbox;
+    return;
+}
+mes("Incorrect PIN. Please try again.");
+~bank_pin_open_entry($prompt);
+
+[label,bank_pin_forgot]
+%bankpin_counter = 4;
+if_close;
+sound_synth(PIN_pending2, 1, 0);
+if (~bank_pin_delete_pending = true) {
+    ~bank_pin_already_delete_pending_mesbox;
+    return;
+}
+~bank_pin_start_pending_timer(~bank_pin_recovery_days);
+%bankpin_status = ^bank_pin_status_pending_delete;
+%bankpin_unlocked = ^false;
+~bank_pin_forgotten_mesbox;
+
+[proc,bank_pin_start_penalty](int $seconds, int $mode, string $prompt)
+if_close;
+def_int $left = $seconds;
+if_setcolour(text5_5:com_0, 0x000000);
+if_setcolour(text5_5:com_1, 0x000000);
+if_setcolour(text5_5:com_2, 0x000000);
+if_setcolour(text5_5:com_3, 0x000000);
+if_setcolour(text5_5:com_4, 0x000000);
+while ($left >= 0) {
+    if_settext(text5_5:com_0, "");
+    if_settext(text5_5:com_1, "If you've forgotten your PIN, please click the");
+    if_settext(text5_5:com_2, "@dre@'I don't know it'@bla@ button on the keypad screen.");
+    if_settext(text5_5:com_3, "@dbl@Meanwhile, please wait before continuing... <tostring($left)>");
+    if_settext(text5_5:com_4, "");
+    if_openchat(text5_5);
+    if ($left > 0) {
+        p_delay(1);
+    }
+    $left = sub($left, 1);
+}
+%bankpin_penalty_stage = 0;
+if_close;
+%varbit_1010 = $mode;
+~bank_pin_open_entry($prompt);
+
+[proc,bank_pin_too_many_mesbox]
+if_settext(message4:com_0, "");
+if_settext(message4:com_1, "You have incorrectly entered your PIN too many times. Please");
+if_settext(message4:com_2, "try again later.");
+if_settext(message4:com_3, "");
+if_setcolour(message4:com_0, 0x000000);
+if_setcolour(message4:com_1, 0x000000);
+if_setcolour(message4:com_2, 0x000000);
+if_setcolour(message4:com_3, 0x000000);
+if_openchat(message4);
+p_pausebutton;
+
+[proc,bank_pin_forgotten_mesbox]
+def_string $day_word = ~bank_pin_day_word(~bank_pin_pending_days_left);
+if_settext(message5:com_0, "");
+if_settext(message5:com_1, "Since you don't know your PIN, it will be deleted in @dre@<tostring(~bank_pin_pending_days_left)> <$day_word>@bla@.");
+if_settext(message5:com_2, "If you wish to cancel this change, you may do so by entering");
+if_settext(message5:com_3, "your PIN correctly next time you attempt to use your bank.");
+if_settext(message5:com_4, "");
+if_setcolour(message5:com_0, 0x000000);
+if_setcolour(message5:com_1, 0x000000);
+if_setcolour(message5:com_2, 0x000000);
+if_setcolour(message5:com_3, 0x000000);
+if_setcolour(message5:com_4, 0x000000);
+if_openchat(message5);
+p_pausebutton;
+
+[proc,bank_pin_already_delete_pending_mesbox]
+def_string $day_word = ~bank_pin_day_word(~bank_pin_pending_days_left);
+if_settext(message4:com_0, "");
+if_settext(message4:com_1, "You have already requested that your PIN be deleted.");
+if_settext(message4:com_2, "This will take effect in @dre@<tostring(~bank_pin_pending_days_left)> <$day_word>@bla@.");
+if_settext(message4:com_3, "");
+if_setcolour(message4:com_0, 0x000000);
+if_setcolour(message4:com_1, 0x000000);
+if_setcolour(message4:com_2, 0x000000);
+if_setcolour(message4:com_3, 0x000000);
+if_openchat(message4);
+p_pausebutton;
+
+[label,bank_pin_settings_exit]
+sound_synth(PIN_cancel, 1, 0);
+mes("Cancelled.");
+if_close;
+
+[label,bank_pin_exit_button]
+sound_synth(PIN_cancel, 1, 0);
+mes("Cancelled.");
+%bankpin_counter = 4;
+if_close;
+
+[label,bank_pin_exit]
+if (%bankpin_counter < 4) {
+    sound_synth(PIN_cancel, 1, 0);
+    mes("Cancelled.");
+}
+
+[proc,bank_pin_refresh_progress]
+if_settext(bankpin_main:com_140, "?");
+if_settext(bankpin_main:com_141, "?");
+if_settext(bankpin_main:com_142, "?");
+if_settext(bankpin_main:com_143, "?");
+if (%bankpin_counter > 0) {
+    if_settext(bankpin_main:com_140, "*");
+}
+if (%bankpin_counter > 1) {
+    if_settext(bankpin_main:com_141, "*");
+}
+if (%bankpin_counter > 2) {
+    if_settext(bankpin_main:com_142, "*");
+}
+if (%bankpin_counter > 3) {
+    if_settext(bankpin_main:com_143, "*");
+}
+if (%bankpin_counter = 0) {
+    if_settext(bankpin_main:com_151, "First click the FIRST digit.");
+} else if (%bankpin_counter = 1) {
+    if_settext(bankpin_main:com_151, "Now click the SECOND digit.");
+} else if (%bankpin_counter = 2) {
+    if_settext(bankpin_main:com_151, "Time for the THIRD digit.");
+} else {
+    if_settext(bankpin_main:com_151, "Finally, the FOURTH digit.");
+}
+
+[proc,bank_pin_shuffle]
+~bank_pin_set_digits(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+~bank_pin_swap_digits(9, random(10));
+~bank_pin_swap_digits(8, random(9));
+~bank_pin_swap_digits(7, random(8));
+~bank_pin_swap_digits(6, random(7));
+~bank_pin_swap_digits(5, random(6));
+~bank_pin_swap_digits(4, random(5));
+~bank_pin_swap_digits(3, random(4));
+~bank_pin_swap_digits(2, random(3));
+~bank_pin_swap_digits(1, random(2));
+~bank_pin_refresh_digits;
+
+[proc,bank_pin_swap_digits](int $slot_a, int $slot_b)
+def_int $digit_a = ~bank_pin_digit_at($slot_a);
+def_int $digit_b = ~bank_pin_digit_at($slot_b);
+~bank_pin_set_digit_at($slot_a, $digit_b);
+~bank_pin_set_digit_at($slot_b, $digit_a);
+
+[proc,bank_pin_digit_at](int $slot)(int)
+switch_int ($slot) {
+    case 0 : return(%bankpin_a);
+    case 1 : return(%bankpin_b);
+    case 2 : return(%bankpin_c);
+    case 3 : return(%bankpin_d);
+    case 4 : return(%bankpin_e);
+    case 5 : return(%bankpin_f);
+    case 6 : return(%bankpin_g);
+    case 7 : return(%bankpin_h);
+    case 8 : return(%bankpin_i);
+    case default : return(%bankpin_j);
+}
+
+[proc,bank_pin_set_digit_at](int $slot, int $digit)
+switch_int ($slot) {
+    case 0 : %bankpin_a = $digit;
+    case 1 : %bankpin_b = $digit;
+    case 2 : %bankpin_c = $digit;
+    case 3 : %bankpin_d = $digit;
+    case 4 : %bankpin_e = $digit;
+    case 5 : %bankpin_f = $digit;
+    case 6 : %bankpin_g = $digit;
+    case 7 : %bankpin_h = $digit;
+    case 8 : %bankpin_i = $digit;
+    case default : %bankpin_j = $digit;
+}
+
+[proc,bank_pin_set_digits](int $a, int $b, int $c, int $d, int $e, int $f, int $g, int $h, int $i, int $j)
+%bankpin_a = $a;
+%bankpin_b = $b;
+%bankpin_c = $c;
+%bankpin_d = $d;
+%bankpin_e = $e;
+%bankpin_f = $f;
+%bankpin_g = $g;
+%bankpin_h = $h;
+%bankpin_i = $i;
+%bankpin_j = $j;
+
+[proc,bank_pin_refresh_digits]
+def_int $pos_offset = random(10);
+def_int $pos_step = 1;
+switch_int (random(4)) {
+    case 0 : $pos_step = 1;
+    case 1 : $pos_step = 3;
+    case 2 : $pos_step = 7;
+    case default : $pos_step = 9;
+}
+if_settext(bankpin_main:com_110, tostring(%bankpin_a));
+~bank_pin_place_digit(bankpin_main:com_110, $pos_offset);
+if_settext(bankpin_main:com_111, tostring(%bankpin_b));
+~bank_pin_place_digit(bankpin_main:com_111, modulo(add($pos_offset, $pos_step), 10));
+if_settext(bankpin_main:com_112, tostring(%bankpin_c));
+~bank_pin_place_digit(bankpin_main:com_112, modulo(add($pos_offset, multiply($pos_step, 2)), 10));
+if_settext(bankpin_main:com_113, tostring(%bankpin_d));
+~bank_pin_place_digit(bankpin_main:com_113, modulo(add($pos_offset, multiply($pos_step, 3)), 10));
+if_settext(bankpin_main:com_114, tostring(%bankpin_e));
+~bank_pin_place_digit(bankpin_main:com_114, modulo(add($pos_offset, multiply($pos_step, 4)), 10));
+if_settext(bankpin_main:com_115, tostring(%bankpin_f));
+~bank_pin_place_digit(bankpin_main:com_115, modulo(add($pos_offset, multiply($pos_step, 5)), 10));
+if_settext(bankpin_main:com_116, tostring(%bankpin_g));
+~bank_pin_place_digit(bankpin_main:com_116, modulo(add($pos_offset, multiply($pos_step, 6)), 10));
+if_settext(bankpin_main:com_117, tostring(%bankpin_h));
+~bank_pin_place_digit(bankpin_main:com_117, modulo(add($pos_offset, multiply($pos_step, 7)), 10));
+if_settext(bankpin_main:com_118, tostring(%bankpin_i));
+~bank_pin_place_digit(bankpin_main:com_118, modulo(add($pos_offset, multiply($pos_step, 8)), 10));
+if_settext(bankpin_main:com_119, tostring(%bankpin_j));
+~bank_pin_place_digit(bankpin_main:com_119, modulo(add($pos_offset, multiply($pos_step, 9)), 10));
+
+[proc,bank_pin_place_digit](component $component, int $slot)
+switch_int ($slot) {
+    case 0 : if_setposition($component, 6, -36);
+    case 1 : if_setposition($component, 20, -36);
+    case 2 : if_setposition($component, 34, -36);
+    case 3 : if_setposition($component, 48, -36);
+    case 4 : if_setposition($component, 6, -19);
+    case 5 : if_setposition($component, 20, -19);
+    case 6 : if_setposition($component, 34, -19);
+    case 7 : if_setposition($component, 48, -19);
+    case 8 : if_setposition($component, 16, -2);
+    case default : if_setposition($component, 38, -2);
+}
