@@ -2527,7 +2527,7 @@
 2526=obj_grandtree_twigo
 2527=obj_soulbane_zaros_spear_manwear
 2528=obj_uncut_diamond
-2529=loc_14910_8
+2529=inv_pickaxe
 2530=obj_grandtree_twigt
 2531=obj_cake
 2532=obj_unfinished_pineapple_punch1
@@ -9355,7 +9355,7 @@
 9354=obj_tzhaar_spikeshield
 9355=obj_tzhaar_staff
 9356=obj_tzhaar_splitsword
-9357=loc_9398_8
+9357=bank_deposit_box_8
 9358=npc_2634_head
 9359=npc_veronica
 9360=npc_julieti3

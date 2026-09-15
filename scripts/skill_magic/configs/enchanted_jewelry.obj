@@ -314,6 +314,8 @@ param=magicdefence,3
 param=rangedefence,3
 param=strengthbonus,6
 param=prayerbonus,3
+param=charges,1
+param=next_obj_stage,amulet_of_glory
 
 [amulet_of_glory_2]
 cost=17625
@@ -351,6 +353,8 @@ param=magicdefence,3
 param=rangedefence,3
 param=strengthbonus,6
 param=prayerbonus,3
+param=charges,2
+param=next_obj_stage,amulet_of_glory_1
 
 [amulet_of_glory_3]
 cost=17625
@@ -388,6 +392,8 @@ param=magicdefence,3
 param=rangedefence,3
 param=strengthbonus,6
 param=prayerbonus,3
+param=charges,3
+param=next_obj_stage,amulet_of_glory_2
 
 [amulet_of_glory_4]
 cost=17625
@@ -425,6 +431,8 @@ param=magicdefence,3
 param=rangedefence,3
 param=strengthbonus,6
 param=prayerbonus,3
+param=charges,4
+param=next_obj_stage,amulet_of_glory_3
 
 [amulet_of_strength]
 desc=An enchanted ruby amulet.
@@ -551,6 +559,7 @@ name=Games necklace(8)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,8
 param=next_obj_stage,necklace_of_minigames_7
 
 [necklace_of_minigames_7]
@@ -573,6 +582,7 @@ name=Games necklace(7)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,7
 param=next_obj_stage,necklace_of_minigames_6
 
 [necklace_of_minigames_6]
@@ -595,6 +605,7 @@ name=Games necklace(6)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,6
 param=next_obj_stage,necklace_of_minigames_5
 
 [necklace_of_minigames_5]
@@ -617,6 +628,7 @@ name=Games necklace(5)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,5
 param=next_obj_stage,necklace_of_minigames_4
 
 [necklace_of_minigames_4]
@@ -639,6 +651,7 @@ name=Games necklace(4)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,4
 param=next_obj_stage,necklace_of_minigames_3
 
 [necklace_of_minigames_3]
@@ -661,6 +674,7 @@ name=Games necklace(3)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,3
 param=next_obj_stage,necklace_of_minigames_2
 
 [necklace_of_minigames_2]
@@ -683,6 +697,7 @@ name=Games necklace(2)
 weight=10g
 wearpos=front
 category=necklace_of_minigames
+param=charges,2
 param=next_obj_stage,necklace_of_minigames_1
 
 [necklace_of_minigames_1]

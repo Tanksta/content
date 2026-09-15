@@ -75,6 +75,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_copperrock1
 
 [copperrock2]
 op1=Mine
@@ -89,6 +90,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_copperrock2
 
 [ironrock1]
 op1=Mine
@@ -103,6 +105,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_ironrock1
 
 [ironrock2]
 op1=Mine
@@ -117,6 +120,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_ironrock2
 
 [tinrock1]
 op1=Mine
@@ -131,6 +135,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_tinrock1
 
 [tinrock2]
 op1=Mine
@@ -141,6 +146,7 @@ blockrange=no
 recol1s=24
 recol1d=53
 model=rock2
+param=macro_gas,macro_tinrock2
 name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
@@ -159,6 +165,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_coalrock1
 
 [coalrock2]
 op1=Mine
@@ -173,6 +180,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_coalrock2
 
 [goldrock1]
 op1=Mine
@@ -187,6 +195,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_goldrock1
 
 [goldrock2]
 op1=Mine
@@ -201,6 +210,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_goldrock2
 
 [silverrock1]
 op1=Mine
@@ -215,6 +225,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_silverrock1
 
 [silverrock2]
 op1=Mine
@@ -229,6 +240,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_silverrock2
 
 [mithrilrock1]
 op1=Mine
@@ -243,6 +255,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_mithrilrock1
 
 [mithrilrock2]
 op1=Mine
@@ -257,6 +270,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_mithrilrock2
 
 [adamantiterock1]
 op1=Mine
@@ -271,6 +285,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_adamantiterock1
 
 [adamantiterock2]
 op1=Mine
@@ -285,6 +300,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_adamantiterock2
 
 [runiterock1]
 op1=Mine
@@ -299,6 +315,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_runiterock1
 
 [runiterock2]
 op1=Mine
@@ -313,6 +330,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_runiterock2
 
 [clayrock1]
 op1=Mine
@@ -327,6 +345,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks1
+param=macro_gas,macro_clayrock1
 
 [clayrock2]
 op1=Mine
@@ -341,6 +360,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_clayrock2
 
 [bluriterock]
 op1=Mine
@@ -359,6 +379,7 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_bluriterock
 
 [gemrock]
 op1=Mine
@@ -372,6 +393,7 @@ model=rock2
 name=Rocks
 desc=A rocky outcrop.
 param=next_loc_stage_mining,rocks2
+param=macro_gas,macro_gemrock
 
 [gas]
 op1=Mine
@@ -742,7 +764,6 @@ name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_4028
-param=macro_gas,gas
 
 [loc_4028]
 op1=Mine
@@ -757,7 +778,6 @@ name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_4029
-param=macro_gas,gas
 
 [loc_4029]
 op1=Mine
@@ -775,7 +795,6 @@ name=Pile of Rock
 desc=A pile of lime rock.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_4030
-param=macro_gas,gas
 
 [loc_4030]
 op1=Mine
@@ -807,7 +826,6 @@ model=loc_4027
 name=Rocks
 desc=Stone with blue veins.
 category=mining_rock_tog
-param=macro_gas,gas
 
 [tog_blue_stone_rocks2]
 op1=Mine
@@ -823,7 +841,6 @@ model=loc_4028
 name=Rocks
 desc=Stone with blue veins.
 category=mining_rock_tog
-param=macro_gas,gas
 
 [tog_blue_stone_rocks3]
 op1=Mine
@@ -839,7 +856,6 @@ model=loc_2110
 name=Rocks
 desc=Stone with blue veins.
 category=mining_rock_tog
-param=macro_gas,gas
 
 [loc_6943]
 op1=Mine
@@ -856,7 +872,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,loc_6947
-param=macro_gas,gas
 
 [loc_6944]
 op1=Mine
@@ -873,7 +888,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,loc_6948
-param=macro_gas,gas
 
 [loc_6945]
 op1=Mine
@@ -890,7 +904,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_6947
-param=macro_gas,gas
 
 [loc_6946]
 op1=Mine
@@ -907,7 +920,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_6948
-param=macro_gas,gas
 
 [loc_6947]
 op1=Mine
@@ -957,7 +969,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9723
-param=macro_gas,gas
 
 [loc_9709]
 op1=Mine
@@ -975,7 +986,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9724
-param=macro_gas,gas
 
 [loc_9710]
 op1=Mine
@@ -993,7 +1003,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9725
-param=macro_gas,gas
 
 [loc_9711]
 op1=Mine
@@ -1011,7 +1020,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9723
-param=macro_gas,gas
 
 [loc_9712]
 op1=Mine
@@ -1029,7 +1037,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9724
-param=macro_gas,gas
 
 [loc_9713]
 op1=Mine
@@ -1047,7 +1054,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9725
-param=macro_gas,gas
 
 [loc_9714]
 op1=Mine
@@ -1065,7 +1071,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9723
-param=macro_gas,gas
 
 [loc_9715]
 op1=Mine
@@ -1083,7 +1088,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9724
-param=macro_gas,gas
 
 [loc_9716]
 op1=Mine
@@ -1101,7 +1105,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9725
-param=macro_gas,gas
 
 [loc_9717]
 op1=Mine
@@ -1119,7 +1122,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,loc_9723
-param=macro_gas,gas
 
 [loc_9718]
 op1=Mine
@@ -1137,7 +1139,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,loc_9724
-param=macro_gas,gas
 
 [loc_9719]
 op1=Mine
@@ -1155,7 +1156,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_fast
 param=next_loc_stage_mining,loc_9725
-param=macro_gas,gas
 
 [loc_9720]
 op1=Mine
@@ -1173,7 +1173,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9723
-param=macro_gas,gas
 
 [loc_9721]
 op1=Mine
@@ -1191,7 +1190,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9724
-param=macro_gas,gas
 
 [loc_9722]
 op1=Mine
@@ -1209,7 +1207,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9725
-param=macro_gas,gas
 
 [loc_9723]
 op1=Mine
@@ -1272,7 +1269,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9735
-param=macro_gas,gas
 
 [loc_9727]
 op1=Mine
@@ -1290,7 +1286,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9736
-param=macro_gas,gas
 
 [loc_9728]
 op1=Mine
@@ -1308,7 +1303,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9737
-param=macro_gas,gas
 
 [loc_9729]
 op1=Mine
@@ -1326,7 +1320,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9735
-param=macro_gas,gas
 
 [loc_9730]
 op1=Mine
@@ -1344,7 +1337,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9736
-param=macro_gas,gas
 
 [loc_9731]
 op1=Mine
@@ -1362,7 +1354,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9737
-param=macro_gas,gas
 
 [loc_9732]
 op1=Mine
@@ -1380,7 +1371,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9735
-param=macro_gas,gas
 
 [loc_9733]
 op1=Mine
@@ -1398,7 +1388,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9736
-param=macro_gas,gas
 
 [loc_9734]
 op1=Mine
@@ -1416,7 +1405,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_9737
-param=macro_gas,gas
 
 [loc_9735]
 op1=Mine
@@ -1480,7 +1468,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_10585
-param=macro_gas,gas
 
 [loc_10584]
 op1=Mine
@@ -1499,7 +1486,6 @@ name=Rocks
 desc=A rocky outcrop.
 category=mining_rock_normal
 param=next_loc_stage_mining,loc_10586
-param=macro_gas,gas
 
 [loc_10585]
 op1=Mine

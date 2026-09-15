@@ -3,9 +3,9 @@ p_arrivedelay;
 if (~pickup_obj_check_for_space(spade, 1) = false) {
     return;
 }
-anim(human_pickupfloor, 0);
 p_delay(0);
 sound_synth(pick, 1, 0);
+mes("You take a spade.");
 inv_add(inv, spade, 1);
 wealth_event(^wealth_pickup, oc_debugname(spade), 1, oc_cost(spade));
 loc_change(rimmington_mining_no_spade, 100);

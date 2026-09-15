@@ -198,25 +198,6 @@ if (random($chance) = ^true) {
 p_oploc(3);
 
 
-[label,get_ore_tog_stone]
-db_find(mining_table:rock, loc_type);
-def_dbrow $data = db_findnext;
-if ($data = null) {
-    ~displaymessage(^dm_default);
-    return;
-}
-if (stat_random(mining, db_getfield($data, mining_table:rock_successchance, 0)) = true) {
-    p_delay(0);
-    sound_synth(mine, 1, 0);
-    anim(null, 0);
-    inv_add(inv, db_getfield($data, mining_table:rock_output, 0), 1);
-    stat_advance(mining, db_getfield($data, mining_table:rock_exp, 0));
-    mes("You manage to mine some <db_getfield($data, mining_table:ore_name, 0)>.");
-    return;
-}
-p_oploc(3);
-
-
 [label,get_ore_essence]
 db_find(mining_table:rock, loc_type);
 def_dbrow $data = db_findnext;
@@ -264,6 +245,24 @@ if (stat_random(mining, $low, $high) = true) {
     db_find(gem_cutting_table:uncut_gem, $gem);
     $data = db_findnext;
     mes("You just mined <~add_article(oc_name(db_getfield($data, gem_cutting_table:cut_gem, 0)))>!");
+    return;
+}
+p_oploc(3);
+
+[label,get_ore_tog_stone]
+db_find(mining_table:rock, loc_type);
+def_dbrow $data = db_findnext;
+if ($data = null) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (stat_random(mining, db_getfield($data, mining_table:rock_successchance, 0)) = true) {
+    p_delay(0);
+    sound_synth(mine, 1, 0);
+    anim(null, 0);
+    inv_add(inv, db_getfield($data, mining_table:rock_output, 0), 1);
+    stat_advance(mining, db_getfield($data, mining_table:rock_exp, 0));
+    mes("You manage to mine some stone.");
     return;
 }
 p_oploc(3);

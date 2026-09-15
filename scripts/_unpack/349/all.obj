@@ -2,11 +2,18 @@
 name=Spade
 desc=A slightly muddy spade.
 cost=3
-2dxof=4
-2dyof=4
-2dzoom=2030
+model=obj_spade
+manwear=obj_spade_manwear,0
+womanwear=obj_spade_manwear,0
+2dzoom=1860
 2dyan=1512
-2dxan=332
+2dxan=396
+recol1s=61
+recol1d=5181
+recol2s=57
+recol2d=5177
+recol3s=70
+recol3d=5190
 weight=4lb
 iop1=Dig
 
