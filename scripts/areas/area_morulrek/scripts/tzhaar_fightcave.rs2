@@ -79,6 +79,26 @@ return(0_37_79_31_32);
 [proc,tzhaar_fightcave_exit_coord]()(coord)
 return(0_38_80_6_48);
 
+[proc,tzhaar_fightcave_create_region]()(coord)
+def_coord $region = region_create(1, 8, 8);
+region_setexitcoord(~tzhaar_fightcave_exit_coord);
+def_int $east = 0;
+while ($east < 8) {
+    def_int $north = 0;
+    while ($north < 8) {
+        region_set(0, $east, $north, movecoord(0_37_79_0_0, multiply($east, 8), 0, multiply($north, 8)), 0);
+        $north = add($north, 1);
+    }
+    $east = add($east, 1);
+}
+return(region_getcoord(0, 31, 32));
+
+[proc,tzhaar_fightcave_instance_coord](coord $source)(coord)
+if (region_findbycoord(coord) = true) {
+    return(region_getcoord(0, sub(coordx($source), calc(37 * 64)), sub(coordz($source), calc(79 * 64))));
+}
+return($source);
+
 [proc,tzhaar_fightcave_tokkul_reward](int $waves)(int)
 if ($waves <= 0) {
     return(0);
@@ -92,10 +112,10 @@ tzhaar_fightcave_clear_progress_state;
 def_int $tokkul = ~tzhaar_fightcave_tokkul_reward(tzhaar_fightcave_completed);
 if ($tokkul > 0) {
     inv_add(inv, tzhaar_token, $tokkul);
-    mes("TzHaar-Mej-Jal gives you <tostring($tokkul)> TokKul for the waves you completed.");
+    ~chatnpc_specific("TzHaar-Mej-Jal", tzhaar_fightcave_master, "<p,neutral>You earned <tostring($tokkul)> TokKul for the waves you completed.");
     return;
 }
-mes("TzHaar-Mej-Jal says: Well I suppose you tried... better luck next time.");
+~chatnpc_specific("TzHaar-Mej-Jal", tzhaar_fightcave_master, "<p,neutral>Well I suppose you tried... better luck next time.");
 
 [proc,tzhaar_fightcave_reward_complete]
 def_boolean $drop_cape = false;
@@ -125,10 +145,10 @@ if (%macro_event > 0 & npc_finduid(%macro_event_uid) = true) {
 ~tzhaar_fightcave_clear_progress;
 tzhaar_fightcave_start_state;
 tzhaar_fightcave_set_rotation(random(7));
-def_coord $start = ~tzhaar_fightcave_entry_coord;
+def_coord $start = ~tzhaar_fightcave_create_region;
 mes("You descend into the Fight Cave.");
 p_delay(0);
-p_telejump_instance($start);
+p_telejump($start);
 ~tzhaar_fightcave_cleanup;
 ~tzhaar_music_refresh;
 queue(tzhaar_fightcave_begin, 1, 0);
@@ -162,7 +182,8 @@ queue(tzhaar_fightcave_begin, 1, 0);
 mes("Fight Cave set to wave <tostring($wave)>.");
 
 [proc,tzhaar_fightcave_cleanup]
-npc_findallany(0_37_79_31_32, 96, ^vis_off);
+def_coord $centre = ~tzhaar_fightcave_instance_coord(~tzhaar_fightcave_entry_coord);
+npc_findallany($centre, 96, ^vis_off);
 while (npc_findnext = true) {
     switch_npc(npc_type) {
         case tzhaar_fightcave_swarm_1a, tzhaar_fightcave_swarm_1b,
@@ -200,6 +221,9 @@ if ($completed = true) {
 
 [proc,tzhaar_login]
 if (tzhaar_fightcave_active = false & tzhaar_fightcave_return_pending = false & ~tzhaar_in_fightpit(coord) = false) {
+    if (~tzhaar_in_morulrek(coord) = true) {
+        ~music_refresh_autoplay;
+    }
     return;
 }
 def_boolean $in_fightpit = ~tzhaar_in_fightpit(coord);
@@ -275,6 +299,17 @@ if (tzhaar_fightcave_active = true) {
     return;
 }
 ~music_refresh_autoplay;
+
+[proc,tzhaar_in_morulrek](coord $coord)(boolean)
+def_int $map_x = calc(coordx($coord) / 64);
+def_int $map_z = calc(coordz($coord) / 64);
+if ($map_x = 37 & ($map_z = 79 | $map_z = 80)) {
+    return(true);
+}
+if ($map_x = 38 & $map_z = 80) {
+    return(true);
+}
+return(false);
 
 [proc,tzhaar_fightcave_player_death]
 def_obj $prev_wep = inv_getobj(worn, ^wearpos_rhand);
@@ -401,13 +436,13 @@ tzhaar_fightcave_set_remaining(add(tzhaar_fightcave_remaining, 1));
 [proc,tzhaar_fightcave_spawn_coord](int $offset)(coord)
 def_int $slot = modulo(add(tzhaar_fightcave_rotation, $offset), 7);
 switch_int ($slot) {
-    case 0 : return(map_findsquare(0_37_79_14_48, 0, 2, ^map_findsquare_lineofwalk));
-    case 1 : return(map_findsquare(0_37_79_32_35, 0, 2, ^map_findsquare_lineofwalk));
-    case 2 : return(map_findsquare(0_37_79_44_51, 0, 2, ^map_findsquare_lineofwalk));
-    case 3 : return(map_findsquare(0_37_79_50_26, 0, 2, ^map_findsquare_lineofwalk));
-    case 4 : return(map_findsquare(0_37_79_28_16, 0, 2, ^map_findsquare_lineofwalk));
-    case 5 : return(map_findsquare(0_37_79_12_16, 0, 2, ^map_findsquare_lineofwalk));
-    case default : return(map_findsquare(0_37_79_30_45, 0, 2, ^map_findsquare_lineofwalk));
+    case 0 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_14_48), 0, 2, ^map_findsquare_lineofwalk));
+    case 1 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_32_35), 0, 2, ^map_findsquare_lineofwalk));
+    case 2 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_44_51), 0, 2, ^map_findsquare_lineofwalk));
+    case 3 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_50_26), 0, 2, ^map_findsquare_lineofwalk));
+    case 4 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_28_16), 0, 2, ^map_findsquare_lineofwalk));
+    case 5 : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_12_16), 0, 2, ^map_findsquare_lineofwalk));
+    case default : return(map_findsquare(~tzhaar_fightcave_instance_coord(0_37_79_30_45), 0, 2, ^map_findsquare_lineofwalk));
 }
 
 [queue,tzhaar_fightcave_advance]

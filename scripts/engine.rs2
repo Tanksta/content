@@ -7,6 +7,20 @@
 // Server ops (1000-1999)
 // info: Get the world's current cycle count
 [command,map_clock]()(int)
+// info: Create a dynamic copied-map region
+[command,region_create](int $levels, int $zones_east, int $zones_north)(coord)
+// info: Copy a source zone into the current dynamic region
+[command,region_set](int $dest_level, int $dest_east, int $dest_north, coord $source, int $rotation)
+// info: Get an absolute coordinate inside the current dynamic region
+[command,region_getcoord](int $level_offset, int $x_offset, int $z_offset)(coord)
+// info: Find the dynamic region containing a coordinate
+[command,region_findbycoord](coord $coord)(boolean)
+// info: Get the current dynamic region uid
+[command,region_uid]()(int)
+// info: Find a dynamic region by uid
+[command,region_findbyuid](int $uid)(boolean)
+// info: Set the fallback exit coordinate for the current dynamic region
+[command,region_setexitcoord](coord $coord)
 // info: Returns true if the world is configured as a members world
 [command,map_members]()(int)
 // info: Get the number of players in a given area

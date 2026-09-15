@@ -132,7 +132,7 @@ if (inzone(0_37_80_14_14, 0_37_80_47_44, $coord) = true) {
 return(false);
 
 [proc,tzhaar_fightpit_phase]()(int)
-if (npc_find(0_51_54_41_37, tzhaar_fightpit_master, 64, 0) = false) {
+if (npc_find(0_37_80_31_57, tzhaar_fightpit_master, 64, 0) = false) {
     return(0);
 }
 return(%npc_int);
@@ -186,7 +186,7 @@ return(map_playercount(0_37_80_14_45, 0_37_80_47_56));
 return(map_playercount(0_37_80_14_14, 0_37_80_47_44));
 
 [proc,tzhaar_fightpit_round_active]()(boolean)
-if (npc_find(0_51_54_41_37, tzhaar_fightpit_master, 64, 0) = false) {
+if (npc_find(0_37_80_31_57, tzhaar_fightpit_master, 64, 0) = false) {
     return(false);
 }
 if (%npc_int = 3) {
@@ -198,7 +198,7 @@ return(false);
 if (~tzhaar_fightpit_total_count < 2) {
     return;
 }
-if (npc_find(0_51_54_41_37, tzhaar_fightpit_master, 64, 0) = false) {
+if (npc_find(0_37_80_31_57, tzhaar_fightpit_master, 64, 0) = false) {
     return;
 }
 if (%npc_int > 0) {
@@ -327,7 +327,7 @@ if (%npc_int = 3) {
         ~tzhaar_fightpit_damage_arena;
     }
     ~tzhaar_fightpit_refresh_all;
-    if (npc_find(0_51_54_41_37, tzhaar_fightpit_master, 64, 0) = true) {
+    if (npc_find(0_37_80_31_57, tzhaar_fightpit_master, 64, 0) = true) {
         npc_settimer(60);
     }
     return;
@@ -335,7 +335,7 @@ if (%npc_int = 3) {
 npc_settimer(0);
 
 [proc,tzhaar_fightpit_try_finish_round]
-if (npc_find(0_51_54_41_37, tzhaar_fightpit_master, 64, 0) = true) {
+if (npc_find(0_37_80_31_57, tzhaar_fightpit_master, 64, 0) = true) {
     %npc_int = 0;
     %npc_int2 = 0;
     npc_settimer(0);

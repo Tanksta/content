@@ -447,11 +447,3 @@ mapfunction=38
 sharelight=yes
 hillskew=yes
 shadow=no
-
-[loc_9398]
-name=Bank Deposit Box
-desc=Lets you put items into your bank.
-model=loc_9398
-forceapproach=south
-op1=Deposit
-
