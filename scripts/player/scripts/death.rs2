@@ -4,6 +4,7 @@ p_delay(1);
 p_stopaction;
 if_close;
 anim(human_death, 0);
+~halloween_death_start;
 p_delay(3);
 %death = ^false;
 

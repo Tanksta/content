@@ -1,0 +1,25 @@
+[proc,halloween_death_start]
+npc_add(map_findsquare(coord, 1, 1, ^map_findsquare_lineofwalk), halloween_death, 10);
+npc_setmode(none);
+npc_facesquare(coord);
+sound_synth(grim_reaper_appear, 1, 0);
+npc_anim(human_scythe_slash, 0);
+switch_int (random(9)) {
+    case 0 : npc_say("I claim <displayname> as my own!");
+    case 1 : npc_say("Your time here is over, <displayname>.");
+    case 2 : npc_say("There is no escape, <displayname>...");
+    case 3 : npc_say("Now is the time you die, <displayname>.");
+    case 4 : npc_say("Beware mortals, <displayname> now travels with me.");
+    case 5 : npc_say("I have come for you, <displayname>!");
+    case 6 : npc_say("<displayname> is mine!");
+    case 7 : npc_say("Let me escort you to Lumbridge, <displayname>.");
+    case default : npc_say("Muhahahahaha!");
+}
+npc_queue(1, 0, 6);
+
+[ai_queue1,halloween_death]
+def_coord $death_coord = npc_coord;
+npc_setmode(none);
+npc_del;
+spotanim_map(smokepuff, $death_coord, 124, 30);
+~sound_area(smokepuff2, 30, $death_coord, 10);
