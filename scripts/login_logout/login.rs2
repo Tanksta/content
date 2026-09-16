@@ -77,6 +77,10 @@ if(inzone(movecoord(^grandtree_jail_coord, 0, 0, -2), movecoord(^grandtree_jail_
     ~grandtree_spawn_charlie;
 }
 
+if (map_members = ^false & %alternate_spells = ^spellbook_ancient) {
+    %alternate_spells = ^spellbook_standard;
+}
+
 ~initalltabs;
 ~castlewars_login;
 ~tzhaar_login;
