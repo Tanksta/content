@@ -362,7 +362,7 @@ data=musicdata,music_Gaol
 [musicregion_39_150]
 table=musicregion
 data=mapsquare,0_39_150_0_0
-data=musicdata,music_Scape_Sad
+data=musicdata,music_The_Cellar_Dwellers
 
 [musicregion_39_153]
 table=musicregion
@@ -462,7 +462,7 @@ data=musicdata,music_Alone
 [musicregion_40_151]
 table=musicregion
 data=mapsquare,0_40_151_0_0
-data=musicdata,music_Scape_Sad
+data=musicdata,music_The_Cellar_Dwellers
 
 [musicregion_40_154]
 table=musicregion
@@ -1138,7 +1138,7 @@ data=musicdata,music_Wilderness3
 [musicregion_47_60]
 table=musicregion
 data=mapsquare,0_47_60_0_0
-data=musicdata,music_Forever
+data=musicdata,music_Wild_Side
 
 [musicregion_47_61]
 table=musicregion
@@ -1238,7 +1238,7 @@ data=musicdata,music_Wilderness3
 [musicregion_48_60]
 table=musicregion
 data=mapsquare,0_48_60_0_0
-data=musicdata,music_Forever
+data=musicdata,music_Wild_Side
 
 [musicregion_48_61]
 table=musicregion
@@ -1338,7 +1338,7 @@ data=musicdata,music_Moody
 [musicregion_49_57]
 table=musicregion
 data=mapsquare,0_49_57_0_0
-data=musicdata,music_Wilderness3
+data=musicdata,music_Dead_Can_Dance
 
 [musicregion_49_58]
 table=musicregion
