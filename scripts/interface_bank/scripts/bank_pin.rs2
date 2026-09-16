@@ -287,7 +287,7 @@ if (%varbit_1010 = ^bank_pin_mode_delete_auth) {
 }
 if (%varbit_1010 = ^bank_pin_mode_change_new) {
     if_close;
-    ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+    ~bank_pin_open_entry("Please choose a new FOUR DIGIT PIN using the buttons below.");
     return;
 }
 if_close;
@@ -397,7 +397,7 @@ switch_int (%varbit_1010) {
         %bankpin_next = %bankpin_guess;
         %varbit_1010 = ^bank_pin_mode_confirm_set;
         sound_synth(PIN_pending, 1, 0);
-        ~bank_pin_open_entry("Now please enter that number again!");
+        ~bank_pin_open_entry("Now please enter that number again.");
     case ^bank_pin_mode_confirm_set :
         if (%bankpin_guess = %bankpin_next) {
             %bankpin_true = %bankpin_guess;
@@ -423,7 +423,7 @@ switch_int (%varbit_1010) {
             %varbit_1010 = ^bank_pin_mode_change_new;
             sound_synth(pillory_success, 1, 0);
             mes("You have correctly entered your PIN.");
-            ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+            ~bank_pin_open_entry("Please choose a new FOUR DIGIT PIN using the buttons below.");
         } else {
             @bank_pin_incorrect("Please enter your current Bank PIN.");
         }
@@ -431,7 +431,7 @@ switch_int (%varbit_1010) {
         %bankpin_next = %bankpin_guess;
         %varbit_1010 = ^bank_pin_mode_change_confirm;
         sound_synth(PIN_pending, 1, 0);
-        ~bank_pin_open_entry("Now please enter that number again!");
+        ~bank_pin_open_entry("Now please enter that number again.");
     case ^bank_pin_mode_change_confirm :
         if (%bankpin_guess = %bankpin_next) {
             %bankpin_true = %bankpin_guess;
@@ -447,7 +447,7 @@ switch_int (%varbit_1010) {
             %bankpin_next = 0;
             %varbit_1010 = ^bank_pin_mode_change_new;
             mes("Those numbers did not match. Please try again.");
-            ~bank_pin_open_entry("Please enter your FOUR DIGIT PIN using the buttons below.");
+            ~bank_pin_open_entry("Please choose a new FOUR DIGIT PIN using the buttons below.");
         }
     case ^bank_pin_mode_cancel_delete_auth :
         if (%bankpin_guess = %bankpin_true) {
