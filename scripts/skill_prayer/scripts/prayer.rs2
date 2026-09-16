@@ -8,8 +8,8 @@ if (stat(prayer) < 1) {
     return(false);
 }
 if (db_getfield($data, prayers:members, 0) = ^true & map_members = ^false) {
-    // in osrs it includes the prayer name in the message
-    mes(^mes_members_prayer);
+    sound_synth(prayer_off, 0, 0);
+    ~mesbox("You must be logged into a @dbl@Member's World@bla@ to use @dbl@<db_getfield($data, prayers:name, 0)>@bla@.");
     return(false);
 }
 if (~duel_arena_prayer_check = false) {
