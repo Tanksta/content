@@ -17992,7 +17992,7 @@ certtemplate=template_for_cert
 
 [spinning_plate]
 desc=It has a picture of a dragon on it.
-cost=50
+cost=75
 iop1=Spin
 model=obj_spinning_plate
 manwear=obj_spinning_plate_manwear,3
