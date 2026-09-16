@@ -29,6 +29,25 @@ if (~player_autocast_enabled = true) {
 }
 @pvp_melee_attack;
 
+[proc,pvp_same_team_cape]()(boolean)
+def_obj $cape = inv_getobj(worn, ^wearpos_back);
+if ($cape = null | $cape ! .inv_getobj(worn, ^wearpos_back)) {
+    return(false);
+}
+switch_obj($cape) {
+    case wilderness_cape_1, wilderness_cape_2, wilderness_cape_3, wilderness_cape_4, wilderness_cape_5, wilderness_cape_6, wilderness_cape_7, wilderness_cape_8, wilderness_cape_9, wilderness_cape_10 :
+        return(true);
+    case wilderness_cape_11, wilderness_cape_12, wilderness_cape_13, wilderness_cape_14, wilderness_cape_15, wilderness_cape_16, wilderness_cape_17, wilderness_cape_18, wilderness_cape_19, wilderness_cape_20 :
+        return(true);
+    case wilderness_cape_21, wilderness_cape_22, wilderness_cape_23, wilderness_cape_24, wilderness_cape_25, wilderness_cape_26, wilderness_cape_27, wilderness_cape_28, wilderness_cape_29, wilderness_cape_30 :
+        return(true);
+    case wilderness_cape_31, wilderness_cape_32, wilderness_cape_33, wilderness_cape_34, wilderness_cape_35, wilderness_cape_36, wilderness_cape_37, wilderness_cape_38, wilderness_cape_39, wilderness_cape_40 :
+        return(true);
+    case wilderness_cape_41, wilderness_cape_42, wilderness_cape_43, wilderness_cape_44, wilderness_cape_45, wilderness_cape_46, wilderness_cape_47, wilderness_cape_48, wilderness_cape_49, wilderness_cape_50 :
+        return(true);
+}
+return(false);
+
 [proc,pvp_level_check]()(boolean)
 // not high enough level
 def_int $combat_level_diff = abs(sub(~player_combat_level, ~.player_combat_level));
@@ -39,6 +58,9 @@ if ($wilderness_level < 1) {
     return(false);
 }
 if ($wilderness_level < $combat_level_diff) {
+    if (~pvp_same_team_cape = true) {
+        return(true);
+    }
     mes("Your level difference is too great!");
     mes("You need to move deeper into the wilderness."); // wilderness is title'd in late 2005/2006 ish
     return(false);

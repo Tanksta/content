@@ -1,0 +1,2 @@
+[opnpc1,wilderness_capeseller_2] @team_cape_seller_talk(wildernesscapeshop2, "Ian's Wilderness Cape Shop.");
+[opnpc3,wilderness_capeseller_2] @team_cape_seller_trade(wildernesscapeshop2, "Ian's Wilderness Cape Shop.");

@@ -1,0 +1,21 @@
+[label,team_cape_seller_talk](inv $shop, string $title)
+~chatnpc("<p,happy>Hello there, are you interested in buying one of my special capes?");
+switch_int(~p_choice3("What's so special about your capes?", 1, "Yes please!", 2, "No thanks.", 3)) {
+    case 1 :
+        ~chatplayer("<p,quiz>What's so special about your capes?");
+        ~chatnpc("<p,neutral>Ahh well they make it less likely that you'll|accidently attack anyone wearing the same cape as you|and easier to attack everyone else.");
+        ~chatnpc("<p,neutral>They also make it easier to distinguish people who're|wearing the same cape as you from everyone else.");
+        ~chatnpc("<p,neutral>They're very useful when out in the wilderness|with friends or anyone else you don't want to harm.");
+        ~chatnpc("<p,happy>So would you like to buy one?");
+        switch_int(~p_choice2("Yes please!", 1, "No thanks.", 2)) {
+            case 1 : @team_cape_seller_trade($shop, $title);
+            case 2 : ~chatplayer("<p,neutral>No thanks.");
+        }
+    case 2 :
+        @team_cape_seller_trade($shop, $title);
+    case 3 :
+        ~chatplayer("<p,neutral>No thanks.");
+}
+
+[label,team_cape_seller_trade](inv $shop, string $title)
+~openshop($shop, 600, 1000, 10, $title);
