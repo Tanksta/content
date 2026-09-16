@@ -2,7 +2,7 @@ type=layer
 width=512
 height=334
 
-[component_12803]
+[com_0]
 x=21
 y=0
 type=text
@@ -16,7 +16,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12804]
+[com_1]
 x=21
 y=16
 type=text
@@ -30,7 +30,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12805]
+[com_2]
 x=21
 y=32
 type=text
@@ -44,7 +44,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12806]
+[com_3]
 x=21
 y=48
 type=text
@@ -58,7 +58,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12807]
+[com_4]
 x=21
 y=64
 type=text
