@@ -166,4 +166,24 @@ param=productexp,500
 param=name,Silver sickle
 param=mould,sickle_mould
 
+[tiara]
+param=product,tiara
+param=levelrequired,23
+param=productexp,525
+param=name,tiara
+param=mould,tiara_mould
+
+[fenk_conductor]
+param=product,fenk_conductor
+param=levelrequired,20
+param=productexp,500
+param=name,lightning conductor
+param=mould,fenk_lightning_mould
+
+[agrith_sigil]
+param=product,agrith_sigil
+param=levelrequired,30
+param=productexp,500
+param=name,demonic sigil
+param=mould,agrith_sigil_mould
 

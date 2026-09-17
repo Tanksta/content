@@ -11,10 +11,38 @@
 [inv_button3,crafting_jewelry:amulets_inv] @craft_gold(crafting_make_amulets, last_slot, 10);
 [inv_button4,crafting_jewelry:amulets_inv] @craft_gold_x(crafting_make_amulets, last_slot);
 
+[inv_button1,silver_crafting:com_91] @craft_silver_product(nostringstar, 1);
+[inv_button2,silver_crafting:com_91] @craft_silver_product(nostringstar, 5);
+[inv_button3,silver_crafting:com_91] @craft_silver_product(nostringstar, 10);
+[inv_button1,silver_crafting:com_97] @craft_silver_product(nostringsnake, 1);
+[inv_button2,silver_crafting:com_97] @craft_silver_product(nostringsnake, 5);
+[inv_button3,silver_crafting:com_97] @craft_silver_product(nostringsnake, 10);
+[inv_button1,silver_crafting:com_103] @craft_silver_product(silver_sickle, 1);
+[inv_button2,silver_crafting:com_103] @craft_silver_product(silver_sickle, 5);
+[inv_button3,silver_crafting:com_103] @craft_silver_product(silver_sickle, 10);
+[inv_button1,silver_crafting:com_109] @craft_silver_product(fenk_conductor, 1);
+[inv_button2,silver_crafting:com_109] @craft_silver_product(fenk_conductor, 5);
+[inv_button3,silver_crafting:com_109] @craft_silver_product(fenk_conductor, 10);
+[inv_button1,silver_crafting:com_115] @craft_silver_product(tiara, 1);
+[inv_button2,silver_crafting:com_115] @craft_silver_product(tiara, 5);
+[inv_button3,silver_crafting:com_115] @craft_silver_product(tiara, 10);
+[inv_button1,silver_crafting:com_121] @craft_silver_product(agrith_sigil, 1);
+[inv_button2,silver_crafting:com_121] @craft_silver_product(agrith_sigil, 5);
+[inv_button3,silver_crafting:com_121] @craft_silver_product(agrith_sigil, 10);
+[if_button,silver_crafting:com_88] if_close;
+
 [if_close,crafting_jewelry]
 inv_stoptransmit(crafting_jewelry:rings_inv);
 inv_stoptransmit(crafting_jewelry:necklaces_inv);
 inv_stoptransmit(crafting_jewelry:amulets_inv);
+
+[if_close,silver_crafting]
+inv_stoptransmit(silver_crafting:com_91);
+inv_stoptransmit(silver_crafting:com_97);
+inv_stoptransmit(silver_crafting:com_103);
+inv_stoptransmit(silver_crafting:com_109);
+inv_stoptransmit(silver_crafting:com_115);
+inv_stoptransmit(silver_crafting:com_121);
 
 //--- Label to open, and handle the gold jewelry interface
 [label,craft_gold_interface]()
@@ -305,49 +333,133 @@ p_delay(2);
 
 
 [label,craft_silver]
-def_namedobj $product;
-def_int $count;
-// https://web.archive.org/web/20060111201853im_/http://www.runeweb.net/Roth/Creature_Quest/10.PNG
-// should prob always show holy/unholy and show others depending on inv moulds?
-if(inv_total(inv, sickle_mould) > 0 & map_members = ^true) {
-    $product, $count = ~skill_multi3(nostringsnake, 0, -10, 175, "\\n\\n\\n\\nSymbol of Zamorak",
-       nostringstar, 0, -10, 175, "\\n\\n\\n\\nSymbol of Saradomin",
-       silver_sickle, 0, -15, 175, "\\n\\n\\n\\n@blu@Silver sickle"
-    );
+if (~fenk_make_lightning_conductor = true) {
+    return;
+}
+p_arrivedelay();
+if_openmain(silver_crafting);
+~craft_silver_setup_holysymbol;
+~craft_silver_setup_unholysymbol;
+~craft_silver_setup_sickle;
+~craft_silver_setup_lightning;
+~craft_silver_setup_tiara;
+~craft_silver_setup_agrith;
+inv_transmit(silvercast_holysymbol, silver_crafting:com_91);
+inv_transmit(silvercast_unholysymbol, silver_crafting:com_97);
+inv_transmit(silvercast_sickle, silver_crafting:com_103);
+inv_transmit(silvercast_lightning, silver_crafting:com_109);
+inv_transmit(silvercast_tiara, silver_crafting:com_115);
+inv_transmit(silvercast_agrith, silver_crafting:com_121);
+
+[proc,craft_silver_setup_holysymbol]
+inv_clear(silvercast_holysymbol);
+if(inv_total(inv, holy_symbol_mould) > 0) {
+    inv_setslot(silvercast_holysymbol, 0, nostringstar, 1);
+    if_sethide(silver_crafting:com_90, false);
+    if_sethide(silver_crafting:com_93, true);
 } else {
-    $product, $count = ~skill_multi2(nostringsnake, 0, -10, 175, "\\n\\n\\n\\nSymbol of Zamorak",
-       nostringstar, 0, -10, 175, "\\n\\n\\n\\nSymbol of Saradomin"
-    );
+    if_setobject(silver_crafting:com_94, holy_symbol_mould, 150);
+    if_sethide(silver_crafting:com_90, true);
+    if_sethide(silver_crafting:com_93, false);
 }
 
-if($count = 0) {
+[proc,craft_silver_setup_unholysymbol]
+inv_clear(silvercast_unholysymbol);
+if(inv_total(inv, unholy_symbol_mould) > 0) {
+    inv_setslot(silvercast_unholysymbol, 0, nostringsnake, 1);
+    if_sethide(silver_crafting:com_96, false);
+    if_sethide(silver_crafting:com_99, true);
+} else {
+    if_setobject(silver_crafting:com_100, unholy_symbol_mould, 150);
+    if_sethide(silver_crafting:com_96, true);
+    if_sethide(silver_crafting:com_99, false);
+}
+
+[proc,craft_silver_setup_sickle]
+inv_clear(silvercast_sickle);
+if(inv_total(inv, sickle_mould) > 0) {
+    inv_setslot(silvercast_sickle, 0, silver_sickle, 1);
+    if_sethide(silver_crafting:com_102, false);
+    if_sethide(silver_crafting:com_105, true);
+} else {
+    if_setobject(silver_crafting:com_106, sickle_mould, 150);
+    if_sethide(silver_crafting:com_102, true);
+    if_sethide(silver_crafting:com_105, false);
+}
+
+[proc,craft_silver_setup_lightning]
+inv_clear(silvercast_lightning);
+if(inv_total(inv, fenk_lightning_mould) > 0) {
+    inv_setslot(silvercast_lightning, 0, fenk_conductor, 1);
+    if_sethide(silver_crafting:com_108, false);
+    if_sethide(silver_crafting:com_111, true);
+} else {
+    if_setobject(silver_crafting:com_112, fenk_lightning_mould, 150);
+    if_sethide(silver_crafting:com_108, true);
+    if_sethide(silver_crafting:com_111, false);
+}
+
+[proc,craft_silver_setup_tiara]
+inv_clear(silvercast_tiara);
+if(inv_total(inv, tiara_mould) > 0) {
+    inv_setslot(silvercast_tiara, 0, tiara, 1);
+    if_sethide(silver_crafting:com_114, false);
+    if_sethide(silver_crafting:com_117, true);
+} else {
+    if_setobject(silver_crafting:com_118, tiara_mould, 150);
+    if_sethide(silver_crafting:com_114, true);
+    if_sethide(silver_crafting:com_117, false);
+}
+
+[proc,craft_silver_setup_agrith]
+inv_clear(silvercast_agrith);
+if(inv_total(inv, agrith_sigil_mould) > 0) {
+    inv_setslot(silvercast_agrith, 0, agrith_sigil, 1);
+    if_sethide(silver_crafting:com_120, false);
+    if_sethide(silver_crafting:com_123, true);
+} else {
+    if_setobject(silver_crafting:com_124, agrith_sigil_mould, 150);
+    if_sethide(silver_crafting:com_120, true);
+    if_sethide(silver_crafting:com_123, false);
+}
+
+[label,craft_silver_product](namedobj $product, int $count)
+if (~craft_silver_product_check($product) = false) {
     return;
 }
-
-if(map_members = ^false & oc_members($product) = true) {
-    mes(^mes_members_do_that);
-    return;
-}
-
 def_struct $struct = oc_param($product, crafting_jewelry_struct);
 def_namedobj $mould = struct_param($struct, mould);
 if(inv_total(inv, $mould) = 0) {
+    if_close;
     ~mesbox("You require a mould to make that.");
     return;
 }
 
 def_int $level = struct_param($struct, levelrequired);
 if (stat(crafting) < $level) {
+    if_close;
     ~mesbox("You need at least level <tostring($level)> Crafting to make that.");
     return;
 }
 
 // macro event
 if (afk_event = ^true) {
+    if_close;
     ~macro_event_general_spawn(~macro_event_set_random);
     return;
 }
+if_close;
 @process_craft_silver($struct, $product, $count);
+
+[proc,craft_silver_product_check](namedobj $product)(boolean)
+if(map_members = ^false) {
+    if($product = silver_sickle | $product = fenk_conductor | $product = agrith_sigil) {
+        if_close;
+        ~mesbox("You can only craft this item on a members' world.");
+        return(false);
+    }
+}
+return(true);
 
 [label,process_craft_silver](struct $struct, namedobj $product, int $count)
 anim(human_furnace, 0);

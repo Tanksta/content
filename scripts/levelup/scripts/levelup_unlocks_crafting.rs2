@@ -15,6 +15,7 @@ switch_int(stat_base(crafting)) {
     case 18 : ~objbox(leather_chaps,"You can now craft @dbl@Leather Chaps@bla@.", 250, 0, 0);
     case 20 : ~doubleobjbox(sapphire,sapphire_ring,"You can now cut @dbl@Sapphires@bla@ and craft @dbl@Sapphire @dbl@Rings@bla@.", 200);
     case 22 : ~objbox(sapphire_necklace,"You can now craft @dbl@Sapphire Necklaces@bla@.", 180, 0, divide(^objbox_height, -2));
+    case 23 : ~objbox(tiara,"You can now craft @dbl@Tiaras@bla@.", 250, 0, 0);
     case 24 : ~objbox(strung_sapphire_amulet,"You can now craft @dbl@Sapphire Amulets@bla@.", 180, 0, divide(^objbox_height, -2));
     case 27 : ~doubleobjbox(emerald,emerald_ring,"You can now cut @dbl@Emeralds@bla@ and craft @dbl@Emerald @dbl@Rings@bla@.", 200);
     case 28 : ~objbox(hardleather_body,"You can now craft @dbl@Hard Leather Armour@bla@.", 250, 0, 0);
