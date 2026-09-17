@@ -567,6 +567,8 @@
 [command,runenergy]()(int)
 // info: Get the player's current run weight
 [command,weight]()(int)
+// info: Disable or enable the player's idle logout timer
+[command,idlelogout_disable](boolean $disabled)
 // info: Requires protected access - clear the current interaction, but leave the walk queue intact
 [command,p_clearpendingaction]
 // info: Set the player's Tele Block timer in game ticks

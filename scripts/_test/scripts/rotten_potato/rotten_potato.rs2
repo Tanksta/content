@@ -1,0 +1,40 @@
+[opheld1,rotten_potato]
+if (staffmodlevel < 4) {
+    mes("You do not have permission to use that.");
+    return;
+}
+@multi3_header(
+    "Keep me logged in.",
+    rotten_potato_keep_logged_in,
+    "Kick me out.",
+    rotten_potato_kick_me_out,
+    "Kill me.",
+    rotten_potato_kill_me,
+    "Op1"
+);
+
+[label,rotten_potato_keep_logged_in]
+idlelogout_disable(true);
+cleartimer(general_macro_events);
+mes("You not log out LONG time.");
+mes("You not running AME timer either.");
+
+[label,rotten_potato_kick_me_out]
+p_logout;
+
+[label,rotten_potato_kill_me]
+queue(damage_player, 0, stat(hitpoints));
+
+[opheldu,rotten_potato]
+if (staffmodlevel < 4) {
+    mes("You do not have permission to use that.");
+    return;
+}
+if (last_useitem ! rotten_potato) {
+    ~displaymessage(^dm_default);
+    return;
+}
+if (last_item = rotten_potato) {
+    mes("Whee! Rotten potato all gone!");
+}
+inv_delslot(inv, last_slot);
