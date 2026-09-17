@@ -1,0 +1,27 @@
+[oploc1,vampire_trap1]
+mes("The trapdoor opens...");
+sound_synth(door_open, 1, 0);
+loc_change(vampire_trap2, 500);
+
+[oploc1,vampire_trap2]
+def_coord $coord = loc_coord();
+
+p_arrivedelay;
+mes("You climb down through the trapdoor...");
+switch_coord ($coord) {
+    case 0_48_51_12_8 : ~climb_ladder(0_48_151_13_8, false);
+    case 0_48_50_46_44 : ~climb_ladder(0_48_150_46_44, false);
+    case default : mes("unhandled vampire trapdoor <~coord_tostring($coord)>");
+}
+
+[oploc1,vampire_ladder]
+p_arrivedelay;
+switch_coord (loc_coord) {
+    case 0_48_150_46_43 : ~climb_ladder(0_48_50_46_44, true);
+    case default : mes("unhandled vampire ladder <~coord_tostring(loc_coord)>");
+}
+
+[ai_spawn,malak]
+if (map_members = ^false & npc_coord = 0_48_151_40_26) {
+    npc_del;
+}
