@@ -1,0 +1,13 @@
+[ai_queue1,air_wizard] ~npc_default_retaliate_ap;
+[ai_queue1,water_wizard] ~npc_default_retaliate_ap;
+[ai_queue1,earth_wizard] ~npc_default_retaliate_ap;
+[ai_queue1,fire_wizard] ~npc_default_retaliate_ap;
+
+[ai_applayer2,air_wizard] ~npc_cast_spell_with_forced_max_hit(^wind_strike, 4, 1);
+[ai_opplayer2,air_wizard] ~npc_cast_spell_with_forced_max_hit(^wind_strike, 4, 1);
+[ai_applayer2,water_wizard] ~npc_cast_spell_with_forced_max_hit(^water_strike, 4, 2);
+[ai_opplayer2,water_wizard] ~npc_cast_spell_with_forced_max_hit(^water_strike, 4, 2);
+[ai_applayer2,earth_wizard] ~npc_cast_spell_with_forced_max_hit(^earth_strike, 4, 6);
+[ai_opplayer2,earth_wizard] ~npc_cast_spell_with_forced_max_hit(^earth_strike, 4, 6);
+[ai_applayer2,fire_wizard] ~npc_cast_spell_with_forced_max_hit(^fire_strike, 4, 4);
+[ai_opplayer2,fire_wizard] ~npc_cast_spell_with_forced_max_hit(^fire_strike, 4, 4);
