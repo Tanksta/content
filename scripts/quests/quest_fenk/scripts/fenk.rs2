@@ -481,6 +481,10 @@ if (last_useitem ! silver_bar) {
 if (inv_total(inv, fenk_lightning_mould) = 0) {
     return(false);
 }
+if (map_members = ^false) {
+    mes(^mes_members_do_that);
+    return(true);
+}
 if (%fenk_quest ! ^fenk_brought_needle_threads) {
     return(false);
 }

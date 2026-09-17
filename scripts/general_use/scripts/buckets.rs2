@@ -1,0 +1,32 @@
+[opheld4,bucket_water] @empty_bucket("water");
+[opheld4,bucket_milk] @empty_bucket("milk");
+[opheld4,bucket_sand] @empty_bucket("sand");
+[opheld4,bucket_compost] @empty_bucket("compost");
+[opheld4,bucket_supercompost] @empty_bucket("super compost");
+[opheld4,bucket_ectoplasm] @empty_bucket("slime");
+[opheld4,ics_little_sap_bucket] @empty_bucket("sap");
+
+[opheld4,bowl_water] @empty_bowl("water");
+
+[opheld4,jug_water] @empty_jug("water");
+
+[opheld4,pot_flour] @empty_pot("flour");
+
+[label,empty_bucket](string $contents)
+inv_setslot(inv, last_slot, bucket_empty, 1);
+sound_synth(vial_empty, 1, 0);
+mes("You empty the Bucket of <$contents>.");
+
+[label,empty_bowl](string $contents)
+inv_setslot(inv, last_slot, bowl_empty, 1);
+sound_synth(vial_empty, 1, 0);
+mes("You empty the Bowl of <$contents>.");
+
+[label,empty_jug](string $contents)
+inv_setslot(inv, last_slot, jug_empty, 1);
+sound_synth(vial_empty, 1, 0);
+mes("You empty the Jug of <$contents>.");
+
+[label,empty_pot](string $contents)
+inv_setslot(inv, last_slot, pot_empty, 1);
+mes("You empty the Pot of <$contents>.");
