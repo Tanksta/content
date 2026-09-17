@@ -17,7 +17,7 @@ param=brew_potion_struct_secondary,3dose2attack
 
 [red_spiders_eggs]
 name=Red spiders' eggs
-desc=Eewww.
+desc=Ewww!
 cost=7
 model=obj_red_spiders_eggs
 2dxof=-3
@@ -49,7 +49,7 @@ param=brew_potion_struct_secondary,3dose2strength
 
 [snape_grass]
 name=Snape grass
-desc=Strange spikey grass.
+desc=Strange spiky grass.
 cost=10
 members=yes
 model=obj_snape_grass
@@ -119,7 +119,7 @@ param=brew_potion_struct_secondary,3dose1antidragon
 
 [wine_of_zamorak]
 name=Wine of zamorak
-desc=I wonder if stealing Zamorak's wine was a good idea.
+desc=An evil wine for an evil god.
 model=obj_wine_of_zamorak
 recol1s=127
 recol1d=701
@@ -136,7 +136,7 @@ param=brew_potion_struct,3doserangerspotion
 [jangerberries]
 name=Jangerberries
 desc=They don't look very ripe.
-iop1=eat
+iop1=Eat
 model=obj_white_berries
 recol1s=960
 recol1d=13223
@@ -192,4 +192,3 @@ model=obj_cactus_potato
 members=yes
 weight=500g
 param=brew_potion_struct,3dose1magic
-

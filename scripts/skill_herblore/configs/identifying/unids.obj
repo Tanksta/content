@@ -149,7 +149,7 @@ weight=7g
 // guessed name
 
 [unidentified_snake_weed]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
 category=category_90
 model=obj_snape_grass
@@ -169,7 +169,7 @@ tradeable=no
 // guessed name
 
 [unidentified_ardrigal]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
 category=category_90
 cost=1
@@ -189,7 +189,7 @@ tradeable=no
 // guessed name
 
 [unidentified_sito_foil]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
 category=category_90
 model=obj_unidentified_guam
@@ -204,7 +204,7 @@ tradeable=no
 // guessed name
 
 [unidentified_volencia_moss]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
 category=category_90
 model=obj_unidentified_guam
@@ -219,7 +219,7 @@ tradeable=no
 // guessed name
 
 [unidentified_rogues_purse]
-name=Unidentified herb
+name=Herb
 desc=An unidentified herb.
 category=category_90
 model=obj_unidentified_guam

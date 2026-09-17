@@ -20,7 +20,7 @@ param=next_obj_stage,vial_empty
 
 [marrentillvial]
 name=Unfinished potion
-desc=I need another ingredient to finish this Marentill potion.
+desc=I need another ingredient to finish this Marrentill potion.
 cost=5
 model=obj_guamvial
 recol1s=61

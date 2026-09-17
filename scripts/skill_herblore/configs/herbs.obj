@@ -331,8 +331,8 @@ tradeable=no
 // guessed name
 
 [rogues_purse]
-name=Rogues purse
-desc=This herb is Rogues Purse.
+name=Rogue's purse
+desc=This herb is Rogue's Purse.
 category=category_90
 cost=5
 model=obj_unidentified_guam

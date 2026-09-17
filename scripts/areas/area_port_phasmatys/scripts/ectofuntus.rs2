@@ -278,10 +278,6 @@ mes("You collect the bonemeal in a pot.");
 inv_setslot(inv, last_slot, pot_empty, 1);
 mes("You empty the bonemeal from the pot.");
 
-[opheld4,bucket_ectoplasm]
-inv_setslot(inv, last_slot, bucket_empty, 1);
-mes("You empty the bucket of slime.");
-
 [proc,ectofuntus_find_bonemeal]()(obj)
 if (inv_total(inv, pot_bonemeal) > 0) return(pot_bonemeal);
 if (inv_total(inv, pot_bonemeal_bat) > 0) return(pot_bonemeal_bat);
@@ -440,7 +436,7 @@ switch_obj($bonemeal) {
     case pot_bonemeal_dagannoth :
         return(500);
     case pot_bonemeal_wyvern :
-        return(2880);
+        return(2000);
     case pot_bonemeal_zogre :
         return(900);
     case pot_bonemeal_ancestral_fayg :

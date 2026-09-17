@@ -12,6 +12,8 @@ name=Pestle and mortar
 desc=I can grind things for potions in this.
 
 [herbbowl]
+name=Herb bowl
+desc=A bowl of herbs.
 model=obj_herbbowl
 2dxof=-30
 2dyof=33
@@ -23,6 +25,8 @@ weight=1lb
 dummyitem=graphic_only
 
 [grinder]
+name=Grinder
+desc=A grinder.
 model=obj_grinder
 2dxof=8
 2dyof=-5

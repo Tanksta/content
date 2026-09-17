@@ -6,7 +6,7 @@ model=obj_spade
 manwear=obj_spade_manwear,0
 womanwear=obj_spade_manwear,0
 2dzoom=1860
-2dyan=1512
+2dyan=1532
 2dxan=396
 recol1s=61
 recol1d=5181
@@ -3498,8 +3498,8 @@ model=obj_amulet_of_accuracy
 iop2=Wear
 wearpos=front
 weight=10g
-manwear=obj_amulet_of_accuracy_manwear,0
-womanwear=obj_amulet_of_accuracy_womanwear,0
+manwear=obj_amulet_of_ghostspeak_manwear,0
+womanwear=obj_amulet_of_ghostspeak_womanwear,0
 recol1s=5916
 recol1d=61
 recol2s=11200
@@ -10865,6 +10865,7 @@ certtemplate=template_for_cert
 [castlewars_barricade]
 name=Barricade
 desc=Use these to block enemy team movement.
+model=obj_soulbane_anger_maceq
 2dyof=-27
 2dzoom=2760
 2dyan=1816
@@ -12626,6 +12627,7 @@ model=obj_fenk_conductor
 2dyan=500
 2dxan=292
 name=Conductor
+param=crafting_jewelry_struct,fenk_conductor
 
 
 [ring_of_charos]
@@ -17592,7 +17594,7 @@ recol1s=28
 recol1d=0
 recol2s=33
 recol2d=0
-name=Black spearstrength
+name=Black spear
 
 
 [cert_black_spear]
@@ -17992,7 +17994,7 @@ certtemplate=template_for_cert
 
 [spinning_plate]
 desc=It has a picture of a dragon on it.
-cost=75
+cost=50
 iop1=Spin
 model=obj_spinning_plate
 manwear=obj_spinning_plate_manwear,3
@@ -31867,22 +31869,6 @@ certlink=tiara_mould
 certtemplate=template_for_cert
 
 
-[tiara]
-desc=Makes me feel like a Princess.
-model=obj_tiara
-iop2=Wear
-2dyof=-25
-2dzoom=480
-2dxan=232
-manwear=obj_tiara_manwear,0
-womanwear=obj_tiara_womanwear,0
-wearpos=hat
-manhead=obj_tiara_manhead
-womanhead=obj_tiara_manhead
-cost=100
-name=Tiara
-
-
 [cert_tiara]
 certlink=tiara
 certtemplate=template_for_cert
@@ -38111,6 +38097,7 @@ model=obj_nature_amulet
 2dxan=380
 iop1=Rub
 iop2=Wear
+tradeable=no
 manwear=obj_amulet_of_accuracy_manwear,0
 womanwear=obj_amulet_of_accuracy_womanwear,0
 wearpos=front
@@ -38231,6 +38218,7 @@ members=yes
 recol1s=9108
 recol1d=10520
 name=Magic roots
+param=crafting_spinning_struct,magic_roots
 
 
 [cert_magic_roots]
@@ -47006,6 +46994,7 @@ womanwear=obj_agrith_sigil_manwear,6
 members=yes
 iop1=Chant
 name=Demonic sigil
+param=crafting_jewelry_struct,agrith_sigil
 
 
 [agrith_book]

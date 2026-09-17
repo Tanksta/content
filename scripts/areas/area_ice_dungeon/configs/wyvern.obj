@@ -14,7 +14,8 @@ iop1=Bury
 iop4=Drop
 members=yes
 category=bones
-param=bone_exp,720
+param=bone_exp,500
 
 [cert_wyvern_bones]
 certlink=wyvern_bones
+certtemplate=template_for_cert

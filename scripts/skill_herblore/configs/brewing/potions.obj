@@ -782,6 +782,7 @@ param=dose_count,1
 [weapon_poison]
 name=Weapon poison
 desc=For use on daggers and projectiles.
+iop4=Empty
 cost=144
 model=obj_strength4
 recol1s=61
@@ -796,11 +797,11 @@ members=yes
 // jagex name
 
 [3dosepotionofzamorak]
-name=Zamorak potion(3)
-desc=3 doses of a potion of Zamorak.
+name=Zamorak brew(3)
+desc=3 doses of Zamorak Brew.
 iop1=Drink
 iop4=Empty
-cost=25
+cost=175
 model=obj_guamvial
 recol1s=61
 recol1d=7099
@@ -817,11 +818,11 @@ param=dose_count,3
 // jagex name
 
 [2dosepotionofzamorak]
-name=Zamorak potion(2)
-desc=2 doses of a potion of Zamorak.
+name=Zamorak brew(2)
+desc=2 doses of Zamorak Brew.
 iop1=Drink
 iop4=Empty
-cost=25
+cost=150
 model=obj_2dose1strength
 recol1s=61
 recol1d=7099
@@ -838,11 +839,11 @@ param=dose_count,2
 // jagex name
 
 [1dosepotionofzamorak]
-name=Zamorak potion(1)
-desc=1 dose of a potion of Zamorak.
+name=Zamorak brew(1)
+desc=1 dose of Zamorak Brew.
 iop1=Drink
 iop4=Empty
-cost=25
+cost=125
 model=obj_1dose1strength
 recol1s=61
 recol1d=7099
@@ -1092,11 +1093,11 @@ param=dose_count,4
 // jagex name
 
 [4dosepotionofzamorak]
-name=Zamorak potion(4)
-desc=4 doses of a potion of Zamorak.
+name=Zamorak brew(4)
+desc=4 doses of Zamorak Brew.
 iop1=Drink
 iop4=Empty
-cost=25
+cost=200
 model=obj_strength4
 recol1s=61
 recol1d=7099

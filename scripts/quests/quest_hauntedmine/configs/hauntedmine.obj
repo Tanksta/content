@@ -28,6 +28,13 @@ members=yes
 tradeable=no
 
 [crystalshard_dagger]
+name=Nezikchened's mum
+desc=She wasn't pleased to see what her son did.
+cost=1
+model=obj_priest_robe
+recol1s=25238
+recol1d=62928
+iop1=Wear
 2dyof=1
 2dzoom=1940
 2dxan=572

@@ -197,7 +197,7 @@ param=decant_potion_enum,potion_mortserumperm
 [limestonebrick]
 desc=A well carved limestone brick.
 cost=20
-model=obj_tog_bowl
+model=obj_limestonebrick
 2dxof=-7
 2dyof=-41
 2dyan=164

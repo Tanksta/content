@@ -5,7 +5,7 @@ model=obj_easter_basket_2005
 iop2=Wield
 manwear=obj_easter_basket_2005_manwear,0
 womanwear=obj_easter_basket_2005_manwear,6
-cost=1
+cost=0
 2dxof=2
 2dyof=-4
 2dzoom=960
@@ -25,7 +25,7 @@ weight=100g
 [rubber_chicken]
 name=Rubber chicken
 desc=Perhaps not the most powerful weapon in RuneScape.
-cost=1
+cost=0
 model=obj_rubber_chicken
 iop2=Wield
 iop3=Dance
