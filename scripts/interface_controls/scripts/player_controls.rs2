@@ -66,28 +66,62 @@ if (p_finduid(uid) = true) {
 [if_button,controls:com_41]
 if(testbit(%emote_access, ^macro_mime_glass_wall) = ^false) {
     @lockemote_mime_event;
+    return;
 }
 @controls_emote(emote_glass_wall);
 
 [if_button,controls:com_42]
 if(testbit(%emote_access, ^macro_mime_glass_box) = ^false) {
     @lockemote_mime_event;
+    return;
 }
 @controls_emote(emote_glass_box);
 
 [if_button,controls:com_43]
 if(testbit(%emote_access, ^macro_mime_climb_rope) = ^false) {
     @lockemote_mime_event;
+    return;
 }
 @controls_emote(emote_climbing_rope);
 
 [if_button,controls:com_44]
 if(testbit(%emote_access, ^macro_mime_lean) = ^false) {
     @lockemote_mime_event;
+    return;
 }
 @controls_emote(emote_mime_lean);
 
 [if_button,controls:com_45] @controls_emote(emote_blow_kiss);
+[if_button,controls:com_55] @controls_emote(emote_panic);
+[if_button,controls:com_56] @controls_emote(emote_dance_scottish);
+[if_button,controls:com_57] @controls_emote(emote_dance_spin);
+[if_button,controls:com_58] @controls_emote(emote_dance_headbang);
+[if_button,controls:com_59] @controls_emote(emote_jump_with_joy);
+[if_button,controls:com_60] @controls_emote(emote_ya_boo_sucks);
+[if_button,controls:com_61] @controls_emote(emote_yawn);
+[if_button,controls:com_62] @controls_emote(emote_fremmenik_salute);
+[if_button,controls:com_63] @controls_emote(emote_shrug);
+
+[if_button,controls:com_76]
+if (%lost_tribe_quest < 7) {
+    @lockemote_lost_tribe;
+    return;
+}
+@controls_emote(human_cave_goblin_bow);
+
+[if_button,controls:com_77]
+if (%lost_tribe_quest < 7) {
+    @lockemote_lost_tribe;
+    return;
+}
+@controls_emote(human_cave_goblin_dance);
+
+[if_button,controls:com_78]
+if (%emote_terrified = 0) {
+    @lockemote_halloween_event;
+    return;
+}
+@controls_emote(terrified_emote);
 
 [label,controls_emote](seq $anim)
 if_close;
@@ -106,5 +140,15 @@ anim($anim, 20);
 
 [label,lockemote_mime_event]
 if (p_finduid(uid) = true) {
-    ~mesbox("You can't use that emote yet."); // https://www.youtube.com/watch?v=Ke-iZF6aZ98&t=185s july 06 (https://www.youtube.com/watch?v=s083tB35i-8&t=80s changed late 06)
+    ~mesbox("You must complete the @dbl@Mime Random Event@bla@ to use this emote.");
+}
+
+[label,lockemote_lost_tribe]
+if (p_finduid(uid) = true) {
+    ~mesbox("You must complete @dbl@The Lost Tribe@bla@ quest to use this emote.");
+}
+
+[label,lockemote_halloween_event]
+if (p_finduid(uid) = true) {
+    ~mesbox("You must complete the @dbl@Halloween Event@bla@ to use this emote.");
 }
