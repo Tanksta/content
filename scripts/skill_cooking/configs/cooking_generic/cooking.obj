@@ -361,6 +361,7 @@ recol3s=5177
 recol3d=107
 name=Empty cup
 weight=50g
+param=next_obj_stage,cup_water
 
 [rottenapples]
 desc=Rotten to the core!
