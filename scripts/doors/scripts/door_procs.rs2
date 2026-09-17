@@ -18,6 +18,30 @@ if ($shape = wall_diagonal) {
     }
 }
 
+[proc,door_open_leaf](coord $leaf_coord, int $angle, locshape $shape, loc $replacement, int $duration)
+def_int $x;
+def_int $z;
+$x, $z = ~door_open($angle, $shape);
+loc_add(movecoord($leaf_coord, $x, 0, $z), $replacement, modulo(add($angle, 1), 4), $shape, $duration);
+
+[proc,door_open_leaf_opposite](coord $leaf_coord, int $angle, locshape $shape, loc $replacement, int $duration)
+def_int $x;
+def_int $z;
+$x, $z = ~door_open($angle, $shape);
+loc_add(movecoord($leaf_coord, $x, 0, $z), $replacement, modulo(add($angle, 3), 4), $shape, $duration);
+
+[proc,door_close_leaf](coord $leaf_coord, int $angle, locshape $shape, loc $replacement, int $duration)
+def_int $x;
+def_int $z;
+$x, $z = ~door_close($angle, $shape);
+loc_add(movecoord($leaf_coord, $x, 0, $z), $replacement, modulo(add($angle, 3), 4), $shape, $duration);
+
+[proc,door_close_leaf_opposite](coord $leaf_coord, int $angle, locshape $shape, loc $replacement, int $duration)
+def_int $x;
+def_int $z;
+$x, $z = ~multiply2(~door_close($angle, $shape), -1);
+loc_add(movecoord($leaf_coord, $x, 0, $z), $replacement, modulo(add($angle, 1), 4), $shape, $duration);
+
 [proc,door_close](int $angle, locshape $shape)(int, int)
 if ($shape = wall_straight) {
     switch_int($angle) {

@@ -91,7 +91,7 @@ while (.loc_findnext = true) {
 // walk through door, but if entering, walk next to door and then through
 $x, $z = ~door_open($angle, loc_shape);
 if ($sound ! null) {
-    sound_synth($sound, 1, 0);
+    sound_synth($sound, 0, 0);
 }
 def_coord $dest = $loc_coord;
 if ($entering = true) {
@@ -143,7 +143,7 @@ while (.loc_findnext = true) {
 // walk through door, but if entering, walk next to door and then through
 $x, $z = ~door_open($angle, $shape);
 if ($sound ! null) {
-    sound_synth($sound, 1, 0);
+    sound_synth($sound, 0, 0);
 }
 def_coord $dest = $loc_coord;
 if ($entering = true) {
@@ -165,4 +165,49 @@ if ($side = ^left) {
 } else if ($side = ^right) {
     // Temp note: dur updated
     ~open_double_doors_right2(3, double_door_open_and_close_left, $next_loc, $opposite_loc, null);
+}
+
+[proc,open_and_close_double_door_category](boolean $entering, int $side, category $opposite_category, synth $sound)
+def_int $x;
+def_int $z;
+
+def_coord $loc_coord = loc_coord;
+def_int $angle = loc_angle;
+def_locshape $shape = loc_shape;
+def_loc $next_loc = lc_param(loc_type, next_loc_stage);
+def_loc $opposite_loc = $next_loc;
+
+def_coord $opposite_coord = $loc_coord;
+if ($side = ^left) {
+    $opposite_coord = ~movecoord_loc_return(~door_close($angle, $shape));
+} else if ($side = ^right) {
+    $opposite_coord = ~movecoord_loc_return(~multiply2(~door_close($angle, $shape), -1));
+}
+
+loc_findallzone($opposite_coord);
+while (.loc_findnext = true) {
+    if (.loc_coord = $opposite_coord & .loc_category = $opposite_category) {
+        $opposite_loc = lc_param(.loc_type, next_loc_stage);
+    }
+}
+
+$x, $z = ~door_open($angle, $shape);
+if ($sound ! null) {
+    sound_synth($sound, 0, 0);
+}
+
+def_coord $dest = $loc_coord;
+if ($entering = true) {
+    if (coord ! $loc_coord & coord ! $opposite_coord) {
+        p_teleport($loc_coord);
+        p_delay(1);
+    }
+    $dest = movecoord($loc_coord, $x, 0, $z);
+}
+p_teleport($dest);
+
+if ($side = ^left) {
+    ~open_double_doors_left2(3, $opposite_category, $next_loc, $opposite_loc, null);
+} else if ($side = ^right) {
+    ~open_double_doors_right2(3, $opposite_category, $next_loc, $opposite_loc, null);
 }

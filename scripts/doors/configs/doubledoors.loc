@@ -40,6 +40,27 @@ raiseobject=no
 category=door_left_opened
 param=next_loc_stage,loc_1508
 
+[castledoor]
+name=Large door
+desc=A large double door.
+model=lefayeunopenabledoorl
+active=yes
+op1=Close
+raiseobject=no
+category=door_left_opened
+param=next_loc_stage,openbankdoor_l
+
+[opencastledoor]
+name=Large door
+desc=A large double door.
+model=lefayeunopenabledoorl
+active=yes
+op1=Close
+mirror=yes
+raiseobject=no
+category=door_right_opened
+param=next_loc_stage,openthickpoordoor
+
 [openbankdoor_l]
 name=Large door
 desc=A large double door.
@@ -48,15 +69,6 @@ op1=Open
 raiseobject=no
 category=door_left_closed
 param=next_loc_stage,castledoor
-
-[castledoor]
-name=Large door
-desc=A large double door.
-model=lefayeunopenabledoorl
-op1=Close
-raiseobject=no
-category=door_left_opened
-param=next_loc_stage,openbankdoor_l
 
 [openthickpoordoor]
 name=Large door
@@ -67,16 +79,6 @@ mirror=yes
 raiseobject=no
 category=door_right_closed
 param=next_loc_stage,opencastledoor
-
-[opencastledoor]
-name=Large door
-desc=A large double door.
-model=lefayeunopenabledoorl
-op1=Close
-mirror=yes
-raiseobject=no
-category=door_right_opened
-param=next_loc_stage,openthickpoordoor
 
 [inactiveposhdoor]
 name=Door
