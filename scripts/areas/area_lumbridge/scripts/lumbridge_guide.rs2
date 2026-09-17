@@ -1,0 +1,362 @@
+[opnpc1,lumbridge_guide] @lumbridge_guide_talk;
+
+[label,lumbridge_guide_talk]
+~chatnpc("<p,happy>Hello, can I help you?");
+@lumbridge_guide_main;
+
+[label,lumbridge_guide_main]
+switch_int(~p_choice5("I'm looking for a quest.", 1, "What monsters should I fight?", 2, "Where can I make money?", 3, "Where can I find more information?", 4, "More options...", 5)) {
+    case 1 : @lumbridge_guide_quest_help;
+    case 2 : @lumbridge_guide_combat_help;
+    case 3 : @lumbridge_guide_money_help;
+    case 4 : @lumbridge_guide_information_help;
+    case 5 : @lumbridge_guide_more_options;
+}
+
+[label,lumbridge_guide_more_options]
+switch_int(~p_choice3("I'd like to know more about security.", 1, "I don't need any help.", 2, "Previous options...", 3)) {
+    case 1 : @lumbridge_guide_security;
+    case 2 : @lumbridge_guide_no_help;
+    case 3 : @lumbridge_guide_main;
+}
+
+[label,lumbridge_guide_no_help]
+~chatplayer("<p,neutral>No, I can find things myself thank you.");
+
+[label,lumbridge_guide_quest_help]
+~chatplayer("<p,quiz>I'm looking for a quest.");
+if (%cookquest > 0 & %cookquest < ^cook_complete) {
+    ~chatnpc("<p,neutral>I heard you were already helping the cook. Are you sure you need another quest?");
+    @lumbridge_guide_active_quest_menu;
+}
+if (%cookquest = ^cook_complete & %prieststart > ^priest_not_started & %prieststart < ^priest_complete) {
+    ~chatnpc("<p,neutral>I heard you were already helping Father Aereck. Are you sure you need another quest?");
+    @lumbridge_guide_active_quest_menu;
+}
+if (%cookquest = ^cook_complete & %prieststart = ^priest_complete & %sheep > ^sheep_not_started & %sheep < ^sheep_complete) {
+    ~chatnpc("<p,neutral>I heard you were already helping Farmer Fred. Are you sure you need another quest?");
+    @lumbridge_guide_active_quest_menu;
+}
+if (%cookquest = ^cook_complete & %prieststart = ^priest_complete & %sheep = ^sheep_complete & %runemysteries > ^runemysteries_not_started & %runemysteries < ^runemysteries_complete) {
+    ~chatnpc("<p,neutral>I heard you were already helping the Duke. Are you sure you need another quest?");
+    @lumbridge_guide_active_quest_menu;
+}
+@lumbridge_guide_recommend_uncompleted;
+
+[label,lumbridge_guide_active_quest_menu]
+switch_int(~p_choice3("I want another quest.", 1, "I'm not too sure what to do.", 2, "Actually, I'm fine.", 3)) {
+    case 1 : @lumbridge_guide_want_another_quest;
+    case 2 : @lumbridge_guide_quest_journal_help;
+    case 3 : @lumbridge_guide_actually_fine;
+}
+
+[label,lumbridge_guide_want_another_quest]
+~chatplayer("<p,neutral>I want another quest.");
+@lumbridge_guide_recommend_next_unstarted;
+
+[label,lumbridge_guide_quest_journal_help]
+~chatplayer("<p,neutral>I'm not too sure what to do.");
+~chatnpc("<p,neutral>Well if you need a reminder, try having a look at your quest journal.");
+@lumbridge_guide_anything_else_yes_no;
+
+[label,lumbridge_guide_actually_fine]
+~chatplayer("<p,neutral>Actually, I'm fine.");
+
+[label,lumbridge_guide_recommend_uncompleted]
+if (%cookquest < ^cook_complete) {
+    ~chatnpc("<p,neutral>Well, I've heard my friend the cook is in need of a spot of help. He'll be in the kitchen of this here castle. Just talk to him and he'll set you off.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%prieststart < ^priest_complete) {
+    ~chatnpc("<p,neutral>Well, I heard that Father Aereck could use a hand. You'll find him in the church just here. Talk to him and he'll give you the details.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%sheep < ^sheep_complete) {
+    ~chatnpc("<p,neutral>Well, I heard that Farmer Fred could use some help. You'll find him on the farm just north of here. Talk to him and see if he needs a hand.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%runemysteries < ^runemysteries_complete) {
+    ~chatnpc("<p,neutral>Well, I believe the Duke of Lumbridge requires an errand running for him. You can find him upstairs in the castle. Just talk to him to get the details.");
+    @lumbridge_guide_quest_icon_help;
+}
+~chatnpc("<p,neutral>I'm afraid I can't think of any more quests for you. Don't worry though, there'll be plenty more out there. You'll just need to find them.");
+@lumbridge_guide_quest_icon_help;
+
+[label,lumbridge_guide_recommend_next_unstarted]
+if (%cookquest = 0) {
+    ~chatnpc("<p,neutral>Well, I've heard my friend the cook is in need of a spot of help. He'll be in the kitchen of this here castle. Just talk to him and he'll set you off.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%prieststart = ^priest_not_started) {
+    ~chatnpc("<p,neutral>Well, I heard that Father Aereck could use a hand. You'll find him in the church just here. Talk to him and he'll give you the details.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%sheep = ^sheep_not_started) {
+    ~chatnpc("<p,neutral>Well, I heard that Farmer Fred could use some help. You'll find him on the farm just north of here. Talk to him and see if he needs a hand.");
+    @lumbridge_guide_quest_icon_help;
+}
+if (%runemysteries = ^runemysteries_not_started) {
+    ~chatnpc("<p,neutral>Well, I believe the Duke of Lumbridge requires an errand running for him. You can find him upstairs in the castle. Just talk to him to get the details.");
+    @lumbridge_guide_quest_icon_help;
+}
+~chatnpc("<p,neutral>I'm afraid I can't think of any more quests for you. Don't worry though, there'll be plenty more out there. You'll just need to find them.");
+@lumbridge_guide_quest_icon_help;
+
+[label,lumbridge_guide_quest_icon_help]
+~mesbox("The minimap in the top right corner of the screen has various icons to show different points of interest. Look for the icon to the left to find quest start points.");
+@lumbridge_guide_anything_else_yes_no;
+
+[label,lumbridge_guide_combat_help]
+~chatplayer("<p,quiz>What monsters should I fight?");
+if (~player_combat_level > 30) {
+    ~chatnpc("<p,neutral>You're strong enough to work out what monsters to fight for yourself now. However, the minimap in the top right corner of the game screen has various icons showing the locations of things, including the locations of various monsters roaming around to engage in combat with.");
+    @lumbridge_guide_main;
+}
+if (~lumbridge_guide_has_weapon = false) {
+    ~chatnpc("<p,neutral>It's going to be tough fighting monsters without a weapon. I suggest you find one of those first.");
+    switch_int(~p_choice2("How can I get a weapon?", 1, "Yes, but what should I fight once I have got a weapon?", 2)) {
+        case 1 : @lumbridge_guide_weapon_help;
+        case 2 : @lumbridge_guide_fighting_advice;
+    }
+}
+@lumbridge_guide_fighting_advice;
+
+[label,lumbridge_guide_fighting_advice]
+~chatnpc("<p,neutral>There's lots of beasts to fight in the woods around here, especially to the west. There are certainly some goblins and spiders that are pests and could do with being cleared out.");
+~chatnpc("<p,neutral>There's also a chicken farm or two up the road for some fairly easy pickings. Non-player characters usually appear as yellow dots on your minimap, although there are some that you won't be able to fight.");
+~chatnpc("<p,neutral>A monster's combat level is shown next to its Attack option. If that level is green the monster is weaker than you. If it is red, the monster is tougher than you.");
+~chatnpc("<p,neutral>Remember, you will do better if you have better armour and weapons and it's always worth carrying a bit of food to heal yourself.");
+switch_int(~p_choice4("Where can I get food to heal myself?", 1, "Where can I get better armour and weapons?", 2, "Can I kill other players?", 3, "Okay, thanks, I will go and kill things.", 4)) {
+    case 1 : @lumbridge_guide_food_help;
+    case 2 : @lumbridge_guide_better_gear;
+    case 3 : @lumbridge_guide_wilderness_help;
+    case 4 : @lumbridge_guide_kill_things;
+}
+
+[label,lumbridge_guide_weapon_help]
+~chatplayer("<p,quiz>How can I get a weapon?");
+~chatnpc("<p,neutral>Well you can either make them, find them or buy them.");
+@lumbridge_guide_weapon_options;
+
+[label,lumbridge_guide_weapon_options]
+switch_int(~p_choice3("Where can I find a weapon?", 1, "How do I make a weapon?", 2, "Where can I buy a weapon?", 3)) {
+    case 1 : @lumbridge_guide_find_weapon;
+    case 2 : @lumbridge_guide_make_weapon;
+    case 3 : @lumbridge_guide_buy_weapon;
+}
+
+[label,lumbridge_guide_find_weapon]
+~chatplayer("<p,quiz>Where can I find a weapon?");
+~chatnpc("<p,neutral>There are a few cheap weapons lying around in the world. For example, you can get an iron dagger if you cross the bridge and look in the little hut where some goblins live.");
+~chatnpc("<p,neutral>If it's not there it probably means someone else has taken it. If you wait a while a new one should appear. As you explore you may find other weapons, too.");
+@lumbridge_guide_more_weapons_menu;
+
+[label,lumbridge_guide_make_weapon]
+~chatplayer("<p,quiz>How do I make a weapon?");
+if (stat(smithing) > 10) {
+    ~chatnpc("<p,neutral>You already have a reasonable Smithing level, so I think you know that already.");
+    return;
+}
+~chatnpc("<p,neutral>The Smithing skill allows you to make armour and weapons. You then use these armour and weapons to gain advantage while in combat with a variety of things.");
+~chatplayer("<p,quiz>Where can I smith?");
+~chatnpc("<p,neutral>You will find that you can smith using a furnace located just north of here. Look for the furnace icon on your minimap at the top right of your screen.");
+~chatnpc("<p,neutral>Also, the minimap in the top right corner of the game screen has various icons showing the locations of things. I also suggest you find a mining symbol on your map and mine some ore as well. May I suggest exploring towards Varrock?");
+@lumbridge_guide_anything_else_yes_no;
+
+[label,lumbridge_guide_buy_weapon]
+~chatplayer("<p,quiz>Where can I buy a weapon?");
+~chatnpc("<p,neutral>The nearest shop that would sell you something of that nature is Bob's Brilliant Axes in this very town. If you want a bigger choice I suggest you head to one of the big cities.");
+~chatnpc("<p,neutral>If you follow the road east over the bridge and then head north you will eventually reach Varrock, where you can buy all manner of things. You can use the world map to help you find your way.");
+@lumbridge_guide_more_weapons_menu;
+
+[label,lumbridge_guide_better_gear]
+~chatplayer("<p,quiz>Where can I get better armour and weapons?");
+~chatnpc("<p,neutral>Well, you can make them, or buy them!");
+switch_int(~p_choice3("How do I make a weapon?", 1, "Where can I buy a weapon?", 2, "Could I get a staff like yours?", 3)) {
+    case 1 : @lumbridge_guide_make_weapon;
+    case 2 : @lumbridge_guide_buy_weapon;
+    case 3 : @lumbridge_guide_staff_like_yours;
+}
+
+[label,lumbridge_guide_staff_like_yours]
+~chatplayer("<p,quiz>Could I get a staff like yours?");
+~chatnpc("<p,neutral>There is no other staff like this in all the land. It's a very important staff. It shows who holds the job as the Lumbridge Guide, and that's me.");
+@lumbridge_guide_more_weapons_menu;
+
+[label,lumbridge_guide_more_weapons_menu]
+switch_int(~p_choice3("I'd like to know more about getting weapons.", 1, "I'd like to know about something else.", 2, "No thank you.", 3)) {
+    case 1 : @lumbridge_guide_weapon_options;
+    case 2 : @lumbridge_guide_something_else;
+    case 3 : @lumbridge_guide_no_thank_you;
+}
+
+[label,lumbridge_guide_food_help]
+~chatplayer("<p,quiz>Where can I get food to heal myself?");
+~chatnpc("<p,neutral>There are many different foods in the game such as cabbage, fish, meat and many more. Which do you wish to hear about?");
+@lumbridge_guide_food_options;
+
+[label,lumbridge_guide_food_options]
+switch_int(~p_choice3("How do I get cabbages?", 1, "How do I fish?", 2, "Where can I find meat?", 3)) {
+    case 1 : @lumbridge_guide_cabbages;
+    case 2 : @lumbridge_guide_fishing;
+    case 3 : @lumbridge_guide_meat;
+}
+
+[label,lumbridge_guide_cabbages]
+~chatplayer("<p,quiz>How do I get cabbages?");
+~chatnpc("<p,neutral>There is a field a little distance to the north of here packed full of cabbages which are there for the picking.");
+~chatnpc("<p,neutral>You could also farm your own cabbages; there's a Farming patch just south of Falador.");
+@lumbridge_guide_more_food_menu;
+
+[label,lumbridge_guide_fishing]
+~chatplayer("<p,quiz>How do I fish?");
+if (stat(fishing) > 10) {
+    ~chatnpc("<p,neutral>I am confused. You are already an experienced fisher. You should know the answer to that already.");
+    return;
+}
+~chatnpc("<p,neutral>Fishing spots require different levels and equipment to use. To start Fishing, you'll want to locate a fishing icon on your map, why not give Draynor a shot?");
+~chatnpc("<p,neutral>You will need some Fishing equipment. At the Fishing spots to the south you can only use a small fishing net.");
+~mesbox("The minimap in the top right corner of the game screen has various icons showing the locations of things. This icon to the left shows where Fishing spots are.");
+~chatplayer("<p,quiz>Where could I find one of those?");
+~chatnpc("<p,neutral>You can get them from a Fishing shop south of here in the swamp. There is a Fishing shop in Port Sarim; you can find it on the world map. Port Sarim is some way to the west of here, beyond the village of Draynor.");
+@lumbridge_guide_more_food_menu;
+
+[label,lumbridge_guide_meat]
+~chatplayer("<p,quiz>Where can I find meat?");
+~chatnpc("<p,neutral>I suggest you go and kill some chickens. The roads on either side of this river eventually go past a chicken farm. When you have killed some chickens, cook them. You could either make a fire or use a range.");
+~chatnpc("<p,neutral>There is a range at the southern end in this town in south Lumbridge, near Bob's Brilliant Axes shop.");
+~mesbox("The minimap in the top right corner of the game screen has various icons showing the locations of things. This icon to the left shows where Cooking ranges are.");
+@lumbridge_guide_more_food_menu;
+
+[label,lumbridge_guide_more_food_menu]
+switch_int(~p_choice3("I'd like to know about other food.", 1, "I'd like to know about something else.", 2, "No thank you.", 3)) {
+    case 1 : @lumbridge_guide_food_options;
+    case 2 : @lumbridge_guide_something_else;
+    case 3 : @lumbridge_guide_no_thank_you;
+}
+
+[label,lumbridge_guide_wilderness_help]
+~chatplayer("<p,quiz>Can I kill other players?");
+~chatnpc("<p,neutral>Well, you can go to the Wilderness. That is the area for killing other players. Just keep heading north and eventually you will be bound to reach it. Be very careful, though.");
+~chatnpc("<p,neutral>Player-killing is not for the unprepared. I'd suggest that you leave any items you don't want to lose in the bank and take a good supply of food with you.");
+switch_int(~p_choice3("No thank you.", 1, "I'd like to know more about combat.", 2, "I'd like to know about something else.", 3)) {
+    case 1 : @lumbridge_guide_no_thank_you;
+    case 2 : @lumbridge_guide_fighting_advice;
+    case 3 : @lumbridge_guide_something_else;
+}
+
+[label,lumbridge_guide_kill_things]
+~chatplayer("<p,neutral>Okay, thanks, I will go and kill things.");
+
+[label,lumbridge_guide_money_help]
+~chatplayer("<p,quiz>Where can I make money?");
+~chatnpc("<p,neutral>There are many ways to make money in the game. I would suggest either killing monsters or doing a trade skill such as Smithing or Fishing.");
+~chatnpc("<p,neutral>Please don't try to get money by begging off other players. It will make you unpopular. Nobody likes a beggar. It is very irritating to have other players asking for your hard-earned cash.");
+switch_int(~p_choice3("Where can I smith?", 1, "How do I fish?", 2, "What monsters should I fight?", 3)) {
+    case 1 : @lumbridge_guide_make_weapon;
+    case 2 : @lumbridge_guide_fishing;
+    case 3 : @lumbridge_guide_combat_help;
+}
+
+[label,lumbridge_guide_information_help]
+~chatplayer("<p,quiz>Where can I find more information?");
+~chatnpc("<p,neutral>What you'll want is the OSRS Wiki! I've taken the liberty of opening the useful links section of the account management tab for you. Here you can find a link to the wiki.");
+~chatnpc("<p,neutral>There's information and guides on almost everything, all easily searched and it's even written and maintained by players.");
+@lumbridge_guide_anything_else_yes_no;
+
+[label,lumbridge_guide_security]
+~chatplayer("<p,quiz>I'd like to know more about security.");
+~chatnpc("<p,neutral>First I must warn you to take every precaution to keep your RuneScape password and PIN secure. The most important thing to remember is to never give your password to, or share your account with, anyone.");
+~chatnpc("<p,neutral>I can also tell you about password security, avoiding item scamming and in-game moderation.");
+@lumbridge_guide_security_options;
+
+[label,lumbridge_guide_security_options]
+switch_int(~p_choice4("I'd like to know about password security.", 1, "I'd like to know more about avoiding item scamming.", 2, "I'd like to know more about in-game moderation.", 3, "I'd like to know about something else.", 4)) {
+    case 1 : @lumbridge_guide_password_security;
+    case 2 : @lumbridge_guide_scamming;
+    case 3 : @lumbridge_guide_moderation;
+    case 4 : @lumbridge_guide_something_else;
+}
+
+[label,lumbridge_guide_password_security]
+~chatplayer("<p,quiz>I'd like to know about password security.");
+~chatnpc("<p,neutral>Well, the first thing to remember with password security, which I can't stress enough, is to never tell your password, or bank PIN details to anyone, not even if they claim to be Jagex staff.");
+~chatnpc("<p,neutral>Real Jagex staff will NEVER ask for your password. Sharing your account is a very bad idea, even if you think that you know and trust the person you are sharing with.");
+~chatnpc("<p,neutral>Players have lost items and even their account this way. Sharing accounts is also against the rules.");
+~chatplayer("<p,quiz>Is there anything else to be aware of?");
+~chatnpc("<p,neutral>Yes, also be careful where you enter your password. Be aware that fake Old School RuneScape websites exist. These are sites that claim to give things such as item/stat upgrades, free items, beta testing and moderator applications.");
+~chatnpc("<p,neutral>Jagex do not offer any of these services. Also be aware of trojans and keyloggers. These nasty programs can send everything you type into your device back to the computers of malicious people.");
+~chatnpc("<p,neutral>You can lose more than just your Old School RuneScape password in this way. To avoid getting these on your device, be very wary of what you download, especially when it comes to downloading third party software.");
+~chatnpc("<p,neutral>Also be very wary of email attachments and instant messenger file transfers, which can contain such things.");
+~chatnpc("<p,neutral>Finally, remember the game doesn't censor your password or bank PIN when you type them; anyone who tells you otherwise is probably trying to steal your character or items.");
+@lumbridge_guide_security_again_menu;
+
+[label,lumbridge_guide_scamming]
+~chatplayer("<p,quiz>I'd like to know more about avoiding item scamming.");
+~chatnpc("<p,neutral>There are many nice and helpful players in Old School RuneScape; unfortunately, as in real life, there are some who aren't so honest. Some people may try to trick you out of your items.");
+~chatnpc("<p,neutral>Try not to fall for this as Jagex policy is to never return lost items to players that have been scammed. Doing so just encourages users to claim they lost items they never had to gain an unfair advantage.");
+~chatnpc("<p,neutral>However, people carrying out such scams will get banned as it is against the rules.");
+~chatnpc("<p,neutral>When trading, you have a second trade confirmation screen. Always double check that you are getting the items you expect on this page as some people may try and change what they are trading at the last minute on the first trade screen.");
+~chatnpc("<p,neutral>Remember when you have clicked accept on the second trade screen, the trade is not reversible.");
+~chatnpc("<p,neutral>Try and find out from someone else what an item is before spending a lot of money on it. Not all merchants are honest about the rarity or the uses of their wares.");
+~chatnpc("<p,neutral>For example, some people try to pass off spinach rolls as rare when in fact they're as common as cabbages!");
+~chatnpc("<p,neutral>Be wary of people offering to improve your items. For example, some people will claim they can add a trim to your armour or upgrade your sword to a more powerful one.");
+~chatnpc("<p,neutral>This is not possible and they are trying to steal your hard-earned equipment.");
+@lumbridge_guide_security_again_menu;
+
+[label,lumbridge_guide_moderation]
+~chatplayer("<p,quiz>I'd like to know more about in-game moderation.");
+~chatnpc("<p,neutral>You will, from time to time, see moderator characters in game. Remember: a real staff member will never ask for your password or any other personal information. There are two types of moderator.");
+~chatnpc("<p,neutral>You may see Jagex staff characters in game - these can be identified by a gold crown next to their name and are the people who work in the Jagex offices. They might be from Customer Support, or they might be a tester or a programmer.");
+~chatnpc("<p,neutral>You may also see player moderators - these can be identified by a silver crown next to their name. Player moderators are trusted players of Old School RuneScape that help keep in-game behaviour in line with the Old School RuneScape rules.");
+~chatplayer("<p,quiz>How do I become a player moderator?");
+~chatnpc("<p,neutral>The only way to become a player moderator is to know and play by the rules laid down by Jagex. Report those who break the rules, help players who need it and one day you might find an invite to become a moderator in your Old School RuneScape inbox.");
+~chatnpc("<p,neutral>Note that Jagex will never contact you in game or by email to become a player moderator.");
+@lumbridge_guide_security_again_menu;
+
+[label,lumbridge_guide_security_again_menu]
+switch_int(~p_choice3("Tell me more about security.", 1, "I'd like to know about something else.", 2, "No thank you.", 3)) {
+    case 1 : @lumbridge_guide_security;
+    case 2 : @lumbridge_guide_something_else;
+    case 3 : @lumbridge_guide_no_thank_you;
+}
+
+[label,lumbridge_guide_something_else]
+~chatplayer("<p,quiz>I'd like to know about something else.");
+~chatnpc("<p,quiz>Well, what would you like to know?");
+@lumbridge_guide_main;
+
+[label,lumbridge_guide_no_thank_you]
+~chatplayer("<p,neutral>No thank you.");
+
+[label,lumbridge_guide_anything_else_yes_no]
+~chatnpc("<p,quiz>Is there anything else you need help with?");
+switch_int(~p_choice2("Yes please.", 1, "No thank you.", 2)) {
+    case 1 : @lumbridge_guide_yes_please;
+    case 2 : @lumbridge_guide_no_thank_you;
+}
+
+[label,lumbridge_guide_yes_please]
+~chatplayer("<p,neutral>Yes please.");
+@lumbridge_guide_main;
+
+[proc,lumbridge_guide_has_weapon]()(boolean)
+if (inv_totalcat(inv, weapon_slash) > 0 | inv_totalcat(worn, weapon_slash) > 0) {
+    return(true);
+}
+if (inv_totalcat(inv, weapon_stab) > 0 | inv_totalcat(worn, weapon_stab) > 0) {
+    return(true);
+}
+if (inv_totalcat(inv, weapon_crossbow) > 0 | inv_totalcat(worn, weapon_crossbow) > 0) {
+    return(true);
+}
+if (inv_totalcat(inv, weapon_spear) > 0 | inv_totalcat(worn, weapon_spear) > 0) {
+    return(true);
+}
+if (inv_totalcat(inv, weapon_bow) > 0 | inv_totalcat(worn, weapon_bow) > 0) {
+    return(true);
+}
+if (inv_totalcat(inv, weapon_polearm) > 0 | inv_totalcat(worn, weapon_polearm) > 0) {
+    return(true);
+}
+return(false);
