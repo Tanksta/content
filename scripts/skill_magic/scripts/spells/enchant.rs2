@@ -29,6 +29,12 @@ if ($final_obj = null) {
     mes(db_getfield($spell_data, magic_spell_table:additional_reqmessage, 0));
     return;
 }
+if ($final_obj = nature_amulet) {
+    if (testbit(%farming_tools, ^nature_amulet_created_bit) = ^true | ~obj_gettotal(nature_amulet) > 0) {
+        mes("The spell will not work on the amulet while you already possess an amulet of nature.");
+        return;
+    }
+}
 // if they use a spell on a valid obj, but its p2p check it here
 // --
 // i know this isnt how jagex does it, since ring of forging is f2p in osrs but unenchantable in f2p.
@@ -40,6 +46,9 @@ if (oc_members($final_obj) = true & map_members = ^false) {
 }
 // enchanting always sets slot instead of deleting
 inv_setslot(inv, $slot, $final_obj, 1);
+if ($final_obj = nature_amulet) {
+    %farming_tools = setbit(%farming_tools, ^nature_amulet_created_bit);
+}
 ~delete_spell_runes($spell_data);
 ~give_spell_xp($spell_data);
 

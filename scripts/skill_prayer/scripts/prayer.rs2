@@ -1,15 +1,23 @@
 [proc,prayer_checks](dbrow $data)(boolean)
+def_int $prayer = db_getfield($data, prayers:prayer, 0);
+def_int $levelreq = db_getfield($data, prayers:level, 0);
+if (stat_base(prayer) < $levelreq) {
+    ~prayer_clear_highlight($prayer);
+    sound_synth(prayer_off, 0, 0);
+    ~mesbox("You need a @dbl@Prayer level of <tostring($levelreq)> to use <db_getfield($data, prayers:name, 0)>.");
+    return(false);
+}
 if (stat(prayer) < 1) {
     // osrs
-    if (stat_base(prayer) >= db_getfield($data, prayers:level, 0)) {
-        mes("You need to recharge your prayer at an altar."); // p in prayer isnt capitalized until late 2005?
-    }
+    ~prayer_clear_highlight($prayer);
+    mes("You need to recharge your prayer at an altar."); // p in prayer isnt capitalized until late 2005?
     sound_synth(prayer_off, 0, 0);
     return(false);
 }
 if (db_getfield($data, prayers:members, 0) = ^true & map_members = ^false) {
+    ~prayer_clear_highlight($prayer);
     sound_synth(prayer_off, 0, 0);
-    ~mesbox("You must be logged into a @dbl@Member's World@bla@ to use @dbl@<db_getfield($data, prayers:name, 0)>@bla@.");
+    ~mesbox("You can only use this prayer on a members' world.");
     return(false);
 }
 if (~duel_arena_prayer_check = false) {

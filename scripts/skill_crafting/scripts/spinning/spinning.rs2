@@ -14,6 +14,12 @@ switch_obj (last_useitem)
             return;
         }
         @craft_spinning(last_useitem);
+    case magic_roots :
+        if (map_members = ^false) {
+            mes(^mes_members_feature);
+            return;
+        }
+        @craft_spinning(last_useitem);
     case viking_golden_fleece : // this still delays after other objs were changed to use weakqueue, also not weakqueueable until after 2007
         if (map_members = ^false) {
             mes(^mes_members_feature);
@@ -29,6 +35,7 @@ switch_obj (last_useitem)
         p_delay(2);
     case ball_of_wool : ~objbox(ball_of_wool, "You have already spun this wool.", 250, 0, divide(^objbox_height, 2));
     case bow_string : ~objbox(bow_string, "You have already spun this bow string.", 250, 0, divide(^objbox_height, 2));
+    case magic_string : ~objbox(magic_string, "You have already spun this magic string.", 250, 0, divide(^objbox_height, 2));
     case viking_golden_wool : ~objbox(viking_golden_wool, "You have already spun this wool.", 250, 0, divide(^objbox_height, 2));
     case default : ~displaymessage(^dm_default);
 }
@@ -45,14 +52,15 @@ def_int $count = 0;
 def_obj $obj;
 
 // https://web.archive.org/web/20050525015428/http://runers2.fc2web.com/Lumbridge.htm
-$obj, $amt = ~skill_multi2_header(
+$obj, $amt = ~skill_multi3_header(
     "What would you like to spin?",
     wool, 0, -2, 200, "\\n\\n\\n\\nWool", 
-    flax, 0, -3, 200, "\\n\\n\\n\\nFlax"
+    flax, 0, -3, 200, "\\n\\n\\n\\nFlax",
+    magic_roots, 0, -3, 200, "\\n\\n\\n\\nMagic roots"
 );
 def_struct $struct = oc_param($obj, crafting_spinning_struct);
 
-if ($obj = flax & map_members = ^false) {
+if (($obj = flax | $obj = magic_roots) & map_members = ^false) {
     mes(^mes_members_crafting);
     return;
 }

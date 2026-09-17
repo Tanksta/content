@@ -23,6 +23,42 @@ stat_advance(agility, 250);
 sound_synth(climb_wall, 1, 0);
 mes("You climb over the wall.");
 
+[oploc1,loc_9300]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9295]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9309]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9310]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9315]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_10063]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
 [oploc1,loc_2296]
 if(stat(agility) < 20) {
     ~mesbox("You need an Agility level of 20 to balance on this log.");

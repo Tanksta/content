@@ -1,4 +1,5 @@
 [proc,drop_bird_nest]
+if (map_members = ^false) return;
 def_namedobj $nest = ~bird_nest_drop_obj;
 mes("A bird's nest falls out of the tree.");
 obj_add(map_findsquare(coord, 1, 1, ^map_findsquare_lineofwalk), $nest, 1, 50);

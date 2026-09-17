@@ -27,7 +27,7 @@ p_telejump(0_49_50_30_53);
 
 [proc,ham_trapdoor_picklock]
 if (map_members = ^false) {
-    mes("To go here you must login to a members' server");
+    mes("You must login to a members' world to access this content.");
     return;
 }
 if (stat(thieving) < 17) {
@@ -48,7 +48,7 @@ mes("You pick the lock.");
 
 [proc,ham_climb_down_trapdoor]
 if (map_members = ^false) {
-    mes("To go here you must login to a members' server");
+    mes("You must login to a members' world to access this content.");
     return;
 }
 mes("You climb down through the trapdoor...");

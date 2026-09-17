@@ -1,4 +1,8 @@
 [opnpc1,rd_teleporter_guy]
+if (map_members = ^false) {
+    mes(^mes_members_do_that);
+    return;
+}
 if (%rd_main = ^recruitmentdrive_complete) {
     @rd_tiffy_afterquest;
     return;

@@ -15,12 +15,17 @@ switch_obj (last_useitem)
 }
 ~displaymessage(^dm_default);
 
+[opheldu,magic_string]
+if (last_useitem = unstrung_emerald_amulet) @string_magic_emerald_amulet(last_useslot);
+~displaymessage(^dm_default);
+
 [opheldu,unstrung_sapphire_amulet]
 if (last_useitem = ball_of_wool) @string_amulet(last_slot);
 ~displaymessage(^dm_default);
 
 [opheldu,unstrung_emerald_amulet]
 if (last_useitem = ball_of_wool) @string_amulet(last_slot);
+if (last_useitem = magic_string) @string_magic_emerald_amulet(last_slot);
 ~displaymessage(^dm_default);
 
 [opheldu,unstrung_ruby_amulet]
@@ -87,4 +92,24 @@ if (string_length($name) < 1) {
 }
 mes("You put some string on your <$name>.");
 
+[label,string_magic_emerald_amulet](int $slot)
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+if (stat(crafting) < 1) {
+    ~mesbox("You need level 1 Crafting to make that.");
+    return;
+}
+if (inv_total(inv, unstrung_emerald_amulet) < 1 | inv_total(inv, magic_string) < 1) {
+    return;
+}
+if (inv_getobj(inv, $slot) ! unstrung_emerald_amulet) {
+    return;
+}
+inv_del(inv, unstrung_emerald_amulet, 1);
+inv_del(inv, magic_string, 1);
+inv_add(inv, magic_strung_emerald_amulet, 1);
+stat_advance(crafting, 40);
+mes("You put some string on your amulet.");
 

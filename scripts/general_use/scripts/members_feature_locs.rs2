@@ -1,0 +1,20 @@
+[oploc1,loc_10093]
+if (map_members = ^false) {
+    ~mesbox(^mes_members_feature);
+    return;
+}
+~displaymessage(^dm_default);
+
+[oploc1,loc_10094]
+if (map_members = ^false) {
+    ~mesbox(^mes_members_feature);
+    return;
+}
+~displaymessage(^dm_default);
+
+[oploc2,loom]
+if (map_members = ^false) {
+    ~mesbox(^mes_members_feature);
+    return;
+}
+~displaymessage(^dm_default);

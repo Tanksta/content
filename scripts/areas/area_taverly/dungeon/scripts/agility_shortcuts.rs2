@@ -1,0 +1,11 @@
+[oploc1,loc_9294]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}
+
+[oploc1,loc_9293]
+if (map_members = ^false) {
+    mes(^mes_members_feature);
+    return;
+}

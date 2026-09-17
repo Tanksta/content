@@ -91,6 +91,10 @@ if (%rd_main = ^recruitmentdrive_started) {
 
 [label,sir_amik_recruitment_drive_start]
 ~chatplayer("<p,quiz>Do you have any other quests for me?");
+if (map_members = ^false) {
+    mes(^mes_members_do_that);
+    return;
+}
 if (%qp < 12) {
     ~chatnpc("<p,neutral>You have proven useful, but the Temple Knights only consider adventurers with a little more experience.");
     mes("You need at least 12 quest points before you may start Recruitment Drive.");
