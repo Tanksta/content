@@ -339,6 +339,8 @@
 [command,.if_setobject](component $component, obj $obj, int $scale)
 // info: Set a component's model
 [command,if_setmodel](component $component, int $model)
+// info: Offset a component's model render origin
+[command,if_setmodeloffset](component $component, int $x, int $y)
 // info: Open the tutorial modal mode ("sticky" interface)
 [command,tut_open](interface $interface)
 // info: Close the tutorial modal mode (back to normal gameplay)

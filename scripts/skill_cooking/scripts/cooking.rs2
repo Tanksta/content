@@ -218,6 +218,11 @@ if ($passes_roll = true) {
 p_delay(0);
 if_openchat(cook_x);
 if_setobject(cook_x:com_2, $obj, 150);
+if ($obj ! raw_chicken) {
+    if_setmodeloffset(cook_x:com_2, 0, -18);
+} else {
+    if_setmodeloffset(cook_x:com_2, 0, 0);
+}
 if_settext(cook_x:com_3, "");
 if_settext(cook_x:com_4, "");
 if_settext(cook_x:com_5, "");
@@ -240,6 +245,7 @@ switch_component(last_com) {
 if ($count < 1) {
     return(0);
 }
+if_close;
 if_settext(cook_x:com_3, "\\nPlease wait...");
 if_settext(cook_x:com_4, "");
 if_settext(cook_x:com_5, "");
