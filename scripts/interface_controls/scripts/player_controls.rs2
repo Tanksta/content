@@ -140,15 +140,15 @@ anim($anim, 20);
 
 [label,lockemote_mime_event]
 if (p_finduid(uid) = true) {
-    ~mesbox("You must complete the @dbl@Mime Random Event@bla@ to use this emote.");
+    ~mesbox("You can't use that emote yet.");
 }
 
 [label,lockemote_lost_tribe]
 if (p_finduid(uid) = true) {
-    ~mesbox("You must complete @dbl@The Lost Tribe@bla@ quest to use this emote.");
+    ~mesbox("You can't use that emote yet.");
 }
 
 [label,lockemote_halloween_event]
 if (p_finduid(uid) = true) {
-    ~mesbox("You must complete the @dbl@Halloween Event@bla@ to use this emote.");
+    ~mesbox("You can't use that emote yet.");
 }
