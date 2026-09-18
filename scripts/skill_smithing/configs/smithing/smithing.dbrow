@@ -1340,15 +1340,92 @@ data=levelfailmessage,Steel Studs
 data=bar,steel_bar
 data=bar_amount,1
 
+[oil_lantern_frame]
+table=smithing
+data=ifproduct,oil_lantern_frame
+data=product,oil_lantern_frame
+data=product_amount,1
+data=levelrequired,26
+data=end_message,an oil lantern frame
+data=levelfailmessage,an Oil Lantern Frame
+data=bar,iron_bar
+data=bar_amount,1
+
+[bullseye_lantern]
+table=smithing
+data=ifproduct,bullseye_lantern_nolens
+data=product,bullseye_lantern_nolens
+data=product_amount,1
+data=levelrequired,49
+data=end_message,a bullseye lantern
+data=levelfailmessage,a Bullseye Lantern
+data=bar,steel_bar
+data=bar_amount,1
+
+[bronze_nails]
+table=smithing
+data=ifproduct,nails_bronze
+data=product,nails_bronze
+data=product_amount,15
+data=levelrequired,4
+data=end_message,15 Bronze nails
+data=levelfailmessage,Nails
+data=bar,bronze_bar
+data=bar_amount,1
+
+[iron_nails]
+table=smithing
+data=ifproduct,nails_iron
+data=product,nails_iron
+data=product_amount,15
+data=levelrequired,19
+data=end_message,15 Iron nails
+data=levelfailmessage,Nails
+data=bar,iron_bar
+data=bar_amount,1
+
 [nails]
 table=smithing
 data=ifproduct,nails
 data=product,nails
-data=product_amount,2
+data=product_amount,15
 data=levelrequired,34
-data=end_message,two nails
+data=end_message,15 Steel nails
 data=levelfailmessage,Nails
 data=bar,steel_bar
+data=bar_amount,1
+
+[mithril_nails]
+table=smithing
+data=ifproduct,nails_mithril
+data=product,nails_mithril
+data=product_amount,15
+data=levelrequired,54
+data=end_message,15 Mithril nails
+data=levelfailmessage,Nails
+data=bar,mithril_bar
+data=bar_amount,1
+
+[adamant_nails]
+table=smithing
+data=ifproduct,nails_adamant
+data=product,nails_adamant
+data=product_amount,15
+data=levelrequired,74
+data=end_message,15 Adamant nails
+data=levelfailmessage,Nails
+data=bar,adamantite_bar
+data=bar_amount,1
+
+[rune_nails]
+table=smithing
+data=ifproduct,nails_rune
+data=product,nails_rune
+data=product_amount,15
+data=levelrequired,89
+data=end_message,15 Rune nails
+data=levelfailmessage,Nails
+data=bar,runite_bar
 data=bar_amount,1
 
 [bronze_claws]
@@ -1416,4 +1493,3 @@ data=end_message,a pair of claws
 data=levelfailmessage,some rune claws
 data=bar,runite_bar
 data=bar_amount,2
-

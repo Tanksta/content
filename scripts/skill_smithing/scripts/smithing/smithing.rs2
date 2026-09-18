@@ -34,6 +34,12 @@
 @attempt_smithing(last_item, 5);
 [inv_button3,smithing:column_claws]
 @attempt_smithing(last_item, 10);
+[inv_button1,smithing:com_147]
+@attempt_smithing(last_item, 1);
+[inv_button2,smithing:com_147]
+@attempt_smithing(last_item, 5);
+[inv_button3,smithing:com_147]
+@attempt_smithing(last_item, 10);
 
 
 [oplocu,_anvil]
@@ -111,30 +117,34 @@ if (%desertrescue >= ^desertrescue_learned_darts) {
 } else {
     %if1 = 0;
 }
-// hide wire button if its not bronze
-// hide studs button if its not steel
+%if2 = 0;
 if ($last_item = bronze_bar) {
     // bronze plate bodies are unlocked at lvl 18, but the interface data uses gt,18. so i have to +1 here
     if (%modified_smith = 18) {
         %modified_smith = 19;
     }
     if_sethide (smithing:other_layer, false);
+    if_sethide(smithing:com_145, true);
+    if_sethide (smithing:stud_layer, true);
     // https://web.archive.org/web/20050410152119/http://www.tip.it/runescape/smithing_tables.php?metal=bronze
     if_settext (smithing:com_101, "Bronze wire");
+} else if ($last_item = iron_bar) {
+    %if2 = 1;
+    if_sethide (smithing:other_layer, true);
+    if_sethide(smithing:com_145, false);
+    if_sethide (smithing:stud_layer, true);
+    if_settext(smithing:com_148, "Oil lantern frame");
 } else if ($last_item = steel_bar) {
-    if_sethide (smithing:stud_layer, false);
+    %if2 = 1;
     if_sethide (smithing:other_layer, false);
-    // https://imgur.com/CdcGdXD
-    if_settext (smithing:com_101, "Steel nails");
+    if_sethide(smithing:com_145, false);
+    if_sethide (smithing:stud_layer, true);
+    if_settext (smithing:com_101, "Studs");
+    if_settext(smithing:com_148, "Bullseye lantern");
 }  else {
     if_sethide (smithing:other_layer, true);
+    if_sethide(smithing:com_145, true);
     if_sethide (smithing:stud_layer, true);
-}
-// hide studs button if its not steel
-if ($last_item ! steel_bar) {
-    if_sethide (smithing:stud_layer, true);
-} else {
-    if_sethide (smithing:stud_layer, false);
 }
 // hide claws button if death plateau is not complete
 if(%death_equiproom < ^death_complete) {
@@ -165,6 +175,7 @@ switch_obj ($last_item)
         inv_transmit(smithing_iron3, smithing:column3);
         inv_transmit(smithing_iron4, smithing:column4);
         inv_transmit(smithing_iron5, smithing:column5);
+        inv_transmit(smithing_lamp_iron, smithing:com_147);
         inv_transmit(smithing_iron_claws, smithing:column_claws);
     case steel_bar :
         %modified_smith = calc($player_level - 29);
@@ -173,6 +184,7 @@ switch_obj ($last_item)
         inv_transmit(smithing_steel3, smithing:column3);
         inv_transmit(smithing_steel4, smithing:column4);
         inv_transmit(smithing_steel5, smithing:column5);
+        inv_transmit(smithing_lamp_steel, smithing:com_147);
         inv_transmit(smithing_steel_claws, smithing:column_claws);
     case mithril_bar :
         %modified_smith = calc($player_level - 49);
