@@ -36,7 +36,7 @@ data=unlock,30,Adamantite.
 data=unlock,40,Rune.
 data=unlock,50,Members: Granite.
 data=unlock,60,Members: Dragon.
-data=unlock,70,Members: Elf Crystal. (with 50 Agility)
+data=unlock,70,Members: Elf Crystal (with agility 50).
 
 // strength: I think this came later and only attack/defence was available at first
 // skill_guide_strength_weapons_and_armour: inv 421
@@ -76,7 +76,7 @@ data=unlock,40,Members: Yew bows.\n          Ammo: Arrows up to rune.
 // [sic] exact number of spaces
 data=unlock,50,Members: Magic bows.\n          Ammo: Arrows up to rune.
 // [sic] exact number of spaces
-data=unlock,70,Members: Crystal bows. (with 50 Agility)\n          Ammo: None.
+data=unlock,70,Members: Crystal bows (with agility 50).\n          Ammo: None.
 
 // note: derived from 2007 clientscript
 // todo: members only
@@ -148,17 +148,17 @@ data=unlock,-1,"To view the available spells, select the\nspellbook icon on the 
 table=skill_guides
 data=name,Magic - Armour
 data=inv,skill_guide_magic_armour
-data=unlock,20,Wizard boots.
-data=unlock,40,Mystic hat\n     (with defence 20).
-data=unlock,40,Mystic robe top\n     (with defence 20).
-data=unlock,40,Mystic robe bottom\n     (with defence 20).
-data=unlock,40,Mystic gloves\n     (with defence 20).
-data=unlock,40,Mystic boots\n     (with defence 20).
-data=unlock,40,Splitbark helm\n     (with defence 40).
-data=unlock,40,Splitbark body\n     (with defence 40).
-data=unlock,40,Splitbark legs\n     (with defence 40).
-data=unlock,40,Splitbark gauntlets\n     (with defence 40).
-data=unlock,40,Splitbark greaves\n     (with defence 40).
+data=unlock,20,Members: Wizard boots.
+data=unlock,40,Members: Mystic hat\n     @dbl@(with defence 20).
+data=unlock,40,Members: Mystic robe top\n     @dbl@(with defence 20).
+data=unlock,40,Members: Mystic robe bottom\n     @dbl@(with defence 20).
+data=unlock,40,Members: Mystic gloves\n     @dbl@(with defence 20).
+data=unlock,40,Members: Mystic boots\n     @dbl@(with defence 20).
+data=unlock,40,Members: Splitbark helm\n     @dbl@(with defence 40).
+data=unlock,40,Members: Splitbark body\n     @dbl@(with defence 40).
+data=unlock,40,Members: Splitbark legs\n     @dbl@(with defence 40).
+data=unlock,40,Members: Splitbark gauntlets\n     @dbl@(with defence 40).
+data=unlock,40,Members: Splitbark greaves\n     @dbl@(with defence 40).
 
 // ----
 
@@ -533,24 +533,25 @@ data=op,Runes,skill_guide_runecrafting_runecrafting
 [skill_guide_runecrafting_runecrafting]
 table=skill_guides
 data=name,Runecrafting
+data=advancement,Able to craft:
 data=inv,skill_guide_runecrafting
-data=unlock,1,Air runes.
-data=unlock,2,Mind runes.
-data=unlock,5,Water runes.
-data=unlock,6,Members: Mist runes.
-data=unlock,9,Earth runes.
-data=unlock,10,Members: Dust runes.
-data=unlock,13,Members: Mud runes.
-data=unlock,14,Fire runes.
-data=unlock,15,Members: Smoke runes.
-data=unlock,19,Members: Steam runes.
-data=unlock,20,Body runes.
-data=unlock,23,Members: Lava runes.
-data=unlock,27,Members: Cosmic runes.
-data=unlock,35,Members: Chaos runes.
-data=unlock,44,Members: Nature runes.
-data=unlock,54,Members: Law runes.
-data=unlock,65,Members: Death runes.
+data=unlock,1,Air Runes.
+data=unlock,2,Mind Runes.
+data=unlock,5,Water Runes.
+data=unlock,6,Members: Mist Runes.
+data=unlock,9,Earth Runes.
+data=unlock,10,Members: Dust Runes.
+data=unlock,13,Members: Mud Runes.
+data=unlock,14,Fire Runes.
+data=unlock,15,Members: Smoke Runes.
+data=unlock,19,Members: Steam Runes.
+data=unlock,20,Body Runes.
+data=unlock,23,Members: Lava Runes.
+data=unlock,27,Members: Cosmic Runes.
+data=unlock,35,Members: Chaos Runes.
+data=unlock,44,Members: Nature Runes.
+data=unlock,54,Members: Law Runes.
+data=unlock,65,Members: Death Runes.
 
 // ----
 
@@ -609,16 +610,16 @@ table=skill_guides
 data=name,Smithing - Smelting
 data=advancement,Able to smelt:
 data=inv,skill_guide_smithing_smelting
-data=unlock,1,Bronze
-data=unlock,15,Iron
+data=unlock,1,Bronze (1 tin ore, 1 copper ore).
+data=unlock,15,Iron (50% chance of success).
 // [sic] only Silver and Gold have periods
 data=unlock,20,Silver.
-data=unlock,30,Steel
+data=unlock,30,Steel (2 coal, 1 iron ore).
 data=unlock,40,Gold.
-data=unlock,50,Mithril
+data=unlock,50,Mithril (4 coal, 1 mithril ore).
 // [sic] "Adamant" despite "Runite" below
-data=unlock,70,Adamant
-data=unlock,85,Runite
+data=unlock,70,Adamant (6 coal, 1 adamantite ore).
+data=unlock,85,Runite (8 coal, 1 runite ore).
 
 [skill_guide_smithing_bronze]
 table=skill_guides
@@ -636,21 +637,21 @@ data=unlock,3,Bronze medium helms.\n          1 Bar
 // [sic] exact number of spaces
 data=unlock,4,Bronze shortswords.\n          1 Bar
 // [sic] exact number of spaces
-data=unlock,4,Members: Bronze dart tips.\n          1 Bar
+data=unlock,4,Members: Bronze dart tips.\n          @dbl@1 Bar
 // [sic] exact number of spaces
-data=unlock,4,Members: Bronze wire.\n          1 Bar
+data=unlock,4,Members: Bronze wire.\n          @dbl@1 Bar
 // [sic] exact number of spaces
-data=unlock,4,Members: Bronze nails.\n          1 Bar
+data=unlock,4,Members: Bronze nails.\n          @dbl@1 Bar
 // [sic] exact number of spaces
 data=unlock,5,Bronze scimitars.\n          2 Bars
 // [sic] exact number of spaces
-data=unlock,5,Members: Bronze arrow heads.\n          1 Bar
+data=unlock,5,Members: Bronze arrow heads.\n          @dbl@1 Bar
 // [sic] exact number of spaces
 data=unlock,6,Bronze longswords.\n          2 Bars
 // [sic] exact number of spaces
 data=unlock,7,Bronze full helms.\n          2 Bars
 // [sic] exact number of spaces
-data=unlock,7,Members: Bronze throwing knives.\n          1 Bar
+data=unlock,7,Members: Bronze throwing knives.\n          @dbl@1 Bar
 // [sic] exact number of spaces
 data=unlock,8,Bronze square shields.\n          2 Bars
 // [sic] exact number of spaces
@@ -662,7 +663,7 @@ data=unlock,11,Bronze chainmail bodies.\n          3 Bars
 // [sic] exact number of spaces
 data=unlock,12,Bronze kite shields.\n          3 Bars
 // [sic] exact number of spaces
-data=unlock,13,Members: Bronze claws.\n          2 Bars
+data=unlock,13,Members: Bronze claws.\n          @dbl@2 Bars
 // [sic] exact number of spaces
 data=unlock,14,Bronze two handed swords.\n          3 Bars
 // [sic] exact number of spaces
@@ -683,20 +684,20 @@ data=unlock,16,Iron axes.\n          1 Bar
 data=unlock,17,Iron maces.\n          1 Bar
 data=unlock,18,Iron medium helms.\n          1 Bar
 data=unlock,19,Iron shortswords.\n          1 Bar
-data=unlock,19,Members: Iron dart tips.\n          1 Bar
-data=unlock,19,Members: Iron nails.\n          1 Bar
+data=unlock,19,Members: Iron dart tips.\n          @dbl@1 Bar
+data=unlock,19,Members: Iron nails.\n          @dbl@1 Bar
 data=unlock,20,Iron scimitars.\n          2 Bars
-data=unlock,20,Members: Iron arrow heads.\n          1 Bar
+data=unlock,20,Members: Iron arrow heads.\n          @dbl@1 Bar
 data=unlock,21,Iron longswords.\n          2 Bars
 data=unlock,22,Iron full helms.\n          2 Bars
-data=unlock,22,Members: Iron throwing knives.\n          1 Bar
+data=unlock,22,Members: Iron throwing knives.\n          @dbl@1 Bar
 data=unlock,23,Iron square shields.\n          2 Bars
 data=unlock,24,Iron warhammers.\n          3 Bars
 data=unlock,25,Iron battleaxes.\n          3 Bars
 data=unlock,26,Iron chainmail bodies.\n          3 Bars
-data=unlock,26,Members: Oil lantern frames.\n          1 Bar
+data=unlock,26,Members: Oil lantern frames.\n          @dbl@1 Bar
 data=unlock,27,Iron kite shields.\n          3 Bars
-data=unlock,28,Members: Iron claws.\n          2 Bars
+data=unlock,28,Members: Iron claws.\n          @dbl@2 Bars
 data=unlock,29,Iron two handed swords.\n          3 Bars
 data=unlock,31,Iron plate legs.\n          3 Bars
 data=unlock,31,Iron plate skirts.\n          3 Bars
@@ -713,25 +714,25 @@ data=unlock,31,Steel axes.\n          1 Bar
 data=unlock,32,Steel maces.\n          1 Bar
 data=unlock,33,Steel medium helms.\n          1 Bar
 data=unlock,34,Steel shortswords.\n          1 Bar
-data=unlock,34,Members: Steel nails.\n          1 Bar
-data=unlock,34,Members: Steel dart tips.\n          1 Bar
+data=unlock,34,Members: Steel nails.\n          @dbl@1 Bar
+data=unlock,34,Members: Steel dart tips.\n          @dbl@1 Bar
 data=unlock,35,Steel scimitars.\n          2 Bars
-data=unlock,35,Members: Steel arrow heads.\n          1 Bar
-data=unlock,35,Members: Cannonballs.\n          1 Bar
+data=unlock,35,Members: Steel arrow heads.\n          @dbl@1 Bar
+data=unlock,35,Members: Cannonballs.\n          @dbl@1 Bar
 data=unlock,36,Steel longswords.\n          2 Bars
 data=unlock,37,Steel full helms.\n          2 Bars
-data=unlock,37,Members: Steel throwing knives.\n          1 Bar
+data=unlock,37,Members: Steel throwing knives.\n          @dbl@1 Bar
 data=unlock,38,Steel square shields.\n          2 Bars
 data=unlock,39,Steel warhammers.\n          3 Bars
 data=unlock,40,Steel battleaxes.\n          3 Bars
 data=unlock,41,Steel chainmail bodies.\n          3 Bars
 data=unlock,42,Steel kite shields.\n          3 Bars
-data=unlock,43,Members: Steel claws.\n          2 Bars
+data=unlock,43,Members: Steel claws.\n          @dbl@2 Bars
 data=unlock,44,Steel two handed swords.\n          3 Bars
 data=unlock,46,Steel plate legs.\n          3 Bars
 data=unlock,46,Steel plate skirts.\n          3 Bars
 data=unlock,48,Steel plate bodies.\n          5 Bars
-data=unlock,49,Members: Bullseye lantern frames.\n          1 Bar
+data=unlock,49,Members: Bullseye lantern frames.\n          @dbl@1 Bar
 
 // note: derived from 2007 clientscript
 [skill_guide_smithing_mithril]
@@ -744,19 +745,19 @@ data=unlock,51,Mithril axes.\n          1 Bar
 data=unlock,52,Mithril maces.\n          1 Bar
 data=unlock,53,Mithril medium helms.\n          1 Bar
 data=unlock,54,Mithril shortswords.\n          1 Bar
-data=unlock,54,Members: Mithril dart tips.\n          1 Bar
-data=unlock,54,Members: Mithril nails.\n          1 Bar
+data=unlock,54,Members: Mithril dart tips.\n          @dbl@1 Bar
+data=unlock,54,Members: Mithril nails.\n          @dbl@1 Bar
 data=unlock,55,Mithril scimitars.\n          2 Bars
-data=unlock,55,Members: Mithril arrow heads.\n          1 Bar
+data=unlock,55,Members: Mithril arrow heads.\n          @dbl@1 Bar
 data=unlock,56,Mithril longswords.\n          2 Bars
 data=unlock,57,Mithril full helms.\n          2 Bars
-data=unlock,57,Members: Mithril throwing knives.\n          1 Bar
+data=unlock,57,Members: Mithril throwing knives.\n          @dbl@1 Bar
 data=unlock,58,Mithril square shields.\n          2 Bars
 data=unlock,59,Mithril warhammers.\n          3 Bars
 data=unlock,60,Mithril battleaxes.\n          3 Bars
 data=unlock,61,Mithril chainmail bodies.\n          3 Bars
 data=unlock,62,Mithril kite shields.\n          3 Bars
-data=unlock,63,Members: Mithril claws.\n          2 Bars
+data=unlock,63,Members: Mithril claws.\n          @dbl@2 Bars
 data=unlock,64,Mithril two handed swords.\n          3 Bars
 data=unlock,66,Mithril plate legs.\n          3 Bars
 data=unlock,66,Mithril plate skirts.\n          3 Bars
@@ -773,19 +774,19 @@ data=unlock,71,Adamant axes.\n          1 Bar
 data=unlock,72,Adamant maces.\n          1 Bar
 data=unlock,73,Adamant medium helms.\n          1 Bar
 data=unlock,74,Adamant shortswords.\n          1 Bar
-data=unlock,74,Members: Adamant dart tips.\n          1 Bar
-data=unlock,74,Members: Adamant nails.\n          1 Bar
+data=unlock,74,Members: Adamant dart tips.\n          @dbl@1 Bar
+data=unlock,74,Members: Adamant nails.\n          @dbl@1 Bar
 data=unlock,75,Adamant scimitars.\n          2 Bars
-data=unlock,75,Members: Adamant arrow heads.\n          1 Bar
+data=unlock,75,Members: Adamant arrow heads.\n          @dbl@1 Bar
 data=unlock,76,Adamant longswords.\n          2 Bars
 data=unlock,77,Adamant full helms.\n          2 Bars
-data=unlock,77,Members: Adamant throwing knives.\n          1 Bar
+data=unlock,77,Members: Adamant throwing knives.\n          @dbl@1 Bar
 data=unlock,78,Adamant square shields.\n          2 Bars
 data=unlock,79,Adamant warhammers.\n          3 Bars
 data=unlock,80,Adamant battleaxes.\n          3 Bars
 data=unlock,81,Adamant chainmail bodies.\n          3 Bars
 data=unlock,82,Adamant kite shields.\n          3 Bars
-data=unlock,83,Members: Adamant claws.\n          2 Bars
+data=unlock,83,Members: Adamant claws.\n          @dbl@2 Bars
 data=unlock,84,Adamant two handed swords.\n          3 Bars
 data=unlock,86,Adamant plate legs.\n          3 Bars
 data=unlock,86,Adamant plate skirts.\n          3 Bars
@@ -802,19 +803,19 @@ data=unlock,86,Rune axes.\n          1 Bar
 data=unlock,87,Rune maces.\n          1 Bar
 data=unlock,88,Rune medium helms.\n          1 Bar
 data=unlock,89,Rune shortswords.\n          1 Bar
-data=unlock,89,Members: Rune dart tips.\n          1 Bar
-data=unlock,89,Members: Rune nails.\n          1 Bar
+data=unlock,89,Members: Rune dart tips.\n          @dbl@1 Bar
+data=unlock,89,Members: Rune nails.\n          @dbl@1 Bar
 data=unlock,90,Rune scimitars.\n          2 Bars
-data=unlock,90,Members: Rune arrow heads.\n          1 Bar
+data=unlock,90,Members: Rune arrow heads.\n          @dbl@1 Bar
 data=unlock,91,Rune longswords.\n          2 Bars
 data=unlock,92,Rune full helms.\n          2 Bars
-data=unlock,92,Members: Rune throwing knives.\n          1 Bar
+data=unlock,92,Members: Rune throwing knives.\n          @dbl@1 Bar
 data=unlock,93,Rune square shields.\n          2 Bars
 data=unlock,94,Rune warhammers.\n          3 Bars
 data=unlock,95,Rune battleaxes.\n          3 Bars
 data=unlock,96,Rune chainmail bodies.\n          3 Bars
 data=unlock,97,Rune kite shields.\n          3 Bars
-data=unlock,98,Members: Rune claws.\n          2 Bars
+data=unlock,98,Members: Rune claws.\n          @dbl@2 Bars
 data=unlock,99,Rune two handed swords.\n          3 Bars
 data=unlock,99,Rune plate legs.\n          3 Bars
 data=unlock,99,Rune plate skirts.\n          3 Bars
@@ -872,7 +873,6 @@ data=op,Hot Drinks,skill_guide_cooking_hotdrinks
 data=op,Brewing,skill_guide_cooking_brewing
 data=op,Vegetables,skill_guide_cooking_vegetables
 data=op,Dairy,skill_guide_cooking_dairy
-data=op,Gnome,skill_guide_cooking_gnome
 
 [skill_guide_cooking_meat]
 table=skill_guides
@@ -1048,32 +1048,6 @@ data=unlock,-1,1. Get a bucket of milk, a pot of cream\n      or a pot of butter
 data=unlock,-1,2. Use the milk, cream or butter in a churn.
 data=unlock,-1,3. Milk can be churned into cream, then into\n     butter, then into cheese.
 
-[skill_guide_cooking_gnome]
-table=skill_guides
-data=name,Cooking - Gnome
-data=advancement,Able to make:
-data=inv,skill_guide_cooking_gnome
-data=unlock,6,Members: Fruit Blast.
-data=unlock,8,Members: Pineapple Punch.
-data=unlock,10,Members: Toad crunchies.
-data=unlock,12,Members: Spicy crunchies.
-data=unlock,14,Members: Worm crunchies.
-data=unlock,16,Members: Chocolate chip crunchies.
-data=unlock,18,Members: Wizard Blizzard.
-data=unlock,20,Members: Short Green Guy (SGG).
-data=unlock,25,Members: Fruit batta.
-data=unlock,26,Members: Toad batta.
-data=unlock,27,Members: Worm batta.
-data=unlock,28,Members: Vegetable batta.
-data=unlock,29,Members: Cheese and tomato batta.
-data=unlock,30,Members: Worm hole.
-data=unlock,32,Members: Drunk Dragon.
-data=unlock,33,Members: Chocolate Saturday.
-data=unlock,35,Members: Vegetable ball.
-data=unlock,37,Members: Blurberry Special.
-data=unlock,40,Members: Tangled Toad's Legs.
-data=unlock,42,Members: Chocolate bomb.
-
 [skill_guide_firemaking]
 table=skill_guide_ops
 data=lookup,firemaking
@@ -1247,26 +1221,28 @@ data=unlock,90,Dark beasts.
 [skill_guide_slayer_equipment]
 table=skill_guides
 data=name,Slayer - Equipment
-data=advancement,Useful equipment:
+data=advancement,Able to use:
 data=inv,skill_guide_slayer_equipment
-data=unlock,15,Earmuffs
-data=unlock,20,Bag of salt
-data=unlock,22,Ice cooler
-data=unlock,25,Mirror shield
-data=unlock,32,Fishing explosive
-data=unlock,42,Slayer gloves
-data=unlock,45,Slayer staff
-data=unlock,55,Broad arrows
-data=unlock,60,Nose peg
-data=unlock,70,Leaf-bladed spear
-data=unlock,75,Rock hammer
+data=unlock,1,Spiny Helmet (with defence 5).
+data=unlock,1,Rock Hammer.
+data=unlock,10,Facemask.
+data=unlock,15,Earmuffs.
+data=unlock,20,Bag of Salt.
+data=unlock,22,Ice Cooler.
+data=unlock,25,Mirror Shield (with defence 20).
+data=unlock,32,Fishing Explosive.
+data=unlock,42,Slayer Gloves.
+data=unlock,55,Leaf-bladed Spear (with attack 50).
+data=unlock,55,Broad Arrows (with ranged 50).
+data=unlock,55,Slayer's Staff (with magic 50).
+data=unlock,60,Nose Peg.
 
 // ----
 
 [skill_guide_farming]
 table=skill_guide_ops
 data=lookup,farming
-data=op,Vegetables,skill_guide_farming_veg
+data=op,Allotments,skill_guide_farming_allotments
 data=op,Hops,skill_guide_farming_hops
 data=op,Trees,skill_guide_farming_trees
 data=op,Fruit trees,skill_guide_farming_fruit_trees
@@ -1276,11 +1252,11 @@ data=op,Herbs,skill_guide_farming_herbs
 data=op,Special,skill_guide_farming_special
 data=op,Scarecrow,skill_guide_farming_scarecrow
 
-[skill_guide_farming_veg]
+[skill_guide_farming_allotments]
 table=skill_guides
-data=name,Farming - Vegetables
+data=name,Farming - Allotments
 data=advancement,Able to grow:
-data=inv,skill_guide_farming_veg
+data=inv,skill_guide_farming_allotments
 data=unlock,1,Potatoes.
 data=unlock,5,Onions.
 data=unlock,7,Cabbages.
@@ -1295,12 +1271,12 @@ data=name,Farming - Hops
 data=advancement,Able to grow:
 data=inv,skill_guide_farming_hops
 data=unlock,3,Barley.
-data=unlock,4,Hammerstone hops.
-data=unlock,8,Asgarnian hops.
-data=unlock,13,Jute.
-data=unlock,16,Yanillian hops.
-data=unlock,21,Krandorian hops.
-data=unlock,28,Wildblood hops.
+data=unlock,4,Hammerstone Hops.
+data=unlock,8,Asgarnian Hops.
+data=unlock,13,Jute plants.
+data=unlock,16,Yanillian Hops.
+data=unlock,21,Krandorian Hops.
+data=unlock,28,Wildblood Hops.
 
 [skill_guide_farming_trees]
 table=skill_guides
@@ -1384,6 +1360,6 @@ data=unlock,83,Spirit Trees (1 only).
 [skill_guide_farming_scarecrow]
 table=skill_guides
 data=name,Farming - Scarecrow
-data=advancement,Able to create:
+data=advancement,
 data=inv,skill_guide_farming_scarecrow
-data=unlock,23,Able to make and place a scarecrow.\n\n\nScarecrows ward sweetcorn from being attacked\nby birds,which helps to prevent disease.\n\nHow to make a scarecrow:\n\n1. Fill an empty sack with straw from a bail.\n\n2. Drive the hay sack onto a bronze spear.\n\n3. Place a watermelon on top as a head.
+data=unlock,23,Able to make and place a scarecrow.\n\n\nScarecrows ward sweetcorn from being attacked\nby birds, which helps to prevent disease.\n\nHow to make a scarecrow:\n\n1. Fill an empty sack with straw from a bail.\n\n2. Drive the hay sack onto a bronze spear.\n\n3. Place a watermelon on top as a head.

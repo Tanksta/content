@@ -2254,27 +2254,7 @@ stock2=pot_of_butter,1
 stock3=cheese,1
 
 [skill_guide_cooking_gnome]
-size=30
-stock1=fruit_blast,1
-stock2=pineapple_punch,1
-stock3=toad_crunchies,1
-stock4=spicy_crunchies,1
-stock5=worm_crunchies,1
-stock6=chocchip_crunchies,1
-stock7=wizard_blizzard,1
-stock8=sgg,1
-stock9=fruit_batta,1
-stock10=toad_batta,1
-stock11=worm_batta,1
-stock12=vegetable_batta,1
-stock13=cheese+tom_batta,1
-stock14=worm_hole,1
-stock15=drunk_dragon,1
-stock16=chocolate_saturday,1
-stock17=veg_ball,1
-stock18=blurberry_special,1
-stock19=tangled_toads_legs,1
-stock20=chocolate_bomb,1
+size=1
 
 [skill_guide_crafting_leather]
 size=1
@@ -3228,17 +3208,19 @@ stock23=slayerguide_dark_beast,1
 
 [skill_guide_slayer_equipment]
 size=30
-stock1=slayer_earmuffs,1
-stock2=slayer_bag_of_salt,1
-stock3=slayer_icy_water,1
-stock4=slayer_mirror_shield,1
-stock5=slayerguide_fishing_explosive,1
-stock6=slayerguide_slayer_gloves,1
-stock7=slayer_staff,1
-stock8=slayer_broad_arrows,25
-stock9=slayer_nosepeg,1
+stock1=wallbeast_spike_helmet,1
+stock2=slayer_rock_hammer,1
+stock3=slayer_facemask,1
+stock4=slayer_earmuffs,1
+stock5=slayer_bag_of_salt,1
+stock6=slayer_icy_water,1
+stock7=slayer_mirror_shield,1
+stock8=slayerguide_fishing_explosive,1
+stock9=slayerguide_slayer_gloves,1
 stock10=slayer_leafbladed_spear,1
-stock11=slayer_rock_hammer,1
+stock11=slayer_broad_arrows,1
+stock12=slayer_staff,1
+stock13=slayer_nosepeg,1
 
 [magicguildshop2]
 scope=shared
@@ -3966,7 +3948,7 @@ stock26=plant_cure,100,10
 // is odd compared to the others and probably other tools restocks too quickly.
 // all 4 farming store's selections are focused on mid-2007, before the release of OSRS.
 
-[skill_guide_farming_veg]
+[skill_guide_farming_allotments]
 size=30
 stock1=potato,1
 stock2=onion,1
