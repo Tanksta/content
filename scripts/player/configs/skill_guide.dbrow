@@ -34,7 +34,9 @@ data=unlock,20,Mithril.
 // [sic] "Adamantite" despite "Rune" below
 data=unlock,30,Adamantite.
 data=unlock,40,Rune.
+data=unlock,50,Members: Granite.
 data=unlock,60,Members: Dragon.
+data=unlock,70,Members: Elf Crystal. (with 50 Agility)
 
 // strength: I think this came later and only attack/defence was available at first
 // skill_guide_strength_weapons_and_armour: inv 421
@@ -73,6 +75,8 @@ data=unlock,30,Maple bows.\n          Ammo: Arrows up to adamant.
 data=unlock,40,Members: Yew bows.\n          Ammo: Arrows up to rune.
 // [sic] exact number of spaces
 data=unlock,50,Members: Magic bows.\n          Ammo: Arrows up to rune.
+// [sic] exact number of spaces
+data=unlock,70,Members: Crystal bows. (with 50 Agility)\n          Ammo: None.
 
 // note: derived from 2007 clientscript
 // todo: members only
@@ -101,6 +105,11 @@ data=unlock,1,Hard leather body (with defence 10).
 data=unlock,20,Studded leather body (with defence 20).
 data=unlock,20,Studded leather chaps.
 data=unlock,20,Coif.
+data=unlock,30,Members: Snakeskin body\n     (with defence 30).
+data=unlock,30,Members: Snakeskin chaps\n     (with defence 30).
+data=unlock,30,Members: Snakeskin vambraces\n     (with defence 30).
+data=unlock,30,Members: Snakeskin bandana\n     (with defence 30).
+data=unlock,30,Members: Snakeskin boots\n     (with defence 30).
 data=unlock,40,Members: Rangers boots.
 data=unlock,40,Members: Robin hood hat.
 data=unlock,40,Green dragonhide vambraces.
@@ -140,6 +149,11 @@ table=skill_guides
 data=name,Magic - Armour
 data=inv,skill_guide_magic_armour
 data=unlock,20,Wizard boots.
+data=unlock,40,Mystic hat\n     (with defence 20).
+data=unlock,40,Mystic robe top\n     (with defence 20).
+data=unlock,40,Mystic robe bottom\n     (with defence 20).
+data=unlock,40,Mystic gloves\n     (with defence 20).
+data=unlock,40,Mystic boots\n     (with defence 20).
 data=unlock,40,Splitbark helm\n     (with defence 40).
 data=unlock,40,Splitbark body\n     (with defence 40).
 data=unlock,40,Splitbark legs\n     (with defence 40).
@@ -165,26 +179,80 @@ data=unlock,-1,"To view the available prayers, select\nthe Prayer icon on the si
 [skill_guide_agility]
 table=skill_guide_ops
 data=lookup,agility
-data=op,Agility,skill_guide_agility_agility
+data=op,Courses,skill_guide_agility_courses
+data=op,Areas,skill_guide_agility_areas
+data=op,Shortcuts,skill_guide_agility_shortcuts
 // skill_guide_agility_courses: inv 321
 // skill_guide_agility_areas: inv 322
 // skill_guide_agility_shortcuts: inv 323
 
 // note: Using Courses for now. What was this originally? It has an inv...
-[skill_guide_agility_agility]
+[skill_guide_agility_courses]
 table=skill_guides
-data=name,Agility
+data=name,Agility - Courses
 data=advancement,Access to:
-data=inv,skill_guide_agility
+data=inv,skill_guide_agility_courses
 data=unlock,1,Gnome Stronghold agility course.
 data=unlock,1,Gnomeball game.
 data=unlock,1,Low level agility arena obstacles.
 data=unlock,20,Medium level agility arena obstacles.
+data=unlock,25,Werewolf skullball course.
 data=unlock,35,Barbarian Outpost agility course.
 data=unlock,40,High level agility arena obstacles.
+data=unlock,50,Use crystal equipment.
 data=unlock,52,Wilderness course.
+data=unlock,60,Werewolf agility course.
 
-// ----
+[skill_guide_agility_areas]
+table=skill_guides
+data=name,Agility - Areas
+data=advancement,Able to use the:
+data=inv,skill_guide_agility_areas
+data=unlock,10,Rope swing to Moss Giant Island.
+data=unlock,12,Stepping stones in Karamja Dungeon.
+data=unlock,15,Monkey bars under Edgeville.
+data=unlock,22,Pipe contortion in Karamja Dungeon.
+data=unlock,30,Stepping stones in south-eastern Karamja.
+data=unlock,34,Pipe contortion in Karamja Dungeon.
+data=unlock,45,Elf area log balance.
+data=unlock,49,Contortion in Yanille Dungeon small room.
+data=unlock,67,Yanille Dungeon's rubble climb.
+
+[skill_guide_agility_shortcuts]
+table=skill_guides
+data=name,Agility - Shortcuts
+data=advancement,Able to use the:
+data=inv,skill_guide_agility_shortcuts
+data=unlock,5,Falador Agility Shortcut.
+data=unlock,20,Coal Truck log balance.
+data=unlock,21,Varrock Agility Shortcut.
+data=unlock,26,Falador Agility Shortcut.
+data=unlock,29,Lumbridge fence squeeze to swamp.
+data=unlock,31,Draynor Manor log balance to Champions guild.
+data=unlock,33,Ardougne log balance shortcut.
+data=unlock,37,Gnome Stronghold shortcut.
+data=unlock,38,Al Kharid mining pit cliff side scramble.
+data=unlock,41,Trollheim, easy cliffside scramble.
+data=unlock,42,Dwarven mine, narrow crevice.
+data=unlock,43,Trollheim, medium cliffside scramble.
+data=unlock,44,Trollheim, advanced cliffside scramble.
+data=unlock,46,Cosmic Temple, medium narrow walkway.
+data=unlock,47,Trollheim, hard cliffside scramble.
+data=unlock,48,Log balance to Fremmenick Province.
+data=unlock,51,Pipe from Edgeville dungeon to Varrock sewers.
+data=unlock,58,Port Phasmatys, Ectopool shortcut.
+data=unlock,59,Elven Overpass, easy cliffside scramble.
+data=unlock,61,Slayer tower, medium spiked chain climb.
+data=unlock,62,Slayer Dungeon, narrow crevice.
+data=unlock,64,Trollheim Wilderness Route.
+data=unlock,65,Temple on the Salve to Morytania shortcut.
+data=unlock,66,Cosmic Temple, advanced narrow walkway.
+data=unlock,68,Elven Overpass, medium cliffside scramble.
+data=unlock,70,Taverly Dungeon pipe squeeze to blue dragon lair.
+data=unlock,71,Slayer tower, advanced spiked chain climb.
+data=unlock,80,Taverly Dungeon spiked blades jump.
+data=unlock,81,Slayer Dungeon spiked blades jump.
+data=unlock,85,Elven Overpass, advanced cliffside scramble.
 
 [skill_guide_herblore]
 table=skill_guide_ops
@@ -225,8 +293,6 @@ data=unlock,3,Attack potion\nGuam leaf & Eye of newt.
 data=unlock,5,Anti-poison potion\nMarrentill & Ground unicorn horn.
 data=unlock,8,Relicym's balm\nRogue's purse & Snake weed.
 data=unlock,12,Strength potion\nTarromin & Limpwurt root.
-data=unlock,15,Serum 207\nTarromin & Ashes.
-data=unlock,18,Guthix rest\nGuam leaf & Marrentill & Harralander.
 data=unlock,22,Stat restore potion\nHarralander & Red spiders' eggs.
 data=unlock,26,Energy potion\nHarralander & Chocolate dust.
 data=unlock,30,Defence potion\nRanarr weed & White berries.
@@ -258,25 +324,11 @@ data=unlock,82,Weapon poison(s)\nNightshade & Coconut milk & Poison ivy berries.
 [skill_guide_thieving]
 table=skill_guide_ops
 data=lookup,thieving
-data=op,Stalls,skill_guide_thieving_stalls
 data=op,Pickpocket,skill_guide_thieving_pickpocket
+data=op,Stalls,skill_guide_thieving_stalls
+data=op,Chests,skill_guide_thieving_chests
 // skill_guide_thieving_chests: inv 274
 // skill_guide_thieving_other: inv 415
-
-// note: derived from 2007 clientscript
-[skill_guide_thieving_stalls]
-table=skill_guides
-data=name,Thieving - Stalls
-data=inv,skill_guide_thieving_stalls
-data=unlock,5,Cake stall.
-data=unlock,5,Tea stall.
-data=unlock,20,Silk stall.
-data=unlock,27,Seed stall.
-data=unlock,35,Fur stall.
-data=unlock,42,Fish stall.
-data=unlock,50,Silver stall.
-data=unlock,65,Spices stall.
-data=unlock,75,Gems stall.
 
 // note: derived from 2007 clientscript
 [skill_guide_thieving_pickpocket]
@@ -285,31 +337,66 @@ data=name,Thieving - Pickpocket
 data=inv,skill_guide_thieving_pickpocket
 data=unlock,1,Man.
 data=unlock,10,Farmer.
-data=unlock,15,Female H.A.M. member.
-data=unlock,20,Male H.A.M. member.
+data=unlock,15,Female H.A.M. follower.
+data=unlock,20,Male H.A.M. follower.
 data=unlock,25,Warrior.
 data=unlock,32,Rogue.
 data=unlock,38,Master Farmer.
 data=unlock,40,Guard.
 data=unlock,45,Fremennik.
+data=unlock,45,Bearded Pollnivnian bandit.
+data=unlock,53,Desert bandit.
 data=unlock,55,Knight.
+data=unlock,55,Pollnivnian bandit.
 data=unlock,65,Watchman.
+data=unlock,65,Menaphite thug.
 data=unlock,70,Paladin.
 data=unlock,75,Gnome.
 data=unlock,80,Hero.
+data=unlock,85,Elf.
+
+[skill_guide_thieving_stalls]
+table=skill_guides
+data=name,Thieving - Stalls
+data=inv,skill_guide_thieving_stalls
+data=unlock,2,Vegetable stall.
+data=unlock,5,Cake stall.
+data=unlock,5,Tea stall.
+data=unlock,5,Crafting stall.
+data=unlock,5,Monkey food stall.
+data=unlock,20,Silk stall.
+data=unlock,27,Seed stall.
+data=unlock,35,Fur stall.
+data=unlock,42,Fish stall.
+data=unlock,50,Silver stall.
+data=unlock,65,Magic stall.
+data=unlock,65,Scimitar stall.
+data=unlock,65,Spices stall.
+data=unlock,75,Gems stall.
+
+[skill_guide_thieving_chests]
+table=skill_guides
+data=name,Thieving - Chests
+data=inv,skill_guide_thieving_chests
+data=unlock,13,Ardougne, Rellekka and the Wilderness.
+data=unlock,28,Upstairs in Ardougne and Rellekka.
+data=unlock,43,Upstairs in Ardougne.
+data=unlock,47,Hemenster and Rellekka.
+data=unlock,59,Chaos Druid Tower north of Ardougne.
+data=unlock,76,King Lathas' Castle in Ardougne.
 
 // ----
 
 [skill_guide_crafting]
 table=skill_guide_ops
 data=lookup,crafting
+data=op,Weaving,skill_guide_crafting_weaving
 data=op,Armour,skill_guide_crafting_armour
 data=op,Spinning,skill_guide_crafting_spinning
 data=op,Pottery,skill_guide_crafting_pottery
 data=op,Glass,skill_guide_crafting_glass
 data=op,Jewellery,skill_guide_crafting_jewellery
 data=op,Staffs,skill_guide_crafting_staffs
-// skill_guide_crafting_weaving: inv 286
 
 // note: derived from 2007 clientscript
 [skill_guide_crafting_spinning]
@@ -318,6 +405,7 @@ data=name,Crafting - Spinning
 data=inv,skill_guide_crafting_spinning
 data=unlock,1,Wool.
 data=unlock,10,Members: Flax into bow strings.
+data=unlock,19,Members: Magic tree roots into magic strings.
 
 // note: derived from 2007 clientscript
 [skill_guide_crafting_pottery]
@@ -327,6 +415,8 @@ data=inv,skill_guide_crafting_pottery
 data=unlock,1,Pot.
 data=unlock,7,Pie dish.
 data=unlock,8,Bowl.
+data=unlock,19,Members: Plant pot.
+data=unlock,25,Members: Pot lid.
 
 // note: derived from 2007 clientscript
 [skill_guide_crafting_glass]
@@ -334,8 +424,13 @@ table=skill_guides
 data=name,Crafting - Glass
 data=inv,skill_guide_crafting_glass
 data=unlock,1,Members: Beer glass.
+data=unlock,4,Members: Candle lantern.
+data=unlock,12,Members: Oil lamp.
+data=unlock,26,Members: Oil lantern.
 data=unlock,33,Members: Vial.
+data=unlock,42,Members: Fishbowl.
 data=unlock,46,Members: Glass orb.
+data=unlock,49,Members: Bullseye lantern lens.
 
 // note: derived from 2007 clientscript
 [skill_guide_crafting_jewellery]
@@ -399,9 +494,15 @@ data=unlock,14,Leather body.
 data=unlock,15,Members: Snail helmet.
 data=unlock,18,Leather chaps.
 data=unlock,28,Hard leather body.
+data=unlock,35,Members: Broodoo shield.
 data=unlock,38,Members: Coif.
 data=unlock,41,Members: Studded body.
 data=unlock,44,Members: Studded chaps.
+data=unlock,45,Members: Snakeskin boots.
+data=unlock,47,Members: Snakeskin vambraces.
+data=unlock,48,Members: Snakeskin bandana.
+data=unlock,51,Members: Snakeskin chaps.
+data=unlock,53,Members: Snakeskin body.
 data=unlock,57,Members: Green dragonhide vambraces.
 data=unlock,60,Members: Green dragonhide chaps.
 data=unlock,63,Members: Green dragonhide body.
@@ -415,7 +516,12 @@ data=unlock,79,Members: Black dragonhide vambraces.
 data=unlock,82,Members: Black dragonhide chaps.
 data=unlock,84,Members: Black dragonhide body.
 
-// ----
+[skill_guide_crafting_weaving]
+table=skill_guides
+data=name,Crafting - Weaving
+data=inv,skill_guide_crafting_weaving
+data=unlock,21,Members: Vegetable sack.
+data=unlock,36,Members: Fruit basket.
 
 [skill_guide_runecrafting]
 table=skill_guide_ops
@@ -431,9 +537,15 @@ data=inv,skill_guide_runecrafting
 data=unlock,1,Air runes.
 data=unlock,2,Mind runes.
 data=unlock,5,Water runes.
+data=unlock,6,Members: Mist runes.
 data=unlock,9,Earth runes.
+data=unlock,10,Members: Dust runes.
+data=unlock,13,Members: Mud runes.
 data=unlock,14,Fire runes.
+data=unlock,15,Members: Smoke runes.
+data=unlock,19,Members: Steam runes.
 data=unlock,20,Body runes.
+data=unlock,23,Members: Lava runes.
 data=unlock,27,Members: Cosmic runes.
 data=unlock,35,Members: Chaos runes.
 data=unlock,44,Members: Nature runes.
@@ -528,6 +640,8 @@ data=unlock,4,Members: Bronze dart tips.\n          1 Bar
 // [sic] exact number of spaces
 data=unlock,4,Members: Bronze wire.\n          1 Bar
 // [sic] exact number of spaces
+data=unlock,4,Members: Bronze nails.\n          1 Bar
+// [sic] exact number of spaces
 data=unlock,5,Bronze scimitars.\n          2 Bars
 // [sic] exact number of spaces
 data=unlock,5,Members: Bronze arrow heads.\n          1 Bar
@@ -570,6 +684,7 @@ data=unlock,17,Iron maces.\n          1 Bar
 data=unlock,18,Iron medium helms.\n          1 Bar
 data=unlock,19,Iron shortswords.\n          1 Bar
 data=unlock,19,Members: Iron dart tips.\n          1 Bar
+data=unlock,19,Members: Iron nails.\n          1 Bar
 data=unlock,20,Iron scimitars.\n          2 Bars
 data=unlock,20,Members: Iron arrow heads.\n          1 Bar
 data=unlock,21,Iron longswords.\n          2 Bars
@@ -579,6 +694,7 @@ data=unlock,23,Iron square shields.\n          2 Bars
 data=unlock,24,Iron warhammers.\n          3 Bars
 data=unlock,25,Iron battleaxes.\n          3 Bars
 data=unlock,26,Iron chainmail bodies.\n          3 Bars
+data=unlock,26,Members: Oil lantern frames.\n          1 Bar
 data=unlock,27,Iron kite shields.\n          3 Bars
 data=unlock,28,Members: Iron claws.\n          2 Bars
 data=unlock,29,Iron two handed swords.\n          3 Bars
@@ -597,6 +713,7 @@ data=unlock,31,Steel axes.\n          1 Bar
 data=unlock,32,Steel maces.\n          1 Bar
 data=unlock,33,Steel medium helms.\n          1 Bar
 data=unlock,34,Steel shortswords.\n          1 Bar
+data=unlock,34,Members: Steel nails.\n          1 Bar
 data=unlock,34,Members: Steel dart tips.\n          1 Bar
 data=unlock,35,Steel scimitars.\n          2 Bars
 data=unlock,35,Members: Steel arrow heads.\n          1 Bar
@@ -614,6 +731,7 @@ data=unlock,44,Steel two handed swords.\n          3 Bars
 data=unlock,46,Steel plate legs.\n          3 Bars
 data=unlock,46,Steel plate skirts.\n          3 Bars
 data=unlock,48,Steel plate bodies.\n          5 Bars
+data=unlock,49,Members: Bullseye lantern frames.\n          1 Bar
 
 // note: derived from 2007 clientscript
 [skill_guide_smithing_mithril]
@@ -627,6 +745,7 @@ data=unlock,52,Mithril maces.\n          1 Bar
 data=unlock,53,Mithril medium helms.\n          1 Bar
 data=unlock,54,Mithril shortswords.\n          1 Bar
 data=unlock,54,Members: Mithril dart tips.\n          1 Bar
+data=unlock,54,Members: Mithril nails.\n          1 Bar
 data=unlock,55,Mithril scimitars.\n          2 Bars
 data=unlock,55,Members: Mithril arrow heads.\n          1 Bar
 data=unlock,56,Mithril longswords.\n          2 Bars
@@ -655,6 +774,7 @@ data=unlock,72,Adamant maces.\n          1 Bar
 data=unlock,73,Adamant medium helms.\n          1 Bar
 data=unlock,74,Adamant shortswords.\n          1 Bar
 data=unlock,74,Members: Adamant dart tips.\n          1 Bar
+data=unlock,74,Members: Adamant nails.\n          1 Bar
 data=unlock,75,Adamant scimitars.\n          2 Bars
 data=unlock,75,Members: Adamant arrow heads.\n          1 Bar
 data=unlock,76,Adamant longswords.\n          2 Bars
@@ -683,6 +803,7 @@ data=unlock,87,Rune maces.\n          1 Bar
 data=unlock,88,Rune medium helms.\n          1 Bar
 data=unlock,89,Rune shortswords.\n          1 Bar
 data=unlock,89,Members: Rune dart tips.\n          1 Bar
+data=unlock,89,Members: Rune nails.\n          1 Bar
 data=unlock,90,Rune scimitars.\n          2 Bars
 data=unlock,90,Members: Rune arrow heads.\n          1 Bar
 data=unlock,91,Rune longswords.\n          2 Bars
@@ -747,11 +868,11 @@ data=op,Stews,skill_guide_cooking_stews
 data=op,Pizzas,skill_guide_cooking_pizzas
 data=op,Cakes,skill_guide_cooking_cakes
 data=op,Wine,skill_guide_cooking_wine
-// skill_guide_cooking_hotdrinks: inv 234
-// skill_guide_cooking_brewing: inv 284
-// skill_guide_cooking_vegetables: inv 285
-// skill_guide_cooking_dairy: inv 335
-// skill_guide_cooking_gnome: inv 437
+data=op,Hot Drinks,skill_guide_cooking_hotdrinks
+data=op,Brewing,skill_guide_cooking_brewing
+data=op,Vegetables,skill_guide_cooking_vegetables
+data=op,Dairy,skill_guide_cooking_dairy
+data=op,Gnome,skill_guide_cooking_gnome
 
 [skill_guide_cooking_meat]
 table=skill_guides
@@ -875,7 +996,83 @@ data=unlock,-1,3. Wait until the wine ferments.
 // [sic] no spaces after newline
 data=unlock,-1,Wine will ferment when left in\nyour inventory or the bank.
 
-// ----
+[skill_guide_cooking_hotdrinks]
+table=skill_guides
+data=name,Cooking - Hot Drinks
+data=advancement,Able to make:
+data=inv,skill_guide_cooking_hotdrinks
+data=unlock,20,Members: Nettle tea.
+data=unlock,-1,To make nettle tea:
+data=unlock,-1,1. Fill a bowl with water.
+data=unlock,-1,2. Put some picked nettles into\n     the bowl of water.
+data=unlock,-1,3. Boil the nettle-water by using it\n     with a range or a fire.
+data=unlock,-1,4. Use the bowl of nettle tea with a cup.
+data=unlock,-1,5. If you take milk, use a bucket of\n     milk on the nettle tea.
+
+[skill_guide_cooking_brewing]
+table=skill_guides
+data=name,Cooking - Brewing
+data=advancement,Able to make:
+data=inv,skill_guide_cooking_brewing
+data=unlock,14,Members: Cider.\n @dbl@4 Apple mush
+data=unlock,19,Members: Dwarven Stout.\n @dbl@4 Hammerstone hops
+data=unlock,24,Members: Asgarnian Ale.\n @dbl@4 Asgarnian hops
+data=unlock,29,Members: Greenmans Ale.\n @dbl@4 Harralander leaves
+data=unlock,34,Members: Wizard's Mind Bomb.\n @dbl@4 Yanillian hops
+data=unlock,39,Members: Dragon Bitter\n @dbl@4 Krandorian hops
+data=unlock,44,Members: Moonlight Mead.\n @dbl@4 Bittercap mushrooms
+data=unlock,49,Members: Axeman's Folly.\n @dbl@1 Oak root
+data=unlock,54,Members: Chef's Delight.\n @dbl@4 Portions of chocolate dust
+data=unlock,59,Members: Slayer's Respite.\n @dbl@4 Wildblood hops
+
+[skill_guide_cooking_vegetables]
+table=skill_guides
+data=name,Cooking - Vegetables
+data=advancement,Able to make:
+data=inv,skill_guide_cooking_vegetables
+data=unlock,7,Members: Baked potato.
+data=unlock,28,Members: Sweetcorn.
+data=unlock,39,Members: Baked potato with butter.
+data=unlock,47,Members: Baked potato with butter and cheese.
+
+[skill_guide_cooking_dairy]
+table=skill_guides
+data=name,Cooking - Dairy
+data=advancement,Able to make:
+data=inv,skill_guide_cooking_dairy
+data=unlock,21,Members: Cream.
+data=unlock,38,Members: Butter.
+data=unlock,48,Members: Cheese.
+data=unlock,-1,To make dairy products:
+data=unlock,-1,1. Get a bucket of milk, a pot of cream\n      or a pot of butter.
+data=unlock,-1,2. Use the milk, cream or butter in a churn.
+data=unlock,-1,3. Milk can be churned into cream, then into\n     butter, then into cheese.
+
+[skill_guide_cooking_gnome]
+table=skill_guides
+data=name,Cooking - Gnome
+data=advancement,Able to make:
+data=inv,skill_guide_cooking_gnome
+data=unlock,6,Members: Fruit Blast.
+data=unlock,8,Members: Pineapple Punch.
+data=unlock,10,Members: Toad crunchies.
+data=unlock,12,Members: Spicy crunchies.
+data=unlock,14,Members: Worm crunchies.
+data=unlock,16,Members: Chocolate chip crunchies.
+data=unlock,18,Members: Wizard Blizzard.
+data=unlock,20,Members: Short Green Guy (SGG).
+data=unlock,25,Members: Fruit batta.
+data=unlock,26,Members: Toad batta.
+data=unlock,27,Members: Worm batta.
+data=unlock,28,Members: Vegetable batta.
+data=unlock,29,Members: Cheese and tomato batta.
+data=unlock,30,Members: Worm hole.
+data=unlock,32,Members: Drunk Dragon.
+data=unlock,33,Members: Chocolate Saturday.
+data=unlock,35,Members: Vegetable ball.
+data=unlock,37,Members: Blurberry Special.
+data=unlock,40,Members: Tangled Toad's Legs.
+data=unlock,42,Members: Chocolate bomb.
 
 [skill_guide_firemaking]
 table=skill_guide_ops
@@ -889,10 +1086,16 @@ data=name,Firemaking
 data=advancement,Able to burn:
 data=inv,skill_guide_firemaking
 data=unlock,1,Normal logs.
+data=unlock,4,Members: Candle lanterns.
 data=unlock,15,Oak logs.
+data=unlock,26,Members: Oil lanterns.
 data=unlock,30,Willow logs.
+data=unlock,35,Members: Teak logs.
 data=unlock,45,Maple logs.
+data=unlock,49,Members: Bullseye lanterns.
+data=unlock,50,Members: Mahogany logs.
 data=unlock,60,Yew logs.
+data=unlock,65,Members: Cave goblin mining helmets.
 data=unlock,75,Members: Magic logs.
 
 // ----
@@ -908,7 +1111,7 @@ data=op,Axes,skill_guide_woodcutting_axes
 table=skill_guides
 data=name,Woodcutting - Axes
 data=advancement,Able to use:
-data=inv,skill_guide_woodcutting_axes_377
+data=inv,skill_guide_woodcutting_axes
 data=unlock,1,Bronze axe.
 data=unlock,1,Iron axe.
 data=unlock,6,Steel axe.
@@ -924,10 +1127,14 @@ data=name,Woodcutting
 data=advancement,Able to cut down:
 data=inv,skill_guide_woodcutting
 data=unlock,1,Normal trees.
+data=unlock,10,Members: Light Jungle.
 data=unlock,15,Oak trees.
+data=unlock,20,Members: Medium Jungle.
 data=unlock,30,Willow trees.
+data=unlock,35,Members: Dense Jungle.
 data=unlock,35,Members: Teak trees.
-data=unlock,45,Maple trees.
+data=unlock,45,Members: Maple trees.
+data=unlock,45,Members: Hollow trees.
 data=unlock,50,Members: Mahogany trees.
 data=unlock,60,Yew trees.
 data=unlock,75,Members: Magic trees.
@@ -967,11 +1174,17 @@ data=name,Fletching - Arrows
 data=advancement,Able to fletch:
 data=inv,skill_guide_fletching_arrows
 data=unlock,1,Bronze arrows.
+data=unlock,7,Bronze 'brutal' arrows.
 data=unlock,15,Iron arrows.
+data=unlock,18,Iron 'brutal' arrows.
 data=unlock,30,Steel arrows.
+data=unlock,33,Steel 'brutal' arrows.
 data=unlock,45,Mithril arrows.
+data=unlock,49,Mithril 'brutal' arrows.
 data=unlock,60,Adamant arrows.
+data=unlock,62,Adamant 'brutal' arrows.
 data=unlock,75,Rune arrows.
+data=unlock,77,Rune 'brutal' arrows.
 
 // note: derived from 2007 clientscript
 [skill_guide_fletching_darts]
@@ -1021,10 +1234,10 @@ data=unlock,42,Fever spiders.
 data=unlock,45,Infernal mages.
 data=unlock,50,Bloodveld.
 data=unlock,52,Jellies.
-data=unlock,55,Turoths.
+data=unlock,55,Turoth.
 data=unlock,60,Aberrant spectres.
 data=unlock,65,Dust devils.
-data=unlock,70,Kurasks.
+data=unlock,70,Kurask.
 data=unlock,72,Skeletal wyverns.
 data=unlock,75,Gargoyles.
 data=unlock,80,Nechryael.
