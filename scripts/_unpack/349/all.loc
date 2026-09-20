@@ -21268,6 +21268,8 @@ recol4s=6674
 recol4d=13194
 active=yes
 op1=Open
+category=door_closed
+param=next_loc_stage,ahoy_harbour_door_open
 
 [ahoy_harbour_door_open]
 name=Door
@@ -21283,6 +21285,8 @@ recol4s=6674
 recol4d=13194
 active=yes
 op1=Close
+category=door_opened
+param=next_loc_stage,ahoy_harbour_door
 
 [normal_bed]
 name=Bed
@@ -23518,6 +23522,7 @@ hillskew=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop2]
 name=Pool of Slime
@@ -23528,6 +23533,7 @@ hillskew=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop3]
 name=Pool of Slime
@@ -23540,6 +23546,7 @@ contrast=50
 blockwalk=no
 length=2
 width=2
+category=ahoy_gloop
 
 [green_gloop_flat]
 name=Pool of Slime
@@ -23550,6 +23557,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_two]
 name=Pool of Slime
@@ -23560,6 +23568,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_three]
 name=Pool of Slime
@@ -23570,6 +23579,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_four]
 name=Pool of Slime
@@ -23580,6 +23590,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_five]
 name=Pool of Slime
@@ -23590,6 +23601,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_six]
 name=Pool of Slime
@@ -23600,6 +23612,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_q]
 name=Pool of Slime
@@ -23610,6 +23623,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_w]
 name=Pool of Slime
@@ -23620,6 +23634,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_e]
 name=Pool of Slime
@@ -23630,6 +23645,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_r]
 name=Pool of Slime
@@ -23640,6 +23656,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [green_gloop_t]
 name=Pool of Slime
@@ -23650,6 +23667,7 @@ forcedecor=yes
 ambient=90
 contrast=50
 blockwalk=no
+category=ahoy_gloop
 
 [ahoy_tomb_wall]
 model=ahoy_tomb_wall

@@ -95,6 +95,8 @@ name=Wolf bones
 weight=500g
 category=bones
 param=bone_exp,45
+param=ahoy_bones_type,7
+param=next_obj_stage,pot_bonemeal_wolf
 
 [tbwt_beast_bones]
 desc=Large glistening bones which glow with a pale yellow aura.
@@ -108,6 +110,8 @@ name=Shaikahan bones
 weight=800g
 category=bones
 param=bone_exp,250
+param=ahoy_bones_type,22
+param=next_obj_stage,pot_bonemeal_beast
 
 [tbwt_jogre_bones]
 desc=Fairly big bones which smell distinctly of Jogre.
@@ -121,6 +125,8 @@ name=Jogre bones
 weight=800g
 category=bones
 param=bone_exp,150
+param=ahoy_bones_type,8
+param=next_obj_stage,pot_bonemeal_jogre
 
 [tbwt_burnt_jogre_bones]
 desc=These blackened Jogre bones have been somehow burnt.
@@ -137,6 +143,8 @@ weight=800g
 category=bones
 param=bone_exp,160
 tradeable=no
+param=ahoy_bones_type,9
+param=next_obj_stage,pot_bonemeal_burnt_jogre
 
 [tbwt_burnt_jogre_bones_in_raw_karambwanji_paste]
 desc=Burnt Jogre bones smothered with raw Karambwanji Paste.
@@ -247,3 +255,242 @@ weight=800g
 category=bones
 param=bone_exp,170
 tradeable=no
+
+[mm_small_ninja_monkey_bones]
+desc=These are smallish monkey bones.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+weight=500g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,10
+param=next_obj_stage,pot_bonemeal_small_ninja_monkey
+
+
+[mm_medium_ninja_monkey_bones]
+desc=These are medium sized monkey bones.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+weight=500g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,11
+param=next_obj_stage,pot_bonemeal_medium_ninja_monkey
+
+
+[mm_normal_gorilla_monkey_bones]
+desc=These are quite large monkey bones.
+members=yes
+model=obj_big_bones
+2dzoom=1830
+2dyan=648
+2dxan=216
+iop1=Bury
+weight=800g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,12
+param=next_obj_stage,pot_bonemeal_normal_gorilla_monkey
+
+
+[mm_bearded_gorilla_monkey_bones]
+desc=These are quite large monkey bones.
+members=yes
+model=obj_big_bones
+2dzoom=1830
+2dyan=648
+2dxan=216
+iop1=Bury
+weight=800g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,13
+param=next_obj_stage,pot_bonemeal_bearded_gorilla_monkey
+
+
+[mm_normal_monkey_bones]
+desc=These are small monkey bones.
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+weight=500g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,14
+param=next_obj_stage,pot_bonemeal_normal_monkey
+
+[mm_small_zombie_monkey_bones]
+desc=These are smallish monkey bones. They smell extremely nauseating.
+members=yes
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+weight=500g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,15
+param=next_obj_stage,pot_bonemeal_small_ninja_monkey
+
+
+[mm_large_zombie_monkey_bones]
+desc=These are smallish monkey bones. They smell extremely nauseating.
+members=yes
+model=obj_sheepbonesa
+2dzoom=1830
+2dyan=648
+2dxan=216
+iop1=Bury
+weight=500g
+category=bones
+name=Monkey bones
+param=ahoy_bones_type,16
+param=next_obj_stage,pot_bonemeal_large_zombie_monkey
+
+
+[mm_skeleton_bones]
+desc=They seem to shake slightly... It might be a good idea to bury them.
+members=yes
+cost=0
+model=obj_sheepbonesa
+2dxof=2
+2dzoom=1410
+2dyan=368
+2dxan=400
+iop1=Bury
+weight=500g
+category=bones
+name=Bones
+param=ahoy_bones_type,17
+param=next_obj_stage,pot_bonemeal_skeleton
+
+
+[wyvern_bones]
+name=Wyvern bones
+desc=Bones of a large flying creature!
+model=obj_wyvern_bones
+2dxof=-3
+2dyof=41
+2dzoom=2160
+2dxan=292
+2dyan=2000
+2dzan=1964
+cost=1600
+stackable=no
+iop1=Bury
+iop4=Drop
+weight=500g
+category=bones
+members=yes
+category=bones
+param=bone_exp,500
+param=ahoy_bones_type,24
+param=next_obj_stage,pot_bonemeal_wyvern
+
+
+[zogre_bones]
+model=enakh_cutscene_bonepile_8
+desc=A pile of Zombie Ogre bones.
+2dxof=-2
+2dyof=3
+2dyan=660
+2dzan=4
+2dxan=284
+iop1=Bury
+weight=800g
+category=bones
+members=yes
+recol1s=127
+recol1d=8514
+name=Zogre bones
+param=ahoy_bones_type,18
+param=next_obj_stage,pot_bonemeal_zogre
+
+
+[zogre_ancestral_bones_fayg]
+model=obj_zogre_ancestral_bones_fayg
+desc=Ancient ogre bones from the ogre burial tomb.
+2dyof=-17
+2dyan=104
+2dxan=224
+iop1=Bury
+weight=800g
+category=bones
+members=yes
+recol1s=9765
+recol1d=8094
+recol2s=7370
+recol2d=7370
+name=Fayrg bones
+param=ahoy_bones_type,19
+param=next_obj_stage,pot_bonemeal_ancestral_fayg
+
+
+[zogre_ancestral_bones_raurg]
+model=obj_zogre_ancestral_bones_fayg
+desc=Ancient ogre bones from the ogre burial tomb.
+2dyof=-17
+2dyan=104
+2dxan=224
+iop1=Bury
+weight=800g
+category=bones
+members=yes
+recol1s=920
+recol1d=920
+recol2s=7370
+recol2d=13646
+name=Raurg bones
+param=ahoy_bones_type,20
+param=next_obj_stage,pot_bonemeal_ancestral_raurg
+
+
+[zogre_ancestral_bones_ourg]
+model=obj_zogre_ancestral_bones_fayg
+desc=Ancient ogre bones from the ogre burial tomb.
+2dyof=-17
+2dyan=104
+2dxan=224
+iop1=Bury
+weight=800g
+category=bones
+members=yes
+recol1s=9765
+recol1d=2964
+recol2s=7370
+recol2d=13107
+name=Ourg bones
+param=ahoy_bones_type,21
+param=next_obj_stage,pot_bonemeal_ancestral_ourg
+
+
+[dagannoth_king_bones]
+desc=These would feed a dogfish for months!
+model=enakh_cutscene_bonepile_8
+2dzoom=1830
+2dyan=648
+2dxan=216
+iop1=Bury
+weight=1500g
+category=bones
+members=yes
+recol1s=127
+recol1d=10295
+name=Dagannoth bones
+param=ahoy_bones_type,23
+param=next_obj_stage,pot_bonemeal_dagannoth

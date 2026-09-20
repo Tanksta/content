@@ -2,7 +2,7 @@ type=layer
 width=512
 height=334
 
-[component_12267]
+[com_0]
 x=0
 y=0
 type=rect
@@ -14,7 +14,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12268]
+[com_1]
 x=260
 y=166
 type=model
@@ -25,7 +25,7 @@ zoom=886
 xan=416
 yan=1023
 
-[component_12269]
+[com_2]
 x=222
 y=145
 type=model
@@ -36,7 +36,7 @@ zoom=962
 xan=450
 yan=2039
 
-[component_12270]
+[com_3]
 x=406
 y=11
 type=text
@@ -51,7 +51,7 @@ activecolour=0x000000
 overcolour=0xFFFFFF
 activeovercolour=0x000000
 
-[component_12271]
+[com_4]
 x=331
 y=149
 type=text
@@ -65,7 +65,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12272]
+[com_5]
 x=332
 y=130
 type=text
@@ -79,7 +79,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12273]
+[com_6]
 x=330
 y=169
 type=text
@@ -94,7 +94,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12274]
+[com_7]
 x=330
 y=188
 type=text
@@ -108,7 +108,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12275]
+[com_8]
 x=330
 y=207
 type=text
@@ -122,7 +122,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12276]
+[com_9]
 x=298
 y=107
 type=text
@@ -136,7 +136,7 @@ activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
 
-[component_12277]
+[com_10]
 x=188
 y=74
 type=text

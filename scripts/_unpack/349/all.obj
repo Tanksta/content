@@ -7083,103 +7083,9 @@ name=Banana left
 certlink=banana_left
 certtemplate=template_for_cert
 
-
-[mm_small_ninja_monkey_bones]
-desc=These are smallish monkey bones.
-members=yes
-model=obj_sheepbonesa
-2dxof=2
-2dzoom=1410
-2dyan=368
-2dxan=400
-iop1=Bury
-name=Monkey bones
-
-
-[mm_medium_ninja_monkey_bones]
-desc=These are medium sized monkey bones.
-members=yes
-model=obj_sheepbonesa
-2dxof=2
-2dzoom=1410
-2dyan=368
-2dxan=400
-iop1=Bury
-name=Monkey bones
-
-
-[mm_normal_gorilla_monkey_bones]
-desc=These are quite large monkey bones.
-members=yes
-model=obj_big_bones
-2dzoom=1830
-2dyan=648
-2dxan=216
-iop1=Bury
-name=Monkey bones
-
-
-[mm_bearded_gorilla_monkey_bones]
-desc=These are quite large monkey bones.
-members=yes
-model=obj_big_bones
-2dzoom=1830
-2dyan=648
-2dxan=216
-iop1=Bury
-name=Monkey bones
-
-
-[mm_normal_monkey_bones]
-desc=These are small monkey bones.
-model=obj_sheepbonesa
-2dxof=2
-2dzoom=1410
-2dyan=368
-2dxan=400
-iop1=Bury
-name=Monkey bones
-
-
 [cert_mm_normal_monkey_bones]
 certlink=mm_normal_monkey_bones
 certtemplate=template_for_cert
-
-
-[mm_small_zombie_monkey_bones]
-desc=These are smallish monkey bones. They smell extremely nauseating.
-members=yes
-model=obj_sheepbonesa
-2dxof=2
-2dzoom=1410
-2dyan=368
-2dxan=400
-iop1=Bury
-name=Monkey bones
-
-
-[mm_large_zombie_monkey_bones]
-desc=These are smallish monkey bones. They smell extremely nauseating.
-members=yes
-model=obj_sheepbonesa
-2dzoom=1830
-2dyan=648
-2dxan=216
-iop1=Bury
-name=Monkey bones
-
-
-[mm_skeleton_bones]
-desc=They seem to shake slightly... It might be a good idea to bury them.
-members=yes
-cost=0
-model=obj_sheepbonesa
-2dxof=2
-2dzoom=1410
-2dyan=368
-2dxan=400
-iop1=Bury
-name=Bones
 
 
 [tbwt_cleaning_cloth]
@@ -13651,9 +13557,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_bat]
@@ -13666,9 +13574,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_big]
@@ -13681,9 +13591,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_burnt]
@@ -13696,9 +13608,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=28
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_burnt_jogre]
@@ -13711,9 +13625,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=28
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_babydragon]
@@ -13726,9 +13642,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=70
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_dragon]
@@ -13741,9 +13659,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=78
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_wolf]
@@ -13756,9 +13676,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=82
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_small_ninja_monkey]
@@ -13771,9 +13693,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_medium_ninja_monkey]
@@ -13786,9 +13710,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_normal_gorilla_monkey]
@@ -13801,9 +13727,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_bearded_gorilla_monkey]
@@ -13816,9 +13744,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_normal_monkey]
@@ -13831,9 +13761,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_small_zombie_monkey]
@@ -13846,9 +13778,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_large_zombie_monkey]
@@ -13861,9 +13795,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_skeleton]
@@ -13876,9 +13812,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_jogre]
@@ -13891,9 +13829,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [ahoy_bone_key]
@@ -21127,21 +21067,6 @@ iop1=Look-at
 name=Dragon inn tankard
 
 
-[zogre_bones]
-model=enakh_cutscene_bonepile_8
-desc=A pile of Zombie Ogre bones.
-2dxof=-2
-2dyof=3
-2dyan=660
-2dzan=4
-2dxan=284
-iop1=Bury
-members=yes
-recol1s=127
-recol1d=8514
-name=Zogre bones
-
-
 [cert_zogre_bones]
 certlink=zogre_bones
 certtemplate=template_for_cert
@@ -21407,59 +21332,14 @@ recol1d=60985
 name=Book of 'h.a.m'
 
 
-[zogre_ancestral_bones_fayg]
-model=obj_zogre_ancestral_bones_fayg
-desc=Ancient ogre bones from the ogre burial tomb.
-2dyof=-17
-2dyan=104
-2dxan=224
-iop1=Bury
-members=yes
-recol1s=9765
-recol1d=8094
-recol2s=7370
-recol2d=7370
-name=Fayrg bones
-
-
 [cert_zogre_ancestral_bones_fayg]
 certlink=zogre_ancestral_bones_fayg
 certtemplate=template_for_cert
 
 
-[zogre_ancestral_bones_raurg]
-model=obj_zogre_ancestral_bones_fayg
-desc=Ancient ogre bones from the ogre burial tomb.
-2dyof=-17
-2dyan=104
-2dxan=224
-iop1=Bury
-members=yes
-recol1s=920
-recol1d=920
-recol2s=7370
-recol2d=13646
-name=Raurg bones
-
-
 [cert_zogre_ancestral_bones_raurg]
 certlink=zogre_ancestral_bones_raurg
 certtemplate=template_for_cert
-
-
-[zogre_ancestral_bones_ourg]
-model=obj_zogre_ancestral_bones_fayg
-desc=Ancient ogre bones from the ogre burial tomb.
-2dyof=-17
-2dyan=104
-2dxan=224
-iop1=Bury
-members=yes
-recol1s=9765
-recol1d=2964
-recol2s=7370
-recol2d=13107
-name=Ourg bones
 
 
 [cert_zogre_ancestral_bones_ourg]
@@ -21667,9 +21547,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_ancestral_fayg]
@@ -21682,9 +21564,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_ancestral_raurg]
@@ -21697,9 +21581,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [pot_bonemeal_ancestral_ourg]
@@ -21712,9 +21598,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=74
 name=Bonemeal
+category=bonemeal
 
 
 [barrows_ahrim_head_100]
@@ -46751,23 +46639,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=10295
 name=Bonemeal
-
-
-[dagannoth_king_bones]
-desc=These would feed a dogfish for months!
-model=enakh_cutscene_bonepile_8
-2dzoom=1830
-2dyan=648
-2dxan=216
-iop1=Bury
-members=yes
-recol1s=127
-recol1d=10295
-name=Dagannoth bones
-
+category=bonemeal
 
 [cert_dagannoth_king_bones]
 certlink=dagannoth_king_bones
@@ -47993,9 +47869,11 @@ model=obj_pot_flour
 2dxan=112
 members=yes
 iop2=Empty
+weight=1500g
 recol1s=127
 recol1d=78
 name=Bonemeal
+category=bonemeal
 
 
 [slayerguide_skeletalwyvern]

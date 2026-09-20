@@ -12357,6 +12357,9 @@ model3=npc_1684i3
 model4=npc_1684i4
 model5=npc_1685i2
 head1=npc_1685_head
+wanderrange=0
+moverestrict=nomove
+timer=14
 
 
 [ahoy_disciple]
@@ -12379,6 +12382,8 @@ model4=npc_1684i4
 model5=npc_1684i5
 model6=npc_1686i2
 head1=npc_1686_head
+wanderrange=0
+moverestrict=nomove
 
 
 [ahoy_akharanu_multi]
