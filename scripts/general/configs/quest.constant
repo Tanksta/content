@@ -70,6 +70,7 @@
 ^viking_complete = 10
 ^horror_complete = 10
 ^routequest_complete = 105
+^quest_ahoy_complete = 10
 
 ^arena_questpoints = 2
 ^arthur_questpoints = 6
@@ -141,6 +142,7 @@
 ^horror_questpoints = 2
 ^mm_questpoints = 3
 ^routequest_questpoints = 2
+^ahoy_questpoints = 2
 
 ^recruitmentdrive_not_started = 0
 ^recruitmentdrive_started = 1

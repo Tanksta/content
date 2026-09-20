@@ -1,0 +1,9 @@
+^ahoy_not_started = 0
+^ahoy_started = 1
+^ahoy_spoken_necrovarus = 2
+^ahoy_seeking_crone = 3
+^ahoy_gathering_items = 4
+^ahoy_has_robes = 5
+^ahoy_has_enchanted_amulet = 6
+^ahoy_commanded_necrovarus = 7
+^ahoy_complete = 8

@@ -1,3 +1,9 @@
+[queue,quest_ahoy_complete]
+%ahoystart = ^ahoy_complete;
+stat_advance(prayer, 24000);
+session_log(^log_adventure, "Quest complete: Ghosts Ahoy");
+~send_quest_complete(questlist:ahoy, ectophial, 200, ^ahoy_questpoints, "You have completed Ghosts Ahoy!");
+
 [oploc1,ahoy_harbour_door]
 // necrovarus door in the ectofuntus
 if(loc_coord = 1_57_54_8_58) {

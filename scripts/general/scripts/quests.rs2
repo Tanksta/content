@@ -427,6 +427,7 @@ if (%fenk_quest > 6) {
 ~send_quest_progress_colour(questlist:eadgar, %eadgar_quest, ^eadgar_complete);
 ~send_quest_progress_colour(questlist:mm, %mm_main, ^mm_complete);
 ~send_quest_progress_colour(questlist:routequest, %routequest, ^routequest_complete);
+~send_quest_progress_colour(questlist:ahoy, %ahoy_quest, ^ahoy_complete);
 if_settab(questlist, ^tab_quest_journal);
 
 if (%drunkmonkquest >= ^drunkmonk_spoken_to_omad) {
