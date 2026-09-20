@@ -2474,9 +2474,10 @@ stock2=shortbow,1
 stock3=oak_shortbow,1
 stock4=willow_shortbow,1
 stock5=maple_shortbow,1
-stock6=yew_shortbow,1
-stock7=magic_shortbow,1
-stock8=roving_crystal_bow_new,1
+stock6=zogre_bow,1
+stock7=yew_shortbow,1
+stock8=magic_shortbow,1
+stock9=roving_crystal_bow_new,1
 
 [skill_guide_ranged_thrown]
 size=30
@@ -3748,8 +3749,9 @@ stock14=yanillian_hop_seed,0,100
 stock15=krandorian_hop_seed,0,100
 stock16=wildblood_hop_seed,0,100
 
-[skill_guide_prayer]
-size=1
+[skill_guide_prayer_prayer]
+size=30
+stock3=blessedstar,1
 
 //..
 [darkruneshop_crap]

@@ -273,7 +273,7 @@
 272=minecart_temp_inv
 273=seed_stall
 274=skill_guide_thieving_chests
-275=skill_guide_prayer
+275=skill_guide_prayer_prayer
 276=darkruneshop_crap
 277=darkruneshop_uber
 278=roguesden_puzzle_rotation
@@ -285,7 +285,7 @@
 284=skill_guide_cooking_brewing
 285=skill_guide_cooking_vegetables
 286=skill_guide_crafting_weaving
-287=skill_guide_farming_veg
+287=skill_guide_farming_allotments
 288=skill_guide_farming_hops
 289=skill_guide_farming_trees
 290=skill_guide_farming_fruit_trees
@@ -353,4 +353,3 @@
 352=crafting_make_silver_tiara
 353=crafting_make_silver_demonic_sigil
 354=skill_guide_cooking_gnome
-355=skill_guide_farming_allotments

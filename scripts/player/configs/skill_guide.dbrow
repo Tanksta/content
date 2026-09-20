@@ -36,7 +36,7 @@ data=unlock,30,Adamantite.
 data=unlock,40,Rune.
 data=unlock,50,Members: Granite.
 data=unlock,60,Members: Dragon.
-data=unlock,70,Members: Elf Crystal (with agility 50).
+data=unlock,70,Members: Elf crystal\n     @dbl@(with agility 50).
 
 // strength: I think this came later and only attack/defence was available at first
 // skill_guide_strength_weapons_and_armour: inv 421
@@ -72,11 +72,13 @@ data=unlock,20,Willow bows.\n          Ammo: Arrows up to mithril.
 // [sic] exact number of spaces
 data=unlock,30,Maple bows.\n          Ammo: Arrows up to adamant.
 // [sic] exact number of spaces
-data=unlock,40,Members: Yew bows.\n          Ammo: Arrows up to rune.
+data=unlock,30,Members: Ogre composite bows.\n          @dbl@Ammo: Brutal Arrows up to Rune.
 // [sic] exact number of spaces
-data=unlock,50,Members: Magic bows.\n          Ammo: Arrows up to rune.
+data=unlock,40,Members: Yew bows.\n          @dbl@Ammo: Arrows up to rune.
 // [sic] exact number of spaces
-data=unlock,70,Members: Crystal bows (with agility 50).\n          Ammo: None.
+data=unlock,50,Members: Magic bows.\n          @dbl@Ammo: Arrows up to rune.
+// [sic] exact number of spaces
+data=unlock,70,Members: Crystal bows (with agility 50).\n          @dbl@Ammo: None.
 
 // note: derived from 2007 clientscript
 // todo: members only
@@ -105,11 +107,11 @@ data=unlock,1,Hard leather body (with defence 10).
 data=unlock,20,Studded leather body (with defence 20).
 data=unlock,20,Studded leather chaps.
 data=unlock,20,Coif.
-data=unlock,30,Members: Snakeskin body\n     (with defence 30).
-data=unlock,30,Members: Snakeskin chaps\n     (with defence 30).
-data=unlock,30,Members: Snakeskin vambraces\n     (with defence 30).
-data=unlock,30,Members: Snakeskin bandana\n     (with defence 30).
-data=unlock,30,Members: Snakeskin boots\n     (with defence 30).
+data=unlock,30,Members: Snakeskin body\n     @dbl@(with defence 30).
+data=unlock,30,Members: Snakeskin chaps\n     @dbl@(with defence 30).
+data=unlock,30,Members: Snakeskin vambraces\n     @dbl@(with defence 30).
+data=unlock,30,Members: Snakeskin bandana\n     @dbl@(with defence 30).
+data=unlock,30,Members: Snakeskin boots\n     @dbl@(with defence 30).
 data=unlock,40,Members: Rangers boots.
 data=unlock,40,Members: Robin hood hat.
 data=unlock,40,Green dragonhide vambraces.
@@ -119,13 +121,13 @@ data=unlock,40,Green dragonhide body\n     (with defence 40).
 // note: derived from 2007 clientscript and uses differences from above
 data=unlock,50,Members: Blue dragonhide vambraces.
 data=unlock,50,Members: Blue dragonhide chaps.
-data=unlock,50,Members: Blue dragonhide body\n     (with defence 40).
+data=unlock,50,Members: Blue dragonhide body\n     @dbl@(with defence 40).
 data=unlock,60,Members: Red dragonhide vambraces.
 data=unlock,60,Members: Red dragonhide chaps.
-data=unlock,60,Members: Red dragonhide body\n     (with defence 40).
+data=unlock,60,Members: Red dragonhide body\n     @dbl@(with defence 40).
 data=unlock,70,Members: Black dragonhide vambraces.
 data=unlock,70,Members: Black dragonhide chaps.
-data=unlock,70,Members: Black dragonhide body\n     (with defence 40).
+data=unlock,70,Members: Black dragonhide body\n     @dbl@(with defence 40).
 
 // ----
 
@@ -171,9 +173,11 @@ data=op,Prayer,skill_guide_prayer_prayer
 [skill_guide_prayer_prayer]
 table=skill_guides
 data=name,Prayer
-// skill_guide_prayer: inv 275 (does this mean no prayer guide, or could they be text-only with no inv?)
+data=advancement,
+data=inv,skill_guide_prayer_prayer
 data=unlock,-1,"To view the available prayers, select\nthe Prayer icon on the side interface.\nYou can see what each Prayer does by\nmoving your mouse over its icon."
-
+data=unlock,-1,
+data=unlock,50,Members: Use completed prayerbooks\n@dbl@to bless holy and unholy symbols.
 // ----
 
 [skill_guide_agility]
@@ -535,23 +539,23 @@ table=skill_guides
 data=name,Runecrafting
 data=advancement,Able to craft:
 data=inv,skill_guide_runecrafting
-data=unlock,1,Air Runes.
-data=unlock,2,Mind Runes.
-data=unlock,5,Water Runes.
-data=unlock,6,Members: Mist Runes.
-data=unlock,9,Earth Runes.
-data=unlock,10,Members: Dust Runes.
-data=unlock,13,Members: Mud Runes.
-data=unlock,14,Fire Runes.
-data=unlock,15,Members: Smoke Runes.
-data=unlock,19,Members: Steam Runes.
-data=unlock,20,Body Runes.
-data=unlock,23,Members: Lava Runes.
-data=unlock,27,Members: Cosmic Runes.
-data=unlock,35,Members: Chaos Runes.
-data=unlock,44,Members: Nature Runes.
-data=unlock,54,Members: Law Runes.
-data=unlock,65,Members: Death Runes.
+data=unlock,1,Air runes.
+data=unlock,2,Mind runes.
+data=unlock,5,Water runes.
+data=unlock,6,Members: Mist runes.
+data=unlock,9,Earth runes.
+data=unlock,10,Members: Dust runes.
+data=unlock,13,Members: Mud runes.
+data=unlock,14,Fire runes.
+data=unlock,15,Members: Smoke runes.
+data=unlock,19,Members: Steam runes.
+data=unlock,20,Body runes.
+data=unlock,23,Members: Lava runes.
+data=unlock,27,Members: Cosmic runes.
+data=unlock,35,Members: Chaos runes.
+data=unlock,44,Members: Nature runes.
+data=unlock,54,Members: Law runes.
+data=unlock,65,Members: Death runes.
 
 // ----
 
