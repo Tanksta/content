@@ -1,5 +1,5 @@
 [queue,quest_ahoy_complete]
-%ahoystart = ^ahoy_complete;
+%ahoy_questvar= ^ahoy_complete;
 stat_advance(prayer, 24000);
 session_log(^log_adventure, "Quest complete: Ghosts Ahoy");
 ~send_quest_complete(questlist:ahoy, ectophial, 200, ^ahoy_questpoints, "You have completed Ghosts Ahoy!");
