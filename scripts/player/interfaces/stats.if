@@ -1262,7 +1262,7 @@ colour=0x000000
 activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
-option=View @or1@Combat @whi@guide
+option=View @or1@Combat @whi@advancements
 
 [hitpoints]
 x=64
@@ -1278,7 +1278,7 @@ colour=0x000000
 activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
-option=View @or1@Combat @whi@guide
+option=View @or1@Combat @whi@advancements
 
 [mining]
 x=128
@@ -1310,7 +1310,7 @@ colour=0x000000
 activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
-option=View @or1@Combat @whi@guide
+option=View @or1@Combat @whi@advancements
 
 [agility]
 x=64
