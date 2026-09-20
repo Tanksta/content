@@ -1358,7 +1358,7 @@ colour=0x000000
 activecolour=0x000000
 overcolour=0x000000
 activeovercolour=0x000000
-option=View @or1@Combat @whi@guide
+option=View @or1@Combat @whi@advancements
 
 [herblore]
 x=64
